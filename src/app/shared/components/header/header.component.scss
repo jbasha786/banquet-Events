@@ -1,0 +1,33 @@
+ @import "../../../../app/styles/variable.scss";
+
+ nav {
+     img {
+        
+     }
+
+     p {
+         color: $font-color-black;
+         text-align: right;
+         font-family: $font-family-header;
+         font-size: $font-size-header;
+         font-style: normal;
+         font-weight: 400;
+         line-height: normal;
+
+     }
+
+     span {
+         color: $font-color-black;
+         font-family: $font-family-header;
+         font-size: $font-small;
+         font-style: normal;
+         font-weight: 200;
+         line-height: normal;
+     }
+     .logo {
+        width: 90%;
+        // height: 75%;
+        margin-left: 80%;
+        flex-shrink: 0;
+    }
+ }
