@@ -24,3 +24,15 @@ $font-small: 12px;
     font-weight: normal;
     font-style: normal;
 }
+
+ 
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xl-med: 1200px,
+    xl-plus: 1289px,
+    xxl: 1400px
+);

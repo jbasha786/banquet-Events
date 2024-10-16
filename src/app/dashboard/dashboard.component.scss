@@ -1,4 +1,4 @@
-@import "../../../styles/variable.scss";
+@import "../../app/styles/variable.scss";
 
 .banner {
     height: 700px;
@@ -11,7 +11,7 @@
         // background-image: linear-gradient(45deg, #000 0%, rgba(9, 9, 9, 0.20) 95.99%), url('../../../../assets/images/logo/landingImage.svg');
         background-image: linear-gradient(45deg,
                 rgba(0, 0, 0, 0.99),
-                rgba(9, 9, 9, 0.20)), url('../../../../assets/images/logo/landingImage.svg');
+                rgba(9, 9, 9, 0.20)), url('../../assets/images/logo/landingImage.svg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
