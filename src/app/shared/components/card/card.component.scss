@@ -1,0 +1,26 @@
+@import "../../../styles/variable.scss";
+
+.card {
+    height: 400px;
+    margin-bottom: 10px;
+
+    .card-title {
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .card-text {
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .card-link {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    &__color {
+        color: $color-pink;
+        text-decoration: none;
+    }
+}
