@@ -3,7 +3,7 @@
         <div class="carousel-item active">
             <div class="row">
                 @for(carousel of carouselItem; track $index){
-                <div class="col-4">
+                <div class="col-md-6 col-sm-12">
                     <div class="card">
                         <img src="{{carousel.src}}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -19,7 +19,7 @@
         <div class="carousel-item">
             <div class="row">
                 @for(carousel of carouselItem; track $index){
-                <div class="col-4">
+                <div class="col-sm-12 col-md-6">
                     <div class="card">
                         <img src="{{carousel.src}}" class="card-img-top" alt="...">
                         <div class="card-body">

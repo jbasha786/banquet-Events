@@ -1,10 +1,10 @@
-<div class="container p-30">
+<div class="container">
     <div class="row events">
         @for(obj of dataContext; track $index){
-        <div class="col events__image">
+        <div class="col-sm-12 col-md-6 events__image">
             <img src="{{obj.src}}" alt="">
         </div>
-        <div class="col events__content">
+        <div class="col-sm-12 col-md-6 events__content">
             <h3 class="events__content__title">{{obj.title}}</h3>
             <p class="events__content__desc">{{obj.desc}}</p>
             <button class="events__content__btn">{{obj.btn}}</button>
