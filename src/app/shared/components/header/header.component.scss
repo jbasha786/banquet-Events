@@ -1,33 +1,32 @@
  @import "../../../../app/styles/variable.scss";
 
- nav {
-     img {
-        
+ .navbar {
+     .container {
+         flex-flow: wrap;
+     }
+ }
+
+ @media (max-width: 991px) {
+     .offcanvas {
+         height: 50%;
      }
 
-     p {
-         color: $font-color-black;
-         text-align: right;
-         font-family: $font-family-header;
-         font-size: $font-size-header;
-         font-style: normal;
-         font-weight: 400;
-         line-height: normal;
-
+     .side-bar {
+         background-color: rgba(252, 252, 252, 0.25);
+         backdrop-filter: blur(10px);
      }
 
-     span {
-         color: $font-color-black;
-         font-family: $font-family-header;
-         font-size: $font-small;
-         font-style: normal;
-         font-weight: 200;
-         line-height: normal;
+     .one {
+         // display: flex;
+         order: 2;
      }
-     .logo {
-        width: 90%;
-        // height: 75%;
-        margin-left: 80%;
-        flex-shrink: 0;
-    }
+
+     .second {
+         // display: flex;
+         order: 3;
+     }
+
+     .third {
+         order: 1;
+     }
  }
