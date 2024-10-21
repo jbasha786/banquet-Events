@@ -1,0 +1,45 @@
+<div id="multiItemCarousel" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                @for(carousel of carouselItem; track $index){
+                <div class="col-4">
+                    <div class="card">
+                        <img src="{{carousel.src}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{carousel.name}}</h5>
+                            <p class="card-text">{{carousel.desc}}</p>
+                            <p class="card-btn">{{carousel.btn}}</p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                @for(carousel of carouselItem; track $index){
+                <div class="col-4">
+                    <div class="card">
+                        <img src="{{carousel.src}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{carousel.name}}</h5>
+                            <p class="card-text">{{carousel.desc}}</p>
+                            <p class="card-btn">{{carousel.btn}}</p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#multiItemCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#multiItemCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+</div>

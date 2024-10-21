@@ -1,0 +1,42 @@
+@import "../../../styles/variable.scss";
+
+.events {
+    background: $gray;
+    padding: 20px;
+    border-radius: 15px;
+
+    &__image {
+        height: 250px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title {
+            color: $play-color-pink;
+            font-weight: 500;
+        }
+
+        &__desc {
+            line-height: 30px;
+            font-size: 14px;
+        }
+
+        &__btn {
+            width: 130px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid $play-color-pink;
+            color: $play-color-pink;
+        }
+    }
+}
