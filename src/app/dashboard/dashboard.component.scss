@@ -96,6 +96,7 @@
     align-items: center;
     transition-delay: 1s;
     transition: transform 0.5s ease;
+    padding: 10px;
 }
 
 .arrangements {
@@ -156,6 +157,14 @@
             height: 270px;
             top: -60px;
         }
+
+        @media screen and (max-width:570px) {
+            img {
+                position: relative;
+                height: 270px;
+                top: 0px;
+            }
+        }
     }
 }
 
@@ -165,17 +174,28 @@
     background-size: 100%;
     position: relative;
     height: 700px;
+    @media screen and (max-width:570px) {
+        height: auto;        
+        background-size: initial;
+    }
 
     &__content {
         color: $white;
         padding: 60px;
         opacity: 0.7;
         font-weight: 700;
+        @media screen and (max-width:570px) {
+            font-size: 18px;
+            padding: 0px;
+        }
 
         h5 {
             font-size: 30px;
             display: flex;
             justify-content: center;
+            @media screen and (max-width:570px) {
+                font-size: 18px;
+            }
         }
     }
 
@@ -188,6 +208,11 @@
         top: 260px;
         width: 60%;
         margin: 0 auto;
+        @media screen and (max-width:570px) {
+            position: relative;
+            width: 100%;
+            top: 20px;
+        }
     }
 
     &__card {
