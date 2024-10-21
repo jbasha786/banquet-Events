@@ -15,7 +15,6 @@ export class CardComponent {
   @Input() btn: any;
 
   ngOnInIt() {
-    console.log(this.picture, this.title, this.desc)
   }
 
 }

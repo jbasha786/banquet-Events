@@ -12,7 +12,6 @@ export class CarouselComponent {
   @Input() carouselItem: any;
 
   ngOnInit() {
-    console.log(this.carouselItem)
   }
 
 }
