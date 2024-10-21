@@ -164,7 +164,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 300px;
+    height: 700px;
 
     &__content {
         color: $white;
@@ -185,7 +185,7 @@
         right: 0;
         justify-content: center;
         left: 0;
-        top: 200px;
+        top: 260px;
         width: 60%;
         margin: 0 auto;
     }
@@ -269,12 +269,6 @@
 
 
 // test
-
-body {
-    background: #333;
-}
-
-
 *,
 *:before,
 *:after {
@@ -289,7 +283,7 @@ body {
     margin: 0 auto;
     width: 24px;
     height: 100px;
-    margin-top: 125px;
+    cursor: pointer;
 }
 
 
