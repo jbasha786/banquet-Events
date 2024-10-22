@@ -1,11 +1,10 @@
 @import "../../../styles/variable.scss";
 
 .card {
-    height: 400px;
     margin-bottom: 10px;
 
     .card-title {
-        height: 60px;
+        text-wrap: nowrap;
         overflow: hidden;
     }
 

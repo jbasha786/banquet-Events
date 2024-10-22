@@ -8,7 +8,7 @@
                 <button class="banner__image__content__btn">Book Now</button>
             </div>
         </div>
-        <div class="banner__image__downIcon" (click)="scrollToSection('section2')">
+        <div class="banner__image__downIcon" (click)="scrollToSection('events')">
             <div class="mouse_scroll">
                 <div class="mouse">
                     <div class="wheel"></div>
@@ -24,7 +24,7 @@
 </div>
 
 <!-- Dartts Events Start -->
-<div id="section2" class="events">
+<div id="events" class="events mt-40 mb-40">
     <app-card-side-content [dataContext]="events"></app-card-side-content>
 </div>
 <!-- Dartts Events Start -->
@@ -34,7 +34,7 @@
     <h6 class="mt-20 mb-20 bold fs-30">Our <span class="arrangements__color">Arrangements</span></h6>
     <div class="row">
         @for( obj of arrangements; track $index){
-        <div class="col">
+        <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4">
             <app-card picture="{{obj.src}}" title="{{obj.name}}" desc="{{obj.desc}}" btn="{{obj.button}}"></app-card>
         </div>
         }
@@ -43,9 +43,9 @@
 <!-- Our Arrangements section End -->
 
 <!--personalized Start  -->
-<div class="container-fluid personalized p-40 mb-40">
+<div class="container-fluid personalized mt-40 mb-40 p-20">
     <div class="container">
-        <h6>Create your own <span class="color">personalized</span> ideal model.</h6>
+        <h4>Create your own <span class="color">personalized</span> ideal model.</h4>
         <p>Experience the change of seasons from a remote cabin, spacious view models villa or overlooking with your
             loved
             persons.</p>
@@ -55,14 +55,14 @@
 <!-- personalized End -->
 
 <!-- Experience Section Start -->
-<div class="container experience mb-30">
+<div class="container experience">
     <h4 class="text-center bold fs-40">Experience the best autumn holiday at <span class="experience__color">De Bonte
             Wever</span> </h4>
     <p class="text-center m-0 pb-10">A refreshing walk through the forest or a breath of fresh air on your bike through
         the
         beautiful nature of Drenthe.</p>
     <p class="text-center">Discover exclusive offers at over your ideas and passion</p>
-    <div class="row">
+    <div class="row experience__section">
         @for( obj of experience; track $index){
         <img class="col-3 p-0 experience__image" src="{{obj.src}}">
         }
@@ -70,9 +70,21 @@
 </div>
 <!-- Experience Section end -->
 
+<!-- corporate section Start -->
+<div class="container mt-40 mb-40">
+    <app-corporate-meeting></app-corporate-meeting>
+</div>
+<!-- corporate section End -->
+
+<!-- Famlily section Start -->
+<div class="container">
+    <app-family-events></app-family-events>
+</div>
+<!-- Famlily section End -->
+
 <!-- promotions section Start -->
 
-<div class="container">
+<div class="container mt-40 mb-40">
     <h6>De Bonte Wever Deals & Promotions</h6>
     <p>Exclusive savings for your next stay.</p>
     <div class="container">
@@ -92,9 +104,9 @@
 
 <!-- Member section start -->
 
-<div class="container memberSection mb-40 mt-60">
+<div class="container memberSection">
     <div class="row">
-        <div class="col">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
             <h3>Become a <span class="memberSection__color">De Bonte Wever</span></h3>
             <h3>Member Today</h3>
             <p class="memberSection__desc">Not a member yet? Join now to receive member exclusive rates, earn points
@@ -102,7 +114,7 @@
             <button class="memberSection__btn">join for free --></button>
         </div>
 
-        <div class="col memberSection__image">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 memberSection__image">
             <img src="/assets/images/member/member.svg" alt="member">
         </div>
     </div>
@@ -110,7 +122,7 @@
 <!-- Member section End -->
 
 <!-- moment Section Start -->
-<div class="container-fluid moment">
+<div class="container-fluid moment mt-40 mb-40">
     <div class="container">
         <div class="moment__content">
             <h5>Step into Wonders</h5>
@@ -120,7 +132,7 @@
         <div class="moment__section">
             <div class="row">
                 @for( obj of moment; track $index){
-                <div class="col moment__card">
+                <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card">
                     <app-card picture="{{obj.src}}" title="{{obj.name}}" desc="{{obj.desc}}"
                         btn="{{obj.button}}"></app-card>
                 </div>
@@ -130,3 +142,9 @@
     </div>
 </div>
 <!-- moment Section Start -->
+
+<!-- FAQ section Start  -->
+ <div class="container mb-40">
+    <app-faq></app-faq>
+ </div>
+<!-- FAQ section End  -->

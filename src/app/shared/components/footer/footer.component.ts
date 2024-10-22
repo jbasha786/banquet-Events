@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+
+  scrollToTop(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
