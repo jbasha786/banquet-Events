@@ -4,6 +4,12 @@
     height: 450px;
     margin-bottom: 10px;
 
+    img{
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+
     .card-title {
         height: 60px;
         overflow: hidden;

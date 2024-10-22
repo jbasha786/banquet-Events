@@ -17,8 +17,8 @@ import { FAQComponent } from './faq/faq.component';
 export class DashboardComponent {
   arrangements = [
     { src: "/assets/images/cards/image.svg", name: "All-inclusive Hotelarrangementen", desc: "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes", button: 'Read More -->' },
-    { src: "/assets/images/cards/image.svg", name: "Sunday Special", desc: "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest", button: 'Read More -->' },
-    { src: "/assets/images/cards/image.svg", name: "Midweek All-inclusive – Drents Museum", desc: "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.", button: 'Read More -->' },
+    { src: "/assets/images/cards/sunday.svg", name: "Sunday Special", desc: "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest", button: 'Read More -->' },
+    { src: "/assets/images/cards/midweek.svg", name: "Midweek All-inclusive – Drents Museum", desc: "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.", button: 'Read More -->' },
   ];
 
   experience = [
@@ -42,9 +42,9 @@ export class DashboardComponent {
   ];
 
   carousel = [
-    { src: "/assets/images/cards/image.svg", name: "All-inclusive Hotelarrangementen", desc: "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes", button: 'Read More -->' },
-    { src: "/assets/images/cards/image.svg", name: "Sunday Special", desc: "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest", button: 'Read More -->' },
-    { src: "/assets/images/cards/image.svg", name: "Midweek All-inclusive – Drents Museum", desc: "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.", button: 'Read More -->' },
+    { src: "/assets/images/cards/1.svg", name: "All-inclusive Hotelarrangementen", desc: "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes", button: 'Read More -->' },
+    { src: "/assets/images/cards/2.svg", name: "Sunday Special", desc: "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest", button: 'Read More -->' },
+    { src: "/assets/images/cards/3.svg", name: "Midweek All-inclusive – Drents Museum", desc: "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.", button: 'Read More -->' },
   ];
 
   promotions = [
