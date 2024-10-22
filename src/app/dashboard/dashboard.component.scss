@@ -115,6 +115,14 @@
         opacity: 0.8;
     }
 
+    &__section {
+        padding: 0;
+
+        @media screen and (max-width: 576px) {
+            padding: 10px;
+        }
+    }
+
     &__image:hover {
         transform: scale(1.1);
         opacity: 1;
@@ -174,8 +182,9 @@
     background-size: 100%;
     position: relative;
     height: 700px;
+
     @media screen and (max-width:570px) {
-        height: auto;        
+        height: auto;
         background-size: initial;
     }
 
@@ -184,6 +193,7 @@
         padding: 60px;
         opacity: 0.7;
         font-weight: 700;
+
         @media screen and (max-width:570px) {
             font-size: 18px;
             padding: 0px;
@@ -193,6 +203,7 @@
             font-size: 30px;
             display: flex;
             justify-content: center;
+
             @media screen and (max-width:570px) {
                 font-size: 18px;
             }
@@ -208,6 +219,7 @@
         top: 260px;
         width: 60%;
         margin: 0 auto;
+
         @media screen and (max-width:570px) {
             position: relative;
             width: 100%;

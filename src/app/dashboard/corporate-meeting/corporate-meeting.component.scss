@@ -1,7 +1,12 @@
 @import "../../styles/variable.scss";
 
 .corporate {
-    gap: 30px;
+    gap: 0px;
+
+    @media screen and (max-width:576px) {
+        gap: 30px;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
