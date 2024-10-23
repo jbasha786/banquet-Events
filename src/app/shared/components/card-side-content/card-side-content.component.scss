@@ -2,29 +2,22 @@
 
 .events {
     background: $gray;
-    padding: 20px;
+    padding: 7vw;
     border-radius: 15px;
-    gap: 0;
-
-    @media screen and (max-width: 576px) {
-        gap: 30px;
-    }
+    gap: 7vw;
 
     &__image {
         height: 250px;
 
         img {
             height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 15px;
+            @media screen and (max-width: 576px) {
+                width: 100%;
+            }
         }
     }
 
     &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         &__title {
             color: $play-color-pink;

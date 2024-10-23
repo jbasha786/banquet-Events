@@ -1,7 +1,7 @@
 @import "../../app/styles/variable.scss";
 
 .banner {
-    height: 100vh;
+    height: 86vh;
     min-height: 600px;
     position: relative;
     color: white;
@@ -24,10 +24,7 @@
             &__title {
                 color: $white;
                 font-family: Poppins;
-                font-size: 70px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 80px;
+                font-size: 5vw;
                 transform: translateX(-100%);
                 animation: slideIn 1s forwards;
             }
@@ -35,10 +32,7 @@
             &__subtitle {
                 color: $white;
                 font-family: Poppins;
-                font-size: 70px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 80px;
+                font-size: 5vw;
                 transform: translateX(-100%);
                 animation: slideIn 3s forwards;
             }
@@ -52,11 +46,9 @@
             &__desc {
                 color: $white;
                 font-family: $font-family-header;
-                font-size: 20px;
+                font-size: 2vw;
                 font-style: normal;
                 font-weight: 500;
-                margin-top: 10px;
-                line-height: normal;
                 transform: translateX(-100%);
                 animation: slideIn 4s forwards;
             }
@@ -89,14 +81,9 @@
 }
 
 .events {
-    // height: 100vh;
-    /* Full height for each section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 5vw;
     transition-delay: 1s;
     transition: transform 0.5s ease;
-    padding: 10px;
 }
 
 .arrangements {
