@@ -1,0 +1,35 @@
+<div class="container booking">
+    <div class="booking__process">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <h4 class="text-center fv-3">What type of event are you planning?</h4>
+    <div class="container">
+        <div class="row plaining">
+            @for(plan of planning; track $index){
+            <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 p-1">
+                <div class="d-flex plaining__section">
+                    <span><img src="{{plan.src}}" alt="{{plan.name}}"></span>
+                    <span class="ms-2 fw-bold">{{plan.name}}</span>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+    <div class="container booking__btn">
+        <div class="d-md-flex d-lg-flex d-xl-flex d-xxl-flex d-sm-block justify-content-between">
+            <button type="button" class="btn btn_cancel fw-bold" (click)="returnToHome()">cancel</button>
+            <div class="d-flex flex-md-row flex-lg-row flex-xl-row flex-xxl-row">
+                <button type="button" class="btn btn_back fw-bold">Back</button>
+                <button type="button" class="ms-2 btn btn_next fw-bold">Next</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,66 @@
+@import "../styles/variable.scss";
+
+.booking {
+    &__process {
+        padding: 3vw;
+
+        .progress {
+            height: 1vw;
+
+            .progress-bar {
+                background-color: $color-pink;
+            }
+        }
+    }
+
+    .plaining {
+        padding: 3vw;
+
+        &__section {
+            border: 1px solid $quick-silver;
+            border-radius: 5px;
+            padding: 1vw;
+            align-items: center;
+        }
+    }
+
+    &__btn {
+        padding: 2vw;
+        @media screen and (max-width: 576px) {
+            gap: 10px;
+        }
+    }
+
+    .btn_cancel {
+        background: $cancel-color-pink;
+        border-radius: 40px;
+        width: 150px;
+        height: 40px;
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .btn_back {
+        color: $color-pink;
+        border: 1px solid $color-pink;
+        border-radius: 40px;
+        width: 150px;
+        height: 40px;
+        @media screen and (max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    .btn_next {
+        color: $white;
+        background: $color-pink;
+        border-radius: 40px;
+        width: 150px;
+        height: 40px;
+        @media screen and (max-width: 576px) {
+            width: 100%;
+        }
+    }
+}

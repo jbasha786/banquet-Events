@@ -5,11 +5,12 @@ import { CarouselComponent } from '../shared/components/carousel/carousel.compon
 import { CorporateMeetingComponent } from './corporate-meeting/corporate-meeting.component';
 import { FamilyEventsComponent } from './family-events/family-events.component';
 import { FAQComponent } from './faq/faq.component';
+import { Router, RouterEvent, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CardComponent, CardSideContentComponent, CarouselComponent, CorporateMeetingComponent, FamilyEventsComponent, FAQComponent],
+  imports: [CardComponent, CardSideContentComponent, CarouselComponent, CorporateMeetingComponent, FamilyEventsComponent, FAQComponent, RouterLink, RouterModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -55,6 +56,10 @@ export class DashboardComponent {
     { id: 5, src: "/assets/images/promotions/5.svg", href: '#' }
   ]
 
+  constructor(private router: Router) {
+
+  }
+
   ngOnInit() {
   }
 
@@ -63,5 +68,9 @@ export class DashboardComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  continueBooking() {
+    this.router.navigate(['booking']);
   }
 }

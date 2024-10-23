@@ -51,4 +51,9 @@ html {
     .fs-#{$i} {
         font-size: 0px + $i;
     }
+
+    // FontSizes
+    .fv-#{$i} {
+        font-size: 0vw + $i;
+    }
 }
