@@ -13,6 +13,12 @@
         }
     }
 
+    &__model {
+        height: 70vh;
+        overflow-y: scroll;
+        scrollbar-width: 5vw;
+    }
+
     .plaining {
         padding: 3vw;
 

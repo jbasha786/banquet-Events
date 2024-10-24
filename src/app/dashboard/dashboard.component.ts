@@ -5,12 +5,26 @@ import { CarouselComponent } from '../shared/components/carousel/carousel.compon
 import { CorporateMeetingComponent } from './corporate-meeting/corporate-meeting.component';
 import { FamilyEventsComponent } from './family-events/family-events.component';
 import { FAQComponent } from './faq/faq.component';
-import { Router, RouterEvent, RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BookingComponent } from '../booking/booking.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CardComponent, CardSideContentComponent, CarouselComponent, CorporateMeetingComponent, FamilyEventsComponent, FAQComponent, RouterLink, RouterModule],
+  imports: [CardComponent,
+    CardSideContentComponent,
+    CarouselComponent,
+    CorporateMeetingComponent,
+    FamilyEventsComponent,
+    FAQComponent,
+    RouterLink,
+    RouterModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDialogModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -56,7 +70,7 @@ export class DashboardComponent {
     { id: 5, src: "/assets/images/promotions/5.svg", href: '#' }
   ]
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private dialog: MatDialog) {
 
   }
 
@@ -70,7 +84,11 @@ export class DashboardComponent {
     }
   }
 
-  continueBooking() {
-    this.router.navigate(['booking']);
+  continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
+    this.dialog.open(BookingComponent, {
+      width:"80vw",
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
   }
 }
