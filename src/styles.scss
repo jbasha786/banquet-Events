@@ -96,3 +96,12 @@ html {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-mdc-menu-panel{
+    max-width: none;
+    width: 100vw ;
+}
+.mat-mdc-button .mdc-button__label{
+    letter-spacing: normal;
+}

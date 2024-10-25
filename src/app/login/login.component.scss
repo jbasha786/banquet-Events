@@ -1,0 +1,41 @@
+@import "../../app/styles/variable.scss";
+
+.loginForm {
+    &__title {}
+
+    &__form {
+        &__emaildiv {
+            &__unamebox {
+                border: 1px solid $inputbox;
+            }
+        }
+
+        &__pwddiv {
+            &__pwd {
+                &__forgotpwd {
+                    color: $color-pink;
+                }
+            }
+
+            &__password {
+                border: 1px solid $inputbox;
+            }
+        }
+
+        &__loginbtndiv {
+            &__loginbox {
+                color: $white;
+                background-color: $color-pink;
+                border: none;
+            }
+        }
+
+        &__signupdiv {
+            &__signUp {
+                color: $color-pink;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
