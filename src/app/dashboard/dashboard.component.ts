@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CardComponent } from '../shared/components/card/card.component';
 import { CardSideContentComponent } from '../shared/components/card-side-content/card-side-content.component';
 import { CarouselComponent } from '../shared/components/carousel/carousel.component';
@@ -10,6 +10,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BookingComponent } from '../booking/booking.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -70,23 +71,36 @@ export class DashboardComponent {
     { id: 5, src: "/assets/images/promotions/5.svg", href: '#' }
   ]
 
-  constructor(private router: Router, private dialog: MatDialog) {
-
+  constructor(private router: Router, private dialog: MatDialog,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
   }
 
   ngOnInit() {
+    this.scrollToTop();
   }
 
   scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (isPlatformBrowser(this.platformId)) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
+  scrollToTop() {
+    if (isPlatformBrowser(this.platformId)) {
+      const element = document.getElementById('landing_page');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
-      width:"80vw",
+      width: "80vw",
       enterAnimationDuration,
       exitAnimationDuration,
     });
