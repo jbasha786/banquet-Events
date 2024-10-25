@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary header">
   <div class="container d-flex ">
-    <div class="one">
+    <div class="header__logo one">
       <a class="navbar-brand" href="#">
         <img class="logo mb-0" src="../../../../assets/images/logo/de-bonte-wever.svg" alt=""></a>
     </div>
     <!-- Header-above-line -->
     <div class="second">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop1"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -15,33 +15,20 @@
         aria-labelledby="offcanvasNavbarLabel">
         <!-- sidebar-header -->
         <div class="offcanvas-header text-dark">
-          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>    offcanvasNavbar2 -->
           <button type="button" class="btn-close btn-close-dark p-5 fw-bolder fs-2vh" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
         <!-- sidebar-body -->
         <div class="offcanvas-body my-30 me-3 ">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-1">
-            <li class="nav-item ms-4 fw-200 pb-sm-4">
-              <a class="link-dark link-underline-opacity-0 fs-12" href="#">
-               <img class="ps-2 pe-sm-2 header-images" src="../../../../assets/images/logo/phone-call.png" alt="">0592-356 000</a>
-            </li>
-            <li class="nav-item ms-4 fw-200 pb-sm-4 fw-200">
-              <a class="link-dark link-underline-opacity-0 fs-12" href="#">
-                <img class="ps-2 pe-sm-2 header-images" src="../../../../assets/images/logo/question-sign.png" alt="">Help</a>
-            </li>
-            <li class="nav-item ms-4 fw-200 pb-sm-4 fw-200">
-              <a class="link-dark link-underline-opacity-0 fs-12" href="#">
-                <img class="ps-2 pe-sm-2 header-images" src="../../../../assets/images/logo/world.png" alt="">English</a>
-            </li>
-            <li class="nav-item ms-4 fw-200 pb-sm-4 fw-200">
-              <a class="link-dark link-underline-opacity-0 fs-12" href="#">
-                <img class="ps-2 pe-sm-2 header-images" src="../../../../assets/images/logo/shopping-bag.png" alt="">My Bookings</a>
-            </li>
-            <li class="nav-item ms-4 fw-200 pb-sm-4 fw-200">
-              <a class="link-dark link-underline-opacity-0 fs-12" href="#">
-                <img class="ps-2 pe-sm-2 header-images" src="../../../../assets/images/logo/user.png" alt="">Sign In Or Join</a>
-            </li>
+            @for(item of items; track $index){
+              <li class="nav-item ms-4 fw-200 pb-sm-4">
+                <a class="link-dark link-underline-opacity-0 fs-12">
+                  <img class="ps-2 pe-sm-2 header-images" src="{{item.src}}" alt="{{item.name}}"><span [matMenuTriggerFor]="item.link">{{item.name}}</span>
+                </a>
+              </li>
+            }
           </ul>
         </div>
       </div>
@@ -66,24 +53,21 @@
         <!-- sidebar-body -->
         <div class="offcanvas-body mt-35">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item ms-4 pb-sm-4 fs-17">
-              <a class="link-dark link-underline-opacity-0 fw-500" href="#">OverView</a>
-            </li>
-            <li class="nav-item ms-4 pb-sm-4 fs-17">
-              <a class="link-dark link-underline-opacity-0 fw-500" href="#">Best Deals</a>
-            </li>
-            <li class="nav-item ms-4 pb-sm-4 fs-17">
-              <a class="link-dark link-underline-opacity-0 fw-500" href="#">Social Events</a>
-            </li>
-            <li class="nav-item ms-4 pb-sm-4 fs-17">
-              <a class="link-dark link-underline-opacity-0 fw-500" href="#">Family Events</a>
-            </li>
-            <li class="nav-item ms-4 pb-sm-4 fs-17">
-              <a class="link-dark link-underline-opacity-0 fw-500" href="#">Corporate Events</a>
-            </li>
+            @for(item of Event_Items; track $index){
+              <li class="nav-item ms-4 pb-sm-4 fs-17">
+                <a class="link-dark link-underline-opacity-0 fw-500" href="#">
+                  {{item.name}}
+                </a>
+              </li>
+            }
           </ul>
         </div>
       </div>
     </div>
   </div>
 </nav>
+
+
+<mat-menu #login="matMenu">
+  <!-- <button mat-menu-item (click)="openDialog()">Open dialog</button> -->
+</mat-menu>
