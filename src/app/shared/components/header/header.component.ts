@@ -3,7 +3,8 @@ import { LoginComponent } from '../../../login/login.component';
 import { Router, RouterLink } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-
+import { Component, Input } from '@angular/core';
+import { DefaultService } from '../../../services/default.service';
 
 @Component({
   selector: 'app-header',
@@ -32,8 +33,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  redirect(name: string) {
-    this.router.navigate([name]);
-  }
+  @Input() headerInfo: any;
 }

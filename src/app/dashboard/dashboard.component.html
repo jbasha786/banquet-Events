@@ -1,11 +1,11 @@
 <div class="banner" id="landing_page" data-speed="8">
     <div class="banner__image">
         <div class="banner__image__content">
-            <div class="banner__image__content__title">Welkom bij Hotel</div>
-            <div class="banner__image__content__subtitle">De Bonte Wever Assen!</div>
-            <div class="banner__image__content__desc">Plan Your Perfect Event, Conference, or Meeting With Ease</div>
+            <div class="banner__image__content__title">{{bannerInfo.title}}</div>
+            <div class="banner__image__content__subtitle">{{bannerInfo.subTitle}}</div>
+            <div class="banner__image__content__desc">{{bannerInfo.desc}}</div>
             <div>
-                <button class="banner__image__content__btn" (click)="continueBooking('3000ms', '1500ms')">Book Now</button>
+                <button class="banner__image__content__btn" (click)="continueBooking('3000ms', '1500ms')">{{bannerInfo.buttonName}}</button>
             </div>
         </div>
         <div class="banner__image__downIcon" (click)="scrollToSection('events')">
@@ -25,7 +25,7 @@
 
 <!-- Dartts Events Start -->
 <div id="events" class="events">
-    <app-card-side-content [dataContext]="events"></app-card-side-content>
+    <app-card-side-content [dataContext]="eventsInfo"></app-card-side-content>
 </div>
 <!-- Dartts Events Start -->
 
@@ -33,7 +33,7 @@
 <div class="container arrangements mb-40">
     <h6 class="mt-20 mb-20 bold fs-30">Our <span class="arrangements__color">Arrangements</span></h6>
     <div class="row">
-        @for( obj of arrangements; track $index){
+        @for( obj of arrangementsInfo; track $index){
         <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4">
             <app-card picture="{{obj.src}}" title="{{obj.name}}" desc="{{obj.desc}}" btn="{{obj.button}}"></app-card>
         </div>
@@ -49,7 +49,7 @@
         <p>Experience the change of seasons from a remote cabin, spacious view models villa or overlooking with your
             loved
             persons.</p>
-        <app-carousel [carouselItem]="carousel"></app-carousel>
+        <app-carousel [carouselItem]="personalizedInfo"></app-carousel>
     </div>
 </div>
 <!-- personalized End -->
@@ -63,7 +63,7 @@
         beautiful nature of Drenthe.</p>
     <p class="text-center">Discover exclusive offers at over your ideas and passion</p>
     <div class="row experience__section">
-        @for( obj of experience; track $index){
+        @for( obj of experienceInfo; track $index){
         <img class="col-3 p-0 experience__image" src="{{obj.src}}">
         }
     </div>
@@ -91,7 +91,7 @@
         <div class="tag-list">
             <div class="loop-slider">
                 <div class="inner">
-                    @for(image of promotions; track $index){
+                    @for(image of promotionsInfo; track $index){
                     <a class="tag" href="{{image.href}}"><img src="{{image.src}}" alt=""></a>
                     }
                 </div>
@@ -131,7 +131,7 @@
         </div>
         <div class="moment__section">
             <div class="row">
-                @for( obj of moment; track $index){
+                @for( obj of momentInfo; track $index){
                 <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card">
                     <app-card picture="{{obj.src}}" title="{{obj.name}}" desc="{{obj.desc}}"
                         btn="{{obj.button}}"></app-card>
