@@ -1,4 +1,7 @@
 {
+    "header": {
+        "logo": "/assets/images/logo/de-bonte-wever.svg"
+    },
     "bannerSection": {
         "title": "Welkom bij Hotel",
         "subTitle": "De Bonte Wever Assen!",
