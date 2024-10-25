@@ -1,15 +1,15 @@
-<div class="loginForm p-5 border border-1 rounded-2 shadow col-lg-6 col-sm-12">
-    <h2 class="loginForm__title">Login</h2>
+<div class="loginForm p-3 col-lg-12 col-sm-12 pb-4">
+    <h2 class="loginForm__title fs-24">Login</h2>
     <form (ngSubmit)="onSubmit()" class="loginForm__form">
         <div class="loginForm__form__emaildiv d-flex flex-column pb-5">
-            <label class="loginForm__form__emaildiv__email pb-2 fs-20" for="username">Email</label>
+            <label class="loginForm__form__emaildiv__email pb-2 fs-16" for="username">Email</label>
             <input
                 class="loginForm__form__emaildiv__unamebox form-control input-lg rounded-top "
                 type="text" id="username" [(ngModel)]="username" name="username" required>
         </div>
         <div class="loginForm__form__pwddiv d-flex flex-column pb-5">
             <div class="loginForm__form__pwddiv__pwd d-flex justify-content-between">
-                <label class="loginForm__form__pwddiv__pwd__password pb-2 fs-20" for="password">Password</label>
+                <label class="loginForm__form__pwddiv__pwd__password pb-2 fs-16" for="password">Password</label>
                 <a class="loginForm__form__pwddiv__pwd__forgotpwd" href="">
                     Forgot password?</a>
             </div>

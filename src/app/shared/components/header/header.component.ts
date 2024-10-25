@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginComponent } from '../../../login/login.component';
 import { Router, RouterLink } from '@angular/router';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [LoginComponent, RouterLink],
+  imports: [LoginComponent, RouterLink, MatMenuModule, MatButtonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
