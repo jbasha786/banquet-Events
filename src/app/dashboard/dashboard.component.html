@@ -1,11 +1,13 @@
 <div class="banner" id="landing_page" data-speed="8">
+    @if(bannerInfo !== undefined){
     <div class="banner__image">
         <div class="banner__image__content">
             <div class="banner__image__content__title">{{bannerInfo.title}}</div>
             <div class="banner__image__content__subtitle">{{bannerInfo.subTitle}}</div>
             <div class="banner__image__content__desc">{{bannerInfo.desc}}</div>
             <div>
-                <button class="banner__image__content__btn" (click)="continueBooking('3000ms', '1500ms')">{{bannerInfo.buttonName}}</button>
+                <button class="banner__image__content__btn"
+                    (click)="continueBooking('3000ms', '1500ms')">{{bannerInfo.buttonName}}</button>
             </div>
         </div>
         <div class="banner__image__downIcon" (click)="scrollToSection('events')">
@@ -21,6 +23,7 @@
             </div>
         </div>
     </div>
+    }
 </div>
 
 <!-- Dartts Events Start -->
@@ -144,7 +147,7 @@
 <!-- moment Section Start -->
 
 <!-- FAQ section Start  -->
- <div class="container mb-40">
+<div class="container mb-40">
     <app-faq></app-faq>
- </div>
+</div>
 <!-- FAQ section End  -->

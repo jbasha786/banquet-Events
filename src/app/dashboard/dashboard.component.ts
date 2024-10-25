@@ -33,7 +33,7 @@ import { BannerModel } from './Models/banner.model';
 })
 
 export class DashboardComponent {
-  bannerInfo!: BannerModel;
+  bannerInfo!: BannerModel | undefined;
   eventsInfo: any;
   arrangementsInfo: any;
   experienceInfo: any;
