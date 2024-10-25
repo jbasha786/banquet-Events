@@ -1,5 +1,10 @@
  @import "../../../../app/styles/variable.scss";
 
+ .thik_line{
+    padding: 2px;
+    background-color: $color-pink;
+ }
+
  .navbar {
      .container {
          flex-flow: wrap;
