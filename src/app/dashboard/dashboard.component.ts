@@ -88,6 +88,7 @@ export class DashboardComponent {
       width: "80vw",
       enterAnimationDuration,
       exitAnimationDuration,
+      disableClose: true 
     });
   }
 }

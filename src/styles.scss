@@ -55,6 +55,10 @@ html {
         margin-bottom: 0px + $i;
     }
 
+    .mbv-#{$i} {
+        margin-bottom: 0vw + $i;
+    }
+
     .ml-#{$i} {
         margin-left: 0px + $i;
     }
@@ -104,4 +108,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .mat-mdc-button .mdc-button__label{
     letter-spacing: normal;
+}
+
+.cursor {
+    cursor: pointer;
 }

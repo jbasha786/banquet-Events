@@ -1,0 +1,26 @@
+@import "../../styles/variable.scss";
+
+.planing {
+    &__process {
+        padding: 3vw;
+
+        .progress {
+            height: 1vw;
+
+            .progress-bar {
+                background-color: $color-pink;
+            }
+        }
+    }
+    &__type {
+        padding: 3vw;
+
+        &__section {
+            border: 1px solid $quick-silver;
+            border-radius: 5px;
+            padding: 1vw;
+            align-items: center;
+        }
+    }
+
+}

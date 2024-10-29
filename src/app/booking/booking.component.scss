@@ -1,6 +1,13 @@
 @import "../styles/variable.scss";
 
 .booking {
+
+    &__model {
+        height: 70vh;
+        overflow-y: auto;
+        scrollbar-width: 5vw;
+    }
+
     &__process {
         padding: 3vw;
 
@@ -10,23 +17,6 @@
             .progress-bar {
                 background-color: $color-pink;
             }
-        }
-    }
-
-    &__model {
-        height: 70vh;
-        overflow-y: scroll;
-        scrollbar-width: 5vw;
-    }
-
-    .plaining {
-        padding: 3vw;
-
-        &__section {
-            border: 1px solid $quick-silver;
-            border-radius: 5px;
-            padding: 1vw;
-            align-items: center;
         }
     }
 
