@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
   styleUrl: './selected-dates.component.scss'
 })
 export class SelectedDatesComponent {
+  selected!: Date | null;
   slots = [
     { id: 1, shift: "Morning 8Am - 11 PM" },
     { id: 2, shift: "Afternoon 12Am - 3 PM" },

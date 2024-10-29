@@ -8,16 +8,11 @@
         <hr>
         <div class="row selction_dates__calender p-2 w-100">
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                <mat-calendar></mat-calendar>
+                <mat-calendar [(selected)]="selected"></mat-calendar>
             </div>
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
                 id="availableSlots">
                 <h4 class="text-center p-2">Available Slots</h4>
-                <!-- @for(slot of slots; track $index) {
-                <div class="card m-10 p-10 align-item-center slots" id="slots{{$index}}">
-                    <span (click)="selectSlot($index)">{{slot.shift}}</span>
-                </div>
-                } -->
                 <mat-selection-list #shoes [multiple]="false">
                     @for (slot of slots; track slot) {
                     <div class="card m-10 p-10 align-item-center">
