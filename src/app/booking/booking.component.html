@@ -1,29 +1,22 @@
 <div class="booking">
     <div class="booking__model">
-        @if(planningScreen) {
         <div class="booking__process">
             <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-                    aria-valuemax="100"></div>
+                <div class="progress-bar" id="progressbar" [style.width]="progressbarWidth" role="progressbar"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
-        <h4 class="text-center fv-3">What type of event are you planning?</h4>
-        <div class="container">
-            <div class="row plaining">
-                @for(plan of planning; track $index){
-                <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 p-1">
-                    <div class="d-flex plaining__section">
-                        <span><img src="{{plan.src}}" alt="{{plan.name}}"></span>
-                        <span class="ms-2 fw-bold">{{plan.name}}</span>
-                    </div>
-                </div>
-                }
-            </div>
-        </div>
+        @if(currentStep == 1){
+        <app-planing></app-planing>
         }
-
-        @if(selectDatesScreen){
+        @if(currentStep == 2){
         <app-selected-dates></app-selected-dates>
+        }
+        @if(currentStep == 3){
+        <app-guest></app-guest>
+        }
+        @if(currentStep == 4){
+        <app-list-of-halls></app-list-of-halls>
         }
     </div>
 

@@ -16,8 +16,8 @@
     &__title,
     &__content {
         margin-top: 1vw;
-        margin-left: 3vw;
-        margin-right: 3vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
         margin-bottom: 1vw;
     }
 
@@ -42,9 +42,15 @@
         &__slots {
             background-color: $gray;
 
+            .active{
+                background-color: $color-pink;
+                color: $white;
+            }
+
             .card {
                 margin-left: 1vw;
                 margin-right: 1vw;
+                cursor: pointer;
             }
         }
     }

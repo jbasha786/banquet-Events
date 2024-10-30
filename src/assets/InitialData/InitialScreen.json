@@ -174,5 +174,31 @@
         }
     ],
     "username" : "Email",
-    "password" : "Password"
+    "password" : "Password",
+    "hallsList": [
+        {
+            "id": 1,
+            "name": "Queens Lagoon Suite",
+            "desc": "Accommodates upto 60 members",
+            "diamensions": "420 to 443 ft²",
+            "status": "Stage Available",
+            "deposite" : "Deposited Required",
+            "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
+            "price": "€ 4200.00",
+            "taxText": "/Excluding taxes and fees",
+            "src":"/assets/images/halls/hall.svg"
+        },
+        {
+            "id": 2,
+            "name": "Queens Lagoon Suite",
+            "desc": "Accommodates upto 60 members",
+            "diamensions": "420 to 443 ft²",
+            "status": "Stage Available",
+            "deposite" : "Deposited Required",
+            "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
+            "price": "€ 3200.00",
+            "taxText": "/Excluding taxes and fees",
+            "src":"/assets/images/halls/hall.svg"
+        }
+    ]
 }
