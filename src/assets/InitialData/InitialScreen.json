@@ -128,5 +128,51 @@
             "src": "/assets/images/promotions/5.svg",
             "href": "#"
         }
-    ]
+    ],
+    "navList": [
+        {
+            "src": "../../../../assets/images/logo/phone-call.png",
+            "name": "0592-356 000",
+            "link": ""
+        },
+        {
+            "src": "../../../../assets/images/logo/question-sign.png",
+            "name": "Help",
+            "link": ""
+        },
+        {
+            "src": "../../../../assets/images/logo/world.png",
+            "name": "English",
+            "link": ""
+        },
+        {
+            "src": "../../../../assets/images/logo/shopping-bag.png",
+            "name": "My Bookings",
+            "link": ""
+        },
+        {
+            "src": "../../../../assets/images/logo/user.png",
+            "name": "Sign In Or Join",
+            "link": "login"
+        }
+    ],
+    "navEvent_Items": [
+        {
+            "eventName": "OverView"
+        },
+        {
+            "eventName": "Best Deals"
+        },
+        {
+            "eventName": "Social Events"
+        },
+        {
+            "eventName": "Family Events"
+        },
+        {
+            "eventName": "Corporate Events"
+        }
+    ],
+    "username" : "Email",
+    "password" : "Password"
 }

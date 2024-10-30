@@ -9,7 +9,8 @@ export class DefaultService {
 
   constructor(private http: HttpClient) { }
 
-  public getJSON(file: any): Observable<any> {
-    return this.http.get<any>(file);
+  public getJSON(): Observable<any> {
+    const path = "/assets/InitialData/InitialScreen.json";
+    return this.http.get<any>(path);
   }
 }

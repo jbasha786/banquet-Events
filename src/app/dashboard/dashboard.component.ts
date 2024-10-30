@@ -53,8 +53,7 @@ export class DashboardComponent {
   }
 
   getInitialData() {
-    const path = '/assets/InitialData/InitialScreen.json'
-    this.defaultService.getJSON(path).subscribe((result: any) => {
+    this.defaultService.getJSON().subscribe((result: any) => {
       this.bannerInfo = result?.bannerSection;
       this.eventsInfo = result?.events;
       this.arrangementsInfo = result?.arrangements;

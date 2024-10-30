@@ -1,0 +1,31 @@
+@import "../../../../app/styles/variable.scss";
+.mat-body{
+   
+    .buttons{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 10px;
+        .mat-button{
+            border: 1px solid black;
+        }
+        .span_color{
+            color: black;
+            background: rgba(39, 39, 39, 1);
+        }
+        &__cancel{
+            border-radius: 50vw;
+            width: 5vw;
+            background: linear-gradient(90deg, #676767 0%, #C8B0AA 100%);
+            color: $white;
+            ;
+        }
+        &__yes{
+            border-radius: 50vw;
+            width: 5vw;
+            background-color: $color-pink;
+            color: $white;
+        }
+    }
+    
+}
