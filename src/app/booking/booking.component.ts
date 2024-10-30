@@ -25,7 +25,7 @@ export class BookingComponent {
   progressbarWidth: any;
   defaultPages: number = 4;
 
-  constructor(private router: Router, public dialogRef: MatDialogRef<BookingComponent>) {
+  constructor(public dialogRef: MatDialogRef<BookingComponent>) {
     this.defaultProgressSize = 100 / this.defaultPages;
     this.progressbarWidth = this.defaultProgressSize + "%";
   }

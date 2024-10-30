@@ -2,13 +2,14 @@
     <h1 class="selction_dates__title text-center">When?</h1>
     <div class="card p-2 selction_dates__content">
         <div class="selction_dates__changeOptions d-flex">
-            <div class="selction_dates__changeOptions__specific pl-30 pr-30">Specific Dates</div>
-            <div class="selction_dates__changeOptions__flexible pl-20 pr-30">Flexible Dates</div>
+            <div class="selction_dates__changeOptions__specific pl-30 pr-30" (click)="specificDates()">Specific Dates</div>
+            <div class="selction_dates__changeOptions__flexible pl-20 pr-30" (click)="flexibleDates()">Flexible Dates</div>
         </div>
         <hr>
-        <div class="row selction_dates__calender p-2 w-100">
+        <div class="row selction_dates__calender p-2 w-100" *ngIf="specificDaysView">
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                <mat-calendar [(selected)]="selected"></mat-calendar>
+                <mat-calendar (selectedChange)="_onSelectedChange($event)" [selected]="selectedDateRange">
+                </mat-calendar>
             </div>
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
                 id="availableSlots">
@@ -16,15 +17,14 @@
                 <mat-selection-list #shoes [multiple]="false">
                     @for (slot of slots; track slot) {
                     <div class="card m-10 p-10 align-item-center">
-                        <mat-list-option>{{slot.shift}}</mat-list-option>
+                        <mat-list-option (click)="listChange(slot)">{{slot.shift}}</mat-list-option>
                     </div>
                     }
                 </mat-selection-list>
             </div>
         </div>
-        <div class="d-flex justify-content-between selction_dates__footer p-3">
-            <div class="reset fw-bold">Reset</div>
-            <button class="btn_done fw-bold">Done</button>
+        <div class="row selction_dates__calender p-2 w-100" *ngIf="flexibleDatesView">
+            <p>feature Implementation</p>
         </div>
     </div>
 </div>

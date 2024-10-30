@@ -29,6 +29,12 @@
             border-radius: 50vw;
         }
 
+        &__cancel{
+            border:1px solid $button-color-orange;
+            border-radius: 50vw;
+            color: $button-color-orange;
+        }
+
         &__articles {
             color: $play-color-pink;
         }
