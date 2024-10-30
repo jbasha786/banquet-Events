@@ -46,7 +46,6 @@ export class SelectedDatesComponent {
   ]
 
   listChange(event : any) {
-    console.log(event, "hgdfh", this.selectedDateRange);
   }
 
   specificDates() {

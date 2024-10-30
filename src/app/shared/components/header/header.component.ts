@@ -50,9 +50,4 @@ export class HeaderComponent implements OnInit {
   allowCloseOnClickOut() {
     this.overlayContainer.getContainerElement().classList.remove('disable-backdrop-click');
   }
-  openPopup(): any{
-    this.dialog.open(DialogueComponent,{
-      width : "400px"
-    })
-  }
 }

@@ -34,8 +34,7 @@ export class ListOfHallsComponent {
   }
 
   getHalsList() {
-    const path = '/assets/InitialData/InitialScreen.json';
-    this.defaultService.getJSON(path).subscribe(result => {
+    this.defaultService.getJSON().subscribe(result => {
       this.hallsList = result.hallsList;
     })
   }

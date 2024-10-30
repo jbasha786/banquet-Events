@@ -22,13 +22,11 @@ ngOnInit(): void {
 }
 getusername(){
   this.defaultService.getJSON().subscribe(result => {
-    console.log(result);
     this.username = result.username;
   })
 }
 getpassword(){
   this.defaultService.getJSON().subscribe(result => {
-    console.log(result);
     this.password = result.password;
   })
 }
