@@ -7,6 +7,9 @@ import { DefaultService } from '../../services/default.service';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { CommonModule } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogueComponent } from '../../shared/components/dialogue/dialogue.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -27,7 +30,10 @@ export class ListOfHallsComponent {
   hallsList: any;
   reserveBtn: boolean = true;
 
-  constructor(private defaultService: DefaultService) { }
+  constructor(private defaultService: DefaultService,
+    private dialog: MatDialog,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.getHalsList();
@@ -39,9 +45,19 @@ export class ListOfHallsComponent {
     })
   }
 
-  cancelReservation() { }
+  cancelReservation() {
+    this.dialog.open(DialogueComponent, {
+      width:"500px",
+      disableClose: true
+    });
+   }
   reserve() {
     this.reserveBtn = false;
+  }
+
+  getDetails(){
+    this.dialog.closeAll();
+    this.router.navigate(['overview']);
   }
 
 }

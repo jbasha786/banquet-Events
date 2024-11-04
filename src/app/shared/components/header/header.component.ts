@@ -50,4 +50,8 @@ export class HeaderComponent implements OnInit {
   allowCloseOnClickOut() {
     this.overlayContainer.getContainerElement().classList.remove('disable-backdrop-click');
   }
+
+  goToHome() {
+    this.router.navigate(['']);
+  }
 }

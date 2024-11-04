@@ -1,0 +1,114 @@
+<div class="container overview">
+    <div class="d-flex">
+        <span class="overview__back"><mat-icon fontIcon="chevron_left"></mat-icon></span>
+        <span class="ms-3 fw-2">{{ItemDetails?.name}}</span>
+    </div>
+    <div>
+        <span>{{ItemDetails?.desc}} | </span>
+        <span>{{ItemDetails?.diamensions}} | </span>
+        <span>{{ItemDetails?.status}} </span>
+    </div>
+    <div class="row overview__imageSection position-relative">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 overview__imageSection__main">
+            <img src="{{ItemDetails?.image}}" width="100%" alt="">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 overview__imageSection__sub">
+            <div class="overview__imageSection__sub__img1"><img src="{{ItemDetails?.image1}}" alt="" width="100%"></div>
+            <div class="overview__imageSection__sub__img2"><img class="mt-4" src="{{ItemDetails?.image2}}" alt=""
+                    width="100%"></div>
+        </div>
+        <div class="d-flex position-absolute align-items-center overview__imageSection__viewAll">
+            <mat-icon fontIcon="image"></mat-icon>
+            <span class="fv-1">View all photos</span>
+        </div>
+    </div>
+
+    <div class="row overview__content">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <p class="fw-bold">{{ItemDetails?.deposite}}</p>
+            <p>{{ItemDetails?.depositeDesc}}</p>
+
+            <h3>Articles</h3>
+            <div *ngIf="data">
+                <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Item Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element?.name}} </td>
+                        <td mat-footer-cell *matFooterCellDef></td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="price">
+                        <th mat-header-cell *matHeaderCellDef> Price </th>
+                        <td mat-cell *matCellDef="let element">€ {{element?.price}} </td>
+                        <td mat-footer-cell *matFooterCellDef> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Qty">
+                        <th mat-header-cell *matHeaderCellDef> Qty </th>
+                        <td mat-cell *matCellDef="let element">{{element?.Qty}} </td>
+                        <td mat-footer-cell *matFooterCellDef>Total</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="tPrice">
+                        <th mat-header-cell *matHeaderCellDef> Total Price </th>
+                        <td mat-cell *matCellDef="let element"> € {{element?.tPrice}} </td>
+                        <td mat-footer-cell *matFooterCellDef> € {{getTotalCost()}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                    <tr mat-footer-row *matFooterRowDef="columnsToDisplay"></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 overview__content__edit">
+            <div class="overview__content__edit__section">
+                <div>
+                    <mat-form-field class="w-100">
+                        <mat-label>Guest</mat-label>
+                        <span matPrefix class="cursor"><mat-icon fontIcon="perm_identity"></mat-icon></span>
+                        <input type="text" matInput>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="w-100">
+                        <mat-label>Enter a date range</mat-label>
+                        <mat-date-range-input [rangePicker]="range">
+                            <input matStartDate placeholder="Start date">
+                            <input matEndDate placeholder="End date">
+                        </mat-date-range-input>
+                        <mat-datepicker-toggle matIconSuffix [for]="range"></mat-datepicker-toggle>
+                        <mat-date-range-picker #range></mat-date-range-picker>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="w-100">
+                        <mat-label>Duration</mat-label>
+                        <input matInput [ngxMatTimepicker]="eTime" />
+                        <ngx-mat-timepicker #eTime></ngx-mat-timepicker>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <div class="w-100 overview__content__edit__section__editArticle text-center fw-bold">Edit Articles
+                    </div>
+                </div>
+                <div class="fv-3">€ 4200.00</div>
+                <p>Excluding taxes and fees</p>
+                <div class="overview__content__edit__section__reverse text-center"> Reserve</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-40">
+        <app-amenities></app-amenities>
+    </div>
+
+    <div class="mt-40">
+        <app-things-to-know></app-things-to-know>
+    </div>
+
+    <div class="mt-20 mb-20">
+        <app-google-map></app-google-map>
+    </div>
+</div>
