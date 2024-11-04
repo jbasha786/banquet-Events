@@ -33,7 +33,7 @@ import { BannerModel } from './Models/banner.model';
 })
 
 export class DashboardComponent {
-  bannerInfo!: BannerModel;
+  bannerInfo!: BannerModel | undefined;
   eventsInfo: any;
   arrangementsInfo: any;
   experienceInfo: any;
@@ -53,8 +53,7 @@ export class DashboardComponent {
   }
 
   getInitialData() {
-    const path = '/assets/InitialData/InitialScreen.json'
-    this.defaultService.getJSON(path).subscribe((result: any) => {
+    this.defaultService.getJSON().subscribe((result: any) => {
       this.bannerInfo = result?.bannerSection;
       this.eventsInfo = result?.events;
       this.arrangementsInfo = result?.arrangements;
@@ -88,6 +87,7 @@ export class DashboardComponent {
       width: "80vw",
       enterAnimationDuration,
       exitAnimationDuration,
+      disableClose: true 
     });
   }
 }

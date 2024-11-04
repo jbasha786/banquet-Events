@@ -1,0 +1,74 @@
+<div class="hallsView">
+    <h2 class="text-center">Type of Halls?</h2>
+    <div class="container">
+        <form action="" class="card hallsView__card">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                    <mat-form-field>
+                        <mat-label>Guest</mat-label>
+                        <span matPrefix class="cursor"><mat-icon fontIcon="perm_identity"></mat-icon></span>
+                        <input type="text" matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                    <mat-form-field>
+                        <mat-label>Check-In</mat-label>
+                        <span matPrefix (click)="checkin.open()" class="cursor"><mat-icon
+                                fontIcon="date_range"></mat-icon></span>
+                        <input matInput [matDatepicker]="checkin">
+                        <mat-datepicker #checkin></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                    <mat-form-field>
+                        <mat-label>Check-Out</mat-label>
+                        <span matPrefix (click)="checkout.open()" class="cursor"><mat-icon
+                                fontIcon="date_range"></mat-icon></span>
+                        <input matInput [matDatepicker]="checkout">
+                        <mat-datepicker #checkout></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                    <mat-form-field>
+                        <mat-label>Duration</mat-label>
+                        <input matInput [ngxMatTimepicker]="time" />
+                        <ngx-mat-timepicker #time></ngx-mat-timepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+
+        <!-- list of views -->
+        @for(item of hallsList; track $index){
+        <div class="card hallsView__list">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <img src="{{item.src}}" width="100%" alt="{{item.name}}">
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <h3>{{item.name}}</h3>
+                    <div class="mbv-2">
+                        <span>{{item.desc}} | {{item.diamensions}} | {{item.status}}</span>
+                    </div>
+                    <h5>{{item.deposite}}</h5>
+                    <p class="hallsView__list__desc">{{item.depositeDesc}}</p>
+                    <div class="mbv-2">
+                        <span
+                            class="fv-2 hallsView__list__priceColor">{{item.price}}</span><span>{{item.taxText}}</span>
+                    </div>
+                    <div class="hallsView__list__btnSection">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <button mat-flat-button class="hallsView__list__cancel fw-bold" *ngIf="!reserveBtn" (click)="cancelReservation()">Cancel</button>
+                                <button mat-flat-button class="hallsView__list__reserve fw-bold" *ngIf="reserveBtn" (click)="reserve()">Reserve</button>
+                                <span class="ms-2 hallsView__list__articles fw-bold">Add Articles</span>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="fw-bold">Menu Details -></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

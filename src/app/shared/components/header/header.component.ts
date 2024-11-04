@@ -1,37 +1,53 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LoginComponent } from '../../../login/login.component';
 import { Router, RouterLink } from '@angular/router';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { Component, Input } from '@angular/core';
 import { DefaultService } from '../../../services/default.service';
+import { headerModel } from '../../_models/headerModel';
+import { OverlayContainer } from '@angular/cdk/overlay';
+import { DialogueComponent } from '../dialogue/dialogue.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [LoginComponent, RouterLink, MatMenuModule, MatButtonModule],
+  imports: [LoginComponent, RouterLink, MatMenuModule, MatButtonModule, DialogueComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router) { }
 
-  items = [
-    { src: "../../../../assets/images/logo/phone-call.png", name: "0592-356 000"  , link: ""},
-    { src: "../../../../assets/images/logo/question-sign.png",name: "Help"  , link: ""},
-    { src: "../../../../assets/images/logo/world.png" ,name: "English" , link: ""},
-    { src: "../../../../assets/images/logo/shopping-bag.png", name: "My Bookings"  , link: ""},
-    { src: "../../../../assets/images/logo/user.png" , name: "Sign In Or Join" , link: "login"},
-  ];
-  Event_Items = [
-    {name: "OverView"},
-    {name: "Best Deals"},
-    {name: "Social Events"},
-    {name: "Family Events"},
-    {name: "Corporate Events"},
-  ]
+  @Input() headerInfo: any;
+  navList: headerModel[] = [];
+  navEvent_Items: headerModel[] = [];
+  openpopup: boolean = false;
+
+  constructor(private router: Router,
+    private defaultService: DefaultService,
+    private overlayContainer: OverlayContainer,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
+    this.getNavList();
+    this.getnavEventList();
   }
-  @Input() headerInfo: any;
+  getNavList() {
+    this.defaultService.getJSON().subscribe(result => {
+      this.navList = result.navList;
+    })
+  }
+  getnavEventList() {
+    this.defaultService.getJSON().subscribe(result => {
+      this.navEvent_Items = result.navEvent_Items;
+    })
+  }
+  preventCloseOnClickOut() {
+    this.overlayContainer.getContainerElement().classList.add('disable-backdrop-click');
+  }
+
+  allowCloseOnClickOut() {
+    this.overlayContainer.getContainerElement().classList.remove('disable-backdrop-click');
+  }
 }

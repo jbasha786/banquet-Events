@@ -24,8 +24,7 @@ export class AppComponent {
   }
 
   getHeaderDetails() {
-    const path = "/assets/InitialData/InitialScreen.json";
-    this.defaultService.getJSON(path).subscribe((result: any) => {
+    this.defaultService.getJSON().subscribe((result: any) => {
       this.headerDetails = result?.header;
     })
   }

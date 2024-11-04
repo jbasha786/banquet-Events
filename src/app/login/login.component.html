@@ -2,20 +2,20 @@
     <h2 class="loginForm__title fs-24">Login</h2>
     <form (ngSubmit)="onSubmit()" class="loginForm__form">
         <div class="loginForm__form__emaildiv d-flex flex-column pb-5">
-            <label class="loginForm__form__emaildiv__email pb-2 fs-16" for="username">Email</label>
+            <label class="loginForm__form__emaildiv__email pb-2 fs-16" for="username">{{username}}</label>
             <input
                 class="loginForm__form__emaildiv__unamebox form-control input-lg rounded-top "
-                type="text" id="username" [(ngModel)]="username" name="username" required>
+                type="text" id="username" name="username" required (keydown.tab)="$event.stopPropagation()">
         </div>
         <div class="loginForm__form__pwddiv d-flex flex-column pb-5">
             <div class="loginForm__form__pwddiv__pwd d-flex justify-content-between">
-                <label class="loginForm__form__pwddiv__pwd__password pb-2 fs-16" for="password">Password</label>
+                <label class="loginForm__form__pwddiv__pwd__password pb-2 fs-16" for="password">{{password}}</label>
                 <a class="loginForm__form__pwddiv__pwd__forgotpwd" href="">
                     Forgot password?</a>
             </div>
             <input
-                class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
-                type="password" id="password" [(ngModel)]="password" name="password" required>
+                class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top" (keydown.tab)="$event.stopPropagation()"
+                type="password" id="password" name="password" required>
         </div>
 
 
