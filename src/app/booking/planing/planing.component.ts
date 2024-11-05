@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
+import { MatListModule, MatSelectionListChange } from '@angular/material/list';
+import { DefaultService } from '../../services/default.service';
+import { EventPlanService } from '../../services/event-plan/event-plan.service';
 
 @Component({
   selector: 'app-planing',
@@ -10,19 +12,27 @@ import { MatListModule } from '@angular/material/list';
 })
 export class PlaningComponent {
 
-  planning = [
-    { id: 1, src: '/assets/images/planing/cake.svg', name: "Birthday" },
-    { id: 2, src: '/assets/images/planing/wedding-rings.svg', name: "Wedding" },
-    { id: 3, src: '/assets/images/planing/bar.svg', name: "Social Events" },
-    { id: 4, src: '/assets/images/planing/talk.svg', name: "Bussiness Meetings" },
-    { id: 5, src: '/assets/images/planing/bar.svg', name: "Social Events" },
-    { id: 5, src: '/assets/images/planing/confetti.svg', name: "Engagement" },
-    { id: 7, src: '/assets/images/planing/briefcase.svg', name: "Work Event" },
-    { id: 8, src: '/assets/images/planing/parents.svg', name: "Family Event" },
-    { id: 9, src: '/assets/images/planing/collaboration.svg', name: "Get Together" },
-    { id: 10, src: '/assets/images/planing/conference.svg', name: "Conferences" },
-    { id: 11, src: '/assets/images/planing/conversation.svg', name: "Small Meetings" },
-    { id: 12, src: '/assets/images/planing/restaurant.svg', name: "Others" },
-  ];
+  planningData: any;
+
+  constructor(private defaultService: DefaultService,
+    private eventPlanService: EventPlanService
+  ) { }
+
+  ngOnInit(): void {
+    this.getPlanningData();
+  }
+
+  getPlanningData(): void {
+    this.defaultService.getJSON().subscribe(result => {
+      this.planningData = result.planning;
+    }, err => {
+      console.log('Error for Planning API: ', err);
+    })
+  }
+
+  // Change selection of planning
+  selChange(e: MatSelectionListChange) {
+    this.eventPlanService.addSelectedEventPlan(e.options[0].value);
+  }
 
 }

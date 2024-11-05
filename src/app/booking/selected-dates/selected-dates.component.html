@@ -14,10 +14,10 @@
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
                 id="availableSlots">
                 <h4 class="text-center p-2">Available Slots</h4>
-                <mat-selection-list #shoes [multiple]="false">
-                    @for (slot of slots; track slot) {
+                <mat-selection-list #slot [multiple]="false" (selectionChange)="slotsChange($event)">
+                    @for (slot of slots; track $index) {
                     <div class="card m-10 p-10 align-item-center">
-                        <mat-list-option (click)="listChange(slot)">{{slot.shift}}</mat-list-option>
+                        <mat-list-option [value]="slot">{{slot.shift}}</mat-list-option>
                     </div>
                     }
                 </mat-selection-list>

@@ -54,4 +54,10 @@ export class HeaderComponent implements OnInit {
   goToHome() {
     this.router.navigate(['']);
   }
+
+  expression(link: any) {
+    if (link === 'mybooking') {
+      this.router.navigate([link])
+    }
+  }
 }

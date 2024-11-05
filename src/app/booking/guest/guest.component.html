@@ -2,21 +2,19 @@
     <h2 class="guest__title text-center">For How Many?</h2>
     <div class="guest__form row d-flex justify-content-center w-100">
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-            <form>
-                <mat-card class="guest__card">
-                    <mat-label class="guest__card__label">Adults</mat-label>
-                    <mat-form-field class="example-full-width">
-                        <input type="number" matInput placeholder="Enter No of Adults">
-                    </mat-form-field>
-                </mat-card>
+            <mat-card class="guest__card">
+                <mat-label class="guest__card__label">Adults</mat-label>
+                <mat-form-field class="example-full-width">
+                    <input type="number" [(ngModel)]="adults" min="1" matInput placeholder="Enter No of Adults" (input)="changeAdults(adults)">
+                </mat-form-field>
+            </mat-card>
 
-                <mat-card class="guest__card">
-                    <mat-label class="guest__card__label">Childs</mat-label>
-                    <mat-form-field class="example-full-width">
-                        <input type="number" matInput placeholder="Enter No of Childs">
-                    </mat-form-field>
-                </mat-card>
-            </form>
+            <mat-card class="guest__card">
+                <mat-label class="guest__card__label">Childs</mat-label>
+                <mat-form-field class="example-full-width">
+                    <input type="number" [(ngModel)]="child" min="1" matInput placeholder="Enter No of Childs" (input)="changeChild(child)">
+                </mat-form-field>
+            </mat-card>
         </div>
     </div>
 </div>
