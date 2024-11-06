@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { MatInputModule } from '@angular/material/input';
+import { HostDetailsComponent } from './host-details/host-details.component';
 
 @Component({
   selector: 'app-overview',
@@ -28,7 +29,8 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatDatepickerModule,
     NgxMatTimepickerModule,
-    MatInputModule],
+    MatInputModule,
+    HostDetailsComponent],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.scss'
 })
@@ -36,6 +38,7 @@ export class OverviewComponent {
 
   ItemDetails: any
   articlesList: any;
+  hostDetails: any;
   displayedColumns: string[] = ['name', 'price', 'Qty', 'tPrice'];
   columnsToDisplay: string[] = this.displayedColumns.slice();
   data: any[] = [];
@@ -51,6 +54,7 @@ export class OverviewComponent {
     this.defaultService.getJSON().subscribe(result => {
       this.ItemDetails = result?.overview;
       this.data = result?.articles;
+      this.hostDetails = result?.hostDetails[0];
     })
   };
 

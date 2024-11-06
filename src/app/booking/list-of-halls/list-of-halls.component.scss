@@ -15,6 +15,26 @@
         padding: 1vw;
         margin-top: 1vw;
 
+        &__images {
+            position: relative;
+
+            &__icon {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                left: 0px;
+                bottom: 0px;
+                margin: 0 auto;
+                height: 100%;
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+
         &__desc {
             width: 35vw;
         }
@@ -29,8 +49,8 @@
             border-radius: 50vw;
         }
 
-        &__cancel{
-            border:1px solid $button-color-orange;
+        &__cancel {
+            border: 1px solid $button-color-orange;
             border-radius: 50vw;
             color: $button-color-orange;
         }

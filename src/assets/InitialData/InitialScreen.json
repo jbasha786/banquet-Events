@@ -326,5 +326,77 @@
             "src": "/assets/images/planing/restaurant.svg",
             "name": "Others"
         }
+    ],
+    "hostDetails": [
+        {
+            "name": "Vivian is a Superhost",
+            "desc": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
+            "respondRate": "Response rate: 100%",
+            "responseTime": "Responds within an hour",
+            "contact": "Contact",
+            "phone": "0592-356 000,       |        0592-356 000       |        0592-356 000"
+        }
+    ],
+    "addArticles": [
+        {
+            "qty": 1,
+            "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+            "price": 1,
+            "total": "H"
+        },
+        {
+            "qty": 2,
+            "name": "Onbeperkt koffie thee en fris ",
+            "price": 4,
+            "total": "He"
+        },
+        {
+            "qty": 3,
+            "name": "Kaas broodjes (vega)",
+            "price": 6,
+            "total": "Li"
+        },
+        {
+            "qty": 4,
+            "name": "Pizzapunt ",
+            "price": 9,
+            "total": "Be"
+        },
+        {
+            "qty": 5,
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 10,
+            "total": "B"
+        },
+        {
+            "qty": 6,
+            "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+            "price": 12,
+            "total": "C"
+        },
+        {
+            "qty": 7,
+            "name": "Onbeperkt koffie thee en fris ",
+            "price": 14,
+            "total": "N"
+        },
+        {
+            "qty": 8,
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 15,
+            "total": "O"
+        },
+        {
+            "qty": 9,
+            "name": "Kaas broodjes (vega)",
+            "price": 18,
+            "total": "F"
+        },
+        {
+            "qty": 10,
+            "name": "Pizzapunt",
+            "price": 20,
+            "total": "Ne"
+        }
     ]
 }

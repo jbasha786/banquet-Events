@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { LoginComponent } from '../../../login/login.component';
 import { Router, RouterLink } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,11 +7,16 @@ import { headerModel } from '../../_models/headerModel';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { DialogueComponent } from '../dialogue/dialogue.component';
 import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../../../core/login/login.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [LoginComponent, RouterLink, MatMenuModule, MatButtonModule, DialogueComponent],
+  imports: [LoginComponent,
+    RouterLink,
+    MatMenuModule,
+    MatButtonModule,
+    DialogueComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

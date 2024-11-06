@@ -14,6 +14,7 @@ import { EventBookingService } from '../../services/event-hall-booking/event-boo
 import { EventPlanService } from '../../services/event-plan/event-plan.service';
 import { EventGuestsService } from '../../services/event-guest/event-guests.service';
 import { EventDateSlotsService } from '../../services/event-date-slot/event-date-slots.service';
+import { ArticlesComponent } from '../../shared/components/articles/articles.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -32,6 +33,8 @@ export class ListOfHallsComponent {
 
   hallsList: any;
   reserveBtn: boolean = true;
+  requestSent: boolean = true;
+  requestAccepted: boolean = true;
 
   constructor(private defaultService: DefaultService,
     private dialog: MatDialog,
@@ -63,6 +66,7 @@ export class ListOfHallsComponent {
   reserve(reserve: any) {
     this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
+    this.requestSent = false;
   }
 
   getDetails(){
@@ -73,13 +77,23 @@ export class ListOfHallsComponent {
   getGuestDetails(){
     const adults = this.eventACService.getSelectedAdultCount();
     const child = this.eventACService.getSelectedChildCount();
-    console.log(adults, child, "adults, child");
   }
 
   getDateAndSlots(){
     const selectedDate = this.eventDSService.getSelectedDate();
     const slots = this.eventDSService.getAvailableSlots();
-    console.log(selectedDate, slots, "selectedDate, slots");
+  }
+
+  confirm() {
+    this.requestSent = true;
+    this.requestAccepted = false;
+  }
+
+  addArticles() {
+    this.dialog.open(ArticlesComponent, {
+      width: '600px',
+      height: '60vh'
+    });
   }
 
 }
