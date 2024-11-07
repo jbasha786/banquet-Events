@@ -1,0 +1,28 @@
+@import "../../app/styles/variable.scss";
+
+.container{
+    .btn_raised{
+        border-radius: 10px;
+        padding: 0.5vh 1vw;
+        cursor: pointer;
+    }
+   .btn_title{
+    font-size: 35px;
+    font-weight: $font-weight500;
+    cursor: pointer;
+   }
+   .titleSection{
+    // width: fit-content;
+   }
+   .btn_search{
+    position: absolute;
+    background: none;
+    border: none;
+   }
+   .search_input{
+    padding-right: 8vw;
+   }
+   .fw-500{
+    font-weight: $font-weight500;
+   }
+}

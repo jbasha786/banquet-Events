@@ -173,8 +173,8 @@
             "eventName": "Corporate Events"
         }
     ],
-    "username" : "Email",
-    "password" : "Password",
+    "username": "Email",
+    "password": "Password",
     "hallsList": [
         {
             "id": 1,
@@ -182,11 +182,11 @@
             "desc": "Accommodates upto 60 members",
             "diamensions": "420 to 443 ft²",
             "status": "Stage Available",
-            "deposite" : "Deposited Required",
+            "deposite": "Deposited Required",
             "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
             "price": "€ 4200.00",
             "taxText": "/Excluding taxes and fees",
-            "src":"/assets/images/halls/hall.svg"
+            "src": "/assets/images/halls/hall.svg"
         },
         {
             "id": 2,
@@ -194,11 +194,149 @@
             "desc": "Accommodates upto 60 members",
             "diamensions": "420 to 443 ft²",
             "status": "Stage Available",
-            "deposite" : "Deposited Required",
+            "deposite": "Deposited Required",
             "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
             "price": "€ 3200.00",
             "taxText": "/Excluding taxes and fees",
-            "src":"/assets/images/halls/hall.svg"
+            "src": "/assets/images/halls/hall.svg"
+        }
+    ],
+    "bookingHistory": [
+        {
+            "id": 1,
+            "name": "Queens Lagoon Suite",
+            "price": "€ 4200.00",
+            "diamensions": "450/Sqft",
+            "bookingID": "Booking ID: 12474",
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "viewImage": "/assets/images/BookingHistory/view_image.png",
+            "cancelBooking": "Cancel Booking",
+            "editBooking": "Edit Booking",
+            "viewDetails": "View Details",
+            "rating": 4.2,
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "status": {
+                "conformationID": 1,
+                "name": "Status",
+                "value": "Booking Confirmed"
+            },
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN"
+        },
+        {
+            "id": 2,
+            "name": "Queens Lagoon Suite",
+            "price": "€ 4211.00",
+            "diamensions": "450/Sqft",
+            "bookingID": "Booking ID: 12474",
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "viewImage": "/assets/images/BookingHistory/view_image.png",
+            "rating": 3.5,
+            "cancelBooking": "Cancel Booking",
+            "editBooking": "Edit Booking",
+            "viewDetails": "View Details",
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "status": {
+                "conformationID": 2,
+                "name": "Status",
+                "value": "Cancelled Booking"
+            },
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN"
+        },
+        {
+            "id": 3,
+            "name": "Queens Lagoon Suite",
+            "price": "€ 4222.00",
+            "diamensions": "450/Sqft",
+            "bookingID": "Booking ID: 12474",
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "viewImage": "/assets/images/BookingHistory/view_image.png",
+            "rating": 4.2,
+            "cancelBooking": "Cancel Booking",
+            "editBooking": "Edit Booking",
+            "viewDetails": "View Details",
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "status": {
+                "conformationID": 1,
+                "name": "Status",
+                "value": "Booking Confirmed"
+            },
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN"
+        },
+        {
+            "id": 4,
+            "name": "Queens Lagoon Suite",
+            "price": "€4233.00",
+            "diamensions": "450/Sqft",
+            "bookingID": "Booking ID: 12474",
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "viewImage": "/assets/images/BookingHistory/view_image.png",
+            "rating": 3.5,
+            "cancelBooking": "Cancel Booking",
+            "editBooking": "Edit Booking",
+            "viewDetails": "View Details",
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "status": {
+                "conformationID": 2,
+                "name": "Status",
+                "value": "Cancelled Booking"
+            },
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN"
         }
     ]
 }
