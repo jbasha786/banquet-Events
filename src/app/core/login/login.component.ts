@@ -1,6 +1,6 @@
 import { Component, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DefaultService } from '../services/default.service';
+import { DefaultService } from '../../services/default.service';
 
 @Component({
   selector: 'app-login',
@@ -21,12 +21,12 @@ ngOnInit(): void {
   this.getpassword();
 }
 getusername(){
-  this.defaultService.getJSON().subscribe(result => {
+  this.defaultService.getJSON().subscribe((result: any) => {
     this.username = result.username;
   })
 }
 getpassword(){
-  this.defaultService.getJSON().subscribe(result => {
+  this.defaultService.getJSON().subscribe((result: any) => {
     this.password = result.password;
   })
 }

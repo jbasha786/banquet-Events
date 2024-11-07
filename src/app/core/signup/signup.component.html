@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="signup">
+        <h4 class="text-center">Sign Up</h4>
+        <p>Already have an account? <span class="signup__color cursor" (click)="returnToLogin()">Login</span></p>
+        <form action="" [formGroup]="registrationForm">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput type="text" formControlName="fullName" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" formControlName="email" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Relatie</mat-label>
+                        <input matInput type="text" formControlName="relatie" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>phone</mat-label>
+                        <input matInput formControlName="phone" type="number" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password" type="password" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput formControlName="confirmPassword" type="password" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="signup__button">
+                <button class="signup__button__btn" type="submit" (click)="register()">Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>

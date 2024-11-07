@@ -7,7 +7,14 @@ import { DefaultService } from '../../services/default.service';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { CommonModule } from '@angular/common';
-
+import { MatDialog } from '@angular/material/dialog';
+import { DialogueComponent } from '../../shared/components/dialogue/dialogue.component';
+import { Router } from '@angular/router';
+import { EventBookingService } from '../../services/event-hall-booking/event-booking.service';
+import { EventPlanService } from '../../services/event-plan/event-plan.service';
+import { EventGuestsService } from '../../services/event-guest/event-guests.service';
+import { EventDateSlotsService } from '../../services/event-date-slot/event-date-slots.service';
+import { ArticlesComponent } from '../../shared/components/articles/articles.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -26,11 +33,22 @@ export class ListOfHallsComponent {
 
   hallsList: any;
   reserveBtn: boolean = true;
+  requestSent: boolean = true;
+  requestAccepted: boolean = true;
 
-  constructor(private defaultService: DefaultService) { }
+  constructor(private defaultService: DefaultService,
+    private dialog: MatDialog,
+    private router: Router,
+    private eventBookingService: EventBookingService,
+    private eventPlaning: EventPlanService,
+    private eventACService: EventGuestsService,
+    private eventDSService: EventDateSlotsService
+  ) { }
 
   ngOnInit() {
     this.getHalsList();
+    this.getGuestDetails();
+    this.getDateAndSlots();
   }
 
   getHalsList() {
@@ -39,9 +57,43 @@ export class ListOfHallsComponent {
     })
   }
 
-  cancelReservation() { }
-  reserve() {
+  cancelReservation() {
+    this.dialog.open(DialogueComponent, {
+      width:"500px",
+      disableClose: true
+    });
+   }
+  reserve(reserve: any) {
+    this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
+    this.requestSent = false;
+  }
+
+  getDetails(){
+    this.dialog.closeAll();
+    this.router.navigate(['overview']);
+  }
+
+  getGuestDetails(){
+    const adults = this.eventACService.getSelectedAdultCount();
+    const child = this.eventACService.getSelectedChildCount();
+  }
+
+  getDateAndSlots(){
+    const selectedDate = this.eventDSService.getSelectedDate();
+    const slots = this.eventDSService.getAvailableSlots();
+  }
+
+  confirm() {
+    this.requestSent = true;
+    this.requestAccepted = false;
+  }
+
+  addArticles() {
+    this.dialog.open(ArticlesComponent, {
+      width: '600px',
+      height: '60vh'
+    });
   }
 
 }

@@ -1,7 +1,7 @@
-export interface baseModel {
+export interface BaseModel {
     id: number;
 }
-export interface headerModel extends baseModel {
+export interface headerModel extends BaseModel {
     src: string;
     name: string;
     link: string;

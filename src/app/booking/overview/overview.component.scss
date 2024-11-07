@@ -1,0 +1,89 @@
+@import "../../styles/variable.scss";
+
+.overview {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    &__back {
+        border-radius: 50vw;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        background: $back-btn-color-overview;
+    }
+
+    &__imageSection {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+
+        &__main {
+            height: 56vh;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        &__sub {
+            height: 56vh;
+
+            &__img1 {
+                height: 26.5vh;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            &__img2 {
+                height: 26.5vh;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        &__viewAll {
+            background: $white;
+            border-radius: 5px;
+            width: max-content;
+            right: 20px;
+            bottom: 10px;
+            padding: 0.5vw;
+        }
+    }
+
+    &__content{
+        &__edit {
+            &__section {
+                padding: 2vw;
+                background-color: $gray;
+                border-radius: 5px;
+                &__editArticle {
+                    padding: 0.5vw;
+                    font-size: 2vw;
+                    color: $color-pink;
+                    border-radius: 5px;
+                    border: 1px solid $color-pink;
+                }
+                &__reverse {
+                    background: linear-gradient(90.69deg, #8F1CB8 -0.15%, #C82992 100.99%);
+                    font-size: 2vw;
+                    border-radius: 5px;
+                    padding: 0.5vw;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+
+}

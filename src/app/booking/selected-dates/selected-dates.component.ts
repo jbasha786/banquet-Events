@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { DateRange, DefaultMatCalendarRangeStrategy, MAT_DATE_RANGE_SELECTION_STRATEGY, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, provideNativeDateAdapter } from '@angular/material/core';
-import { MatListModule } from '@angular/material/list';
+import { MatListModule, MatSelectionListChange } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
+import { EventDateSlotsService } from '../../services/event-date-slot/event-date-slots.service';
 
 @Component({
   selector: 'app-selected-dates',
@@ -22,6 +23,8 @@ export class SelectedDatesComponent {
   specificDaysView: boolean = true;
   flexibleDatesView: boolean = false;
 
+  constructor(private eventDSService: EventDateSlotsService) { }
+
   _onSelectedChange(date: Date): void {
     if (
       this.selectedDateRange &&
@@ -36,6 +39,8 @@ export class SelectedDatesComponent {
     } else {
       this.selectedDateRange = new DateRange(date, null);
     }
+
+    this.eventDSService.setSelectedDate(this.selectedDateRange);
   };
 
   slots = [
@@ -45,7 +50,8 @@ export class SelectedDatesComponent {
     { id: 4, shift: "Night 8Am - 11 PM" },
   ]
 
-  listChange(event : any) {
+  slotsChange(event: MatSelectionListChange) {
+    this.eventDSService.setAvailableSlots(event.options[0].value);
   }
 
   specificDates() {
