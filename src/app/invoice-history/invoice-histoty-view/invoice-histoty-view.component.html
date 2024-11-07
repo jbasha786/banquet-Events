@@ -1,1 +1,106 @@
-<p>invoice-histoty-view works!</p>
+<div class="invoice-view">
+    <!-- Header section -->
+    <div
+        class="invoice-view__head mb-20 container d-sm-block d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-between align-items-center">
+        <div>
+            <img src="{{InvoiceViewData.logo}}" alt="Invoice Logo">
+            <p>{{InvoiceViewData.address}}</p>
+            <p>{{InvoiceViewData.phone}}</p>
+        </div>
+        <div class="text-end">
+            <h2>{{InvoiceViewData.InvoiceId}}</h2>
+            <p>Ref No: {{InvoiceViewData.refNumber}}</p>
+            <p>Issued Date: {{InvoiceViewData.issuedDate}}</p>
+        </div>
+    </div>
+    <!-- Bill Section -->
+    <div class="container-fluid invoice-view__bill mt-20 mb-20">
+        <div
+            class="container invoice-view__bill__section d-sm-block d-md-flex d-lg-flex justify-content-between align-items-center gap-2">
+            <div>
+                <h6>Bill To</h6>
+                <p>{{InvoiceViewData.billTo}}</p>
+            </div>
+            <div>
+                <h6>Bill From</h6>
+                <p>{{InvoiceViewData.billFrom}}</p>
+            </div>
+            <div>
+                <h6>Description</h6>
+                <p>{{InvoiceViewData.desc}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- Services Section -->
+    <div class="invoice-view__service container mt-20 mb-20">
+        <h6 class="fw-bold">Services</h6>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <h6>Queens Lagoon Suite</h6>
+            <span>€ 4200.00</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <h6>Total Cost</h6>
+            <span>€ 4200.00</span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <h6>Subtotal</h6>
+            <span>€ 4200.00</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <h6>VAT 21%</h6>
+            <span>€ 40.00</span>
+        </div>
+    </div>
+
+    <!-- Total Section -->
+    <div class="container-fluid mt-20 mb-20 invoice-view__total">
+        <div class="container d-flex justify-content-between invoice-view__total__section">
+            <h6>Total</h6>
+            <span>€ 4240.00</span>
+        </div>
+    </div>
+
+    <!-- Details Section -->
+
+    <div class="invoice-view__details container mt-20 mb-20">
+        <div
+            class="invoice-view__details d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-between align-items-center gap-2">
+            <div>
+                <h6>Account</h6>
+                <p>{{InvoiceViewData.account}}</p>
+            </div>
+            <div>
+                <h6>IBAN number</h6>
+                <p>{{InvoiceViewData.ibanNumber}}</p>
+            </div>
+            <div>
+                <h6>BIC code</h6>
+                <p>{{InvoiceViewData.bicCode}}</p>
+            </div>
+            <div>
+                <h6>VAT</h6>
+                <p>{{InvoiceViewData.vat}}</p>
+            </div>
+            <div>
+                <h6>CoC</h6>
+                <p>{{InvoiceViewData.coc}}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- payment Text Desc -->
+
+    <div class="invoice-view__payment container mt-20 mb-20">
+        <p class="text-center">{{InvoiceViewData.paymentInfo}}</p>
+    </div>
+
+    <!-- close Icon -->
+    <div class="invoice-view__close">
+        <div class="invoice-view__close__icon cursor" (click)="close()">
+            <mat-icon fontIcon="close"></mat-icon>
+        </div>
+    </div>
+</div>

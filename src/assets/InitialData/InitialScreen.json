@@ -398,5 +398,22 @@
             "price": 20,
             "total": "Ne"
         }
-    ]
+    ],
+    "invoiceView" : {
+        "logo":"/assets/images/logo/de-bonte-wever.svg",
+        "address": "24th Street, Dallas, 43201, America",
+        "phone" : "+181 (0) 56789234",
+        "InvoiceId": "INV-2400346",
+        "refNumber": "123456-2023",
+        "issuedDate": "05/06/2024",
+        "billTo": "Valarie Carlson 24th Street, Dallas, 43201, America",
+        "billFrom" : "De Bonte Weaver 34c B-block, Dutch.",
+        "desc": "Queens Lagoon Suite- Banquet Hall  450/Sqft",
+        "account": "American bank",
+        "ibanNumber": "GB00 0000 0000 0000 00",
+        "bicCode": "0000000",
+        "vat": "00000000",
+        "coc": "000000000",
+        "paymentInfo" :"Payment is due within 15 days of the issued date. Please contact tubeladder@mail.com for any questions."
+    }
 }
