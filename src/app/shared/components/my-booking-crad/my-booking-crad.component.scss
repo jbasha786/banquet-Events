@@ -1,0 +1,105 @@
+@import "../../../../app/styles/variable.scss";
+
+.card {
+
+    // border: 1px solid green;
+    .card-img {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .price {
+        color: $priceColor;
+        font-size: 24px;
+        font-weight: $font-weight700;
+    }
+
+    .fontdull {
+        color: $fontdull;
+    }
+
+    .booking_details {
+        width: -webkit-fill-available;
+    }
+
+    .b_radius {
+        border-radius: 8px;
+        padding: 8px;
+        font-weight: $font-weight500;
+
+    }
+
+    .cancel {
+        background-color: rgba(120, 115, 109, 1);
+        color: $white;
+    }
+
+    .edit {
+        background-color: rgba(241, 139, 0, 1);
+        color: $white;
+    }
+
+    .view {
+        background-color: rgba(166, 39, 132, 1);
+        color: $white;
+    }
+
+    .booking_status {
+        left: 16px;
+        width: fit-content;
+        top: 25px;
+        left: 15px;
+        gap: 0px;
+        opacity: 0px;
+        rotate: -180 deg;
+        clip-path: polygon(0% 0%, 91% 0%, 100% 50%, 91% 100%, 0% 100%);
+        color: $white;
+        padding-right: 15px;
+        padding-left: 10px;
+
+    }
+
+    .rating {
+        background-color: $ratingBackground;
+        border-radius: 16px;
+    }
+
+    .frameImg {
+        height: 25px;
+        width: 25px;
+    }
+
+    .rating_booking {
+        position: absolute;
+        top: 27px;
+        gap: 6px;
+    }
+
+    .ratingImg {
+        height: 12px;
+        width: 12px;
+        position: relative;
+    }
+
+    .address {
+        color: $adresscolor;
+        font-size: 10px;
+        font-weight: $font-weight500;
+    }
+
+    .fw-500 {
+        font-weight: $font-weight500;
+    }
+
+    .fw-400 {
+        font-weight: $font-weight400;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .pipe {
+        display: none;
+    }
+}
