@@ -1,4 +1,5 @@
 @import "../../../styles/variable.scss";
+@import "../../../custom-css/custom-material-colors.scss";
 
 .card {
     margin-bottom: 10px;
@@ -19,7 +20,7 @@
     }
 
     &__color {
-        color: $color-pink;
+        color: $secondory-color;
         text-decoration: none;
     }
 }

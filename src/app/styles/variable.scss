@@ -1,16 +1,4 @@
 //colors
-$button-color-orange: #F0961B;
-$color-pink: #A62784;
-$font-color-orange: #E78501;
-$stop-color-pink: #F17DD9;
-$play-color-pink: #AD298A;
-$font-color-black: #221A20;
-$font-color-lightBlack: #383838;
-$font-color-thickBlack: #051822;
-$white: white;
-$inputbox: #B8BFCA;
-$footer-black: #222D36;
-$footer-font: #e4e6e6;
 $gray: #F0F0F3;
 $white-smoke: #F4F4F4;
 $light-yellow: #DA7D00;
@@ -24,44 +12,3 @@ $adresscolor: rgba(63, 134, 8, 1);
 $ratingBackground: rgba(251, 188, 5, 1);
 $back-btn-color-overview: #EDE4F6;;
 $close-btn: #FF5656;
-
-//font
-$font-family-header: sans-serif;
-$font-size-header: 19px;
-$font-small: 12px;
-$max-width: 100%;
-$font-weight500: 500;
-$font-size2vh: 2vh;
-$font-weight200: 100;
-$font-weight500: 500;
-$font-weight700: 700;
-$font-weight400: 400;
-$font-size25px: 25px;
-
-// space
-
-$height1-5eh: 1.5em;
-$height-3vh: 3vh;
-$height-2vh: 2vh;
-$height-20px: 20px;
-$pt-10: 10px;
-$ml-5per: 5%;
-
-@font-face {
-    font-family: "poppins";
-    src: url('../../assets/fonts/Poppins-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
- 
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xl-med: 1200px,
-    xl-plus: 1289px,
-    xxl: 1400px
-);

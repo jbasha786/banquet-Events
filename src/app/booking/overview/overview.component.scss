@@ -1,4 +1,5 @@
 @import "../../styles/variable.scss";
+@import "../../custom-css/custom-material-colors.scss";
 
 .overview {
     margin-top: 2vw;
@@ -70,9 +71,9 @@
                 &__editArticle {
                     padding: 0.5vw;
                     font-size: 2vw;
-                    color: $color-pink;
+                    color: $secondory-color;
                     border-radius: 5px;
-                    border: 1px solid $color-pink;
+                    border: 1px solid $secondory-color;
                 }
                 &__reverse {
                     background: linear-gradient(90.69deg, #8F1CB8 -0.15%, #C82992 100.99%);
