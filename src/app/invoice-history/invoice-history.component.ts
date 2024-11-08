@@ -4,12 +4,12 @@ import { InvoiceHistotyViewComponent } from './invoice-histoty-view/invoice-hist
 import { DefaultService } from '../services/default.service';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
-import {invoiceHistoryModel} from '../shared/_models/invoiceHistory.model'
+import { invoiceHistoryModel } from '../shared/_models/invoiceHistory.model'
 
 @Component({
   selector: 'app-invoice-history',
   standalone: true,
-  imports: [MatDialogModule,CommonModule,MatTableModule,
+  imports: [MatDialogModule, CommonModule, MatTableModule,
   ],
   templateUrl: './invoice-history.component.html',
   styleUrl: './invoice-history.component.scss'
@@ -26,7 +26,7 @@ export class InvoiceHistoryComponent {
   ngOnInit(): void {
     this.getInitialData();
   }
-  view() {
+  overview() {
     this.dialog.open(InvoiceHistotyViewComponent, {
       width: "700px",
       height: "600px"
