@@ -96,14 +96,14 @@ html {
     }
 }
 
-html,
-body {
+html {
     height: 100%;
 }
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'poppins';
+    height: 100%;
 }
 
 
@@ -154,4 +154,12 @@ body {
         top: -8px !important;
         right: 2px;
     }
+}
+
+.mat-mdc-button {
+    font-family: 'poppins' !important;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+    font-size: 1.5vw;
 }

@@ -1,1 +1,35 @@
-<button (click)="view()">view</button>
+<!-- <button (click)="view()">view</button> -->
+ <div class="">
+    <div class="">
+        <div class="m-4">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef> Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="invoiceNumber">
+                    <th mat-header-cell *matHeaderCellDef> Invoice Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.invoiceNumber}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="itemDetails">
+                    <th mat-header-cell *matHeaderCellDef> Item Details </th>
+                    <td mat-cell *matCellDef="let element"> {{element.itemDetails}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef> Type </th>
+                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="amount">
+                    <th mat-header-cell *matHeaderCellDef> Amount </th>
+                    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element"> <img src="{{element.actions.srcEyeAction}}"> <img src="{{element.actions.download}}" class="ps-4">  </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+ </div>
