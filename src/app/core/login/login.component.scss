@@ -1,36 +1,27 @@
 @import "../../../app/styles/variable.scss";
+@import "../../custom-css/custom-material-colors.scss";
 
 .loginForm {
     &__form {
-        &__emaildiv {
-            &__unamebox {
-                border: 1px solid $inputbox;
-            }
-        }
-
         &__pwddiv {
             &__pwd {
                 &__forgotpwd {
-                    color: $color-pink;
+                    color: $secondory-color;
                 }
-            }
-
-            &__password {
-                border: 1px solid $inputbox;
             }
         }
 
         &__loginbtndiv {
             &__loginbox {
                 color: $white;
-                background-color: $color-pink;
+                background-color: $secondory-color;
                 border: none;
             }
         }
 
         &__signupdiv {
             &__signUp {
-                color: $color-pink;
+                color: $secondory-color;
                 cursor: pointer;
             }
         }

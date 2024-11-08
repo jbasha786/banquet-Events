@@ -12,7 +12,7 @@
     .price {
         color: $priceColor;
         font-size: 24px;
-        font-weight: $font-weight700;
+        font-weight: bold;
     }
 
     .fontdull {
@@ -26,7 +26,7 @@
     .b_radius {
         border-radius: 8px;
         padding: 8px;
-        font-weight: $font-weight500;
+        font-weight: 500;
 
     }
 
@@ -85,15 +85,15 @@
     .address {
         color: $adresscolor;
         font-size: 10px;
-        font-weight: $font-weight500;
+        font-weight: 500;
     }
 
     .fw-500 {
-        font-weight: $font-weight500;
+        font-weight: 500;
     }
 
     .fw-400 {
-        font-weight: $font-weight400;
+        font-weight: 400;
     }
 
 }

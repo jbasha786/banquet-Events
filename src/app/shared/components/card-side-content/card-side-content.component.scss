@@ -1,4 +1,4 @@
-@import "../../../styles/variable.scss";
+@import "../../../custom-css/custom-material-colors.scss";
 
 .events {
     background: $gray;
@@ -20,7 +20,7 @@
     &__content {
 
         &__title {
-            color: $play-color-pink;
+            color: $secondory-color;
             font-weight: 500;
         }
 
@@ -33,8 +33,8 @@
             width: 130px;
             height: 40px;
             border-radius: 5px;
-            border: 1px solid $play-color-pink;
-            color: $play-color-pink;
+            border: 1px solid $secondory-color;
+            color: $secondory-color;
         }
     }
 }
