@@ -385,6 +385,70 @@
             "src": "/assets/images/moment/2.svg"
         }
     ],
+    "invoice_historyTable": [
+        {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        },
+        {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }
+    ],
     "navEvent_Items": [
         {
             "eventName": "Best Deals"
