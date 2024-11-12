@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
+import { SignUpService } from '../../services/signUp/sign-up.service';
 
 @Component({
   selector: 'app-signup',
@@ -15,9 +16,12 @@ export class SignupComponent {
 
   constructor(
     private fb: FormBuilder,
-    private router: Router) { }
+    private router: Router,
+    private signUpService: SignUpService) { }
 
   registrationForm: FormGroup = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
     fullName: ['', Validators.required],
     email: ['', Validators.required],
     relatie: ['', Validators.required],
@@ -31,6 +35,11 @@ export class SignupComponent {
   }
 
   register() {
+    this.signUpService.userRegistration(this.registrationForm.value).subscribe((result: any) => {
+      this.router.navigate(['home']);
+    }, err => {
+      console.log(err);
+    })
   }
 
 }
