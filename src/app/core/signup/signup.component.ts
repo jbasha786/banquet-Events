@@ -31,15 +31,13 @@ export class SignupComponent {
   });
 
   returnToLogin() {
-    this.router.navigate(['']);
+    this.router.navigate(['Login']);
   }
 
   register() {
     this.signUpService.userRegistration(this.registrationForm.value).subscribe((result: any) => {
-      this.router.navigate(['home']);
-    }, err => {
-      console.log(err);
-    })
+      this.router.navigate(['Login']);
+    });
   }
 
 }
