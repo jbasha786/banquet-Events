@@ -6,6 +6,7 @@ import { DefaultService } from '../../../services/default.service';
 import { HostDetailsComponent } from '../../../booking/overview/host-details/host-details.component';
 import { UpcomingEventsListComponent } from '../upcoming-events-list/upcoming-events-list.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-events-item',
@@ -16,7 +17,8 @@ import { MatCardModule } from '@angular/material/card';
     GoogleMapComponent,
     HostDetailsComponent,
     UpcomingEventsListComponent,
-    MatCardModule],
+    MatCardModule,
+    MatIconModule],
   templateUrl: './events-item.component.html',
   styleUrl: './events-item.component.scss'
 })
@@ -24,6 +26,7 @@ export class EventsItemComponent {
 
   hostDetails: any;
   promotionsInfo: any;
+  itemQty: number = 1;
   @ViewChild('stickyMenuForTickets') menuElement!: ElementRef;
   @ViewChild('removeStickyMenuForTickets') upcomingEventsElement!: ElementRef;
 
@@ -46,7 +49,7 @@ export class EventsItemComponent {
     this.stickyPosition = this.menuElement.nativeElement.offsetTop;
     this.removeSticky = this.upcomingEventsElement.nativeElement.offsetTop;
   }
-  
+
   @HostListener('window:scroll', ['$event'])
 
   handleScroll() {
@@ -59,6 +62,14 @@ export class EventsItemComponent {
     } else {
       this.sticky = false;
     }
+  }
+
+  increment() {
+    this.itemQty = this.itemQty + 1;
+  }
+
+  decrement() {
+    this.itemQty = this.itemQty == 1 ? 1 : this.itemQty - 1;
   }
 
 }
