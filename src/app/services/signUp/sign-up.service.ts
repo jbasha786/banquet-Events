@@ -12,7 +12,7 @@ export class SignUpService {
 
   userRegistration(reqBody: RegisterModel) {
     const requestBody = prepareRegisterRequest(reqBody);
-    const url = `${env.apiURL}/guest/register`
+    const url = `${env.apiURL}guest/register`
     return this.apiService.POST(url, requestBody);
   }
 }

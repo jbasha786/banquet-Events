@@ -1,0 +1,17 @@
+.event-item {
+    &__overview {
+
+        &__img {
+            height: 60vh;
+        }
+    }
+
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    right: 3vw;
+    overflow: hidden;
+    z-index: 10;
+  }

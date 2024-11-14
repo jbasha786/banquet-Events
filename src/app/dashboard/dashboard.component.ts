@@ -13,6 +13,7 @@ import { BookingComponent } from '../booking/booking.component';
 import { isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
+import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,6 +23,7 @@ import { BannerModel } from './Models/banner.model';
     CarouselComponent,
     CorporateMeetingComponent,
     FamilyEventsComponent,
+    UpcomingEventsListComponent,
     FAQComponent,
     RouterLink,
     RouterModule,
@@ -89,5 +91,9 @@ export class DashboardComponent {
       exitAnimationDuration,
       disableClose: true 
     });
+  }
+
+  goToSignUp() {
+    this.router.navigate(['signUp']);
   }
 }

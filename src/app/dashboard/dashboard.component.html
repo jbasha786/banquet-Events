@@ -90,17 +90,7 @@
 <div class="container mt-40 mb-40">
     <h6>De Bonte Wever Deals & Promotions</h6>
     <p>Exclusive savings for your next stay.</p>
-    <div class="container">
-        <div class="tag-list">
-            <div class="loop-slider">
-                <div class="inner">
-                    @for(image of promotionsInfo; track $index){
-                    <a class="tag" href="{{image.href}}"><img src="{{image.src}}" alt=""></a>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-upcoming-events-list [promotionsInfo]="promotionsInfo"></app-upcoming-events-list>
 </div>
 
 <!-- promotions section End -->
@@ -110,11 +100,10 @@
 <div class="container memberSection">
     <div class="row">
         <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-            <h3>Become a <span class="memberSection__color">De Bonte Wever</span></h3>
-            <h3>Member Today</h3>
+            <h3>Become a <span class="memberSection__color">De Bonte Wever</span> Member Today</h3>
             <p class="memberSection__desc">Not a member yet? Join now to receive member exclusive rates, earn points
                 towards free nights and many more.</p>
-            <button class="memberSection__btn">join for free --></button>
+            <button class="memberSection__btn" (click)="goToSignUp()">join for free --></button>
         </div>
 
         <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 memberSection__image">
