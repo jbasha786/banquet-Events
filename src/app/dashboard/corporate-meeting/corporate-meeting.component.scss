@@ -1,22 +1,29 @@
 @import "../../styles/variable.scss";
+@import "../../custom-css/custom-material-colors.scss";
 
 .corporate {
+    gap: 0px;
+
+    @media screen and (max-width:576px) {
+        gap: 30px;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         &__color {
-            color: $color-pink;
+            color: $secondory-color;
         }
 
         &__btn {
-            color: $color-pink;
-            border: 1px solid $color-pink;
+            color: $secondory-color;
+            border: 1px solid $secondory-color;
             border-radius: 5px;
             background: none;
             padding: 10px;
-            max-width: 200px;
+            max-width: 220px;
         }
     }
 

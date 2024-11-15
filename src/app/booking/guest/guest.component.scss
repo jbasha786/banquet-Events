@@ -1,0 +1,36 @@
+@import " ../../../../styles/variable.scss";
+@import "../../../app/custom-css/custom-material-colors.scss";
+
+.guest {
+    &__process {
+        padding: 3vw;
+
+        .progress {
+            height: 1vw;
+
+            .progress-bar {
+                background-color: $secondory-color;
+            }
+        }
+    }
+
+    &__form {
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-bottom: 2vw;
+    }
+
+    &__card {
+        background-color: $light-silver;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        margin-bottom: 1vw;
+
+        &__label {
+            padding-top: 0.5vw;
+            padding-bottom: 0.5vw;
+        }
+    }
+}

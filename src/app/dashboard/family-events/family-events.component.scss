@@ -1,6 +1,10 @@
 @import "../../styles/variable.scss";
 
 .family {
+    gap: 0px;
+    @media screen and (max-width:576px) {
+        gap: 30px;
+    }
     &__content {
         display: flex;
         flex-direction: column;
@@ -16,7 +20,7 @@
             border-radius: 5px;
             background: none;
             padding: 10px;
-            max-width: 200px;
+            max-width: 220px;
         }
     }
 

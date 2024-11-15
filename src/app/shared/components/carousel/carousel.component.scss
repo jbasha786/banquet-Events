@@ -1,11 +1,18 @@
 @import "../../../styles/variable.scss";
+@import "../../../custom-css/custom-material-colors.scss";
 
 .card {
-    height: 400px;
+    height: 450px;
     margin-bottom: 10px;
 
+    img{
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+
     .card-title {
-        height: 60px;
+        text-wrap: nowrap;
         overflow: hidden;
     }
 
@@ -20,7 +27,7 @@
     }
 
     &__color {
-        color: $color-pink;
+        color: $secondory-color;
         text-decoration: none;
     }
 }

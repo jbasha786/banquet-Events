@@ -1,89 +1,76 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+<p class="thik_line m-0"></p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container d-flex ">
-    <div class="one">
-      <a class="navbar-brand" href="#">
-        <img class="logo mb-0" src="../../../../assets/images/logo/de-bonte-wever.svg" alt=""></a>
+    <div class="header__logo one cursor">
+      <a class="navbar-brand">
+        <img class="logo mb-0" src="{{headerInfo?.logo}}" alt="" (click)="goToHome()">
+      </a>
     </div>
     <!-- Header-above-line -->
-    <div class="second">
+    <div class="second pt-10">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- side-bar -->
-      <div class="side-bar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar2"
+      <div class="side-bar offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasNavbar2"
         aria-labelledby="offcanvasNavbarLabel">
         <!-- sidebar-header -->
-        <div class="offcanvas-header text-white border-bottom">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close btn-close-white btn-lg" data-bs-dismiss="offcanvas"
+        <div class="offcanvas-header text-dark">
+          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>    offcanvasNavbar2 -->
+          <button type="button" class="btn-close btn-close-dark p-5 fw-bolder fs-2vh" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
         <!-- sidebar-body -->
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 pe-3">
-            <li class="nav-item ms-2">
-              <a class="link-dark link-underline-opacity-0" href="#">
-                <img class="ps-2 pe-sm-2" src="../../../../assets/images/logo/phone-call.png" alt="">0592-356 000</a>
+        <div class="offcanvas-body my-30 me-3 ">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-1">
+            @for(item of navList; track $index){
+            <li class="nav-item ms-4 fw-200 pb-sm-4 cursor" data-bs-dismiss="offcanvas">
+              <div class="link-dark link-underline-opacity-0 fs-12" mat-button (click)="goTo(item.link)">
+                <img class="ps-2 pe-sm-2 header-images" src="{{item.src}}"
+                  alt="{{item.name}}"><span>{{item.name}}</span>
+              </div>
             </li>
-            <li class="nav-item ms-2">
-              <a class="link-dark link-underline-opacity-0" href="#">
-                <img class="ps-2 pe-sm-2" src="../../../../assets/images/logo/question-sign.png" alt="">Help</a>
-            </li>
-            <li class="nav-item ms-2">
-              <a class="link-dark link-underline-opacity-0" href="#">
-                <img class="ps-2 pe-sm-2" src="../../../../assets/images/logo/world.png" alt="">English</a>
-            </li>
-            <li class="nav-item ms-2">
-              <a class="link-dark link-underline-opacity-0" href="#">
-                <img class="ps-2 pe-sm-2" src="../../../../assets/images/logo/shopping-bag.png" alt="">My Bookings</a>
-            </li>
-            <li class="nav-item ms-2">
-              <a class="link-dark link-underline-opacity-0" href="#">
-                <img class="ps-2 pe-sm-2" src="../../../../assets/images/logo/user.png" alt="">Sign In Or Join</a>
-            </li>
+            }
           </ul>
         </div>
       </div>
     </div>
     <!-- Header-below-line -->
     <div class="third d-flex flex-lg-grow-1">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"  data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="">
-          <img src="../../../../assets/images/logo/user.svg" alt="">
+          <img class="usericon" src="../../../../assets/images/logo/user.svg" alt="">
         </span>
       </button>
       <!-- side-bar -->
-      <div class="side-bar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+      <div class="side-bar offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel">
         <!-- sidebar-header -->
-        <div class="offcanvas-header text-white border-bottom">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+        <div class="offcanvas-header text-dark">
+          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+          <button type="button" class="btn-close btn-close-dark p-5 fw-bolder fs-2vh" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
         <!-- sidebar-body -->
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 pe-3">
-            <li class="nav-item ms-3 pb-sm-4 fw-bold fs-18">
-              <a class="link-dark link-underline-opacity-0" href="#">OverView</a>
+        <div class="offcanvas-body mt-35">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            @for(item of navEvent_Items; track $index){
+            <li class="nav-item ms-4 pb-sm-4 fs-17" data-bs-dismiss="offcanvas">
+              <a class="link-dark link-underline-opacity-0 fw-500" href="#">
+                {{item.eventName}}
+              </a>
             </li>
-            <li class="nav-item ms-3 pb-sm-4 fw-bold fs-18">
-              <a class="link-dark link-underline-opacity-0" href="#">Best Deals</a>
-            </li>
-            <li class="nav-item ms-3 pb-sm-4 fw-bold fs-18">
-              <a class="link-dark link-underline-opacity-0" href="#">Social Events</a>
-            </li>
-            <li class="nav-item ms-3 pb-sm-4 fw-bold fs-18">
-              <a class="link-dark link-underline-opacity-0" href="#">Family Events</a>
-            </li>
-            <li class="nav-item ms-3 pb-sm-4 fw-bold fs-18">
-              <a class="link-dark link-underline-opacity-0" href="#">Corporate Events</a>
-            </li>
+            }
           </ul>
         </div>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- To show login menu
+<mat-menu #beforeMenu="matMenu" class="mat-menu-panel" xPosition="before">
+  <app-login (click)="$event.stopPropagation();"></app-login>
+</mat-menu> -->

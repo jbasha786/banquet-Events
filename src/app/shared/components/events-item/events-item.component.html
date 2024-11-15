@@ -1,0 +1,91 @@
+<div class="event-item">
+    <div class="event-item__banner">
+        <img width="100%" height="100%" src="../../../../assets/images/events/event-item-banner.svg" alt="events">
+    </div>
+
+    <div class="container mt-40 event-item__overview">
+        <div class="row">
+            <div class="col-md-8 col-xl-8 col-xxl-8 col-sm-12">
+                <div class="event-item__overview__img">
+                    <img width="100%" height="100%" src="../../../../assets/images/events/events-item.svg"
+                        alt="event Item">
+                </div>
+                <div class="mt-40">
+                    <h2>About this event</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. It is a long established fact that a reader will be distracted by
+                        the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        content here', making it look like readable English. Many desktop publishing packages and web
+                        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+                        will uncover many web sites still in their infancy.</p>
+                </div>
+                <div class="mt-40">
+                    <h2>Important conditions and information</h2>
+                    <ul>
+                        <li>Rates exclude tourist tax (€1.50 per person per night in 2024, 2025 rates not yet known) and
+                            reservation fees of €14.95 per booking.</li>
+                        <li>Rates do not include ‘Event fee’ (cost directly to the organisation) € 25,- per person</li>
+                        <li> Cost of pre-night: € 80,- per person per night </li>
+                        <li>Based on availability and double occupancy.</li>
+                        <li>Children aged 3 to 12 years receive a 50% discount. Children aged 0 to 2 years: €22.50 per
+                            stay, including a prepared crib.</li>
+                        <li>If you stay with fewer than the required number of persons in a double room, triple room,
+                            family room, or an XL room, a surcharge (€39.50 per unused bed per night) will be charged
+                            due to under-occupancy</li>
+                    </ul>
+                </div>
+                <div class="mt-40">
+                    <app-amenities></app-amenities>
+                </div>
+                <div class="mt-40">
+                    <h2>Things to know</h2>
+                    <app-things-to-know></app-things-to-know>
+                </div>
+                <div class="mt-40">
+                    <h2>Event Location</h2>
+                    <app-google-map></app-google-map>
+                </div>
+                <div class="mt-40">
+                    <h2>Our Contact Person</h2>
+                    <app-host-details [hostInfo]="hostDetails"></app-host-details>
+                </div>
+            </div>
+            <div #stickyMenuForTickets [class.sticky]="sticky" class="col-md-4 col-xl-4 col-xxl-4 col-sm-12">
+                <mat-card class="p-20">
+                    <p class="fv-1">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
+                    <h2><strong>WPD World Cup 2024</strong></h2>
+                    <p class="fv-1">Organized by world para darts association</p>
+                    <p class="fv-1">Tickets Available: 250</p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h4>5 Days / 4 Nights</h4>
+                            <p class="fv-1">4x Breakfast / 3x Lunch / 4x Dinner</p>
+                        </div>
+                        <div class="d-flex event-item__overview__qtySection justify-content-between">
+                            <mat-icon fontIcon="remove" (click)="decrement()" class="remove cursor"></mat-icon>
+                            <p class="queantity">{{itemQty}}</p>
+                            <mat-icon fontIcon="add" (click)="increment()" class="add cursor"></mat-icon>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between event-item__overview__price">
+                        <div>
+                            <p>Price</p>
+                            <p class="color">€ 399,00 p.p.</p>
+                        </div>
+                        <div>
+                            <p>Tickets Selected: {{itemQty}}</p>
+                        </div>
+                    </div>
+
+                    <button class="event-item__overview__bookbtn">Book Ticket</button>
+                </mat-card>
+            </div>
+        </div>
+        <div #removeStickyMenuForTickets class="mt-20 mb-40">
+            <h2>Up coming events</h2>
+            <p>Starts from Jan 2025.</p>
+            <app-upcoming-events-list [promotionsInfo]="promotionsInfo"></app-upcoming-events-list>
+        </div>
+    </div>
+</div>

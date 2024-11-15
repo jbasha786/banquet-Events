@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row hostDetails">
+        <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4">
+            <mat-card class="hostDetails__card">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 d-flex align-items-center justify-content-center text-center flex-column">
+                        <div class="hostDetails__card__image">
+                            <img width="100%" height="100%" src="../../../../assets/images/member/member.svg" alt="">
+                        </div>
+                        <div>
+                            <h6>Vivian</h6>
+                            <p>SuperHost</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <div>
+                            <h4>206</h4>
+                            <p>Reviews</p>
+                        </div>
+                        <div>
+                            <h4>4.98</h4>
+                            <p>Rating</p>
+                        </div>
+                        <div>
+                            <h4>5</h4>
+                            <p>Years hosting</p>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-8 col-sm-12 col-lg-8 col-xl-8 col-xxl-8">
+            <h4>{{hostInfo?.name}}</h4>
+            <p>{{hostInfo?.desc}}</p>
+            <p>{{hostInfo?.respondRate}}</p>
+            <p>{{hostInfo?.responseTime}}</p>
+            <p>{{hostInfo?.contact}}</p>
+            <p>{{hostInfo?.phone}}</p>
+        </div>
+    </div>
+</div>

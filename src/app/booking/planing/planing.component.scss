@@ -1,0 +1,31 @@
+@import "../../styles/variable.scss";
+@import "../../custom-css/custom-material-colors.scss";
+
+.planing {
+    &__process {
+        padding: 3vw;
+
+        .progress {
+            height: 1vw;
+
+            .progress-bar {
+                background-color: $secondory-color;
+            }
+        }
+    }
+    &__type {
+        padding: 3vw;
+
+        .mat-mdc-list-base {
+            display: flex !important;
+        }
+
+        &__section {
+            border: 1px solid $quick-silver;
+            border-radius: 5px;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+}

@@ -1,0 +1,37 @@
+<div class="container bookingView">
+    <section>
+        <div class="p-2 d-md-flex justify-content-between d-sm-block">
+            <div>
+                <button mat-raised-button class="me-3 btn_raised">All</button>
+                <button mat-raised-button class="me-3 btn_raised" disabled>Recent</button>
+                <button mat-raised-button class="me-3 btn_raised" disabled>Feature</button>
+                <button mat-raised-button class="me-3 btn_raised" disabled>Cancelled</button>
+            </div>
+            <div>
+                <form class="d-flex align-items-center search" role="search">
+                    <button class="btn_search" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input class="form-control ps-4 search_input fs-14 fw-500" type="search"
+                        placeholder="Search For Bookings" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="d-flex flex-column">
+        @for( obj of bookings; track $index){
+        <div class="">
+            <app-my-booking-crad picture="{{obj.src}}" ratingPicture="{{obj.ratingSrc}}" rating="{{obj.rating}}"
+                viewImage="{{obj.viewImage}}" title="{{obj.name}}" cancelbooking="{{obj.cancelBooking}}"
+                editbooking="{{obj.editBooking}}" viewdetails="{{obj.viewDetails}}" price="{{obj.price}}"
+                diamensions="{{obj.diamensions}}" bookingID="{{obj.bookingID}}" dob="{{obj.dateOfBooking}}"
+                noOfGuestsName="{{obj.noOfGuests.name}}" frameImg="{{obj.frameImg}}"
+                noOfGuestValue="{{obj.noOfGuests.value}}" checkInname="{{obj.checkIn.name}}"
+                checkInvalue="{{obj.checkIn.value}}" checkOutname="{{obj.checkOut.name}}"
+                checkOutvalue="{{obj.checkOut.value}}" statusName="{{obj.status.name}}"
+                statusvalue="{{obj.status.value}}" address="{{obj.address}}"
+                conformationID="{{obj.status.conformationID}}"></app-my-booking-crad>
+        </div>
+        }
+    </div>
+</div>

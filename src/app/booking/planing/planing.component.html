@@ -1,0 +1,16 @@
+<div class="planing">
+    <h4 class="text-center fv-3">What type of event are you planning?</h4>
+    <div class="container">
+        <div class="planing__type">
+            <mat-selection-list #plan [multiple]="false" class="row" (selectionChange)="selChange($event)">
+                @for(plan of planningData; track $index){
+                <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 p-1">
+                    <div class="d-flex planing__type__section">
+                        <mat-list-option [value]="plan"><span><img src="{{plan.src}}" alt="{{plan.name}}"></span><span class="ms-2 fw-bold">{{plan.name}}</span></mat-list-option>
+                    </div>
+                </div>
+                }
+            </mat-selection-list>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+@import '../../custom-css/custom-material-colors.scss';
+
+.invoice-view {
+    position: relative;
+    padding-top: 3vw;
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    &__bill,
+    &__total {
+        background: $white-smoke;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        &__section {
+            padding-top: 2vw;
+            padding-bottom: 2vw;
+        }
+    }
+
+    &__service,
+    &__payment,
+    &__head,
+    &__details {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &__icon {
+            mat-icon {
+                background: $close-btn;
+                border-radius: 50%;
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,8 +1,6 @@
-@import "../../../../app/styles/variable.scss";
+@import "../../../custom-css/custom-material-colors.scss";
 
-.container-fluid {
-
-
+.footer {
     .greenKey .yoin .zoover-award {
         width: 100%;
         height: 100%;
@@ -35,32 +33,32 @@
 }
 
 @media (min-width: 320px) {
-    .container-fluid {
+    .footer {
         display: flex;
         flex-direction: column;
         background-color: $footer-black;
-        color: $footer-font;
+        color: $white;
         font-family: Poppins;
         font-weight: 500;
     }
 }
 
 @media (min-width: 768px) {
-    .container-fluid {
+    .footer {
         display: flex;
         flex-direction: column;
         background-color: $footer-black;
-        color: $footer-font;
+        color: $white;
         font-family: Poppins;
         font-weight: 500;
     }
 }
 
 @media (min-width: 1024px) {
-    .container-fluid {
+    .footer {
         display: flex;
         background-color: $footer-black;
-        color: $footer-font;
+        color: $white;
         font-family: Poppins;
         font-weight: 500;
         flex-direction: row;
@@ -68,10 +66,10 @@
 }
 
 @media (min-width: 1220px) {
-    .container-fluid {
+    .footer {
         display: flex;
         background-color: $footer-black;
-        color: $footer-font;
+        color: $white;
         font-family: Poppins;
         font-weight: 500;
         flex-direction: row;
@@ -79,10 +77,10 @@
 }
 
 @media (min-width: 1440px) {
-    .container-fluid {
+    .footer {
         display: flex;
         background-color: $footer-black;
-        color: $footer-font;
+        color: $white;
         font-family: Poppins;
         font-weight: 500;
         flex-direction: row;
@@ -93,7 +91,7 @@
 
 // scroll to top
 
-.footer {
+.footer-item {
     position: relative;
     &__downIcon {
         position: absolute;
@@ -104,12 +102,6 @@
     &__downIcon:hover {
         content: "scroll to Top";
     }
-}
-
-
-
-body {
-    background: #333;
 }
 
 
@@ -142,8 +134,8 @@ body {
     /* Chrome, Safari, Opera */
     transform: rotate(225deg);
 
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+    border-right: 2px solid $white;
+    border-bottom: 2px solid $white;
     margin: 0 0 3px 4px;
 
     width: 16px;
@@ -201,7 +193,7 @@ body {
     width: 24px;
     border-radius: 14px;
     transform: none;
-    border: 2px solid white;
+    border: 2px solid $white;
     top: 170px;
 }
 
@@ -210,12 +202,12 @@ body {
     width: 2px;
     display: block;
     margin: 5px auto;
-    background: white;
+    background: $white;
     position: relative;
 
     height: 4px;
     width: 4px;
-    border: 2px solid #fff;
+    border: 2px solid $white;
     -webkit-border-radius: 8px;
     border-radius: 8px;
 }

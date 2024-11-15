@@ -1,0 +1,621 @@
+{
+    "addArticles": [
+        {
+            "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+            "price": 1,
+            "qty": 1,
+            "total": "H"
+        },
+        {
+            "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+            "price": 12,
+            "qty": 6,
+            "total": "C"
+        },
+        {
+            "name": "Kaas broodjes (vega)",
+            "price": 18,
+            "qty": 9,
+            "total": "F"
+        },
+        {
+            "name": "Kaas broodjes (vega)",
+            "price": 6,
+            "qty": 3,
+            "total": "Li"
+        },
+        {
+            "name": "Onbeperkt koffie thee en fris ",
+            "price": 14,
+            "qty": 7,
+            "total": "N"
+        },
+        {
+            "name": "Onbeperkt koffie thee en fris ",
+            "price": 4,
+            "qty": 2,
+            "total": "He"
+        },
+        {
+            "name": "Pizzapunt ",
+            "price": 9,
+            "qty": 4,
+            "total": "Be"
+        },
+        {
+            "name": "Pizzapunt",
+            "price": 20,
+            "qty": 10,
+            "total": "Ne"
+        },
+        {
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 10,
+            "qty": 5,
+            "total": "B"
+        },
+        {
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 15,
+            "qty": 8,
+            "total": "O"
+        }
+    ],
+    "arrangements": [
+        {
+            "button": "Read More -->",
+            "desc": "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest",
+            "name": "Sunday Special",
+            "src": "/assets/images/cards/sunday.svg"
+        },
+        {
+            "button": "Read More -->",
+            "desc": "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.",
+            "name": "Midweek All-inclusive – Drents Museum",
+            "src": "/assets/images/cards/midweek.svg"
+        },
+        {
+            "button": "Read More -->",
+            "desc": "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes",
+            "name": "All-inclusive Hotelarrangementen",
+            "src": "/assets/images/cards/image.svg"
+        }
+    ],
+    "articles": [
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        },
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        },
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        },
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        },
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        },
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        },
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        },
+        {
+            "name": "DJ Set",
+            "price": 120,
+            "Qty": 1,
+            "tPrice": 120
+        }
+    ],
+    "bannerSection": {
+        "buttonName": "Book Now",
+        "desc": "Plan Your Perfect Event, Conference, or Meeting With Ease",
+        "subTitle": "De Bonte Wever Assen!",
+        "title": "Welkom bij Hotel"
+    },
+    "bookingHistory": [
+        {
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
+            "bookingID": "Booking ID: 12474",
+            "cancelBooking": "Cancel Booking",
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "diamensions": "450/Sqft",
+            "editBooking": "Edit Booking",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "id": 1,
+            "name": "Queens Lagoon Suite",
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "price": "€ 4200.00",
+            "rating": 4.2,
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "status": {
+                "conformationID": 1,
+                "name": "Status",
+                "value": "Booking Confirmed"
+            },
+            "viewDetails": "View Details",
+            "viewImage": "/assets/images/BookingHistory/view_image.png"
+        },
+        {
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
+            "bookingID": "Booking ID: 12474",
+            "cancelBooking": "Cancel Booking",
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "diamensions": "450/Sqft",
+            "editBooking": "Edit Booking",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "id": 2,
+            "name": "Queens Lagoon Suite",
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "price": "€ 4211.00",
+            "rating": 3.5,
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "status": {
+                "conformationID": 2,
+                "name": "Status",
+                "value": "Cancelled Booking"
+            },
+            "viewDetails": "View Details",
+            "viewImage": "/assets/images/BookingHistory/view_image.png"
+        },
+        {
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
+            "bookingID": "Booking ID: 12474",
+            "cancelBooking": "Cancel Booking",
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "diamensions": "450/Sqft",
+            "editBooking": "Edit Booking",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "id": 3,
+            "name": "Queens Lagoon Suite",
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "price": "€ 4222.00",
+            "rating": 4.2,
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "status": {
+                "conformationID": 1,
+                "name": "Status",
+                "value": "Booking Confirmed"
+            },
+            "viewDetails": "View Details",
+            "viewImage": "/assets/images/BookingHistory/view_image.png"
+        },
+        {
+            "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
+            "bookingID": "Booking ID: 12474",
+            "cancelBooking": "Cancel Booking",
+            "checkIn": {
+                "name": "Check-In",
+                "value": "Tue,1 Nov 2024"
+            },
+            "checkOut": {
+                "name": "Check-Out",
+                "value": "Tue,1 Nov 2024"
+            },
+            "dateOfBooking": "Date Of Booking: 09 October 2024",
+            "diamensions": "450/Sqft",
+            "editBooking": "Edit Booking",
+            "frameImg": "/assets/images/BookingHistory/Frame.png",
+            "id": 4,
+            "name": "Queens Lagoon Suite",
+            "noOfGuests": {
+                "name": "No Of Guests",
+                "value": "52"
+            },
+            "price": "€4233.00",
+            "rating": 3.5,
+            "ratingSrc": "/assets/images/BookingHistory/rating_star.png",
+            "src": "/assets/images/BookingHistory/bookingHistory.png",
+            "status": {
+                "conformationID": 2,
+                "name": "Status",
+                "value": "Cancelled Booking"
+            },
+            "viewDetails": "View Details",
+            "viewImage": "/assets/images/BookingHistory/view_image.png"
+        }
+    ],
+    "events": [
+        {
+            "btn": "Book Now",
+            "desc": "The Sheerin Family Band #concert #soldout #cavan. What a night CAVAN thank you Hotel Kilmore for a fantastic concert. Join us for an unforgettable musical evening with the sensational Geetha Madhuri and her band at Urban",
+            "src": "/assets/images/cards/events.svg",
+            "title": "Darts Events"
+        }
+    ],
+    "experience": [
+        {
+            "src": "/assets/images/experience/1.svg"
+        },
+        {
+            "src": "/assets/images/experience/2.svg"
+        },
+        {
+            "src": "/assets/images/experience/3.svg"
+        },
+        {
+            "src": "/assets/images/experience/4.svg"
+        },
+        {
+            "src": "/assets/images/experience/5.svg"
+        },
+        {
+            "src": "/assets/images/experience/6.svg"
+        },
+        {
+            "src": "/assets/images/experience/7.svg"
+        },
+        {
+            "src": "/assets/images/experience/8.svg"
+        }
+    ],
+    "hallsList": [
+        {
+            "deposite": "Deposited Required",
+            "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
+            "desc": "Accommodates upto 60 members",
+            "diamensions": "420 to 443 ft²",
+            "id": 1,
+            "name": "Queens Lagoon Suite",
+            "price": "€ 4200.00",
+            "src": "/assets/images/halls/hall.svg",
+            "status": "Stage Available",
+            "taxText": "/Excluding taxes and fees"
+        },
+        {
+            "deposite": "Deposited Required",
+            "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
+            "desc": "Accommodates upto 60 members",
+            "diamensions": "420 to 443 ft²",
+            "id": 2,
+            "name": "Queens Lagoon Suite",
+            "price": "€ 3200.00",
+            "src": "/assets/images/halls/hall.svg",
+            "status": "Stage Available",
+            "taxText": "/Excluding taxes and fees"
+        }
+    ],
+    "header": {
+        "logo": "/assets/images/logo/de-bonte-wever.svg"
+    },
+    "hostDetails": [
+        {
+            "contact": "Contact",
+            "desc": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
+            "name": "Vivian is a Superhost",
+            "phone": "0592-356 000,       |        0592-356 000       |        0592-356 000",
+            "respondRate": "Response rate: 100%",
+            "responseTime": "Responds within an hour"
+        }
+    ],
+    "invoiceView": {
+        "account": "American bank",
+        "address": "24th Street, Dallas, 43201, America",
+        "bicCode": "0000000",
+        "billFrom": "De Bonte Weaver 34c B-block, Dutch.",
+        "billTo": "Valarie Carlson 24th Street, Dallas, 43201, America",
+        "coc": "000000000",
+        "desc": "Queens Lagoon Suite- Banquet Hall  450/Sqft",
+        "ibanNumber": "GB00 0000 0000 0000 00",
+        "InvoiceId": "INV-2400346",
+        "issuedDate": "05/06/2024",
+        "logo": "/assets/images/logo/de-bonte-wever.svg",
+        "paymentInfo": "Payment is due within 15 days of the issued date. Please contact tubeladder@mail.com for any questions.",
+        "phone": "+181 (0) 56789234",
+        "refNumber": "123456-2023",
+        "vat": "00000000"
+    },
+    "moment": [
+        {
+            "button": "Johannes Tim",
+            "desc": "Celebrate birthdays, anniversaries, or family reunions in style with our luxurious venues and warm, personalized service. Enjoy family-friendly",
+            "name": "",
+            "src": "/assets/images/moment/3.svg"
+        },
+        {
+            "button": "Kevin Thomas",
+            "desc": "No request is too small, and no aspect is overlooked. Because we know that when every detail counts, memories are made to last a lifetime.",
+            "name": "",
+            "src": "/assets/images/moment/1.svg"
+        },
+        {
+            "button": "Mark Jeffrey",
+            "desc": "Impress your guests with a corporate event in our versatile spaces. Our modern venues, advanced technology, and impeccable service",
+            "name": "",
+            "src": "/assets/images/moment/2.svg"
+        }
+    ],
+    "invoice_historyTable": [
+        {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        },
+        {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }, {
+            "date": "10 oct 2024",
+            "invoiceNumber": "IT0110102024",
+            "itemDetails": "Queens Lagoon Suite",
+            "type": "Banquet Hall  450/Sqft",
+            "amount": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }
+    ],
+    "navEvent_Items": [
+        {
+            "eventName": "Best Deals"
+        },
+        {
+            "eventName": "Corporate Events"
+        },
+        {
+            "eventName": "Leisure Events"
+        },
+        {
+            "eventName": "OverView"
+        },
+        {
+            "eventName": "Sports Events"
+        }
+    ],
+    "navList": [
+        {
+            "link": "",
+            "name": "0592-356 000",
+            "src": "../../../../assets/images/logo/phone-call.png"
+        },
+        {
+            "link": "",
+            "name": "English",
+            "src": "../../../../assets/images/logo/world.png"
+        },
+        {
+            "link": "",
+            "name": "Help",
+            "src": "../../../../assets/images/logo/question-sign.png"
+        },
+        {
+            "link": "login",
+            "name": "Sign In Or Join",
+            "src": "../../../../assets/images/logo/user.png"
+        },
+        {
+            "link": "mybooking",
+            "name": "My Bookings",
+            "src": "../../../../assets/images/logo/shopping-bag.png"
+        }
+    ],
+    "overview": {
+        "deposite": "Description",
+        "depositeDesc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+        "desc": "Accommodates upto 60 members",
+        "diamensions": "420 to 443 ft²",
+        "id": 1,
+        "image": "/assets/images/overview/overview.svg",
+        "image1": "/assets/images/overview/overview1.svg",
+        "image2": "/assets/images/overview/overview2.svg",
+        "name": "Queens Lagoon Suite",
+        "price": "€ 4200.00",
+        "status": "Stage Available",
+        "taxText": "Excluding taxes and fees"
+    },
+    "password": "Password",
+    "personalized": [
+        {
+            "button": "Read More -->",
+            "desc": "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest",
+            "name": "Sunday Special",
+            "src": "/assets/images/cards/2.svg"
+        },
+        {
+            "button": "Read More -->",
+            "desc": "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.",
+            "name": "Midweek All-inclusive – Drents Museum",
+            "src": "/assets/images/cards/3.svg"
+        },
+        {
+            "button": "Read More -->",
+            "desc": "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes",
+            "name": "All-inclusive Hotelarrangementen",
+            "src": "/assets/images/cards/1.svg"
+        }
+    ],
+    "planning": [
+        {
+            "id": 1,
+            "name": "Birthday",
+            "src": "/assets/images/planing/cake.svg"
+        },
+        {
+            "id": 10,
+            "name": "Conferences",
+            "src": "/assets/images/planing/conference.svg"
+        },
+        {
+            "id": 11,
+            "name": "Small Meetings",
+            "src": "/assets/images/planing/conversation.svg"
+        },
+        {
+            "id": 12,
+            "name": "Others",
+            "src": "/assets/images/planing/restaurant.svg"
+        },
+        {
+            "id": 2,
+            "name": "Wedding",
+            "src": "/assets/images/planing/wedding-rings.svg"
+        },
+        {
+            "id": 3,
+            "name": "Social Events",
+            "src": "/assets/images/planing/bar.svg"
+        },
+        {
+            "id": 4,
+            "name": "Bussiness Meetings",
+            "src": "/assets/images/planing/talk.svg"
+        },
+        {
+            "id": 5,
+            "name": "Engagement",
+            "src": "/assets/images/planing/confetti.svg"
+        },
+        {
+            "id": 5,
+            "name": "Social Events",
+            "src": "/assets/images/planing/bar.svg"
+        },
+        {
+            "id": 7,
+            "name": "Work Event",
+            "src": "/assets/images/planing/briefcase.svg"
+        },
+        {
+            "id": 8,
+            "name": "Family Event",
+            "src": "/assets/images/planing/parents.svg"
+        },
+        {
+            "id": 9,
+            "name": "Get Together",
+            "src": "/assets/images/planing/collaboration.svg"
+        }
+    ],
+    "promotions": [
+        {
+            "href": "#",
+            "id": 1,
+            "src": "/assets/images/promotions/1.svg"
+        },
+        {
+            "href": "#",
+            "id": 2,
+            "src": "/assets/images/promotions/2.svg"
+        },
+        {
+            "href": "#",
+            "id": 3,
+            "src": "/assets/images/promotions/3.svg"
+        },
+        {
+            "href": "#",
+            "id": 4,
+            "src": "/assets/images/promotions/4.svg"
+        },
+        {
+            "href": "#",
+            "id": 5,
+            "src": "/assets/images/promotions/5.svg"
+        }
+    ],
+    "username": "Email"
+}

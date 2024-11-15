@@ -1,13 +1,13 @@
-<div class="container p-30">
-    <div class="row events">
+<div class="container">
+    <div class=" col events d-flex flex-column flex-md-row flex-lg-row flex-xl-row flex-xxl-row align-items-center">
         @for(obj of dataContext; track $index){
-        <div class="col events__image">
+        <div class="events__image">
             <img src="{{obj.src}}" alt="">
         </div>
-        <div class="col events__content">
+        <div class="events__content">
             <h3 class="events__content__title">{{obj.title}}</h3>
             <p class="events__content__desc">{{obj.desc}}</p>
-            <button class="events__content__btn">{{obj.btn}}</button>
+            <strong><button class="events__content__btn">{{obj.btn}}</button></strong>
         </div>
         }
     </div>

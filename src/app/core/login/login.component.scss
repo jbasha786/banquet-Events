@@ -1,0 +1,36 @@
+@import "../../../app/styles/variable.scss";
+@import "../../custom-css/custom-material-colors.scss";
+
+.loginForm {
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__form {
+        &__pwddiv {
+            &__pwd {
+                &__forgotpwd {
+                    color: $secondory-color;
+                }
+            }
+        }
+
+        &__loginbtndiv {
+            &__loginbox {
+                color: $white;
+                background-color: $secondory-color;
+                border: none;
+            }
+        }
+
+        &__signupdiv {
+            &__signUp {
+                color: $secondory-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

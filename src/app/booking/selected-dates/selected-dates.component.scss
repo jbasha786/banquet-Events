@@ -1,0 +1,73 @@
+@import '../../styles/variable.scss';
+@import "../../custom-css/custom-material-colors.scss";
+
+.selction_dates {
+    &__process {
+        padding: 3vw;
+
+        .progress {
+            height: 1vw;
+
+            .progress-bar {
+                background-color: $secondory-color;
+            }
+        }
+    }
+
+    &__title,
+    &__content {
+        margin-top: 1vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-bottom: 1vw;
+    }
+
+    &__changeOptions {
+        background-color: $gray;
+        margin: 0 auto;
+        padding: 0.5vw;
+        gap: 2vw;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &__specific {
+            background: $white;
+            border-radius: 5px;
+            box-shadow: 2px 2px $quick-silver;
+        }
+    }
+
+    &__calender {
+        margin: 0 auto;
+
+        &__slots {
+            background-color: $gray;
+
+            .active{
+                background-color: $secondory-color;
+                color: $white;
+            }
+
+            .card {
+                margin-left: 1vw;
+                margin-right: 1vw;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__footer {
+        .reset {
+            text-decoration: underline;
+        }
+
+        .btn_done {
+            border-radius: 15px;
+            border: 1px solid;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            background: none;
+        }
+
+    }
+}

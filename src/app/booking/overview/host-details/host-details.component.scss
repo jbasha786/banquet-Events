@@ -1,0 +1,15 @@
+@import '../../../../app/styles/variable.scss';
+
+.hostDetails {
+    &__card {
+        padding: 2vw;
+        border: 1px solid $quick-silver;
+        &__image {
+            border-radius: 50vw;
+            border: 1px solid;
+            img {
+                padding: 20px;
+            }
+        }
+    }
+}
