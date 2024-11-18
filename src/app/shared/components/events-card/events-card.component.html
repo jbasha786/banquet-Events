@@ -1,0 +1,24 @@
+<div class="card mb-5" [ngStyle]=" {'height': title ? '470px': '300px'} ">
+    <img [src]="picture" class="" alt="...">
+    <div class="card-body">
+      <p class="card-title fs-30 fw-bold">{{title}}</p>
+      <p class="card-text">{{subtitle}}</p>
+      <div class="d-flex">
+        <div class="me-2">
+          <img [src]="calenderImage" alt="">
+        </div>
+        <p class="fs-13">{{period}}</p>
+      </div>
+      <div class="d-flex">
+        <div class="me-2">
+        <img [src]="locationImage" alt="">
+        </div>
+        <p class="fs-13">{{place}}</p>
+      </div>
+      <div class="priceSection px-3 py-1 mb-10 d-flex justify-content-between">
+          <span>{{rate}}</span>
+          <span class="pipe">|</span>
+          <button class="booknowBtn">{{bookNow}}</button>
+      </div>
+    </div>
+  </div>

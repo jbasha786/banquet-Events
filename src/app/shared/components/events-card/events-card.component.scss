@@ -1,0 +1,23 @@
+@import "../../../../app/styles/variable.scss";
+
+.card{
+    .priceSection{
+        border: 1px solid $priceBackGrnd;
+        background-color: $priceBackGrnd;
+    }
+    .booknowBtn{
+        border: none;
+    }
+    .card-text{
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .booknowBtn{
+        color: $booknow-pink;
+        font-weight: 700;
+        background-color: $priceBackGrnd;
+    }
+    .pipe{
+        color: $priceColor;
+    }
+}
