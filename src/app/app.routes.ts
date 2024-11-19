@@ -5,6 +5,8 @@ import { OverviewComponent } from './booking/overview/overview.component';
 import { BookingHistoryComponent } from './booking-history/booking-history.component';
 import { SignupComponent } from './core/signup/signup.component';
 import { LoginComponent } from './core/login/login.component';
+import { ForgotPasswordComponent } from './core/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './core/reset-password/reset-password.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,5 +15,7 @@ export const routes: Routes = [
     { path: 'mybooking', component: BookingHistoryComponent },
     { path: 'signUp', component: SignupComponent },
     { path: 'login', component: LoginComponent },
-    { path: '**', component: PageNotFoundComponent }
+    { path: 'resetpwd', component: ResetPasswordComponent },
+    { path: 'forgotpwd', component: ForgotPasswordComponent },
+    { path: '**', component: PageNotFoundComponent },
 ];
