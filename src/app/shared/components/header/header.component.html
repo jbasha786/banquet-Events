@@ -19,17 +19,17 @@
         <!-- sidebar-header -->
         <div class="offcanvas-header text-dark">
           <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>    offcanvasNavbar2 -->
-          <button type="button" class="btn-close fw-bolder fs-2vh " data-bs-dismiss="offcanvas"
+          <button type="button" class="btn-close fw-bolder  " data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
         <!-- sidebar-body -->
         <div class="offcanvas-body my-30  ">
-          <ul class="navbar-nav justify-content-end flex-grow-1 primary-menu">
+          <ul class="navbar-nav justify-content-end flex-grow-1 gap-18 gap-lg-30">
             @for(item of navList; track $index){
-            <li class="nav-item fw-200 cursor">
-              <div class="link-dark link-underline-opacity-0 fs-11" mat-button (click)="expression(item.link)"
+            <li class="nav-item p-10 p-lg-0 fw-200 cursor">
+              <div class="link-dark link-underline-opacity-0 fs-12 fs-lg-11" mat-button (click)="expression(item.link)"
                 [matMenuTriggerFor]="item.link === 'login' ? beforeMenu : null">
-                <img class="ps-2 pe-sm-2 header-images" style="width:28px;" src="{{item.src}}"
+                <img class="ps-2 pe-2 header-images" style="width:28px;" src="{{item.src}}"
                   alt="{{item.name}}">
                   <span>{{item.name}}</span>
               </div>
@@ -53,21 +53,21 @@
         <!-- sidebar-header -->
         <div class="offcanvas-header text-dark">
           <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
-          <button type="button" class="btn-close fw-bolder fs-2vh" data-bs-dismiss="offcanvas"
+          <button type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
         </div>
         <!-- sidebar-body -->
-        <div class="offcanvas-body mt-14 mt-lg-18">
-          <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 secondary-menu">
+        <div class="offcanvas-body  mt-lg-18">
+          <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 gap-18 gap-lg-35">
             @for(item of navEvent_Items; track $index) {
-              <li class="nav-item fs-15">
+              <li class="nav-item p-10 p-lg-0 fs-15">
                 <a class="link-dark link-underline-opacity-0 fw-500" href="#">
                   {{item.eventName}}
                 </a>
               </li>
               <!-- Add a button after the last item -->
               @if (item.eventName === "Corporate Events") {
-                <li class="nav-item fs-17">
+                <li class="nav-item p-10 p-lg-0 fs-17">
                   <button 
                     class="btn btn-live gif-btn fw-500" 
                     onclick="handleButtonClick()"

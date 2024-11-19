@@ -2,23 +2,30 @@
  @import "../../../custom-css/custom-material-colors.scss";
 
  .thik_line{
-    height:5px;
+    height:4px;
     background-color: $secondory-color;
  }
-
+ .offcanvas{
+    width:70%
+ }
+ .offcanvas-header{
+    background-color: #ededed;
+ }
+ .offcanvas-header .btn-close{
+    margin:0;
+ }
 .navbar-toggler-icon{
     width: 1.6rem;
     height: 1.6rem;
 }
 .nav-togleuser{
     border:none;
+    box-shadow: none;
 }
 .logo{
     max-width:16vh;
 }
-.secondary-menu{
-    gap:35px;
-}
+
 .dot {
     height: 8px;
     width: 8px;
@@ -42,8 +49,7 @@ padding: 4px 8px;}
     align-items: center;
     justify-content: center;
    }
- .primary-menu
-{gap:30px;}
+ 
 .left{
     display: flex;
     flex-direction: row; 
@@ -117,26 +123,18 @@ padding: 4px 8px;}
        
     }
      .side-bar {
-         background-color: #000000;;
+         background-color: #ffffff;
          backdrop-filter: blur(10px);
      }
 
      li,
      a {
-         font-size: 25px;
-         font-weight: 700;
-         font-family: "poppins";
+        font-family: "poppins";
 
-         .header-images {
-
-             height: 20px;
-         }
+      
      }
 
-     ul {
-         margin-left: 7%;
-         gap: 5px;
-     }
+   
 
     
          .usericon {
@@ -144,9 +142,7 @@ padding: 4px 8px;}
          }
     
 
-     .fs-2vh {
-         font-size: 1.6vh;
-     }
+  
 
      .one {
         order: 2; 

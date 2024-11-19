@@ -29,7 +29,10 @@ html {
         margin-top: 0px + $i;
     }
     .mt-lg-#{$i} {
-        margin-top: 0px + $i;
+        @media (min-width: 992px) {
+            margin-top: #{$i}px; 
+          }
+        
     }
 
     .mb-#{$i} {
@@ -52,7 +55,12 @@ html {
     .p-#{$i} {
         padding: 0px + $i;
     }
-
+    .p-lg-#{$i} {
+        @media (min-width: 992px) {
+       padding: #{$i}px; /* Apply the gap with the correct px unit for large screens */
+     }
+      
+   }
     .pt-#{$i} {
         padding-top: 0px + $i;
     }
@@ -71,30 +79,26 @@ html {
 
     // gaps
     .gap-#{$i} {
-        padding: 0px + $i;
+        gap: 0px + $i;
     }
 
     .gap-lg-#{$i} {
-        padding-top: 0px + $i;
+         @media (min-width: 992px) {
+        gap: #{$i}px;
+      }
+       
     }
 
-    .gap-md-#{$i} {
-        padding-bottom: 0px + $i;
-    }
-
-    .gap-sm-#{$i} {
-        padding-left: 0px + $i;
-    }
-
-    .gap-xl-#{$i} {
-        padding-right: 0px + $i;
-    }
 
     // FontSizes
     .fs-#{$i} {
         font-size: 0px + $i;
     }
-
+    .fs-lg-#{$i} {
+        @media (min-width: 992px) {
+            font-size: #{$i}px; 
+     }
+    }
     // FontSizes in vw
     .fv-#{$i} {
         font-size: 0vw + $i;
