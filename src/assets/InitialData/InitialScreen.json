@@ -451,19 +451,19 @@
     ],
     "navEvent_Items": [
         {
+            "eventName": "Overview"
+        },
+        {
             "eventName": "Best Deals"
         },
         {
-            "eventName": "Corporate Events"
+            "eventName": "Social Events"
         },
         {
             "eventName": "Family Events"
         },
         {
-            "eventName": "OverView"
-        },
-        {
-            "eventName": "Social Events"
+            "eventName": "Corporate Events"
         }
     ],
     "navList": [
@@ -483,15 +483,16 @@
             "src": "../../../../assets/images/logo/question-sign.png"
         },
         {
-            "link": "login",
-            "name": "Sign In Or Join",
-            "src": "../../../../assets/images/logo/user.png"
-        },
-        {
             "link": "mybooking",
             "name": "My Bookings",
             "src": "../../../../assets/images/logo/shopping-bag.png"
+        },
+        {
+            "link": "login",
+            "name": "Sign In Or Join",
+            "src": "../../../../assets/images/logo/user.png"
         }
+       
     ],
     "overview": {
         "deposite": "Description",

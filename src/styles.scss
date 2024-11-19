@@ -28,6 +28,9 @@ html {
     .mt-#{$i} {
         margin-top: 0px + $i;
     }
+    .mt-lg-#{$i} {
+        margin-top: 0px + $i;
+    }
 
     .mb-#{$i} {
         margin-bottom: 0px + $i;
@@ -63,6 +66,27 @@ html {
     }
 
     .pr-#{$i} {
+        padding-right: 0px + $i;
+    }
+
+    // gaps
+    .gap-#{$i} {
+        padding: 0px + $i;
+    }
+
+    .gap-lg-#{$i} {
+        padding-top: 0px + $i;
+    }
+
+    .gap-md-#{$i} {
+        padding-bottom: 0px + $i;
+    }
+
+    .gap-sm-#{$i} {
+        padding-left: 0px + $i;
+    }
+
+    .gap-xl-#{$i} {
         padding-right: 0px + $i;
     }
 

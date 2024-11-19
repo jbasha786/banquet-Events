@@ -2,9 +2,71 @@
  @import "../../../custom-css/custom-material-colors.scss";
 
  .thik_line{
-    padding: 2px;
+    height:5px;
     background-color: $secondory-color;
  }
+
+.navbar-toggler-icon{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.nav-togleuser{
+    border:none;
+}
+.logo{
+    max-width:16vh;
+}
+.secondary-menu{
+    gap:35px;
+}
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #FC1024;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 7px;
+  }
+.btn-live
+{background-color: transparent;
+color: #FC1024;
+border: 2px solid #FC1024;
+font-size: 12px;
+padding: 4px 8px;}
+.gif-btn {
+    background-image: url('../../../../assets/images/overview/liveevents.gif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   }
+ .primary-menu
+{gap:30px;}
+.left{
+    display: flex;
+    flex-direction: row; 
+   
+}
+.main-container{
+    padding:0px 45px 0px 60px;
+}
+.right {
+    display: block; 
+    flex-direction: column;
+  }
+
+  
+ 
+  
+  .second {
+    order: 2; 
+  }
+  
+  .third {
+    order: 3; 
+  }
 
  .navbar {
      .container {
@@ -19,6 +81,7 @@
 
 
  @media (min-width: 991px) {
+   
      .fw-500 {
          font-weight: 500;
      }
@@ -26,23 +89,35 @@
      .fw-200 {
          font-weight: 200;
      }
-
-     .one {
-         height: 3vh;
-         margin-left: 5%;
-     }
-
-     .second {
-         height: 3vh;
-     }
+     
 
  }
+ .left{
+    display: flex;
+    flex-direction: column; 
+    
+}
 
-
+@media (min-width: 991px) and (max-width: 1200px) {
+    .main-container{
+        padding:0px 40px 0px 40px;
+    }
+}
 
  @media (max-width: 991px) {
+    .main-container{
+        padding:0px;
+    }
+    .logo{
+        max-width:12vh;
+    }
+    .left{
+        display: flex;
+        flex-direction: row; 
+       
+    }
      .side-bar {
-         background-color: white;
+         background-color: #000000;;
          backdrop-filter: blur(10px);
      }
 
@@ -63,25 +138,31 @@
          gap: 5px;
      }
 
-     .one {
-         // display: flex;
-         order: 2;
-     }
-
-     .second {
-         // display: flex;
-         order: 3;
-     }
-
-     .third {
-         order: 1;
-
+    
          .usericon {
-             height: 1.5em;
+             height: 1.6rem;
          }
-     }
+    
 
      .fs-2vh {
-         font-size: 2vh;
+         font-size: 1.6vh;
      }
+
+     .one {
+        order: 2; 
+        display: block;
+      }
+    
+    
+    
+      .second {
+        order: 2;
+        display: block; 
+      }
+    
+      .third {
+        order: 1;
+        display: block; }
+    
+     
  }
