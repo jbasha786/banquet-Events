@@ -39,7 +39,7 @@
 color: #FC1024;
 border: 2px solid #FC1024;
 font-size: 12px;
-padding: 4px 8px;}
+padding: 4px 10px;}
 .gif-btn {
     background-image: url('../../../../assets/images/overview/liveevents.gif'); 
     background-size: cover;
@@ -85,25 +85,6 @@ padding: 4px 8px;}
      }
  }
 
-
- @media (min-width: 991px) {
-   
-     .fw-500 {
-         font-weight: 500;
-     }
-
-     .fw-200 {
-         font-weight: 200;
-     }
-     
-
- }
- .left{
-    display: flex;
-    flex-direction: column; 
-    
-}
-
 @media (min-width: 991px) and (max-width: 1200px) {
     .main-container{
         padding:0px 40px 0px 40px;
@@ -127,12 +108,7 @@ padding: 4px 8px;}
          backdrop-filter: blur(10px);
      }
 
-     li,
-     a {
-        font-family: "poppins";
-
-      
-     }
+    
 
    
 
