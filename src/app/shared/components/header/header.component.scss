@@ -6,10 +6,12 @@
 }
 .offcanvas {
   width: $gutter-70per;
+  
+  &-header {
+    background-color: $gray;
+  }
 }
-.offcanvas-header {
-  background-color: $gray;
-}
+
 .navbar-toggler-icon {
   width: $gutter-20sp;
   height: $gutter-20sp;
