@@ -39,13 +39,13 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.adjustLayoutForMobile();
-    this.toggleThickLines();
+   
   }
   ngOnInit(): void {
     this.adjustLayoutForMobile();
     this.getNavList();
     this.getnavEventList();
-    this.toggleThickLines();
+   
   }
   adjustLayoutForMobile() {
     const screenWidth = window.innerWidth;
@@ -85,18 +85,7 @@ export class HeaderComponent implements OnInit {
   
 
   }
-  toggleThickLines() {
-    const topLine = document.querySelector('.thik_line:first-of-type') as HTMLElement;
-    const bottomLine = document.querySelector('.thik_line:last-of-type') as HTMLElement;
-
-    if (window.innerWidth >= 992) {
-      if (topLine) topLine.style.display = '';
-      if (bottomLine) bottomLine.style.display = 'none';
-    } else {
-      if (topLine) topLine.style.display = 'none';
-      if (bottomLine) bottomLine.style.display = '';
-    }
-  }
+ 
 
   getNavList() {
     this.defaultService.getJSON().subscribe(result => {
