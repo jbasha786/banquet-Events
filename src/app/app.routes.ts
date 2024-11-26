@@ -6,6 +6,7 @@ import { MyBookingErrorTemplateComponent } from './shared/components/my-booking-
 import { BookingHistoryComponent } from './booking-history/booking-history.component';
 import { InvoiceHistoryComponent } from './invoice-history/invoice-history.component';
 import { SignupComponent } from './core/signup/signup.component';
+import { EventsComponent } from './events/events.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'overview', component: OverviewComponent },
     { path: 'mybooking', component: BookingHistoryComponent },
     { path: 'signUp', component: SignupComponent },
+    { path: 'events', component: EventsComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
