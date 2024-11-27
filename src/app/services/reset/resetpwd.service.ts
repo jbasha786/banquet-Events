@@ -10,7 +10,7 @@ export class ResetpwdService {
 
   constructor(private apiService: ApiService) { }
   resetPWD(body: resetpwdModel){
-    const url = `${env.apiURL}/guest/resetpassword`;
+    const url = `${env.apiURL}guest/resetpassword`;
     return this.apiService.POST(url, body);
   }
 }
