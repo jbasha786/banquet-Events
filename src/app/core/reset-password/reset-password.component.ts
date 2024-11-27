@@ -19,7 +19,7 @@ export class ResetPasswordComponent {
 
   resetPasswordForm = this.fb.group({
     email: ['', Validators.required],
-    password: ['', Validators.required],
+    newpassword: ['', Validators.required],
     cPassword: ['', Validators.required]
   });
 
@@ -37,7 +37,7 @@ export class ResetPasswordComponent {
   resetPassword() {
     this.defaultService.getJSON().subscribe((result: any) => {
       this.email = result.email;
-      // this.code = result.code;
+      this.code = result.code;
       this.newpassword = result.newpassword;
     })
     console.log(this.resetPasswordForm.value)
@@ -45,7 +45,7 @@ export class ResetPasswordComponent {
   getParams() {
     this.params.queryParams.subscribe((params: any) => {
       console.log(params)
-      // localStorage.setItem('code',params?.code)
+      localStorage.setItem('code',params?.code)
     })
   }
   onSubmit() {

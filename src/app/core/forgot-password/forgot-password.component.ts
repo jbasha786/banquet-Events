@@ -37,7 +37,7 @@ export class ForgotPasswordComponent {
   }
   onSubmit() {
     this.forgotpwd.forgotPWD((this.forgotMailForm.value as forgotpwdModel)).subscribe((result: any) => {
-      this.router.navigate(['ForgotPasswordComponent']);
+      this.router.navigate(['forgotpwd']);
     });
   }
 
