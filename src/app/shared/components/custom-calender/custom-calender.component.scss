@@ -33,8 +33,10 @@
   }
   
   .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(31, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // grid-template-columns: repeat(31, 1fr);
     gap: 10px;
     width: 100%;
   }
@@ -60,5 +62,22 @@
   .selected-date {
     margin-top: 20px;
     text-align: center;
+  }
+  .day{
+    font-size: large;
+    font-weight: 900;
+  }
+  .btn_chevron{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 22px;
+    width: 22px;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnmain{
+    border: none;
+    background: none
   }
   
