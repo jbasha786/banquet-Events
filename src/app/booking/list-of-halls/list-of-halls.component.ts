@@ -15,6 +15,7 @@ import { EventPlanService } from '../../services/event-plan/event-plan.service';
 import { EventGuestsService } from '../../services/event-guest/event-guests.service';
 import { EventDateSlotsService } from '../../services/event-date-slot/event-date-slots.service';
 import { ArticlesComponent } from '../../shared/components/articles/articles.component';
+import { MenuComponent } from '../../shared/components/menu/menu.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -92,6 +93,13 @@ export class ListOfHallsComponent {
   addArticles() {
     this.dialog.open(ArticlesComponent, {
       width: '600px',
+      height: '60vh'
+    });
+  }
+
+  selectMenu(){
+    this.dialog.open(MenuComponent, {
+      width: '700px',
       height: '60vh'
     });
   }

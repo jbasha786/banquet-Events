@@ -71,6 +71,8 @@
                                 <button mat-flat-button class="hallsView__list__cancel fw-bold" *ngIf="!reserveBtn" (click)="cancelReservation()">Cancel</button>
                                 <button mat-flat-button class="hallsView__list__reserve fw-bold" *ngIf="reserveBtn" (click)="reserve(item)">Reserve</button>
                                 <span class="ms-2 hallsView__list__articles fw-bold" (click)="addArticles()">Add Articles</span>
+                                <span class="ms-2 hallsView__list__articles fw-bold" (click)="selectMenu()">choose menu</span>
+
                             </div>
                             <div class="d-flex align-items-center cursor" (click)="getDetails()"><span class="fw-bold">Menu Details -></span></div>
                         </div>

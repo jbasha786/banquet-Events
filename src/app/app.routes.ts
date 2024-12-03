@@ -7,6 +7,7 @@ import { BookingHistoryComponent } from './booking-history/booking-history.compo
 import { InvoiceHistoryComponent } from './invoice-history/invoice-history.component';
 import { SignupComponent } from './core/signup/signup.component';
 import { EventsComponent } from './events/events.component';
+import { MenuComponent } from './shared/components/menu/menu.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'mybooking', component: BookingHistoryComponent },
     { path: 'signUp', component: SignupComponent },
     { path: 'events', component: EventsComponent },
+    { path: 'menu', component: MenuComponent},
     { path: '**', component: PageNotFoundComponent }
 ];
