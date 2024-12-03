@@ -30,6 +30,20 @@
             width: 100%;
             height: 200px;
             overflow: auto;
+            // border: none;
+        }
+         .table_header {
+            border-bottom: none;
+            padding: 0;
+        }
+        .table_data{
             border: none;
+            padding: 0;
+        }
+        .mat-cell{
+            padding: 2px;
+        }
+        .quantity{
+            width: 40%;
         }
     }
