@@ -2,11 +2,9 @@
 @import "../../custom-css/custom-material-colors.scss";
 
 .corporate {
-    gap: 0px;
-
-    @media screen and (max-width:576px) {
-        gap: 30px;
-    }
+display: flex;
+gap:114px;
+  
 
     &__content {
         display: flex;
@@ -17,21 +15,29 @@
             color: $secondory-color;
         }
 
+        &__familycolor {
+            color: $family-yellow;
+        }
+
         &__btn {
             color: $secondory-color;
             border: 1px solid $secondory-color;
-            border-radius: 5px;
             background: none;
-            padding: 10px;
-            max-width: 200px;
+            padding: 10px 22px;
+            border-radius: 6px;
         }
-    }
+            &__familybtn {
+                color: $family-yellow;
+                border: 1px solid $family-yellow;
+                background: none;
+                padding: 10px 22px;
+                border-radius: 6px;
+        }
+   
 
     &__image {
         position: relative;
         display: inline-block;
-        height: 40vh;
-        width: 100%;
 
         &__main {
             width: 100%;
@@ -40,13 +46,80 @@
             object-fit: cover;
         }
 
-        &__video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 10%;
-            height: auto;
-        }
+       
     }
+    
+}
+}
+.image-border{
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+   
+}
+.image-border::before {
+    position: absolute;
+    content: "";
+    top: 6rem;
+    left: 0rem;
+    right: 6rem;
+    bottom: 0rem;
+    border: 10px solid transparent;
+    border-image-source: linear-gradient(to top, #FA9EE1, #9D1C7B);
+    opacity: 0.4;
+    border-image-slice: 1;
+    border-radius: 24px;
+}
+.corporate__image__main{
+    position: absolute;
+    top: 0rem;
+    left: 4rem;
+    width: calc(100% - 4rem);
+    height: calc(100% - 3rem);
+    object-fit: cover;
+    border-radius: 24px;
+}
+.corporate__image__video {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    height: auto;
+}
+.family__image__video {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    height: auto;
+}
+.image-border-family{
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+   
+}
+.image-border-family::before {
+    position: absolute;
+    content: "";
+    top: 6rem;
+    left: 6rem;
+    right: 0rem;
+    bottom: 0rem;
+    border: 10px solid transparent;
+    border-image-source: linear-gradient(to top, #FFBE00, #BAEAB0 );
+    opacity: 0.4;
+    border-image-slice: 1;
+    border-radius: 24px;
+}
+.family__image__main{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: calc(100% - 4rem);
+    height: calc(100% - 3rem);
+    object-fit: cover;
+    border-radius: 24px;
 }

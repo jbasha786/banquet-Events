@@ -1,34 +1,34 @@
 <div id="multiItemCarousel" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div class="row">
+            <div class="row g-5">
                 @for(carousel of carouselItem; track $index){
-                <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4">
-                    <div class="card">
-                        <img src="{{carousel.src}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{carousel.name}}</h5>
-                            <p class="card-text">{{carousel.desc}}</p>
-                            <strong class="card-link"><a class="card__color">{{carousel.button}}</a></strong>
+              <div class="col-md-4 col-12 col-lg-4 col-xl-4 col-xxl-4">
+                    <div class="card Card-no-border gap-26">
+                        <img src={{carousel.src}} alt="Card Image" class="card-image">
+                        <div class="card-content">
+                          <p class="card-heading fs-18 fw-500 mb-0">{{carousel.name}}</p>
+                          <p class="card-text fs-14 lh-34 mb-0">{{carousel.desc}}</p>
+                          <strong><button class="card-button readmore-btn fs-14 fw-bold">{{carousel.button}}</button></strong>
                         </div>
+                      </div>
                     </div>
-                </div>
                 }
             </div>
         </div>
         <div class="carousel-item">
-            <div class="row">
+            <div class="row g-5">
                 @for(carousel of carouselItem; track $index){
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                    <div class="card">
-                        <img src="{{carousel.src}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{carousel.name}}</h5>
-                            <p class="card-text">{{carousel.desc}}</p>
-                            <strong class="card-link"><a class="card__color">{{carousel.button}}</a></strong>
+                    <div class="col-md-4 col-12 col-lg-4 col-xl-4 col-xxl-4">
+                        <div class="card Card-no-border gap-26">
+                            <img src={{carousel.src}} alt="Card Image" class="card-image">
+                            <div class="card-content">
+                              <p class="card-heading fs-18 fw-500 mb-0">{{carousel.name}}</p>
+                              <p class="card-text fs-14 lh-34 mb-0">{{carousel.desc}}</p>
+                              <strong><button class="card-button readmore-btn fs-14 fw-bold">{{carousel.button}}</button></strong>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
                 }
             </div>
         </div>

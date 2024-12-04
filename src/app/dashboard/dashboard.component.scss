@@ -1,42 +1,31 @@
 @import "../../app/styles/variable.scss";
 @import "../../app/custom-css/custom-material-colors.scss";
 
+//main banner with content
+@mixin full-background($image-path) {
+    background-image: linear-gradient(45deg, $black-overlay, $light-overlay), url($image-path);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 .banner {
-    height: 86vh;
-    min-height: 600px;
-    position: relative;
-    color: white;
-
-    &__image {
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.99), rgba(9, 9, 9, 0.2)), url("../../assets/images/logo/landingImage.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        position: relative;
+   &__image {
+        min-height: calc($gutter-100vh - $gutter-100sp);
+        width: $gutter-100per;
+        @include full-background("../../assets/images/logo/landingImage.svg");
+        
 
         &__content {
-            margin-left: 10%;
+           
 
             &__title {
-                color: $white;
-                font-family: Poppins;
-                font-size: 5vw;
+                color: white;
+                margin-bottom:$gutter-10sp;
                 transform: translateX(-100%);
                 animation: slideIn 1s forwards;
             }
 
-            &__subtitle {
-                color: $white;
-                font-family: Poppins;
-                font-size: 5vw;
-                transform: translateX(-100%);
-                animation: slideIn 3s forwards;
-            }
+          
 
             @keyframes slideIn {
                 to {
@@ -46,23 +35,22 @@
 
             &__desc {
                 color: $white;
-                font-size: 2vw;
-                font-style: normal;
-                font-weight: 500;
                 transform: translateX(-100%);
                 animation: slideIn 4s forwards;
             }
 
             &__btn {
-                width: 200PX;
-                height: 50px;
+                
                 flex-shrink: 0;
-                border-radius: 32px;
+                border-radius: $gutter-32sp;
+                letter-spacing:  $gutter-1sp;
+                border:none;
                 color: $white;
-                margin-top: 20px;
+                margin-top: $gutter-20sp;
                 background: var(--primary-color);
                 opacity: 0;
                 animation: fadeIn 4s forwards;
+                padding:$gutter-8sp $gutter-42sp;
             }
 
             @keyframes fadeIn {
@@ -71,38 +59,59 @@
                 }
             }
         }
-
-        &__downIcon {
-            position: absolute;
-            bottom: 10px;
-            right: 100px;
+            &__downIcon {
+                bottom: $gutter-80sp;
+                right: $gutter-80sp;
+            }
+            
         }
     }
-}
 
+//main banner with content
 .events {
-    margin: 5vw;
+    padding:$gutter-6vw $gutter-5vw;
     transition-delay: 1s;
     transition: transform 0.5s ease;
 }
-
+.Card-no-border{
+    border:none;
+    box-shadow: none;
+}
+.card-image{
+    border-radius:14px;
+}
+.readmore-btn{
+    border: none;
+    background-color: transparent;
+    color: #a62784;
+}
+.card-content{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.g-6 {
+    --bs-gutter-x: 4rem;
+    --bs-gutter-y: 4rem;
+}
 .arrangements {
+    padding:$gutter-6vw $gutter-5vw;
     &__color {
         color: $secondory-color;
     }
 }
+.personalized{
+    padding: 4vw 5vw;
+    background-color: #f4f4f4;
+    margin: 6vw 0vw;
+}
 
 .experience {
+    padding: 6vw 5vw;
     &__color {
         color: $secondory-color;
     }
-
-    &__image {
-        transition: transform 400ms ease-in-out;
-        opacity: 0.8;
-    }
-
-    &__section {
+&__section {
         padding: 0;
 
         @media screen and (max-width: 576px) {
@@ -110,25 +119,64 @@
         }
     }
 
-    &__image:hover {
-        transform: scale(1.1);
-        opacity: 1;
-    }
 }
 
-.personalized {
-    background-color: $white-smoke;
+.experience__item {
+    position: relative;
+    overflow: hidden; /* Ensures overlay stays within the container */
+  }
+  
+  .experience__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .experience__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* White overlay with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  }
+  
+  .experience__item:hover .experience__overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .experience__text {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+  }
+  .experience__section {
+    --bs-gutter-x: 0; 
+  }  
 
-    .color {
-        color: $secondory-color;
-    }
-}
-
-
+  .corporate-family{
+    padding:$gutter-6vw $gutter-5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .promotions{
+    padding:$gutter-6vw $gutter-5vw;
+  }
+.join-text{
+    padding: 4vw 8vw;
+}    
 .memberSection {
+    position:relative;
     background: $white-smoke;
-    padding: 20px;
+    margin: $gutter-6vw $gutter-5vw;
     border-radius: 15px;
+
 
     &__color {
         color: $secondory-color;
@@ -141,6 +189,11 @@
         border: none;
         padding: 10px 20px;
     }
+    &__desc{
+            font-weight: lighter;
+            line-height: 26px;
+             color: #6d6868;
+         }
 
     &__image {
         display: flex;
@@ -149,26 +202,33 @@
 
         img {
             position: absolute;
-            height: 270px;
-            top: -60px;
-        }
+            bottom: 0;
+            width: 60%;
+            right: 30%;
 
-        @media screen and (max-width:570px) {
-            img {
-                position: relative;
-                height: 270px;
-                top: 0px;
+            @media screen and (max-width:991px) {
+                position:relative;
+                right:0%;
             }
         }
+
+      
     }
 }
 
 .moment {
-    background-image: url("../../assets/images/moment/moment_bg.svg");
+    background: linear-gradient(
+        to right,
+        rgba(173, 41, 138, 0.8),  /* Red with 50% opacity */
+        rgba(101, 47, 76, 0.7) 25%, /* Yellow at 25% with 50% opacity */
+        rgba(251, 188, 5, 0.4) 100%  /* Green with 50% opacity */
+      ),
+      url("../../assets/images/moment/moment_bg.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
     height: 700px;
+    
 
     @media screen and (max-width:570px) {
         height: auto;
@@ -178,8 +238,9 @@
     &__content {
         color: $white;
         padding: 60px;
-        opacity: 0.7;
+        opacity: 0.6;
         font-weight: 700;
+        text-align: center;
 
         @media screen and (max-width:570px) {
             font-size: 18px;
@@ -259,10 +320,8 @@
     gap: 0 0.2rem;
     color: #e2e8f0;
     font-size: 0.9rem;
-    background-color: #334155;
     border-radius: 0.4rem;
     padding: 0.7rem 1rem;
-    margin-right: 1rem; // Must used margin-right instead of gap for the loop to be smooth
 
     span {
         font-size: 1.2rem;
@@ -288,7 +347,7 @@
 }
 
 
-
+.faq-section{padding:5vw 6vw;}
 
 
 

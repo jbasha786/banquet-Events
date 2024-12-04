@@ -1,0 +1,16 @@
+.faq-align-strt{
+    display:flex;
+    align-items: end;
+}
+.custom-accordion .accordion-item {
+    border: none; /* Remove all borders */
+    border-top: 1px solid #ddd; /* Apply only border-top */
+}
+.accordion-header{
+    padding: 18px 0px;
+}
+.accordion-button{
+    font-size:14px;
+    font-weight:600;
+
+}

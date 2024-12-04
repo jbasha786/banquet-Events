@@ -2,6 +2,7 @@
 $gray: #F0F0F3;
 $white-smoke: #F4F4F4;
 $light-yellow: #DA7D00;
+$family-yellow: #e78501;
 $cancel-color-pink: #edd4e6;
 $quick-silver: #a1a1a1;
 $light-silver: #D9D9D9;
@@ -13,8 +14,13 @@ $ratingBackground: rgba(251, 188, 5, 1);
 $back-btn-color-overview: #EDE4F6;
 $close-btn: #FF5656;
 $livebtn-clr: #FC1024;
+$black-overlay: rgba(0, 0, 0, 0.9);
+$light-overlay: rgba(9, 9, 9, 0.1);
+$text-gradient-clr1: #AD298A;
+$text-gradient-clr2: #F17DD9;
 
 //gutters
+$gutter-1sp: 1px;
 $gutter-2sp: 2px;
 $gutter-4sp: 4px;
 $gutter-6sp: 6px;
@@ -25,8 +31,22 @@ $gutter-14sp: 14px;
 $gutter-16sp: 16px;
 $gutter-18sp: 18px;
 $gutter-20sp: 20px;
+$gutter-22sp: 22px;
+$gutter-32sp: 32px;
+$gutter-42sp: 42px;
+$gutter-80sp: 80px;
+$gutter-100sp: 100px;
 
 //gutter-percent
 $gutter-50per: 50%;
 $gutter-70per: 70%;
 $gutter-100per: 100%;
+
+//gutter-vh
+$gutter-100vh: 100vh;
+
+//gutter-vw
+$gutter-4vw: 4vw;
+$gutter-5vw: 5vw;
+$gutter-6vw: 6vw;
+$gutter-8vw: 8vw;

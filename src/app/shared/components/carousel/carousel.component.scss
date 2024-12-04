@@ -1,33 +1,29 @@
 @import "../../../styles/variable.scss";
 @import "../../../custom-css/custom-material-colors.scss";
 
-.card {
-    height: 450px;
-    margin-bottom: 10px;
 
-    img{
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .card-title {
-        text-wrap: nowrap;
-        overflow: hidden;
-    }
-
-    .card-text {
-        height: 50px;
-        overflow: hidden;
-    }
-
-    .card-link {
-        position: absolute;
-        bottom: 30px;
-    }
-
-    &__color {
-        color: $secondory-color;
-        text-decoration: none;
-    }
+.Card-no-border{
+    border:none;
+    box-shadow: none;
+    background-color: transparent;
+}
+.card-image{
+    border-radius:14px;
+}
+.readmore-btn{
+    border: none;
+    background-color: transparent;
+    color: #a62784;
+}
+.card-content{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.card-text{
+   display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

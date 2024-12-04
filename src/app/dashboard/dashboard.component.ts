@@ -13,12 +13,14 @@ import { BookingComponent } from '../booking/booking.component';
 import { isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
+import { ArrangementsComponent } from '../shared/components/arrangements/arrangements.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   imports: [CardComponent,
     CardSideContentComponent,
+    ArrangementsComponent,
     CarouselComponent,
     CorporateMeetingComponent,
     FamilyEventsComponent,

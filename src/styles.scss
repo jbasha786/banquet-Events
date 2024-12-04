@@ -41,6 +41,7 @@ html {
       margin-top: #{$i}px;
     }
   }
+  
 
   .mb-#{$i} {
     margin-bottom: 0px + $i;
@@ -52,6 +53,16 @@ html {
 
   .ml-#{$i} {
     margin-left: 0px + $i;
+  }
+  .ml-md-#{$i} {
+    @media (min-width: 768px) {
+      margin-left: #{$i}px;
+    }
+  }
+  .ml-lg-#{$i} {
+    @media (min-width: 1280px) {
+      margin-left: #{$i}px;
+    }
   }
 
   .mr-#{$i} {
@@ -128,7 +139,7 @@ html {
       width: #{$i}px;
     }
   }
-  // width
+  // height
   .h-#{$i} {
     height: 0px + $i;
   }
@@ -138,9 +149,20 @@ html {
       height: #{$i}px;
     }
   }
+// line-height
+.lh-#{$i} {
+  line-height: #{$i}px;
+}
 
-  // FontSizes
-  // SCSS Loop for Font Sizes
+.lh-md-#{$i} {
+  @media (min-width: 992px) {
+    line-height: #{$i}px !important;
+  }
+}
+
+// FontSizes
+// SCSS Loop for Font Sizes
+
   .fs-#{$i} {
     font-size: #{$i}px;
   }
@@ -150,17 +172,49 @@ html {
     }
   }
 
+// font weight
+// Font weight classes
+
+  .fw-#{$i} {
+    font-weight: #{$i};
+  }
+  .fw-lg-#{$i} {
+    @media (min-width: 992px) {
+      font-weight: #{$i} !important;
+    }
+  }
+
+
   // FontSizes in vw
   .fv-#{$i} {
     font-size: 0vw + $i;
   }
 
-  // font weight
-  .fw-#{$i} {
-    font-weight: 0 + $i;
-  }
+  
+//letterspacing
+
+.ls-tight {
+  letter-spacing: -0.05em;
 }
+
+.ls-normal {
+  letter-spacing: normal;
+}
+
+.ls-wide {
+  letter-spacing: 0.05em;
+}
+
+.ls-wider {
+  letter-spacing: 0.1em;
+}
+
+.ls-widest {
+  letter-spacing: 0.2em;
+}
+
 
 html {
   height: 100%;
+}
 }
