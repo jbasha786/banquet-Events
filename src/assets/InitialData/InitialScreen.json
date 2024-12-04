@@ -419,7 +419,8 @@
                 "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
                 "download": "/assets/images/invoiceHistory/download.svg"
             }
-        }, {
+        },
+        {
             "date": "10 oct 2024",
             "invoiceNumber": "IT0110102024",
             "itemDetails": "Queens Lagoon Suite",
@@ -429,7 +430,8 @@
                 "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
                 "download": "/assets/images/invoiceHistory/download.svg"
             }
-        }, {
+        },
+        {
             "date": "10 oct 2024",
             "invoiceNumber": "IT0110102024",
             "itemDetails": "Queens Lagoon Suite",
@@ -439,7 +441,8 @@
                 "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
                 "download": "/assets/images/invoiceHistory/download.svg"
             }
-        }, {
+        },
+        {
             "date": "10 oct 2024",
             "invoiceNumber": "IT0110102024",
             "itemDetails": "Queens Lagoon Suite",
@@ -449,7 +452,8 @@
                 "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
                 "download": "/assets/images/invoiceHistory/download.svg"
             }
-        }, {
+        },
+        {
             "date": "10 oct 2024",
             "invoiceNumber": "IT0110102024",
             "itemDetails": "Queens Lagoon Suite",
@@ -539,6 +543,212 @@
             "desc": "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes",
             "name": "All-inclusive Hotelarrangementen",
             "src": "/assets/images/cards/1.svg"
+        }
+    ],
+    "events_arr": [
+        {
+            "src": "/assets/images/events/events1.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events2.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events3.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events4.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events5.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events6.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events7.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events8.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events9.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events10.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events10.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
+        },
+        {
+            "src": "/assets/images/events/events10.png",
+            "img_title": "WPD World Cup 2024",
+            "img_subtitle": "Organized by world para darts association",
+            "date_time": {
+                "cal_img": "/assets/images/events/events_calender.svg",
+                "period": "Starts From November 22 – 24, 2024"
+            },
+            "location": {
+                "loc_img": "/assets/images/events/events_location.svg",
+                "place": "at De Bonte Wever Assen"
+            },
+            "card_footer": {
+                "price": "€ 399,00 p.p on wards",
+                "booknow": "Book Now"
+            }
         }
     ],
     "planning": [
