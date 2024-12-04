@@ -1,5 +1,7 @@
 @import '../../../styles/variable.scss';
-
+.menu_model{
+    border-radius: 10px;
+}
     .menu {
         padding: 2vw;
 
@@ -35,6 +37,7 @@
          .table_header {
             border-bottom: none;
             padding: 0;
+            font-size: $gutter-16sp;
         }
         .table_data{
             border: none;
@@ -48,5 +51,8 @@
         }
         .menu_headings{
             color: $booknow-pink;
+        }
+        .mat-mdc-dialog-surface .mdc-dialog__surface{
+            border-radius: 12px;
         }
     }
