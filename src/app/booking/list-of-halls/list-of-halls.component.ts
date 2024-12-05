@@ -76,7 +76,9 @@ export class ListOfHallsComponent {
 
   getGuestDetails(){
     const adults = this.eventACService.getSelectedAdultCount();
-    const child = this.eventACService.getSelectedChildCount();
+    const elderChild = this.eventACService.getSelectedElderChildCount();
+    const youngerChild = this.eventACService.getSelectedYoungerChildCount();
+    const babies = this.eventACService.getSelectedBabiesCount();
   }
 
   getDateAndSlots(){

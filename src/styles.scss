@@ -46,8 +46,8 @@ html {
     }
 
     // Paddings
-    .p-#{$i} {
-        padding: 0px + $i;
+    .pad-#{$i} {
+        padding: 0px + $i !important;
     }
 
     .pt-#{$i} {
