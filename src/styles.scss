@@ -3,24 +3,18 @@
 @import "./app/custom-css/custom-material-colors.scss";
 @include mat.core();
 $VipsBanquetOffers-primary: mat.define-palette(mat.$indigo-palette);
-$VipsBanquetOffers-accent: mat.define-palette(
-  mat.$pink-palette,
-  A200,
-  A100,
-  A400
-);
+$VipsBanquetOffers-accent: mat.define-palette(mat.$pink-palette,
+    A200,
+    A100,
+    A400);
 $VipsBanquetOffers-warn: mat.define-palette(mat.$red-palette);
-$VipsBanquetOffers-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $VipsBanquetOffers-primary,
-      accent: $VipsBanquetOffers-accent,
-      warn: $VipsBanquetOffers-warn,
-    ),
-    typography: mat.define-typography-config(),
-    density: 0,
-  )
-);
+$VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetOffers-primary,
+        accent: $VipsBanquetOffers-accent,
+        warn: $VipsBanquetOffers-warn,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0,
+    ));
 @include mat.all-component-themes($VipsBanquetOffers-theme);
 
 html {
@@ -28,6 +22,7 @@ html {
 }
 
 @for $i from 0 through 500 {
+
   // Margins
   .m-#{$i} {
     margin: 0px + $i;
@@ -36,12 +31,13 @@ html {
   .mt-#{$i} {
     margin-top: 0px + $i;
   }
- .mt-lg-#{$i} {
+
+  .mt-lg-#{$i} {
     @media (min-width: 992px) {
       margin-top: #{$i}px !important;
     }
   }
-  
+
 
   .mb-#{$i} {
     margin-bottom: 0px + $i;
@@ -54,11 +50,13 @@ html {
   .ml-#{$i} {
     margin-left: 0px + $i;
   }
+
   .ml-md-#{$i} {
     @media (min-width: 768px) {
       margin-left: #{$i}px;
     }
   }
+
   .ml-lg-#{$i} {
     @media (min-width: 1280px) {
       margin-left: #{$i}px;
@@ -73,45 +71,56 @@ html {
   .p-#{$i} {
     padding: 0px + $i;
   }
+
   .p-md-#{$i} {
     @media (min-width: 992px) {
       padding: #{$i}px !important;
     }
   }
+
   .p-lg-#{$i} {
     @media (min-width: 1280px) {
       padding: #{$i}px !important;
     }
   }
+
   .pr-#{$i} {
     padding-right: #{$i}px;
   }
+
   .pr-md-#{$i} {
     @media (min-width: 992px) {
       padding-right: #{$i}px !important;
     }
+  }
+
   .pr-lg-#{$i} {
     @media (min-width: 1280px) {
       padding-right: #{$i}px !important;
+    }
 
     // Paddings
     .pad-#{$i} {
-        padding: 0px + $i !important;
+      padding: 0px + $i !important;
     }
   }
+
   .pl-#{$i} {
     padding-left: #{$i}px;
   }
+
   .pl-md-#{$i} {
     @media (min-width: 992px) {
       padding-left: #{$i}px !important;
     }
   }
+
   .pl-lg-#{$i} {
     @media (min-width: 1280px) {
       padding-left: #{$i}px !important;
     }
   }
+
   .py-#{$i} {
     padding: 0px + $i;
   }
@@ -142,6 +151,7 @@ html {
       gap: #{$i}px;
     }
   }
+
   // width
   .w-#{$i} {
     width: 0px + $i;
@@ -152,6 +162,7 @@ html {
       width: #{$i}px;
     }
   }
+
   // height
   .h-#{$i} {
     height: 0px + $i;
@@ -162,35 +173,38 @@ html {
       height: #{$i}px;
     }
   }
-// line-height
-.lh-#{$i} {
-  line-height: #{$i}px;
-}
 
-.lh-md-#{$i} {
-  @media (min-width: 992px) {
-    line-height: #{$i}px !important;
+  // line-height
+  .lh-#{$i} {
+    line-height: #{$i}px;
   }
-}
 
-// FontSizes
-// SCSS Loop for Font Sizes
+  .lh-md-#{$i} {
+    @media (min-width: 992px) {
+      line-height: #{$i}px !important;
+    }
+  }
+
+  // FontSizes
+  // SCSS Loop for Font Sizes
 
   .fs-#{$i} {
     font-size: #{$i}px;
   }
+
   .fs-lg-#{$i} {
     @media (min-width: 992px) {
       font-size: #{$i}px !important;
     }
   }
 
-// font weight
-// Font weight classes
+  // font weight
+  // Font weight classes
 
   .fw-#{$i} {
     font-weight: #{$i};
   }
+
   .fw-lg-#{$i} {
     @media (min-width: 992px) {
       font-weight: #{$i} !important;
@@ -203,7 +217,8 @@ html {
     font-size: 0vw + $i;
   }
 
-  
+}
+
 //letterspacing
 
 .ls-tight {
@@ -229,5 +244,4 @@ html {
 
 html {
   height: 100%;
-}
 }

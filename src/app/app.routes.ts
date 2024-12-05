@@ -16,7 +16,6 @@ export const routes: Routes = [
     { path: 'mybooking', component: BookingHistoryComponent },
     { path: 'signUp', component: SignupComponent },
     { path: 'events', component: EventsComponent },
-    { path: '**', component: PageNotFoundComponent },
     { path: 'login', component: LoginComponent },
     { path: 'resetpwd', component: ResetPasswordComponent },
     { path: 'forgotpwd', component: ForgotPasswordComponent },

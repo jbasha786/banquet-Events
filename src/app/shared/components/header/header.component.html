@@ -1,16 +1,16 @@
-<p class="main_line h-4 m-0 d-none d-lg-block" ></p>
+<p class="main_line h-4 m-0 d-none d-lg-block"></p>
 <nav class="navbar navbar-expand-lg">
    <div class="container left pr-lg-45 pl-lg-60 pr-md-30 pl-md-30 pr-0 pl-0">
       <div class="header__logo one order-lg-0 order-2">
          <a class="navbar-brand cursor mx-auto">
-         <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{headerInfo?.logo}}" alt="" (click)="goToHome()">
+            <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{headerInfo?.logo}}" alt="" (click)="goToHome()">
          </a>
       </div>
       <!-- Header-above-line -->
       <div class="second order-lg-2 order-2">
-         <button class="navbar-toggler nav-togleuser" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
+         <button class="navbar-toggler nav-togleuser" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
          </button>
          <!-- side-bar -->
          <div class="side-bar offcanvas offcanvas-start w-70" tabindex="-1" id="offcanvasNavbar2"
@@ -26,64 +26,56 @@
                <ul class="navbar-nav justify-content-end flex-grow-1 gap-18 gap-lg-30">
                   @for(item of navList; track $index){
                   <li class="nav-item p-10 p-lg-0 fw-200 cursor">
-                     <div class="link-dark link-underline-opacity-0" mat-button (click)="expression(item.link)"
-                     [matMenuTriggerFor]="item.link === 'login' ? beforeMenu : null">
-                     <img class="ps-2 pe-2 header-images" style="width:28px;opacity: 0.7;" src="{{item.src}}"
-                        alt="{{item.name}}">
-                     <span class="fs-14 fs-lg-11">{{item.name}}</span>
+                     <div class="link-dark link-underline-opacity-0" mat-button (click)="goTo(item.link)">
+                        <img class="ps-2 pe-2 header-images" style="width:28px;opacity: 0.7;" src="{{item.src}}"
+                           alt="{{item.name}}">
+                        <span class="fs-14 fs-lg-11">{{item.name}}</span>
+                     </div>
+                  </li>
+                  }
+               </ul>
             </div>
-            </li>
-            }
-            </ul>
          </div>
       </div>
-   </div>
-   <!-- Header-below-line -->
-   <div class="third d-flex flex-lg-grow-1 order-lg-2 order-1">
-      <button class="navbar-toggler nav-togleuser" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
-         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="">
-      <img class="usericon h-20" src="../../../../assets/images/logo/user.svg" alt="">
-      </span>
-      </button>
-      <!-- side-bar -->
-      <div class="side-bar offcanvas offcanvas-end w-70" tabindex="-1" id="offcanvasNavbar"
-         aria-labelledby="offcanvasNavbarLabel">
-         <!-- sidebar-header -->
-         <div class="offcanvas-header text-dark">
-            <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
-            <button type="button" class="btn-close fw-bolder m-0" data-bs-dismiss="offcanvas"
-               aria-label="Close"></button>
-         </div>
-         <!-- sidebar-body -->
-         <div class="offcanvas-body  mt-lg-18">
-            <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 gap-18 gap-lg-35">
-               @for(item of navEvent_Items; track $index) {
-               <li class="nav-item p-10 p-lg-0 fs-15">
-                  <a class="link-dark link-underline-opacity-0 fw-500" href="#">
-                  {{item.eventName}}
-                  </a>
-               </li>
-               <!-- Add a button after the last item -->
-               @if (item.eventName === "Corporate Events") {
-               <li class="nav-item p-10 p-lg-0 fs-17">
-                  <button 
-                     class="btn-live gif-btn fw-500 fs-12 gap-6" 
-                     onclick="handleButtonClick()"
-                     >
-                  <span class="dot"></span>LIVE EVENTS
-                  </button>
-               </li>
-               } 
-               }
-            </ul>
+      <!-- Header-below-line -->
+      <div class="third d-flex flex-lg-grow-1 order-lg-2 order-1">
+         <button class="navbar-toggler nav-togleuser" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="">
+               <img class="usericon h-20" src="../../../../assets/images/logo/user.svg" alt="">
+            </span>
+         </button>
+         <!-- side-bar -->
+         <div class="side-bar offcanvas offcanvas-end w-70" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <!-- sidebar-header -->
+            <div class="offcanvas-header text-dark">
+               <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+               <button type="button" class="btn-close fw-bolder m-0" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+            </div>
+            <!-- sidebar-body -->
+            <div class="offcanvas-body  mt-lg-18">
+               <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 gap-18 gap-lg-35">
+                  @for(item of navEvent_Items; track $index) {
+                  <li class="nav-item p-10 p-lg-0 fs-15">
+                     <a class="link-dark link-underline-opacity-0 fw-500" href="#">
+                        {{item.eventName}}
+                     </a>
+                  </li>
+                  <!-- Add a button after the last item -->
+                  @if (item.eventName === "Corporate Events") {
+                  <li class="nav-item p-10 p-lg-0 fs-17">
+                     <button class="btn-live gif-btn fw-500 fs-12 gap-6" onclick="handleButtonClick()">
+                        <span class="dot"></span>LIVE EVENTS
+                     </button>
+                  </li>
+                  }
+                  }
+               </ul>
+            </div>
          </div>
       </div>
-   </div>
    </div>
 </nav>
 <p class="main_line h-4 m-0 d-block d-lg-none"></p>
-<!-- To show login menu -->
-<mat-menu #beforeMenu="matMenu" class="mat-menu-panel" xPosition="before">
-   <app-login (click)="$event.stopPropagation();"></app-login>
-</mat-menu>
