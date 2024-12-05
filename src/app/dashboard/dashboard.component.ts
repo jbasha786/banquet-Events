@@ -3,7 +3,6 @@ import { CardComponent } from '../shared/components/card/card.component';
 import { CardSideContentComponent } from '../shared/components/card-side-content/card-side-content.component';
 import { CarouselComponent } from '../shared/components/carousel/carousel.component';
 import { CorporateMeetingComponent } from './corporate-meeting/corporate-meeting.component';
-import { FamilyEventsComponent } from './family-events/family-events.component';
 import { FAQComponent } from './faq/faq.component';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -13,6 +12,7 @@ import { BookingComponent } from '../booking/booking.component';
 import { isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
+import { ArrangementsComponent } from '../shared/components/arrangements/arrangements.component';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 
 @Component({
@@ -20,9 +20,9 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
   standalone: true,
   imports: [CardComponent,
     CardSideContentComponent,
+    ArrangementsComponent,
     CarouselComponent,
     CorporateMeetingComponent,
-    FamilyEventsComponent,
     UpcomingEventsListComponent,
     FAQComponent,
     RouterLink,

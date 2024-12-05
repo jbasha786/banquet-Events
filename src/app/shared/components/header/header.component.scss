@@ -1,87 +1,45 @@
- @import "../../../../app/styles/variable.scss";
- @import "../../../custom-css/custom-material-colors.scss";
+@import "../../../../app/styles/variable.scss";
+@import "../../../custom-css/custom-material-colors.scss";
 
- .thik_line{
-    padding: 2px;
-    background-color: $secondory-color;
- }
+.main_line {
+  background-color: $secondory-color;
+}
+.offcanvas {
+  width: $gutter-70per;
+  
+  &-header {
+    background-color: $gray;
+  }
+}
 
- .navbar {
-     .container {
-         flex-flow: wrap;
-     }
-
-     li,
-     a {
-         font-family: "poppins";
-     }
- }
-
-
- @media (min-width: 991px) {
-     .fw-500 {
-         font-weight: 500;
-     }
-
-     .fw-200 {
-         font-weight: 200;
-     }
-
-     .one {
-         height: 3vh;
-         margin-left: 5%;
-     }
-
-     .second {
-         height: 3vh;
-     }
-
- }
-
-
-
- @media (max-width: 991px) {
-     .side-bar {
-         background-color: white;
-         backdrop-filter: blur(10px);
-     }
-
-     li,
-     a {
-         font-size: 25px;
-         font-weight: 700;
-         font-family: "poppins";
-
-         .header-images {
-
-             height: 20px;
-         }
-     }
-
-     ul {
-         margin-left: 7%;
-         gap: 5px;
-     }
-
-     .one {
-         // display: flex;
-         order: 2;
-     }
-
-     .second {
-         // display: flex;
-         order: 3;
-     }
-
-     .third {
-         order: 1;
-
-         .usericon {
-             height: 1.5em;
-         }
-     }
-
-     .fs-2vh {
-         font-size: 2vh;
-     }
- }
+.navbar-toggler-icon {
+  width: $gutter-20sp;
+  height: $gutter-20sp;
+}
+.nav-togleuser {
+  border: none;
+  box-shadow: none;
+}
+.dot {
+  height: $gutter-8sp;
+  width: $gutter-8sp;
+  background-color: $livebtn-clr;
+  border-radius: $gutter-50per;
+  display: inline-block;
+}
+.btn-live {
+  background-color: transparent;
+  color: $livebtn-clr;
+  border: $gutter-2sp solid $livebtn-clr;
+  padding: $gutter-4sp $gutter-10sp;
+  border-radius: $gutter-4sp;
+}
+.gif-btn {
+  background-image: url("../../../../assets/images/overview/liveevents.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,13 @@
+@import "../../styles/variable.scss";
+.custom-accordion .accordion-item {
+    border: none; 
+    border-top:1px solid #ddd; 
+}
+.accordion-header{
+    padding: $gutter-18sp $gutter-0sp;
+}
+.accordion-button{
+    font-size:$gutter-14sp;
+    font-weight:bold;
+
+}

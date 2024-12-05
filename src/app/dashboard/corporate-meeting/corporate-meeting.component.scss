@@ -2,51 +2,129 @@
 @import "../../custom-css/custom-material-colors.scss";
 
 .corporate {
-    gap: 0px;
+	display: flex;
+	flex-wrap: wrap;
 
-    @media screen and (max-width:576px) {
-        gap: 30px;
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: $gutter-10sp;
 
         &__color {
             color: $secondory-color;
         }
 
-        &__btn {
-            color: $secondory-color;
-            border: 1px solid $secondory-color;
-            border-radius: 5px;
-            background: none;
-            padding: 10px;
-            max-width: 220px;
+        &__familycolor {
+            color: $family-yellow;
         }
-    }
+		&__btn,
+		&__familybtn {
+			color: $secondory-color;
+			border: $gutter-1sp solid $secondory-color;
+			background: none;
+			padding: $gutter-10sp $gutter-22sp;
+			border-radius: $gutter-6sp;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
 
-    &__image {
-        position: relative;
-        display: inline-block;
-        height: 40vh;
-        width: 100%;
 
-        &__main {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-        }
+		}
 
-        &__video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 10%;
-            height: auto;
-        }
-    }
+		&__familybtn {
+			color: $family-yellow;
+			border: $gutter-1sp solid $family-yellow;
+			background: none;
+			padding: $gutter-10sp $gutter-22sp;
+			border-radius: $gutter-6sp;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+
+
+		}
+
+		&__image {
+			position: relative;
+			display: inline-block;
+
+			&__main {
+				width: $gutter-100per;
+				height: $gutter-100per;
+				border-radius: $gutter-10sp;
+				object-fit: cover;
+			}
+
+
+		}
+	}
+
+	.corporate__image__video {
+		position: absolute;
+		top: $gutter-50per;
+		left: $gutter-55per;
+		transform: translate(-$gutter-50per, -$gutter-50per);
+		width: $gutter-10per;
+		height: auto;
+	}
+
+	.family__image__video {
+		position: absolute;
+		top: $gutter-50per;
+		left: $gutter-45per;
+		transform: translate(-$gutter-50per, -$gutter-50per);
+		width: $gutter-10per;
+		height: auto;
+	}
+
+	.image-border,
+	.image-border-family {
+		position: relative;
+		height: $gutter-100per;
+		min-height: $gutter-400sp;
+        border-radius: 22px; 
+        overflow: hidden;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: $gutter-6rem;
+			left: $gutter-0rem;
+			right: $gutter-6rem;
+			bottom: $gutter-0rem;
+			border: $gutter-10sp solid transparent;
+            -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0); 
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+			border-radius: $gutter-22sp;
+			opacity: 0.4;
+           
+		}
+
+		&.image-border-family::before {
+			left: $gutter-6rem;
+			right: $gutter-0rem;
+			background: $gradient-family;
+		}
+
+		&.image-border::before {
+			background: $gradient-corporate;
+           }
+
+		.corporate__image__main,
+		.family__image__main {
+			position: absolute;
+			top: $gutter-0rem;
+			left: $gutter-4rem;
+			width: calc($gutter-100per - $gutter-4rem);
+			height: calc($gutter-100per - $gutter-3rem);
+			object-fit: cover;
+			border-radius: $gutter-22sp;
+		}
+
+		.family__image__main {
+			left: $gutter-0rem;
+		}
+	}
 }

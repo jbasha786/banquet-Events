@@ -1,7 +1,9 @@
 //colors
+$secondary-color: #a62784; 
 $gray: #F0F0F3;
 $white-smoke: #F4F4F4;
 $light-yellow: #DA7D00;
+$family-yellow: #e78501;
 $cancel-color-pink: #edd4e6;
 $quick-silver: #a1a1a1;
 $light-silver: #D9D9D9;
@@ -12,3 +14,81 @@ $adresscolor: rgba(63, 134, 8, 1);
 $ratingBackground: rgba(251, 188, 5, 1);
 $back-btn-color-overview: #EDE4F6;;
 $close-btn: #FF5656;
+$priceBackGrnd: rgba(253, 241, 224, 1);
+$booknow-pink: rgba(144, 27, 183, 1);
+$back-btn-color-overview: #EDE4F6;
+$close-btn: #FF5656;
+$livebtn-clr: #FC1024;
+$black-overlay: rgba(0, 0, 0, 0.9);
+$light-overlay: rgba(9, 9, 9, 0.1);
+$text-gradient-clr1: #AD298A;
+$text-gradient-clr2: #F17DD9;
+
+
+//gutters
+$gutter-0sp: 0px;
+$gutter-1sp: 1px;
+$gutter-2sp: 2px;
+$gutter-4sp: 4px;
+$gutter-6sp: 6px;
+$gutter-8sp: 8px;
+$gutter-10sp: 10px;
+$gutter-12sp: 12px;
+$gutter-14sp: 14px;
+$gutter-16sp: 16px;
+$gutter-18sp: 18px;
+$gutter-20sp: 20px;
+$gutter-22sp: 22px;
+$gutter-26sp: 26px;
+$gutter-32sp: 32px;
+$gutter-42sp: 42px;
+$gutter-80sp: 80px;
+$gutter-90sp: 90px;
+$gutter-100sp: 100px;
+$gutter-400sp: 400px;
+$gutter-438sp: 438px;
+
+//gutter-percent
+$gutter-0per: 0%;
+$gutter-10per: 10%;
+$gutter-30per: 30%;
+$gutter-60per: 60%;
+$gutter-45per: 45%;
+$gutter-50per: 50%;
+$gutter-55per: 55%;
+$gutter-70per: 70%;
+$gutter-100per: 100%;
+
+//gutter-vh
+$gutter-100vh: 100vh;
+
+//gutter-vw
+$gutter-0vw: 0vw;
+$gutter-4vw: 4vw;
+$gutter-5vw: 5vw;
+$gutter-6vw: 6vw;
+$gutter-8vw: 8vw;
+
+//gutter-rem
+$gutter-0rem: 0rem;
+$gutter-4rem: 4rem;
+$gutter-3rem: 3rem;
+$gutter-6rem: 6rem;
+$gutter-8rem: 8rem;
+
+
+$value-null: 0;
+
+
+//opacity
+$opacity-halfless:0.5;
+
+//linear gradient
+$gradient-momentbg: linear-gradient(
+  to bottom,
+  rgba(173, 41, 138, 0.5),
+  rgba(101, 47, 76, 0.5) 25%,
+  rgba(251, 188, 5, 0.5) 100%
+);
+$gradient-family: linear-gradient(to top, #eef06f, #ffbe00);
+$gradient-corporate: linear-gradient(to top, #fa9ee1, #d229a6bd);

@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { OverviewComponent } from './booking/overview/overview.component';
 import { BookingHistoryComponent } from './booking-history/booking-history.component';
 import { SignupComponent } from './core/signup/signup.component';
+import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './core/login/login.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './core/reset-password/reset-password.component';
@@ -14,6 +15,8 @@ export const routes: Routes = [
     { path: 'overview', component: OverviewComponent },
     { path: 'mybooking', component: BookingHistoryComponent },
     { path: 'signUp', component: SignupComponent },
+    { path: 'events', component: EventsComponent },
+    { path: '**', component: PageNotFoundComponent },
     { path: 'login', component: LoginComponent },
     { path: 'resetpwd', component: ResetPasswordComponent },
     { path: 'forgotpwd', component: ForgotPasswordComponent },
