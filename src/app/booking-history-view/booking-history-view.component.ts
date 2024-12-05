@@ -17,7 +17,6 @@ export class BookingHistoryViewComponent {
   constructor(private defaultService: DefaultService) { }
   ngOnInit() {
     this.getInitialData();
-    console.log(this.bookings)
   }
 
   getInitialData() {

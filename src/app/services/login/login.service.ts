@@ -12,7 +12,7 @@ export class LoginService {
   constructor(private apiService: ApiService) { }
 
   userLogin(body: loginModel) {
-    const url = `${env.apiURL}/guest/login`;
+    const url = `${env.apiURL}guest/login`;
     return this.apiService.POST(url, body);
   }
 }

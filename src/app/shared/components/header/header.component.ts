@@ -85,33 +85,24 @@ export class HeaderComponent implements OnInit {
   
 
   }
- 
 
   getNavList() {
     this.defaultService.getJSON().subscribe(result => {
       this.navList = result.navList;
     })
   }
+
   getnavEventList() {
     this.defaultService.getJSON().subscribe(result => {
       this.navEvent_Items = result.navEvent_Items;
     })
-  }
-  preventCloseOnClickOut() {
-    this.overlayContainer.getContainerElement().classList.add('disable-backdrop-click');
-  }
-
-  allowCloseOnClickOut() {
-    this.overlayContainer.getContainerElement().classList.remove('disable-backdrop-click');
   }
 
   goToHome() {
     this.router.navigate(['']);
   }
 
-  expression(link: any) {
-    if (link === 'mybooking') {
-      this.router.navigate([link])
-    }
+  goTo(link: any) {
+    this.router.navigate([link]);
   }
 }

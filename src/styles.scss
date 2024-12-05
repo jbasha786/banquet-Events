@@ -90,10 +90,13 @@ html {
     @media (min-width: 992px) {
       padding-right: #{$i}px !important;
     }
-  }
   .pr-lg-#{$i} {
     @media (min-width: 1280px) {
       padding-right: #{$i}px !important;
+
+    // Paddings
+    .pad-#{$i} {
+        padding: 0px + $i !important;
     }
   }
   .pl-#{$i} {
