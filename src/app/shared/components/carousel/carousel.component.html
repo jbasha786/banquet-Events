@@ -4,9 +4,9 @@
             <div class="row g-5">
                 @for(carousel of carouselItem; track $index){
               <div class="col-md-4 col-12 col-lg-4 col-xl-4 col-xxl-4">
-                    <div class="card Card-no-border gap-26">
+                    <div class="card no-border gap-26">
                         <img src={{carousel.src}} alt="Card Image" class="card-image">
-                        <div class="card-content">
+                        <div class="card-content d-flex flex-column gap-20">
                           <p class="card-heading fs-18 fw-500 mb-0">{{carousel.name}}</p>
                           <p class="card-text fs-14 lh-34 mb-0">{{carousel.desc}}</p>
                           <strong><button class="card-button readmore-btn fs-14 fw-bold">{{carousel.button}}</button></strong>
@@ -20,9 +20,9 @@
             <div class="row g-5">
                 @for(carousel of carouselItem; track $index){
                     <div class="col-md-4 col-12 col-lg-4 col-xl-4 col-xxl-4">
-                        <div class="card Card-no-border gap-26">
+                        <div class="card no-border gap-26">
                             <img src={{carousel.src}} alt="Card Image" class="card-image">
-                            <div class="card-content">
+                            <div class="card-content d-flex flex-column gap-20">
                               <p class="card-heading fs-18 fw-500 mb-0">{{carousel.name}}</p>
                               <p class="card-text fs-14 lh-34 mb-0">{{carousel.desc}}</p>
                               <strong><button class="card-button readmore-btn fs-14 fw-bold">{{carousel.button}}</button></strong>

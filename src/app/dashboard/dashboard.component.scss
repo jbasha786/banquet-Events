@@ -3,607 +3,556 @@
 
 //main banner with content
 @mixin full-background($image-path) {
-    background-image: linear-gradient(45deg, $black-overlay, $light-overlay), url($image-path);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+	background-image: linear-gradient(45deg, $black-overlay, $light-overlay), url($image-path);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .banner {
-   &__image {
-        min-height: calc($gutter-100vh - $gutter-100sp);
-        width: $gutter-100per;
-        @include full-background("../../assets/images/logo/landingImage.svg");
-        
+	&__image {
+		min-height: calc($gutter-100vh - $gutter-100sp);
+		width: $gutter-100per;
+		@include full-background("../../assets/images/logo/landingImage.svg");
 
-        &__content {
-           
 
-            &__title {
-                color: white;
-                margin-bottom:$gutter-10sp;
-                transform: translateX(-100%);
-                animation: slideIn 1s forwards;
-            }
+		&__content {
 
-          
 
-            @keyframes slideIn {
-                to {
-                    transform: translateX(0);
-                }
-            }
+			&__title {
+				color: white;
+				margin-bottom: $gutter-10sp;
+				transform: translateX(-100%);
+				animation: slideIn 1s forwards;
+			}
 
-            &__desc {
-                color: $white;
-                transform: translateX(-100%);
-                animation: slideIn 4s forwards;
-            }
 
-            &__btn {
-                
-                flex-shrink: 0;
-                border-radius: $gutter-32sp;
-                letter-spacing:  $gutter-1sp;
-                border:none;
-                color: $white;
-                margin-top: $gutter-20sp;
-                background: var(--primary-color);
-                opacity: 0;
-                animation: fadeIn 4s forwards;
-                padding:$gutter-8sp $gutter-42sp;
-            }
+			@keyframes slideIn {
+				to {
+					transform: translateX(0);
+				}
+			}
 
-            @keyframes fadeIn {
-                to {
-                    opacity: 1;
-                }
-            }
-        }
-            &__downIcon {
-                bottom: $gutter-80sp;
-                right: $gutter-80sp;
-            }
-            
-        }
-    }
+			&__desc {
+				color: $white;
+				transform: translateX(-100%);
+				animation: slideIn 4s forwards;
+			}
+
+			&__btn {
+
+				flex-shrink: 0;
+				border-radius: $gutter-32sp;
+				letter-spacing: $gutter-1sp;
+				border: none;
+				color: $white;
+				margin-top: $gutter-20sp;
+				background: var(--primary-color);
+				opacity: 0;
+				animation: fadeIn 4s forwards;
+				padding: $gutter-8sp $gutter-42sp;
+			}
+
+			@keyframes fadeIn {
+				to {
+					opacity: 1;
+				}
+			}
+		}
+
+		&__downIcon {
+			bottom: $gutter-80sp;
+			right: $gutter-80sp;
+		}
+
+	}
+}
 
 //main banner with content
 .events {
-    padding:$gutter-6vw $gutter-5vw;
-    transition-delay: 1s;
-    transition: transform 0.5s ease;
+	padding: $gutter-6vw $gutter-5vw;
+	transition-delay: 1s;
+	transition: transform 0.5s ease;
 }
-.Card-no-border{
-    border:none;
-    box-shadow: none;
+
+//arrangements
+// General Card Styles
+.no-border {
+	border: none;
+	box-shadow: none;
 }
-.card-image{
-    border-radius:14px;
+
+.card {
+	&-image {
+		border-radius: $gutter-14sp;
+	}
+
+	&-button {
+		border: none;
+		background-color: transparent;
+		color: $secondary-color;
+	}
 }
-.readmore-btn{
-    border: none;
-    background-color: transparent;
-    color: #a62784;
-}
-.card-content{
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-}
+
+// Spacing Utilities
 .g-6 {
-    --bs-gutter-x: 4rem;
-    --bs-gutter-y: 4rem;
+	--bs-gutter-x: 4rem;
+	--bs-gutter-y: 4rem;
 }
+
+// Arrangements Section
 .arrangements {
-    padding:$gutter-6vw $gutter-5vw;
-    &__color {
-        color: $secondory-color;
-    }
-}
-.personalized{
-    padding: 4vw 5vw;
-    background-color: #f4f4f4;
-    margin: 6vw 0vw;
+	padding: $gutter-6vw $gutter-5vw;
+
+	&__color {
+		color: $secondary-color;
+	}
 }
 
+//personalized
+.personalized {
+	padding: $gutter-4vw $gutter-5vw;
+	background-color: $white-smoke;
+	margin: $gutter-6vw $gutter-0vw;
+}
+
+//experience
 .experience {
-    padding: 6vw 5vw;
-    &__color {
-        color: $secondory-color;
-    }
-&__section {
-        padding: 0;
+	padding: $gutter-6vw $gutter-5vw;
 
-        @media screen and (max-width: 576px) {
-            padding: 10px;
-        }
-    }
+	&__color {
+		color: $secondary-color;
+	}
 
+	&__section {
+		--bs-gutter-x: 0;
+	}
+
+	&__item {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__image {
+		width: $gutter-100per;
+		height: auto;
+		display: block;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $gutter-100per;
+		height: $gutter-100per;
+		background-color: $white-smoke;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	&__item:hover &__overlay {
+		opacity: 0.9;
+	}
+
+	&__text {
+		color: $black-overlay;
+	}
 }
 
-.experience__item {
-    position: relative;
-    overflow: hidden; /* Ensures overlay stays within the container */
-  }
-  
-  .experience__image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .experience__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* White overlay with transparency */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
-  }
-  
-  .experience__item:hover .experience__overlay {
-    opacity: 1; /* Show overlay on hover */
-  }
-  
-  .experience__text {
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-  }
-  .experience__section {
-    --bs-gutter-x: 0; 
-  }  
-
-  .corporate-family{
-    padding:$gutter-6vw $gutter-5vw;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-  }
-  .promotions{
-    padding:$gutter-6vw $gutter-5vw;
-  }
-.join-text{
-    padding: 4vw 8vw;
-}    
-.memberSection {
-    position:relative;
-    background: $white-smoke;
-    margin: $gutter-6vw $gutter-5vw;
-    border-radius: 15px;
-
-
-    &__color {
-        color: $secondory-color;
-    }
-
-    &__btn {
-        background: $secondory-color;
-        color: $white;
-        border-radius: 5px;
-        border: none;
-        padding: 10px 20px;
-    }
-    &__desc{
-            font-weight: lighter;
-            line-height: 26px;
-             color: #6d6868;
-         }
-
-    &__image {
-        display: flex;
-        justify-content: center;
-        position: relative;
-
-        img {
-            position: absolute;
-            bottom: 0;
-            width: 60%;
-            right: 30%;
-
-            @media screen and (max-width:991px) {
-                position:relative;
-                right:0%;
-            }
-        }
-
-      
-    }
+//corporate-family
+.corporate-family {
+	padding: $gutter-6vw $gutter-5vw;
 }
 
-.moment {
-    background: linear-gradient(
-        to right,
-        rgba(173, 41, 138, 0.8),  /* Red with 50% opacity */
-        rgba(101, 47, 76, 0.7) 25%, /* Yellow at 25% with 50% opacity */
-        rgba(251, 188, 5, 0.4) 100%  /* Green with 50% opacity */
-      ),
-      url("../../assets/images/moment/moment_bg.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
-    height: 700px;
-    
-
-    @media screen and (max-width:570px) {
-        height: auto;
-        background-size: initial;
-    }
-
-    &__content {
-        color: $white;
-        padding: 60px;
-        opacity: 0.6;
-        font-weight: 700;
-        text-align: center;
-
-        @media screen and (max-width:570px) {
-            font-size: 18px;
-            padding: 0px;
-        }
-
-        h5 {
-            font-size: 30px;
-            display: flex;
-            justify-content: center;
-
-            @media screen and (max-width:570px) {
-                font-size: 18px;
-            }
-        }
-    }
-
-    &__section {
-        position: absolute;
-        display: flex;
-        right: 0;
-        justify-content: center;
-        left: 0;
-        top: 260px;
-        width: 60%;
-        margin: 0 auto;
-
-        @media screen and (max-width:570px) {
-            position: relative;
-            width: 100%;
-            top: 20px;
-        }
-    }
-
-    &__card {
-        transition: transform 400ms ease-in-out;
-    }
-
-    &__card:hover {
-        transform: scale(1.1);
-    }
+//promotions
+.promotions {
+	padding: $gutter-6vw $gutter-5vw;
 }
-
-
-// css for scroll
 
 .tag-list {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    gap: 1rem 0;
-    position: relative;
-    padding: 1.5rem 0;
-    overflow: hidden;
+	width: $gutter-100per;
+	max-width: $gutter-100per;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
 }
 
 .loop-slider {
-    --duration: 7000ms;
-    --direction: normal;
+	--duration: 7000ms;
+	--direction: normal;
 
-    .inner {
-        display: flex;
-        width: fit-content;
-        animation-name: loop;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: var(--direction);
-        animation-duration: var(--duration);
-    }
+	.inner {
+		display: flex;
+		width: fit-content;
+		animation-name: loop;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: var(--direction);
+		animation-duration: var(--duration);
+	}
 }
 
 .tag {
-    display: flex;
-    align-items: center;
-    gap: 0 0.2rem;
-    color: #e2e8f0;
-    font-size: 0.9rem;
-    border-radius: 0.4rem;
-    padding: 0.7rem 1rem;
+	display: flex;
+	align-items: center;
+	padding: $gutter-12sp $gutter-16sp;
 
-    span {
-        font-size: 1.2rem;
-        color: #64748b;
-    }
 }
 
-.fade {
-    pointer-events: none;
-    background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
-    position: absolute;
-    inset: 0;
+//member section
+.join-text {
+	padding: $gutter-4vw $gutter-8vw;
+}
+
+.memberSection {
+	position: relative;
+	background: $white-smoke;
+	margin: $gutter-6vw $gutter-5vw;
+	border-radius: $gutter-16sp;
+
+
+	&__color {
+		color: $secondory-color;
+	}
+
+	&__btn {
+		background: $secondory-color;
+		color: $white;
+		border-radius: $gutter-8sp;
+		border: none;
+		padding: $gutter-10sp $gutter-20sp;
+	}
+
+	&__desc {
+		font-weight: lighter;
+		line-height: $gutter-26sp;
+		color: $quick-silver;
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		img {
+			position: absolute;
+			bottom: $value-null;
+			width: $gutter-60per;
+			right: $gutter-30per;
+
+			@media screen and (max-width:991px) {
+				position: relative;
+				right: $gutter-0per;
+			}
+		}
+
+
+	}
+}
+
+//step in to wonders moment
+.moment::before {
+	position: absolute;
+	content: "";
+	background: $gradient-momentbg, url("../../assets/images/moment/moment_bg.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: $gutter-438sp;
+	top: $gutter-90sp;
+	left: $gutter-0sp;
+	width: $gutter-100per;
+}
+
+.moment {
+	padding: $gutter-6vw $gutter-5vw;
+
+	&__content {
+		color: $white-smoke;
+		opacity: $opacity-halfless;
+		text-align: center;
+		letter-spacing: $gutter-1sp;
+	}
+}
+
+//faq
+.faq-section {
+	padding: $gutter-6vw $gutter-5vw;
+}
+
+css for scroll .fade {
+	pointer-events: none;
+	background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+	position: absolute;
+	inset: 0;
 }
 
 @keyframes loop {
-    0% {
-        transform: translateX(0);
-    }
+	0% {
+		transform: translateX(0);
+	}
 
-    100% {
-        transform: translateX(-50%);
-    }
+	100% {
+		transform: translateX(-50%);
+	}
 }
-
-
-.faq-section{padding:5vw 6vw;}
-
 
 
 // test
 *,
 *:before,
 *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
 .mouse_scroll {
-    display: block;
-    margin: 0 auto;
-    width: 24px;
-    height: 100px;
-    cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	width: 24px;
+	height: 100px;
+	cursor: pointer;
 }
 
 
 .m_scroll_arrows {
-    display: block;
-    width: 5px;
-    height: 5px;
-    -ms-transform: rotate(45deg);
-    /* IE 9 */
-    -webkit-transform: rotate(45deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(45deg);
+	display: block;
+	width: 5px;
+	height: 5px;
+	-ms-transform: rotate(45deg);
+	/* IE 9 */
+	-webkit-transform: rotate(45deg);
+	/* Chrome, Safari, Opera */
+	transform: rotate(45deg);
+   border-right: 2px solid white;
+	border-bottom: 2px solid white;
+	margin: 0 0 3px 4px;
 
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    margin: 0 0 3px 4px;
-
-    width: 16px;
-    height: 16px;
+	width: 16px;
+	height: 16px;
 }
 
 
 .unu {
-    margin-top: 1px;
+	margin-top: 1px;
 }
 
 .unu,
 .doi,
 .trei {
-    -webkit-animation: mouse-scroll 1s infinite;
-    -moz-animation: mouse-scroll 1s infinite;
-    animation: mouse-scroll 1s infinite;
+	-webkit-animation: mouse-scroll 1s infinite;
+	-moz-animation: mouse-scroll 1s infinite;
+	animation: mouse-scroll 1s infinite;
 
 }
 
 .unu {
-    -webkit-animation-delay: .1s;
-    -moz-animation-delay: .1s;
-    -webkit-animation-direction: alternate;
+	-webkit-animation-delay: .1s;
+	-moz-animation-delay: .1s;
+	-webkit-animation-direction: alternate;
 
-    animation-direction: alternate;
-    animation-delay: alternate;
+	animation-direction: alternate;
+	animation-delay: alternate;
 }
 
 .doi {
-    -webkit-animation-delay: .2s;
-    -moz-animation-delay: .2s;
-    -webkit-animation-direction: alternate;
+	-webkit-animation-delay: .2s;
+	-moz-animation-delay: .2s;
+	-webkit-animation-direction: alternate;
 
-    animation-delay: .2s;
-    animation-direction: alternate;
+	animation-delay: .2s;
+	animation-direction: alternate;
 
-    margin-top: -6px;
+	margin-top: -6px;
 }
 
 .trei {
-    -webkit-animation-delay: .3s;
-    -moz-animation-delay: .3s;
-    -webkit-animation-direction: alternate;
+	-webkit-animation-delay: .3s;
+	-moz-animation-delay: .3s;
+	-webkit-animation-direction: alternate;
 
-    animation-delay: .3s;
-    animation-direction: alternate;
+	animation-delay: .3s;
+	animation-direction: alternate;
 
 
-    margin-top: -6px;
+	margin-top: -6px;
 }
 
 .mouse {
-    height: 42px;
-    width: 24px;
-    border-radius: 14px;
-    transform: none;
-    border: 2px solid white;
-    top: 170px;
+	height: 42px;
+	width: 24px;
+	border-radius: 14px;
+	transform: none;
+	border: 2px solid white;
+	top: 170px;
 }
 
 .wheel {
-    height: 5px;
-    width: 2px;
-    display: block;
-    margin: 5px auto;
-    background: white;
-    position: relative;
+	height: 5px;
+	width: 2px;
+	display: block;
+	margin: 5px auto;
+	background: white;
+	position: relative;
 
-    height: 4px;
-    width: 4px;
-    border: 2px solid #fff;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
+	height: 4px;
+	width: 4px;
+	border: 2px solid #fff;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
 }
 
 .wheel {
-    -webkit-animation: mouse-wheel 0.6s linear infinite;
-    -moz-animation: mouse-wheel 0.6s linear infinite;
-    animation: mouse-wheel 0.6s linear infinite;
+	-webkit-animation: mouse-wheel 0.6s linear infinite;
+	-moz-animation: mouse-wheel 0.6s linear infinite;
+	animation: mouse-wheel 0.6s linear infinite;
 }
 
 @-webkit-keyframes mouse-wheel {
-    0% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
 
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(6px);
-        -ms-transform: translateY(6px);
-        transform: translateY(6px);
-    }
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(6px);
+		-ms-transform: translateY(6px);
+		transform: translateY(6px);
+	}
 }
 
 @-moz-keyframes mouse-wheel {
-    0% {
-        top: 1px;
-    }
+	0% {
+		top: 1px;
+	}
 
-    25% {
-        top: 2px;
-    }
+	25% {
+		top: 2px;
+	}
 
-    50% {
-        top: 3px;
-    }
+	50% {
+		top: 3px;
+	}
 
-    75% {
-        top: 2px;
-    }
+	75% {
+		top: 2px;
+	}
 
-    100% {
-        top: 1px;
-    }
+	100% {
+		top: 1px;
+	}
 }
 
 @-o-keyframes mouse-wheel {
 
-    0% {
-        top: 1px;
-    }
+	0% {
+		top: 1px;
+	}
 
-    25% {
-        top: 2px;
-    }
+	25% {
+		top: 2px;
+	}
 
-    50% {
-        top: 3px;
-    }
+	50% {
+		top: 3px;
+	}
 
-    75% {
-        top: 2px;
-    }
+	75% {
+		top: 2px;
+	}
 
-    100% {
-        top: 1px;
-    }
+	100% {
+		top: 1px;
+	}
 }
 
 @keyframes mouse-wheel {
 
-    0% {
-        top: 1px;
-    }
+	0% {
+		top: 1px;
+	}
 
-    25% {
-        top: 2px;
-    }
+	25% {
+		top: 2px;
+	}
 
-    50% {
-        top: 3px;
-    }
+	50% {
+		top: 3px;
+	}
 
-    75% {
-        top: 2px;
-    }
+	75% {
+		top: 2px;
+	}
 
-    100% {
-        top: 1px;
-    }
+	100% {
+		top: 1px;
+	}
 }
 
 @-webkit-keyframes mouse-scroll {
 
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    50% {
-        opacity: .5;
-    }
+	50% {
+		opacity: .5;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }
 
 @-moz-keyframes mouse-scroll {
 
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    50% {
-        opacity: .5;
-    }
+	50% {
+		opacity: .5;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }
 
 @-o-keyframes mouse-scroll {
 
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    50% {
-        opacity: .5;
-    }
+	50% {
+		opacity: .5;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes mouse-scroll {
 
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    50% {
-        opacity: .5;
-    }
+	50% {
+		opacity: .5;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }

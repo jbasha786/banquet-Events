@@ -1,16 +1,13 @@
-.faq-align-strt{
-    display:flex;
-    align-items: end;
-}
+@import "../../styles/variable.scss";
 .custom-accordion .accordion-item {
-    border: none; /* Remove all borders */
-    border-top: 1px solid #ddd; /* Apply only border-top */
+    border: none; 
+    border-top:1px solid #ddd; 
 }
 .accordion-header{
-    padding: 18px 0px;
+    padding: $gutter-18sp $gutter-0sp;
 }
 .accordion-button{
-    font-size:14px;
-    font-weight:600;
+    font-size:$gutter-14sp;
+    font-weight:bold;
 
 }

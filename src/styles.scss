@@ -36,9 +36,9 @@ html {
   .mt-#{$i} {
     margin-top: 0px + $i;
   }
-  .mt-lg-#{$i} {
+ .mt-lg-#{$i} {
     @media (min-width: 992px) {
-      margin-top: #{$i}px;
+      margin-top: #{$i}px !important;
     }
   }
   
@@ -72,6 +72,16 @@ html {
   // Paddings
   .p-#{$i} {
     padding: 0px + $i;
+  }
+  .p-md-#{$i} {
+    @media (min-width: 992px) {
+      padding: #{$i}px !important;
+    }
+  }
+  .p-lg-#{$i} {
+    @media (min-width: 1280px) {
+      padding: #{$i}px !important;
+    }
   }
   .pr-#{$i} {
     padding-right: #{$i}px;

@@ -3,7 +3,6 @@ import { CardComponent } from '../shared/components/card/card.component';
 import { CardSideContentComponent } from '../shared/components/card-side-content/card-side-content.component';
 import { CarouselComponent } from '../shared/components/carousel/carousel.component';
 import { CorporateMeetingComponent } from './corporate-meeting/corporate-meeting.component';
-import { FamilyEventsComponent } from './family-events/family-events.component';
 import { FAQComponent } from './faq/faq.component';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -23,7 +22,6 @@ import { ArrangementsComponent } from '../shared/components/arrangements/arrange
     ArrangementsComponent,
     CarouselComponent,
     CorporateMeetingComponent,
-    FamilyEventsComponent,
     FAQComponent,
     RouterLink,
     RouterModule,
