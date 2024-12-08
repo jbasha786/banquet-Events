@@ -118,7 +118,7 @@
 
 // Arrangements Section
 .arrangements {
-	padding: $gutter-6vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-6vw $gutter-5vw;
 
 	&__color {
 		color: $secondary-color;
@@ -129,12 +129,12 @@
 .personalized {
 	padding: $gutter-4vw $gutter-5vw;
 	background-color: $white-smoke;
-	margin: $gutter-6vw $gutter-0vw;
+	margin: $gutter-0vw $gutter-0vw $gutter-6vw;
 }
 
 //experience
 .experience {
-	padding: $gutter-6vw $gutter-5vw;
+	padding:$gutter-0vw $gutter-5vw $gutter-6vw;
 
 	&__color {
 		color: $secondary-color;
@@ -180,12 +180,12 @@
 
 //corporate-family
 .corporate-family {
-	padding: $gutter-6vw $gutter-5vw;
+	padding:$gutter-0vw $gutter-5vw $gutter-5vw;
 }
 
 //promotions
 .promotions {
-	padding: $gutter-6vw $gutter-5vw;
+	padding:$gutter-0vw $gutter-5vw $gutter-6vw;
 }
 
 .tag-list {
@@ -215,7 +215,7 @@
 .tag {
 	display: flex;
 	align-items: center;
-	padding: $gutter-12sp $gutter-16sp;
+	padding: $gutter-12sp $gutter-16sp $gutter-0sp;
 
 }
 
@@ -231,7 +231,7 @@
 .memberSection {
 	position: relative;
 	background: $white-smoke;
-	margin: $gutter-6vw $gutter-5vw;
+	margin:$gutter-0vw $gutter-5vw $gutter-6vw;
 	border-radius: $gutter-16sp;
 
 
@@ -261,7 +261,7 @@
 		img {
 			position: absolute;
 			bottom: $value-null;
-			width: $gutter-60per;
+			width: $gutter-54per;
 			right: $gutter-30per;
 
 			@media screen and (max-width:991px) {
@@ -278,20 +278,24 @@
 .moment::before {
 	position: absolute;
 	content: "";
-	background: $gradient-momentbg, url("../../assets/images/moment/moment_bg.svg");
+	background: url("../../assets/images/moment/atumn.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: $gutter-438sp;
-	top: $gutter-90sp;
+	height: $gutter-464sp;
+	top: $gutter-0sp;
 	left: $gutter-0sp;
 	width: $gutter-100per;
 }
 
 .moment {
-	padding: $gutter-6vw $gutter-5vw;
+	padding:$gutter-0vw $gutter-5vw $gutter-5vw;
 
 	&__content {
-		color: $white-smoke;
+
+		height: $gutter-344sp;
+		justify-content: center;
+		align-items: center;
+        color: $white-smoke;
 		opacity: $opacity-halfless;
 		text-align: center;
 		letter-spacing: $gutter-1sp;
@@ -300,7 +304,7 @@
 
 //faq
 .faq-section {
-	padding: $gutter-6vw $gutter-5vw;
+	padding:$gutter-0vw $gutter-5vw $gutter-6vw;
 }
 
 css for scroll .fade {

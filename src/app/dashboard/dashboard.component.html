@@ -3,13 +3,13 @@
     <div class="banner__image relative d-flex flex-column justify-content-end justify-content-md-center">
        <div class="banner__image__content text-center absolute bottom-0 mb-20 text-md-start md:relative ml-md-20 ml-lg-160">
           <h2 class="banner__image__content__title lh-md-50">
-             <span class="welkom fw-200 fw-lg-bold fs-24 fs-lg-58">{{bannerInfo.title}}</span><br>
+             <span class="welkom fw-bold fs-24 fs-lg-58">{{bannerInfo.title}}</span><br>
              <span class="company-title fs-24 fs-lg-58 fw-bold">{{bannerInfo.subTitle}}</span>
           </h2>
           <p class="banner__image__content__desc fs-14 fs-lg-20 fw-500">{{bannerInfo.desc}}
           <p>
           <div>
-             <button class="banner__image__content__btn fs-20 fw-500"
+             <button class="banner__image__content__btn fs-20 fw-bold"
                 (click)="continueBooking('300ms', '300ms')">{{bannerInfo.buttonName}}</button>
           </div>
        </div>
@@ -36,16 +36,16 @@
  <!-- Dartts Events Start -->
  <!-- Our Arrangements section Start -->
  <div class="arrangements">
-    <p class="pb-24 fs-24 lh-24 m-0">Our <span class="arrangements__color">Arrangements</span></p>
+    <p class="pb-24 fs-24 lh-24 m-0 fw-medium">Our <span class="arrangements__color">Arrangements</span></p>
     <div class="row g-6">
        @for( obj of arrangementsInfo; track $index){
        <div class="col-12 col-lg-4">
           <div class="card no-border gap-26">
              <img src={{obj.src}} alt="Card Image" class="card-image">
              <div class="card-content d-flex flex-column gap-20">
-                <p class="card-heading fs-18 fw-bold mb-0">{{obj.name}}</p>
+                <p class="card-heading fs-18 fw-medium mb-0">{{obj.name}}</p>
                 <p class="card-text fs-14 lh-34 mb-0">{{obj.desc}}</p>
-                <strong><button class="card-button readmore-btn fs-14 fw-bold">{{obj.button}}</button></strong>
+                <strong><button class="card-button readmore-btn fs-14 fw-medium p-0">{{obj.button}}</button></strong>
              </div>
           </div>
        </div>
@@ -56,7 +56,7 @@
  <!--personalized Start  -->
  <div class="personalized">
     <div class="Personalized-content">
-       <p class="pb-24 fs-24 lh-30 m-0">Create your own <span class="arrangements__color">personalized</span> ideal model.</p>
+       <p class="pb-24 fs-24 lh-30 m-0 fw-medium">Create your own <span class="arrangements__color">personalized</span> ideal model.</p>
        <p class="fs-16 lh-24 pb-40">Experience the change of seasons from a remote cabin, spacious view models villa or overlooking with your
           loved persons.
        </p>
@@ -66,7 +66,7 @@
  <!-- personalized End -->
  <!-- Experience Section Start -->
  <div class="experience">
-    <p class="text-center fw-bold fs-33 fs-lg-40">Experience the best autumn holiday at <span class="experience__color">De Bonte
+    <p class="text-center fw-medium fs-33 fs-lg-40">Experience the best autumn holiday at <span class="experience__color">De Bonte
        Wever</span> 
     </p>
     <p class="text-center m-0 pb-1 fs-12 fs-lg-15">A refreshing walk through the forest or a breath of fresh air on your bike through
@@ -93,10 +93,10 @@
  <!-- corporate section End -->
  <!-- promotions section Start -->
  <div class="promotions">
-    <p class="fs-24 fw-bold">De Bonte Wever Deals & Promotions</p>
+    <p class="fs-24 fw-medium">De Bonte Wever Deals & Promotions</p>
     <p class="fgs-14">Exclusive savings for your next stay.</p>
     <div class="">
-       <div class="tag-list p-20">
+       <div class="tag-list">
           <div class="loop-slider">
              <div class="inner">
                 @for(image of promotionsInfo; track $index){
@@ -127,10 +127,10 @@
  <!-- Member section End -->
  <!-- moment Section Start -->
  <div class="moment position-relative">
-    <div class="moment__content d-flex flex-column fw-bold gap-10 gap-lg-32 p-20 p-md-40 p-lg-50 mt-82 mt-lg-40">
-       <p class="fs-16 fs-lg-42 lh-20 lh-lg-38 mb-0">Step into Wonders</p>
-       <p class="fs-16 fs-lg-42 lh-20 lh-lg-38 mb-0">And experience a world where every</p>
-       <p class="fs-16 fs-lg-42 lh-20 lh-lg-38 mb-0">moment is magical!</p>
+    <div class="moment__content d-flex flex-column fw-bold gap-6 gap-lg-32">
+       <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">Step into Wonders</p>
+       <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">And experience a world where every</p>
+       <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">moment is magical!</p>
     </div>
     <div class="moment__section">
        <div class="row g-4">
