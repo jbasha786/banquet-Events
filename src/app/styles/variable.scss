@@ -1,6 +1,7 @@
 //colors
 $secondary-color: #a62784; 
 $gray: #F0F0F3;
+$border-gray:#e1e1e1;
 $white-smoke: #F4F4F4;
 $light-yellow: #DA7D00;
 $family-yellow: #e78501;
@@ -45,17 +46,19 @@ $gutter-42sp: 42px;
 $gutter-80sp: 80px;
 $gutter-90sp: 90px;
 $gutter-100sp: 100px;
+$gutter-344sp: 344px;
 $gutter-400sp: 400px;
-$gutter-438sp: 438px;
+$gutter-464sp: 464px;
 
 //gutter-percent
 $gutter-0per: 0%;
 $gutter-10per: 10%;
 $gutter-30per: 30%;
 $gutter-60per: 60%;
-$gutter-45per: 45%;
+$gutter-54per: 54%;
+$gutter-48per: 48%;
 $gutter-50per: 50%;
-$gutter-55per: 55%;
+$gutter-40per: 40%;
 $gutter-70per: 70%;
 $gutter-100per: 100%;
 
@@ -76,6 +79,8 @@ $gutter-4rem: 4rem;
 $gutter-3rem: 3rem;
 $gutter-6rem: 6rem;
 $gutter-8rem: 8rem;
+$gutter-10rem: 10rem;
+$gutter-22rem: 22rem;
 
 
 $value-null: 0;

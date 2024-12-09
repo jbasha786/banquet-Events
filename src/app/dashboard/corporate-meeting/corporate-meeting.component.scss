@@ -9,7 +9,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: $gutter-10sp;
+		gap: $gutter-14sp;
 
         &__color {
             color: $secondory-color;
@@ -27,8 +27,6 @@
 			border-radius: $gutter-6sp;
 			cursor: pointer;
 			transition: background-color 0.3s, color 0.3s;
-
-
 		}
 
 		&__familybtn {
@@ -39,8 +37,6 @@
 			border-radius: $gutter-6sp;
 			cursor: pointer;
 			transition: background-color 0.3s, color 0.3s;
-
-
 		}
 
 		&__image {
@@ -58,73 +54,32 @@
 		}
 	}
 
-	.corporate__image__video {
+	.corporate__image__video,
+	.family__image__video  {
 		position: absolute;
-		top: $gutter-50per;
-		left: $gutter-55per;
-		transform: translate(-$gutter-50per, -$gutter-50per);
+		top: $gutter-40per;
+		left: $gutter-48per;
 		width: $gutter-10per;
 		height: auto;
 	}
-
-	.family__image__video {
-		position: absolute;
-		top: $gutter-50per;
-		left: $gutter-45per;
-		transform: translate(-$gutter-50per, -$gutter-50per);
-		width: $gutter-10per;
-		height: auto;
+	.family__image__video  {
+		left: $gutter-40per;
+	}
+	.corporate__image__main,
+	.family__image__main {
+		width:$gutter-100per
 	}
 
 	.image-border,
 	.image-border-family {
 		position: relative;
 		height: $gutter-100per;
-		min-height: $gutter-400sp;
-        border-radius: 22px; 
-        overflow: hidden;
+		display: flex;
+	    justify-content: flex-end;
 
-		&::before {
-			position: absolute;
-			content: "";
-			top: $gutter-6rem;
-			left: $gutter-0rem;
-			right: $gutter-6rem;
-			bottom: $gutter-0rem;
-			border: $gutter-10sp solid transparent;
-            -webkit-mask: 
-            linear-gradient(#fff 0 0) content-box, 
-            linear-gradient(#fff 0 0); 
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-			border-radius: $gutter-22sp;
-			opacity: 0.4;
-           
-		}
-
-		&.image-border-family::before {
-			left: $gutter-6rem;
-			right: $gutter-0rem;
-			background: $gradient-family;
-		}
-
-		&.image-border::before {
-			background: $gradient-corporate;
-           }
-
-		.corporate__image__main,
-		.family__image__main {
-			position: absolute;
-			top: $gutter-0rem;
-			left: $gutter-4rem;
-			width: calc($gutter-100per - $gutter-4rem);
-			height: calc($gutter-100per - $gutter-3rem);
-			object-fit: cover;
-			border-radius: $gutter-22sp;
-		}
-
-		.family__image__main {
-			left: $gutter-0rem;
-		}
 	}
 }
+
+
+
+

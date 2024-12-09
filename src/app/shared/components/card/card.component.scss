@@ -2,8 +2,12 @@
 @import "../../../custom-css/custom-material-colors.scss";
 
 .card {
+    border:none;
    .card-title {
         text-wrap: nowrap;
+    }
+    .card-body{
+        border:1px solid $border-gray;
     }
  &__color {
         color: $secondory-color;
