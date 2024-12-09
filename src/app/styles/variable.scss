@@ -25,6 +25,10 @@ $light-overlay: rgba(9, 9, 9, 0.1);
 $text-gradient-clr1: #AD298A;
 $text-gradient-clr2: #F17DD9;
 
+@function gutter-sp($key) {
+  @return #{$key}px;
+}
+
 
 //gutters
 $gutter-0sp: 0px;
