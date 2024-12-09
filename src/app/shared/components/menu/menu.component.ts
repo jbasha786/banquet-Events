@@ -69,5 +69,7 @@ export class MenuComponent {
     this.selection.select(...this.dataSource?.data);
   }
 
-
+closeDialog(){
+  this.dialogRef.close();
+}
 }

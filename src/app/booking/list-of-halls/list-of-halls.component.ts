@@ -100,7 +100,7 @@ export class ListOfHallsComponent {
   selectMenu(){
     this.dialog.open(MenuComponent, {
       width: '700px',
-      height: '60vh'
+      height: '80vh'
     });
   }
 
