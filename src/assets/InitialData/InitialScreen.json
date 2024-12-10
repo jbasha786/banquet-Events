@@ -81,56 +81,6 @@
             "src": "/assets/images/cards/image.svg"
         }
     ],
-    "articles": [
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        }
-    ],
     "bannerSection": {
         "buttonName": "Book Now",
         "desc": "Plan Your Perfect Event, Conference, or Meeting With Ease",

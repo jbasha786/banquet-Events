@@ -2,11 +2,10 @@
 @import "../../custom-css/custom-material-colors.scss";
 
 .overview {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    
+    // Back button
     &__back {
-        border-radius: 50vw;
-        border: 1px solid;
+        border-radius: gutter-vw(50);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -14,58 +13,44 @@
         background: $back-btn-color-overview;
     }
 
+    // Image section
     &__imageSection {
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-
-        &__main {
-            height: 56vh;
-
+        padding: gutter-vw(1) 0;
             img {
-                height: 100%;
+                height: gutter-per(100);
                 object-fit: cover;
-                border-radius: 10px;
+                border-radius: gutter-sp(10);
             }
-        }
-
-        &__sub {
-            height: 56vh;
-
-            &__img1 {
-                height: 26.5vh;
-
-                img {
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 10px;
-                }
-            }
-
-            &__img2 {
-                height: 26.5vh;
-
-                img {
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 10px;
-                }
-            }
-        }
 
         &__viewAll {
             background: $white;
-            border-radius: 5px;
+            border-radius: gutter-sp(5);
             width: max-content;
-            right: 20px;
-            bottom: 10px;
-            padding: 0.5vw;
+            right: gutter-sp(20);
+            bottom: gutter-sp(20);
+            padding: gutter-sp(5);
+            mat-icon {
+                width: auto;
+                height: auto;
+            }
         }
     }
 
+    // Content Section
     &__content{
+        &__descSection{
+            // max-width: gutter-per(61);
+            .title{
+                line-height: gutter-sp(40);
+            }
+            .text {
+                text-align: justify;
+                line-height: gutter-sp(30);
+            }
+        }
         &__edit {
             &__section {
-                padding: 2vw;
+                padding: gutter-vw(2);
                 background-color: $gray;
                 border-radius: 5px;
                 &__editArticle {

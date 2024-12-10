@@ -37,33 +37,18 @@ import { HostDetailsComponent } from './host-details/host-details.component';
 export class OverviewComponent {
 
   ItemDetails: any
-  articlesList: any;
   hostDetails: any;
-  displayedColumns: string[] = ['name', 'price', 'Qty', 'tPrice'];
-  columnsToDisplay: string[] = this.displayedColumns.slice();
-  data: any[] = [];
   constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {
     this.getInitialData();
-
   }
-
 
   getInitialData() {
     this.defaultService.getJSON().subscribe(result => {
       this.ItemDetails = result?.overview;
-      this.data = result?.articles;
       this.hostDetails = result?.hostDetails[0];
     })
   };
-
-  getTotalCost() {
-    let final = 0
-    this.data.map(t => t.tPrice).map((acc, value) => {
-      final = final + acc
-    });
-    return final;
-  }
 
 }
