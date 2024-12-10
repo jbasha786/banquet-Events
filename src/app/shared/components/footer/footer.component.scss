@@ -34,15 +34,17 @@
         .subscribeBox {
             border-right: 100%;
             border: gutter-sp(1) solid $footer-email-border;
-            border-radius:gutter-sp(6);
+            border-radius: gutter-sp(6);
         }
     }
-    .email-input{
+
+    .email-input {
         background-color: $footer-logo-background;
         border: none;
-        color:  white;
+        color: white;
     }
-    .email-input:focus-visible{
+
+    .email-input:focus-visible {
         outline: none;
     }
 }
