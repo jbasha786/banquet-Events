@@ -9,10 +9,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BookingComponent } from '../booking/booking.component';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
-import { ArrangementsComponent } from '../shared/components/arrangements/arrangements.component';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 
 @Component({
@@ -20,7 +19,6 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
   standalone: true,
   imports: [CardComponent,
     CardSideContentComponent,
-    ArrangementsComponent,
     CarouselComponent,
     CorporateMeetingComponent,
     UpcomingEventsListComponent,
@@ -29,7 +27,8 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
     RouterModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatDialogModule],
+    MatDialogModule,
+    CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -39,9 +38,10 @@ export class DashboardComponent {
   eventsInfo: any;
   arrangementsInfo: any;
   experienceInfo: any;
-  momentInfo:any;
-  personalizedInfo : any;
+  momentInfo: any;
+  personalizedInfo: any;
   promotionsInfo: any;
+  shortDesc: boolean = true;
 
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -89,11 +89,15 @@ export class DashboardComponent {
       width: "80vw",
       enterAnimationDuration,
       exitAnimationDuration,
-      disableClose: true 
+      disableClose: true
     });
   }
 
   goToSignUp() {
     this.router.navigate(['signUp']);
+  }
+
+  readMore(personalInfo: any) {
+    personalInfo.showFullContent = !personalInfo.showFullContent;
   }
 }

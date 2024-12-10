@@ -118,7 +118,7 @@
 
 // Arrangements Section
 .arrangements {
-	padding: $gutter-6vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-6vw $gutter-5vw;
 
 	&__color {
 		color: $secondary-color;
@@ -129,12 +129,66 @@
 .personalized {
 	padding: $gutter-4vw $gutter-5vw;
 	background-color: $white-smoke;
-	margin: $gutter-6vw $gutter-0vw;
+	margin: $gutter-0vw $gutter-0vw $gutter-6vw;
+
+	.section {
+		width: $gutter-100per;
+		max-width: $gutter-100per;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+
+		.slider {
+			--duration: 10000ms;
+			--direction: normal;
+
+			.items {
+				display: flex;
+				width: fit-content;
+				animation-name: loop;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: var(--direction);
+				animation-duration: var(--duration);
+			}
+
+			.item {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				padding: $gutter-12sp $gutter-16sp $gutter-0sp;
+
+				.image {
+					width: $gutter-100per;
+					height: $gutter-100per;
+				}
+
+				.desc {
+					display: block;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					max-width: gutter-sp(300);
+				}
+			}
+
+			@keyframes loop {
+				0% {
+					transform: rotate(0);
+				}
+
+				100% {
+					transform: rotate(-100%);
+				}
+			}
+		}
+	}
 }
 
 //experience
 .experience {
-	padding: $gutter-6vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
 
 	&__color {
 		color: $secondary-color;
@@ -180,43 +234,53 @@
 
 //corporate-family
 .corporate-family {
-	padding: $gutter-6vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-5vw;
 }
 
 //promotions
 .promotions {
-	padding: $gutter-6vw $gutter-5vw;
-}
+	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
 
-.tag-list {
-	width: $gutter-100per;
-	max-width: $gutter-100per;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	overflow: hidden;
-}
-
-.loop-slider {
-	--duration: 7000ms;
-	--direction: normal;
-
-	.inner {
+	.tagList {
+		width: $gutter-100per;
+		max-width: $gutter-100per;
 		display: flex;
-		width: fit-content;
-		animation-name: loop;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-direction: var(--direction);
-		animation-duration: var(--duration);
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+
+		.slider {
+			--duration: 10000ms;
+			--direction: normal;
+
+			.items {
+				display: flex;
+				width: fit-content;
+				animation-name: loop;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: var(--direction);
+				animation-duration: var(--duration);
+
+				.item {
+					display: flex;
+					align-items: center;
+					padding: $gutter-12sp $gutter-16sp $gutter-0sp;
+
+				}
+			}
+
+			@keyframes loop {
+				0% {
+					transform: rotate(0);
+				}
+
+				100% {
+					transform: rotate(-100%);
+				}
+			}
+		}
 	}
-}
-
-.tag {
-	display: flex;
-	align-items: center;
-	padding: $gutter-12sp $gutter-16sp;
-
 }
 
 //member section
@@ -231,7 +295,7 @@
 .memberSection {
 	position: relative;
 	background: $white-smoke;
-	margin: $gutter-6vw $gutter-5vw;
+	margin: $gutter-0vw $gutter-5vw $gutter-6vw;
 	border-radius: $gutter-16sp;
 
 
@@ -261,7 +325,7 @@
 		img {
 			position: absolute;
 			bottom: $value-null;
-			width: $gutter-60per;
+			width: $gutter-54per;
 			right: $gutter-30per;
 
 			@media screen and (max-width:991px) {
@@ -278,19 +342,23 @@
 .moment::before {
 	position: absolute;
 	content: "";
-	background: $gradient-momentbg, url("../../assets/images/moment/moment_bg.svg");
+	background: url("../../assets/images/moment/atumn.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: $gutter-438sp;
-	top: $gutter-90sp;
+	height: $gutter-464sp;
+	top: $gutter-0sp;
 	left: $gutter-0sp;
 	width: $gutter-100per;
 }
 
 .moment {
-	padding: $gutter-6vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-5vw;
 
 	&__content {
+
+		height: $gutter-344sp;
+		justify-content: center;
+		align-items: center;
 		color: $white-smoke;
 		opacity: $opacity-halfless;
 		text-align: center;
@@ -300,7 +368,7 @@
 
 //faq
 .faq-section {
-	padding: $gutter-6vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
 }
 
 css for scroll .fade {

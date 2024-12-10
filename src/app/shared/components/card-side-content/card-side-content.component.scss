@@ -11,7 +11,7 @@
         &__title {
             line-height:$gutter-42sp;
             letter-spacing: $gutter-1sp;
-            background: linear-gradient(to right, $text-gradient-clr1, $text-gradient-clr2);
+            background: linear-gradient(to right, $text-gradient-clr1 $gutter-10per, $text-gradient-clr2 $gutter-50per);
             background-clip: text;
             color: transparent;
         }
