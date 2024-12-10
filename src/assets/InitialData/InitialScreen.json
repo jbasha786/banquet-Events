@@ -283,6 +283,20 @@
             "title": "Darts Events"
         }
     ],
+    "subbannerInfo": [
+        {
+            "desc": "BUSINESS",
+            "src": "/assets/images/exinfo/business.svg"
+        },
+        {
+            "desc": "LEISURE",
+            "src": "/assets/images/exinfo/leisure.svg"
+        },
+        {
+            "desc": "SPORTS",
+            "src": "/assets/images/exinfo/sports.svg"
+        }
+    ],
     "experience": [
         {
             "src": "/assets/images/experience/1.svg"
