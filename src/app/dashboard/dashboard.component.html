@@ -2,12 +2,12 @@
    @if(bannerInfo){
    <div class="banner__image relative d-flex flex-column justify-content-end justify-content-md-center">
       <div
-         class="banner__image__content text-center absolute bottom-0 mb-20 text-md-start md:relative ml-md-20 ml-lg-160">
+         class="banner__image__content text-center absolute bottom-0 mb-20">
          <h2 class="banner__image__content__title lh-md-50">
-            <span class="welkom fw-bold fs-24 fs-lg-58">{{bannerInfo.title}}</span><br>
-            <span class="company-title fs-24 fs-lg-58 fw-bold">{{bannerInfo.subTitle}}</span>
+            <span class="welkom fw-bold fs-24 fs-lg-30">{{bannerInfo.title}}</span><br>
+            <span class="company-title fs-24 fs-lg-50 fw-bold">{{bannerInfo.subTitle}}</span>
          </h2>
-         <p class="banner__image__content__desc fs-14 fs-lg-20 fw-500">{{bannerInfo.desc}}
+         <p class="banner__image__content__desc fs-14 fs-lg-20 fw-regular">{{bannerInfo.desc}}
          <p>
          <div>
             <button class="banner__image__content__btn fs-20 fw-bold"
@@ -29,6 +29,19 @@
       </div>
    </div>
    }
+   <div class="subbanner">
+      <div class="row g-4">
+        @for (obj of subbannerInfo; track $index) {
+         <div class="col-12 col-lg-4 ">
+        <div class="subbanner__item position-relative">
+          <img class="subbanner__image" src="{{obj.src}}" alt="subbanner Image">
+          <p class="subbanner__text position-absolute text-center fs-30 fw-bold">{{obj.desc}}</p>
+        </div>
+        </div>
+       
+        }
+      </div>
+     </div>
 </div>
 <!-- Dartts Events Start -->
 <div id="events" class="events">

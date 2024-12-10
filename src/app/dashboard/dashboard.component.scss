@@ -11,7 +11,7 @@
 
 .banner {
 	&__image {
-		min-height: calc($gutter-100vh - $gutter-100sp);
+		min-height: calc($gutter-100vh - gutter-sp(362));
 		width: $gutter-100per;
 		@include full-background("../../assets/images/logo/landingImage.svg");
 
@@ -61,12 +61,35 @@
 		}
 
 		&__downIcon {
-			bottom: $gutter-80sp;
-			right: $gutter-80sp;
+			bottom: gutter-sp(300);
+			right: gutter-sp(80);
 		}
 
 	}
 }
+.subbanner {
+	padding:gutter-sp(3) gutter-sp(5) gutter-sp(0)
+}
+ .subbanner__image {
+	width: $gutter-100per;
+	height: auto;
+	display:block;
+}
+
+.subbanner__text {
+	position: absolute; 
+	bottom: $value-null; 
+	left: $value-null; 
+	right: $value-null;
+	text-align: center; 
+	color: white; 
+	padding: gutter-sp(20) $value-null; 
+	margin: $value-null; 
+	box-sizing: border-box; 
+	letter-spacing:gutter-sp(4);
+	text-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(4) $black-overlay;
+	
+  }
 
 //main banner with content
 .events {

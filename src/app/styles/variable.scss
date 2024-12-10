@@ -24,11 +24,9 @@ $black-overlay: rgba(0, 0, 0, 0.9);
 $light-overlay: rgba(9, 9, 9, 0.1);
 $text-gradient-clr1: #AD298A;
 $text-gradient-clr2: #F17DD9;
-
 @function gutter-sp($key) {
   @return #{$key}px;
 }
-
 
 //gutters
 $gutter-0sp: 0px;
@@ -50,7 +48,9 @@ $gutter-42sp: 42px;
 $gutter-80sp: 80px;
 $gutter-90sp: 90px;
 $gutter-100sp: 100px;
+$gutter-300sp: 300px;
 $gutter-344sp: 344px;
+$gutter-362sp:362px;
 $gutter-400sp: 400px;
 $gutter-464sp: 464px;
 
@@ -72,6 +72,7 @@ $gutter-100vh: 100vh;
 //gutter-vw
 $gutter-0vw: 0vw;
 $gutter-2vw: 2vw;
+$gutter-3vw: 3vw;
 $gutter-4vw: 4vw;
 $gutter-5vw: 5vw;
 $gutter-6vw: 6vw;
