@@ -16,7 +16,7 @@
         }
 
         .vLine {
-            border-left: gutter-sp(1) solid rgb(89 98 104);
+            border-left: gutter-sp(1) solid $footer-border-line;
             margin-bottom: gutter-sp(10);
             height: gutter-sp(250);
         }
@@ -33,7 +33,7 @@
 
         .subscribeBox {
             border-right: 100%;
-            border: gutter-sp(1) solid #B8BFCA;
+            border: gutter-sp(1) solid $footer-email-border;
             border-radius:gutter-sp(6);
         }
     }
