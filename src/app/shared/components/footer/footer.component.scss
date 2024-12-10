@@ -32,7 +32,7 @@
 
 
         .subscribeBox {
-            border-right: 100%;
+            border-right: $gutter-100per;
             border: gutter-sp(1) solid $footer-email-border;
             border-radius: gutter-sp(6);
         }
