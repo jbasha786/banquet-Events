@@ -27,6 +27,12 @@ $text-gradient-clr2: #F17DD9;
 @function gutter-sp($key) {
   @return #{$key}px;
 }
+@function gutter-vw($key) {
+  @return #{$key}vw;
+}
+@function gutter-per($key) {
+  @return $key * 1%; 
+}
 
 //gutters
 $gutter-0sp: 0px;

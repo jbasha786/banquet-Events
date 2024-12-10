@@ -68,10 +68,10 @@
 	}
 }
 .subbanner {
-	padding:gutter-sp(3) gutter-sp(5) gutter-sp(0)
+	padding:gutter-vw(3) gutter-vw(5) gutter-vw(0)
 }
  .subbanner__image {
-	width: $gutter-100per;
+	width: gutter-per(100);
 	height: auto;
 	display:block;
 }
