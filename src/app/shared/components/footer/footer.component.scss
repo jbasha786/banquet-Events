@@ -1,34 +1,40 @@
 @import "../../../../app/styles/variable.scss";
 
-.footer {
-    background-color: $footer-black;
 
-    a {
-        text-decoration: none;
-    }
-    .text-color{
+.main-footer {
+
+    .text-color {
         color: $footer-text-color;
     }
 
-    .vLine {
-        border-left: 1px solid rgb(89 98 104);
-        margin-bottom: 10px;
-        height: 250px;
+    .footer {
+        background-color: $footer-black;
+        padding: 0vw 5vw;
+
+        a {
+            text-decoration: none;
+        }
+
+        .vLine {
+            border-left: 1px solid rgb(89 98 104);
+            margin-bottom: 10px;
+            height: 250px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     }
 
-    a:hover {
-        text-decoration: underline;
-    }
-}
-.footer_logo {
-    background-color: $footer-logo-background;
+    .footer_logo {
+        background-color: $footer-logo-background;
+        padding: 0vw 5vw;
 
-    .subscribeBox-text {
-        border-right: 2px solid rgb(89 98 104);
-    }
 
-    .subscribeBox {
-        border-right: 100%;
-        border: 1px solid rgb(89 98 104);
+        .subscribeBox {
+            border-right: 100%;
+            border: 1px solid #B8BFCA;
+            border-radius: 6px;
+        }
     }
 }
