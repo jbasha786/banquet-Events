@@ -130,11 +130,65 @@
 	padding: $gutter-4vw $gutter-5vw;
 	background-color: $white-smoke;
 	margin: $gutter-0vw $gutter-0vw $gutter-6vw;
+
+	.section {
+		width: $gutter-100per;
+		max-width: $gutter-100per;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+
+		.slider {
+			--duration: 10000ms;
+			--direction: normal;
+
+			.items {
+				display: flex;
+				width: fit-content;
+				animation-name: loop;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: var(--direction);
+				animation-duration: var(--duration);
+			}
+
+			.item {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				padding: $gutter-12sp $gutter-16sp $gutter-0sp;
+
+				.image {
+					width: $gutter-100per;
+					height: $gutter-100per;
+				}
+
+				.desc {
+					display: block;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					max-width: gutter-sp(300);
+				}
+			}
+
+			@keyframes loop {
+				0% {
+					transform: rotate(0);
+				}
+
+				100% {
+					transform: rotate(-100%);
+				}
+			}
+		}
+	}
 }
 
 //experience
 .experience {
-	padding:$gutter-0vw $gutter-5vw $gutter-6vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
 
 	&__color {
 		color: $secondary-color;
@@ -180,43 +234,53 @@
 
 //corporate-family
 .corporate-family {
-	padding:$gutter-0vw $gutter-5vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-5vw;
 }
 
 //promotions
 .promotions {
-	padding:$gutter-0vw $gutter-5vw $gutter-6vw;
-}
+	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
 
-.tag-list {
-	width: $gutter-100per;
-	max-width: $gutter-100per;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	overflow: hidden;
-}
-
-.loop-slider {
-	--duration: 7000ms;
-	--direction: normal;
-
-	.inner {
+	.tagList {
+		width: $gutter-100per;
+		max-width: $gutter-100per;
 		display: flex;
-		width: fit-content;
-		animation-name: loop;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-direction: var(--direction);
-		animation-duration: var(--duration);
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+
+		.slider {
+			--duration: 10000ms;
+			--direction: normal;
+
+			.items {
+				display: flex;
+				width: fit-content;
+				animation-name: loop;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: var(--direction);
+				animation-duration: var(--duration);
+
+				.item {
+					display: flex;
+					align-items: center;
+					padding: $gutter-12sp $gutter-16sp $gutter-0sp;
+
+				}
+			}
+
+			@keyframes loop {
+				0% {
+					transform: rotate(0);
+				}
+
+				100% {
+					transform: rotate(-100%);
+				}
+			}
+		}
 	}
-}
-
-.tag {
-	display: flex;
-	align-items: center;
-	padding: $gutter-12sp $gutter-16sp $gutter-0sp;
-
 }
 
 //member section
@@ -231,7 +295,7 @@
 .memberSection {
 	position: relative;
 	background: $white-smoke;
-	margin:$gutter-0vw $gutter-5vw $gutter-6vw;
+	margin: $gutter-0vw $gutter-5vw $gutter-6vw;
 	border-radius: $gutter-16sp;
 
 
@@ -288,14 +352,14 @@
 }
 
 .moment {
-	padding:$gutter-0vw $gutter-5vw $gutter-5vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-5vw;
 
 	&__content {
 
 		height: $gutter-344sp;
 		justify-content: center;
 		align-items: center;
-        color: $white-smoke;
+		color: $white-smoke;
 		opacity: $opacity-halfless;
 		text-align: center;
 		letter-spacing: $gutter-1sp;
@@ -304,7 +368,7 @@
 
 //faq
 .faq-section {
-	padding:$gutter-0vw $gutter-5vw $gutter-6vw;
+	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
 }
 
 css for scroll .fade {
