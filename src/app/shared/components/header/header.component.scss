@@ -1,39 +1,58 @@
 @import "../../../../app/styles/variable.scss";
 @import "../../../custom-css/custom-material-colors.scss";
 
-.main_line {
+.main_line, .main_line1 {
   background-color: $secondory-color;
+  position: absolute;
+  left: $value-null;
+  width: gutter-per(100);
+}
+
+.main_line {
+  top: $value-null;
+}
+
+.main_line1 {
+  bottom: $value-null;
+}
+
+.header-placeholder {
+  height: gutter-sp(92);
 }
 .offcanvas {
-  width: $gutter-70per;
-  
+  width: gutter-per(70);
+
   &-header {
     background-color: $gray;
   }
 }
 
 .navbar-toggler-icon {
-  width: $gutter-20sp;
-  height: $gutter-20sp;
+  width: gutter-sp(20);
+  height: gutter-sp(20);
 }
+
 .nav-togleuser {
   border: none;
   box-shadow: none;
 }
+
 .dot {
-  height: $gutter-8sp;
-  width: $gutter-8sp;
+  height: gutter-sp(8);
+  width: gutter-sp(8);
   background-color: $livebtn-clr;
-  border-radius: $gutter-50per;
+  border-radius: gutter-per(50);
   display: inline-block;
 }
+
 .btn-live {
   background-color: transparent;
   color: $livebtn-clr;
-  border: $gutter-2sp solid $livebtn-clr;
-  padding: $gutter-4sp $gutter-10sp;
-  border-radius: $gutter-4sp;
+  border: gutter-sp(2) solid $livebtn-clr;
+  padding: gutter-sp(4) gutter-sp(10);
+  border-radius: gutter-sp(4);
 }
+
 .gif-btn {
   background-image: url("../../../../assets/images/overview/liveevents.gif");
   background-size: cover;
