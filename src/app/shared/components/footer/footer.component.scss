@@ -16,9 +16,9 @@
         }
 
         .vLine {
-            border-left: 1px solid rgb(89 98 104);
-            margin-bottom: 10px;
-            height: 250px;
+            border-left: gutter-sp(1) solid rgb(89 98 104);
+            margin-bottom: gutter-sp(10);
+            height: gutter-sp(250);
         }
 
         a:hover {
@@ -28,13 +28,21 @@
 
     .footer_logo {
         background-color: $footer-logo-background;
-        padding: 0vw 5vw;
+        padding: 1vw 5vw;
 
 
         .subscribeBox {
             border-right: 100%;
-            border: 1px solid #B8BFCA;
-            border-radius: 6px;
+            border: gutter-sp(1) solid #B8BFCA;
+            border-radius:gutter-sp(6);
         }
+    }
+    .email-input{
+        background-color: $footer-logo-background;
+        border: none;
+        color:  white;
+    }
+    .email-input:focus-visible{
+        outline: none;
     }
 }

@@ -1,14 +1,13 @@
 <div class="main-footer">
     <div class="footer py-5">
         <div class=";">
-            <div
-                class="d-flex flex-column flex-lg-row flex-xl-row flex-md-wrap justify-content-between gap-2">
+            <div class="d-flex flex-column flex-lg-row flex-xl-row flex-md-wrap justify-content-between gap-2">
                 <!-- Render first four columns    -->
                 @for (column of footerColumns; track $index) {
                 <div class="d-flex flex-column">
                     @if(column.links){
                     <ng-container>
-                        <span class="fs-18 fw-500 text-color">{{ column.title }}</span>
+                        <span class="fs-18 fw-500 text-white">{{ column.title }}</span>
                         <hr class="w-100 text-color h-2">
                         <ul class="list-unstyled">
                             @for (link of column.links; track $index) {
@@ -23,23 +22,25 @@
                     <!-- Render fifth column with images statically -->
                 </div>
                 }
-                <div class="vLine d-none d-xl-flex">
+                <div class="vLine d-none d-lg-flex d-xl-flex">
                     <p></p>
                 </div>
                 <div>
-                    <div class="text-color">Certificates</div>
-                    <hr class="col-11 col-md-10">
-                    <div class="d-flex mb-5">
-                        <div>
-                            <img class="greenKey px-2" src="../../../../assets/images/logo/GreenKey.svg" alt="">
+                    <div class="text-white">Certificates</div>
+                    <hr class="col-11 col-md-10 text-color">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <div class="d-flex mb-3">
+                            <div>
+                                <img class="greenKey px-2" src="../../../../assets/images/logo/GreenKey.svg" alt="">
+                            </div>
+                            <div>
+                                <img class="yoin px-2" src="../../../../assets/images/logo/YOIN.svg" alt="">
+                            </div>
                         </div>
                         <div>
-                            <img class="yoin px-2" src="../../../../assets/images/logo/YOIN.svg" alt="">
+                            <img class="zoover-award mx-3"
+                                src="../../../../assets/images/logo/zoover-award-silver-2023.svg" alt="">
                         </div>
-                    </div>
-                    <div>
-                        <img class="zoover-award mx-3" src="../../../../assets/images/logo/zoover-award-silver-2023.svg"
-                            alt="">
                     </div>
                 </div>
             </div>
@@ -51,15 +52,16 @@
     <!-- Below footer -->
     <div class="footer_logo">
         <div class="">
-            <div class="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
+            <div class="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center  gap-10">
                 <div>
-                    <img class="w-150 h-100 p-10 p-md-20" src="../../../../assets/images/logo/de-bonte-wever.svg" alt="">
+                    <img class="w-150 h-100" src="../../../../assets/images/logo/de-bonte-wever.svg" alt="">
                 </div>
                 <!-- <div class="d-flex align-items-center"> -->
-                    <div class="p-3 text-color subscribeBox d-flex justify-content-between gap-100 align-items-center">
-                       <p class="m-0 fs-12"> Enter your email here...</p>
-                       <img class="" src="../../../../assets/images/logo/email_send_img.png" alt="">
-                    </div>
+                <div
+                    class="px-4 py-2 text-color subscribeBox d-flex justify-content-between gap-100 align-items-center">
+                    <input type="text" class="m-0 fs-14 p-1 email-input" placeholder="Enter your email here..." >
+                    <img class="" src="../../../../assets/images/logo/email_send_img.png" alt="">
+                </div>
                 <!-- </div> -->
                 <div class="d-flex mt-3 mt-md-0 gap-30 ">
                     <img class="h-18" src="../../../../assets/images/logo/f.png" alt="">
