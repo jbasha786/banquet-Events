@@ -9,7 +9,7 @@
 
     .footer {
         background-color: $footer-black;
-        padding: 0vw 5vw;
+        padding: gutter-vw(0) gutter-vw(5);
 
         a {
             text-decoration: none;
@@ -28,7 +28,7 @@
 
     .footer_logo {
         background-color: $footer-logo-background;
-        padding: 1vw 5vw;
+        padding: gutter-vw(1) gutter-vw(5);
 
 
         .subscribeBox {
