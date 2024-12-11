@@ -39,8 +39,8 @@ export class DashboardComponent {
   arrangementsInfo: any;
   experienceInfo: any;
   subbannerInfo: any;
-  momentInfo:any;
-  personalizedInfo : any;
+  momentInfo: any;
+  personalizedInfo: any;
   promotionsInfo: any;
   shortDesc: boolean = true;
 
@@ -88,8 +88,13 @@ export class DashboardComponent {
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
-      width: "100vw",
-      height: "100vh",
+      // width: "100vw",
+      // height: "100vh",
+      width: '100vw',
+      height: '100vh',
+      maxWidth: '100vw',
+     
+      panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true
