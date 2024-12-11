@@ -1,54 +1,77 @@
-<div class="container-fluid footer justify-content-around align-items-space-between py-4">
-    <div class="footer-item">
-        <div class=""> Quick links</div>
-        <hr>
-        <div>Mew and Upcoming events</div>
-        <div>Best Rate Guarantee</div>
-        <div>Gift Cards</div>
-    </div>
-    <div class="footer-item">
-        <div class="">Travel Professionals</div>
-        <hr>
-        <div>Partners</div>
-        <div>Travel Agents</div>
-        <div>Travel Agents</div>
-    </div>
-    <div class="footer-item">
-        <div>Legal</div>
-        <hr>
-        <div>Privacy Center</div>
-        <div>Terms and Conditions</div>
-    </div>
-    <div class="vLine pe-5 footer-item">
-        <div>Contact</div>
-        <hr>
-        <div>De Bonte Wever Assen</div>
-        <div>Stadsbroek17</div>
-        <div>9405 BK ASSEN</div>
-        <div>+31 (0)592-303777</div>
-        <div>reserveringen&#64;debontewever.nl</div>
-        <div>KvK: 04053125</div>
-    </div>
-    <div class="px-0 align-content-center footer-item">
-        <div>Certificates</div>
-        <hr>
-        <div class="d-flex mb-5">
-            <div>
-                <img class="greenKey px-2" src="../../../../assets/images/logo/GreenKey.svg" alt="">
-            </div>
-            <div>
-                <img class="yoin px-2" src="../../../../assets/images/logo/YOIN.svg" alt="">
+<div class="main-footer">
+    <div class="footer py-5">
+        <div class="=">
+            <div class="d-flex flex-column flex-lg-row flex-xl-row flex-md-wrap justify-content-between gap-2">
+                <!-- Render first four columns    -->
+                @for (column of footerColumns; track $index) {
+                <div class="d-flex flex-column">
+                    @if(column.links){
+                    <ng-container>
+                        <span class="fs-18 fw-500 text-white">{{ column.title }}</span>
+                        <hr class="w-100 text-color h-2">
+                        <ul class="list-unstyled">
+                            @for (link of column.links; track $index) {
+                            <li class="py-1 fs-14">
+                                <a href="#" class="text-color">{{ link }}</a>
+                            </li>
+                            }
+                        </ul>
+                    </ng-container>
+                    }
+
+                    <!-- Render fifth column with images statically -->
+                </div>
+                }
+                <div class="vLine d-none d-lg-flex d-xl-flex">
+                </div>
+                <div>
+                    <div class="text-white">Certificates</div>
+                    <hr class="col-11 col-md-10 text-color">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <div class="d-flex mb-3">
+                            <div>
+                                <img class="greenKey px-2" src="../../../../assets/images/logo/GreenKey.svg" alt="">
+                            </div>
+                            <div>
+                                <img class="yoin px-2" src="../../../../assets/images/logo/YOIN.svg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <img class="zoover-award mx-3"
+                                src="../../../../assets/images/logo/zoover-award-silver-2023.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
-            <img class="zoover-award mx-3" src="../../../../assets/images/logo/zoover-award-silver-2023.svg" alt="">
+
         </div>
-        <div class="subscribeBox">
-            <div class="subscribeBox-text fs-9">
-                Enter your email id to subscribe
-            </div>
-            <div class="" style="width: 20%;">
-                <img class="ps-1" src="../../../../assets/images/logo/arrow-right-solid.svg" alt="">
+    </div>
+    <!-- Below footer -->
+    <div class="footer_logo">
+        <div class="">
+            <div
+                class="d-flex flex-column-reverse flex-lg-row justify-content-between align-items-center gap-30 gap-lg-0">
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-start justify-content-center">
+                    <img class="w-150 h-100" src="../../../../assets/images/logo/de-bonte-wever.svg" alt="">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 px-4 py-2 text-color subscribeBox d-flex justify-content-between">
+                    <div>
+                        <input type="text" class="m-0 fs-14 p-1 email-input w-lg-260 "
+                            placeholder="Enter your email here...">
+                    </div>
+                    <div>
+                        <img class="w-18 h-18" src="../../../../assets/images/logo/email_send_img.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col-12 col-lg-4 text-end mt-3 mt-md-0 d-flex justify-content-lg-end justify-content-center gap-30 p-3 p-lg-1">
+                    <img class="h-18" src="../../../../assets/images/logo/facebook.png" alt="">
+                    <img class="h-18 " src="../../../../assets/images/logo/instagram.png" alt="">
+                    <img class="h-18" src="../../../../assets/images/logo/linkedin.png" alt="">
+
+                </div>
             </div>
         </div>
     </div>
