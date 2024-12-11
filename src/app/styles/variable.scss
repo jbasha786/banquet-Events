@@ -24,6 +24,10 @@ $black-overlay: rgba(0, 0, 0, 0.9);
 $light-overlay: rgba(9, 9, 9, 0.1);
 $text-gradient-clr1: #AD298A;
 $text-gradient-clr2: #F17DD9;
+$rev-gradient-clr1: #8F1CB8;
+$rev-gradient-clr2: #C82992;
+$input-border:#C7C7C7;
+
 @function gutter-sp($key) {
   @return #{$key}px;
 }

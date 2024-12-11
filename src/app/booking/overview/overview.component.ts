@@ -38,6 +38,7 @@ export class OverviewComponent {
 
   ItemDetails: any
   hostDetails: any;
+  ratingSection: string[] = ['Overall rating', 'Cleanlines', 'Accuracy', 'Check-in', 'Communication', 'Location', 'Value']
   constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {

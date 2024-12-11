@@ -14,36 +14,42 @@
     <!-- Backbutton & title Section End -->
 
     <!-- Image Section Start -->
-    <div class="d-flex flex-lg-row flex-column overview__imageSection position-relative gap-27 w-100">
-        <div class="">
+    <div class="row overview__imageSection position-relative w-100 gap-4 gap-sm-4 gap-lg-0">
+        <div class="col-12 col-lg-8">
             <img src="{{ItemDetails?.image}}" alt="Overview Image" width="100%">
         </div>
-        <div class="d-flex gap-27 flex-sm-column flex-row">
-            <div><img src="{{ItemDetails?.image1}}" alt="Drink Area" width="100%"></div>
-            <div><img src="{{ItemDetails?.image2}}" alt="Hall" width="100%"></div>
-            <div class="d-flex position-absolute align-items-center overview__imageSection__viewAll">
-                <mat-icon fontIcon="image" class="fs-12 fs-lg-16"></mat-icon>
-                <span class="fs-12 fs-lg-16">View all photos</span>
+        <div class="col-12 col-lg-4">
+            <div class="row subImages gap-lg-4">
+                <div class="col-6 col-lg-12"><img src="{{ItemDetails?.image1}}" alt="Drink Area" width="100%"></div>
+                <div class="col-6 col-lg-12"><img src="{{ItemDetails?.image2}}" alt="Hall" width="100%"></div>
+                <div class="d-flex position-absolute align-items-center overview__imageSection__viewAll">
+                    <mat-icon fontIcon="image" class="fs-12 fs-lg-16"></mat-icon>
+                    <span class="fs-12 fs-lg-16">View all photos</span>
+                </div>
             </div>
         </div>
     </div>
     <!-- Image Section End -->
 
-    <div class="d-flex flex-md-row flex-column overview__content gap-27">
-        <div class="overview__content__descSection">
+    <!-- Description Section Start -->
+    <div class="row overview__content w-100 gap-4 gap-sm-4 gap-lg-0">
+        <div class="col-12 col-lg-8 overview__content__descSection">
             <p class="title fs-14 fs-lg-26">{{ItemDetails?.deposite}}</p>
             <p class="text">{{ItemDetails?.depositeDesc}}</p>
             <app-amenities></app-amenities>
         </div>
-
-        <div class="overview__content__edit w-100">
+        <div class="col-12 col-lg-4 overview__content__edit">
             <div class="overview__content__edit__section">
-                <div>
-                    <mat-form-field class="w-100">
-                        <mat-label>Guest</mat-label>
-                        <span matPrefix class="cursor"><mat-icon fontIcon="perm_identity"></mat-icon></span>
-                        <input type="text" matInput>
-                    </mat-form-field>
+                <div class="input-group mb-3">
+                    <!-- <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/icons/user.svg" alt="user"></span> -->
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="guestCount" placeholder="Guests">
+                        <label for="guestCount">Guests</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="time" class="form-control" id="time" placeholder="Duration">
+                    <label for="time">Duration</label>
                 </div>
                 <div>
                     <mat-form-field class="w-100">
@@ -52,39 +58,56 @@
                             <input matStartDate placeholder="Start date">
                             <input matEndDate placeholder="End date">
                         </mat-date-range-input>
-                        <mat-datepicker-toggle matIconSuffix [for]="range"></mat-datepicker-toggle>
+                        <mat-datepicker-toggle matIconPrefix [for]="range"></mat-datepicker-toggle>
                         <mat-date-range-picker #range></mat-date-range-picker>
                     </mat-form-field>
                 </div>
                 <div>
-                    <mat-form-field class="w-100">
+                    <mat-form-field class="w-100" id="timeField">
                         <mat-label>Duration</mat-label>
+                        <span matPrefix class="cursor"><img class="timeImage"
+                                src="../../../assets/images/icons/time.svg" alt="Time Icon"></span>
                         <input matInput [ngxMatTimepicker]="eTime" />
                         <ngx-mat-timepicker #eTime></ngx-mat-timepicker>
                     </mat-form-field>
                 </div>
-                <div>
-                    <div class="w-100 overview__content__edit__section__editArticle text-center fw-bold">Edit Articles
+                <div class="d-flex gap-3 w-100">
+                    <div class="fs-14 fs-lg-18 overview__content__edit__section__editArticle text-center">Add Articles
+                    </div>
+                    <div class="fs-14 fs-lg-18 overview__content__edit__section__editArticle text-center">Choose Menu
                     </div>
                 </div>
-                <div class="fv-3">€ 4200.00</div>
-                <p>Excluding taxes and fees</p>
-                <div class="overview__content__edit__section__reverse text-center"> Reserve</div>
+                <div class="fs-20 fs-lg-30 pt-20">€ 4200.00</div>
+                <p class="fs-12">Excluding taxes and fees</p>
+                <div class="fs-14 fs-lg-20 mt-20 overview__content__edit__section__reverse text-center"> Reserve</div>
             </div>
+        </div>
+    </div>
+    <!-- Description Setion End -->
+
+    <div class="rating">
+        <h4 class="text-center fs-16 fs-lg-30 rating__title">Guest favourite</h4>
+        <p class="text-center rating__desc">One of the most loved homes on Airbnb based on rating, reviews and
+            reliability</p>
+        <div class="rating__sections d-flex justify-content-between">
+            <ng-container *ngFor="let rat of ratingSection">
+                <div class="rating__sections__item">{{rat}}</div>
+            </ng-container>
         </div>
     </div>
 
     <div class="mt-40">
+        <h3 class="fs-20 fs-lg-30">Things to know</h3>
         <app-things-to-know></app-things-to-know>
     </div>
 
     <div class="mt-20 mb-20">
-        <h3 class="fv-2 mb-20">Where you’ll be</h3>
+        <h3 class="fs-20 fs-lg-30">Where you’ll be</h3>
         <app-google-map></app-google-map>
     </div>
 
     <div class="mt-20 mb-20">
-        <h2 class="mb-20 fv-2">Meet your host</h2>
+        <h2 class="fs-20 fs-lg-30">Meet your host</h2>
         <app-host-details [hostInfo]="hostDetails"></app-host-details>
     </div>
 </div>

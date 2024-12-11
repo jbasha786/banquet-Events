@@ -2,7 +2,7 @@
 @import "../../custom-css/custom-material-colors.scss";
 
 .overview {
-    
+
     // Back button
     &__back {
         border-radius: gutter-vw(50);
@@ -16,11 +16,16 @@
     // Image section
     &__imageSection {
         padding: gutter-vw(1) 0;
-            img {
-                height: gutter-per(100);
-                object-fit: cover;
-                border-radius: gutter-sp(10);
-            }
+
+        img {
+            height: gutter-per(100);
+            object-fit: cover;
+            border-radius: gutter-sp(10);
+        }
+
+        .subImages {
+            height: gutter-per(100);
+        }
 
         &__viewAll {
             background: $white;
@@ -29,6 +34,7 @@
             right: gutter-sp(20);
             bottom: gutter-sp(20);
             padding: gutter-sp(5);
+
             mat-icon {
                 width: auto;
                 height: auto;
@@ -37,36 +43,94 @@
     }
 
     // Content Section
-    &__content{
-        &__descSection{
+    &__content {
+        &__descSection {
+
             // max-width: gutter-per(61);
-            .title{
+            .title {
                 line-height: gutter-sp(40);
             }
+
             .text {
                 text-align: justify;
                 line-height: gutter-sp(30);
             }
         }
+
         &__edit {
             &__section {
-                padding: gutter-vw(2);
+                padding: gutter-sp(10);
                 background-color: $gray;
-                border-radius: 5px;
+                border-radius: gutter-sp(5);
+
                 &__editArticle {
-                    padding: 0.5vw;
-                    font-size: 2vw;
+                    padding: gutter-sp(5);
                     color: $secondory-color;
-                    border-radius: 5px;
-                    border: 1px solid $secondory-color;
+                    border-radius: gutter-sp(5);
+                    border: gutter-sp(1) solid $secondory-color;
+                    width: gutter-per(100);
                 }
+
                 &__reverse {
-                    background: linear-gradient(90.69deg, #8F1CB8 -0.15%, #C82992 100.99%);
-                    font-size: 2vw;
-                    border-radius: 5px;
-                    padding: 0.5vw;
+                    background: linear-gradient(90.69deg, $rev-gradient-clr1 -0.15%, $rev-gradient-clr2 100.99%);
+                    border-radius: gutter-sp(5);
+                    padding: gutter-sp(5);
                     color: $white;
                 }
+
+                .form-control {
+                    min-height: gutter-sp(40);
+                    padding: gutter-sp(3) gutter-sp(10);
+                    height: gutter-sp(40);
+                }
+
+                .form-control:focus,
+                .form-control:focus-visible {
+                    background-color: $white;
+                    border-color: $input-border;
+                    outline: 0;
+                    box-shadow: none;
+                }
+
+                label {
+                    padding: gutter-sp(10);
+                    color: $secondary-color;
+                    font-size: gutter-vw(1.2);
+                }
+
+                label::after {
+                    background-color: transparent;
+                }
+
+                .timeImage {
+                    width: gutter-per(60);
+                }
+
+                .userImage {
+                    width: gutter-per(60);
+                }
+            }
+        }
+    }
+
+    // Rationg Section
+    .rating {
+        &__title {}
+
+        &__desc {
+            line-height: gutter-sp(25);
+            margin: 0 auto;
+            max-width: gutter-sp(270);
+        }
+
+        &__sections {
+            padding: gutter-vw(3);
+
+            &__item {
+                border-right: 1px solid;
+            }
+            &__item:last-child {
+                border-right: none;
             }
         }
     }
