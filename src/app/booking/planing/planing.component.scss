@@ -13,6 +13,7 @@
             }
         }
     }
+
     &__type {
         padding: 3vw;
 
@@ -21,11 +22,13 @@
         }
 
         &__section {
-            border: 1px solid $quick-silver;
-            border-radius: 5px;
-            align-items: center;
+            border: 1px solid $border-silver;
+            border-radius: 10px;
             cursor: pointer;
         }
     }
 
+    ::ng-deep .mat-mdc-list-option .mdc-radio {
+        display: none !important;
+    }
 }
