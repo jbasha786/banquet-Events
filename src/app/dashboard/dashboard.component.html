@@ -1,207 +1,286 @@
 <div class="banner" id="landing_page" data-speed="8">
-   @if(bannerInfo){
-   <div class="banner__image relative d-flex flex-column justify-content-end justify-content-md-center">
-      <div
-         class="banner__image__content text-center absolute bottom-0 mb-20 text-md-start md:relative ml-md-20 ml-lg-160">
-         <h2 class="banner__image__content__title lh-md-50">
-            <span class="welkom fw-bold fs-24 fs-lg-58">{{bannerInfo.title}}</span><br>
-            <span class="company-title fs-24 fs-lg-58 fw-bold">{{bannerInfo.subTitle}}</span>
-         </h2>
-         <p class="banner__image__content__desc fs-14 fs-lg-20 fw-500">{{bannerInfo.desc}}
-         <p>
-         <div>
-            <button class="banner__image__content__btn fs-20 fw-bold" id="booknow_btn"
-               (click)="continueBooking('300ms', '300ms')">{{bannerInfo.buttonName}}</button>
-         </div>
+  @if(bannerInfo){
+  <div
+    class="banner__image relative d-flex flex-column justify-content-end justify-content-md-center"
+  >
+    <div class="banner__image__content text-center absolute bottom-0 mb-20">
+      <h2 class="banner__image__content__title lh-md-50">
+        <span class="welkom fw-bold fs-24 fs-lg-30">{{ bannerInfo.title }}</span
+        ><br />
+        <span class="company-title fs-24 fs-lg-50 fw-bold">{{
+          bannerInfo.subTitle
+        }}</span>
+      </h2>
+      <p class="banner__image__content__desc fs-14 fs-lg-20 fw-regular">
+        {{ bannerInfo.desc }}
+      </p>
+      <p></p>
+      <div>
+        <button
+          class="banner__image__content__btn fs-20 fw-bold"
+          (click)="continueBooking('300ms', '300ms')"
+        >
+          {{ bannerInfo.buttonName }}
+        </button>
       </div>
-      <div class="banner__image__downIcon position-absolute d-flex justify-content-end align-items-center w-100 transform  
-          d-none d-md-flex" (click)="scrollToSection('events')">
-         <div class="">
-            <div class="mouse">
-               <div class="wheel"></div>
-            </div>
-            <div>
-               <span class="m_scroll_arrows unu"></span>
-               <span class="m_scroll_arrows doi"></span>
-               <span class="m_scroll_arrows trei"></span>
-            </div>
-         </div>
+    </div>
+    <div
+      class="banner__image__downIcon position-absolute d-flex justify-content-end align-items-center w-100 transform d-none d-md-flex"
+      (click)="scrollToSection('events')"
+    >
+      <div class="">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div>
+          <span class="m_scroll_arrows unu"></span>
+          <span class="m_scroll_arrows doi"></span>
+          <span class="m_scroll_arrows trei"></span>
+        </div>
       </div>
-   </div>
-   }
+    </div>
+  </div>
+  }
+  <div class="subbanner">
+    <div class="row g-4">
+      @for (obj of subbannerInfo; track $index) {
+      <div class="col-12 col-lg-4">
+        <div class="subbanner__item position-relative">
+          <img
+            class="subbanner__image"
+            src="{{ obj.src }}"
+            alt="subbanner Image"
+          />
+          <p
+            class="subbanner__text position-absolute text-center fs-30 fw-bold"
+          >
+            {{ obj.desc }}
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
 </div>
 <!-- Dartts Events Start -->
 <div id="events" class="events">
-   <app-card-side-content [dataContext]="eventsInfo"></app-card-side-content>
+  <app-card-side-content [dataContext]="eventsInfo"></app-card-side-content>
 </div>
 <!-- Dartts Events Start -->
 <!-- Our Arrangements section Start -->
 <div class="arrangements">
-   <p class="pb-24 fs-24 lh-24 m-0 fw-medium">Our <span class="arrangements__color">Arrangements</span></p>
-   <div class="row g-6">
-      @for( obj of arrangementsInfo; track $index){
-      <div class="col-12 col-lg-4">
-         <div class="card no-border gap-26">
-            <img src={{obj.src}} alt="Card Image" class="card-image">
-            <div class="card-content d-flex flex-column gap-20">
-               <p class="card-heading fs-18 fw-medium mb-0">{{obj.name}}</p>
-               <p class="card-text fs-14 lh-34 mb-0">{{obj.desc}}</p>
-               <strong><button class="card-button readmore-btn fs-14 fw-medium p-0">{{obj.button}}</button></strong>
-            </div>
-         </div>
+  <p class="pb-24 fs-24 lh-24 m-0 fw-medium">
+    Our <span class="arrangements__color">Arrangements</span>
+  </p>
+  <div class="row g-6">
+    @for( obj of arrangementsInfo; track $index){
+    <div class="col-12 col-lg-4">
+      <div class="card no-border gap-26">
+        <img src="{{ obj.src }}" alt="Card Image" class="card-image" />
+        <div class="card-content d-flex flex-column gap-20">
+          <p class="card-heading fs-18 fw-medium mb-0">{{ obj.name }}</p>
+          <p class="card-text fs-14 lh-34 mb-0">{{ obj.desc }}</p>
+          <strong
+            ><button class="card-button readmore-btn fs-14 fw-medium p-0">
+              {{ obj.button }}
+            </button></strong
+          >
+        </div>
       </div>
-      }
-   </div>
+    </div>
+    }
+  </div>
 </div>
 <!-- Our Arrangements section End -->
 <!--personalized Start  -->
 <div class="personalized">
-   <div class="Personalized-content">
-      <p class="pb-24 fs-24 lh-30 m-0 fw-medium">Create your own <span class="arrangements__color">personalized</span>
-         ideal model.</p>
-      <p class="fs-16 lh-24 pb-40">Experience the change of seasons from a remote cabin, spacious view models villa or
-         overlooking with your
-         loved persons.
-      </p>
-      <div class="section">
-         <div class="slider">
-            <div class="items">
-               @for(carousel of personalizedInfo; track $index){
-               <div class="item no-border gap-26">
-                  <div class="h-300 w-300">
-                     <img src={{carousel.src}} [alt]="carousel.name" class="image">
-                  </div>
-                  <div class="d-flex flex-column gap-20">
-                     <p class="fs-18 fw-500 mb-0">{{carousel.name}}</p>
-                     <ng-container *ngIf="!carousel.showFullContent">
-                        <p class="desc fs-14 lh-34 mb-0">{{carousel.shortDesc}}</p>
-                        <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(carousel)">Read more -></p>
-                     </ng-container>
-                     <ng-container *ngIf="carousel.showFullContent">
-                        <p class="fs-14 lh-34 mb-0">{{carousel.fulldDesc}}</p>
-                        <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(carousel)">Read less -></p>
-                     </ng-container>
-                  </div>
-               </div>
-               }
-
-               @for(personal of personalizedInfo; track $index){
-               <div class="item no-border gap-26">
-                  <div class="h-300 w-300">
-                     <img src={{personal.src}} [alt]="personal.name" class="image">
-                  </div>
-                  <div class="d-flex flex-column gap-20">
-                     <p class="fs-18 fw-500 mb-0">{{personal.name}}</p>
-                     <ng-container *ngIf="!personal.showFullContent">
-                        <p class="desc fs-14 lh-34 mb-0">{{personal.shortDesc}}</p>
-                        <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(personal)">Read more -></p>
-                     </ng-container>
-                     <ng-container *ngIf="personal.showFullContent">
-                        <p class="fs-14 lh-34 mb-0">{{personal.fulldDesc}}</p>
-                        <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(personal)">Read less -></p>
-                     </ng-container>
-                  </div>
-               </div>
-               }
+  <div class="Personalized-content">
+    <p class="pb-24 fs-24 lh-30 m-0 fw-medium">
+      Create your own
+      <span class="arrangements__color">personalized</span> ideal model.
+    </p>
+    <p class="fs-16 lh-24 pb-40">
+      Experience the change of seasons from a remote cabin, spacious view models
+      villa or overlooking with your loved persons.
+    </p>
+    <div class="section">
+      <div class="slider">
+        <div class="items">
+          @for(carousel of personalizedInfo; track $index){
+          <div class="item no-border gap-26">
+            <div class="h-300 w-300">
+              <img
+                src="{{ carousel.src }}"
+                [alt]="carousel.name"
+                class="image"
+              />
             </div>
-         </div>
-
+            <div class="d-flex flex-column gap-20">
+              <p class="fs-18 fw-500 mb-0">{{ carousel.name }}</p>
+              <ng-container *ngIf="!carousel.showFullContent">
+                <p class="desc fs-14 lh-34 mb-0">{{ carousel.shortDesc }}</p>
+                <p
+                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
+                  (click)="readMore(carousel)"
+                >
+                  Read more ->
+                </p>
+              </ng-container>
+              <ng-container *ngIf="carousel.showFullContent">
+                <p class="fs-14 lh-34 mb-0">{{ carousel.fulldDesc }}</p>
+                <p
+                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
+                  (click)="readMore(carousel)"
+                >
+                  Read less ->
+                </p>
+              </ng-container>
+            </div>
+          </div>
+          } @for(personal of personalizedInfo; track $index){
+          <div class="item no-border gap-26">
+            <div class="h-300 w-300">
+              <img
+                src="{{ personal.src }}"
+                [alt]="personal.name"
+                class="image"
+              />
+            </div>
+            <div class="d-flex flex-column gap-20">
+              <p class="fs-18 fw-500 mb-0">{{ personal.name }}</p>
+              <ng-container *ngIf="!personal.showFullContent">
+                <p class="desc fs-14 lh-34 mb-0">{{ personal.shortDesc }}</p>
+                <p
+                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
+                  (click)="readMore(personal)"
+                >
+                  Read more ->
+                </p>
+              </ng-container>
+              <ng-container *ngIf="personal.showFullContent">
+                <p class="fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
+                <p
+                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
+                  (click)="readMore(personal)"
+                >
+                  Read less ->
+                </p>
+              </ng-container>
+            </div>
+          </div>
+          }
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
 </div>
 <!-- personalized End -->
 <!-- Experience Section Start -->
 <div class="experience">
-   <p class="text-center fw-medium fs-33 fs-lg-40">Experience the best autumn holiday at <span
-         class="experience__color">De Bonte
-         Wever</span>
-   </p>
-   <p class="text-center m-0 pb-1 fs-12 fs-lg-15">A refreshing walk through the forest or a breath of fresh air on your
-      bike through
-      the
-      beautiful nature of Drenthe.
-   </p>
-   <p class="text-center mb-0 pb-28 fs-12 fs-lg-15">Discover exclusive offers at over your ideas and passion</p>
-   <div class="experience__section row">
-      @for (obj of experienceInfo; track $index) {
-      <div class="col-6 col-md-4 col-lg-2 p-0 experience__item">
-         <img class="experience__image" src="{{obj.src}}" alt="Experience Image">
-         <div class="experience__overlay">
-            <p class="experience__text fs-14 fw-bold">Your Text Here</p>
-         </div>
+  <p class="text-center fw-medium fs-33 fs-lg-40">
+    Experience the best autumn holiday at
+    <span class="experience__color">De Bonte Wever</span>
+  </p>
+  <p class="text-center m-0 pb-1 fs-12 fs-lg-15">
+    A refreshing walk through the forest or a breath of fresh air on your bike
+    through the beautiful nature of Drenthe.
+  </p>
+  <p class="text-center mb-0 pb-28 fs-12 fs-lg-15">
+    Discover exclusive offers at over your ideas and passion
+  </p>
+  <div class="experience__section row">
+    @for (obj of experienceInfo; track $index) {
+    <div class="col-6 col-md-4 col-lg-2 p-0 experience__item">
+      <img
+        class="experience__image"
+        src="{{ obj.src }}"
+        alt="Experience Image"
+      />
+      <div class="experience__overlay">
+        <p class="experience__text fs-14 fw-bold">Your Text Here</p>
       </div>
-      }
-   </div>
+    </div>
+    }
+  </div>
 </div>
 <!-- Experience Section end -->
 <!-- corporate section Start -->
 <div class="corporate-family d-flex flex-column gap-60">
-   <app-corporate-meeting></app-corporate-meeting>
+  <app-corporate-meeting></app-corporate-meeting>
 </div>
 <!-- corporate section End -->
 <!-- promotions section Start -->
 <div class="promotions">
-   <p class="fs-24 fw-medium">De Bonte Wever Deals & Promotions</p>
-   <p class="fgs-14">Exclusive savings for your next stay.</p>
-   <div class="">
-      <div class="tagList">
-         <div class="slider">
-            <div class="items">
-               @for(image of promotionsInfo; track $index){
-               <a class="item" href="{{image.href}}">
-                  <img src="{{image.src}}" alt="">
-               </a>
-               }
-
-               @for(image of promotionsInfo; track $index){
-               <a class="item" href="{{image.href}}">
-                  <img src="{{image.src}}" alt="">
-               </a>
-               }
-            </div>
-         </div>
+  <p class="fs-24 fw-medium">De Bonte Wever Deals & Promotions</p>
+  <p class="fgs-14">Exclusive savings for your next stay.</p>
+  <div class="">
+    <div class="tagList">
+      <div class="slider">
+        <div class="items">
+          @for(image of promotionsInfo; track $index){
+          <a class="item" href="{{ image.href }}">
+            <img src="{{ image.src }}" alt="" />
+          </a>
+          } @for(image of promotionsInfo; track $index){
+          <a class="item" href="{{ image.href }}">
+            <img src="{{ image.src }}" alt="" />
+          </a>
+          }
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
 </div>
 <!-- promotions section End -->
 <!-- Member section start -->
 <div class="memberSection">
-   <div class="row">
-      <div class="col-12 col-lg-6  join-text">
-         <p class="mb-0 fs-28 fw-bold">Become a <span class="memberSection__color">De Bonte Wever</span></p>
-         <p class="mb-3 fs-28 fw-bold">Member Today</p>
-         <p class="memberSection__desc mb-3 fs-13">Not a member yet? Join now to receive member exclusive rates, earn
-            points
-            towards free nights and many more.
-         </p>
-         <button class="memberSection__btn">join for free <span class="ml-5">-></span></button>
-      </div>
-      <div class="col-12 col-lg-6 memberSection__image">
-         <img src="/assets/images/member/member.svg" alt="member">
-      </div>
-   </div>
+  <div class="row">
+    <div class="col-12 col-lg-6 join-text">
+      <p class="mb-0 fs-28 fw-bold">
+        Become a <span class="memberSection__color">De Bonte Wever</span>
+      </p>
+      <p class="mb-3 fs-28 fw-bold">Member Today</p>
+      <p class="memberSection__desc mb-3 fs-13">
+        Not a member yet? Join now to receive member exclusive rates, earn
+        points towards free nights and many more.
+      </p>
+      <button class="memberSection__btn">
+        join for free <span class="ml-5">-></span>
+      </button>
+    </div>
+    <div class="col-12 col-lg-6 memberSection__image">
+      <img src="/assets/images/member/member.svg" alt="member" />
+    </div>
+  </div>
 </div>
 <!-- Member section End -->
 <!-- moment Section Start -->
 <div class="moment position-relative">
-   <div class="moment__content d-flex flex-column fw-bold gap-6 gap-lg-32">
-      <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">Step into Wonders</p>
-      <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">And experience a world where every</p>
-      <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">moment is magical!</p>
-   </div>
-   <div class="moment__section">
-      <div class="row g-4">
-         @for( obj of momentInfo; track $index){
-         <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card">
-            <app-card picture="{{obj.src}}" title="{{obj.name}}" desc="{{obj.desc}}" btn="{{obj.button}}"></app-card>
-         </div>
-         }
+  <div class="moment__content d-flex flex-column fw-bold gap-6 gap-lg-32">
+    <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">Step into Wonders</p>
+    <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">
+      And experience a world where every
+    </p>
+    <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">moment is magical!</p>
+  </div>
+  <div class="moment__section">
+    <div class="row g-4">
+      @for( obj of momentInfo; track $index){
+      <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card">
+        <app-card
+          picture="{{ obj.src }}"
+          title="{{ obj.name }}"
+          desc="{{ obj.desc }}"
+          btn="{{ obj.button }}"
+        ></app-card>
       </div>
-   </div>
+      }
+    </div>
+  </div>
 </div>
 <!-- moment Section Start -->
 <!-- FAQ section Start  -->
 <div class="faq-section">
-   <app-faq></app-faq>
+  <app-faq></app-faq>
 </div>
 <!-- FAQ section End  -->
