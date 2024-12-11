@@ -38,8 +38,9 @@ export class DashboardComponent {
   eventsInfo: any;
   arrangementsInfo: any;
   experienceInfo: any;
-  momentInfo: any;
-  personalizedInfo: any;
+  subbannerInfo: any;
+  momentInfo:any;
+  personalizedInfo : any;
   promotionsInfo: any;
   shortDesc: boolean = true;
 
@@ -60,6 +61,7 @@ export class DashboardComponent {
       this.eventsInfo = result?.events;
       this.arrangementsInfo = result?.arrangements;
       this.experienceInfo = result?.experience;
+      this.subbannerInfo = result?.subbannerInfo;
       this.momentInfo = result?.moment;
       this.personalizedInfo = result?.personalized;
       this.promotionsInfo = result?.promotions;
