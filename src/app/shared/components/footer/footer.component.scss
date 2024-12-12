@@ -40,10 +40,20 @@
 
     .email-input {
         background-color: $footer-logo-background;
-        border: none;
-        color: white;
+        border: gutter-sp(1) solid  $footer-logo-background;
+        border-radius: gutter-sp(5);
+        color: $white-smoke;
     }
 
+    .input-with-image {
+        border: gutter-sp(1) solid $footer-email-border ;
+        border-radius: gutter-sp(5);
+    }
+
+    .input-img {
+        border: none;
+        background-color: $footer-logo-background;
+    }
     .email-input:focus-visible {
         outline: none;
     }
