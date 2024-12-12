@@ -2,7 +2,7 @@
 @import "../../custom-css/custom-material-colors.scss";
 
 .overview {
-
+    padding-top: gutter-vw(3);
     // Back button
     &__back {
         border-radius: gutter-vw(50);
@@ -78,14 +78,39 @@
                     color: $white;
                 }
 
-                .form-control {
-                    min-height: gutter-sp(40);
-                    padding: gutter-sp(3) gutter-sp(10);
-                    height: gutter-sp(40);
+                .dateSection {
+                    background: $white;
+                    border-radius: gutter-rem(0.375);
+                    .spacebar {
+                        color: $black;
+                        background: $black;
+                    }
+    
+                    .line {
+                        height: gutter-sp(1);
+                        background-color: $black;
+                        width: gutter-sp(15);
+                        margin: gutter-sp(0);
+                    }
+                }
+                
+
+                .basic-icon {
+                    background-color: $white !important;
+                    border: gutter-sp(1) solid $white !important;
+                    padding: gutter-rem(0.375) gutter-rem(0.25);
+                }
+
+                .form-control,
+                .form-select {
+                    padding: gutter-rem(1) gutter-rem(0.25);
+                    border: gutter-sp(1) solid $white !important;
                 }
 
                 .form-control:focus,
-                .form-control:focus-visible {
+                .form-control:focus-visible,
+                .form-select:focus,
+                .form-select:focus-visible {
                     background-color: $white;
                     border-color: $input-border;
                     outline: 0;
@@ -93,9 +118,8 @@
                 }
 
                 label {
-                    padding: gutter-sp(10);
+                    padding: gutter-rem(1) gutter-rem(0.25);
                     color: $secondary-color;
-                    font-size: gutter-vw(1.2);
                 }
 
                 label::after {
@@ -115,7 +139,7 @@
 
     // Rationg Section
     .rating {
-        &__title {}
+        padding: gutter-vw(3) gutter-vw(0);
 
         &__desc {
             line-height: gutter-sp(25);
@@ -124,7 +148,7 @@
         }
 
         &__sections {
-            padding: gutter-vw(3);
+            padding-top: gutter-vw(3);
 
             &__item {
                 border-left: gutter-sp(1) solid $input-border;
@@ -134,6 +158,10 @@
                 .progress {
                     width: gutter-per(100);
                     height: gutter-sp(5);
+
+                    .progress-bar {
+                        background-color: $black;
+                    }
                 }
 
                 .icons {
@@ -142,6 +170,7 @@
                     bottom: gutter-sp(10);
                 }
             }
+
             &__item:first-child {
                 border-left: none;
             }

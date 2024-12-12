@@ -41,35 +41,45 @@
         <div class="col-12 col-lg-4 overview__content__edit">
             <div class="overview__content__edit__section">
                 <div class="input-group mb-3">
-                    <!-- <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/icons/user.svg" alt="user"></span> -->
+                    <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/user.svg"
+                            alt="user" width="20"></span>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="guestCount" placeholder="Guests">
+                        <input type="email" class="form-control" id="guestCount" placeholder="Guests" value="40 Adults, 12 Children">
                         <label for="guestCount">Guests</label>
                     </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="time" class="form-control" id="time" placeholder="Duration">
-                    <label for="time">Duration</label>
+                <div class="dateSection">
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="input-group" id="datepicker">
+                            <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/calender.svg" alt="calender" width="20"></span>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
+                                <label for="guestCount">Check-in</label>
+                            </div>
+                        </div>
+                        <span class="spacebar"><p class="line"></p></span>
+                        <div class="input-group" id="datepicker">
+                            <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/calender.svg" alt="calender" width="20"></span>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
+                                <label for="guestCount">Check-out</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <mat-form-field class="w-100">
-                        <mat-label>Enter a date range</mat-label>
-                        <mat-date-range-input [rangePicker]="range">
-                            <input matStartDate placeholder="Start date">
-                            <input matEndDate placeholder="End date">
-                        </mat-date-range-input>
-                        <mat-datepicker-toggle matIconPrefix [for]="range"></mat-datepicker-toggle>
-                        <mat-date-range-picker #range></mat-date-range-picker>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field class="w-100" id="timeField">
-                        <mat-label>Duration</mat-label>
-                        <span matPrefix class="cursor"><img class="timeImage"
-                                src="../../../assets/images/icons/time.svg" alt="Time Icon"></span>
-                        <input matInput [ngxMatTimepicker]="eTime" />
-                        <ngx-mat-timepicker #eTime></ngx-mat-timepicker>
-                    </mat-form-field>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/time.svg"
+                                alt="user" width="20"></span>
+                        <div class="form-floating">
+                            <select class="form-select" id="duration" aria-label="Default select example">
+                                <ng-container *ngFor="let item of slots">
+                                    <option [value]="item.id">{{item.shift}}</option>
+                                </ng-container>
+                            </select>
+                            <label for="duration">Duration</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="d-flex gap-3 w-100">
                     <div class="fs-14 fs-lg-18 overview__content__edit__section__editArticle text-center">Add Articles
@@ -99,39 +109,11 @@
                 <div class="d-flex flex-column rating__sections__item gap-10">
                     <div>{{rat.name}}</div>
                     <div *ngIf="rat.id === 1">
-                        <div class="d-flex align-items-center gap-10">
-                            <p class="m-0">5</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                    aria-valuemax="100" value="100"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-10">
-                            <p class="m-0">4</p>
+                        <div *ngFor="let value of ratingValues" class="d-flex align-items-center gap-10">
+                            <p class="m-0">{{ value }}</p>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-10">
-                            <p class="m-0">3</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-10">
-                            <p class="m-0">2</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-10">
-                            <p class="m-0">1</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
+                                    aria-valuemax="100" [style.width.%]="value === 5 ? 100 : 0"></div>
                             </div>
                         </div>
                     </div>

@@ -39,6 +39,13 @@ export class OverviewComponent {
   ItemDetails: any
   hostDetails: any;
   ratingSection: any;
+  ratingValues: number[] = [5, 4, 3, 2, 1];
+  slots = [
+    { id: 1, shift: "8AM - 11 PM" },
+    { id: 2, shift: "12AM - 3 PM" },
+    { id: 3, shift: "4PM - 7 PM" },
+    { id: 4, shift: "8AM - 11 PM" },
+  ]
   constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {
@@ -52,5 +59,7 @@ export class OverviewComponent {
       this.ratingSection = result?.ratingSection;
     })
   };
+
+
 
 }

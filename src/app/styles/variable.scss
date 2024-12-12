@@ -27,12 +27,17 @@ $text-gradient-clr2: #F17DD9;
 $rev-gradient-clr1: #8F1CB8;
 $rev-gradient-clr2: #C82992;
 $input-border:#C7C7C7;
+$black: black;
+$host-security-clr: #de1162;
 
 @function gutter-sp($key) {
   @return #{$key}px;
 }
 @function gutter-vw($key) {
   @return #{$key}vw;
+}
+@function gutter-rem($key) {
+  @return #{$key}rem; 
 }
 @function gutter-per($key) {
   @return $key * 1%; 

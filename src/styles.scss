@@ -140,7 +140,7 @@ html {
   }
 
   .pl-#{$i} {
-    padding-left: 0px + $i;
+    padding-left: 0px + $i !important;
   }
 
   .pr-#{$i} {
