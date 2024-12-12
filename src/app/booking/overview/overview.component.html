@@ -107,7 +107,7 @@
         <div class="rating__sections d-flex justify-content-between d-none d-md-flex">
             <ng-container *ngFor="let rat of ratingSection">
                 <div class="d-flex flex-column rating__sections__item gap-10">
-                    <div>{{rat.name}}</div>
+                    <div class="fw-bold">{{rat.name}}</div>
                     <div *ngIf="rat.id === 1">
                         <div *ngFor="let value of ratingValues" class="d-flex align-items-center gap-10">
                             <p class="m-0">{{ value }}</p>
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="rat.id !== 1">{{rat.rating}}</div>
+                    <div *ngIf="rat.id !== 1" class="fw-bold fs-16 fs-lg-30">{{rat.rating}}</div>
                     <img *ngIf="rat.id !== 1" class="mat-4 icons" [src]="rat.image" [alt]="rat.name">
                 </div>
             </ng-container>
