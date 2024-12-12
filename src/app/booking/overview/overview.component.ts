@@ -38,7 +38,7 @@ export class OverviewComponent {
 
   ItemDetails: any
   hostDetails: any;
-  ratingSection: string[] = ['Overall rating', 'Cleanlines', 'Accuracy', 'Check-in', 'Communication', 'Location', 'Value']
+  ratingSection: any;
   constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {
@@ -49,6 +49,7 @@ export class OverviewComponent {
     this.defaultService.getJSON().subscribe(result => {
       this.ItemDetails = result?.overview;
       this.hostDetails = result?.hostDetails[0];
+      this.ratingSection = result?.ratingSection;
     })
   };
 

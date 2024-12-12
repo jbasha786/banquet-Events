@@ -86,12 +86,58 @@
     <!-- Description Setion End -->
 
     <div class="rating">
+        <div class="d-flex align-items-center justify-content-center">
+            <img src="../../../assets/images/rating/leaf.svg" alt="left-leaf">
+            <p class="fs-20 fs-lg-50">5.0</p>
+            <img src="../../../assets/images/rating/leaf-right.svg">
+        </div>
         <h4 class="text-center fs-16 fs-lg-30 rating__title">Guest favourite</h4>
-        <p class="text-center rating__desc">One of the most loved homes on Airbnb based on rating, reviews and
+        <p class="text-center rating__desc">One of the most loved homes on rating, reviews and
             reliability</p>
-        <div class="rating__sections d-flex justify-content-between">
+        <div class="rating__sections d-flex justify-content-between d-none d-md-flex">
             <ng-container *ngFor="let rat of ratingSection">
-                <div class="rating__sections__item">{{rat}}</div>
+                <div class="d-flex flex-column rating__sections__item gap-10">
+                    <div>{{rat.name}}</div>
+                    <div *ngIf="rat.id === 1">
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="m-0">5</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100" value="100"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="m-0">4</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="m-0">3</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="m-0">2</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="m-0">1</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="rat.id !== 1">{{rat.rating}}</div>
+                    <img *ngIf="rat.id !== 1" class="mat-4 icons" [src]="rat.image" [alt]="rat.name">
+                </div>
             </ng-container>
         </div>
     </div>

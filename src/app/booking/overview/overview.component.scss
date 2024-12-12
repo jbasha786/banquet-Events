@@ -127,10 +127,23 @@
             padding: gutter-vw(3);
 
             &__item {
-                border-right: 1px solid;
+                border-left: gutter-sp(1) solid $input-border;
+                padding: gutter-sp(0) gutter-sp(20);
+                position: relative;
+
+                .progress {
+                    width: gutter-per(100);
+                    height: gutter-sp(5);
+                }
+
+                .icons {
+                    width: gutter-sp(30);
+                    position: absolute;
+                    bottom: gutter-sp(10);
+                }
             }
-            &__item:last-child {
-                border-right: none;
+            &__item:first-child {
+                border-left: none;
             }
         }
     }

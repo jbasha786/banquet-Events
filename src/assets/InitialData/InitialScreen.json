@@ -472,7 +472,6 @@
             "name": "Sign In Or Join",
             "src": "../../../../assets/images/logo/user.png"
         }
-       
     ],
     "overview": {
         "deposite": "Description",
@@ -814,5 +813,49 @@
             "src": "/assets/images/promotions/5.svg"
         }
     ],
-    "username": "Email"
+    "username": "Email",
+    "ratingSection": [
+        {
+            "id": 1,
+            "name": "Overall rating",
+            "image": "/assets/images/rating/check-mark.png",
+            "rating": 5
+        },
+        {
+            "id": 2,
+            "name": "Cleanliness",
+            "image": "/assets/images/rating/spray.png",
+            "rating": 4
+        },
+        {
+            "id": 3,
+            "name": "Accuracy",
+            "image": "/assets/images/rating/check-mark.png",
+            "rating": 5
+        },
+        {
+            "id": 4,
+            "name": "Check-in",
+            "image": "/assets/images/rating/key.png",
+            "rating": 4
+        },
+        {
+            "id": 5,
+            "name": "Communication",
+            "image": "/assets/images/rating/message.png",
+            "rating": 3
+        },
+        {
+            "id": 6,
+            "name": "Location",
+            "image": "/assets/images/rating/location.png",
+            "rating": 5
+        },
+        {
+            "id": 7,
+            "name": "Value",
+            "image": "/assets/images/rating/tag.png",
+            "rating": 4
+        }
+    ]
 }
