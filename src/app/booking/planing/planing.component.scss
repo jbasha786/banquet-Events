@@ -15,7 +15,7 @@
     }
 
     &__type {
-        padding: 3vw;
+        padding: 1vw;
 
         .mat-mdc-list-base {
             display: flex !important;
@@ -23,7 +23,7 @@
 
         &__section {
             border: 1px solid $border-silver;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
         }
     }

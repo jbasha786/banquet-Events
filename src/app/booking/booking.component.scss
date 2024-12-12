@@ -10,10 +10,11 @@
     }
 
     &__process {
-        padding: 3vw;
+        padding: 2vw;
+        width: 58vw;
 
         .progress {
-            height: 1vw;
+            height: 8px;
 
             .progress-bar {
                 background-color: var(--primary-color);
@@ -22,7 +23,9 @@
     }
 
     &__btn {
-        padding: 2vw;
+        padding: 1vw;
+        position: relative;
+        border-top: 1px solid black ;
         @media screen and (max-width: 576px) {
             gap: 10px;
         }
@@ -56,8 +59,13 @@
         border-radius: 40px;
         width: 150px;
         height: 40px;
-        @media screen and (max-width: 576px) {
-            width: 100%;
-        }
+        // @media screen and (max-width: 576px) {
+        //     width: 100%;
+        // }
+    }
+    .dialog-btns{
+        position: fixed;
+        bottom: 0;
+        background: white;
     }
 }
