@@ -13,6 +13,7 @@
 	&__image {
 		min-height: calc($gutter-100vh - gutter-sp(362));
 		width: $gutter-100per;
+		position: relative;
 		@include full-background("../../assets/images/logo/landingImage.svg");
 
 
@@ -61,7 +62,7 @@
 		}
 
 		&__downIcon {
-			bottom: gutter-sp(300);
+			bottom: gutter-sp(30);
 			right: gutter-sp(80);
 		}
 
