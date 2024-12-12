@@ -13,7 +13,6 @@ $priceColor: rgba(243, 148, 19, 1);
 $fontdull: rgba(160, 160, 160, 1);
 $adresscolor: rgba(63, 134, 8, 1);
 $ratingBackground: rgba(251, 188, 5, 1);
-$back-btn-color-overview: #EDE4F6;;
 $close-btn: #FF5656;
 $priceBackGrnd: rgba(253, 241, 224, 1);
 $booknow-pink: rgba(144, 27, 183, 1);
@@ -29,6 +28,14 @@ $rev-gradient-clr2: #C82992;
 $input-border:#C7C7C7;
 $black: black;
 $host-security-clr: #de1162;
+$footer-black: #29343D;
+$footer-logo-background: #222D36; 
+$footer-text-color: #bec2c4;
+$footer-email-border: #B8BFCA;
+$footer-border-line: #5a6364;
+
+
+
 
 @function gutter-sp($key) {
   @return #{$key}px;

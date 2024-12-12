@@ -1,8 +1,6 @@
 <div class="banner" id="landing_page" data-speed="8">
   @if(bannerInfo){
-  <div
-    class="banner__image relative d-flex flex-column justify-content-end justify-content-md-center"
-  >
+  <div class="banner__image relative d-flex flex-column justify-content-end justify-content-md-center">
     <div class="banner__image__content text-center absolute bottom-0 mb-20">
       <h2 class="banner__image__content__title lh-md-50">
         <span class="welkom fw-bold fs-24 fs-lg-30">{{ bannerInfo.title }}</span
@@ -25,7 +23,7 @@
       </div>
     </div>
     <div
-      class="banner__image__downIcon position-absolute d-flex justify-content-end align-items-center w-100 transform d-none d-md-flex"
+      class="banner__image__downIcon position-absolute d-flex justify-content-end align-items-center transform d-none d-md-flex cursor"
       (click)="scrollToSection('events')"
     >
       <div class="">
