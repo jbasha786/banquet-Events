@@ -40,20 +40,42 @@
 
     .email-input {
         background-color: $footer-logo-background;
-        border: gutter-sp(1) solid  $footer-logo-background;
+        border: gutter-sp(1) solid $footer-logo-background;
         border-radius: gutter-sp(5);
         color: $white-smoke;
     }
 
     .input-with-image {
-        border: gutter-sp(1) solid $footer-email-border ;
-        border-radius: gutter-sp(5);
+        background: $footer-logo-background;
+        color: $footer-email-border;
     }
 
     .input-img {
-        border: none;
+        border: gutter-sp(1) solid $footer-logo-background;
+        border-radius: gutter-sp(5);
         background-color: $footer-logo-background;
     }
+
+    input::placeholder {
+        color: $footer-email-border;
+    }
+
+    .input-group .form-control {
+        border-right: none;
+    }
+
+    input:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        box-shadow: none;
+        border-color:  $footer-email-border;
+    }
+
     .email-input:focus-visible {
         outline: none;
     }
