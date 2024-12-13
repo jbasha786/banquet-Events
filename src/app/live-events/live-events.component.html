@@ -5,7 +5,7 @@
 
     <div class="container mt-40 event-item__overview">
         <div class="row">
-            <div class="col-md-8 col-xl-8 col-xxl-8 col-sm-12">
+            <div class="col-12 col-md-8">
                 <div class="event-item__overview__img">
                     <img width="100%" height="100%" src="../../../../assets/images/events/events-item.svg"
                         alt="event Item">
@@ -51,29 +51,29 @@
                     <app-host-details [hostInfo]="hostDetails"></app-host-details>
                 </div>
             </div>
-            <div #stickyMenuForTickets [class.sticky]="sticky" class="col-md-4 col-xl-4 col-xxl-4 col-sm-12">
+            <div #stickyMenuForTickets [class.sticky]="sticky" class="col-12 col-md-4 tickets">
                 <mat-card class="p-20">
-                    <p class="fv-1">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
-                    <h2><strong>WPD World Cup 2024</strong></h2>
-                    <p class="fv-1">Organized by world para darts association</p>
-                    <p class="fv-1">Tickets Available: 250</p>
-                    <div class="d-flex justify-content-between">
+                    <p class="date fs-10">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
+                    <h2 class="title fw-bold fs-20 fs-lg-30">WPD World Cup 2024</h2>
+                    <p class="desc fs-14">Organized by world para darts association</p>
+                    <p class="numoftickets fs-14">Tickets Available: {{numberOfTickets}}</p>
+                    <div class="d-flex justify-content-between qty">
                         <div>
-                            <h4>5 Days / 4 Nights</h4>
+                            <h4 class="fw-bold">5 Days / 4 Nights</h4>
                             <p class="fv-1">4x Breakfast / 3x Lunch / 4x Dinner</p>
                         </div>
-                        <div class="d-flex event-item__overview__qtySection justify-content-between">
-                            <mat-icon fontIcon="remove" (click)="decrement()" class="remove cursor"></mat-icon>
-                            <p class="queantity">{{itemQty}}</p>
-                            <mat-icon fontIcon="add" (click)="increment()" class="add cursor"></mat-icon>
+                        <div class="d-flex qtySection justify-content-between gap-2 align-items-center">
+                            <mat-icon fontIcon="remove" (click)="decrement()" [ngClass]="isbtnActive ? 'active' : 'inActive' " class="cursor"></mat-icon>
+                            <p class="value mb-0">{{itemQty}}</p>
+                            <mat-icon fontIcon="add" (click)="increment()" [ngClass]="!isbtnActive ? 'active' : 'inActive'" class="cursor"></mat-icon>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between event-item__overview__price">
                         <div>
-                            <p>Price</p>
-                            <p class="color">€ 399,00 p.p.</p>
+                            <p class="pTitle">Price</p>
+                            <p class="color fs-14 fs-lg-30 fw-bold">€ 399,00 p.p.</p>
                         </div>
-                        <div>
+                        <div class="d-flex align-items-end">
                             <p>Tickets Selected: {{itemQty}}</p>
                         </div>
                     </div>

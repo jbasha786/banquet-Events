@@ -1,0 +1,69 @@
+@import '../../app/custom-css/custom-material-colors.scss';
+@import '../../app/styles/variable.scss';
+
+.event-item {
+    &__overview {
+        &__bookbtn {
+            border-radius: gutter-sp(10);
+            color: $white;
+            background: linear-gradient(90.69deg, $rev-gradient-clr1 gutter-per(0.85), $rev-gradient-clr2 gutter-per(100.99));
+            border: none;
+            padding: gutter-sp(10);
+        }
+
+        &__price {
+            padding-bottom: gutter-vw(2);
+            .pTitle {
+                text-transform: uppercase;
+            }
+
+            .color {
+                color: $primary-color;
+            }
+        }
+
+        .tickets {
+            .date {
+                text-transform: uppercase;
+            }
+
+            .title {
+                color: $tickets-tile-clr;
+            }
+
+            .qty {
+                padding: gutter-vw(3) gutter-vw(0);
+                position: relative;
+
+                .qtySection {
+                    position: absolute;
+                    right: gutter-sp(0);
+                    top: gutter-vw(3);
+
+                    .inActive {
+                        background-color: $add-remove-btn-clr;
+                        color: $tickets-tile-clr;
+                        border-radius: gutter-sp(2);
+
+                    }
+
+                    .active {
+                        background-color: $tickets-tile-clr;
+                        color: $white;
+                        border-radius: gutter-sp(2);
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 3vw;
+    overflow: hidden;
+    z-index: 10;
+}

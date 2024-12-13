@@ -1,15 +1,16 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { AmenitiesComponent } from '../amenities/amenities.component';
-import { ThingsToKnowComponent } from '../things-to-know/things-to-know.component';
-import { GoogleMapComponent } from '../google-map/google-map.component';
-import { DefaultService } from '../../../services/default.service';
-import { HostDetailsComponent } from '../../../booking/overview/host-details/host-details.component';
-import { UpcomingEventsListComponent } from '../upcoming-events-list/upcoming-events-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { AmenitiesComponent } from '../shared/components/amenities/amenities.component';
+import { ThingsToKnowComponent } from '../shared/components/things-to-know/things-to-know.component';
+import { GoogleMapComponent } from '../shared/components/google-map/google-map.component';
+import { HostDetailsComponent } from '../booking/overview/host-details/host-details.component';
+import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
+import { DefaultService } from '../services/default.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-events-item',
+  selector: 'app-live-events',
   standalone: true,
   imports: [
     AmenitiesComponent,
@@ -18,15 +19,18 @@ import { MatIconModule } from '@angular/material/icon';
     HostDetailsComponent,
     UpcomingEventsListComponent,
     MatCardModule,
-    MatIconModule],
-  templateUrl: './events-item.component.html',
-  styleUrl: './events-item.component.scss'
+    MatIconModule,
+    CommonModule],
+  templateUrl: './live-events.component.html',
+  styleUrl: './live-events.component.scss'
 })
-export class EventsItemComponent {
+export class LiveEventsComponent {
 
   hostDetails: any;
   promotionsInfo: any;
   itemQty: number = 1;
+  numberOfTickets: number = 250;
+  isbtnActive: boolean = false;
   @ViewChild('stickyMenuForTickets') menuElement!: ElementRef;
   @ViewChild('removeStickyMenuForTickets') upcomingEventsElement!: ElementRef;
 
@@ -66,10 +70,12 @@ export class EventsItemComponent {
 
   increment() {
     this.itemQty = this.itemQty + 1;
+    this.isbtnActive = false;
   }
 
   decrement() {
     this.itemQty = this.itemQty == 1 ? 1 : this.itemQty - 1;
+    this.isbtnActive = true;
   }
 
 }
