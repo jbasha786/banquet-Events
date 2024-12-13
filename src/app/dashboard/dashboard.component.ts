@@ -14,8 +14,6 @@ import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
-declare let $: any;
-
 @Component({
   selector: 'app-dashboard',
   standalone: true,
