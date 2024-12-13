@@ -41,6 +41,9 @@ $footer-border-line: #5a6364;
 @function gutter-vw($key) {
   @return #{$key}vw;
 }
+@function gutter-vh($key) {
+  @return #{$key}vh;
+}
 @function gutter-rem($key) {
   @return #{$key}rem; 
 }

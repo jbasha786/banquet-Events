@@ -11,8 +11,8 @@
 
 .banner {
 	&__image {
-		min-height: calc($gutter-100vh - gutter-sp(362));
-		width: $gutter-100per;
+		min-height: calc(gutter-vh(100) - gutter-sp(362));
+		width: gutter-per(100);
 		position: relative;
 		@include full-background("../../assets/images/logo/landingImage.svg");
 
@@ -21,8 +21,8 @@
 
 
 			&__title {
-				color: white;
-				margin-bottom: $gutter-10sp;
+				color: $white;
+				margin-bottom: gutter-sp(10);
 				transform: translateX(-100%);
 				animation: slideIn 1s forwards;
 			}
@@ -43,15 +43,15 @@
 			&__btn {
 
 				flex-shrink: 0;
-				border-radius: $gutter-32sp;
-				letter-spacing: $gutter-1sp;
+				border-radius: gutter-sp(32);
+				letter-spacing: gutter-sp(1);
 				border: none;
 				color: $white;
-				margin-top: $gutter-20sp;
+				margin-top: gutter-sp(20);
 				background: var(--primary-color);
 				opacity: 0;
 				animation: fadeIn 4s forwards;
-				padding: $gutter-8sp $gutter-42sp;
+				padding: gutter-sp(8) gutter-sp(42);
 			}
 
 			@keyframes fadeIn {
@@ -68,33 +68,35 @@
 
 	}
 }
+
 .subbanner {
-	padding:gutter-vw(3) gutter-vw(5) gutter-vw(0)
+	padding: gutter-vw(3) gutter-vw(5) gutter-vw(0)
 }
- .subbanner__image {
+
+.subbanner__image {
 	width: gutter-per(100);
 	height: auto;
-	display:block;
+	display: block;
 }
 
 .subbanner__text {
-	position: absolute; 
-	bottom: $value-null; 
-	left: $value-null; 
+	position: absolute;
+	bottom: $value-null;
+	left: $value-null;
 	right: $value-null;
-	text-align: center; 
-	color: white; 
-	padding: gutter-sp(20) $value-null; 
-	margin: $value-null; 
-	box-sizing: border-box; 
-	letter-spacing:gutter-sp(4);
+	text-align: center;
+	color: $white;
+	padding: gutter-sp(20) $value-null;
+	margin: $value-null;
+	box-sizing: border-box;
+	letter-spacing: gutter-sp(4);
 	text-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(10) $black-overlay;
-	
-  }
+
+}
 
 //main banner with content
 .events {
-	padding: $gutter-6vw $gutter-5vw;
+	padding: gutter-vw(6) gutter-vw(5);
 	transition-delay: 1s;
 	transition: transform 0.5s ease;
 }
@@ -108,7 +110,7 @@
 
 .card {
 	&-image {
-		border-radius: $gutter-14sp;
+		border-radius: gutter-sp(14);
 	}
 
 	&-button {
@@ -142,7 +144,7 @@
 
 // Arrangements Section
 .arrangements {
-	padding: $gutter-0vw $gutter-6vw $gutter-5vw;
+	padding: gutter-vw(0) gutter-vw(6) gutter-vw(5);
 
 	&__color {
 		color: $secondary-color;
@@ -151,60 +153,37 @@
 
 //personalized
 .personalized {
-	padding: $gutter-4vw $gutter-5vw;
+	padding: gutter-vw(4) gutter-vw(5);
 	background-color: $white-smoke;
-	margin: $gutter-0vw $gutter-0vw $gutter-6vw;
+	margin: gutter-vw(0) gutter-vw(0) gutter-vw(6);
 
 	.section {
-		width: $gutter-100per;
-		max-width: $gutter-100per;
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		overflow: hidden;
+		.item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: gutter-sp(12) gutter-sp(16) gutter-sp(0);
 
-		.slider {
-			--duration: 30s;
-			--direction: normal;
-
-			.items {
-				display: flex;
-				width: fit-content;
-				animation-name: loop;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				animation-direction: var(--direction);
-				animation-duration: var(--duration);
+			.image {
+				width: gutter-per(100);
+				height: gutter-per(100);
 			}
 
-			.item {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				padding: $gutter-12sp $gutter-16sp $gutter-0sp;
-
-				.image {
-					width: $gutter-100per;
-					height: $gutter-100per;
-				}
-
-				.desc {
-					display: block;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					white-space: nowrap;
-					max-width: gutter-sp(300);
-				}
+			.title {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
 			}
 
-			@keyframes loop {
-				0% {
-					transform: rotate(0);
-				}
-
-				100% {
-					transform: rotate(-100%);
-				}
+			.desc {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				min-height: gutter-sp(68);
 			}
 		}
 	}
@@ -212,7 +191,7 @@
 
 //experience
 .experience {
-	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
+	padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 
 	&__color {
 		color: $secondary-color;
@@ -228,17 +207,17 @@
 	}
 
 	&__image {
-		width: $gutter-100per;
+		width: gutter-per(100);
 		height: auto;
 		display: block;
 	}
 
 	&__overlay {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: $gutter-100per;
-		height: $gutter-100per;
+		top: gutter-sp(0);
+		left: gutter-sp(0);
+		width: gutter-per(100);
+		height: gutter-per(100);
 		background-color: $white-smoke;
 		display: flex;
 		justify-content: center;
@@ -258,69 +237,44 @@
 
 //corporate-family
 .corporate-family {
-	padding: $gutter-0vw $gutter-5vw $gutter-5vw;
+	padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
 }
 
 //promotions
 .promotions {
-	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
+	padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 
 	.tagList {
-		width: $gutter-100per;
-		max-width: $gutter-100per;
+		width: gutter-per(100);
+		max-width: gutter-per(100);
 		display: flex;
 		flex-direction: column;
 		position: relative;
 		overflow: hidden;
 
-		.slider {
-			--duration: 10000ms;
-			--direction: normal;
+		.item {
+			display: flex;
+			align-items: center;
+			padding: gutter-sp(12) gutter-sp(16) gutter-sp(0);
 
-			.items {
-				display: flex;
-				width: fit-content;
-				animation-name: loop;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				animation-direction: var(--direction);
-				animation-duration: var(--duration);
-
-				.item {
-					display: flex;
-					align-items: center;
-					padding: $gutter-12sp $gutter-16sp $gutter-0sp;
-
-				}
-			}
-
-			@keyframes loop {
-				0% {
-					transform: rotate(0);
-				}
-
-				100% {
-					transform: rotate(-100%);
-				}
-			}
 		}
 	}
 }
 
 //member section
 .join-text {
-	padding: $gutter-4vw $gutter-8vw;
+	padding: gutter-vw(4) gutter-vw(8);
 
 	@media (min-width: 992px) and (max-width: 1280px) {
-		padding: $gutter-2vw $gutter-4vw;
+		padding: gutter-vw(2) gutter-vw(4);
 	}
 }
 
 .memberSection {
 	position: relative;
 	background: $white-smoke;
-	margin: $gutter-0vw $gutter-5vw $gutter-6vw;
-	border-radius: $gutter-16sp;
+	margin: gutter-vw(0) gutter-vw(5) gutter-vw(6);
+	border-radius: gutter-sp(16);
 
 
 	&__color {
@@ -330,14 +284,14 @@
 	&__btn {
 		background: $secondory-color;
 		color: $white;
-		border-radius: $gutter-8sp;
+		border-radius: gutter-sp(8);
 		border: none;
-		padding: $gutter-10sp $gutter-20sp;
+		padding: gutter-sp(10) gutter-sp(20);
 	}
 
 	&__desc {
 		font-weight: lighter;
-		line-height: $gutter-26sp;
+		line-height: gutter-sp(26);
 		color: $quick-silver;
 	}
 
@@ -349,12 +303,12 @@
 		img {
 			position: absolute;
 			bottom: $value-null;
-			width: $gutter-54per;
-			right: $gutter-30per;
+			width: gutter-per(54);
+			right: gutter-per(30);
 
 			@media screen and (max-width:991px) {
 				position: relative;
-				right: $gutter-0per;
+				right: gutter-per(0);
 			}
 		}
 
@@ -369,35 +323,34 @@
 	background: url("../../assets/images/moment/atumn.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: $gutter-464sp;
-	top: $gutter-0sp;
-	left: $gutter-0sp;
-	width: $gutter-100per;
+	height: gutter-sp(464);
+	top: gutter-sp(0);
+	left: gutter-sp(0);
+	width: gutter-per(100);
 }
 
 .moment {
-	padding: $gutter-0vw $gutter-5vw $gutter-5vw;
+	padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
 
 	&__content {
 
-		height: $gutter-344sp;
+		height: gutter-sp(344);
 		justify-content: center;
 		align-items: center;
 		color: $white-smoke;
 		opacity: $opacity-halfless;
 		text-align: center;
-		letter-spacing: $gutter-1sp;
+		letter-spacing: gutter-sp(1);
 	}
 }
 
-//faq
 .faq-section {
-	padding: $gutter-0vw $gutter-5vw $gutter-6vw;
+	padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 }
 
 css for scroll .fade {
 	pointer-events: none;
-	background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+	background: linear-gradient(90deg, #1e293b, transparent gutter-per(30), transparent gutter-per(70), #1e293b);
 	position: absolute;
 	inset: 0;
 }
@@ -412,45 +365,25 @@ css for scroll .fade {
 	}
 }
 
-// test
-*,
-*:before,
-*:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-
 .mouse_scroll {
 	display: block;
-	margin: 0 auto;
-	width: 24px;
-	height: 100px;
+	margin: gutter-sp(0) auto;
+	width: gutter-sp(24);
+	height: gutter-sp(100);
 	cursor: pointer;
 }
 
 
 .m_scroll_arrows {
 	display: block;
-	width: 5px;
-	height: 5px;
 	-ms-transform: rotate(45deg);
-	/* IE 9 */
 	-webkit-transform: rotate(45deg);
-	/* Chrome, Safari, Opera */
 	transform: rotate(45deg);
-	border-right: 2px solid white;
-	border-bottom: 2px solid white;
-	margin: 0 0 3px 4px;
-
-	width: 16px;
-	height: 16px;
-}
-
-
-.unu {
-	margin-top: 1px;
+	border-right: gutter-sp(2) solid $white;
+	border-bottom: gutter-sp(2) solid $white;
+	margin: gutter-sp(0) gutter-sp(0) gutter-sp(3) gutter-sp(4);
+	width: gutter-sp(16);
+	height: gutter-sp(16);
 }
 
 .unu,
@@ -459,14 +392,12 @@ css for scroll .fade {
 	-webkit-animation: mouse-scroll 1s infinite;
 	-moz-animation: mouse-scroll 1s infinite;
 	animation: mouse-scroll 1s infinite;
-
 }
 
 .unu {
 	-webkit-animation-delay: .1s;
 	-moz-animation-delay: .1s;
 	-webkit-animation-direction: alternate;
-
 	animation-direction: alternate;
 	animation-delay: alternate;
 }
@@ -475,47 +406,39 @@ css for scroll .fade {
 	-webkit-animation-delay: .2s;
 	-moz-animation-delay: .2s;
 	-webkit-animation-direction: alternate;
-
 	animation-delay: .2s;
 	animation-direction: alternate;
-
-	margin-top: -6px;
+	margin-top: -gutter-sp(6);
 }
 
 .trei {
 	-webkit-animation-delay: .3s;
 	-moz-animation-delay: .3s;
 	-webkit-animation-direction: alternate;
-
 	animation-delay: .3s;
 	animation-direction: alternate;
-
-
-	margin-top: -6px;
+	margin-top: -gutter-sp(6);
 }
 
 .mouse {
-	height: 42px;
-	width: 24px;
-	border-radius: 14px;
+	height: gutter-sp(42);
+	width: gutter-sp(24);
+	border-radius: gutter-sp(14);
 	transform: none;
-	border: 2px solid white;
-	top: 170px;
+	border: gutter-sp(2) solid $white;
+	top: gutter-sp(170);
 }
 
 .wheel {
-	height: 5px;
-	width: 2px;
 	display: block;
-	margin: 5px auto;
-	background: white;
+	margin: gutter-sp(5) auto;
+	background: $white;
 	position: relative;
-
-	height: 4px;
-	width: 4px;
-	border: 2px solid #fff;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
+	height: gutter-sp(4);
+	width: gutter-sp(4);
+	border: gutter-sp(2) solid $white;
+	-webkit-border-radius: gutter-sp(8);
+	border-radius: gutter-sp(8);
 }
 
 .wheel {
@@ -542,69 +465,69 @@ css for scroll .fade {
 
 @-moz-keyframes mouse-wheel {
 	0% {
-		top: 1px;
+		top: gutter-sp(1);
 	}
 
 	25% {
-		top: 2px;
+		top: gutter-sp(2);
 	}
 
 	50% {
-		top: 3px;
+		top: gutter-sp(3);
 	}
 
 	75% {
-		top: 2px;
+		top: gutter-sp(2);
 	}
 
 	100% {
-		top: 1px;
+		top: gutter-sp(1);
 	}
 }
 
 @-o-keyframes mouse-wheel {
 
 	0% {
-		top: 1px;
+		top: gutter-sp(1);
 	}
 
 	25% {
-		top: 2px;
+		top: gutter-sp(2);
 	}
 
 	50% {
-		top: 3px;
+		top: gutter-sp(3);
 	}
 
 	75% {
-		top: 2px;
+		top: gutter-sp(2);
 	}
 
 	100% {
-		top: 1px;
+		top: gutter-sp(1);
 	}
 }
 
 @keyframes mouse-wheel {
 
 	0% {
-		top: 1px;
+		top: gutter-sp(1);
 	}
 
 	25% {
-		top: 2px;
+		top: gutter-sp(2);
 	}
 
 	50% {
-		top: 3px;
+		top: gutter-sp(3);
 	}
 
 	75% {
-		top: 2px;
+		top: gutter-sp(2);
 	}
 
 	100% {
-		top: 1px;
+		top: gutter-sp(1);
 	}
 }
 
