@@ -158,64 +158,32 @@
 	margin: $gutter-0vw $gutter-0vw $gutter-6vw;
 
 	.section {
-		width: $gutter-100per;
-		max-width: $gutter-100per;
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		overflow: hidden;
+		.item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: $gutter-12sp $gutter-16sp $gutter-0sp;
 
-		.slider {
-			--duration: 30s;
-			--direction: normal;
-
-			.items {
-				display: flex;
-				width: fit-content;
-				animation-name: loop;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				animation-direction: var(--direction);
-				animation-duration: var(--duration);
+			.image {
+				width: $gutter-100per;
+				height: $gutter-100per;
 			}
 
-			.item {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				padding: $gutter-12sp $gutter-16sp $gutter-0sp;
-
-				.image {
-					width: $gutter-100per;
-					height: $gutter-100per;
-				}
-
-				.title {
-					text-overflow: ellipsis;
-					overflow: hidden;
-					display: -webkit-box;
-					-webkit-line-clamp: 1;
-					-webkit-box-orient: vertical;
-				}
-
-				.desc {
-					text-overflow: ellipsis;
-					overflow: hidden;
-					display: -webkit-box;
-					-webkit-line-clamp: 2;
-					-webkit-box-orient: vertical;
-					min-height: gutter-sp(68);
-				}
+			.title {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
 			}
 
-			@keyframes loop {
-				0% {
-					transform: rotate(0);
-				}
-
-				100% {
-					transform: rotate(-100%);
-				}
+			.desc {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				min-height: gutter-sp(68);
 			}
 		}
 	}
@@ -284,36 +252,11 @@
 		position: relative;
 		overflow: hidden;
 
-		.slider {
-			--duration: 10000ms;
-			--direction: normal;
+		.item {
+			display: flex;
+			align-items: center;
+			padding: $gutter-12sp $gutter-16sp $gutter-0sp;
 
-			.items {
-				display: flex;
-				width: fit-content;
-				animation-name: loop;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				animation-direction: var(--direction);
-				animation-duration: var(--duration);
-
-				.item {
-					display: flex;
-					align-items: center;
-					padding: $gutter-12sp $gutter-16sp $gutter-0sp;
-
-				}
-			}
-
-			@keyframes loop {
-				0% {
-					transform: rotate(0);
-				}
-
-				100% {
-					transform: rotate(-100%);
-				}
-			}
 		}
 	}
 }
