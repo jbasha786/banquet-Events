@@ -13,6 +13,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
+declare let $: any;
 
 @Component({
   selector: 'app-dashboard',
@@ -39,8 +40,8 @@ export class DashboardComponent {
   arrangementsInfo: any;
   experienceInfo: any;
   subbannerInfo: any;
-  momentInfo:any;
-  personalizedInfo : any;
+  momentInfo: any;
+  personalizedInfo: any;
   promotionsInfo: any;
   shortDesc: boolean = true;
 
@@ -101,5 +102,14 @@ export class DashboardComponent {
 
   readMore(personalInfo: any) {
     personalInfo.showFullContent = !personalInfo.showFullContent;
+  }
+
+  persinalized() {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      items: 4,
+    });
   }
 }

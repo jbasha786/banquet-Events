@@ -114,9 +114,9 @@
               />
             </div>
             <div class="d-flex flex-column gap-20">
-              <p class="fs-18 fw-500 mb-0">{{ carousel.name }}</p>
+              <p class="fs-18 fw-500 mb-0 title" [title]="carousel.name">{{ carousel.name }}</p>
               <ng-container *ngIf="!carousel.showFullContent">
-                <p class="desc fs-14 lh-34 mb-0">{{ carousel.shortDesc }}</p>
+                <p class="desc fs-14 lh-34 mb-0">{{ carousel.fulldDesc }}</p>
                 <p
                   class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
                   (click)="readMore(carousel)"
@@ -145,9 +145,9 @@
               />
             </div>
             <div class="d-flex flex-column gap-20">
-              <p class="fs-18 fw-500 mb-0">{{ personal.name }}</p>
+              <p class="fs-18 fw-500 mb-0 title" [title]="personal.name">{{ personal.name }}</p>
               <ng-container *ngIf="!personal.showFullContent">
-                <p class="desc fs-14 lh-34 mb-0">{{ personal.shortDesc }}</p>
+                <p class="desc fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
                 <p
                   class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
                   (click)="readMore(personal)"
@@ -282,3 +282,20 @@
   <app-faq></app-faq>
 </div>
 <!-- FAQ section End  -->
+
+
+<div id="owl-demo" class="owl-carousel owl-theme">    
+  <div class="item"><h1>1</h1></div>
+  <div class="item"><h1>2</h1></div>
+  <div class="item"><h1>3</h1></div>
+  <div class="item"><h1>4</h1></div>
+  <div class="item"><h1>5</h1></div>
+  <div class="item"><h1>6</h1></div>
+  <div class="item"><h1>7</h1></div>
+  <div class="item"><h1>8</h1></div>
+  <div class="item"><h1>9</h1></div>
+  <div class="item"><h1>10</h1></div>
+  <div class="item"><h1>11</h1></div>
+  <div class="item"><h1>12</h1></div>
+ 
+</div>

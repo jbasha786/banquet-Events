@@ -68,29 +68,31 @@
 
 	}
 }
+
 .subbanner {
-	padding:gutter-vw(3) gutter-vw(5) gutter-vw(0)
+	padding: gutter-vw(3) gutter-vw(5) gutter-vw(0)
 }
- .subbanner__image {
+
+.subbanner__image {
 	width: gutter-per(100);
 	height: auto;
-	display:block;
+	display: block;
 }
 
 .subbanner__text {
-	position: absolute; 
-	bottom: $value-null; 
-	left: $value-null; 
+	position: absolute;
+	bottom: $value-null;
+	left: $value-null;
 	right: $value-null;
-	text-align: center; 
-	color: white; 
-	padding: gutter-sp(20) $value-null; 
-	margin: $value-null; 
-	box-sizing: border-box; 
-	letter-spacing:gutter-sp(4);
+	text-align: center;
+	color: white;
+	padding: gutter-sp(20) $value-null;
+	margin: $value-null;
+	box-sizing: border-box;
+	letter-spacing: gutter-sp(4);
 	text-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(10) $black-overlay;
-	
-  }
+
+}
 
 //main banner with content
 .events {
@@ -188,12 +190,21 @@
 					height: $gutter-100per;
 				}
 
-				.desc {
-					display: block;
-					overflow: hidden;
+				.title {
 					text-overflow: ellipsis;
-					white-space: nowrap;
-					max-width: gutter-sp(300);
+					overflow: hidden;
+					display: -webkit-box;
+					-webkit-line-clamp: 1;
+					-webkit-box-orient: vertical;
+				}
+
+				.desc {
+					text-overflow: ellipsis;
+					overflow: hidden;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+					min-height: gutter-sp(68);
 				}
 			}
 
