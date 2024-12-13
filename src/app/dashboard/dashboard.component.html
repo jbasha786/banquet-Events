@@ -60,16 +60,24 @@
     Our <span class="arrangements__color">Arrangements</span>
   </p>
   <div class="row g-6">
-    @for( obj of arrangementsInfo; track $index){
+    @for( arr of arrangementsInfo; track $index){
     <div class="col-12 col-lg-4">
       <div class="card no-border gap-26">
-        <img src="{{ obj.src }}" alt="Card Image" class="card-image" />
+        <img src="{{ arr.src }}" [alt]="arr.name" class="image" />
         <div class="card-content d-flex flex-column gap-20">
-          <p class="card-heading fs-18 fw-medium mb-0">{{ obj.name }}</p>
-          <p class="card-text fs-14 lh-34 mb-0">{{ obj.desc }}</p>
-          <strong><button class="card-button readmore-btn fs-14 fw-medium p-0">
-              {{ obj.button }}
-            </button></strong>
+          <p class="heading fs-18 fw-medium mb-0" [title]="arr.name">{{ arr.name }}</p>
+          <ng-container *ngIf="!arr.showFullContent">
+            <p class="text fs-14 lh-34 mb-0">{{ arr.desc }}</p>
+            <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(arr)">
+              Read more ->
+            </p>
+          </ng-container>
+          <ng-container *ngIf="arr.showFullContent">
+            <p class=" fs-14 lh-34 mb-0">{{ arr.desc }}</p>
+            <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(arr)">
+              Read less ->
+            </p>
+          </ng-container>
         </div>
       </div>
     </div>
@@ -153,17 +161,21 @@
 <div class="promotions">
   <p class="fs-24 fw-medium">De Bonte Wever Deals & Promotions</p>
   <p class="fgs-14">Exclusive savings for your next stay.</p>
-  <div class="tagList">
-    <owl-carousel-o [options]="customOptionsforPromotionsInfo">
-      <ng-container *ngFor="let image of promotionsInfo">
-        <ng-template class="slider" carouselSlide [id]="image.id">
+    <div class="tagList">
+      <div class="slider">
+        <div class="items">
+          @for(image of promotionsInfo; track $index){
           <a class="item" href="{{ image.href }}">
             <img src="{{ image.src }}" alt="" />
           </a>
-        </ng-template>
-      </ng-container>
-    </owl-carousel-o>
-  </div>
+          } @for(image of promotionsInfo; track $index){
+          <a class="item" href="{{ image.href }}">
+            <img src="{{ image.src }}" alt="" />
+          </a>
+          }
+        </div>
+      </div>
+    </div>
 </div>
 <!-- promotions section End -->
 <!-- Member section start -->

@@ -52,19 +52,10 @@ export class DashboardComponent {
     dots: false,
     autoHeight: true,
     autoWidth: true,
-    items: 4
+    items: 4,
+    margin: 20
   };
-
-  customOptionsforPromotionsInfo: OwlOptions = {
-    loop: true,
-    autoplay: true,
-    center: false,
-    dots: false,
-    autoHeight: true,
-    autoWidth: true,
-    items: 4
-  };
-
+  
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
     private defaultService: DefaultService

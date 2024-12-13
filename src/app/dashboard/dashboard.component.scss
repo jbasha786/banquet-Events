@@ -146,6 +146,23 @@
 .arrangements {
 	padding: gutter-vw(0) gutter-vw(6) gutter-vw(5);
 
+	.heading {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+
+	.text {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		min-height: gutter-sp(68);
+	}
+
 	&__color {
 		color: $secondary-color;
 	}
@@ -162,7 +179,6 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			padding: gutter-sp(12) gutter-sp(16) gutter-sp(0);
 
 			.image {
 				width: gutter-per(100);
@@ -252,11 +268,36 @@
 		position: relative;
 		overflow: hidden;
 
-		.item {
-			display: flex;
-			align-items: center;
-			padding: gutter-sp(12) gutter-sp(16) gutter-sp(0);
+		.slider {
+			--duration: 30s;
+			--direction: normal;
 
+			.items {
+				display: flex;
+				width: fit-content;
+				animation-name: loop;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: var(--direction);
+				animation-duration: var(--duration);
+
+				.item {
+					display: flex;
+					align-items: center;
+					padding: gutter-sp(12) gutter-sp(16) gutter-sp(0);
+
+				}
+			}
+
+			@keyframes loop {
+				0% {
+					transform: rotate(0);
+				}
+
+				100% {
+					transform: rotate(-100%);
+				}
+			}
 		}
 	}
 }
