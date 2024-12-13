@@ -3,6 +3,7 @@
 
 .overview {
     padding-top: gutter-vw(3);
+
     // Back button
     &__back {
         border-radius: gutter-vw(50);
@@ -15,7 +16,7 @@
 
     // Image section
     &__imageSection {
-        padding: gutter-vw(1) 0;
+        padding: gutter-vw(1) gutter-sp(0);
 
         img {
             height: gutter-per(100);
@@ -70,7 +71,7 @@
                 }
 
                 &__reverse {
-                    background: linear-gradient(90.69deg, $rev-gradient-clr1 -0.15%, $rev-gradient-clr2 100.99%);
+                    background: linear-gradient(90.69deg, $rev-gradient-clr1 0.85%, $rev-gradient-clr2 100.99%);
                     border-radius: gutter-sp(5);
                     padding: gutter-sp(5);
                     color: $white;
@@ -79,11 +80,12 @@
                 .dateSection {
                     background: $white;
                     border-radius: gutter-rem(0.375);
+
                     .spacebar {
                         color: $black;
                         background: $black;
                     }
-    
+
                     .line {
                         height: gutter-sp(1);
                         background-color: $black;
@@ -91,27 +93,30 @@
                         margin: gutter-sp(0);
                     }
                 }
-                
+
 
                 .basic-icon {
-                    background-color: $white !important;
-                    border: gutter-sp(1) solid $white !important;
+                    background-color: $white;
+                    border: gutter-sp(1) solid $white;
                     padding: gutter-rem(0.375) gutter-rem(0.25);
                 }
 
-                .form-control,
-                .form-select {
+                .border-clr-none {
                     padding: gutter-rem(1) gutter-rem(0.25);
-                    border: gutter-sp(1) solid $white !important;
+                    border: gutter-sp(1) solid $white;
                 }
 
-                .form-control:focus,
-                .form-control:focus-visible,
-                .form-select:focus,
-                .form-select:focus-visible {
+                .border-clr {
+                    border: gutter-sp(1) solid $input-border;
+                    border-radius: gutter-sp(5);
+                }
+
+                .border-clr-none:focus,
+                .border-clr-none:focus-visible,
+                .border-clr-none:focus,
+                .border-clr-none:focus-visible {
                     background-color: $white;
-                    border-color: $input-border;
-                    outline: 0;
+                    outline: gutter-sp(0);
                     box-shadow: none;
                 }
 
@@ -141,7 +146,7 @@
 
         &__desc {
             line-height: gutter-sp(25);
-            margin: 0 auto;
+            margin: gutter-sp(0) auto;
             max-width: gutter-sp(270);
         }
 

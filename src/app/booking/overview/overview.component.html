@@ -40,20 +40,20 @@
         </div>
         <div class="col-12 col-lg-4 overview__content__edit">
             <div class="overview__content__edit__section">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 border-clr">
                     <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/user.svg"
                             alt="user" width="20"></span>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="guestCount" placeholder="Guests" value="40 Adults, 12 Children">
+                        <input type="email" class="form-control border-clr-none" id="guestCount" placeholder="Guests" value="40 Adults, 12 Children">
                         <label for="guestCount">Guests</label>
                     </div>
                 </div>
                 <div class="dateSection">
-                    <div class="d-flex mb-3 align-items-center">
+                    <div class="d-flex mb-3 align-items-center border-clr">
                         <div class="input-group" id="datepicker">
                             <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/calender.svg" alt="calender" width="20"></span>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
+                                <input type="text" class="form-control border-clr-none" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
                                 <label for="guestCount">Check-in</label>
                             </div>
                         </div>
@@ -61,18 +61,18 @@
                         <div class="input-group" id="datepicker">
                             <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/calender.svg" alt="calender" width="20"></span>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
+                                <input type="text" class="form-control border-clr-none" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
                                 <label for="guestCount">Check-out</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 border-clr">
                         <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/time.svg"
                                 alt="user" width="20"></span>
                         <div class="form-floating">
-                            <select class="form-select" id="duration" aria-label="Default select example">
+                            <select class="form-select border-clr-none" id="duration" aria-label="Default select example">
                                 <ng-container *ngFor="let item of slots">
                                     <option [value]="item.id">{{item.shift}}</option>
                                 </ng-container>
