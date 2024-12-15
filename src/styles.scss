@@ -254,3 +254,12 @@ html {
 .cdk-global-overlay-wrapper {
   top: 112px !important;
 }
+::ng-deep .mat-form-field-underline {
+  border-bottom: 1px solid transparent; 
+}
+.fixed-dialog {
+  transform: translate(42%, -14%) !important;
+  position: fixed !important;
+  z-index: 1050 !important;
+  overflow: auto;
+}

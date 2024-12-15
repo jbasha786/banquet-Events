@@ -24,8 +24,12 @@
         &__section {
             border: 1px solid $border-silver;
             border-radius: 8px;
-            cursor: pointer;
+            cursor: pointer;        
         }
+        &__section:hover {
+            border-color: $secondary-color; 
+            cursor: pointer; 
+          }
     }
 
     ::ng-deep .mat-mdc-list-option .mdc-radio {

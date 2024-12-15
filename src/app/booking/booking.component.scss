@@ -25,7 +25,7 @@
     &__btn {
         padding: 1vw;
         position: relative;
-        border-top: 1px solid black ;
+
         @media screen and (max-width: 576px) {
             gap: 10px;
         }
@@ -36,6 +36,7 @@
         border-radius: 40px;
         width: 150px;
         height: 40px;
+
         @media screen and (max-width: 576px) {
             width: 100%;
             margin-bottom: 10px;
@@ -48,9 +49,7 @@
         border-radius: 40px;
         width: 150px;
         height: 40px;
-        @media screen and (max-width: 576px) {
-            width: 100%;
-        }
+
     }
 
     .btn_next {
@@ -63,9 +62,12 @@
         //     width: 100%;
         // }
     }
-    .dialog-btns{
+
+    .dialog-btns {
         position: fixed;
         bottom: 0;
         background: white;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
 }

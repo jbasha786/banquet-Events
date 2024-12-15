@@ -67,4 +67,7 @@ export class ArticlesComponent {
   updateQty(item: any, event: any) {
     item.qty = event.data;
   }
+  onSave(): void {
+    console.log('Save button clicked!');
+  }
 }

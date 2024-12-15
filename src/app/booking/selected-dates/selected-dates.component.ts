@@ -54,13 +54,13 @@ export class SelectedDatesComponent {
     this.eventDSService.setAvailableSlots(event.options[0].value);
   }
 
-  specificDates() {
-    this.specificDaysView = true;
-    this.flexibleDatesView = false;
-  }
+  // specificDates() {
+  //   this.specificDaysView = true;
+  //   this.flexibleDatesView = false;
+  // }
 
-  flexibleDates() {
-    this.specificDaysView = false;
-    this.flexibleDatesView = true;
-  }
+  // flexibleDates() {
+  //   this.specificDaysView = false;
+  //   this.flexibleDatesView = true;
+  // }
 }

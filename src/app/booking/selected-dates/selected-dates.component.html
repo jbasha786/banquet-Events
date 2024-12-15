@@ -1,30 +1,30 @@
-<div class="selction_dates">
+<div class="selction_dates d-flex flex-column justify-content-center align-items-center col-10 m-auto">
     <h1 class="selction_dates__title text-center">When?</h1>
-    <div class="card p-2 selction_dates__content">
-        <div class="selction_dates__changeOptions d-flex">
+    <div class="card col-sm-12 col-lg-6 p-2 selction_dates__content border-0">
+        <!-- <div class="selction_dates__changeOptions d-flex">
             <div class="selction_dates__changeOptions__specific pl-30 pr-30" (click)="specificDates()">Specific Dates</div>
             <div class="selction_dates__changeOptions__flexible pl-20 pr-30" (click)="flexibleDates()">Flexible Dates</div>
-        </div>
+        </div> -->
         <hr>
-        <div class="row selction_dates__calender p-2 w-100" *ngIf="specificDaysView">
+        <div class="row selction_dates__calender w-100" *ngIf="specificDaysView">
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
                 <mat-calendar (selectedChange)="_onSelectedChange($event)" [selected]="selectedDateRange">
                 </mat-calendar>
             </div>
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
                 id="availableSlots">
-                <h4 class="text-center p-2">Available Slots</h4>
+                <h4 class="text-center p-2 mb-0">Available Slots</h4>
                 <mat-selection-list #slot [multiple]="false" (selectionChange)="slotsChange($event)">
                     @for (slot of slots; track $index) {
-                    <div class="card m-10 p-10 align-item-center">
+                    <div class="card m-10 align-item-center">
                         <mat-list-option [value]="slot">{{slot.shift}}</mat-list-option>
                     </div>
                     }
                 </mat-selection-list>
             </div>
         </div>
-        <div class="row selction_dates__calender p-2 w-100" *ngIf="flexibleDatesView">
+        <div class="row selction_dates__calender p-2 w-100">
             <p>feature Implementation</p>
         </div>
-    </div>
+    </div> 
 </div>

@@ -8,6 +8,7 @@ import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './core/login/login.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './core/reset-password/reset-password.component';
+import { ListOfHallsComponent } from './booking/list-of-halls/list-of-halls.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,5 +20,6 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'resetpwd', component: ResetPasswordComponent },
     { path: 'forgotpwd', component: ForgotPasswordComponent },
+    { path: 'halls', component: ListOfHallsComponent },
     { path: '**', component: PageNotFoundComponent },
 ];

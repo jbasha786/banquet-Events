@@ -15,6 +15,7 @@ import { EventPlanService } from '../../services/event-plan/event-plan.service';
 import { EventGuestsService } from '../../services/event-guest/event-guests.service';
 import { EventDateSlotsService } from '../../services/event-date-slot/event-date-slots.service';
 import { ArticlesComponent } from '../../shared/components/articles/articles.component';
+import { ZindexService } from '../../../app/services/zindex.service';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -42,7 +43,8 @@ export class ListOfHallsComponent {
     private eventBookingService: EventBookingService,
     private eventPlaning: EventPlanService,
     private eventACService: EventGuestsService,
-    private eventDSService: EventDateSlotsService
+    private eventDSService: EventDateSlotsService,
+    private zIndexService: ZindexService
   ) { }
 
   ngOnInit() {
@@ -92,10 +94,16 @@ export class ListOfHallsComponent {
   }
 
   addArticles() {
-    this.dialog.open(ArticlesComponent, {
-      width: '600px',
-      height: '60vh'
+    this.zIndexService.setHeaderZIndex(1000);
+    const dialogRef = this.dialog.open(ArticlesComponent, {
+      width: '800px',
+      panelClass: 'fixed-dialog',
+      position: { top: '10px', left: '10px' }, 
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.zIndexService.setHeaderZIndex(1030);
     });
   }
-
+ 
 }

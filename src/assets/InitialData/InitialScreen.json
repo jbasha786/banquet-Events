@@ -359,6 +359,18 @@
             "src": "/assets/images/halls/hall.svg",
             "status": "Stage Available",
             "taxText": "/Excluding taxes and fees"
+        },
+        {
+            "deposite": "Deposited Required",
+            "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
+            "desc": "Accommodates upto 60 members",
+            "diamensions": "420 to 443 ft²",
+            "id": 2,
+            "name": "Queens Lagoon Suite",
+            "price": "€ 3200.00",
+            "src": "/assets/images/halls/hall.svg",
+            "status": "Stage Available",
+            "taxText": "/Excluding taxes and fees"
         }
     ],
     "header": {
