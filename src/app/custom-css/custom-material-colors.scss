@@ -6,15 +6,9 @@
   --primary-color: #F0961B;
   --accent-color: #A62784;
   --warn-color: red;
-  --font-family: 'poppins';
   --font-size: '16px';
 }
 
-@font-face {
-  font-family: "poppins", sans-serif;
-  src: url('/assets/fonts/Poppins-Regular.ttf');
-  
-}
 
 
 $primary-color : var(--primary-color);
