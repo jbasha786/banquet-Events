@@ -213,8 +213,14 @@
     <div class="row g-4">
       @for( obj of momentInfo; track $index){
       <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card">
-        <app-card picture="{{ obj.src }}" title="{{ obj.name }}" desc="{{ obj.desc }}"
-          btn="{{ obj.button }}"></app-card>
+
+        <app-card class="moment__card__start"
+          picture="{{ obj.src }}"
+          title="{{ obj.name }}"
+          desc="{{ obj.desc }}"
+          btn="{{ obj.button }}"
+        ></app-card>
+
       </div>
       }
     </div>
@@ -226,3 +232,7 @@
   <app-faq></app-faq>
 </div>
 <!-- FAQ section End  -->
+<!--chat-->
+<app-chat></app-chat>
+<!--chat-->
+
