@@ -10,7 +10,7 @@
         background-color: $ash-white;
 
         &__input {
-            width: $gutter-100per;
+            width: gutter-per(100);
         }
         input:focus {
             outline: none;

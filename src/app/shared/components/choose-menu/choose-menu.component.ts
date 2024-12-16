@@ -27,7 +27,6 @@ constructor(private zIndexService: ZindexService,
       width: '700px',
       height: '80vh',
       panelClass: 'fixed-dialog',
-      // position: { top: '10px', left: '10px' }, 
     });
     dialogRef.afterClosed().subscribe(() => {
       this.zIndexService.setHeaderZIndex(1030);

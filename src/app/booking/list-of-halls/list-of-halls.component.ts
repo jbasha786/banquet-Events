@@ -63,7 +63,8 @@ export class ListOfHallsComponent {
   cancelReservation() {
     this.dialog.open(DialogueComponent, {
       width:"500px",
-      disableClose: true
+      disableClose: true,
+      position: { top: '0', left: '0' }, 
     });
    }
   reserve(reserve: any) {
@@ -99,7 +100,7 @@ export class ListOfHallsComponent {
     const dialogRef = this.dialog.open(ArticlesComponent, {
       width: '800px',
       panelClass: 'fixed-dialog',
-      // position: { top: '10px', left: '10px' }, 
+      position: { top: '0' }, 
     });
 
     dialogRef.afterClosed().subscribe(() => {
@@ -110,10 +111,10 @@ export class ListOfHallsComponent {
 
   chooseMenu(){
     this.dialog.open(ChooseMenuComponent, {
-      width: '100%',
+      width: '90%',
       height: '100%',
       panelClass: 'choosemenu-dialog',
-      // position: { top: '10px', left: '10px' }, 
+      position: { left: '10%' }, 
     });
   }
 

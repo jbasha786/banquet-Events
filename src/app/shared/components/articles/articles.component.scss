@@ -10,7 +10,7 @@
             border: gutter-sp(1) solid $lite-white;
             background-color: $gray;
             min-height:  gutter-sp(30);
-            width: $gutter-100per;
+            width: gutter-per(100);
         }
 
         input:focus,
@@ -27,7 +27,7 @@
     }
 
     .mat-mdc-table {
-        width: $gutter-100per;
+        width: gutter-per(100);
         height: gutter-sp(200);
         overflow: auto;
         box-shadow: none;

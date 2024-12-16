@@ -8,7 +8,7 @@
         border: gutter-sp(1) solid $footer-email-border;
         border-radius:  gutter-sp(5);
         align-items: center;
-        height: $gutter-100per;
+        height: gutter-per(100);
 
         .font-color {
             color: $font-ash;
@@ -17,7 +17,7 @@
 
     &__card {
         .mat-mdc-form-field {
-            width: $gutter-100per;
+            width: gutter-per(100);
         }
 
         &__label-hall {
@@ -36,8 +36,8 @@
             left: gutter-sp(0);
             bottom: gutter-sp(0);
             margin: 0 auto;
-            height: $gutter-100per;
-            width: $gutter-100per;
+            height: gutter-per(100);
+            width: gutter-per(100);
             text-align: center;
 
             &__conformed-color {
@@ -54,7 +54,7 @@
 
         @media (max-width: 991px) {
             &__img {
-                width: $gutter-100per;
+                width: gutter-per(100);
                 height: auto;
                 flex: 1;
                 object-fit: cover;
@@ -81,7 +81,7 @@
     }
 
     &__image_desc {
-        max-width: $gutter-40per;
+        max-width: gutter-per(40);
         flex: 1 1 auto;
     }
 

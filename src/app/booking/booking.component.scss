@@ -4,7 +4,7 @@
 .booking {
 
     &__model {
-        height: $gutter-70vh;
+        height: gutter-vh(70);
         overflow-y: auto;
         scrollbar-width: gutter-vw(5);
     }
@@ -42,5 +42,8 @@
         background: white;
         box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1;
+    }
+    .booking__btn{
+        // margin: auto;
     }
 }
