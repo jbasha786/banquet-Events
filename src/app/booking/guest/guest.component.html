@@ -1,10 +1,10 @@
 <div class="guest">
-    <h2 class="guest__title text-center">For How Many?</h2>
-    <div class="guest__form row d-flex justify-content-center col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+    <p class="guest__title fs-32 fw-bold my-2 text-center">For How Many?</p>
+    <div class="guest__form row d-flex justify-content-center col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
         <ng-container *ngFor="let field of guestFields">
-            <div class="guest__card mb-3">
-                <p class="guest__card__label">{{ field.label }}</p>
-                <input class="guest__card__input p-10" type="number" [(ngModel)]="field.value" min="1"
+            <div class="guest__card col-10 col-lg-12 mb-3 border rounded p-2">
+                <p class="guest__card__label mb-2">{{ field.label }}</p>
+                <input class="guest__card__input p-10 border rounded" type="number" [(ngModel)]="field.value" min="1"
                     [placeholder]="'Enter No of ' + field.label" (input)="field.changeFunction(field.value)">
             </div>
         </ng-container>

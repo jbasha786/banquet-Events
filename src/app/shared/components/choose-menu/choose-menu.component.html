@@ -1,0 +1,19 @@
+
+<div (click)="close()" class="cursor text-end p-10">
+    <mat-icon fontIcon="close"></mat-icon>
+</div>
+<div class="d-flex justify-content-center gap-60 align-items-center flex-column">
+   
+    <div class="d-flex justify-content-center">
+        <span class="fs-25 fw-bold mt-40">Choose Menu?</span>
+    </div>
+    
+    <div class="d-flex justify-content-center align-items-center gap-30 flex-column flex-md-row">
+        <div class="border rounded w-200 h-140 d-flex justify-content-center align-items-center menu-card" role="button" (click)="selectMenu()">
+            <p class="fs-20 fw-bold">Internal Menu</p>
+        </div>
+        <div class="border rounded w-200 h-140 d-flex justify-content-center align-items-center p-3 menu-card">
+            <p class="fs-20 fw-bold">External Catering</p>
+        </div>
+    </div>
+</div>

@@ -258,8 +258,12 @@ html {
   border-bottom: 1px solid transparent; 
 }
 .fixed-dialog {
-  transform: translate(42%, -14%) !important;
+  transform: translate(0%, -17%) !important;
   position: fixed !important;
   z-index: 1050 !important;
   overflow: auto;
+
+}
+.choosemenu-dialog{
+  margin-left: 10% !important;
 }

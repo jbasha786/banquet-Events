@@ -7,7 +7,7 @@
                     <mat-form-field>
                         <mat-label class="hallsView__card__label-hall fs-14">Guest</mat-label>
                         <span matPrefix class="cursor">
-                            <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img" alt="">
+                            <img src="../../../assets/images/halls/halls_user-img.png" class="w-33 h-29" class="hall-img" alt="">
                         </span>
                         <input type="text" value="" matInput readonly value=" " class="halls-input">
                     </mat-form-field>
@@ -84,6 +84,11 @@
                                     (click)="reserve(item)">Select</button>
                                 <span class="ms-2 hallsView__list__articles fw-bold" (click)="addArticles()">Add
                                     Articles</span>
+                                <button mat-flat-button class="hallsView__list__cancel fw-bold" *ngIf="!reserveBtn" (click)="cancelReservation()">Cancel</button>
+                                <button mat-flat-button class="hallsView__list__reserve fw-bold" *ngIf="reserveBtn" (click)="reserve(item)">Reserve</button>
+                                <span class="ms-2 hallsView__list__articles fw-bold" (click)="addArticles()">Add Articles</span>
+                                <span class="ms-4 hallsView__list__articles fw-bold" (click)="selectMenu()">Choose Menu</span>
+
                             </div>
                             <div class="d-flex align-items-center cursor" (click)="getDetails()"><span
                                     class="fw-bold">Menu Details -></span></div>
@@ -94,22 +99,22 @@
         </div> -->
 
 
-        
+
         <div
             class="d-flex justify-content-center align-items-center flex-column flex-lg-row flex-lg-row hall-list gap-4 p-2 mt-10">
-            <div class="d-flex">
+            <div class="d-flex hallsView__images">
                 <img class="hallsView__images__img "
-                    [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}"
-                    width=""  alt="{{item.name}}">
-                <div *ngIf="!requestSent" class="hallsView__images__icon">
+                    [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}" width=""
+                    alt="{{item.name}}">
+                <div *ngIf="!requestSent" class="hallsView__images__icon p-20">
                     <img src="../../../assets/images/halls/sent.gif">
-                    <h6>Reservation Request Sent</h6>
-                    <p>Our representative will get back to you shortly Reservation ID: <a (click)="confirm()"
+                    <p class="fs-18 fw-bold">Reservation Request Sent</p>
+                    <p class="fs-14">Our representative will get back to you shortly Reservation ID: <a (click)="confirm()"
                             class="cursor">234566</a></p>
                 </div>
-                <div *ngIf="!requestAccepted" class="hallsView__images__icon">
-                    <img src="../../../assets/images/halls/confirm.gif" alt="">
-                    <h6>Booking Confirmed</h6>
+                <div *ngIf="!requestAccepted" class="hallsView__images__icon p-20">
+                    <img src="../../../assets/images/halls/confirm.gif" class="h-150 w-150 m-auto" alt="">
+                    <p class="fs-15 fw-bold hallsView__images__icon__conformed-color mt-2">Booking Confirmed</p>
                 </div>
             </div>
             <div class="m-0 m-lg-10">
@@ -125,14 +130,17 @@
                 </div>
                 <div class="d-flex justify-content-between flex-column flex-md-row flex-lg-row">
                     <div class="d-flex align-items-center  flex-row">
-                        <button mat-flat-button class="hallsView__cancel fw-bold" *ngIf="!reserveBtn"
+                        <button mat-flat-button class="cancel fw-bold border rounded-pill" *ngIf="!reserveBtn"
                             (click)="cancelReservation()">Cancel</button>
-                        <button mat-flat-button class="hallsView__reserve" *ngIf="reserveBtn"
+                        <button mat-flat-button class="reserve border rounded-pill" *ngIf="reserveBtn"
                             (click)="reserve(item)">Select</button>
                         <span class="ms-2 hallsView__articles fw-bold" (click)="addArticles()">Add
                             Articles</span>
+                        <span class="ms-2 hallsView__articles fw-bold" (click)="chooseMenu()">
+                            Choose Menu
+                        </span>
                     </div>
-                    <div class="d-flex align-items-center cursor p-2" (click)="getDetails()"><span class="fw-bold">Menu
+                    <div class="d-flex align-items-center cursor p-2" (click)="getDetails()"><span class="fw-bold">View
                             Details &rarr;</span></div>
                 </div>
             </div>

@@ -1,21 +1,16 @@
 @import '../../../styles/variable.scss';
 
-
-
-
 .article {
-
-    padding: 3vw;
 
     &__search {
         position: relative;
 
         &__search-input {
-            border-radius: 3px;
-            border: 1px solid white;
+            border-radius: gutter-sp(4);
+            border: gutter-sp(1) solid $lite-white;
             background-color: $gray;
-            min-height: 2rem;
-            width: 100%;
+            min-height:  gutter-sp(30);
+            width: $gutter-100per;
         }
 
         input:focus,
@@ -23,54 +18,30 @@
         select:focus {
             outline: none;
         }
+
         &__search-icon {
             position: absolute;
-            right: 6px;
-            top: 10px;
-            width: 20px;
-            height: 20px;
-            font-size: 19px;
-            cursor: pointer;
+            right: gutter-sp(6);
+            top: gutter-sp(8);
         }
     }
 
     .mat-mdc-table {
-        width: 100%;
-        height: 200px;
+        width: $gutter-100per;
+        height: gutter-sp(200);
         overflow: auto;
         box-shadow: none;
-       
-      
+
+
     }
-    .mat-mdc-cell{
+
+    .mat-mdc-cell {
         border-bottom-color: white;
     }
-    &__save-btn{
+
+    &__save-btn {
         background-color: $secondary-color;
         color: $lite-white;
     }
-  
-    // ::ng-deep .mat-checkbox-checked .mat-checkbox-background {
-    //     background-color: #4caf50 !important; /* Replace with your desired color */
-    //   }
 
-    // ::ng-deep .article-checkbox.mat-checkbox-checked .mat-checkbox-background {
-    //     background-color: green !important; /* Custom selected color */
-    //   }
-    // ::ng-deep .article-checkbox .mat-checkbox-ripple .mat-ripple-element {
-    //     background-color: green !important; /* Custom ripple color */
-    //   }
-      
-    //   .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
-    //     background-color: rgba(76, 175, 80, 0.5) !important; /* Ripple color */
-    //   }
-    
-    ::ng-deep .mat-checkbox.mat-checkbox-checked .mat-checkbox-background {
-        background-color: #4caf50 !important;
-      }
-      
-      ::ng-deep .mat-checkbox-ripple .mat-ripple-element {
-        background-color: rgba(76, 175, 80, 0.5) !important;
-      }
- 
 }

@@ -1,5 +1,5 @@
-<div class="article">
-    <div class="article__header d-flex justify-content-between align-items-center">
+<div class="article p-24">
+    <div class="article__header d-flex justify-content-between align-items-center mt-10">
         <div class="d-flex flex-column">
         <p class="fs-25 fw-bold my-2">Add Articles</p>
             <p>
@@ -12,8 +12,8 @@
         </div>
     </div>
     <div class="article__search">
-        <input class="article__search__search-input" autocomplete="off" placeholder="search for basic..." />
-        <mat-icon class="article__search__search-icon" (click)="doSomething()" fontIcon="search"></mat-icon>
+        <input class="article__search__search-input pl-10" autocomplete="off" placeholder="search for basic..." />
+        <mat-icon class="article__search__search-icon w-20 h-20 fs-19" role="button" (click)="doSomething()" fontIcon="search"></mat-icon>
     </div>
     <div class="mt-20 mb-20">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">

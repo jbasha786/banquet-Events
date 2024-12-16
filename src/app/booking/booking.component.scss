@@ -4,17 +4,17 @@
 .booking {
 
     &__model {
-        height: 70vh;
+        height: $gutter-70vh;
         overflow-y: auto;
-        scrollbar-width: 5vw;
+        scrollbar-width: gutter-vw(5);
     }
 
     &__process {
-        padding: 2vw;
-        width: 58vw;
+        padding: gutter-vw(2);
+        width: gutter-vw(58);
 
         .progress {
-            height: 8px;
+            height: gutter-sp(8);
 
             .progress-bar {
                 background-color: var(--primary-color);
@@ -22,45 +22,18 @@
         }
     }
 
-    &__btn {
-        padding: 1vw;
-        position: relative;
-
-        @media screen and (max-width: 576px) {
-            gap: 10px;
-        }
-    }
-
     .btn_cancel {
         background: $cancel-color-pink;
-        border-radius: 40px;
-        width: 150px;
-        height: 40px;
-
-        @media screen and (max-width: 576px) {
-            width: 100%;
-            margin-bottom: 10px;
-        }
     }
 
     .btn_back {
         color: $secondory-color;
-        border: 1px solid $secondory-color;
-        border-radius: 40px;
-        width: 150px;
-        height: 40px;
-
+        border: gutter-sp(1) solid $secondory-color;
     }
 
     .btn_next {
         color: $white;
         background: $secondory-color;
-        border-radius: 40px;
-        width: 150px;
-        height: 40px;
-        // @media screen and (max-width: 576px) {
-        //     width: 100%;
-        // }
     }
 
     .dialog-btns {

@@ -1,0 +1,78 @@
+@import '../../../styles/variable.scss';
+
+.menu_model {
+    .menu {
+        &__search {
+            position: relative;
+
+            &__search-input {
+                border-radius: gutter-sp(3);
+                border: gutter-sp(1) solid $gray;
+                background-color: $gray;
+                min-height:  gutter-sp(30);
+                width: $gutter-100per;
+            }
+
+            &__search-input::placeholder {
+                color: $footer-text-color;
+                padding-left: gutter-sp(22);
+            }
+
+            &__search-icon {
+                position: absolute;
+                left: gutter-sp(13);
+                top: gutter-sp(9);
+                color: $footer-text-color;
+                cursor: none;
+                pointer-events: none;
+            }
+
+        }
+
+        .mat-mdc-table {
+            box-shadow: none;
+            width: gutter-sp(500);
+            height: gutter-sp(200);
+            overflow: auto;
+        }
+
+        .table_header {
+            border-bottom: none;
+            padding: gutter-sp(0);
+            font-size: $gutter-16sp;
+        }
+
+        .table_data {
+            border: none;
+            padding: gutter-sp(0);
+        }
+
+        .mat-cell {
+            padding: gutter-sp(2);
+        }
+
+        .close_btn {
+            border: none;
+            background: none;
+            color: $quick-silver;
+        }
+
+        .menu_headings {
+            color: $booknow-pink;
+        }
+
+        .mat-mdc-dialog-surface .mdc-dialog__surface {
+            border-radius:  gutter-sp(12);
+        }
+
+        .mat-mdc-header-row {
+            height: fit-content;
+        }
+        &__save-btn{
+            background-color: $secondary-color;
+            color: $lite-white;
+        }
+
+    }
+
+}

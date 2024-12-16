@@ -2,14 +2,13 @@
 @import '../../custom-css/custom-material-colors.scss';
 
 .hallsView {
-    padding: 0vw 5vw;
-    // margin: auto;
+    padding:  gutter-vw(0)  gutter-vw(5);
 
     .hall-list {
-        border: 1px solid $footer-email-border;
-        border-radius: 5px;
+        border: gutter-sp(1) solid $footer-email-border;
+        border-radius:  gutter-sp(5);
         align-items: center;
-        height: 100%;
+        height: $gutter-100per;
 
         .font-color {
             color: $font-ash;
@@ -18,18 +17,13 @@
 
     &__card {
         .mat-mdc-form-field {
-            width: 100%;
-
+            width: $gutter-100per;
         }
 
         &__label-hall {
             color: $secondory-color;
         }
 
-        img {
-            height: 29px;
-            width: 33px;
-        }
     }
 
     &__images {
@@ -37,22 +31,22 @@
 
         &__icon {
             position: absolute;
-            top: 0px;
-            right: 0px;
-            left: 0px;
-            bottom: 0px;
+            top: gutter-sp(0);
+            right: gutter-sp(0);
+            left: gutter-sp(0);
+            bottom: gutter-sp(0);
             margin: 0 auto;
-            height: 100%;
-            width: 100%;
-            padding: 20px;
+            height: $gutter-100per;
+            width: $gutter-100per;
             text-align: center;
 
+            &__conformed-color {
+                color: green;
+            }
         }
 
         &__img {
-            width: 250px;
-            // width: auto;
-            // max-width: 100%;
+            width: gutter-sp(250);
             height: auto;
             flex: 1;
             object-fit: cover;
@@ -60,7 +54,7 @@
 
         @media (max-width: 991px) {
             &__img {
-                width: 100%;
+                width: $gutter-100per;
                 height: auto;
                 flex: 1;
                 object-fit: cover;
@@ -72,15 +66,13 @@
         color: var(--primary-color);
     }
 
-    &__reserve {
-        background-color: $green !important;
-        color: $white !important;
-        border-radius: 50vw;
+    .reserve {
+        background-color: $green-select;
+        color: white;
     }
 
-    &__cancel {
+    .cancel {
         border: 1px solid var(--primary-color);
-        border-radius: 50vw;
         color: var(--primary-color);
     }
 
@@ -89,7 +81,7 @@
     }
 
     &__image_desc {
-        max-width: 40%;
+        max-width: $gutter-40per;
         flex: 1 1 auto;
     }
 
@@ -102,7 +94,7 @@
     }
 
     ::ng-deep .mat-input-element {
-        font-size: 12px;
+        font-size: gutter-sp(12);
     }
 
     ::ng-deep .mat-mdc-form-field-subscript-wrapper {

@@ -16,6 +16,7 @@ import { EventGuestsService } from '../../services/event-guest/event-guests.serv
 import { EventDateSlotsService } from '../../services/event-date-slot/event-date-slots.service';
 import { ArticlesComponent } from '../../shared/components/articles/articles.component';
 import { ZindexService } from '../../../app/services/zindex.service';
+import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-menu.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -98,12 +99,22 @@ export class ListOfHallsComponent {
     const dialogRef = this.dialog.open(ArticlesComponent, {
       width: '800px',
       panelClass: 'fixed-dialog',
-      position: { top: '10px', left: '10px' }, 
+      // position: { top: '10px', left: '10px' }, 
     });
 
     dialogRef.afterClosed().subscribe(() => {
       this.zIndexService.setHeaderZIndex(1030);
     });
   }
- 
+
+
+  chooseMenu(){
+    this.dialog.open(ChooseMenuComponent, {
+      width: '100%',
+      height: '100%',
+      panelClass: 'choosemenu-dialog',
+      // position: { top: '10px', left: '10px' }, 
+    });
+  }
+
 }
