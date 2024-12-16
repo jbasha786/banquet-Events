@@ -586,11 +586,7 @@ css for scroll .fade {
 }
 
 @-o-keyframes mouse-wheel {
-  0% {
-    top: 1px;
-  }
-
-
+ 
 	0% {
 		top: gutter-sp(1);
 	}
@@ -614,9 +610,7 @@ css for scroll .fade {
 }
 
 @keyframes mouse-wheel {
-  0% {
-    top: 1px;
-  }
+ 
 
 
 	0% {
