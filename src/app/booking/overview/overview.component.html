@@ -1,120 +1,141 @@
 <div class="container overview">
-    <div class="d-flex">
+
+    <!-- Backbutton & title Section Start -->
+    <div class="d-flex align-items-center gap-3">
         <span class="overview__back"><mat-icon fontIcon="chevron_left"></mat-icon></span>
-        <span class="ms-3 fw-2">{{ItemDetails?.name}}</span>
+        <span class="fs-20 fs-lg-30">{{ItemDetails?.name}}</span>
     </div>
-    <div>
+
+    <div class="mt-10 mt-lg-15 mb-10 mb-lg-15">
         <span>{{ItemDetails?.desc}} | </span>
         <span>{{ItemDetails?.diamensions}} | </span>
         <span>{{ItemDetails?.status}} </span>
     </div>
-    <div class="row overview__imageSection position-relative">
-        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 overview__imageSection__main">
-            <img src="{{ItemDetails?.image}}" width="100%" alt="">
+    <!-- Backbutton & title Section End -->
+
+    <!-- Image Section Start -->
+    <div class="row overview__imageSection position-relative w-100 gap-4 gap-sm-4 gap-lg-0">
+        <div class="col-12 col-lg-8">
+            <img src="{{ItemDetails?.image}}" alt="Overview Image" width="100%">
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 overview__imageSection__sub">
-            <div class="overview__imageSection__sub__img1"><img src="{{ItemDetails?.image1}}" alt="" width="100%"></div>
-            <div class="overview__imageSection__sub__img2"><img class="mt-4" src="{{ItemDetails?.image2}}" alt=""
-                    width="100%"></div>
-        </div>
-        <div class="d-flex position-absolute align-items-center overview__imageSection__viewAll">
-            <mat-icon fontIcon="image"></mat-icon>
-            <span class="fv-1">View all photos</span>
-        </div>
-    </div>
-
-    <div class="row overview__content">
-        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-            <p class="fw-bold">{{ItemDetails?.deposite}}</p>
-            <p>{{ItemDetails?.depositeDesc}}</p>
-
-            <h3>Articles</h3>
-            <div *ngIf="data">
-                <table mat-table [dataSource]="data" class="mat-elevation-z8">
-                    <ng-container matColumnDef="name">
-                        <th mat-header-cell *matHeaderCellDef> Item Name </th>
-                        <td mat-cell *matCellDef="let element"> {{element?.name}} </td>
-                        <td mat-footer-cell *matFooterCellDef></td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="price">
-                        <th mat-header-cell *matHeaderCellDef> Price </th>
-                        <td mat-cell *matCellDef="let element">€ {{element?.price}} </td>
-                        <td mat-footer-cell *matFooterCellDef> </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="Qty">
-                        <th mat-header-cell *matHeaderCellDef> Qty </th>
-                        <td mat-cell *matCellDef="let element">{{element?.Qty}} </td>
-                        <td mat-footer-cell *matFooterCellDef>Total</td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="tPrice">
-                        <th mat-header-cell *matHeaderCellDef> Total Price </th>
-                        <td mat-cell *matCellDef="let element"> € {{element?.tPrice}} </td>
-                        <td mat-footer-cell *matFooterCellDef> € {{getTotalCost()}} </td>
-                    </ng-container>
-
-                    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-                    <tr mat-footer-row *matFooterRowDef="columnsToDisplay"></tr>
-                </table>
+        <div class="col-12 col-lg-4">
+            <div class="row subImages gap-lg-4">
+                <div class="col-6 col-lg-12"><img src="{{ItemDetails?.image1}}" alt="Drink Area" width="100%"></div>
+                <div class="col-6 col-lg-12"><img src="{{ItemDetails?.image2}}" alt="Hall" width="100%"></div>
+                <div class="d-flex position-absolute align-items-center overview__imageSection__viewAll">
+                    <mat-icon fontIcon="image" class="fs-12 fs-lg-16"></mat-icon>
+                    <span class="fs-12 fs-lg-16">View all photos</span>
+                </div>
             </div>
         </div>
+    </div>
+    <!-- Image Section End -->
 
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 overview__content__edit">
+    <!-- Description Section Start -->
+    <div class="row overview__content w-100 gap-4 gap-sm-4 gap-lg-0">
+        <div class="col-12 col-lg-8 overview__content__descSection">
+            <p class="title fs-14 fs-lg-26">{{ItemDetails?.deposite}}</p>
+            <p class="text">{{ItemDetails?.depositeDesc}}</p>
+            <app-amenities></app-amenities>
+        </div>
+        <div class="col-12 col-lg-4 overview__content__edit">
             <div class="overview__content__edit__section">
-                <div>
-                    <mat-form-field class="w-100">
-                        <mat-label>Guest</mat-label>
-                        <span matPrefix class="cursor"><mat-icon fontIcon="perm_identity"></mat-icon></span>
-                        <input type="text" matInput>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field class="w-100">
-                        <mat-label>Enter a date range</mat-label>
-                        <mat-date-range-input [rangePicker]="range">
-                            <input matStartDate placeholder="Start date">
-                            <input matEndDate placeholder="End date">
-                        </mat-date-range-input>
-                        <mat-datepicker-toggle matIconSuffix [for]="range"></mat-datepicker-toggle>
-                        <mat-date-range-picker #range></mat-date-range-picker>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field class="w-100">
-                        <mat-label>Duration</mat-label>
-                        <input matInput [ngxMatTimepicker]="eTime" />
-                        <ngx-mat-timepicker #eTime></ngx-mat-timepicker>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <div class="w-100 overview__content__edit__section__editArticle text-center fw-bold">Edit Articles
+                <div class="input-group mb-3 border-clr">
+                    <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/user.svg"
+                            alt="user" width="20"></span>
+                    <div class="form-floating">
+                        <input type="email" class="form-control border-clr-none" id="guestCount" placeholder="Guests" value="40 Adults, 12 Children">
+                        <label for="guestCount">Guests</label>
                     </div>
                 </div>
-                <div class="fv-3">€ 4200.00</div>
-                <p>Excluding taxes and fees</p>
-                <div class="overview__content__edit__section__reverse text-center"> Reserve</div>
+                <div class="dateSection">
+                    <div class="d-flex mb-3 align-items-center border-clr">
+                        <div class="input-group" id="datepicker">
+                            <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/calender.svg" alt="calender" width="20"></span>
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-clr-none" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
+                                <label for="guestCount">Check-in</label>
+                            </div>
+                        </div>
+                        <span class="spacebar"><p class="line"></p></span>
+                        <div class="input-group" id="datepicker">
+                            <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/calender.svg" alt="calender" width="20"></span>
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-clr-none" id="datepicker" placeholder="Guests" value="Tue, Apr 1, 2025">
+                                <label for="guestCount">Check-out</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-group mb-3 border-clr">
+                        <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/time.svg"
+                                alt="user" width="20"></span>
+                        <div class="form-floating">
+                            <select class="form-select border-clr-none" id="duration" aria-label="Default select example">
+                                <ng-container *ngFor="let item of slots">
+                                    <option [value]="item.id">{{item.shift}}</option>
+                                </ng-container>
+                            </select>
+                            <label for="duration">Duration</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-3 w-100">
+                    <div class="fs-14 fs-lg-18 overview__content__edit__section__editArticle text-center">Add Articles
+                    </div>
+                    <div class="fs-14 fs-lg-18 overview__content__edit__section__editArticle text-center">Choose Menu
+                    </div>
+                </div>
+                <div class="fs-20 fs-lg-30 pt-20">€ 4200.00</div>
+                <p class="fs-12">Excluding taxes and fees</p>
+                <div class="fs-14 fs-lg-20 mt-20 overview__content__edit__section__reverse text-center"> Reserve</div>
             </div>
+        </div>
+    </div>
+    <!-- Description Setion End -->
+
+    <div class="rating">
+        <div class="d-flex align-items-center justify-content-center">
+            <img src="../../../assets/images/rating/leaf.svg" alt="left-leaf">
+            <p class="fs-20 fs-lg-50">5.0</p>
+            <img src="../../../assets/images/rating/leaf-right.svg">
+        </div>
+        <h4 class="text-center fs-16 fs-lg-30 rating__title">Guest favourite</h4>
+        <p class="text-center rating__desc">One of the most loved homes on rating, reviews and
+            reliability</p>
+        <div class="rating__sections d-flex justify-content-between d-none d-md-flex">
+            <ng-container *ngFor="let rat of ratingSection">
+                <div class="d-flex flex-column rating__sections__item gap-10">
+                    <div class="fw-bold">{{rat.name}}</div>
+                    <div *ngIf="rat.id === 1">
+                        <div *ngFor="let value of ratingValues" class="d-flex align-items-center gap-10">
+                            <p class="m-0">{{ value }}</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="100" [style.width.%]="value === 5 ? 100 : 0"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="rat.id !== 1" class="fw-bold fs-16 fs-lg-30">{{rat.rating}}</div>
+                    <img *ngIf="rat.id !== 1" class="mat-4 icons" [src]="rat.image" [alt]="rat.name">
+                </div>
+            </ng-container>
         </div>
     </div>
 
     <div class="mt-40">
-        <app-amenities></app-amenities>
-    </div>
-
-    <div class="mt-40">
+        <h3 class="fs-20 fs-lg-30">Things to know</h3>
         <app-things-to-know></app-things-to-know>
     </div>
 
     <div class="mt-20 mb-20">
-        <h3 class="fv-2 mb-20">Where you’ll be</h3>
+        <h3 class="fs-20 fs-lg-30">Where you’ll be</h3>
         <app-google-map></app-google-map>
     </div>
 
     <div class="mt-20 mb-20">
-        <h2 class="mb-20 fv-2">Meet your host</h2>
+        <h2 class="fs-20 fs-lg-30">Meet your host</h2>
         <app-host-details [hostInfo]="hostDetails"></app-host-details>
     </div>
 </div>

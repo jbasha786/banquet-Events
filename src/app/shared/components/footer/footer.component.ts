@@ -16,7 +16,7 @@ export class FooterComponent {
     },
     {
       title: 'Travel Professionals',
-      links: ['Partners', 'Travel Agents', 'Travel Agents'],
+      links: ['Partners', 'Travel Agents'],
     },
     {
       title: 'Legal',

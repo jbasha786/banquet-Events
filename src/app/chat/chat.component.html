@@ -1,0 +1,86 @@
+<div (click)="OnClick()" class="chatSection">
+  <img
+    src="../../assets/images/chat/chat-help.svg"
+    alt="helpicon"
+    class="chatIcon"
+  />
+</div>
+
+<div *ngIf="isChatBotVisible" class="chat-bot w-310 w-sm-400">
+  <div
+    class="title-container d-flex justify-content-between align-items-center mb-20"
+  >
+    <div class="title d-flex flex-column gap-1">
+      <p class="header fs-20 lh-22 mb-0">Help</p>
+      <p class="header-call fs-14 mb-0">Call Toll Free: 0592-356 000</p>
+    </div>
+    <img
+      src="../../assets/images/chat/close-btn.svg"
+      width="15"
+      class="close-btn"
+      (click)="onClose()"
+    />
+  </div>
+
+  <div class="message-area">
+    <div
+      class="bot-message d-flex justify-content-center align-items-center gap-10"
+    >
+      <img
+        src="../../assets/images/chat/chat-debonte.svg"
+        alt=""
+        class="msgicon"
+      />
+      <p class="bot-msg fs-14 fw-medium lh-20 mb-0">
+        Hi, <br />
+        how can I assist you today?
+      </p>
+    </div>
+
+    <div class="user-message mt-20 mb-20 fw-regular">
+      <p class="user-msg fs-14 lh-20 mb-0">
+        I would like to book Birthda event on 13-12-2024 on 5pm onwards.
+      </p>
+    </div>
+
+    <div
+      class="bot-message d-flex justify-content-center align-items-center gap-10"
+    >
+      <img
+        src="../../assets/images/chat/chat-debonte.svg"
+        alt=""
+        class="msgicon"
+      />
+      <p class="bot-msg fs-14 fw-medium lh-20 mb-0">
+        Okay thats great,<br />How many Guests need to Accomodate?
+      </p>
+    </div>
+
+    <div class="user-message mt-20 mb-20 fw-regular">
+      <p class="user-msg fs-14 lh-20 mb-0">50 Adults, 12 children, 10 kids</p>
+    </div>
+    <div class="btn-arrange d-flex flex-column gap-10">
+        <div class="bot-message d-flex gap-10 align-items-start">
+          <img src="../../assets/images/chat/chat-debonte.svg" alt="" class="msgicon" />
+          <div class="message-content d-flex flex-column gap-10">
+            <p class="bot-msg fs-14 fw-medium lh-20 mb-0">
+              That’s cool,<br />
+              Here are the Available Rooms
+            </p>
+            <button class="chat__btn">Review and Proceed</button>
+          </div>
+        </div>
+      </div>
+      
+      
+  </div>
+
+  <div class="text">
+    <input type="text" placeholder="Type here..." class="inputtext" />
+    <img
+      src="../../assets/images/chat/chat-send-btn.svg"
+      alt=""
+      class="sendicon"
+    />
+  </div>
+</div>
