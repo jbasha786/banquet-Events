@@ -161,21 +161,7 @@
 <div class="promotions">
   <p class="fs-24 fw-medium">De Bonte Wever Deals & Promotions</p>
   <p class="fgs-14">Exclusive savings for your next stay.</p>
-    <div class="tagList">
-      <div class="slider">
-        <div class="items">
-          @for(image of promotionsInfo; track $index){
-          <a class="item" href="{{ image.href }}">
-            <img src="{{ image.src }}" alt="" />
-          </a>
-          } @for(image of promotionsInfo; track $index){
-          <a class="item" href="{{ image.href }}">
-            <img src="{{ image.src }}" alt="" />
-          </a>
-          }
-        </div>
-      </div>
-    </div>
+  <app-upcoming-events-list></app-upcoming-events-list>
 </div>
 <!-- promotions section End -->
 <!-- Member section start -->
