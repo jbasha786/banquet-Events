@@ -13,6 +13,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
+import { ChatComponent } from '../chat/chat.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,6 +24,7 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
     CorporateMeetingComponent,
     UpcomingEventsListComponent,
     FAQComponent,
+    ChatComponent,
     RouterLink,
     RouterModule,
     MatDatepickerModule,
@@ -43,6 +45,7 @@ export class DashboardComponent {
   personalizedInfo : any;
   promotionsInfo: any;
   shortDesc: boolean = true;
+ 
 
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -102,4 +105,7 @@ export class DashboardComponent {
   readMore(personalInfo: any) {
     personalInfo.showFullContent = !personalInfo.showFullContent;
   }
+
+ 
+ 
 }

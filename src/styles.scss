@@ -161,7 +161,11 @@ html {
   .w-#{$i} {
     width: 0px + $i;
   }
-
+  .w-sm-#{$i} {
+    @media (min-width: 425px) {
+      width: #{$i}px;
+    }
+  }
   .w-lg-#{$i} {
     @media (min-width: 992px) {
       width: #{$i}px;
