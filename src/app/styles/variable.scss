@@ -43,6 +43,9 @@ $add-remove-btn-clr: #eeedf2;
 @function gutter-vw($key) {
   @return #{$key}vw;
 }
+@function gutter-vh($key) {
+  @return #{$key}vh;
+}
 @function gutter-rem($key) {
   @return #{$key}rem; 
 }

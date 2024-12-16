@@ -13,7 +13,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
-
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -28,7 +28,8 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    CommonModule],
+    CommonModule,
+    CarouselModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -39,11 +40,22 @@ export class DashboardComponent {
   arrangementsInfo: any;
   experienceInfo: any;
   subbannerInfo: any;
-  momentInfo:any;
-  personalizedInfo : any;
+  momentInfo: any;
+  personalizedInfo: any;
   promotionsInfo: any;
   shortDesc: boolean = true;
 
+  customOptionsforPersonalizedInfo: OwlOptions = {
+    loop: true,
+    autoplay: true,
+    center: false,
+    dots: false,
+    autoHeight: true,
+    autoWidth: true,
+    items: 4,
+    margin: 20
+  };
+  
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
     private defaultService: DefaultService
