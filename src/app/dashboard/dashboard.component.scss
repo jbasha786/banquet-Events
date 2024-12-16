@@ -392,20 +392,9 @@
     }
   }
 }
-
+}
 //step in to wonders moment
-.moment__card ::ng-deep .moment__card__start .card .card-body {
-  border-bottom-right-radius: gutter-sp(8);
-  border-bottom-left-radius: gutter-sp(8);
-}
-.moment__card ::ng-deep .moment__card__start .card .card-img-top {
-  border-top-right-radius: gutter-sp(8);
-  border-top-left-radius: gutter-sp(8);
-}
-.moment__card ::ng-deep .moment__card__start .card {
-  border-top-right-radius: gutter-sp(8);
-  border-top-left-radius: gutter-sp(8);
-}
+
 .moment::before {
 
 	position: absolute;
@@ -418,7 +407,18 @@
 	left: gutter-sp(0);
 	width: gutter-per(100);
 }
-
+.moment__card ::ng-deep .moment__card__start .card .card-body {
+	border-bottom-right-radius: gutter-sp(8);
+	border-bottom-left-radius: gutter-sp(8);
+  }
+  .moment__card ::ng-deep .moment__card__start .card .card-img-top {
+	border-top-right-radius: gutter-sp(8);
+	border-top-left-radius: gutter-sp(8);
+  }
+  .moment__card ::ng-deep .moment__card__start .card {
+	border-top-right-radius: gutter-sp(8);
+	border-top-left-radius: gutter-sp(8);
+  }
 .moment {
 	padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
 
@@ -434,10 +434,9 @@
 	}
 
 }
-
+//faq
 .faq-section {
-
-	padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
+  padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 }
 
 css for scroll .fade {
@@ -690,3 +689,4 @@ css for scroll .fade {
     opacity: 1;
   }
 }
+
