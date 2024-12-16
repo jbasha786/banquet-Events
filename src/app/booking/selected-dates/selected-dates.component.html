@@ -1,5 +1,5 @@
 <div class="selction_dates d-flex flex-column justify-content-center align-items-center col-10 m-auto">
-    <p class="selction_dates__title text-center text-center fs-32 fw-bold">When?</p>
+    <p class="selction_dates__title text-center text-center fs-24 fw-500">When?</p>
     <div class="card col-sm-12 col-lg-6 p-2 selction_dates__content border-0">
         <hr>
         <div class="row selction_dates__calender w-100 m-auto d-flex justify-content-center align-items-center flex-column flex-lg-row flex-nowrap" *ngIf="specificDaysView">
@@ -13,7 +13,7 @@
                 <mat-selection-list #slot [multiple]="false" class="slots_radio" (selectionChange)="slotsChange($event)">
                     @for (slot of slots; track $index) {
                     <div class="card m-10 align-items-center">
-                        <mat-list-option [value]="slot">{{slot.shift}}</mat-list-option>
+                        <mat-list-option [value]="slot"><span  class="fs-13 fw-400">{{slot.shift}}</span></mat-list-option>
                     </div>
                     }
                 </mat-selection-list>

@@ -1,5 +1,5 @@
-<div class="planing col-md-10 col-xl-8 m-md-auto mb-10">
-    <p class="text-center fs-32 fw-bold">What type of event are you planning?</p>
+<div class="planing col-md-12 col-lg-12 col-xl-10 m-md-auto mb-10">
+    <p class="text-center fs-24 fw-500">What type of event are you planning?</p>
     <div class="">
         <div class="planing__type d-flex justify-content-center">
             <mat-selection-list #plan [multiple]="false" class="row col-sm-10 col-md-8 col-lg-8 planning-radio" (selectionChange)="selChange($event)">
@@ -12,7 +12,7 @@
                                 <img class="h-18 align-text-bottom" src="{{plan.src}}" alt="{{plan.name}}">
                             </div>
                             <div>
-                                <span class="ms-2 fs-18">{{plan.name}}</span>
+                                <span class="ms-2 fs-16">{{plan.name}}</span>
                             </div>
                            </div>
                         </mat-list-option>
