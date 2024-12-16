@@ -2,11 +2,11 @@
 @import '../../custom-css/custom-material-colors.scss';
 
 .hallsView {
-    padding:  gutter-vw(0)  gutter-vw(5);
+    padding: gutter-vw(0) gutter-vw(5);
 
     .hall-list {
         border: gutter-sp(1) solid $footer-email-border;
-        border-radius:  gutter-sp(5);
+        border-radius: gutter-sp(5);
         align-items: center;
         height: gutter-per(100);
 
@@ -72,7 +72,7 @@
     }
 
     .cancel {
-        border: 1px solid var(--primary-color);
+        border: gutter-sp(1) solid var(--primary-color);
         color: var(--primary-color);
     }
 

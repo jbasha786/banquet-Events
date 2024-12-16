@@ -98,7 +98,6 @@ export class ListOfHallsComponent {
   addArticles() {
     this.zIndexService.setHeaderZIndex(1000);
     const dialogRef = this.dialog.open(ArticlesComponent, {
-      width: '800px',
       panelClass: 'fixed-dialog',
       position: { top: '0' }, 
     });

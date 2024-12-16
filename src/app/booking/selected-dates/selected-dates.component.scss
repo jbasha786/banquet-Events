@@ -19,7 +19,7 @@
         }
     }
 
-    ::ng-deep .mat-mdc-list-option .mdc-radio {
-        display: none !important;
+    .slots_radio ::ng-deep .mat-mdc-list-option .mdc-radio {
+        display: none;
     }
 }

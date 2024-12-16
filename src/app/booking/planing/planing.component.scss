@@ -13,15 +13,15 @@
     }
 
     &__type {
-        padding: 1vw;
+        padding: gutter-vw(1);
 
         .mat-mdc-list-base {
-            display: flex !important;
+            display: flex;
         }
 
         &__section {
-            border: 1px solid $border-silver;
-            border-radius: 8px;
+            border: gutter-sp(1) solid $border-silver;
+            border-radius: gutter-sp(8);
             cursor: pointer;        
         }
         &__section:hover {
@@ -30,7 +30,7 @@
           }
     }
 
-    ::ng-deep .mat-mdc-list-option .mdc-radio {
-        display: none !important;
+    .planning-radio ::ng-deep .mat-mdc-list-option .mdc-radio {
+        display: none ;
     }
 }
