@@ -53,14 +53,4 @@ export class SelectedDatesComponent {
   slotsChange(event: MatSelectionListChange) {
     this.eventDSService.setAvailableSlots(event.options[0].value);
   }
-
-  // specificDates() {
-  //   this.specificDaysView = true;
-  //   this.flexibleDatesView = false;
-  // }
-
-  // flexibleDates() {
-  //   this.specificDaysView = false;
-  //   this.flexibleDatesView = true;
-  // }
 }
