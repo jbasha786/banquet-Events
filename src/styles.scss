@@ -42,6 +42,7 @@ html {
   .mb-#{$i} {
     margin-bottom: 0px + $i;
   }
+
   .mb-lg-#{$i} {
     @media (min-width: 992px) {
       margin-bottom: #{$i}px !important;
@@ -139,7 +140,7 @@ html {
   }
 
   .pl-#{$i} {
-    padding-left: 0px + $i;
+    padding-left: 0px + $i !important;
   }
 
   .pr-#{$i} {

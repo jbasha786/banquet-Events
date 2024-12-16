@@ -3,29 +3,24 @@
   <div class="banner__image relative d-flex flex-column justify-content-end justify-content-md-center">
     <div class="banner__image__content text-center absolute bottom-0 mb-20">
       <h2 class="banner__image__content__title lh-md-50">
-        <span class="welkom fw-bold fs-24 fs-lg-30">{{ bannerInfo.title }}</span
-        ><br />
+        <span class="welkom fw-bold fs-24 fs-lg-30">{{ bannerInfo.title }}</span><br />
         <span class="company-title fs-24 fs-lg-50 fw-bold">{{
           bannerInfo.subTitle
-        }}</span>
+          }}</span>
       </h2>
       <p class="banner__image__content__desc fs-14 fs-lg-20 fw-regular">
         {{ bannerInfo.desc }}
       </p>
       <p></p>
       <div>
-        <button
-          class="banner__image__content__btn fs-20 fw-bold"
-          (click)="continueBooking('300ms', '300ms')"
-        >
+        <button class="banner__image__content__btn fs-20 fw-bold" (click)="continueBooking('300ms', '300ms')">
           {{ bannerInfo.buttonName }}
         </button>
       </div>
     </div>
     <div
       class="banner__image__downIcon position-absolute d-flex justify-content-end align-items-center transform d-none d-md-flex cursor"
-      (click)="scrollToSection('events')"
-    >
+      (click)="scrollToSection('events')">
       <div class="">
         <div class="mouse">
           <div class="wheel"></div>
@@ -44,14 +39,8 @@
       @for (obj of subbannerInfo; track $index) {
       <div class="col-12 col-lg-4">
         <div class="subbanner__item position-relative">
-          <img
-            class="subbanner__image"
-            src="{{ obj.src }}"
-            alt="subbanner Image"
-          />
-          <p
-            class="subbanner__text position-absolute text-center fs-30 fw-bold"
-          >
+          <img class="subbanner__image" src="{{ obj.src }}" alt="subbanner Image" />
+          <p class="subbanner__text position-absolute text-center fs-30 fw-bold">
             {{ obj.desc }}
           </p>
         </div>
@@ -71,18 +60,24 @@
     Our <span class="arrangements__color">Arrangements</span>
   </p>
   <div class="row g-6">
-    @for( obj of arrangementsInfo; track $index){
+    @for( arr of arrangementsInfo; track $index){
     <div class="col-12 col-lg-4">
       <div class="card no-border gap-26">
-        <img src="{{ obj.src }}" alt="Card Image" class="card-image" />
+        <img src="{{ arr.src }}" [alt]="arr.name" class="image" />
         <div class="card-content d-flex flex-column gap-20">
-          <p class="card-heading fs-18 fw-medium mb-0">{{ obj.name }}</p>
-          <p class="card-text fs-14 lh-34 mb-0">{{ obj.desc }}</p>
-          <strong
-            ><button class="card-button readmore-btn fs-14 fw-medium p-0">
-              {{ obj.button }}
-            </button></strong
-          >
+          <p class="heading fs-18 fw-medium mb-0" [title]="arr.name">{{ arr.name }}</p>
+          <ng-container *ngIf="!arr.showFullContent">
+            <p class="text fs-14 lh-34 mb-0">{{ arr.desc }}</p>
+            <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(arr)">
+              Read more ->
+            </p>
+          </ng-container>
+          <ng-container *ngIf="arr.showFullContent">
+            <p class=" fs-14 lh-34 mb-0">{{ arr.desc }}</p>
+            <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(arr)">
+              Read less ->
+            </p>
+          </ng-container>
         </div>
       </div>
     </div>
@@ -102,73 +97,32 @@
       villa or overlooking with your loved persons.
     </p>
     <div class="section">
-      <div class="slider">
-        <div class="items">
-          @for(carousel of personalizedInfo; track $index){
-          <div class="item no-border gap-26">
-            <div class="h-300 w-300">
-              <img
-                src="{{ carousel.src }}"
-                [alt]="carousel.name"
-                class="image"
-              />
+      <owl-carousel-o [options]="customOptionsforPersonalizedInfo">
+        <ng-container *ngFor="let personal of personalizedInfo">
+          <ng-template class="slider" carouselSlide [id]="personal.id">
+            <div class="item no-border gap-26">
+              <div class="">
+                <img src="{{ personal.src }}" [alt]="personal.name" class="image" />
+              </div>
+              <div class="d-flex flex-column gap-20">
+                <p class="fs-18 fw-500 mb-0 title" [title]="personal.name">{{ personal.name }}</p>
+                <ng-container *ngIf="!personal.showFullContent">
+                  <p class="desc fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
+                  <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(personal)">
+                    Read more ->
+                  </p>
+                </ng-container>
+                <ng-container *ngIf="personal.showFullContent">
+                  <p class="fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
+                  <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(personal)">
+                    Read less ->
+                  </p>
+                </ng-container>
+              </div>
             </div>
-            <div class="d-flex flex-column gap-20">
-              <p class="fs-18 fw-500 mb-0">{{ carousel.name }}</p>
-              <ng-container *ngIf="!carousel.showFullContent">
-                <p class="desc fs-14 lh-34 mb-0">{{ carousel.shortDesc }}</p>
-                <p
-                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
-                  (click)="readMore(carousel)"
-                >
-                  Read more ->
-                </p>
-              </ng-container>
-              <ng-container *ngIf="carousel.showFullContent">
-                <p class="fs-14 lh-34 mb-0">{{ carousel.fulldDesc }}</p>
-                <p
-                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
-                  (click)="readMore(carousel)"
-                >
-                  Read less ->
-                </p>
-              </ng-container>
-            </div>
-          </div>
-          } @for(personal of personalizedInfo; track $index){
-          <div class="item no-border gap-26">
-            <div class="h-300 w-300">
-              <img
-                src="{{ personal.src }}"
-                [alt]="personal.name"
-                class="image"
-              />
-            </div>
-            <div class="d-flex flex-column gap-20">
-              <p class="fs-18 fw-500 mb-0">{{ personal.name }}</p>
-              <ng-container *ngIf="!personal.showFullContent">
-                <p class="desc fs-14 lh-34 mb-0">{{ personal.shortDesc }}</p>
-                <p
-                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
-                  (click)="readMore(personal)"
-                >
-                  Read more ->
-                </p>
-              </ng-container>
-              <ng-container *ngIf="personal.showFullContent">
-                <p class="fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
-                <p
-                  class="card-button readmore-btn fs-14 fw-bold p-0 cursor"
-                  (click)="readMore(personal)"
-                >
-                  Read less ->
-                </p>
-              </ng-container>
-            </div>
-          </div>
-          }
-        </div>
-      </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
     </div>
   </div>
 </div>
@@ -189,11 +143,7 @@
   <div class="experience__section row">
     @for (obj of experienceInfo; track $index) {
     <div class="col-6 col-md-4 col-lg-2 p-0 experience__item">
-      <img
-        class="experience__image"
-        src="{{ obj.src }}"
-        alt="Experience Image"
-      />
+      <img class="experience__image" src="{{ obj.src }}" alt="Experience Image" />
       <div class="experience__overlay">
         <p class="experience__text fs-14 fw-bold">Your Text Here</p>
       </div>
@@ -211,7 +161,6 @@
 <div class="promotions">
   <p class="fs-24 fw-medium">De Bonte Wever Deals & Promotions</p>
   <p class="fgs-14">Exclusive savings for your next stay.</p>
-  <div class="">
     <div class="tagList">
       <div class="slider">
         <div class="items">
@@ -227,7 +176,6 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
 <!-- promotions section End -->
 <!-- Member section start -->
@@ -265,12 +213,14 @@
     <div class="row g-4">
       @for( obj of momentInfo; track $index){
       <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card">
+
         <app-card class="moment__card__start"
           picture="{{ obj.src }}"
           title="{{ obj.name }}"
           desc="{{ obj.desc }}"
           btn="{{ obj.button }}"
         ></app-card>
+
       </div>
       }
     </div>
@@ -285,3 +235,4 @@
 <!--chat-->
 <app-chat></app-chat>
 <!--chat-->
+

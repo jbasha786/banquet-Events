@@ -37,33 +37,29 @@ import { HostDetailsComponent } from './host-details/host-details.component';
 export class OverviewComponent {
 
   ItemDetails: any
-  articlesList: any;
   hostDetails: any;
-  displayedColumns: string[] = ['name', 'price', 'Qty', 'tPrice'];
-  columnsToDisplay: string[] = this.displayedColumns.slice();
-  data: any[] = [];
+  ratingSection: any;
+  ratingValues: number[] = [5, 4, 3, 2, 1];
+  slots = [
+    { id: 1, shift: "8AM - 11 PM" },
+    { id: 2, shift: "12AM - 3 PM" },
+    { id: 3, shift: "4PM - 7 PM" },
+    { id: 4, shift: "8AM - 11 PM" },
+  ]
   constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {
     this.getInitialData();
-
   }
-
 
   getInitialData() {
     this.defaultService.getJSON().subscribe(result => {
       this.ItemDetails = result?.overview;
-      this.data = result?.articles;
       this.hostDetails = result?.hostDetails[0];
+      this.ratingSection = result?.ratingSection;
     })
   };
 
-  getTotalCost() {
-    let final = 0
-    this.data.map(t => t.tPrice).map((acc, value) => {
-      final = final + acc
-    });
-    return final;
-  }
+
 
 }

@@ -23,6 +23,12 @@ $black-overlay: rgba(0, 0, 0, 0.9);
 $light-overlay: rgba(9, 9, 9, 0.1);
 $text-gradient-clr1: #AD298A;
 $text-gradient-clr2: #F17DD9;
+$rev-gradient-clr1: #8F1CB8;
+$rev-gradient-clr2: #C82992;
+$input-border:#C7C7C7;
+$black: #000000;
+$white: #ffffff;
+$host-security-clr: #de1162;
 $footer-black: #29343D;
 $footer-logo-background: #222D36; 
 $footer-text-color: #bec2c4;
@@ -32,14 +38,17 @@ $chat-overlay: #0000004d;
 $chat-text-clr:#081A51;
 $chat-input-background:#edf8ff;
 
-
-
-
 @function gutter-sp($key) {
   @return #{$key}px;
 }
 @function gutter-vw($key) {
   @return #{$key}vw;
+}
+@function gutter-vh($key) {
+  @return #{$key}vh;
+}
+@function gutter-rem($key) {
+  @return #{$key}rem; 
 }
 @function gutter-per($key) {
   @return $key * 1%; 
