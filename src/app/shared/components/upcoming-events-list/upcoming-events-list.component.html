@@ -1,11 +1,9 @@
-<div class="container">
-    <div class="tag-list">
-        <div class="loop-slider">
-            <div class="inner">
-                @for(image of promotionsInfo; track $index){
-                <a class="tag" href="{{image.href}}"><img src="{{image.src}}" alt=""></a>
-                }
-            </div>
+<div class="tag-list">
+    <div class="loop-slider">
+        <div class="inner">
+            @for(image of promotionsInfo; track $index){
+            <a class="tag" href="{{image.href}}"><img src="{{image.src}}" alt=""></a>
+            }
         </div>
     </div>
 </div>

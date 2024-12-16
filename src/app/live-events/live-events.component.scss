@@ -26,7 +26,7 @@
         }
 
         .about {
-            padding: gutter-vw(3) gutter-vw(0);
+            padding: gutter-vw(4) gutter-vw(0);
 
             .desc {
                 text-align: justify;
@@ -76,14 +76,18 @@
                 }
             }
         }
+
+        .amenities, .thingstoKnow, .eventLocation, .contectPerson {
+            padding: gutter-vw(0) gutter-vw(0) gutter-vw(6);
+        }
     }
 
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    right: 3vw;
-    overflow: hidden;
-    z-index: 10;
-}
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     right: 3vw;
+//     overflow: hidden;
+//     z-index: 10;
+// }

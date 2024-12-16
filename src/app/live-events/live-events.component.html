@@ -5,14 +5,14 @@
 
     <div class="event-item__overview">
         <div class="row">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-6">
                 <div class="event-item__overview__img">
                     <img width="100%" height="100%" src="../../../../assets/images/events/events-item.svg"
                         alt="event Item">
                 </div>
                 <div class="about">
-                    <h2>About this event</h2>
-                    <p class="lh-30 desc">It is a long established fact that a reader will be distracted by the readable content of a page
+                    <p class="fs-20 fs-lg-30">About this event</p>
+                    <p class="lh-34 desc">It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. It is a long established fact that a reader will be distracted by
                         the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
                         that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
@@ -21,40 +21,40 @@
                         will uncover many web sites still in their infancy.</p>
                 </div>
                 <div class="conditions">
-                    <h2>Important conditions and information</h2>
+                    <p class="fs-20 fs-lg-30">Important conditions and information</p>
                     <ul class="desc">
-                        <li>Rates exclude tourist tax (€1.50 per person per night in 2024, 2025 rates not yet known) and
+                        <li class="lh-28">Rates exclude tourist tax (€1.50 per person per night in 2024, 2025 rates not yet known) and
                             reservation fees of €14.95 per booking.</li>
-                        <li>Rates do not include ‘Event fee’ (cost directly to the organisation) € 25,- per person</li>
-                        <li> Cost of pre-night: € 80,- per person per night </li>
-                        <li>Based on availability and double occupancy.</li>
-                        <li>Children aged 3 to 12 years receive a 50% discount. Children aged 0 to 2 years: €22.50 per
+                        <li class="lh-28">Rates do not include ‘Event fee’ (cost directly to the organisation) € 25,- per person</li>
+                        <li class="lh-28"> Cost of pre-night: € 80,- per person per night </li>
+                        <li class="lh-28">Based on availability and double occupancy.</li>
+                        <li class="lh-28">Children aged 3 to 12 years receive a 50% discount. Children aged 0 to 2 years: €22.50 per
                             stay, including a prepared crib.</li>
-                        <li>If you stay with fewer than the required number of persons in a double room, triple room,
+                        <li class="lh-28">If you stay with fewer than the required number of persons in a double room, triple room,
                             family room, or an XL room, a surcharge (€39.50 per unused bed per night) will be charged
                             due to under-occupancy</li>
                     </ul>
                 </div>
-                <div class="mt-40">
+                <div class="amenities">
                     <app-amenities></app-amenities>
                 </div>
-                <div class="mt-40">
-                    <h2>Things to know</h2>
+                <div class="thingstoKnow">
+                    <p class="fs-20 fs-lg-30">Things to know</p>
                     <app-things-to-know></app-things-to-know>
                 </div>
-                <div class="mt-40">
-                    <h2>Event Location</h2>
+                <div class="eventLocation">
+                    <p class="fs-20 fs-lg-30">Event Location</p>
                     <app-google-map></app-google-map>
                 </div>
-                <div class="mt-40">
-                    <h2>Our Contact Person</h2>
-                    <app-host-details [hostInfo]="hostDetails"></app-host-details>
+                <div class="contectPerson">
+                    <p class="fs-20 fs-lg-30">Our Contact Person</p>
+                    <app-host-details [hostInfo]="hostDetails" [isEventScreen]="true"></app-host-details>
                 </div>
             </div>
             <div #stickyMenuForTickets [class.sticky]="sticky" class="col-12 col-md-4 tickets">
                 <mat-card class="p-20">
                     <p class="date fs-10">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
-                    <h2 class="title fw-bold fs-20 fs-lg-30">WPD World Cup 2024</h2>
+                    <p class="title fw-bold fs-20 fs-lg-30">WPD World Cup 2024</p>
                     <p class="desc fs-14">Organized by world para darts association</p>
                     <p class="numoftickets fs-14">Tickets Available: {{numberOfTickets}}</p>
                     <div class="d-flex justify-content-between qty">
@@ -83,7 +83,7 @@
             </div>
         </div>
         <div #removeStickyMenuForTickets class="mt-20 mb-40">
-            <h2>Up coming events</h2>
+            <p class="fs-20 fs-lg-30">Up coming events</p>
             <p>Starts from Jan 2025.</p>
             <app-upcoming-events-list [promotionsInfo]="promotionsInfo"></app-upcoming-events-list>
         </div>
