@@ -1,6 +1,7 @@
 @use "@angular/material" as mat;
 @import "./app/styles/variable.scss";
 @import "./app/custom-css/custom-material-colors.scss";
+@import 'typeface-poppins/index.css';
 @include mat.core();
 $VipsBanquetOffers-primary: mat.define-palette(mat.$indigo-palette);
 $VipsBanquetOffers-accent: mat.define-palette(mat.$pink-palette,
@@ -19,6 +20,7 @@ $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetO
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif ;
 }
 
 @for $i from 0 through 500 {
