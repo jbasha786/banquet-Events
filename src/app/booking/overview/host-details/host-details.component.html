@@ -1,4 +1,4 @@
-<div class="container" *ngIf="!isEventScreen">
+<div class="" *ngIf="!isEventScreen">
     <div class="row hostDetails gap-4 gap-sm-0">
         <div class="col-12 col-md-6 col-lg-4 pl-0">
             <mat-card class="hostDetails__card">
@@ -43,11 +43,11 @@
     </div>
 </div>
 
-<div class="container" *ngIf="isEventScreen">
+<div class="" *ngIf="isEventScreen">
     <div class="row hostDetails gap-4 gap-sm-0">
-        <div class="col-12 pl-0">
+        <div class="col-12 p-0">
             <mat-card class="hostDetails__card">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column flex-sm-column flex-lg-row gap-20">
                     <div class="d-flex align-items-center justify-content-center text-center flex-column">
                         <div class="hostDetails__card__image d-flex align-items-center justify-content-center">
                             <img class="user" src="../../../../assets/images/member/member.svg" alt="">
@@ -60,7 +60,7 @@
                             <p>SuperHost</p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-8">
+                    <div class="">
                         <h4 class="fs-16 fs-lg-30">{{hostInfo?.name}}</h4>
                         <p>{{hostInfo?.desc}}</p>
                         <p>{{hostInfo?.respondRate}}</p>

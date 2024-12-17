@@ -1,0 +1,121 @@
+@import "../../app/styles/variable.scss";
+@import "../../app/custom-css/custom-material-colors.scss";
+
+.chatSection {
+  position: fixed;
+  bottom: gutter-sp(14);
+  right: gutter-sp(20);
+}
+
+.chatIcon {
+  background-color: $border-gray;
+  border-radius: gutter-per(50);
+  padding: gutter-sp(10);
+  cursor: pointer;
+  animation: highlightPulse 1.5s infinite;
+}
+
+@keyframes highlightPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: gutter-sp(0) gutter-sp(2) gutter-sp(10) $chat-overlay;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(20) $chat-overlay;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: gutter-sp(0) gutter-sp(2) gutter-sp(10) $chat-overlay;
+  }
+}
+
+.chat-bot {
+  position: fixed;
+  padding: gutter-sp(22) gutter-sp(20) gutter-sp(40);
+  bottom: gutter-sp(14);
+  right: gutter-sp(20);
+  background-color: $white;
+  height: gutter-per(70);
+  border-radius: gutter-sp(12);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.header-call {
+  opacity: 0.6;
+}
+.bot-message,
+.btn-arrange {
+  float: left;
+}
+.msgicon {
+  background-color: $border-gray;
+  border-radius: gutter-per(56);
+  padding: gutter-sp(6);
+  width: gutter-sp(40);
+  height: gutter-sp(40);
+}
+.close-btn {
+  cursor: pointer;
+}
+
+.user-message {
+  width: gutter-per(80);
+  float: right;
+  background-color: $secondary-color;
+  color: $white;
+  padding: gutter-sp(14);
+  border-radius: gutter-sp(12) gutter-sp(12) gutter-sp(0) gutter-sp(12);
+}
+
+.msgtyping {
+  bottom: $value-null;
+  width: gutter-per(100);
+  height: auto;
+}
+
+.text {
+  width: gutter-per(100);
+  display: flex;
+  background-color: $chat-input-background;
+  padding: gutter-sp(10);
+  border-radius: gutter-sp(12);
+  border: gutter-sp(1) solid $gray;
+  box-sizing: border-box;
+}
+.message-area {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: gutter-sp(16);
+  padding-right: gutter-sp(10);
+}
+.inputtext {
+  width: gutter-per(100);
+  border: none;
+  padding: gutter-sp(4);
+  color: $chat-text-clr;
+  opacity: 0.6;
+  outline: none;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+.sendicon {
+  float: right;
+  width: gutter-sp(20);
+  margin: gutter-sp(5);
+  padding: $value-null;
+}
+.chat__btn {
+  color: $secondory-color;
+  border: gutter-sp(1) solid $secondory-color;
+  background: none;
+  padding: gutter-sp(10) gutter-sp(22);
+  border-radius: gutter-sp(6);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}

@@ -1,5 +1,4 @@
 @import "../../../styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
 
 .tagList {
     width: gutter-per(100);
@@ -16,7 +15,7 @@
         .items {
             display: flex;
             width: fit-content;
-            animation-name: loop;
+            animation-name: promotions;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
             animation-direction: var(--direction);
@@ -29,15 +28,15 @@
 
             }
         }
+    }
 
-        @keyframes loop {
-            0% {
-                transform: rotate(0);
-            }
+    @keyframes promotions {
+        0% {
+            transform: rotate(0);
+        }
 
-            100% {
-                transform: rotate(-100%);
-            }
+        100% {
+            transform: translateX(-100%);
         }
     }
 }

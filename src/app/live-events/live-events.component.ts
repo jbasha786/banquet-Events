@@ -5,9 +5,9 @@ import { AmenitiesComponent } from '../shared/components/amenities/amenities.com
 import { ThingsToKnowComponent } from '../shared/components/things-to-know/things-to-know.component';
 import { GoogleMapComponent } from '../shared/components/google-map/google-map.component';
 import { HostDetailsComponent } from '../booking/overview/host-details/host-details.component';
-import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 import { DefaultService } from '../services/default.service';
 import { CommonModule } from '@angular/common';
+import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 
 @Component({
   selector: 'app-live-events',
@@ -49,10 +49,10 @@ export class LiveEventsComponent {
     })
   };
 
-  ngAfterViewInit() {
-    // this.stickyPosition = this.menuElement.nativeElement.offsetTop;
-    // this.removeSticky = this.upcomingEventsElement.nativeElement.offsetTop;
-  }
+  // ngAfterViewInit() {
+  //   this.stickyPosition = this.menuElement.nativeElement.offsetTop;
+  //   this.removeSticky = this.upcomingEventsElement.nativeElement.offsetTop;
+  // }
 
   // @HostListener('window:scroll', ['$event'])
 

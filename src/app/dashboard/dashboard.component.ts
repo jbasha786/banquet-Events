@@ -12,8 +12,10 @@ import { BookingComponent } from '../booking/booking.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
+import { ChatComponent } from '../chat/chat.component';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -23,6 +25,7 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
     CorporateMeetingComponent,
     UpcomingEventsListComponent,
     FAQComponent,
+    ChatComponent,
     RouterLink,
     RouterModule,
     MatDatepickerModule,
@@ -44,6 +47,7 @@ export class DashboardComponent {
   personalizedInfo: any;
   promotionsInfo: any;
   shortDesc: boolean = true;
+ 
 
   customOptionsforPersonalizedInfo: OwlOptions = {
     loop: true,
@@ -114,4 +118,7 @@ export class DashboardComponent {
   readMore(personalInfo: any) {
     personalInfo.showFullContent = !personalInfo.showFullContent;
   }
+
+ 
+ 
 }
