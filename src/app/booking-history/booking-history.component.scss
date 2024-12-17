@@ -1,0 +1,37 @@
+.booking-view {
+
+    .mat-mdc-tab-group {
+        margin: 0vw 5vw;
+        padding: 0vw 5vw;
+    }
+
+    .tabTitle .mat-ink-bar {
+        display: none;
+    }
+
+    .tabTitle ::ng-deep .mdc-tab__text-label {
+        font-size: 20px;
+        font-weight: normal;
+        color: inherit;
+        text-transform: none;
+        // border-bottom: none;
+        // outline: none;
+    }
+
+    .tabTitle ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
+        display: none;
+    }
+
+    // .tabTitle ::ng-deep .mat-tab-label,
+    // .tabTitle ::ng-deep .mat-tab-label.mat-tab-label-active {
+    //     font-size: 25px;
+    //     font-weight: 700;
+    //     color: #333333;
+    //     text-transform: none;
+    // }
+
+    .tabTitle ::ng-deep .mdc-tab .mat-mdc-tab .mat-mdc-focus-indicator .mdc-tab--active .mdc-tab-indicator--active{
+        font-size: 30px;
+        color: blue;
+    }
+}
