@@ -211,7 +211,6 @@
 	}
 
 }
-
 //experience
 .experience {
 
@@ -345,9 +344,8 @@
 	}
 
 	&__desc {
-		font-weight: lighter;
+		font-weight: 300;
 		line-height: gutter-sp(26);
-		color: $quick-silver;
 	}
 
 	&__image {
@@ -367,32 +365,9 @@
 			}
 		}
 
-
-  &__desc {
-    font-weight: lighter;
-    line-height: $gutter-26sp;
-    color: $quick-silver;
-  }
-
-  &__image {
-    display: flex;
-    justify-content: center;
-    position: relative;
-
-    img {
-      position: absolute;
-      bottom: $value-null;
-      width: $gutter-54per;
-      right: $gutter-30per;
-
-      @media screen and (max-width: 991px) {
-        position: relative;
-        right: $gutter-0per;
-      }
     }
   }
-}
-}
+
 //step in to wonders moment
 
 .moment::before {
