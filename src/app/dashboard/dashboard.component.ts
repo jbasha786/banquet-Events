@@ -52,13 +52,24 @@ export class DashboardComponent {
   customOptionsforPersonalizedInfo: OwlOptions = {
     loop: true,
     autoplay: true,
+    autoplayTimeout: 5000, 
+    autoplayHoverPause: true,
     center: false,
     dots: false,
     autoHeight: true,
-    autoWidth: true,
-    items: 4,
-    margin: 20
+    autoWidth: false,
+    items: 3,
+    margin: 50,
+    smartSpeed: 300, 
+    lazyLoad: true,
+    responsive: {
+      0: { items: 1, margin: 10 },
+      768: { items: 2, margin: 50 },
+      1024: { items: 3, margin: 50 },
+    },
+    lazyLoadEager: 1,
   };
+  
   
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -118,6 +129,4 @@ export class DashboardComponent {
     personalInfo.showFullContent = !personalInfo.showFullContent;
   }
 
- 
- 
 }

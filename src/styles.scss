@@ -146,7 +146,7 @@ html {
   }
 
   .pr-#{$i} {
-    padding-right: 0px + $i;
+    padding-right: 0px + $i !important;
   }
 
   // gaps
@@ -203,7 +203,11 @@ html {
   .fs-#{$i} {
     font-size: #{$i}px;
   }
-
+  .fs-md-#{$i} {
+    @media (min-width: 768px) {
+      font-size: #{$i}px !important;
+    }
+  }
   .fs-lg-#{$i} {
     @media (min-width: 992px) {
       font-size: #{$i}px !important;

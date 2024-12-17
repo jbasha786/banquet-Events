@@ -8,7 +8,7 @@
           bannerInfo.subTitle
           }}</span>
       </h2>
-      <p class="banner__image__content__desc fs-14 fs-lg-20 fw-regular">
+      <p class="banner__image__content__desc fs-14 fs-lg-20 fw-400">
         {{ bannerInfo.desc }}
       </p>
       <p></p>
@@ -56,7 +56,7 @@
 <!-- Dartts Events Start -->
 <!-- Our Arrangements section Start -->
 <div class="arrangements">
-  <p class="pb-24 fs-24 lh-24 m-0 fw-medium">
+  <p class="pb-24 fs-24 lh-24 m-0 fw-500">
     Our <span class="arrangements__color">Arrangements</span>
   </p>
   <div class="row g-6">
@@ -65,16 +65,16 @@
       <div class="card no-border gap-26">
         <img src="{{ arr.src }}" [alt]="arr.name" class="image" />
         <div class="card-content d-flex flex-column gap-20">
-          <p class="heading fs-18 fw-medium mb-0" [title]="arr.name">{{ arr.name }}</p>
+          <p class="heading fs-18 fw-500 mb-0" [title]="arr.name">{{ arr.name }}</p>
           <ng-container *ngIf="!arr.showFullContent">
             <p class="text fs-14 lh-34 mb-0">{{ arr.desc }}</p>
-            <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(arr)">
+            <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(arr)">
               Read more ->
             </p>
           </ng-container>
           <ng-container *ngIf="arr.showFullContent">
             <p class=" fs-14 lh-34 mb-0">{{ arr.desc }}</p>
-            <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(arr)">
+            <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(arr)">
               Read less ->
             </p>
           </ng-container>
@@ -88,7 +88,7 @@
 <!--personalized Start  -->
 <div class="personalized">
   <div class="Personalized-content">
-    <p class="pb-24 fs-24 lh-30 m-0 fw-medium">
+    <p class="pb-24 fs-24 lh-30 m-0 fw-500">
       Create your own
       <span class="arrangements__color">personalized</span> ideal model.
     </p>
@@ -96,25 +96,25 @@
       Experience the change of seasons from a remote cabin, spacious view models
       villa or overlooking with your loved persons.
     </p>
-    <div class="section">
+    <div *ngIf="personalizedInfo && personalizedInfo.length > 0" class="section owl-sec">
       <owl-carousel-o [options]="customOptionsforPersonalizedInfo">
         <ng-container *ngFor="let personal of personalizedInfo">
           <ng-template class="slider" carouselSlide [id]="personal.id">
             <div class="item no-border gap-26">
               <div class="">
-                <img src="{{ personal.src }}" [alt]="personal.name" class="image" />
+                <img src="{{ personal.src }}" [alt]="personal.name" class="image owl-lazy" /> 
               </div>
               <div class="d-flex flex-column gap-20">
                 <p class="fs-18 fw-500 mb-0 title" [title]="personal.name">{{ personal.name }}</p>
                 <ng-container *ngIf="!personal.showFullContent">
                   <p class="desc fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
-                  <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(personal)">
+                  <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(personal)">
                     Read more ->
                   </p>
                 </ng-container>
                 <ng-container *ngIf="personal.showFullContent">
                   <p class="fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
-                  <p class="card-button readmore-btn fs-14 fw-bold p-0 cursor" (click)="readMore(personal)">
+                  <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(personal)">
                     Read less ->
                   </p>
                 </ng-container>
@@ -129,7 +129,7 @@
 <!-- personalized End -->
 <!-- Experience Section Start -->
 <div class="experience">
-  <p class="text-center fw-medium fs-33 fs-lg-40">
+  <p class="text-center fw-500 fs-33 fs-lg-40">
     Experience the best autumn holiday at
     <span class="experience__color">De Bonte Wever</span>
   </p>
@@ -159,7 +159,7 @@
 <!-- corporate section End -->
 <!-- promotions section Start -->
 <div class="promotions">
-  <p class="fs-24 fw-medium">De Bonte Wever Deals & Promotions</p>
+  <p class="fs-24 fw-500">De Bonte Wever Deals & Promotions</p>
   <p class="fgs-14">Exclusive savings for your next stay.</p>
   <app-upcoming-events-list></app-upcoming-events-list>
 </div>
@@ -172,7 +172,7 @@
         Become a <span class="memberSection__color">De Bonte Wever</span>
       </p>
       <p class="mb-3 fs-28 fw-bold">Member Today</p>
-      <p class="memberSection__desc mb-3 fs-13">
+      <p class="memberSection__desc mb-3 fs-14">
         Not a member yet? Join now to receive member exclusive rates, earn
         points towards free nights and many more.
       </p>
@@ -189,11 +189,11 @@
 <!-- moment Section Start -->
 <div class="moment position-relative">
   <div class="moment__content d-flex flex-column fw-bold gap-6 gap-lg-32">
-    <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">Step into Wonders</p>
-    <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">
+    <p class="fs-22 fs-md-34 fs-lg-48 lh-40 lh-lg-38 mb-0">Step into Wonders</p>
+    <p class="fs-22 fs-md-34 fs-lg-48 lh-40 lh-lg-38 mb-0">
       And experience a world where every
     </p>
-    <p class="fs-16 fs-lg-48 lh-32 lh-lg-38 mb-0">moment is magical!</p>
+    <p class="fs-22 fs-md-34 fs-lg-48 lh-40 lh-lg-38 mb-0">moment is magical!</p>
   </div>
   <div class="moment__section">
     <div class="row g-4">
