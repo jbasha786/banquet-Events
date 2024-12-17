@@ -1,0 +1,43 @@
+@import "../../app/styles/variable.scss";
+
+@mixin full-background($image-path) {
+    background-image: linear-gradient(89.8deg, $business-gradient-clr1 gutter-per(38.78), $light-overlay gutter-per(131.06)), url($image-path);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.business-landing-page {
+    .business-banner {
+        min-height: calc(gutter-vh(100) - gutter-sp(100));
+        width: gutter-per(100);
+        position: relative;
+        @include full-background("../../assets/images/Business/banner.svg");
+    }
+
+    .banner-content {
+        padding: gutter-vw(0) gutter-vw(6);
+        color: $white;
+        max-width: gutter-sp(720);
+
+        &__clr {
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        &__btn {
+            flex-shrink: 0;
+            border-radius: gutter-sp(32);
+            letter-spacing: gutter-sp(1);
+            border: none;
+            color: $white;
+            margin-top: gutter-sp(20);
+            background: var(--primary-color);
+            padding: gutter-sp(8) gutter-sp(42);
+        }
+    }
+
+    &__itworks, &__play-planned {
+        padding: gutter-vw(3) gutter-vw(5);
+    }
+}
