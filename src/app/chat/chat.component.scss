@@ -5,6 +5,7 @@
   position: fixed;
   bottom: gutter-sp(14);
   right: gutter-sp(20);
+  z-index:1;
 }
 
 .chatIcon {
@@ -41,6 +42,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 .header-call {
   opacity: 0.6;

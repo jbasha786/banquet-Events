@@ -5,7 +5,6 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DefaultService } from './services/default.service';
 import { EventsComponent } from './events/events.component';
-
 @Component({
   selector: 'app-root',
   standalone: true,

@@ -7,6 +7,7 @@
             <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{headerInfo?.logo}}" alt="" (click)="goToHome()">
          </a>
       </div>
+      
       <!-- Header-above-line -->
       <div class="second order-lg-2 order-2">
          <button class="navbar-toggler nav-togleuser" type="button" data-bs-toggle="offcanvas"
@@ -26,7 +27,7 @@
             <div class="offcanvas-body my-30  ">
                <ul class="navbar-nav justify-content-end flex-grow-1 gap-18 gap-lg-30">
                   @for(item of navList; track $index){
-                  <li class="nav-item p-10 p-lg-0 fw-200 cursor">
+                  <li class="nav-item p-10 p-lg-0 fw-400 cursor">
                      <div class="link-dark link-underline-opacity-0" mat-button (click)="goTo(item.link)">
                         <img class="ps-2 pe-2 header-images" style="width:28px;opacity: 0.7;" src="{{item.src}}"
                            alt="{{item.name}}">
@@ -77,6 +78,7 @@
             </div>
          </div>
       </div>
+
    </div>
    <p class="main_line1 h-4 m-0 d-block d-lg-none"></p>
 </nav>
