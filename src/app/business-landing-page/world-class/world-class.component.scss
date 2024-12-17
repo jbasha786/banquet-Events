@@ -1,0 +1,26 @@
+@import '../../styles/variable.scss';
+
+.world-class {
+    background-color: $black;
+    color: $white;
+    padding: gutter-vw(2);
+    border-radius: gutter-sp(15);
+
+    &__text {
+        max-width: gutter-sp(565);
+        margin: gutter-sp(0) auto;
+    }
+
+    &__cards {
+        padding: gutter-vw(3);
+    }
+
+    &__btn {
+        background: $bg-world-btn;
+        color: $white;
+        width: gutter-per(20);
+        padding: gutter-sp(10);
+        border-radius: gutter-sp(5);
+        margin: gutter-sp(0) auto;
+    }
+}

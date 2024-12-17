@@ -37,7 +37,11 @@
         }
     }
 
-    &__itworks, &__play-planned {
-        padding: gutter-vw(3) gutter-vw(5);
+    &__itworks, &__play-planned, &__world-class {
+        padding: gutter-vw(3) gutter-vw(5) gutter-vw(0);
+    }
+
+    &__world-class {
+        padding-bottom: gutter-vw(5);
     }
 }
