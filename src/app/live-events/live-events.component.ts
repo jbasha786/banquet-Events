@@ -31,12 +31,6 @@ export class LiveEventsComponent {
   itemQty: number = 1;
   numberOfTickets: number = 250;
   isbtnActive: boolean = false;
-  // @ViewChild('stickyMenuForTickets') menuElement!: ElementRef;
-  // @ViewChild('removeStickyMenuForTickets') upcomingEventsElement!: ElementRef;
-
-  sticky: boolean = false;
-  stickyPosition: any;
-  removeSticky: any;
 
   constructor(private defaultService: DefaultService) {
     this.getInitialData();
@@ -48,25 +42,6 @@ export class LiveEventsComponent {
       this.promotionsInfo = result?.promotions;
     })
   };
-
-  // ngAfterViewInit() {
-  //   this.stickyPosition = this.menuElement.nativeElement.offsetTop;
-  //   this.removeSticky = this.upcomingEventsElement.nativeElement.offsetTop;
-  // }
-
-  // @HostListener('window:scroll', ['$event'])
-
-  // handleScroll() {
-  //   const windowScroll = window.pageYOffset;
-  //   if (windowScroll >= this.stickyPosition) {
-  //     this.sticky = true;
-  //     if (windowScroll >= this.removeSticky) {
-  //       this.sticky = false;
-  //     }
-  //   } else {
-  //     this.sticky = false;
-  //   }
-  // }
 
   increment() {
     this.itemQty = this.itemQty + 1;

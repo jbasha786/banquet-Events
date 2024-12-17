@@ -4,14 +4,14 @@
     </div>
 
     <div class="event-item__overview">
-        <div class="row">
-            <div class="col-12 col-md-8">
+        <div class="row flex-row flex-column-reverse flex-md-row gap-20 gap-md-0">
+            <div class="col-12 col-md-7">
                 <div class="event-item__overview__img">
                     <img src="../../../../assets/images/events/events-item.svg"
                         alt="event Item">
                 </div>
                 <div class="about">
-                    <p class="fs-20 fs-lg-30">About this event</p>
+                    <p class="fs-20 fs-lg-30 fw-medium">About this event</p>
                     <p class="lh-34 desc">It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. It is a long established fact that a reader will be distracted by
                         the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
@@ -21,7 +21,7 @@
                         will uncover many web sites still in their infancy.</p>
                 </div>
                 <div class="conditions">
-                    <p class="fs-20 fs-lg-30">Important conditions and information</p>
+                    <p class="fs-20 fs-lg-30 fw-medium">Important conditions and information</p>
                     <ul class="desc">
                         <li class="lh-28">Rates exclude tourist tax (€1.50 per person per night in 2024, 2025 rates not yet known) and
                             reservation fees of €14.95 per booking.</li>
@@ -39,27 +39,27 @@
                     <app-amenities></app-amenities>
                 </div>
                 <div class="thingstoKnow">
-                    <p class="fs-20 fs-lg-30">Things to know</p>
+                    <p class="fs-20 fs-lg-30 fw-medium">Things to know</p>
                     <app-things-to-know></app-things-to-know>
                 </div>
                 <div class="eventLocation">
-                    <p class="fs-20 fs-lg-30">Event Location</p>
+                    <p class="fs-20 fs-lg-30 fw-medium">Event Location</p>
                     <app-google-map></app-google-map>
                 </div>
                 <div class="contectPerson">
-                    <p class="fs-20 fs-lg-30">Our Contact Person</p>
+                    <p class="fs-20 fs-lg-30 fw-medium">Our Contact Person</p>
                     <app-host-details [hostInfo]="hostDetails" [isEventScreen]="true"></app-host-details>
                 </div>
             </div>
-            <div #stickyMenuForTickets [class.sticky]="sticky" class="col-12 col-md-4 tickets">
-                <mat-card class="p-20">
-                    <p class="date fs-10">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
+            <div class="col-12 col-md-5 tickets">
+                <mat-card class="p-20 tickets__section">
+                    <p class="date fs-12">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
                     <p class="title fw-bold fs-20 fs-lg-30">WPD World Cup 2024</p>
                     <p class="desc fs-14">Organized by world para darts association</p>
-                    <p class="numoftickets fs-14">Tickets Available: {{numberOfTickets}}</p>
+                    <p class="numoftickets fs-14 mb-0">Tickets Available: {{numberOfTickets}}</p>
                     <div class="d-flex justify-content-between qty">
                         <div>
-                            <h4 class="fw-bold">5 Days / 4 Nights</h4>
+                            <p class="fw-bold">5 Days / 4 Nights</p>
                             <p class="fv-1">4x Breakfast / 3x Lunch / 4x Dinner</p>
                         </div>
                         <div class="d-flex qtySection justify-content-between gap-2 align-items-center">
@@ -83,7 +83,7 @@
             </div>
         </div>
         <div class="upcoingEvents">
-            <p class="fs-20 fs-lg-30">Up coming events</p>
+            <p class="fs-20 fs-lg-30 fw-medium">Up coming events</p>
             <p>Starts from Jan 2025.</p>
             <app-upcoming-events-list></app-upcoming-events-list>
         </div>

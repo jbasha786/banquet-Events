@@ -6,14 +6,10 @@
         padding: gutter-vw(6) gutter-vw(5);
 
         &__img {
-            max-height: gutter-sp(450);
-            height: gutter-per(100);
 
             img {
                 width: gutter-per(100);
                 height: gutter-per(100);
-                object-fit: cover;
-                border-radius: gutter-sp(10);
             }
         }
 
@@ -46,6 +42,8 @@
         }
 
         .conditions {
+            padding-bottom: gutter-vw(2);
+
             .desc {
                 gap: gutter-sp(20);
                 display: flex;
@@ -55,10 +53,16 @@
         }
 
         .tickets {
-            // position: fixed;
-            // right: 2vw;
-            // z-index: -1;
-            // width: 400px;
+            position: sticky;
+            top: gutter-sp(90);
+            z-index: 1020;
+
+            &__section {
+                position: sticky;
+                top: gutter-vw(12);
+                z-index: 1020;
+            }
+
             .date {
                 text-transform: uppercase;
             }
@@ -68,7 +72,7 @@
             }
 
             .qty {
-                padding: gutter-vw(3) gutter-vw(0);
+                padding: gutter-vw(2) gutter-vw(0);
                 position: relative;
 
                 .qtySection {
