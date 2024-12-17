@@ -80,7 +80,6 @@ export class DashboardComponent {
       this.subbannerInfo = result?.subbannerInfo;
       this.momentInfo = result?.moment;
       this.personalizedInfo = result?.personalized;
-      this.promotionsInfo = result?.promotions;
     });
   }
 

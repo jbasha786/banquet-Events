@@ -2,21 +2,26 @@
 @import "../../custom-css/custom-material-colors.scss";
 
 .overview {
-    padding-top: gutter-vw(3);
 
-    // Back button
-    &__back {
-        border-radius: gutter-vw(50);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: max-content;
-        background: $back-btn-color-overview;
+    &__title {
+        padding: gutter-vw(5) gutter-vw(5) gutter-vw(0);
+
+        &__back {
+            border-radius: gutter-vw(50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            background: $back-btn-color-overview;
+        }
+
     }
+
+
 
     // Image section
     &__imageSection {
-        padding: gutter-vw(1) gutter-sp(0);
+        padding: gutter-vw(2) gutter-vw(5) gutter-vw(0);
 
         img {
             height: gutter-per(100);
@@ -32,8 +37,8 @@
             background: $white;
             border-radius: gutter-sp(5);
             width: max-content;
-            right: gutter-sp(20);
-            bottom: gutter-sp(20);
+            right: gutter-vw(9);
+            bottom: gutter-sp(10);
             padding: gutter-sp(5);
 
             mat-icon {
@@ -45,6 +50,8 @@
 
     // Content Section
     &__content {
+        padding: gutter-vw(2) gutter-vw(5) gutter-vw(0);
+
         &__descSection {
             .title {
                 line-height: gutter-sp(40);
@@ -52,7 +59,7 @@
 
             .text {
                 text-align: justify;
-                line-height: gutter-sp(30);
+                line-height: gutter-sp(34);
             }
         }
 
@@ -102,8 +109,9 @@
                 }
 
                 .border-clr-none {
-                    padding: gutter-rem(1) gutter-rem(0.25);
+                    padding: gutter-rem(1.5) gutter-rem(0.25) gutter-rem(0.25);
                     border: gutter-sp(1) solid $white;
+                    font-size: gutter-sp(12);
                 }
 
                 .border-clr {
@@ -123,6 +131,7 @@
                 label {
                     padding: gutter-rem(1) gutter-rem(0.25);
                     color: $secondary-color;
+                    font-size: gutter-sp(16);
                 }
 
                 label::after {
@@ -142,7 +151,7 @@
 
     // Rationg Section
     .rating {
-        padding: gutter-vw(3) gutter-vw(0);
+        padding: gutter-vw(6) gutter-vw(5) gutter-vw(0);
 
         &__desc {
             line-height: gutter-sp(25);
@@ -179,4 +188,12 @@
             }
         }
     }
+}
+
+.thingstoKnow, .map, .host {
+    padding: gutter-vw(6) gutter-vw(5) gutter-vw(0);
+}
+
+.host {
+    padding-bottom: gutter-vw(5);
 }
