@@ -47,7 +47,7 @@
 
         @for(item of hallsList; track $index){
         <div
-            class="d-flex justify-content-center align-items-center flex-column flex-lg-row flex-lg-row hall-list gap-4 p-2 mt-10">
+            class="d-flex justify-content-center align-items-center flex-column flex-lg-row hall-list gap-4 p-2 mt-10">
             <div class="d-flex hallsView__images">
                 <img class="hallsView__images__img "
                     [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}" width=""

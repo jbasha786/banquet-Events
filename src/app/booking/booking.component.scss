@@ -38,9 +38,9 @@
 
     .dialog-btns {
         position: fixed;
-        bottom: 0;
+        bottom: gutter-sp(0);
         background: white;
-        box-shadow: 0 gutter-sp(3) gutter-sp(18) rgba(0, 0, 0, 0.2);
+        box-shadow: gutter-sp(0) gutter-sp(3) gutter-sp(18) $shadow-black;
         z-index: 1;
     }
 }

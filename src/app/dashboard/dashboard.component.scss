@@ -399,7 +399,7 @@
 
 css for scroll .fade {
 	pointer-events: none;
-	background: linear-gradient(90deg, #1e293b, transparent gutter-per(30), transparent gutter-per(70), #1e293b);
+	background: linear-gradient(90deg, $lite-black, transparent gutter-per(30), transparent gutter-per(70), $lite-black);
 	position: absolute;
 	inset: 0;
 

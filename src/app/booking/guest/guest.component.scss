@@ -3,7 +3,7 @@
 
 .guest {
     &__form {
-        margin: 0 auto;
+        margin: gutter-sp(0) auto;
     }
 
     &__card {
