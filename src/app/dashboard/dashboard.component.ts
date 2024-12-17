@@ -12,9 +12,9 @@ import { BookingComponent } from '../booking/booking.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
-import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 import { ChatComponent } from '../chat/chat.component';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -80,7 +80,6 @@ export class DashboardComponent {
       this.subbannerInfo = result?.subbannerInfo;
       this.momentInfo = result?.moment;
       this.personalizedInfo = result?.personalized;
-      this.promotionsInfo = result?.promotions;
     });
   }
 
