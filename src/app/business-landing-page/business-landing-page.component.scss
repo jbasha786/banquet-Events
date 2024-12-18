@@ -18,10 +18,10 @@
     .banner-content {
         padding: gutter-vw(0) gutter-vw(6);
         color: $white;
-        max-width: gutter-sp(720);
 
         &__clr {
-            color: var(--primary-color);
+            color: $business-subtitle-clr;
+
             text-transform: uppercase;
         }
 
@@ -37,8 +37,8 @@
         }
     }
 
-    &__itworks, &__play-planned, &__world-class {
-        padding: gutter-vw(3) gutter-vw(5) gutter-vw(0);
+    &__itworks, &__corporate, &__oneControl, &__play-planned, &__world-class {
+        padding: gutter-vw(6) gutter-vw(5) gutter-vw(0);
     }
 
     &__world-class {

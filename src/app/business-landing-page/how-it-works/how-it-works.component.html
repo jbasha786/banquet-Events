@@ -1,13 +1,13 @@
 <div class="how-it-works">
-    <h2 class="how-it-works__title fs-20 fs-lg-30 fw-medium">How it <span class="how-it-works__clr">Works?</span></h2>
-    <p>Booking Your Perfect Event, Conference, or Meeting With Ease and a seamless experience.</p>
+    <h2 class="how-it-works__title pb-24 fs-24 lh-24 m-0 fw-medium">How it <span class="how-it-works__clr">Works?</span></h2>
+    <p class="fs-16 lh-24 pb-40 m-0">Booking Your Perfect Event, Conference, or Meeting With Ease and a seamless experience.</p>
 
-    <div class="row how-it-works__cards">
+    <div class="row how-it-works__cards g-4">
         <ng-container *ngFor="let meet of meetingDetails">
-            <div class="col-12 col-md-4 text-center">
+            <div class="col-12 col-lg-4 text-center">
                 <img [src]="meet.src" [alt]="meet.title">
-                <h2 class="fs-16 fs-lg-20 fw-medium pt-20">{{meet.title}}</h2>
-                <p class="lh-34">{{meet.text}}</p>
+                <p class="fs-18 fw-medium pt-20 pb-20 m-0">{{meet.title}}</p>
+                <p class="fs-14 lh-34 mb-0">{{meet.text}}</p>
             </div>
         </ng-container>
     </div>

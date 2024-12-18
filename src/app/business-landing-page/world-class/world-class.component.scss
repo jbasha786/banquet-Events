@@ -9,6 +9,7 @@
     &__text {
         max-width: gutter-sp(565);
         margin: gutter-sp(0) auto;
+        opacity: gutter-per(50);
     }
 
     &__cards {
@@ -18,9 +19,16 @@
     &__btn {
         background: $bg-world-btn;
         color: $white;
-        width: gutter-per(20);
+        width: gutter-per(40);
         padding: gutter-sp(10);
-        border-radius: gutter-sp(5);
+        border-radius: gutter-sp(15);
         margin: gutter-sp(0) auto;
+    }
+
+    &__image {
+        img {
+            width: gutter-per(100);
+            height: gutter-per(100);
+        }
     }
 }
