@@ -1,0 +1,17 @@
+@import "../../styles/variable.scss";
+
+.corporate {
+    &__image {
+        img {
+            width: gutter-per(100);
+            height: gutter-per(100);
+        }
+    }
+
+    .line {
+        border-left:  gutter-sp(6) solid $secondary-color;
+        border-radius: gutter-sp(5);
+        opacity: gutter-per(20);
+        margin: gutter-sp(10) gutter-sp(20) gutter-sp(10) gutter-sp(0);
+    }
+}

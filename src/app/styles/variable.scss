@@ -50,6 +50,10 @@ $host-border-clr: #D1D1D1;
 $edit-btn-gradient-clr1: #901BB7;
 $edit-btn-gradient-clr2: #C62892;
 $guest-background-clr: #F1F0F0;
+$business-gradient-clr1:rgba(23, 3, 38, 0.83);
+$bg-world-btn: #261b0a;
+$business-subtitle-clr: #FFAF43;
+$font-clr: #383838;
 
 @function gutter-sp($key) {
   @return #{$key}px;
