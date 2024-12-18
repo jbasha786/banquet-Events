@@ -1,15 +1,15 @@
 @import "../custom-css/custom-material-colors.scss";
 
 .bookingView {
-    .btn_raised {
-        border-radius: 10px;
-        padding: 0.5vh 1vw;
-        cursor: pointer;
-    }
-    .btn_raised:active{
-        background: black;
-        color: $white;
-    }
+    // .btn_raised {
+        // border-radius: 10px;
+        // padding: 0.5vh 1vw;
+        // cursor: pointer;
+    // }
+    // .btn_raised:active{
+        // background: black;
+        // color: $white;
+    // }
     .btn_search {
         position: absolute;
         background: none;
@@ -17,5 +17,8 @@
     }
     .search_input {
         padding-right: 8vw;
+    }
+    .search_input::placeholder{
+        font-size: 10px;
     }
 }
