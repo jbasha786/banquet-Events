@@ -20,7 +20,11 @@ $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetO
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif ;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: $font-clr !important;
 }
 
 @for $i from 0 through 500 {

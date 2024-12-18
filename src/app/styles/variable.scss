@@ -46,6 +46,10 @@ $add-remove-btn-clr: #eeedf2;
 $chat-overlay: #0000004d;
 $chat-text-clr:#081A51;
 $chat-input-background:#edf8ff;
+$business-gradient-clr1:rgba(23, 3, 38, 0.83);
+$bg-world-btn: #261b0a;
+$business-subtitle-clr: #FFAF43;
+$font-clr: #383838;
 
 @function gutter-sp($key) {
   @return #{$key}px;
