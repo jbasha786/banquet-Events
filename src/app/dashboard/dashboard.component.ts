@@ -12,9 +12,9 @@ import { BookingComponent } from '../booking/booking.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
-import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 import { ChatComponent } from '../chat/chat.component';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -52,13 +52,24 @@ export class DashboardComponent {
   customOptionsforPersonalizedInfo: OwlOptions = {
     loop: true,
     autoplay: true,
+    autoplayTimeout: 5000, 
+    autoplayHoverPause: true,
     center: false,
     dots: false,
     autoHeight: true,
-    autoWidth: true,
-    items: 4,
-    margin: 20
+    autoWidth: false,
+    items: 3,
+    margin: 50,
+    smartSpeed: 300, 
+    lazyLoad: true,
+    responsive: {
+      0: { items: 1, margin: 10 },
+      768: { items: 2, margin: 50 },
+      1024: { items: 3, margin: 50 },
+    },
+    lazyLoadEager: 1,
   };
+  
   
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -80,7 +91,6 @@ export class DashboardComponent {
       this.subbannerInfo = result?.subbannerInfo;
       this.momentInfo = result?.moment;
       this.personalizedInfo = result?.personalized;
-      this.promotionsInfo = result?.promotions;
     });
   }
 
@@ -104,7 +114,13 @@ export class DashboardComponent {
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
-      width: "80vw",
+      // width: "100vw",
+      // height: "100vh",
+      width: '100vw',
+      height: '100vh',
+      maxWidth: '100vw',
+     
+      panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true
@@ -119,6 +135,4 @@ export class DashboardComponent {
     personalInfo.showFullContent = !personalInfo.showFullContent;
   }
 
- 
- 
 }

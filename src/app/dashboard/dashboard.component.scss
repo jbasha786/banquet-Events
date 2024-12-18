@@ -211,7 +211,6 @@
 	}
 
 }
-
 //experience
 .experience {
 
@@ -271,48 +270,6 @@
 .promotions {
 
 	padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
-
-	.tagList {
-		width: gutter-per(100);
-		max-width: gutter-per(100);
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		overflow: hidden;
-
-		.slider {
-			--duration: 30s;
-			--direction: normal;
-
-			.items {
-				display: flex;
-				width: fit-content;
-				animation-name: loop;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				animation-direction: var(--direction);
-				animation-duration: var(--duration);
-
-				.item {
-					display: flex;
-					align-items: center;
-					padding: gutter-sp(12) gutter-sp(16) gutter-sp(0);
-
-				}
-			}
-
-			@keyframes loop {
-				0% {
-					transform: rotate(0);
-				}
-
-				100% {
-					transform: rotate(-100%);
-				}
-			}
-		}
-	}
-
 }
 
 //member section
@@ -345,9 +302,8 @@
 	}
 
 	&__desc {
-		font-weight: lighter;
+		font-weight: 300;
 		line-height: gutter-sp(26);
-		color: $quick-silver;
 	}
 
 	&__image {
@@ -367,32 +323,9 @@
 			}
 		}
 
-
-  &__desc {
-    font-weight: lighter;
-    line-height: $gutter-26sp;
-    color: $quick-silver;
-  }
-
-  &__image {
-    display: flex;
-    justify-content: center;
-    position: relative;
-
-    img {
-      position: absolute;
-      bottom: $value-null;
-      width: $gutter-54per;
-      right: $gutter-30per;
-
-      @media screen and (max-width: 991px) {
-        position: relative;
-        right: $gutter-0per;
-      }
     }
   }
-}
-}
+
 //step in to wonders moment
 
 .moment::before {
@@ -441,7 +374,7 @@
 
 css for scroll .fade {
 	pointer-events: none;
-	background: linear-gradient(90deg, #1e293b, transparent gutter-per(30), transparent gutter-per(70), #1e293b);
+	background: linear-gradient(90deg, $lite-black, transparent gutter-per(30), transparent gutter-per(70), $lite-black);
 	position: absolute;
 	inset: 0;
 
@@ -689,4 +622,3 @@ css for scroll .fade {
     opacity: 1;
   }
 }
-
