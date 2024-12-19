@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ElementRef, Renderer2, HostListener, ChangeDetectorRef, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, Input, OnInit, ElementRef,  Renderer2, HostListener, ChangeDetectorRef, PLATFORM_ID, Inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,7 +8,8 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 import { DialogueComponent } from '../dialogue/dialogue.component';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../../../core/login/login.component';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { ZindexService } from '../../../services/zindex.service';
 
 @Component({
   selector: 'app-header',
@@ -17,12 +18,14 @@ import { isPlatformBrowser } from '@angular/common';
     RouterLink,
     MatMenuModule,
     MatButtonModule,
-    DialogueComponent],
+    DialogueComponent,
+    CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
 
+  navZIndex: number = 1030;
   @Input() headerInfo: any;
   navList: headerModel[] = [];
   navEvent_Items: headerModel[] = [];
@@ -32,6 +35,7 @@ export class HeaderComponent implements OnInit {
     private defaultService: DefaultService,
     private overlayContainer: OverlayContainer,
     private dialog: MatDialog,
+    private zIndexService: ZindexService,
     private renderer: Renderer2, private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object
   ) { }
@@ -44,6 +48,9 @@ export class HeaderComponent implements OnInit {
     this.adjustLayoutForMobile();
     this.getNavList();
     this.getnavEventList();
+    this.zIndexService.headerZIndex$.subscribe((zIndex: number) => {
+      this.navZIndex = zIndex;
+    });
 
   }
   adjustLayoutForMobile() {

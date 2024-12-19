@@ -2,40 +2,15 @@
 @import "../../../app/custom-css/custom-material-colors.scss";
 
 .guest {
-    &__process {
-        padding: 3vw;
-
-        .progress {
-            height: 1vw;
-
-            .progress-bar {
-                background-color: $secondory-color;
-            }
-        }
-    }
-
     &__form {
-        margin: 0 auto;
-    }
-
-    &__title {
-        margin-bottom: 2vw;
+        margin: gutter-sp(0) auto;
     }
 
     &__card {
-        background-color: $light-silver;
-        padding: 1vw;
-        border-radius: 5px;
-        margin-bottom: 1vw;
-
-        &__label {
-            margin-bottom: 1vw;
-        }
+        background-color: $ash-white;
 
         &__input {
-            border: 0;
-            border-radius: 5px;
-            width: 100%;
+            width: gutter-per(100);
         }
         input:focus {
             outline: none;
