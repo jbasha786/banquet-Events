@@ -8,8 +8,20 @@
         }
     }
 
+    &__content {
+        .subTitle {
+            max-width: gutter-sp(650);
+        }
+        .desc {
+            max-width: gutter-sp(700);
+        }
+        .list {
+            max-width: gutter-sp(470);
+        }
+    }
+
     .line {
-        border-left:  gutter-sp(6) solid $secondary-color;
+        border-left:  gutter-sp(8) solid $secondary-color;
         border-radius: gutter-sp(5);
         opacity: gutter-per(20);
         margin: gutter-sp(10) gutter-sp(20) gutter-sp(10) gutter-sp(0);

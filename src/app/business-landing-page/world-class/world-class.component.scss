@@ -3,11 +3,11 @@
 .world-class {
     background-color: $black;
     color: $white;
-    padding: gutter-vw(2);
+    padding: gutter-vw(4);
     border-radius: gutter-sp(15);
 
     &__text {
-        max-width: gutter-sp(565);
+        max-width: gutter-sp(580);
         margin: gutter-sp(0) auto;
         opacity: gutter-per(50);
     }
