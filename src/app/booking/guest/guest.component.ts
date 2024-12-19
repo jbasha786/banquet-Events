@@ -18,17 +18,17 @@ export class GuestComponent {
   guestFields = [
     {
       label: 'Adults',
-      value: 1,
+      value: 40,
       changeFunction: this.changeAdults.bind(this)
     },
     {
       label: 'Elder Child',
-      value: 1,
+      value: 12,
       changeFunction: this.changeElderChild.bind(this)
     },
     {
       label: 'Younger Child',
-      value: 1,
+      value: 4,
       changeFunction: this.changeYoungerChild.bind(this)
     },
     {
