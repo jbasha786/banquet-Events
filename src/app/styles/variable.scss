@@ -37,6 +37,11 @@ $footer-border-line: #5a6364;
 $chat-overlay: #0000004d;
 $chat-text-clr:#081A51;
 $chat-input-background:#edf8ff;
+$cancelbtn: #78736d;
+$editbtn: #f18b00;
+$viewdetailbtn: #a62784;
+$tableCellColor: #534D59;
+$tabHeadercolor: #F6F5F5;
 
 @function gutter-sp($key) {
   @return #{$key}px;

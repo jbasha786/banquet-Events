@@ -92,6 +92,9 @@
     },
     "bookingHistory": [
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",
@@ -126,6 +129,9 @@
             "viewImage": "/assets/images/BookingHistory/view_image.png"
         },
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",
@@ -160,6 +166,9 @@
             "viewImage": "/assets/images/BookingHistory/view_image.png"
         },
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",
@@ -194,6 +203,9 @@
             "viewImage": "/assets/images/BookingHistory/view_image.png"
         },
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",

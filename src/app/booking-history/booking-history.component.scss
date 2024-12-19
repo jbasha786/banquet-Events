@@ -1,10 +1,10 @@
 @import '../styles/variable.scss';
 
-.booking-view {
-
+.booking-view { 
     .mat-mdc-tab-group {
-        margin: 0vw 5vw;
-        padding: 0vw 5vw;
+        margin: gutter-vw(0) gutter-vw(5);
+        padding: gutter-vw(0) gutter-vw(5);
+        width: gutter-per(100);
     }
 
     .tabTitle .mat-ink-bar {
@@ -12,9 +12,9 @@
     }
 
     .tabTitle ::ng-deep .mdc-tab__text-label {
-        font-size: 20px;
+        font-size: gutter-sp(25);
         letter-spacing: normal;
-        color: $black;
+        font-weight: 100;
         text-transform: none;
     }
 
@@ -23,9 +23,16 @@
     }
 
     .tabTitle ::ng-deep .mdc-tab-indicator--active {
-        font-size: 30px;
-        // color: $black;
+        font-size: gutter-sp(30);
         letter-spacing: normal;
-        font-weight: 700;
+        padding: gutter-sp(0);
     }
+
+     ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
+        color: $black;
+      }
+      
+      ::ng-deep .mat-tab-label {
+        color: $footer-text-color; 
+      }
 }
