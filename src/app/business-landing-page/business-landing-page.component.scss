@@ -9,19 +9,18 @@
 
 .business-landing-page {
     .business-banner {
-        min-height: calc(gutter-vh(100) - gutter-sp(100));
+        min-height: calc(gutter-vh(100) - gutter-sp(90));
         width: gutter-per(100);
         position: relative;
         @include full-background("../../assets/images/Business/banner.svg");
     }
 
     .banner-content {
-        padding: gutter-vw(0) gutter-vw(6);
+        padding: gutter-vw(14) gutter-vw(8) gutter-vw(2);
         color: $white;
 
         &__clr {
             color: $business-subtitle-clr;
-
             text-transform: uppercase;
         }
 
@@ -33,12 +32,23 @@
             color: $white;
             margin-top: gutter-sp(20);
             background: var(--primary-color);
-            padding: gutter-sp(8) gutter-sp(42);
+            padding: gutter-sp(8) gutter-sp(20);
+            width: gutter-sp(150);
+            height: gutter-sp(40);
         }
     }
+    
 
-    &__itworks, &__corporate, &__oneControl, &__play-planned, &__world-class {
-        padding: gutter-vw(6) gutter-vw(5) gutter-vw(0);
+    &__itworks {
+        padding: gutter-vw(3) gutter-vw(6) gutter-vw(0);
+    }
+
+    &__corporate, &__oneControl, &__world-class {
+        padding: gutter-vw(5) gutter-vw(9) gutter-vw(0);
+    }
+
+    &__play-planned {
+        padding: gutter-vw(6) gutter-vw(16) gutter-vw(0);
     }
 
     &__world-class {
