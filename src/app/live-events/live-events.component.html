@@ -1,18 +1,24 @@
 <div class="event-item">
+    <!-- Banner section -->
     <div class="event-item__banner">
         <img width="100%" height="100%" src="../../../../assets/images/events/event-item-banner.svg" alt="events">
     </div>
 
+    <!-- Image Section -->
     <div class="event-item__overview">
-        <div class="row flex-row flex-column-reverse flex-md-row gap-20 gap-md-0">
-            <div class="col-12 col-md-7">
+        <div class="row g-4 d-flex flex-column-reverse flex-lg-row">
+            <div class="col-12 col-lg-7">
                 <div class="event-item__overview__img">
-                    <img src="../../../../assets/images/events/events-item.svg"
-                        alt="event Item">
+                    <img src="../../../../assets/images/events/events-item.svg" alt="event Item">
                 </div>
-                <div class="about">
-                    <p class="fs-20 fs-lg-30 fw-medium">About this event</p>
-                    <p class="lh-34 desc">It is a long established fact that a reader will be distracted by the readable content of a page
+
+                <div class="about pr-lg-40">
+                    <p class="fs-24 fw-medium m-0 pb-1">About this event</p>
+                    <p class="lh-34 fs-14 desc m-0">It is a long established fact that a reader will be distracted by
+                        the
+                        readable
+                        content of
+                        a page
                         when looking at its layout. It is a long established fact that a reader will be distracted by
                         the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
                         that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
@@ -20,72 +26,61 @@
                         page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
                         will uncover many web sites still in their infancy.</p>
                 </div>
-                <div class="conditions">
+
+                <div class="conditions pr-lg-40">
                     <p class="fs-20 fs-lg-30 fw-medium">Important conditions and information</p>
-                    <ul class="desc">
-                        <li class="lh-28">Rates exclude tourist tax (€1.50 per person per night in 2024, 2025 rates not yet known) and
+                    <ul class="desc m-0 fs-14">
+                        <li class="lh-28">Rates exclude tourist tax (€1.50 per person per night in 2024, 2025 rates not
+                            yet
+                            known)
+                            and
                             reservation fees of €14.95 per booking.</li>
-                        <li class="lh-28">Rates do not include ‘Event fee’ (cost directly to the organisation) € 25,- per person</li>
+                        <li class="lh-28">Rates do not include ‘Event fee’ (cost directly to the organisation) € 25,-
+                            per
+                            person
+                        </li>
                         <li class="lh-28"> Cost of pre-night: € 80,- per person per night </li>
                         <li class="lh-28">Based on availability and double occupancy.</li>
-                        <li class="lh-28">Children aged 3 to 12 years receive a 50% discount. Children aged 0 to 2 years: €22.50 per
+                        <li class="lh-28">Children aged 3 to 12 years receive a 50% discount. Children aged 0 to 2
+                            years:
+                            €22.50 per
                             stay, including a prepared crib.</li>
-                        <li class="lh-28">If you stay with fewer than the required number of persons in a double room, triple room,
+                        <li class="lh-28">If you stay with fewer than the required number of persons in a double room,
+                            triple room,
                             family room, or an XL room, a surcharge (€39.50 per unused bed per night) will be charged
                             due to under-occupancy</li>
                     </ul>
                 </div>
-                <div class="amenities">
+
+                <div class="amenities pr-lg-40">
                     <app-amenities></app-amenities>
                 </div>
-                <div class="thingstoKnow">
+
+                <div class="thingstoKnow pr-lg-40">
                     <p class="fs-20 fs-lg-30 fw-medium">Things to know</p>
                     <app-things-to-know></app-things-to-know>
                 </div>
-                <div class="eventLocation">
+
+                <div class="eventLocation pr-lg-40">
                     <p class="fs-20 fs-lg-30 fw-medium">Event Location</p>
                     <app-google-map></app-google-map>
                 </div>
-                <div class="contectPerson">
+
+                <div class="contectPerson pr-lg-40">
                     <p class="fs-20 fs-lg-30 fw-medium">Our Contact Person</p>
                     <app-host-details [hostInfo]="hostDetails" [isEventScreen]="true"></app-host-details>
                 </div>
-            </div>
-            <div class="col-12 col-md-5 tickets">
-                <mat-card class="p-20 tickets__section">
-                    <p class="date fs-12">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
-                    <p class="title fw-bold fs-20 fs-lg-30">WPD World Cup 2024</p>
-                    <p class="desc fs-14">Organized by world para darts association</p>
-                    <p class="numoftickets fs-14 mb-0">Tickets Available: {{numberOfTickets}}</p>
-                    <div class="d-flex justify-content-between qty">
-                        <div>
-                            <p class="fw-bold">5 Days / 4 Nights</p>
-                            <p class="fv-1">4x Breakfast / 3x Lunch / 4x Dinner</p>
-                        </div>
-                        <div class="d-flex qtySection justify-content-between gap-2 align-items-center">
-                            <mat-icon fontIcon="remove" (click)="decrement()" [ngClass]="isbtnActive ? 'active' : 'inActive' " class="cursor"></mat-icon>
-                            <p class="value mb-0">{{itemQty}}</p>
-                            <mat-icon fontIcon="add" (click)="increment()" [ngClass]="!isbtnActive ? 'active' : 'inActive'" class="cursor"></mat-icon>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between event-item__overview__price">
-                        <div>
-                            <p class="pTitle">Price</p>
-                            <p class="color fs-14 fs-lg-30 fw-bold">€ 399,00 p.p.</p>
-                        </div>
-                        <div class="d-flex align-items-end">
-                            <p>Tickets Selected: {{itemQty}}</p>
-                        </div>
-                    </div>
 
-                    <button class="event-item__overview__bookbtn">Book Ticket</button>
-                </mat-card>
             </div>
-        </div>
-        <div class="upcoingEvents">
-            <p class="fs-20 fs-lg-30 fw-medium">Up coming events</p>
-            <p>Starts from Jan 2025.</p>
-            <app-upcoming-events-list></app-upcoming-events-list>
+            <div class="col-12 col-lg-5">
+                <app-live-events-booking></app-live-events-booking>
+            </div>
         </div>
     </div>
+    <div class="upcoingEvents">
+        <p class="fs-20 fs-lg-30 fw-medium">Up coming events</p>
+        <p>Starts from Jan 2025.</p>
+        <app-upcoming-events-list></app-upcoming-events-list>
+    </div>
+
 </div>
