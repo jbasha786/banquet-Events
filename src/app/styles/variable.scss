@@ -4,11 +4,16 @@ $gray: #F0F0F3;
 $border-gray:#e1e1e1;
 $white-smoke: #F4F4F4;
 $light-yellow: #DA7D00;
+$lite-white: #f9fafa;
+$ash-white: #ebebeb;
+$menucard-white: #EAE9EA;
+$font-ash: #595357;
 $family-yellow: #e78501;
 $cancel-color-pink: #edd4e6;
 $quick-silver: #a1a1a1;
 $light-silver: #D9D9D9;
-$green: #1F8730;
+$border-silver: #bfbfbf;
+$green-select: #1F8730;
 $priceColor: rgba(243, 148, 19, 1);
 $fontdull: rgba(160, 160, 160, 1);
 $adresscolor: rgba(63, 134, 8, 1);
@@ -27,6 +32,8 @@ $rev-gradient-clr1: #8F1CB8;
 $rev-gradient-clr2: #C82992;
 $input-border:#C7C7C7;
 $black: #000000;
+$shadow-black: #00000033;
+$lite-black: #1e293b;
 $white: #ffffff;
 $host-security-clr: #de1162;
 $footer-black: #29343D;
@@ -41,6 +48,14 @@ $add-remove-btn-clr: #eeedf2;
 $chat-overlay: #0000004d;
 $chat-text-clr:#081A51;
 $chat-input-background:#edf8ff;
+$host-border-clr: #D1D1D1;
+$edit-btn-gradient-clr1: #901BB7;
+$edit-btn-gradient-clr2: #C62892;
+$guest-background-clr: #F1F0F0;
+$business-gradient-clr1:rgba(23, 3, 38, 0.83);
+$bg-world-btn: #261b0a;
+$business-subtitle-clr: #FFAF43;
+$font-clr: #383838;
 
 @function gutter-sp($key) {
   @return #{$key}px;
@@ -61,6 +76,9 @@ $chat-input-background:#edf8ff;
 //gutters
 $gutter-0sp: 0px;
 $gutter-1sp: 1px;
+$checkBox-color: rgba(0, 162, 162, 1);
+
+//gutters
 $gutter-2sp: 2px;
 $gutter-4sp: 4px;
 $gutter-6sp: 6px;
@@ -96,7 +114,7 @@ $gutter-100per: 100%;
 
 //gutter-vh
 $gutter-100vh: 100vh;
-
+$gutter-70vh: 70vh;
 //gutter-vw
 $gutter-0vw: 0vw;
 $gutter-2vw: 2vw;
@@ -130,3 +148,8 @@ $gradient-momentbg: linear-gradient(
 );
 $gradient-family: linear-gradient(to top, #eef06f, #ffbe00);
 $gradient-corporate: linear-gradient(to top, #fa9ee1, #d229a6bd);
+
+//gutter-percent
+$gutter-50per: 50%;
+$gutter-70per: 70%;
+$gutter-100per: 100%;

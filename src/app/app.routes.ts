@@ -8,6 +8,8 @@ import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './core/login/login.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './core/reset-password/reset-password.component';
+import { BusinessLandingPageComponent } from './business-landing-page/business-landing-page.component';
+import { ListOfHallsComponent } from './booking/list-of-halls/list-of-halls.component';
 import { LiveEventsComponent } from './live-events/live-events.component';
 
 export const routes: Routes = [
@@ -20,6 +22,8 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'resetpwd', component: ResetPasswordComponent },
     { path: 'forgotpwd', component: ForgotPasswordComponent },
+    { path: 'business', component: BusinessLandingPageComponent },
+    { path: 'hallsList', component: ListOfHallsComponent },
     { path: 'liveEvents', component: LiveEventsComponent },
-    { path: '**', component: PageNotFoundComponent },
+    { path: '**', component: PageNotFoundComponent }
 ];

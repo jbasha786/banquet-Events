@@ -114,7 +114,13 @@ export class DashboardComponent {
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
-      width: "80vw",
+      // width: "100vw",
+      // height: "100vh",
+      width: '100vw',
+      height: '100vh',
+      maxWidth: '100vw',
+     
+      panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true

@@ -3,29 +3,34 @@
 
 .planing {
     &__process {
-        padding: 3vw;
-
         .progress {
-            height: 1vw;
+            height: gutter-sp(8);
 
             .progress-bar {
                 background-color: $secondory-color;
             }
         }
     }
+
     &__type {
-        padding: 3vw;
+        padding: gutter-vw(1);
 
         .mat-mdc-list-base {
-            display: flex !important;
+            display: flex;
         }
 
         &__section {
-            border: 1px solid $quick-silver;
-            border-radius: 5px;
-            align-items: center;
-            cursor: pointer;
+            border: gutter-sp(1) solid $border-silver;
+            border-radius: gutter-sp(8);
+            cursor: pointer;        
         }
+        &__section:hover {
+            border-color: $secondary-color; 
+            cursor: pointer; 
+          }
     }
 
+    .planning-radio ::ng-deep .mat-mdc-list-option .mdc-radio {
+        display: none ;
+    }
 }

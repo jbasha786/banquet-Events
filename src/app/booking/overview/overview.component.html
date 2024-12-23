@@ -4,7 +4,7 @@
     <div class="overview__title">
         <div class="d-flex align-items-center gap-3">
             <span class="overview__title__back"><mat-icon fontIcon="chevron_left"></mat-icon></span>
-            <span class="fs-20 fs-lg-30">{{ItemDetails?.name}}</span>
+            <span class="fs-30">{{ItemDetails?.name}}</span>
         </div>
 
         <div class="mt-10 mt-lg-15 mb-10 mb-lg-15">
@@ -36,8 +36,8 @@
     <!-- Description Section Start -->
     <div class="row overview__content w-100 gap-4 gap-sm-4 gap-lg-0">
         <div class="col-12 col-lg-8 overview__content__descSection">
-            <p class="title fs-14 fs-lg-26 fw-medium">{{ItemDetails?.deposite}}</p>
-            <p class="text m-0">{{ItemDetails?.depositeDesc}}</p>
+            <p class="title fs-24 fw-medium mb-0 pb-20">{{ItemDetails?.deposite}}</p>
+            <p class="text m-0 lh-36">{{ItemDetails?.depositeDesc}}</p>
             <span class="overview__content__amenities"><app-amenities></app-amenities></span>
         </div>
         <div class="col-12 col-lg-4 overview__content__edit">
@@ -92,14 +92,14 @@
                     </div>
                 </div>
                 <div class="d-flex gap-3 w-100">
-                    <div class="fs-14 fs-lg-18 overview__content__edit__section__editArticle text-center">Add Articles
+                    <div class="fs-20 fw-medium overview__content__edit__section__editArticle text-center">Add Articles
                     </div>
-                    <div class="fs-14 fs-lg-18 overview__content__edit__section__editArticle text-center">Choose Menu
+                    <div class="fs-20 fw-medium overview__content__edit__section__editArticle text-center">Choose Menu
                     </div>
                 </div>
-                <div class="fs-20 fs-lg-30 pt-20 fw-bold">€ 4200.00</div>
-                <p class="fs-12">Excluding taxes and fees</p>
-                <div class="fs-14 fs-lg-20 mt-20 overview__content__edit__section__reverse text-center"> Reserve</div>
+                <div class="fs-40 pt-20 fw-bold">€ 4200.00</div>
+                <p class="fs-12 m-0 pb-20">Excluding taxes and fees</p>
+                <div class="fs-30 mt-20 overview__content__edit__section__reverse text-center">Reserve</div>
             </div>
         </div>
     </div>
@@ -111,13 +111,13 @@
             <p class="fs-50 fw-bold">5.0</p>
             <img src="../../../assets/images/rating/leaf-right.svg">
         </div>
-        <h4 class="text-center fs-16 fs-lg-30 rating__title fw-medium">Guest favourite</h4>
+        <p class="text-center fs-24 rating__title fw-medium m-0 pb-20">Guest favourite</p>
         <p class="text-center rating__desc">One of the most loved homes on rating, reviews and
             reliability</p>
         <div class="rating__sections d-flex justify-content-between d-none d-lg-flex">
             <ng-container *ngFor="let rat of ratingSection">
                 <div class="d-flex flex-column rating__sections__item gap-10">
-                    <div class="fw-bold">{{rat.name}}</div>
+                    <div class="fw-bold fs-18">{{rat.name}}</div>
                     <div *ngIf="rat.id === 1">
                         <div *ngFor="let value of ratingValues" class="d-flex align-items-center gap-10">
                             <p class="m-0">{{ value }}</p>
@@ -135,17 +135,17 @@
     </div>
 
     <div class="thingstoKnow">
-        <h3 class="fs-20 fs-lg-30 fw-medium">Things to know</h3>
+        <p class="fs-24 fw-medium m-0 pb-20">Things to know</p>
         <app-things-to-know></app-things-to-know>
     </div>
 
     <div class="map">
-        <h3 class="fs-20 fs-lg-30 fw-medium">Where you’ll be</h3>
+        <p class="fs-24 fw-medium m-0 pb-20">Where you’ll be</p>
         <app-google-map></app-google-map>
     </div>
 
     <div class="host">
-        <h2 class="fs-20 fs-lg-30 fw-medium">Meet your host</h2>
+        <p class="fs-24 fw-medium m-0 pb-20">Meet your host</p>
         <app-host-details [hostInfo]="hostDetails" [isEventScreen]="false"></app-host-details>
     </div>
 </div>
