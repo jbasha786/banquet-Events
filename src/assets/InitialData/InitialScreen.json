@@ -63,72 +63,25 @@
     ],
     "arrangements": [
         {
-            "button": "Read More -->",
+            "id": 1,
             "desc": "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest",
             "name": "Sunday Special",
-            "src": "/assets/images/cards/sunday.svg"
+            "src": "/assets/images/cards/sunday.svg",
+            "showFullContent": false
         },
         {
-            "button": "Read More -->",
+            "id": 2,
             "desc": "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.",
             "name": "Midweek All-inclusive – Drents Museum",
-            "src": "/assets/images/cards/midweek.svg"
+            "src": "/assets/images/cards/midweek.svg",
+            "showFullContent": false
         },
         {
-            "button": "Read More -->",
+            "id": 3,
             "desc": "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes",
             "name": "All-inclusive Hotelarrangementen",
-            "src": "/assets/images/cards/image.svg"
-        }
-    ],
-    "articles": [
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
-        },
-        {
-            "name": "DJ Set",
-            "price": 120,
-            "Qty": 1,
-            "tPrice": 120
+            "src": "/assets/images/cards/image.svg",
+            "showFullContent": false
         }
     ],
     "bannerSection": {
@@ -139,6 +92,9 @@
     },
     "bookingHistory": [
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",
@@ -173,6 +129,9 @@
             "viewImage": "/assets/images/BookingHistory/view_image.png"
         },
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",
@@ -207,6 +166,9 @@
             "viewImage": "/assets/images/BookingHistory/view_image.png"
         },
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",
@@ -241,6 +203,9 @@
             "viewImage": "/assets/images/BookingHistory/view_image.png"
         },
         {
+            "shareimg": "/assets/images/BookingHistory/share.png",
+            "favimg": "/assets/images/BookingHistory/favorite.png",
+            "addrimg": "/assets/images/BookingHistory/address.png",
             "address": "Address: De Bonte Wever Stadsbroek 179405 BK ASSEN",
             "bookingID": "Booking ID: 12474",
             "cancelBooking": "Cancel Booking",
@@ -283,6 +248,20 @@
             "title": "Darts Events"
         }
     ],
+    "subbannerInfo": [
+        {
+            "desc": "BUSINESS",
+            "src": "/assets/images/exinfo/business.svg"
+        },
+        {
+            "desc": "LEISURE",
+            "src": "/assets/images/exinfo/leisure.svg"
+        },
+        {
+            "desc": "SPORTS",
+            "src": "/assets/images/exinfo/sports.svg"
+        }
+    ],
     "experience": [
         {
             "src": "/assets/images/experience/1.svg"
@@ -307,6 +286,18 @@
         },
         {
             "src": "/assets/images/experience/8.svg"
+        },
+        {
+            "src": "/assets/images/experience/6.svg"
+        },
+        {
+            "src": "/assets/images/experience/1.svg"
+        },
+        {
+            "src": "/assets/images/experience/2.svg"
+        },
+        {
+            "src": "/assets/images/experience/4.svg"
         }
     ],
     "hallsList": [
@@ -318,6 +309,18 @@
             "id": 1,
             "name": "Queens Lagoon Suite",
             "price": "€ 4200.00",
+            "src": "/assets/images/halls/hall.svg",
+            "status": "Stage Available",
+            "taxText": "/Excluding taxes and fees"
+        },
+        {
+            "deposite": "Deposited Required",
+            "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
+            "desc": "Accommodates upto 60 members",
+            "diamensions": "420 to 443 ft²",
+            "id": 2,
+            "name": "Queens Lagoon Suite",
+            "price": "€ 3200.00",
             "src": "/assets/images/halls/hall.svg",
             "status": "Stage Available",
             "taxText": "/Excluding taxes and fees"
@@ -365,6 +368,38 @@
         "refNumber": "123456-2023",
         "vat": "00000000"
     },
+    "menu" : [
+              {
+                "id": 1, 
+                "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+                "qty": 222,
+                "price": "$4"
+              },
+              {
+                "id": 2, 
+                "name": "Onbeperkt koffie thee en fris ",
+                "qty": 3,
+                "price": "€ 7.70"
+              },
+              {
+                "id": 3, 
+                "name": "Kaas broodjes (vega)",
+                "qty": 4,
+                "price": "€ 7.70"
+              },
+              {
+                "id": 4, 
+                "name": "Pizzapunt",
+                "qty": 5,
+                "price": "€ 7.70"
+              },
+              {
+                "id": 5, 
+                "name": "Zacht wit puntje met spread sla en kipfilet",
+                "qty": 5,
+                "price": "€ 7.70"
+              }
+    ],
     "moment": [
         {
             "button": "Johannes Tim",
@@ -455,19 +490,19 @@
     ],
     "navEvent_Items": [
         {
+            "eventName": "Overview"
+        },
+        {
             "eventName": "Best Deals"
         },
         {
-            "eventName": "Corporate Events"
+            "eventName": "Social Events"
         },
         {
             "eventName": "Family Events"
         },
         {
-            "eventName": "OverView"
-        },
-        {
-            "eventName": "Social Events"
+            "eventName": "Corporate Events"
         }
     ],
     "navList": [
@@ -487,14 +522,14 @@
             "src": "../../../../assets/images/logo/question-sign.png"
         },
         {
-            "link": "login",
-            "name": "Sign In Or Join",
-            "src": "../../../../assets/images/logo/user.png"
-        },
-        {
             "link": "mybooking",
             "name": "My Bookings",
             "src": "../../../../assets/images/logo/shopping-bag.png"
+        },
+        {
+            "link": "login",
+            "name": "Sign In Or Join",
+            "src": "../../../../assets/images/logo/user.png"
         }
     ],
     "overview": {
@@ -514,22 +549,36 @@
     "password": "Password",
     "personalized": [
         {
-            "button": "Read More -->",
-            "desc": "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest",
+            "id": 1,
+            "shortDesc": "Enjoy your Sunday in peace and quiet with this beautiful arrangement!",
+            "fulldDesc": "Enjoy your Sunday in peace and quiet with this beautiful arrangement! Upon arrival you can immediately use the hotel room and enjoy a delicious brunch buffet. Enjoy to the fullest",
             "name": "Sunday Special",
-            "src": "/assets/images/cards/2.svg"
+            "src": "/assets/images/cards/2.svg",
+            "showFullContent": false
         },
         {
-            "button": "Read More -->",
-            "desc": "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.",
+            "id": 2,
+            "shortDesc": "The Drents Museum presents the major archeology",
+            "fulldDesc": "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.",
             "name": "Midweek All-inclusive – Drents Museum",
-            "src": "/assets/images/cards/3.svg"
+            "src": "/assets/images/cards/3.svg",
+            "showFullContent": false
         },
         {
-            "button": "Read More -->",
-            "desc": "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes",
+            "id": 3,
+            "shortDesc": "Whether you visit our hotel for a wonderfully",
+            "fulldDesc": "Whether you visit our hotel for a wonderfully relaxing weekend, as a follow-up to your business meeting or during one of our events At De Bonte Wever you will immediately feel at home! What makes",
             "name": "All-inclusive Hotelarrangementen",
-            "src": "/assets/images/cards/1.svg"
+            "src": "/assets/images/cards/1.svg",
+            "showFullContent": false
+        },
+        {
+            "id": 4,
+            "shortDesc": "The Drents Museum presents the major archeology exhibition",
+            "fulldDesc": "The Drents Museum presents the major archeology exhibition Dacia – Empire of Gold and Silver. More than fifty gold and silver treasures from Romania from the 20th century BC to the 3rd century AD come to Assen.",
+            "name": "Midweek All-inclusive – Drents Museum",
+            "src": "/assets/images/cards/3.svg",
+            "showFullContent": false
         }
     ],
     "events_arr": [
@@ -827,5 +876,49 @@
             "src": "/assets/images/promotions/5.svg"
         }
     ],
-    "username": "Email"
+    "username": "Email",
+    "ratingSection": [
+        {
+            "id": 1,
+            "name": "Overall rating",
+            "image": "/assets/images/rating/check-mark.png",
+            "rating": 5
+        },
+        {
+            "id": 2,
+            "name": "Cleanliness",
+            "image": "/assets/images/rating/spray.png",
+            "rating": 4
+        },
+        {
+            "id": 3,
+            "name": "Accuracy",
+            "image": "/assets/images/rating/check-mark.png",
+            "rating": 5
+        },
+        {
+            "id": 4,
+            "name": "Check-in",
+            "image": "/assets/images/rating/key.png",
+            "rating": 4
+        },
+        {
+            "id": 5,
+            "name": "Communication",
+            "image": "/assets/images/rating/message.png",
+            "rating": 3
+        },
+        {
+            "id": 6,
+            "name": "Location",
+            "image": "/assets/images/rating/location.png",
+            "rating": 5
+        },
+        {
+            "id": 7,
+            "name": "Value",
+            "image": "/assets/images/rating/tag.png",
+            "rating": 4
+        }
+    ]
 }

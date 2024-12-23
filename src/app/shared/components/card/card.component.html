@@ -1,10 +1,10 @@
-<div class="card" [ngStyle]=" {'height': title ? '500px': '300px'} ">
+<div class="card">
   <img [src]="picture" class="card-img-top" alt="...">
   <div class="card-body">
     @if(title){
-    <h5 class="card-title">{{title}}</h5>
+    <h5 class="card-title overflow-hidden">{{title}}</h5>
     }
-    <p class="card-text">{{desc}}</p>
-    <strong class="card-link"><a href="#" class="card__color">{{btn}}</a></strong>
+    <p class="card-text fs-14 lh-28 h-140 overflow-hidden">{{desc}}</p>
+    <span class="card-link"><a href="#" class="card__color">{{btn}}</a></span>
   </div>
 </div>

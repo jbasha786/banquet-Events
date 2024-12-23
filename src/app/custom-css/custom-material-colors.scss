@@ -6,16 +6,9 @@
   --primary-color: #F0961B;
   --accent-color: #A62784;
   --warn-color: red;
-  --font-family: 'poppins';
   --font-size: '16px';
 }
 
-@font-face {
-  font-family: "poppins";
-  src: url('/assets/fonts/Poppins-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
 
 
 $primary-color : var(--primary-color);
@@ -268,6 +261,7 @@ input:-webkit-autofill,
 .mat-typography h1 {
   font: var(--font-family);
   margin: 0 0 16px;
+  font-size: 32px;
 }
 
 .mat-h2,
@@ -275,6 +269,7 @@ input:-webkit-autofill,
 .mat-typography h2 {
   font: var(--font-family);
   margin: 0 0 16px;
+  font-size: 24px;
 }
 
 .mat-h3,
@@ -282,6 +277,7 @@ input:-webkit-autofill,
 .mat-typography h3 {
   font: var(--font-family);
   margin: 0 0 16px;
+  font-size: 18px;
 }
 
 .mat-h4,
@@ -289,18 +285,21 @@ input:-webkit-autofill,
 .mat-typography h4 {
   font: var(--font-family);
   margin: 0 0 16px;
+  font-size: 16px;
 }
 
 .mat-h5,
 .mat-typography h5 {
   font: var(--font-family);
   margin: 0 0 12px;
+  font-size: 13px;
 }
 
 .mat-h6,
 .mat-typography h6 {
   font: var(--font-family);
   margin: 0 0 12px;
+  font-size: 10px;
 }
 
 .mat-body-strong,

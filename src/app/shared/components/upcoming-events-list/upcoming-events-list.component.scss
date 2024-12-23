@@ -1,0 +1,42 @@
+@import "../../../styles/variable.scss";
+
+.tagList {
+    width: gutter-per(100);
+    max-width: gutter-per(100);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    .slider {
+        --duration: 30s;
+        --direction: normal;
+
+        .items {
+            display: flex;
+            width: fit-content;
+            animation-name: promotions;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: var(--direction);
+            animation-duration: var(--duration);
+
+            .item {
+                display: flex;
+                align-items: center;
+                padding: gutter-sp(12) gutter-sp(16) gutter-sp(0);
+
+            }
+        }
+    }
+
+    @keyframes promotions {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}

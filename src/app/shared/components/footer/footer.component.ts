@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,12 +9,22 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
-
-  scrollToTop(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+  footerColumns = [
+    {
+      title: 'Quick links',
+      links: ['Mew and Upcoming events', 'Best Rate Guarantee','Activities', 'Gift Cards'],
+    },
+    {
+      title: 'Travel Professionals',
+      links: ['Partners', 'Travel Agents'],
+    },
+    {
+      title: 'Legal',
+      links: ['Privacy Center','Terms and Conditions'],
+    },
+    {
+      title: 'Contact',
+      links: ['De Bonte Wever Assen','Stadsbroek17','9405 BK ASSEN','+31 (0)592-3037770','reserveringen@debontewever.nl','KvK: 04053125'],
+    },
+  ];
 }

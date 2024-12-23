@@ -1,0 +1,26 @@
+@import "../../app/styles/variable.scss";
+
+.tableInvoice {
+    ::ng-deep .mat-mdc-header-row, ::ng-deep .mat-mdc-row{
+        height: gutter-sp(45);
+    }
+    
+    ::ng-deep .mat-mdc-cell{
+        color: $tableCellColor;
+    }
+    .invoice-table .mat-mdc-header-cell {
+        background: $tabHeadercolor;
+    }
+
+    .invoice-table {
+        .eyeImg {
+            height: gutter-sp(12);
+            width: gutter-sp(20);
+        }
+
+        .downloadImg {
+            height: gutter-sp(18);
+            width: gutter-sp(18);
+        }
+    }
+}

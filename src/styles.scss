@@ -1,87 +1,296 @@
-@use '@angular/material' as mat;
-@import './app/styles/variable.scss';
-@import './app/custom-css/custom-material-colors.scss';
+@use "@angular/material" as mat;
+@import "./app/styles/variable.scss";
+@import "./app/custom-css/custom-material-colors.scss";
+@import 'typeface-poppins/index.css';
 @include mat.core();
 $VipsBanquetOffers-primary: mat.define-palette(mat.$indigo-palette);
-$VipsBanquetOffers-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$VipsBanquetOffers-accent: mat.define-palette(mat.$pink-palette,
+    A200,
+    A100,
+    A400);
 $VipsBanquetOffers-warn: mat.define-palette(mat.$red-palette);
 $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetOffers-primary,
-                accent: $VipsBanquetOffers-accent,
-                warn: $VipsBanquetOffers-warn,
-            ),
-            typography: mat.define-typography-config(),
-            density: 0));
+        accent: $VipsBanquetOffers-accent,
+        warn: $VipsBanquetOffers-warn,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0,
+    ));
 @include mat.all-component-themes($VipsBanquetOffers-theme);
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
+body {
+  color: $font-clr !important;
+}
 
 @for $i from 0 through 500 {
 
-    // Margins
-    .m-#{$i} {
-        margin: 0px + $i;
-    }
+  // Margins
+  .m-#{$i} {
+    margin: 0px + $i;
+  }
 
-    .mt-#{$i} {
-        margin-top: 0px + $i;
-    }
+  .mt-#{$i} {
+    margin-top: 0px + $i;
+  }
 
-    .mb-#{$i} {
-        margin-bottom: 0px + $i;
+  .mt-lg-#{$i} {
+    @media (min-width: 992px) {
+      margin-top: #{$i}px !important;
     }
+  }
 
-    .mbv-#{$i} {
-        margin-bottom: 0vw + $i;
+
+  .mb-#{$i} {
+    margin-bottom: 0px + $i;
+  }
+
+  .mb-lg-#{$i} {
+    @media (min-width: 992px) {
+      margin-bottom: #{$i}px !important;
     }
+  }
 
-    .ml-#{$i} {
-        margin-left: 0px + $i;
+  .mbv-#{$i} {
+    margin-bottom: 0vw + $i;
+  }
+
+  .ml-#{$i} {
+    margin-left: 0px + $i;
+  }
+
+  .ml-md-#{$i} {
+    @media (min-width: 768px) {
+      margin-left: #{$i}px;
     }
+  }
 
-    .mr-#{$i} {
-        margin-right: 0px + $i;
+  .ml-lg-#{$i} {
+    @media (min-width: 1280px) {
+      margin-left: #{$i}px;
+    }
+  }
+
+  .mr-#{$i} {
+    margin-right: 0px + $i;
+  }
+
+  .mr-md-#{$i} {
+    @media (min-width: 768px) {
+      margin-right: #{$i}px;
+    }
+  }
+
+  .mr-lg-#{$i} {
+    @media (min-width: 1280px) {
+      margin-right: #{$i}px;
+    }
+  }
+
+  // Paddings
+  .p-#{$i} {
+    padding: 0px + $i;
+  }
+
+  .p-md-#{$i} {
+    @media (min-width: 992px) {
+      padding: #{$i}px !important;
+    }
+  }
+
+  .p-lg-#{$i} {
+    @media (min-width: 1280px) {
+      padding: #{$i}px !important;
+    }
+  }
+
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+
+  .pr-md-#{$i} {
+    @media (min-width: 992px) {
+      padding-right: #{$i}px !important;
+    }
+  }
+
+  .pr-lg-#{$i} {
+    @media (min-width: 1280px) {
+      padding-right: #{$i}px !important;
     }
 
     // Paddings
-    .p-#{$i} {
-        padding: 0px + $i;
+    .pad-#{$i} {
+      padding: 0px + $i !important;
     }
+  }
 
-    .pt-#{$i} {
-        padding-top: 0px + $i;
-    }
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
 
-    .pb-#{$i} {
-        padding-bottom: 0px + $i;
+  .pl-md-#{$i} {
+    @media (min-width: 992px) {
+      padding-left: #{$i}px !important;
     }
+  }
 
-    .pl-#{$i} {
-        padding-left: 0px + $i;
+  .pl-lg-#{$i} {
+    @media (min-width: 1280px) {
+      padding-left: #{$i}px !important;
     }
+  }
 
-    .pr-#{$i} {
-        padding-right: 0px + $i;
-    }
+  .py-#{$i} {
+    padding: 0px + $i;
+  }
 
-    // FontSizes
-    .fs-#{$i} {
-        font-size: 0px + $i;
-    }
+  .pt-#{$i} {
+    padding-top: 0px + $i;
+  }
 
-    // FontSizes in vw
-    .fv-#{$i} {
-        font-size: 0vw + $i;
-    }
+  .pb-#{$i} {
+    padding-bottom: 0px + $i;
+  }
 
-    // font weight
-    .fw-#{$i} {
-        font-weight: 0 + $i;
+  .pl-#{$i} {
+    padding-left: 0px + $i !important;
+  }
+
+  .pr-#{$i} {
+    padding-right: 0px + $i !important;
+  }
+
+  // gaps
+  .gap-#{$i} {
+    gap: 0px + $i;
+  }
+
+  .gap-lg-#{$i} {
+    @media (min-width: 992px) {
+      gap: #{$i}px;
     }
+  }
+
+  // width
+  .w-#{$i} {
+    width: 0px + $i;
+  }
+
+  .w-sm-#{$i} {
+    @media (min-width: 425px) {
+      width: #{$i}px;
+    }
+  }
+
+  .w-lg-#{$i} {
+    @media (min-width: 992px) {
+      width: #{$i}px;
+    }
+  }
+
+  // height
+  .h-#{$i} {
+    height: 0px + $i;
+  }
+
+  .h-lg-#{$i} {
+    @media (min-width: 992px) {
+      height: #{$i}px;
+    }
+  }
+
+  // line-height
+  .lh-#{$i} {
+    line-height: #{$i}px;
+  }
+
+  .lh-md-#{$i} {
+    @media (min-width: 992px) {
+      line-height: #{$i}px !important;
+    }
+  }
+
+  // FontSizes
+  // SCSS Loop for Font Sizes
+
+  .fs-#{$i} {
+    font-size: #{$i}px;
+  }
+  .fs-md-#{$i} {
+    @media (min-width: 768px) {
+      font-size: #{$i}px !important;
+    }
+  }
+  .fs-lg-#{$i} {
+    @media (min-width: 992px) {
+      font-size: #{$i}px !important;
+    }
+  }
+
+  // font weight
+  // Font weight classes
+
+  .fw-#{$i} {
+    font-weight: #{$i};
+  }
+
+  .fw-lg-#{$i} {
+    @media (min-width: 992px) {
+      font-weight: #{$i} !important;
+    }
+  }
+
+
+  // FontSizes in vw
+  .fv-#{$i} {
+    font-size: 0vw + $i;
+  }
+
 }
 
+//letterspacing
+
+.ls-tight {
+  letter-spacing: -0.05em;
+}
+
+.ls-normal {
+  letter-spacing: normal;
+}
+
+.ls-wide {
+  letter-spacing: 0.05em;
+}
+
+.ls-wider {
+  letter-spacing: 0.1em;
+}
+
+.ls-widest {
+  letter-spacing: 0.2em;
+}
+
+
 html {
-    height: 100%;
+  height: 100%;
+}
+
+.cdk-global-overlay-wrapper {
+  top: gutter-sp(112);
+}
+
+::ng-deep .mat-form-field-underline {
+  border-bottom: gutter-sp(1) solid transparent;
+}
+
+.fixed-dialog {
+  transform: translate(0%, -17%);
+  position: fixed;
+  z-index: 1050;
+  overflow: auto;
 }

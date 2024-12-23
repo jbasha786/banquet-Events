@@ -1,0 +1,16 @@
+@import '../../styles/variable.scss';
+
+.one-control {
+    &__image {
+        img {
+            width: gutter-per(100);
+            height: gutter-per(100);
+        }
+    }
+
+    &__content {
+        .list {
+            max-width: gutter-sp(470);
+        }
+    }
+}

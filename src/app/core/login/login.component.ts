@@ -31,7 +31,7 @@ export class LoginComponent {
     this.getusername();
     this.getpassword();
   }
-  
+
   getusername() {
     this.defaultService.getJSON().subscribe((result: any) => {
       this.username = result.username;
@@ -48,9 +48,7 @@ export class LoginComponent {
   onSubmit() {
     this.loginService.userLogin((this.loginForm.value as loginModel)).subscribe((result: any) => {
       this.router.navigate(['home']);
-    }, err => {
-      console.log(err?.error?.message)
-    })
+    });
   }
 
   signUp() {

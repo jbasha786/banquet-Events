@@ -4,26 +4,55 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { EventGuestsService } from '../../services/event-guest/event-guests.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-guest',
   standalone: true,
-  imports: [MatCardModule, MatFormFieldModule, MatInputModule, FormsModule],
+  imports: [MatCardModule, MatFormFieldModule, MatInputModule, FormsModule, CommonModule],
   templateUrl: './guest.component.html',
   styleUrl: './guest.component.scss'
 })
 export class GuestComponent {
 
-  adults: number = 1;
-  child: number = 1;
+  guestFields = [
+    {
+      label: 'Adults',
+      value: 1,
+      changeFunction: this.changeAdults.bind(this)
+    },
+    {
+      label: 'Elder Child',
+      value: 1,
+      changeFunction: this.changeElderChild.bind(this)
+    },
+    {
+      label: 'Younger Child',
+      value: 1,
+      changeFunction: this.changeYoungerChild.bind(this)
+    },
+    {
+      label: 'Babies',
+      value: 1,
+      changeFunction: this.changeBabies.bind(this)
+    }
+  ];
 
   constructor(private eventACService: EventGuestsService) { }
 
-  changeAdults(event: any) {
-    this.eventACService.setSelectedAdultCount(event);
+  changeAdults(value: number) {
+    this.eventACService.setSelectedAdultCount(value);
   }
-  changeChild(event: any) {
-    this.eventACService.setSelectedChildCount(event);
+
+  changeElderChild(value: number) {
+    this.eventACService.setSelectedElderChildCount(value);
+  }
+  changeYoungerChild(value: number) {
+    this.eventACService.setSelectedYoungerChildCount(value);
+  }
+
+  changeBabies(value: number) {
+    this.eventACService.setSelectedBabiesCount(value);
   }
 
 }

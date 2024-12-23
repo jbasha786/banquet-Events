@@ -4,7 +4,10 @@ import { MatDialogActions, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialog } from '@angular/material/dialog';
 import { DefaultService } from '../../../services/default.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -22,6 +25,8 @@ export class ArticlesComponent {
 
   constructor(
     public dialogRef: MatDialogRef<ArticlesComponent>,
+    private dialog: MatDialog,
+    private router: Router,
     private defaultService: DefaultService
   ) {
     this.getInitalData();
@@ -66,5 +71,9 @@ export class ArticlesComponent {
 
   updateQty(item: any, event: any) {
     item.qty = event.data;
+  }
+  onSave(): void {
+    this.dialog.closeAll();
+    this.router.navigate(['hallsList']);
   }
 }

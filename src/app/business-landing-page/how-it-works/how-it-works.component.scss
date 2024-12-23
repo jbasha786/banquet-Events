@@ -1,0 +1,15 @@
+
+@import "../../styles/variable.scss";
+
+.how-it-works {
+    &__clr {
+        color: $secondary-color;
+    }
+
+    &__cards {
+        padding: gutter-vw(3) gutter-vw(0);
+        .text {
+            padding: gutter-vw(0) gutter-vw(2.5);
+        }
+    }
+}

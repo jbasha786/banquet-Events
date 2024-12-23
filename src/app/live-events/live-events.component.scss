@@ -1,0 +1,108 @@
+@import '../../app/custom-css/custom-material-colors.scss';
+@import '../../app/styles/variable.scss';
+
+.event-item {
+    &__overview {
+        padding: gutter-vw(6) gutter-vw(5);
+
+        &__img {
+
+            img {
+                width: gutter-per(100);
+                height: gutter-per(100);
+            }
+        }
+
+        &__bookbtn {
+            border-radius: gutter-sp(10);
+            color: $white;
+            background: linear-gradient(90.69deg, $rev-gradient-clr1 gutter-per(0.85), $rev-gradient-clr2 gutter-per(100.99));
+            border: none;
+            padding: gutter-sp(10);
+        }
+
+        &__price {
+            padding-bottom: gutter-vw(2);
+
+            .pTitle {
+                text-transform: uppercase;
+            }
+
+            .color {
+                color: $primary-color;
+            }
+        }
+
+        .about {
+            padding: gutter-vw(4) gutter-vw(0);
+
+            .desc {
+                text-align: justify;
+            }
+        }
+
+        .conditions {
+            padding-bottom: gutter-vw(2);
+
+            .desc {
+                gap: gutter-sp(20);
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+            }
+        }
+
+        .tickets {
+            position: sticky;
+            top: gutter-sp(90);
+            z-index: 1020;
+
+            &__section {
+                position: sticky;
+                top: gutter-vw(12);
+                z-index: 1020;
+            }
+
+            .date {
+                text-transform: uppercase;
+            }
+
+            .title {
+                color: $tickets-tile-clr;
+            }
+
+            .qty {
+                padding: gutter-vw(2) gutter-vw(0);
+                position: relative;
+
+                .qtySection {
+                    position: absolute;
+                    right: gutter-sp(0);
+                    top: gutter-vw(3);
+
+                    .inActive {
+                        background-color: $add-remove-btn-clr;
+                        color: $tickets-tile-clr;
+                        border-radius: gutter-sp(2);
+
+                    }
+
+                    .active {
+                        background-color: $tickets-tile-clr;
+                        color: $white;
+                        border-radius: gutter-sp(2);
+
+                    }
+                }
+            }
+        }
+
+        .amenities,
+        .thingstoKnow,
+        .eventLocation,
+        .contectPerson {
+            padding: gutter-vw(0) gutter-vw(0) gutter-vw(6);
+        }
+    }
+
+}

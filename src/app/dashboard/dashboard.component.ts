@@ -3,16 +3,18 @@ import { CardComponent } from '../shared/components/card/card.component';
 import { CardSideContentComponent } from '../shared/components/card-side-content/card-side-content.component';
 import { CarouselComponent } from '../shared/components/carousel/carousel.component';
 import { CorporateMeetingComponent } from './corporate-meeting/corporate-meeting.component';
-import { FamilyEventsComponent } from './family-events/family-events.component';
 import { FAQComponent } from './faq/faq.component';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BookingComponent } from '../booking/booking.component';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { BannerModel } from './Models/banner.model';
+import { ChatComponent } from '../chat/chat.component';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,13 +23,16 @@ import { BannerModel } from './Models/banner.model';
     CardSideContentComponent,
     CarouselComponent,
     CorporateMeetingComponent,
-    FamilyEventsComponent,
+    UpcomingEventsListComponent,
     FAQComponent,
+    ChatComponent,
     RouterLink,
     RouterModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatDialogModule],
+    MatDialogModule,
+    CommonModule,
+    CarouselModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -37,10 +42,35 @@ export class DashboardComponent {
   eventsInfo: any;
   arrangementsInfo: any;
   experienceInfo: any;
-  momentInfo:any;
-  personalizedInfo : any;
+  subbannerInfo: any;
+  momentInfo: any;
+  personalizedInfo: any;
   promotionsInfo: any;
+  shortDesc: boolean = true;
+ 
 
+  customOptionsforPersonalizedInfo: OwlOptions = {
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000, 
+    autoplayHoverPause: true,
+    center: false,
+    dots: false,
+    autoHeight: true,
+    autoWidth: false,
+    items: 3,
+    margin: 50,
+    smartSpeed: 300, 
+    lazyLoad: true,
+    responsive: {
+      0: { items: 1, margin: 10 },
+      768: { items: 2, margin: 50 },
+      1024: { items: 3, margin: 50 },
+    },
+    lazyLoadEager: 1,
+  };
+  
+  
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
     private defaultService: DefaultService
@@ -58,9 +88,9 @@ export class DashboardComponent {
       this.eventsInfo = result?.events;
       this.arrangementsInfo = result?.arrangements;
       this.experienceInfo = result?.experience;
+      this.subbannerInfo = result?.subbannerInfo;
       this.momentInfo = result?.moment;
       this.personalizedInfo = result?.personalized;
-      this.promotionsInfo = result?.promotions;
     });
   }
 
@@ -84,10 +114,25 @@ export class DashboardComponent {
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
-      width: "80vw",
+      // width: "100vw",
+      // height: "100vh",
+      width: '100vw',
+      height: '100vh',
+      maxWidth: '100vw',
+     
+      panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
-      disableClose: true 
+      disableClose: true
     });
   }
+
+  goToSignUp() {
+    this.router.navigate(['signUp']);
+  }
+
+  readMore(personalInfo: any) {
+    personalInfo.showFullContent = !personalInfo.showFullContent;
+  }
+
 }

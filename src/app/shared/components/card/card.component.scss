@@ -2,31 +2,16 @@
 @import "../../../custom-css/custom-material-colors.scss";
 
 .card {
-    margin-bottom: 10px;
-
-    .card-title {
+    border:none;
+   .card-title {
         text-wrap: nowrap;
-        overflow: hidden;
     }
-
-    .card-text {
-        height: 50px;
-        overflow: hidden;
+    .card-body{
+        border:1px solid $border-gray;
     }
-
-    .card-link {
-        position: absolute;
-        bottom: 30px;
-    }
-
-    &__color {
+ &__color {
         color: $secondory-color;
         text-decoration: none;
     }
 }
 
-.card:hover {
-    .card-img-top {
-        transform: scale(0.9);
-    }
-}

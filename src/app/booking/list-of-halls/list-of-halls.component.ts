@@ -15,6 +15,8 @@ import { EventPlanService } from '../../services/event-plan/event-plan.service';
 import { EventGuestsService } from '../../services/event-guest/event-guests.service';
 import { EventDateSlotsService } from '../../services/event-date-slot/event-date-slots.service';
 import { ArticlesComponent } from '../../shared/components/articles/articles.component';
+import { ZindexService } from '../../../app/services/zindex.service';
+import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-menu.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -42,7 +44,8 @@ export class ListOfHallsComponent {
     private eventBookingService: EventBookingService,
     private eventPlaning: EventPlanService,
     private eventACService: EventGuestsService,
-    private eventDSService: EventDateSlotsService
+    private eventDSService: EventDateSlotsService,
+    private zIndexService: ZindexService
   ) { }
 
   ngOnInit() {
@@ -60,7 +63,8 @@ export class ListOfHallsComponent {
   cancelReservation() {
     this.dialog.open(DialogueComponent, {
       width:"500px",
-      disableClose: true
+      disableClose: true,
+      position: { top: '0', left: '0' }, 
     });
    }
   reserve(reserve: any) {
@@ -76,7 +80,9 @@ export class ListOfHallsComponent {
 
   getGuestDetails(){
     const adults = this.eventACService.getSelectedAdultCount();
-    const child = this.eventACService.getSelectedChildCount();
+    const elderChild = this.eventACService.getSelectedElderChildCount();
+    const youngerChild = this.eventACService.getSelectedYoungerChildCount();
+    const babies = this.eventACService.getSelectedBabiesCount();
   }
 
   getDateAndSlots(){
@@ -90,9 +96,24 @@ export class ListOfHallsComponent {
   }
 
   addArticles() {
-    this.dialog.open(ArticlesComponent, {
-      width: '600px',
-      height: '60vh'
+    this.zIndexService.setHeaderZIndex(1000);
+    const dialogRef = this.dialog.open(ArticlesComponent, {
+      panelClass: 'fixed-dialog',
+      position: { top: '0' }, 
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.zIndexService.setHeaderZIndex(1030);
+    });
+  }
+
+
+  chooseMenu(){
+    this.dialog.open(ChooseMenuComponent, {
+      width: '90%',
+      height: '100%',
+      panelClass: 'choosemenu-dialog',
+      position: { left: '10%' }, 
     });
   }
 
