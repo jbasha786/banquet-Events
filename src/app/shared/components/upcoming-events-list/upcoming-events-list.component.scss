@@ -15,7 +15,7 @@ $animationSpeed: 40s;
         .items {
             animation: promotions $animationSpeed linear infinite;
             display: flex;
-            width: calc(250px * 10);
+            width: calc(gutter-sp(250) * 10);
 
             .item {
                 display: flex;
@@ -32,7 +32,7 @@ $animationSpeed: 40s;
         }
 
         100% {
-            transform: translateX(calc(-250px * 5));
+            transform: translateX(calc(-gutter-sp(250) * 5));
         }
     }
 }
