@@ -243,10 +243,12 @@
 		height: gutter-per(100);
 		background-color: $white-smoke;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
+	}
+	&__text{
+		letter-spacing: gutter-sp(4);
 	}
 
 	&__item:hover &__overlay {
