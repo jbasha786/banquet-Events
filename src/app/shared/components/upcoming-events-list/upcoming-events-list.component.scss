@@ -1,5 +1,7 @@
 @import "../../../styles/variable.scss";
 
+$animationSpeed: 40s;
+
 .tagList {
     width: gutter-per(100);
     max-width: gutter-per(100);
@@ -9,17 +11,11 @@
     overflow: hidden;
 
     .slider {
-        --duration: 30s;
-        --direction: normal;
 
         .items {
+            animation: promotions $animationSpeed linear infinite;
             display: flex;
-            width: fit-content;
-            animation-name: promotions;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: var(--direction);
-            animation-duration: var(--duration);
+            width: calc(gutter-sp(250) * 10);
 
             .item {
                 display: flex;
@@ -36,7 +32,7 @@
         }
 
         100% {
-            transform: translateX(-100%);
+            transform: translateX(calc(-gutter-sp(250) * 5));
         }
     }
 }
