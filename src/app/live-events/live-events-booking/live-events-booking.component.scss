@@ -1,0 +1,88 @@
+@import "../../styles/variable.scss";
+@import "../../custom-css/custom-material-colors.scss";
+
+.tickets {
+    position: sticky;
+    top: gutter-sp(120);
+    z-index: 1020;
+
+    &__price {
+        padding-bottom: gutter-vw(2);
+
+        .pTitle {
+            text-transform: uppercase;
+            opacity: gutter-per(100);
+        }
+
+        .color {
+            color: $primary-color;
+        }
+    }
+
+    &__bookbtn {
+        border-radius: gutter-sp(10);
+        color: $white;
+        background: linear-gradient(90.69deg, $rev-gradient-clr1 gutter-per(0.85), $rev-gradient-clr2 gutter-per(100.99));
+        border: none;
+        padding: gutter-sp(15);
+        width: gutter-per(100);
+    }
+
+    &__section {
+        position: sticky;
+        top: gutter-vw(12);
+        z-index: 1020;
+        border: gutter-sp(1) solid $tickets-border-clr;
+        border-radius: gutter-sp(10);
+        background: $white;
+
+        .date {
+            text-transform: uppercase;
+            opacity: gutter-per(70);
+        }
+
+        .title {
+            color: $tickets-tile-clr;
+        }
+
+        .desc,
+        .numoftickets {
+            opacity: gutter-per(99);
+            color: $tickets-text-clr;
+        }
+    }
+
+    .qty {
+        padding: gutter-vw(2.5) gutter-vw(0);
+        position: relative;
+
+        .items {
+            opacity: gutter-per(70);
+        }
+
+        .qtySection {
+            .inActive {
+                background-color: $add-remove-btn-clr;
+                color: $tickets-tile-clr;
+                border-radius: gutter-sp(2);
+                width: gutter-sp(40);
+                height: gutter-sp(40);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .active {
+                background-color: $tickets-tile-clr;
+                color: $white;
+                border-radius: gutter-sp(2);
+                width: gutter-sp(40);
+                height: gutter-sp(40);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+        }
+    }
+}

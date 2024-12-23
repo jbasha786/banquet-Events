@@ -39,7 +39,7 @@
             width: max-content;
             right: gutter-vw(9);
             bottom: gutter-sp(10);
-            padding: gutter-sp(5);
+            padding: gutter-sp(5) gutter-sp(20);
 
             mat-icon {
                 width: auto;
@@ -59,22 +59,35 @@
 
             .text {
                 text-align: justify;
-                line-height: gutter-sp(34);
+                padding-right: gutter-sp(40);
             }
         }
 
         &__edit {
             &__section {
-                padding: gutter-sp(10);
-                background-color: $gray;
-                border-radius: gutter-sp(5);
+                padding: gutter-sp(23);
+                background-color: $guest-background-clr;
+                border-radius: gutter-sp(10);
 
                 &__editArticle {
-                    padding: gutter-sp(5);
+                    position: relative;
+                    padding: gutter-sp(10);
                     color: $secondory-color;
-                    border-radius: gutter-sp(5);
-                    border: gutter-sp(1) solid $secondory-color;
-                    width: gutter-per(100);
+                    border-radius: gutter-sp(10);
+                    width: gutter-per(100); 
+                }
+
+                &__editArticle::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: gutter-sp(10);
+                    padding: gutter-sp(1);
+                    background: linear-gradient(45deg, $edit-btn-gradient-clr1, $edit-btn-gradient-clr2);
+                    mask:
+                        linear-gradient($black 0 0) content-box,
+                        linear-gradient($black 0 0);
+                    mask-composite: exclude;
                 }
 
                 &__reverse {
@@ -111,7 +124,7 @@
                 .border-clr-none {
                     padding: gutter-rem(1.5) gutter-rem(0.25) gutter-rem(0.25);
                     border: gutter-sp(1) solid $white;
-                    font-size: gutter-sp(12);
+                    font-size: gutter-sp(16);
                 }
 
                 .border-clr {
@@ -131,7 +144,7 @@
                 label {
                     padding: gutter-rem(1) gutter-rem(0.25);
                     color: $secondary-color;
-                    font-size: gutter-sp(16);
+                    font-size: gutter-sp(14);
                 }
 
                 label::after {
@@ -151,12 +164,13 @@
 
     // Rationg Section
     .rating {
-        padding: gutter-vw(6) gutter-vw(5) gutter-vw(0);
+        padding: gutter-vw(6) gutter-vw(14) gutter-vw(0);
 
         &__desc {
             line-height: gutter-sp(25);
             margin: gutter-sp(0) auto;
             max-width: gutter-sp(270);
+            opacity: gutter-per(70);
         }
 
         &__sections {
@@ -169,7 +183,7 @@
 
                 .progress {
                     width: gutter-per(100);
-                    height: gutter-sp(5);
+                    height: gutter-sp(3);
 
                     .progress-bar {
                         background-color: $black;
@@ -190,7 +204,9 @@
     }
 }
 
-.thingstoKnow, .map, .host {
+.thingstoKnow,
+.map,
+.host {
     padding: gutter-vw(6) gutter-vw(5) gutter-vw(0);
 }
 

@@ -76,7 +76,11 @@
   </div>
 
   <div class="text">
-    <input type="text" placeholder="Type here..." class="inputtext" />
+    <input type="text" placeholder="Type here..." class="inputtext" (input)="changeInputStyle($event)" [ngStyle]="{
+      'background-color': inputBackgroundColor,
+      'color': inputTextColor,
+      'border-color': inputBorderColor
+    }" />
     <img
       src="../../assets/images/chat/chat-send-btn.svg"
       alt=""

@@ -54,6 +54,12 @@ body {
       margin-bottom: #{$i}px !important;
     }
   }
+  .mb-xl-#{$i} {
+    @media (min-width: 1536px) {
+      margin-bottom: #{$i}rem !important;
+    }
+  }
+
 
   .mbv-#{$i} {
     margin-bottom: 0vw + $i;
@@ -281,7 +287,7 @@ html {
 }
 
 .cdk-global-overlay-wrapper {
-  top: gutter-sp(112);
+  top: gutter-sp(105);
 }
 
 ::ng-deep .mat-form-field-underline {
