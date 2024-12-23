@@ -1,0 +1,25 @@
+<div class="booking">
+    <div class="booking__model">
+        <div class="booking__process m-auto">
+            <div class="progress h-8">
+                <div class="progress-bar" id="progressbar" [style.width]="progressbarWidth" role="progressbar"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <app-about-event></app-about-event>
+    </div>
+    <mat-dialog-actions class="w-100 dialog-btns">
+        <div class="booking__btn w-100 p-1 ml-0 mr-0 ml-md-60 mr-md-60 ml-lg-100 mr-lg-100">
+            <div class="d-md-flex d-lg-flex d-xl-flex d-xxl-flex d-sm-block justify-content-between col-12">
+                <button type="button" class="btn btn_cancel fw-500 border rounded-pill mb-10 px-5"
+                    (click)="returnToHome()">Cancel</button>
+                <div class="d-flex flex-md-row flex-lg-row flex-xl-row justify-content-between flex-xxl-row">
+                    <button type="button" class="btn btn_back rounded-pill px-5 h-40" (click)="back()">Back</button>
+                    <button type="button" class="ms-3 btn btn_next border rounded-pill px-5"
+                        (click)="next()">Next</button>
+                </div>
+            </div>
+
+        </div>
+    </mat-dialog-actions>
+</div>
