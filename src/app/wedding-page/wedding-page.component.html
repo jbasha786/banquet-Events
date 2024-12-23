@@ -1,0 +1,88 @@
+<div class="eventsmainImg">
+  <img
+    class="eventsmainImg__events_banner"
+    src="../../assets/images/wedding/wedding-baner.png"
+    alt="Wedding Banner"
+    width="100%"
+  />
+</div>
+
+<div class="events_content">
+  <p class="fs-26 fw-500">Wedding</p>
+
+  <!-- Loop through the events -->
+  <div *ngFor="let event of events">
+    <div class="wedding__border mb-4">
+      <div class="row g-0 content-sec d-flex gap-18">
+        <!-- Image Section -->
+        <div class="col-xl-4 image-section">
+          <div
+            *ngIf="event.images && event.images.length > 0"
+            class="carousel-align"
+          >
+            <owl-carousel-o [options]="customOptions">
+              <ng-container *ngFor="let image of event.images">
+                <ng-template carouselSlide>
+                  <img class="image-section" [src]="image" alt="Event Image" />
+                </ng-template>
+              </ng-container>
+            </owl-carousel-o>
+          </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="col-xl-7 container-text">
+          <div>
+            <p class="title mb-1 fs-30 fw-500">{{ event.title }}</p>
+            <p class="room-details fs-14 fw-300">
+              <span
+                *ngFor="let part of getRoomDetailsParts(event); let last = last"
+              >
+                {{ part }}
+                <span *ngIf="!last" class="separator">|</span>
+              </span>
+            </p>
+          </div>
+
+          <div>
+            <p class="about fs-16 fw-500 mb-2">About</p>
+            <p class="mb-8 lh-24 fs-14 fs-lg-13 fw-300">
+              {{ event.description }}
+            </p>
+            <div class="list-container">
+              <ul
+                class="mb-24 mt-16 mb-xl-7 fs-14 fs-lg-13 fw-300 d-flex flex-lg-row flex-column gap-0 gap-lg-20"
+              >
+                <div class="left-column">
+                  <li *ngFor="let amenity of event.amenities.slice(0, 4)">
+                    {{ amenity }}
+                  </li>
+                </div>
+                <div class="right-column">
+                  <li *ngFor="let amenity of event.amenities.slice(4)">
+                    {{ amenity }}
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="price mb-3 fs-36 lh-25">
+              {{ event.price }}
+              <span class="fw-500 fs-14 text-muted">/ON WORDS</span>
+            </div>
+            <!-- Buttons -->
+            <div
+              class="d-flex flex-md-row flex-column gap-12 justify-content-center justify-content-lg-start align-items-center align-items-lg-start"
+            >
+              <button class="btn-book">Book now</button>
+              <button class="btn-download">Download Brochure</button>
+              <button class="btn-quote">Request a Quote</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

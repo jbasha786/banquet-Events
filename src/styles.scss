@@ -54,6 +54,12 @@ body {
       margin-bottom: #{$i}px !important;
     }
   }
+  .mb-xl-#{$i} {
+    @media (min-width: 1536px) {
+      margin-bottom: #{$i}rem !important;
+    }
+  }
+
 
   .mbv-#{$i} {
     margin-bottom: 0vw + $i;
