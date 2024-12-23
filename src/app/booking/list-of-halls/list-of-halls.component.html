@@ -46,8 +46,7 @@
         </form>
 
         @for(item of hallsList; track $index){
-        <div
-            class="d-flex justify-content-center align-items-center flex-column flex-lg-row hall-list gap-4 p-2 mt-10">
+        <div class="d-flex justify-content-center align-items-center flex-column flex-lg-row hall-list gap-4 p-2 mt-10">
             <div class="d-flex hallsView__images">
                 <img class="hallsView__images__img "
                     [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}" width=""
@@ -55,8 +54,8 @@
                 <div *ngIf="!requestSent" class="hallsView__images__icon">
                     <img src="../../../assets/images/halls/sent.gif" class="sentImg">
                     <p class="fs-16 fw-bold mt-2">Reservation Request Sent</p>
-                    <p class="fs-12">Our representative will get back to you shortly Reservation ID: <a (click)="confirm()"
-                            class="cursor reserveID">234566</a></p>
+                    <p class="fs-12">Our representative will get back to you shortly Reservation ID: <a
+                            (click)="confirm()" class="cursor reserveID">234566</a></p>
                 </div>
                 <div *ngIf="!requestAccepted" class="hallsView__images__icon p-20">
                     <img src="../../../assets/images/halls/confirm.gif" class="h-120 w-120 m-auto" alt="">
@@ -65,8 +64,12 @@
             </div>
             <div class="m-0 m-lg-10">
                 <p class="fs-22 fw-500 lh-1 mb-0 text-black">{{item.name}}</p>
-                <div class="mb-2 font-color">
-                    <span class="fs-12">{{item.desc}}&nbsp;&nbsp; | &nbsp;&nbsp; {{item.diamensions}} &nbsp;&nbsp; | &nbsp;&nbsp;{{item.status}}</span>
+                <div class="mb-2 font-color d-flex gap-2">
+                    <div> <span class="fs-12">{{item.desc}}</span></div>
+                    <div><span>|</span></div>
+                    <div><span class="fs-12">{{item.diamensions}}</span></div>
+                    <div><span>| </span></div>
+                    <div><span class="fs-12"> {{item.status}}</span></div>
                 </div>
                 <p class="fs-16 fw-500 mb-0 text-black">{{item.deposite}}</p>
                 <p class="hallsView__desc font-color mb-3 fs-12">{{item.depositeDesc}}</p>
@@ -86,7 +89,8 @@
                             Choose Menu
                         </span>
                     </div>
-                    <div class="d-flex align-items-center cursor p-2" (click)="getDetails()"><span class="fw-500 fs-14">View
+                    <div class="d-flex align-items-center cursor p-2" (click)="getDetails()"><span
+                            class="fw-500 fs-14">View
                             Details &rarr;</span></div>
                 </div>
             </div>
