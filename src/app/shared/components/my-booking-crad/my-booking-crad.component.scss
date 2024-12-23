@@ -3,17 +3,14 @@
 
 .card {
 
-    // border: 1px solid green;
     .card-img {
-        height: 100%;
-        width: 100%;
+        height: gutter-per(100);
+        width: gutter-per(100);
     }
-
 
     .price {
         color: $priceColor;
-        font-size: 24px;
-        font-weight: bold;
+        font-size: gutter-sp(24);
     }
 
     .fontdull {
@@ -21,86 +18,64 @@
     }
 
     .booking_details {
-        width: -webkit-fill-available;
-    }
-
-    .b_radius {
-        border-radius: 8px;
-        padding: 8px;
-        font-weight: 500;
-
+        width: gutter-per(100);
     }
 
     .cancel {
-        background-color: rgba(120, 115, 109, 1);
+        background-color: $cancelbtn;
         color: $white;
     }
 
     .edit {
-        background-color: rgba(241, 139, 0, 1);
+        background-color: $editbtn;
         color: $white;
     }
 
     .view {
-        background-color: rgba(166, 39, 132, 1);
+        background-color: $viewdetailbtn;
         color: $white;
     }
 
     .booking_status {
-        left: 16px;
+        left: gutter-sp(16);
         width: fit-content;
-        top: 25px;
-        left: 15px;
-        gap: 0px;
-        opacity: 0px;
+        top: gutter-sp(25);
+        left: gutter-sp(15);
+        gap: gutter-sp(0);
+        opacity: gutter-sp(0);
         rotate: -180 deg;
-        clip-path: polygon(0% 0%, 91% 0%, 100% 50%, 91% 100%, 0% 100%);
+        clip-path: polygon( gutter-per(0) gutter-per(0), gutter-per(91)  gutter-per(0), gutter-per(100) gutter-per(50), gutter-per(91) gutter-per(100), gutter-per(0) gutter-per(100));
         color: $white;
-        padding-right: 15px;
-        padding-left: 10px;
+        padding-right: gutter-sp(15);
+        padding-left: gutter-sp(10);
 
     }
 
     .rating {
         background-color: $ratingBackground;
-        border-radius: 16px;
+        border-radius: gutter-sp(16);
     }
 
     .frameImg {
-        height: 25px;
-        width: 25px;
+        height: gutter-sp(16);
+        width: gutter-sp(16);
     }
 
     .rating_booking {
         position: absolute;
-        top: 27px;
-        gap: 6px;
+        top: gutter-sp(27);
+        gap: gutter-sp(6);
     }
 
     .ratingImg {
-        height: 12px;
-        width: 12px;
+        height: gutter-sp(12);
+        width: gutter-sp(12);
         position: relative;
     }
 
     .address {
         color: $adresscolor;
-        font-size: 10px;
-        font-weight: 500;
+        font-size: gutter-sp(10);
     }
 
-    .fw-500 {
-        font-weight: 500;
-    }
-
-    .fw-400 {
-        font-weight: 400;
-    }
-
-}
-
-@media only screen and (max-width: 992px) {
-    .pipe {
-        display: none;
-    }
 }

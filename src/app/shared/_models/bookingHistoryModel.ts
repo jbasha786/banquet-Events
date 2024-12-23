@@ -22,6 +22,9 @@ export interface bookingHistoryModel extends baseModel {
     checkOut: any;
     status: Status;
     address: string;
+    addrimg: any;
+    favimg: any;
+    shareimg: any;
 }
 
 interface Status {

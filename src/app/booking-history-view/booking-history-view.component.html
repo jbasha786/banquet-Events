@@ -1,18 +1,18 @@
-<div class="container bookingView">
+<div class="bookingView">
     <section>
-        <div class="p-2 d-md-flex justify-content-between d-sm-block">
-            <div>
-                <button mat-raised-button class="me-3 btn_raised">All</button>
-                <button mat-raised-button class="me-3 btn_raised" disabled>Recent</button>
-                <button mat-raised-button class="me-3 btn_raised" disabled>Feature</button>
-                <button mat-raised-button class="me-3 btn_raised" disabled>Cancelled</button>
+        <div class="mb-4 mt-20 d-md-flex justify-content-between flex-column flex-md-row align-items-center">
+            <div class="d-flex flex-row flex-md-row gap-2 col-12 col-md-4">
+                    <button type="button" role="button" class="btn btn-sm border rounded px-2 px-md-2">All</button>
+                    <button type="button" role="button" class="btn btn-sm border rounded px-2 px-md-2" disabled>Recent</button>
+                    <button type="button" role="button" class="btn btn-sm border rounded px-2 px-md-2" disabled>Feature</button>
+                    <button type="button" role="button" class="btn btn-sm border rounded px-1 px-md-2" disabled>Cancelled</button>
             </div>
-            <div>
+            <div class="mt-2 mt-md-0 d-flex align-items-center justify-content-lg-end justify-content-start col-12 col-md-6">
                 <form class="d-flex align-items-center search" role="search">
                     <button class="btn_search" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
-                    <input class="form-control ps-4 search_input fs-14 fw-500" type="search"
+                    <input class="form-control pl-30 py-1 search_input fs-12" type="search"
                         placeholder="Search For Bookings" aria-label="Search">
                 </form>
             </div>
@@ -28,7 +28,8 @@
                 noOfGuestsName="{{obj.noOfGuests.name}}" frameImg="{{obj.frameImg}}"
                 noOfGuestValue="{{obj.noOfGuests.value}}" checkInname="{{obj.checkIn.name}}"
                 checkInvalue="{{obj.checkIn.value}}" checkOutname="{{obj.checkOut.name}}"
-                checkOutvalue="{{obj.checkOut.value}}" statusName="{{obj.status.name}}"
+                checkOutvalue="{{obj.checkOut.value}}" statusName="{{obj.status.name}}" favImg="{{obj.favimg}}"
+                shareImg="{{obj.shareimg}}" addrImg="{{obj.addrimg}}"
                 statusvalue="{{obj.status.value}}" address="{{obj.address}}"
                 conformationID="{{obj.status.conformationID}}"></app-my-booking-crad>
         </div>

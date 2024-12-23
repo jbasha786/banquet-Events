@@ -25,6 +25,9 @@ export class MyBookingCradComponent {
   @Input() checkOutname: any;
   @Input() checkOutvalue: any;
   @Input() statusName: any;
+  @Input() addrImg: any;
+  @Input() favImg: any;
+  @Input() shareImg: any;
   @Input() statusvalue: any;
   @Input() address: any;
   @Input() rating: any;
