@@ -21,13 +21,11 @@ export class SignupComponent {
 
   registrationForm: FormGroup = this.fb.group({
     firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
-    fullName: ['', Validators.required],
-    email: ['', Validators.required],
-    relatie: ['', Validators.required],
-    phone: ['', Validators.required],
-    password: ['', Validators.required],
-    confirmPassword: ['', Validators.required]
+      lastName: ['', Validators.required],
+      fullName: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
   });
 
   returnToLogin() {
