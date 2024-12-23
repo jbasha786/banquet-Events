@@ -1,7 +1,6 @@
 <div class="selction_dates d-flex flex-column justify-content-center align-items-center col-10 m-auto">
-    <p class="selction_dates__title text-center text-center fs-24 fw-500">When?</p>
+    <p class="selction_dates__title text-center fs-28 fw-500 text-black">When?</p>
     <div class="card col-sm-12 col-lg-6 p-2 selction_dates__content border-0">
-        <hr>
         <div class="row selction_dates__calender w-100 m-auto d-flex justify-content-center align-items-center flex-column flex-lg-row flex-nowrap" *ngIf="specificDaysView">
             <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
                 <mat-calendar (selectedChange)="_onSelectedChange($event)" [selected]="selectedDateRange">

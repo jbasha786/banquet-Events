@@ -6,14 +6,23 @@
         margin: gutter-sp(0) auto;
     }
 
+    &__title {
+        color: $black;
+    }
+
     &__card {
         background-color: $ash-white;
+
+        &__label {
+            color: $black;
+        }
 
         &__input {
             width: gutter-per(100);
         }
+
         input:focus {
             outline: none;
-          }
+        }
     }
 }
