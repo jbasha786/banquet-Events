@@ -198,15 +198,12 @@ body {
       width: #{$i}px;
     }
   }
-  .w-#{$i} {
-    width: #{$i + '%'}
-  }
-    .w-sm-#{$i} {
+    .wid-sm-#{$i} {
       @media (min-width: 425px) {
       width: #{$i + '%'} ;
       }
     }
-    .w-lg-#{$i} {
+    .wid-lg-#{$i} {
       @media (min-width: 992px) {
         width: #{$i + '%'} !important;
       }
