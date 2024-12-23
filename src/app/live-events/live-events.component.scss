@@ -11,6 +11,12 @@
                 height: gutter-per(100);
             }
         }
+
+        .tickets {
+            position: sticky;
+            top: gutter-sp(90);
+            z-index: 1020;
+        }
     }
 
     .about,

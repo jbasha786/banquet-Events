@@ -34,6 +34,7 @@
         z-index: 1020;
         border: gutter-sp(1) solid $tickets-border-clr;
         border-radius: gutter-sp(10);
+        background: $white;
 
         .date {
             text-transform: uppercase;

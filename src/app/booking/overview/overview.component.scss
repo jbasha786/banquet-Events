@@ -59,6 +59,7 @@
 
             .text {
                 text-align: justify;
+                padding-right: gutter-sp(40);
             }
         }
 
@@ -163,12 +164,13 @@
 
     // Rationg Section
     .rating {
-        padding: gutter-vw(6) gutter-vw(5) gutter-vw(0);
+        padding: gutter-vw(6) gutter-vw(14) gutter-vw(0);
 
         &__desc {
             line-height: gutter-sp(25);
             margin: gutter-sp(0) auto;
             max-width: gutter-sp(270);
+            opacity: gutter-per(70);
         }
 
         &__sections {
@@ -181,7 +183,7 @@
 
                 .progress {
                     width: gutter-per(100);
-                    height: gutter-sp(5);
+                    height: gutter-sp(3);
 
                     .progress-bar {
                         background-color: $black;
