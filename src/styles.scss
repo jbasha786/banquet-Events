@@ -198,9 +198,7 @@ body {
       width: #{$i}px;
     }
   }
-  .w-#{$i} {
-    width: #{$i + '%'}
-  }
+ 
     .w-sm-#{$i} {
       @media (min-width: 425px) {
       width: #{$i + '%'} ;
