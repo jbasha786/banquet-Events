@@ -3,21 +3,35 @@
 
 .loginForm {
     margin: 0 auto;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     &__form {
+        &__emaildiv{
+            &__unamebox{
+                height: gutter-sp(44);
+                border: gutter-sp(1) solid $border-silver;
+            }
+        }
         &__pwddiv {
+            &__pwdbox,&__unamebox{
+                height: gutter-sp(44);
+                border: gutter-sp(1) solid $border-silver;
+            }
             &__pwd {
                 &__forgotpwd {
-                    color: $secondory-color;
+                    color: $form-blue;
                 }
             }
         }
 
         &__loginbtndiv {
+            &__continue__guest{
+                color:$secondory-color;
+                border:gutter-sp(1) solid $secondory-color;
+                background-color: transparent;
+            }
             &__loginbox {
                 color: $white;
                 background-color: $secondory-color;
@@ -27,10 +41,14 @@
 
         &__signupdiv {
             &__signUp {
-                color: $secondory-color;
+                color: $form-blue;
                 cursor: pointer;
             }
         }
     }
 
 }
+input:focus {
+    outline: none;
+    box-shadow: none;
+  }
