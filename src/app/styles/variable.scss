@@ -67,6 +67,7 @@ $font-dull: #534D59;
 $font-lite: #716e6e;
 $calenderDate: #1b1616;
 $form-blue:#124DBD;
+$form-focus:#86b7fe;
 
 @function gutter-sp($key) {
   @return #{$key}px;
