@@ -1,13 +1,18 @@
 @import "../../app/styles/variable.scss";
 
 .tableInvoice {
-    ::ng-deep .mat-mdc-header-row, ::ng-deep .mat-mdc-row{
+    margin: gutter-vw(0) gutter-vw(7) gutter-vw(10) gutter-vw(7) ;
+    padding: gutter-vw(0) gutter-vw(5);
+
+    ::ng-deep .mat-mdc-header-row,
+    ::ng-deep .mat-mdc-row {
         height: gutter-sp(45);
     }
-    
-    ::ng-deep .mat-mdc-cell{
+
+    ::ng-deep .mat-mdc-cell {
         color: $tableCellColor;
     }
+
     .invoice-table .mat-mdc-header-cell {
         background: $tabHeadercolor;
     }

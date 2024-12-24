@@ -1,14 +1,34 @@
-<div class="booking-view">
-    <section>
-        <div class="py-5 d-flex justify-content-center align-items-center flex-column flex-md-row col-12">
-            <mat-tab-group mat-stretch-tabs="false" class="tabTitle">
-                <mat-tab label="Booking History">
-                    <app-booking-history-view></app-booking-history-view>
-                </mat-tab>
-                <mat-tab label="Invoice History">
-                    <app-invoice-history></app-invoice-history>
-                </mat-tab>
-            </mat-tab-group>
+<div class="page_content">
+    <div class="mat-tabs-header-container d-flex flex-column flex-lg-row align-items-center justify-content-between booking-view  mt-5 gap-3 gap-lg-0"
+        (selectedIndexChange)="onTabChange($event)">
+        <div class="left-labels d-flex flex-column flex-lg-row align-items-center flex-column flex-md-row gap-lg-5">
+            <button class="label-btn border-0 fs-25 fs-lg-30"
+                [ngClass]="{ 'active-label': activeLabel === 1, 'inactive-label': activeLabel === 0 }"
+                (click)="selectTab(0)">Booking History</button>
+            <button class="label-btn border-0 fs-25 fs-lg-30"
+                [ngClass]="{ 'active-label': activeLabel === 0, 'inactive-label': activeLabel === 1 }"
+                (click)="selectTab(1)">Invoice History</button>
         </div>
-    </section>
+
+        <div class="mt-2 mt-md-0" *ngIf="showSearchBar">
+            <form class="d-flex align-items-center search" role="search">
+                <button class="btn_search" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+                <input class="form-control pl-38 py-2 search_input fs-13" type="search"
+                    placeholder="Search For Bookings" aria-label="Search">
+            </form>
+        </div>
+    </div>
+
+    <div class="test">
+        <mat-tab-group #tabGroup class="tabTitle">
+            <mat-tab>
+                <app-booking-history-view></app-booking-history-view>
+            </mat-tab>
+            <mat-tab>
+                <app-invoice-history></app-invoice-history>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
 </div>

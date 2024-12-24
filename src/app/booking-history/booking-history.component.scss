@@ -1,38 +1,49 @@
 @import '../styles/variable.scss';
 
-.booking-view { 
-    .mat-mdc-tab-group {
-        margin: gutter-vw(0) gutter-vw(5);
-        padding: gutter-vw(0) gutter-vw(5);
-        width: gutter-per(100);
-    }
+.booking-view {
 
-    .tabTitle .mat-ink-bar {
-        display: none;
-    }
-
-    .tabTitle ::ng-deep .mdc-tab__text-label {
-        font-size: gutter-sp(25);
+    .label-btn {
+        background-color: $white;
         letter-spacing: normal;
-        font-weight: 100;
+        font-weight: 500;
         text-transform: none;
     }
 
-    .tabTitle ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
-        display: none;
-    }
-
-    .tabTitle ::ng-deep .mdc-tab-indicator--active {
-        font-size: gutter-sp(30);
-        letter-spacing: normal;
-        padding: gutter-sp(0);
-    }
-
-     ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
+    .active-label {
         color: $black;
-      }
-      
-      ::ng-deep .mat-tab-label {
-        color: $footer-text-color; 
-      }
+    }
+
+    .inactive-label {
+        color: $font-lite-dull;
+        font-weight: 400;
+    }
+  
+    .btn_search {
+        position: absolute;
+        background: none;
+        border: none;
+        padding-left: gutter-sp(15);
+    }
+
+    .search {
+        width: gutter-per(100);
+    }
+
+    .search .form-control:focus {
+        border-color: $footer-border-line;
+        box-shadow: gutter-sp(0) gutter-sp(0);
+        font-size: gutter-sp(12);
+    }
+
+    .search_input::placeholder {
+        font-size: gutter-sp(13);
+        color: $black;
+    }
+
+    .search_input {
+        font-size: gutter-sp(12);
+        padding: gutter-sp(6);
+        width: gutter-sp(325);
+        max-width: gutter-per(100);
+    }
 }
