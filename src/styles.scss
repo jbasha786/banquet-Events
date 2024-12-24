@@ -200,6 +200,20 @@ body {
     }
   }
 
+  .wid-sm-#{$i} {
+    @media (min-width: 425px) {
+      width: #{$i + '%'};
+    }
+  }
+
+  .wid-lg-#{$i} {
+    @media (min-width: 992px) {
+      width: #{$i + '%'} !important;
+    }
+  }
+
+
+
   // height
   .h-#{$i} {
     height: 0px + $i;
@@ -312,4 +326,8 @@ html {
   .mat-mdc-dialog-container .mdc-dialog__surface {
     border-radius: gutter-sp(12);
   }
+}
+
+.page_content {
+  padding: gutter-vw(2) gutter-vw(9) gutter-vw(6) gutter-vw(10.4);
 }

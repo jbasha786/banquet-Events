@@ -3,7 +3,8 @@
 .hostDetails {
     &__card {
         padding: gutter-vw(1);
-        border: gutter-sp(1) solid $quick-silver;
+        border: gutter-sp(1) solid $host-border-clr;
+        border-radius: gutter-sp(10);
 
         .reviews {
             .item {

@@ -1,116 +1,28 @@
-<!-- <div class="calendar-container">
-    <div class="calendar-header">
-        <button mat-icon-button (click)="changeMonth(-1)">
-            <mat-icon>chevron_left</mat-icon>
-        </button>
-        <h3>{{ currentMonth }} {{ currentYear }}</h3>
-        <button mat-icon-button (click)="changeMonth(1)">
-            <mat-icon>chevron_right</mat-icon>
-        </button>
-    </div>
-
-   
-    <div class="calendar-grid">
-
-
-        <button mat-icon-button (click)="changeMonth(-1)">
-            <mat-icon>chevron_left</mat-icon>
-        </button>
-        @for(day of daysInMonth; track $index){
-
-        <div class="calendar-day" [class.disabled]="!day" (click)="day && selectDate(day)">
-
-            @if(day){
-            <div class="d-flex row">
-                <div>{{currentMonth}}</div>
-                <div>{{ day }}</div>
-            </div>
-
-            }
-        </div>
-        }
-
-
-        <button mat-icon-button (click)="changeMonth(1)">
-            <mat-icon>chevron_right</mat-icon>
-        </button>
-
-
-    </div>
-
-    @if(selectedDate){
-    <div class="selected-date">
-        <h4>You selected: {{ selectedDate }}</h4>
-    </div>
-    }
-
-</div>  -->
-
-
-
-
-
-
-
-<div class="container text-center my-3">
-  <div class="d-flex align-items-center justify-content-center py-5">
-    <button mat-icon-button (click)="changeMonth(-1)">
-      <mat-icon>chevron_left</mat-icon>
+<div class="calender text-center my-3 d-flex align-items-center flex-column">
+  <div class="d-flex align-items-center justify-content-center py-2">
+    <button class="btnmain" mat-icon-button (click)="changeMonth(-1)">
+      <mat-icon class="btn_chevron">chevron_left</mat-icon>
     </button>
-    <h3>{{ currentMonth }} {{ currentYear }}</h3>
-    <button mat-icon-button (click)="changeMonth(1)">
-      <mat-icon>chevron_right</mat-icon>
+    <span class="mb-0">{{ currentMonth }} {{ currentYear }}</span>
+    <button class="btnmain" mat-icon-button (click)="changeMonth(1)">
+      <mat-icon class="btn_chevron">chevron_right</mat-icon>
     </button>
   </div>
-  <div class="row mx-auto my-auto">
-    <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="calendar-grid">
-
-
-          <button mat-icon-button (click)="changeMonth(-1)">
-            <mat-icon>chevron_left</mat-icon>
-          </button>
-          @for(day of daysInMonth; track $index){
-
-          <div class="calendar-day" [class.disabled]="!day" (click)="day && selectDate(day)">
-
-            @if(day){
-            <div class="d-flex row">
-              <div>{{currentMonth}}</div>
-              <div>{{ day }}</div>
-            </div>
-
-            }
-          </div>
-          }
-
-
-          <button mat-icon-button (click)="changeMonth(1)">
-            <mat-icon>chevron_right</mat-icon>
-          </button>
-
-
+  <div class="d-flex align-items-center justify-content-center py-3 days-grid">
+    <button class="btnmain" mat-icon-button (click)="scrollDates(-1)" [disabled]="currentIndex === 0">
+      <mat-icon class="btn_chevron">chevron_left</mat-icon>
+    </button>
+    <div class="calendar-grid d-flex justify-content-center align-items-center gap-18 gap-md-2 ">
+      <div class="calendar-day d-flex justify-content-center align-items-center" *ngFor="let day of visibleDates" (click)="selectDate(day)">
+        <div class="d-flex row">
+          <div class="month">{{currentMonth}}</div>
+          <div class="day lh-lg">{{ day }}</div>
         </div>
-
-        @if(selectedDate){
-        <div class="selected-date">
-          <h4>You selected: {{ selectedDate }}</h4>
-        </div>
-        }
       </div>
     </div>
-  </div>
-  <div class="row">
-    <!-- <div class="col-12">
-      <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
-        <span class="fa fa-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
-        <span class="fa fa-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div> -->
+    <button class="btnmain" mat-icon-button (click)="scrollDates(1)"
+      [disabled]="currentIndex + visibleRange >= daysInMonth.length">
+      <mat-icon class="btn_chevron">chevron_right</mat-icon>
+    </button>
   </div>
 </div>

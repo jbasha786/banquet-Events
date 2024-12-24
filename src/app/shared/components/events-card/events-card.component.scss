@@ -1,8 +1,11 @@
 @import "../../../../app/styles/variable.scss";
 
 .card{
+    .card-title{
+        color: $font-dull;
+    }
     .priceSection{
-        border: 1px solid $priceBackGrnd;
+        border: gutter-sp(1) solid $priceBackGrnd;
         background-color: $priceBackGrnd;
     }
     .booknowBtn{
@@ -10,7 +13,8 @@
     }
     .card-text{
         font-weight: 500;
-        font-size: 13px;
+        font-size: gutter-sp(13);
+        color: $font-dull;
     }
     .booknowBtn{
         color: $booknow-pink;
@@ -19,5 +23,12 @@
     }
     .pipe{
         color: $priceColor;
+    }
+    .period{
+        color: $font-lite;
+    }
+    .cardImg{
+        width: gutter-sp(18);
+        height: gutter-sp(18);
     }
 }
