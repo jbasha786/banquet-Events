@@ -1,29 +1,26 @@
 @import "../../../styles/variable.scss";
 
-.about-business-event {
-    .custom_label,
-    .custom_radio,
-    .custom_radio_label {
+.accommodation {
+    .accommodation_form {
+        margin: gutter-sp(0) auto;
+    }
+
+    .custom_label{
         opacity: gutter-per(75);
     }
 
     .custom_input:focus,
-    .custom_radio:focus {
+    .custom_select:focus {
         border: gutter-sp(1) solid $event-input-border-clr;
         box-shadow: none;
     }
 
-    .custom_input {
+    .custom_input,
+    .custom_select {
         border: gutter-sp(1) solid $event-input-border-clr;
         box-shadow: none;
         font-size: gutter-sp(14);
         height: gutter-sp(40);
-    }
-
-    .custom_radio {
-        border: gutter-sp(1) solid $event-input-border-clr;
-        box-shadow: none;
-        font-size: gutter-sp(14);
     }
 
     .custom_input::placeholder {
@@ -32,7 +29,12 @@
         font-weight: 500;
     }
 
-    .custom_radio:checked{
-        background-color: $font-clr;
+    .custom_btn {
+        background: $event-acc-btn-clr;
+        border-radius: gutter-sp(50);
+        border: none;
+        color: $black;
+        width: gutter-per(100);
+        padding: gutter-sp(8) gutter-sp(0);
     }
 }

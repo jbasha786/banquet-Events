@@ -1,0 +1,28 @@
+<div class="time-part">
+    <p class="text-end m-0 pb-40 cursor" (click)="close()"><img src="../../../../assets/images/icons/cross.svg" alt=""></p>
+    <div class="time-part__section">
+        <p class="fs-20 fw-bold pb-20 m-0">Time Part Location</p>
+        <div class="content">
+            <ng-container *ngFor="let item of timeParts">
+                <div class="d-flex justify-content-between section mb-3"
+                    [ngClass]="item.isActive && item.id === selectedItemId ? 'active' : ''"
+                    (click)="selectTimePart(item)">
+                    <div class="d-flex align-items-center">
+                        <p class="line m-0" [ngClass]="item.isActive && item.id === selectedItemId ? '' : 'd-none'"></p>
+                        <div class="ml-15">
+                            <p class="m-0 fs-20 fw-medium name">{{item.timeSlot}}</p>
+                            <p class="m-0 fs-14 text">{{item.location}}</p>
+                        </div>
+                    </div>
+                    <p class="edit m-0" [ngClass]="item.isActive && item.id === selectedItemId ? '' : 'd-none'"><img
+                            [src]="item.src" [alt]="item.location"></p>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="d-flex gap-4 justify-content-end mt-10">
+        <button class="footer_btn fs-14">SKIP</button>
+        <button class="footer_btn fs-14">SAVE</button>
+    </div>
+</div>

@@ -56,6 +56,10 @@ $bg-world-btn: #261b0a;
 $business-subtitle-clr: #FFAF43;
 $font-clr: #383838;
 $calenderDate: #1b1616;
+$event-input-border-clr: #CACACA;
+$event-acc-btn-clr: #F0961BC7;
+$time-part-line-clr: #DCE3E7;
+$time-part-bg-clr: #ECF6FB;
 
 @function gutter-sp($key) {
   @return #{$key}px;

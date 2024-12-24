@@ -54,6 +54,7 @@ body {
       margin-bottom: #{$i}px !important;
     }
   }
+
   .mb-xl-#{$i} {
     @media (min-width: 1536px) {
       margin-bottom: #{$i}rem !important;
@@ -227,11 +228,13 @@ body {
   .fs-#{$i} {
     font-size: #{$i}px;
   }
+
   .fs-md-#{$i} {
     @media (min-width: 768px) {
       font-size: #{$i}px !important;
     }
   }
+
   .fs-lg-#{$i} {
     @media (min-width: 992px) {
       font-size: #{$i}px !important;
@@ -299,4 +302,14 @@ html {
   position: fixed;
   z-index: 1050;
   overflow: auto;
+}
+
+
+.timePartLocation {
+  position: absolute !important;
+  top: gutter-sp(10);
+
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: gutter-sp(12);
+  }
 }

@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { AboutEventComponent } from '../about-event/about-event.component';
 import { CommonModule } from '@angular/common';
+import { AccommodationComponent } from '../accommodation/accommodation.component';
+import { ShapesComponent } from '../shapes/shapes.component';
+import { TimePartComponent } from '../time-part/time-part.component';
+import { BusinessBookingReviewComponent } from '../business-booking-review/business-booking-review.component';
 
 @Component({
   selector: 'app-business-booking',
@@ -9,7 +13,11 @@ import { CommonModule } from '@angular/common';
   imports: [
     MatDialogModule,
     AboutEventComponent,
-    CommonModule
+    AccommodationComponent,
+    ShapesComponent,
+    BusinessBookingReviewComponent,
+    CommonModule,
+    TimePartComponent
   ],
   templateUrl: './business-booking.component.html',
   styleUrl: './business-booking.component.scss'
