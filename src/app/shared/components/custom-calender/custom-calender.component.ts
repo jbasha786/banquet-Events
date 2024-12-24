@@ -47,8 +47,17 @@ export class CustomCalenderComponent {
 
     if (typeof window !== 'undefined') {
       const screenWidth = window.innerWidth;
-      this.visibleRange = screenWidth < 768 ? 3 : 15;
-      console.log(`Screen width: ${screenWidth}, Visible range: ${this.visibleRange}`);
+  if (screenWidth < 576) {
+    this.visibleRange = 2;
+  } else if (screenWidth >= 576 && screenWidth < 768) {
+    this.visibleRange = 3; 
+  } else if (screenWidth >= 768 && screenWidth < 992) {
+    this.visibleRange = 10; 
+  } else if (screenWidth >= 992 && screenWidth < 1200) {
+    this.visibleRange = 12; 
+  } else {
+    this.visibleRange = 15;
+  }
       this.updatePaginatedDays();
       this.cdr.detectChanges();
     }
@@ -97,10 +106,12 @@ export class CustomCalenderComponent {
 
 
   scrollToStart(): void {
+    if (isPlatformBrowser(this.platformId)) {
     const calendarGrid = document.querySelector('.calendar-grid');
     if (calendarGrid) {
-      calendarGrid.scrollLeft = 0; 
+      (calendarGrid as HTMLElement).scrollLeft = 0; 
     }
+  }
   }
   ngAfterViewInit(): void {
     this.scrollToStart();
