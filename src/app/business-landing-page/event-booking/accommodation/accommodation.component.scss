@@ -1,0 +1,40 @@
+@import "../../../styles/variable.scss";
+
+.accommodation {
+    .accommodation_form {
+        margin: gutter-sp(0) auto;
+    }
+
+    .custom_label{
+        opacity: gutter-per(75);
+    }
+
+    .custom_input:focus,
+    .custom_select:focus {
+        border: gutter-sp(1) solid $event-input-border-clr;
+        box-shadow: none;
+    }
+
+    .custom_input,
+    .custom_select {
+        border: gutter-sp(1) solid $event-input-border-clr;
+        box-shadow: none;
+        font-size: gutter-sp(14);
+        height: gutter-sp(40);
+    }
+
+    .custom_input::placeholder {
+        opacity: gutter-per(45);
+        font-size: gutter-sp(12);
+        font-weight: 500;
+    }
+
+    .custom_btn {
+        background: $event-acc-btn-clr;
+        border-radius: gutter-sp(50);
+        border: none;
+        color: $black;
+        width: gutter-per(100);
+        padding: gutter-sp(8) gutter-sp(0);
+    }
+}

@@ -1,0 +1,55 @@
+@import "../../../styles/variable.scss";
+@import "../../../custom-css/custom-material-colors.scss";
+
+.booking {
+
+    &__model {
+        height: gutter-vh(70);
+        overflow-y: auto;
+        scrollbar-width: gutter-vw(5);
+    }
+
+    &__process {
+        padding: gutter-vw(2);
+        width: gutter-vw(58);
+
+        .progress {
+            height: gutter-sp(8);
+
+            .progress-bar {
+                background-color: var(--primary-color);
+            }
+        }
+    }
+
+    .btn_cancel {
+        background: $cancel-color-pink;
+        font-size: gutter-sp(19);
+        height: gutter-sp(40);
+        font-weight: 500;
+    }
+
+    .btn_back {
+        color: $secondory-color;
+        border: gutter-sp(1) solid $secondory-color;
+        font-size: gutter-sp(19);
+        height: gutter-sp(40);
+        font-weight: 500;
+    }
+
+    .btn_next {
+        color: $white;
+        background: $secondory-color;
+        font-size: gutter-sp(19);
+        height: gutter-sp(40);
+        font-weight: 500;
+    }
+
+    .dialog-btns {
+        position: fixed;
+        bottom: gutter-sp(0);
+        background: white;
+        box-shadow: gutter-sp(0) gutter-sp(3) gutter-sp(18) $shadow-black;
+        z-index: 1;
+    }
+}
