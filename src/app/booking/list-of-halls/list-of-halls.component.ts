@@ -99,7 +99,7 @@ export class ListOfHallsComponent {
     this.zIndexService.setHeaderZIndex(1000);
     const dialogRef = this.dialog.open(ArticlesComponent, {
       panelClass: 'fixed-dialog',
-      position: { top: '0' }, 
+      position: { top: '34px' }, 
     });
 
     dialogRef.afterClosed().subscribe(() => {
