@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <a class="navbar-brand cursor mx-auto">
+            <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{headerInfo?.logo}}" alt="" (click)="goToHome()">
+        </a>
+    </div>
+    <div>
+        <form class="d-flex align-items-center search" role="search">
+            <button class="btn_search" type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+            <input class="form-control pl-30 py-1 search_input fs-12" type="search" placeholder="Search"
+                aria-label="Search">
+        </form>
+    </div>
+    <div>
+        <button mat-icon-button (click)="viewNotifications()">
+            <mat-icon>notifications</mat-icon>
+            <span class="notification-badge" *ngIf="notificationCount > 0">{{ notificationCount }}</span>
+          </button>
+    </div>
+    <div></div>
+</div>
