@@ -1,0 +1,9 @@
+@import "../../../styles/variable.scss";
+
+.calendar {
+    .smiple_view {
+        background:$cal-bg;
+        color: $white;
+        padding: gutter-vw(2);
+    }
+}

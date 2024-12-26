@@ -72,6 +72,7 @@ $time-part-line-clr: #DCE3E7;
 $time-part-bg-clr: #ECF6FB;
 $form-blue:#124DBD;
 $form-focus:#86b7fe;
+$cal-bg: #2B2B2B;
 
 @function gutter-sp($key) {
   @return #{$key}px;
