@@ -1,173 +1,30 @@
 @import '../styles/variable.scss';
+@import '../../styles.scss';
 
-// .booking-view { 
-//     .mat-mdc-tab-group {
-//         margin: gutter-vw(0) gutter-vw(5);
-//         padding: gutter-vw(0) gutter-vw(5);
-//         width: gutter-per(100);
-//     }
-
-//     .tabTitle .mat-ink-bar {
-//         display: none;
-//     }
-
-//     .tabTitle ::ng-deep .mdc-tab__text-label {
-//         font-size: gutter-sp(25);
-//         letter-spacing: normal;
-//         font-weight: 100;
-//         text-transform: none;
-//     }
-
-//     .tabTitle ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
-//         display: none;
-//     }
-
-//     .tabTitle ::ng-deep .mdc-tab-indicator--active {
-//         font-size: gutter-sp(30);
-//         letter-spacing: normal;
-//         padding: gutter-sp(0);
-//     }
-
-//      ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
-//         color: $black;
-//       }
-
-//       ::ng-deep .mat-tab-label {
-//         color: $footer-text-color; 
-//       }
-
-
-
-
-
-
-//       ///////
-//       .booking-view {
-//         display: flex;
-//         flex-direction: column;
-//         padding: 20px;
-//       }
-
-//       .booking-view .py-5 {
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-//       }
-
-//       .search {
-//         margin-right: 20px; /* Adds space between the search bar and tabs */
-//         margin-left: auto;
-//       }
-
-//       .search_input {
-//         width: 250px; /* Adjust the width of the search bar */
-//         max-width: 100%; /* Ensure it remains responsive */
-//       }
-
-//       .tabTitle {
-//         flex-grow: 1; /* Allows the tab group to take up remaining space */
-//         min-width: 300px; /* Ensures minimum width for tabs */
-//       }
-
-//       @media screen and (max-width: 768px) {
-//         .py-5 {
-//           flex-direction: column;
-//           align-items: flex-start;
-//         }
-
-//         .search {
-//           margin-bottom: 15px; /* Add space between the search bar and tabs */
-//         }
-
-//         .search_input {
-//           width: 100%; /* Full width on small screens */
-//         }
-//       }
-
-
-
-
-//       //
-
-
-
-//       .booking-view .py-5 {
-//         display: flex;
-//         justify-content: space-between; /* Tabs on the left, search bar on the right */
-//         align-items: center; /* Ensure vertical alignment */
-//         flex-wrap: wrap; /* Allow wrapping for smaller screens */
-//       }
-
-//       .tab-container {
-//         flex-grow: 1; /* Allow the tab container to grow and take space */
-//       }
-
-//       .tabTitle {
-//         margin-right: 20px; /* Add spacing between tabs and search bar */
-//       }
-
-//       .search {
-//         display: flex;
-//         align-items: center;
-//         margin-left: auto; /* Push the search bar to the far right */
-//       }
-
-//       .search_input {
-//         width: 250px; /* Set a fixed width for the search bar */
-//         max-width: 100%; /* Ensure responsiveness */
-//       }
-
-//       @media screen and (max-width: 768px) {
-//         .py-5 {
-//           flex-direction: column; /* Stack tabs and search bar vertically on smaller screens */
-//           align-items: flex-start;
-//         }
-
-//         .search {
-//           margin-left: 0; /* Remove left margin for smaller screens */
-//           margin-top: 10px; /* Add spacing between the tabs and search bar */
-//         }
-
-//         .search_input {
-//           width: 100%; /* Full width on smaller screens */
-//         }
-//       }
-
-// }
 
 .booking-view {
-  padding: 20px;
-
-
   .tab-header {
     flex-grow: 1;
     align-items: center;
   }
 
-  .tabTitle {
-    flex-grow: 1;
-    min-width: 0;
-  }
-
-  .btn-chevron {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-  }
-
   .search {
     position: absolute;
-    top: gutter-sp(55);
-    right: 0;
+    top: gutter-sp(23);
+    z-index: 4;
+    right: gutter-sp(0);
     display: flex;
     align-items: center;
   }
 
+  .search .form-control:focus {
+    box-shadow: none;
+    border: gutter-sp(1) solid black;
+  }
+
   .btn_search {
     position: absolute;
-    left: 4px;
+    left: gutter-sp(4);
     background-color: white;
   }
 
@@ -176,57 +33,22 @@
   }
 
   .search_input {
-    width: 250px;
-    max-width: 100%;
+    width: gutter-sp(345);
+    max-width: guttre-per(100);
   }
 
-  @media screen and (max-width: 768px) {
-    .d-flex {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .tab-header {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .tabTitle {
-      flex-grow: 1;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
-    // .search {
-    //   position: absolute;
-    //   margin-top: 10px;
-    //   top: 0;
-    //   right: 0;
-    // }
-
-    .search_input {
-      width: 100%;
-    }
-
-    .btn-chevron {
-      font-size: 1.2rem;
-      color: #3f51b5;
-    }
-
+  .search_input::placeholder {
+    color: $black;
   }
-
-
 
   .tabTitle .mat-ink-bar {
     display: none;
   }
 
   .tabTitle ::ng-deep .mdc-tab__text-label {
-    font-size: gutter-sp(25);
+    font-size: gutter-sp(30);
     letter-spacing: normal;
-    font-weight: 100;
+    margin-right: gutter-sp(30);
     text-transform: none;
   }
 
@@ -242,11 +64,45 @@
 
   ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
     color: $black;
+    font-weight: 500;
   }
 
   ::ng-deep .mat-tab-label {
     color: $footer-text-color;
   }
 
+  @media screen and (max-width: 768px) {
+    .tab-header {
+      flex-direction: row;
+      justify-content: space-between;
+      width: gutter-per(100);
+    }
 
+    .tabTitle {
+      flex-grow: 1;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .tabTitle ::ng-deep .mdc-tab__text-label {
+      font-size: gutter-sp(20);
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .search {
+      position: absolute;
+      top: gutter-sp(66);
+      width: gutter-per(100);
+      right: gutter-sp(0);
+      display: flex;
+      align-items: center;
+    }
+
+    ::ng-deep .mat-mdc-tab-body-wrapper {
+      top: gutter-sp(10);
+    }
+
+  }
 }
