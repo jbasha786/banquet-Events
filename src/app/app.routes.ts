@@ -11,6 +11,8 @@ import { ResetPasswordComponent } from './core/reset-password/reset-password.com
 import { BusinessLandingPageComponent } from './business-landing-page/business-landing-page.component';
 import { ListOfHallsComponent } from './booking/list-of-halls/list-of-halls.component';
 import { LiveEventsComponent } from './live-events/live-events.component';
+import { WeddingPageComponent } from './wedding-page/wedding-page.component';
+import { ContinueGuestComponent } from './core/continue-guest/continue-guest.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,5 +27,7 @@ export const routes: Routes = [
     { path: 'business', component: BusinessLandingPageComponent },
     { path: 'hallsList', component: ListOfHallsComponent },
     { path: 'liveEvents', component: LiveEventsComponent },
+    { path: 'wedding', component: WeddingPageComponent },
+    { path: 'continueasguest', component: ContinueGuestComponent },
     { path: '**', component: PageNotFoundComponent }
 ];

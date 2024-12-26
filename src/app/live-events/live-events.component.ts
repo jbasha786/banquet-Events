@@ -8,6 +8,7 @@ import { HostDetailsComponent } from '../booking/overview/host-details/host-deta
 import { DefaultService } from '../services/default.service';
 import { CommonModule } from '@angular/common';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
+import { LiveEventsBookingComponent } from './live-events-booking/live-events-booking.component';
 
 @Component({
   selector: 'app-live-events',
@@ -18,6 +19,7 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
     GoogleMapComponent,
     HostDetailsComponent,
     UpcomingEventsListComponent,
+    LiveEventsBookingComponent,
     MatCardModule,
     MatIconModule,
     CommonModule],
@@ -28,9 +30,6 @@ export class LiveEventsComponent {
 
   hostDetails: any;
   promotionsInfo: any;
-  itemQty: number = 1;
-  numberOfTickets: number = 250;
-  isbtnActive: boolean = false;
 
   constructor(private defaultService: DefaultService) {
     this.getInitialData();
@@ -42,15 +41,5 @@ export class LiveEventsComponent {
       this.promotionsInfo = result?.promotions;
     })
   };
-
-  increment() {
-    this.itemQty = this.itemQty + 1;
-    this.isbtnActive = false;
-  }
-
-  decrement() {
-    this.itemQty = this.itemQty == 1 ? 1 : this.itemQty - 1;
-    this.isbtnActive = true;
-  }
 
 }

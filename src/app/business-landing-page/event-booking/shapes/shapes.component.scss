@@ -1,0 +1,25 @@
+@import "../../../styles/variable.scss";
+
+.shapes {
+    &__section {
+        padding: $value-null gutter-vw(10);
+    }
+
+    .image {
+        padding: gutter-sp(26);
+        &__section {
+            padding: gutter-vw(2) gutter-vw(2) gutter-vw(0);
+            border: gutter-sp(1) solid $event-input-border-clr;
+            border-radius: gutter-sp(6);
+
+            img {
+                width: gutter-per(100);
+                height: gutter-per(100);
+            }
+
+            .name {
+                opacity: gutter-per(90);
+            }
+        }
+    }
+}

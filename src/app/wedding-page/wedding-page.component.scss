@@ -1,0 +1,97 @@
+@import "../../app/styles/variable.scss";
+
+.eventsmainImg__events_banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wedding__border {
+  border-radius: gutter-sp(12);
+  padding: gutter-sp(12);
+  border: gutter-sp(1) solid $input-border;
+}
+
+.image-section {
+  background-size: cover;
+  border-radius: gutter-sp(12);
+}
+.price {
+  color: $family-yellow;
+  font-weight: 700;
+}
+.list-container {
+  width: gutter-per(90);
+}
+.btn-book {
+  background-color: $secondary-color;
+  color: $white;
+  border-radius: gutter-sp(30);
+  border: gutter-sp(0) solid $secondary-color;
+  font-size: gutter-sp(16);
+  font-weight: 500;
+  width: gutter-sp(230);
+  padding: gutter-sp(8);
+}
+.btn-download,
+.btn-quote {
+  background-color: $white;
+  color: $secondary-color;
+  border-radius: gutter-sp(30);
+  border: gutter-sp(1) solid $secondary-color;
+  font-size: gutter-sp(16);
+  font-weight: 500;
+  width: gutter-sp(230);
+  padding: gutter-sp(8);
+}
+
+.left-column {
+  flex: 3;
+}
+
+.right-column {
+  flex: 2;
+}
+.left-column li {
+  margin-bottom: gutter-sp(10);
+}
+
+.right-column li {
+  margin-bottom: gutter-sp(10);
+}
+.carousel-align {
+  position: relative;
+}
+.container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.separator {
+  margin-left: gutter-sp(12);
+  margin-right: gutter-sp(12);
+}
+:host ::ng-deep .carousel-align .owl-theme .owl-dots {
+  position: absolute;
+  bottom: gutter-sp(5);
+  left: gutter-per(50);
+  transform: translateX(gutter-per(-50));
+  z-index: 1;
+}
+
+:host ::ng-deep .carousel-align .owl-theme .owl-dots .owl-dot span {
+  padding: gutter-sp(5);
+  border-radius: gutter-per(50);
+  background-color: transparent;
+  border: gutter-sp(2) solid $white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+:host ::ng-deep .carousel-align .owl-theme .owl-dots .owl-dot.active span {
+  background-color: $white;
+  border-color: $white;
+}
+
+:host ::ng-deep .carousel-align .owl-theme .owl-dots .owl-dot span:hover {
+  background-color: $white;
+}

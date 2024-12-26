@@ -1,19 +1,22 @@
-<div>
-    <div class="container-fluid eventsmainImg">
+<div class="">
+    <div class="eventsmainImg">
         <img class="eventsmainImg__events_main" src="../../assets/images/events/events_main.png" alt="">
     </div>
-    <app-custom-calender></app-custom-calender>
-    <div class="container row events m-auto">
-        <div class="mb-20">
-            <span>Featured <span>Events: <span>12</span></span></span>
+    <div class="events d-flex justify-content-center flex-column">
+        <div class="d-flex gap-2">
+            <span class="fs-24 fw-500">Featured </span><span class="events-text fs-24 fw-500">Events:</span> <span class="events-text fs-24 fw-500">12</span>
         </div>
-        @for( obj of events; track $index){
-        <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 events__cardSection">
-            <app-events-card picture="{{obj.src}}" title="{{obj.img_title}}" subtitle="{{obj.img_subtitle}}"
-                calenderImage="{{obj.date_time.cal_img}}" period="{{obj.date_time.period}}"
-                locationImage="{{obj.location.loc_img}}" place="{{obj.location.place}}" rate="{{obj.card_footer.price}}"
-                bookNow="{{obj.card_footer.booknow}}"></app-events-card>
+        <app-custom-calender></app-custom-calender>
+        <div class="row">
+
+            @for( obj of events; track $index){
+            <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 events__cardSection">
+                <app-events-card picture="{{obj.src}}" title="{{obj.img_title}}" subtitle="{{obj.img_subtitle}}"
+                    calenderImage="{{obj.date_time.cal_img}}" period="{{obj.date_time.period}}"
+                    locationImage="{{obj.location.loc_img}}" place="{{obj.location.place}}"
+                    rate="{{obj.card_footer.price}}" bookNow="{{obj.card_footer.booknow}}"></app-events-card>
+            </div>
+            }
         </div>
-        }
     </div>
 </div>

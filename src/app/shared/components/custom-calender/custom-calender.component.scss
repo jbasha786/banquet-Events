@@ -1,64 +1,60 @@
+@import '../../../styles/variable.scss';
 
-.calendar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.calender {
+
+  .days-grid {
+    max-width: gutter-per(100);
   }
-  
-  .calendar-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    margin: 0 10px;
-  }
-  
-  h3 {
-    margin: 0;
-  }
-  
-  .weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .weekday {
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(31, 1fr);
-    gap: 10px;
-    width: 100%;
-  }
-  
-  .calendar-day {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    min-height: 40px;
-  }
-  
+
   .calendar-day.disabled {
     display: none;
-    background-color: #e0e0e0;
+    background-color: $footer-text-color;
     cursor: not-allowed;
   }
-  
-  .selected-date {
-    margin-top: 20px;
-    text-align: center;
+
+  .day {
+    font-size: gutter-sp(20);
+    font-weight: 700;
   }
-  
+
+  .btn_chevron {
+    display: flex;
+    background: $chevron-background;
+    border-radius: gutter-sp(14);
+    height: gutter-sp(30);
+    width: gutter-sp(30);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnmain {
+    border: none;
+    background: none
+  }
+
+  .calendar-day {
+    padding: gutter-sp(1);
+    background-color: $calender-day-background;
+    border-radius: gutter-sp(5);
+    cursor: pointer;
+    text-align: center;
+    padding: gutter-sp(1) gutter-sp(5);
+  }
+
+  .calendar-day:hover {
+    background-color: $editbtn;
+    color: $white;
+  }
+
+  @media screen and (max-width: 760px) {
+    .calendar-grid {
+      overflow: auto;
+      max-width: gutter-per(100);
+      padding: gutter-sp(10);
+    }
+    .calendar-day{
+    padding: gutter-sp(0) gutter-sp(8);
+    }
+  }
+
+}

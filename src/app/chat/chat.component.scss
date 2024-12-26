@@ -3,8 +3,8 @@
 
 .chatSection {
   position: fixed;
-  bottom: gutter-sp(14);
-  right: gutter-sp(20);
+  bottom: gutter-sp(66);
+  right: gutter-sp(30);
   z-index:1;
 }
 
@@ -80,11 +80,8 @@
 .text {
   width: gutter-per(100);
   display: flex;
-  background-color: $chat-input-background;
-  padding: gutter-sp(10);
-  border-radius: gutter-sp(12);
-  border: gutter-sp(1) solid $gray;
   box-sizing: border-box;
+  position: relative;
 }
 .message-area {
   flex: 1;
@@ -94,12 +91,13 @@
 }
 .inputtext {
   width: gutter-per(100);
-  border: none;
-  padding: gutter-sp(4);
+  background-color: $chat-input-background;
+  padding: gutter-sp(14) gutter-sp(45) gutter-sp(14) gutter-sp(14);
+  border-radius: gutter-sp(12);
+  border: gutter-sp(1) solid $gray;
   color: $chat-text-clr;
   opacity: 0.6;
-  outline: none;
-  background-color: transparent;
+  
 }
 
 input:focus {
@@ -107,10 +105,13 @@ input:focus {
 }
 
 .sendicon {
+  position: absolute;
   float: right;
   width: gutter-sp(20);
-  margin: gutter-sp(5);
   padding: $value-null;
+  top: gutter-per(52);
+  right: gutter-sp(14); 
+  transform: translateY(gutter-per(-52));
 }
 .chat__btn {
   color: $secondory-color;

@@ -1,36 +1,42 @@
-<div class="container">
+<div class="page_content">
+    <p class="fs-30 fw-500 pt-10 text-center">Booking Information</p>
+    <div class="signup mx-auto wid-lg-70">
+        <p class="text-center fs-20 fw-500 pt-30 pb-20 m-0">Login</p>
+        </div>
     <div class="row">
         <div class="loginForm p-3 col-lg-4 col-sm-12 col-md-6  pb-4">
-            <h2 class="loginForm__title fs-24">Login</h2>
-            <form class="loginForm__form" [formGroup]="loginForm">
-                <div class="loginForm__form__emaildiv d-flex flex-column pb-5">
-                    <label class="loginForm__form__emaildiv__email pb-2 fs-16" for="username">{{username}}</label>
+          <form class="loginForm__form" [formGroup]="loginForm">
+                <div class="loginForm__form__emaildiv d-flex flex-column mb-30">
+                    <label class="loginForm__form__emaildiv__email fs-14 mb-6" for="username">{{username}}</label>
                     <input class="loginForm__form__emaildiv__unamebox form-control input-lg rounded-top " type="text"
                         id="username" name="username" required (keydown.tab)="$event.stopPropagation()"
                         formControlName="email">
                 </div>
-                <div class="loginForm__form__pwddiv d-flex flex-column pb-5">
+                <div class="loginForm__form__pwddiv d-flex flex-column mb-20">
                     <div class="loginForm__form__pwddiv__pwd d-flex justify-content-between">
-                        <label class="loginForm__form__pwddiv__pwd__password pb-2 fs-16"
+                        <label class="loginForm__form__pwddiv__pwd__password fs-14 mb-6"
                             for="password">{{password}}</label>
-                        <a class="loginForm__form__pwddiv__pwd__forgotpwd" href="/forgotpwd">
+                        <a class="loginForm__form__pwddiv__pwd__forgotpwd fs-12 mb-6" href="/forgotpwd">
                             Forgot password?</a>
                     </div>
                     <input class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
                         (keydown.tab)="$event.stopPropagation()" type="password" id="password"
                         formControlName="password" name="password" required>
                 </div>
-
-
-                <div class="loginForm__form__loginbtndiv d-flex flex-column">
-                    <button class="loginForm__form__loginbtndiv__loginbox p-2 rounded-2" type="submit"
+                <div class="loginForm__form__signupdiv d-flex fs-12 mb-20 gap-6">
+                    <span>New User?</span>
+                    <a class="loginForm__form__signupdiv__signUp fw-500" (click)="signUp()">Sign Up</a>
+                </div>
+                <div class="loginForm__form__loginbtndiv d-flex flex-column mb-14">
+                    <button class="loginForm__form__loginbtndiv__loginbox p-2 rounded-2 fs-16 fw-500" type="submit"
                         (click)="onSubmit()">Login</button>
                 </div>
-
-                <div class="loginForm__form__signupdiv d-flex pt-5 justify-content-center">
-                    <span>New User?</span>
-                    <a class="loginForm__form__signupdiv__signUp ms-3" (click)="signUp()">Sign Up</a>
+                <div class="loginForm__form__loginbtndiv d-flex flex-column mb-30">
+                    <button class="loginForm__form__loginbtndiv__continue__guest p-2 rounded-2 fs-16 fw-500" type="submit"
+                        (click)="onSubmit()">Continue as Guest </button>
                 </div>
+
+                
             </form>
         </div>
     </div>

@@ -3,6 +3,10 @@
 
 .selction_dates {
     &__calender {
+        ::ng-deep .mdc-button__label{
+            color: $calenderDate;
+            font-weight: 400;
+        }
 
         &__slots {
             background-color: $lite-white;

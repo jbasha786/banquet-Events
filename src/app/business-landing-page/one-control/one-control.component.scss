@@ -7,4 +7,10 @@
             height: gutter-per(100);
         }
     }
+
+    &__content {
+        .list {
+            max-width: gutter-sp(470);
+        }
+    }
 }

@@ -1,61 +1,89 @@
-<div class="container">
-    <div class="signup">
-        <h4 class="text-center">Sign Up</h4>
-        <p>Already have an account? <span class="signup__color cursor" (click)="returnToLogin()">Login</span></p>
-        <form action="" [formGroup]="registrationForm">
-            <div class="row">
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>First Name</mat-label>
-                        <input matInput type="text" formControlName="firstName" />
-                    </mat-form-field>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Last Name</mat-label>
-                        <input matInput type="text" formControlName="lastName" />
-                    </mat-form-field>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Full Name</mat-label>
-                        <input matInput type="text" formControlName="fullName" />
-                    </mat-form-field>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input matInput type="email" formControlName="email" />
-                    </mat-form-field>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Relatie</mat-label>
-                        <input matInput type="text" formControlName="relatie" />
-                    </mat-form-field>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>phone</mat-label>
-                        <input matInput formControlName="phone" type="number" />
-                    </mat-form-field>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input matInput formControlName="password" type="password" />
-                    </mat-form-field>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Confirm Password</mat-label>
-                        <input matInput formControlName="confirmPassword" type="password" />
-                    </mat-form-field>
-                </div>
-            </div>
-            <div class="signup__button">
-                <button class="signup__button__btn" type="submit" (click)="register()">Sign in</button>
-            </div>
-        </form>
-    </div>
+<div class="page_content">
+  <p class="fs-30 fw-500 pt-10">My Bookings</p>
+  <div class="signup mx-auto wid-lg-70">
+    <p class="text-center fs-20 fw-500 pb-20 m-0">Sign Up</p>
+    <p class="fs-16 pb-30 m-0">
+      Already have an account?
+      <span class="signup__color cursor fw-500" (click)="returnToLogin()"
+        >Login</span>
+    </p>
+    <form [formGroup]="registrationForm">
+      <div class="row g-4">
+        <div class="col-lg-6 col-sm-12 mb-40">
+          <label for="firstName" class="fs-14 mb-6">Full Name</label>
+          <input
+            id="firstName"
+            type="text"
+            formControlName="firstName"
+            class="form-control sign-up-form"
+          />
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-40">
+          <label for="lastName" class="fs-14 mb-6">Email</label>
+          <input
+            id="lastName"
+            type="text"
+            formControlName="lastName"
+            class="form-control sign-up-form"
+          />
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-40">
+          <label for="fullName" class="fs-14 mb-6">Relatie</label>
+          <input
+            id="fullName"
+            type="text"
+            formControlName="fullName"
+            class="form-control sign-up-form"
+          />
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-40">
+          <label for="phone" class="fs-14 mb-6">Phone</label>
+          <input
+            id="phone"
+            type="text"
+            formControlName="phone"
+            class="form-control sign-up-form"
+          />
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-20">
+          <label for="password" class="fs-14 mb-6">Password</label>
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            class="form-control sign-up-form"
+          />
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-20">
+          <label for="confirmPassword" class="fs-14 mb-6"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            formControlName="confirmPassword"
+            class="form-control sign-up-form"
+          />
+        </div>
+        <label
+          class="fs-14 d-flex align-items-center gap-10 terms-condition mb-10"
+        >
+          <input type="checkbox" class="input-align" />
+          <span>Terms & Conditions<span class="checkbox-imp">*</span></span>
+        </label>
+        <label class="fs-14 d-flex align-items-center gap-10 mb-40">
+          <input type="checkbox" class="input-align" />
+          Subscribe to Email Notification
+        </label>
+        <div class="signup__button">
+          <button
+            class="signup__button__btn"
+            type="submit"
+            (click)="register()"
+          >
+            Sign in
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

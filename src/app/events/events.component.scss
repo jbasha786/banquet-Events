@@ -1,14 +1,18 @@
-.container-fluid .eventsmainImg {
+@import "../../app/styles/variable.scss";
+
+.eventsmainImg {
     &__events_main {
-        height: 100%;
-        width: 100%;
-        margin-bottom: 2%;
+        height:  gutter-per(100);
+        width: gutter-per(100);
+        margin-bottom:  gutter-per(2);
     }
 }
 
-.container .events {
-    padding: 5%;
+.events {
+    margin: gutter-vw(0) gutter-vw(5);
+    padding: gutter-per(0) gutter-per(5);
     display: flex;
-
-
+}
+.events-text{
+    color: $viewdetailbtn;
 }

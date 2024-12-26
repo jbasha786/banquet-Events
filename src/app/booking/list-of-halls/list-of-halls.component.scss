@@ -24,6 +24,15 @@
             color: $secondory-color;
         }
 
+        .hall-img {
+            width: gutter-sp(28);
+            height: gutter-sp(30);
+        }
+
+        .mat-mdc-input-element {
+            font-size: gutter-sp(14);
+        }
+
     }
 
     &__images {
@@ -31,7 +40,7 @@
 
         &__icon {
             position: absolute;
-            top: gutter-sp(0);
+            top: gutter-per(16);
             right: gutter-sp(0);
             left: gutter-sp(0);
             bottom: gutter-sp(0);
@@ -42,6 +51,16 @@
 
             &__conformed-color {
                 color: green;
+            }
+
+            .sentImg {
+                width: gutter-sp(100);
+                height: gutter-sp(100);
+            }
+
+            .reserveID {
+                text-decoration: none;
+                font-weight: 700;
             }
         }
 
