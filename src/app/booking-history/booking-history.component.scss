@@ -92,8 +92,8 @@
 
     .search {
       position: absolute;
-      top: gutter-sp(66);
-      width: gutter-per(100);
+      top: gutter-sp(77);
+      // width: gutter-per(100);
       right: gutter-sp(0);
       display: flex;
       align-items: center;
@@ -104,4 +104,31 @@
     }
 
   }
+
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    
+    .search {
+      top:  gutter-sp(76);
+      right: gutter-sp(0);
+    }
+    .search_input{
+      width:  gutter-per(100);
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .search {
+      top:  gutter-sp(90);
+      right: gutter-sp(0);
+    }
+  }
+  
+  @media screen and (max-width: 425px) {
+    .search{
+      top:  gutter-sp(60);
+      margin: auto;
+      left:  gutter-sp(0);
+    }
+  }
+
 }

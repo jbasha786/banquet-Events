@@ -1,15 +1,22 @@
 @import "../../app/styles/variable.scss";
+@import "../../../src/styles.scss";
 
 .tableInvoice {
-    ::ng-deep .mat-mdc-header-row, ::ng-deep .mat-mdc-row{
+    margin-top: 70px;
+    ::ng-deep .mat-mdc-header-row,
+    ::ng-deep .mat-mdc-row {
         height: gutter-sp(45);
     }
-    
-    ::ng-deep .mat-mdc-cell{
+
+    ::ng-deep .mat-mdc-cell {
         color: $tableCellColor;
+        font-weight: 500;
+        font-size: gutter-sp(15);
     }
+
     .invoice-table .mat-mdc-header-cell {
         background: $tabHeadercolor;
+        font-weight: 400;
     }
 
     .invoice-table {
