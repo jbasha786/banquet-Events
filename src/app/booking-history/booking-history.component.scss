@@ -19,13 +19,13 @@
 
   .search .form-control:focus {
     box-shadow: none;
-    border: gutter-sp(1) solid black;
+    border: gutter-sp(1) solid $black;
   }
 
   .btn_search {
     position: absolute;
     left: gutter-sp(4);
-    background-color: white;
+    background-color: $white;
   }
 
   .tab-main {
