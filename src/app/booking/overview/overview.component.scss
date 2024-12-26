@@ -74,20 +74,8 @@
                     padding: gutter-sp(10);
                     color: $secondory-color;
                     border-radius: gutter-sp(10);
-                    width: gutter-per(100); 
-                }
-
-                &__editArticle::before {
-                    content: "";
-                    position: absolute;
-                    inset: 0;
-                    border-radius: gutter-sp(10);
-                    padding: gutter-sp(1);
-                    background: linear-gradient(45deg, $edit-btn-gradient-clr1, $edit-btn-gradient-clr2);
-                    mask:
-                        linear-gradient($black 0 0) content-box,
-                        linear-gradient($black 0 0);
-                    mask-composite: exclude;
+                    width: gutter-per(100);
+                    border: gutter-sp(1) solid $secondary-color;
                 }
 
                 &__reverse {
@@ -130,6 +118,8 @@
                 .border-clr {
                     border: gutter-sp(1) solid $input-border;
                     border-radius: gutter-sp(5);
+                    background: $white;
+                    padding: gutter-sp(0) gutter-sp(10);
                 }
 
                 .border-clr-none:focus,
