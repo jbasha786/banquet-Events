@@ -74,6 +74,8 @@ $form-blue:#124DBD;
 $form-focus:#86b7fe;
 $cal-bg: #2B2B2B;
 $cal-current-date-bg: #DAEF84;
+$cal-avilable-event-clr: #20CA9A;
+$cal-event-loc-clr: #E345B9;
 
 @function gutter-sp($key) {
   @return #{$key}px;

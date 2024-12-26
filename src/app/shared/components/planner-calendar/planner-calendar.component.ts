@@ -19,16 +19,37 @@ export class PlannerCalendarComponent {
   currentMonth!: number;
   currentYear!: number;
   currentDay!: number;
+  currentDate: any;
   isCurrentDate!: boolean;
   daysInMonth!: number[];
   weeksInMonth!: number[][];
   customDays: string[] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  todayEvents: any = [
+    {id:1, time: "08:15 AM - 11:00 AM", name:"John Doe - Event Name", location: "ABC Plazza"},
+    {id:2, time: "12:15 PM - 02:00 PM", name:"John Doe - Event Name", location: "ABC Plazza"},
+    {id:3, time: "04:15 PM - 06:00 PM", name:"John Doe - Event Name", location: "ABC Plazza"},
+  ];
+
+  specialEvents: any = [
+    {id: 1, name:'Bike Riding [09:00 A.M to 1.00 P.M]', src: "/assets/images/Planner/icons/bike.svg"},
+    {id: 2, name:'Bike Riding [02:00 A.M to 4.00 P.M]', src: "/assets/images/Planner/icons/bike.svg"}
+  ];
+
+  upcomingEvents: any = [
+    {id: 1, name:"01 - New Year's Party : 31-12-2024 ✨"},
+    {id: 2, name:"02 - New Year's Party : 31-12-2024 ✨"},
+    {id: 3, name:"03 - ACME Party : 31-12-2024 ✨"},
+    {id: 4, name:"04 - ACME Party : 14-02-2025 ✨"},
+    {id: 5, name:"05 - ACME Party : 14-03-2025 ✨"},
+    {id: 6, name:"06 - ACME Party : 31-04-2024 ✨"},
+  ];
 
   constructor() {
     const date = new Date();
     this.currentMonth = date.getMonth();
     this.currentYear = date.getFullYear();
     this.currentDay = date.getDate();
+    this.currentDate = date;
     this.daysInMonth = [];
     this.weeksInMonth = [];
   }
@@ -50,6 +71,7 @@ export class PlannerCalendarComponent {
     }
     this.weeksInMonth = [];
     let currentWeek: number[] = new Array(firstDayOfMonth).fill(0);
+    console.log(currentWeek, firstDayOfMonth, numberOfDaysInMonth)
     for (let i = 1; i <= numberOfDaysInMonth; i++) {
       currentWeek.push(i);
       if (currentWeek.length === 7) {

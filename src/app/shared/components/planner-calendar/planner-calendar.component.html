@@ -1,43 +1,100 @@
-<div class="calendar">
+<!-- <div class="calendar">
     <div class="row w-100">
-        <div class="col-12 col-lg-2">
-            <div class="section">
-                <!-- Custom Calender start -->
-                <div class="calerdar_view">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="fs-24 fw-medium">{{month}}</span>
-                            <span class="ml-10 fs-24 fw-medium">{{year}}</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <mat-icon class="cursor" (click)="goToPreviousMonth()">arrow_back_ios</mat-icon>
-                            <mat-icon class="cursor" (click)="goToNextMonth()">arrow_forward_ios</mat-icon>
-                        </div>
-                    </div>
-                    <p class="fs-14 m-0 lh-30 text">Occupancy Quick View</p>
-                    <div class="weekdays d-flex">
-                        <div class="weekday" *ngFor="let day of customDays">
-                            {{ day }}
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="week" *ngFor="let week of weeksInMonth">
-                            <div class="day" *ngFor="let day of week"
-                                [ngClass]="isCurrentDate && day === currentDay ? 'active': ''">
-                                <span *ngIf="day !== 0">{{ day }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Custom Calender End -->
+        <div class="col-12 col-lg-3">
 
-                <!-- Today Bookings Start -->
-                <div class="today-meetings">
-                    <div class="title"><span class="fs-14 fw-medium">Today Bookings</span> <span
-                            class="fs-14 ml-10">26-12-2024</span></div>
+        </div>
+    </div>
+</div> -->
+
+<div class="section">
+    <!-- Custom Calender start -->
+    <div class="calerdar_view">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <span class="fs-24 fw-medium">{{month}}</span>
+                <span class="ml-10 fs-24 fw-medium">{{year}}</span>
+            </div>
+            <div class="d-flex align-items-center">
+                <mat-icon class="cursor" (click)="goToPreviousMonth()">arrow_back_ios</mat-icon>
+                <mat-icon class="cursor" (click)="goToNextMonth()">arrow_forward_ios</mat-icon>
+            </div>
+        </div>
+        <p class="fs-14 m-0 lh-30 text">Occupancy Quick View</p>
+        <div class="weekdays d-flex">
+            <div class="weekday" *ngFor="let day of customDays">
+                {{ day }}
+            </div>
+        </div>
+        <div class="days">
+            <div class="week" *ngFor="let week of weeksInMonth">
+                <div class="day" *ngFor="let day of week"
+                    [ngClass]="isCurrentDate && day === currentDay ? 'active': ''">
+                    <span *ngIf="day !== 0">{{ day }}</span>
                 </div>
-                <!-- Today Bookings End -->
             </div>
         </div>
     </div>
+    <hr>
+    <!-- Custom Calender End -->
+
+    <!-- Today Bookings Start -->
+    <div class="today-meetings">
+        <div class="title">
+            <span class="fs-18 fw-medium">Today Bookings</span>
+            <span class="fs-14 ml-10">{{currentDate | date : 'dd-MM-yyyy'}}</span>
+        </div>
+        <hr>
+        <div class="today_events">
+            <ng-container *ngFor="let event of todayEvents">
+                <div class="d-flex gap-2 g-4 pt-10 pb-10 align-items-baseline">
+                    <p class="dot m-0"></p>
+                    <div>
+                        <p class="m-0 fs-14">{{event.time}}</p>
+                        <p class="m-0 fs-14">{{event.name}}</p>
+                        <p class="m-0 fs-14 location">{{event.location}}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <!-- Today Bookings End -->
+
+    <!-- Special Days Start -->
+    <div class="special_days">
+        <div class="title position-relative">
+            <span class="fs-18 fw-medium">Special Days</span>
+            <span class="position-absolute"><img src="../../../../assets/images/Planner/icons/star.gif"
+                    alt="star" width="20"></span>
+        </div>
+        <hr>
+        <div class="special_events">
+            <ng-container *ngFor="let event of specialEvents">
+                <div class="d-flex gap-2 pb-1">
+                    <img [src]="event.src" [alt]="event.name">
+                    <p class="m-0 fs-14">{{event.name}}</p>
+                </div>
+            </ng-container>
+
+        </div>
+        <hr>
+    </div>
+    <!-- Special Days End -->
+
+    <!-- Special Days Start -->
+    <div class="upcoming">
+        <div class="title position-relative">
+            <span class="fs-18 fw-medium">Upcoming Bookings </span>
+        </div>
+        <hr>
+        <div class="upcoming_events">
+            <ng-container *ngFor="let event of upcomingEvents">
+                <div class="d-flex gap-2 pb-3 align-items-baseline">
+                    <p class="dot m-0"></p>
+                    <p class="m-0 fs-14">{{event.name}}</p>
+                </div>
+            </ng-container>
+        </div>
+        <hr>
+    </div>
+    <!-- Special Days End -->
 </div>
