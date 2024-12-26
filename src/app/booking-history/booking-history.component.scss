@@ -109,14 +109,14 @@
   @media (min-width: 426px) and (max-width: 768px) {
     
     .search {
-      top:  gutter-sp(76);
+      top:  gutter-sp(75);
       right: gutter-sp(0);
     }
     .search_input{
-      width:  gutter-per(100);
+      width:  gutter-sp(300);
     }
   }
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 769px) and (max-width: 1071px) {
     .search {
       top:  gutter-sp(90);
       right: gutter-sp(0);
@@ -125,7 +125,7 @@
   
   @media screen and (max-width: 425px) {
     .search{
-      top:  gutter-sp(60);
+      top:  gutter-sp(72);
       margin: auto;
       left:  gutter-sp(0);
     }
