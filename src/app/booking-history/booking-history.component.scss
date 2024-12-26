@@ -106,7 +106,7 @@
   }
 
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 426px) and (max-width: 767px) {
     
     .search {
       top:  gutter-sp(75);
@@ -116,7 +116,7 @@
       width:  gutter-sp(300);
     }
   }
-  @media (min-width: 769px) and (max-width: 1071px) {
+  @media (min-width: 768px) and (max-width: 1071px) {
     .search {
       top:  gutter-sp(90);
       right: gutter-sp(0);
