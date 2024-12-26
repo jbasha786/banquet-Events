@@ -28,37 +28,37 @@
                     <button class="border rounded view fs-10 h-30 px-2">{{viewdetails}}</button>
                 </div>
             </div>
-            <div class="d-flex flex-column flex-md-row align-items-md-center gap-2">
+            <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
                 <span class="price fw-bold">{{price}}</span>
                 <div class="fontdull pipe d-md-block d-none">|</div>
-                <span class="fs-10 fw-500">{{diamensions}}</span>
+                <span class="fs-11 fw-500">{{diamensions}}</span>
                 <span class="fontdull pipe d-md-block d-none">|</span>
-                <span class="fs-10 fw-500">{{bookingID}}</span>
+                <span class="fs-11 fw-500">{{bookingID}}</span>
                 <span class="fontdull pipe d-md-block d-none">|</span>
-                <span class="fs-10 fw-500">{{dob}}</span>
+                <span class="fs-11 fw-500">{{dob}}</span>
             </div>
             <div class="d-flex flex-column flex-lg-row align-items-lg-center statusSection gap-3 gap-lg-5">
                 <div class="d-flex flex-column">
                     <span class="fontdull fs-12 fw-400">{{noOfGuestsName}}</span>
-                    <span class="fs-10 fw-500">{{noOfGuestValue}}</span>
+                    <span class="fs-11 fw-500">{{noOfGuestValue}}</span>
                 </div>
                 <div class="d-flex flex-column">
                     <span class="fontdull fs-12 fw-400">{{checkInname}}</span>
-                    <span class="fs-10 fw-500">{{checkInvalue}}</span>
+                    <span class="fs-11 fw-500">{{checkInvalue}}</span>
                 </div>
                 <div class="d-flex flex-column">
                     <span class="fontdull fs-12 fw-400">{{checkOutname}}</span>
-                    <span class="fs-10 fw-500">{{checkOutvalue}}</span>
+                    <span class="fs-11 fw-500">{{checkOutvalue}}</span>
                 </div>
                 <div class="d-flex flex-column">
                     <span class="fontdull fs-12 fw-400">{{statusName}}</span>
-                    <span class="fs-10 fw-500">{{statusvalue}}</span>
+                    <span class="fs-11 fw-500">{{statusvalue}}</span>
                 </div>
             </div>
-            <div class="d-flex gap-1 overflow-hidden">
-                <div><img [src]="addrImg" class="addrImg" alt=""></div>
+            <div class="d-flex gap-1 align-items-lg-center overflow-hidden">
+                <div><img [src]="addrImg" class="addrImg align-text-top" alt=""></div>
                 <div class="address fw-500">
-                    <p class="d-flex flex-wrap">{{address}}</p>
+                    <p class="d-flex flex-wrap mb-0">{{address}}</p>
                 </div>
             </div>
         </div>
