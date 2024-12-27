@@ -3,12 +3,9 @@
 
 .tableInvoice {
     margin-top: 70px;
-    ::ng-deep .mat-mdc-header-row,
-    ::ng-deep .mat-mdc-row {
-        height: gutter-sp(45);
-    }
 
-    ::ng-deep .mat-mdc-cell {
+    .tableCell {
+        height: gutter-sp(45);
         color: $tableCellColor;
         font-weight: 500;
         font-size: gutter-sp(15);
@@ -16,6 +13,7 @@
 
     .invoice-table .mat-mdc-header-cell {
         background: $tabHeadercolor;
+        color: $black;
         font-weight: 400;
     }
 

@@ -10,7 +10,7 @@
         <div class="row">
 
             @for( obj of events; track $index){
-            <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 events__cardSection">
+            <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 col-xxl-4 events__cardSection">
                 <app-events-card picture="{{obj.src}}" title="{{obj.img_title}}" subtitle="{{obj.img_subtitle}}"
                     calenderImage="{{obj.date_time.cal_img}}" period="{{obj.date_time.period}}"
                     locationImage="{{obj.location.loc_img}}" place="{{obj.location.place}}"
