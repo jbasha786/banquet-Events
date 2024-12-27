@@ -47,7 +47,7 @@
     color: $white;
   }
 
-  @media screen and (max-width: 995px) {
+  @media screen and (max-width: 992px) {
     .calendar-grid {
       overflow: auto;
       max-width: gutter-per(100);
