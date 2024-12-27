@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-planner-header',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './planner-header.component.html',
   styleUrl: './planner-header.component.scss'
 })

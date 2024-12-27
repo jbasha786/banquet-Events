@@ -1,23 +1,22 @@
-<div>
-    <div>
-        <a class="navbar-brand cursor mx-auto">
-            <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{headerInfo?.logo}}" alt="" (click)="goToHome()">
-        </a>
+<header class="header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo" />
     </div>
-    <div>
-        <form class="d-flex align-items-center search" role="search">
-            <button class="btn_search" type="submit">
-                <i class="bi bi-search"></i>
-            </button>
-            <input class="form-control pl-30 py-1 search_input fs-12" type="search" placeholder="Search"
-                aria-label="Search">
-        </form>
+    <div class="header-right">
+      <form class="search-form" role="search">
+        <input type="text" placeholder="Search" class="search-input" />
+        <button type="submit" class="search-btn">
+          <i class="bi bi-search"></i> <!-- Bootstrap Icon -->
+        </button>
+      </form>
+      <div class="notification">
+        <i class="bi bi-bell"></i> <!-- Notification Icon -->
+        <span class="badge">3</span>
+      </div>
+      <div class="user-info">
+        <img src="user-image.jpg" alt="User Image" class="user-img" />
+        <span class="user-id">JohnDoe</span>
+      </div>
     </div>
-    <div>
-        <button mat-icon-button (click)="viewNotifications()">
-            <mat-icon>notifications</mat-icon>
-            <span class="notification-badge" *ngIf="notificationCount > 0">{{ notificationCount }}</span>
-          </button>
-    </div>
-    <div></div>
-</div>
+  </header>
+  

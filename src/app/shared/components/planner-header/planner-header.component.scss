@@ -1,3 +1,102 @@
-.header-placeholder {
-    height: gutter-sp(92);
+/* General header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo styles */
+.header-left .logo {
+  height: 40px; /* Adjust as needed */
+}
+
+/* Right-side container styles */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between elements */
+}
+
+/* Search form styles */
+.search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-input {
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 14px;
+  width: 150px; /* Adjust width */
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.search-btn i {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Notification styles */
+.notification {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification i {
+  font-size: 20px;
+  color: #555;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+/* User info styles */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-id {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search-input {
+    width: 100px; /* Smaller search bar for mobile */
   }
+
+  .user-id {
+    display: none; /* Hide user ID on smaller screens */
+  }
+}
