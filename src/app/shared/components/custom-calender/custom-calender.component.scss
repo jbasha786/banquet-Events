@@ -2,10 +2,6 @@
 
 .calender {
 
-  button {
-    margin: gutter-sp(0) gutter-sp(10);
-  }
-
   .days-grid {
     max-width: gutter-per(100);
   }
@@ -42,6 +38,7 @@
     border-radius: gutter-sp(5);
     cursor: pointer;
     text-align: center;
+    padding: gutter-sp(1) gutter-sp(5);
   }
 
   .calendar-day:hover {
@@ -53,6 +50,10 @@
     .calendar-grid {
       overflow: auto;
       max-width: gutter-per(100);
+      padding: gutter-sp(10);
+    }
+    .calendar-day{
+    padding: gutter-sp(0) gutter-sp(8);
     }
   }
 

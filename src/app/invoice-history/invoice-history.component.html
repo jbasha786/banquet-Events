@@ -24,7 +24,7 @@
                   </ng-container>
                   <ng-container matColumnDef="actions">
                     <th mat-header-cell *matHeaderCellDef> Actions </th>
-                    <td mat-cell *matCellDef="let element"> <img src="{{element.actions.srcEyeAction}}" class="cursor eyeImg me-1 me-lg-3" (click)="overview()"> <img src="{{element.actions.download}}" class="downloadImg">  </td>
+                    <td mat-cell *matCellDef="let element"> <img src="{{element.actions.srcEyeAction}}" class="cursor eyeImg me-2 me-lg-3" (click)="overview()"> <img src="{{element.actions.download}}" class="downloadImg">  </td>
                   </ng-container>
                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

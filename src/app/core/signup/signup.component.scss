@@ -2,33 +2,49 @@
 @import "../../custom-css/custom-material-colors.scss";
 
 .signup {
-    width: 50vw;
-    margin: 0 auto;
-    margin-top: 4vw;
-    margin-bottom: 4vw;
+  margin: $value-null auto;
+  margin-top: gutter-vw(2);
+  margin-bottom: gutter-vw(4);
 
-    .mat-mdc-form-field {
-        width: 100%;
+  &__color {
+    color: $secondory-color;
+    
+  }
+
+  &__button {
+    text-align: center;
+
+    &__btn {
+      background-color: $secondory-color;
+      color: $white;
+      border: $value-null;
+      border-radius: gutter-sp(5);
+      padding:gutter-sp(10) gutter-sp(100);
     }
-
-    &__color {
-        color: $secondory-color;
-        font-weight: 500;
-    }
-
-    &__button {
-        text-align: center;
-
-        &__btn {
-            background-color: $secondory-color;
-            color: $white;
-            border: 0;
-            border-radius: 5px;
-            padding-top: 0.5vw;
-            padding-bottom: 0.5vw;
-            padding-left: 10vw;
-            padding-right: 10vw;
-        }
-    }
-
+  }
+}
+.sign-up-form {
+  height: gutter-sp(44);
+  border: gutter-sp(1) solid $border-silver;
+}
+.g-4 {
+  --bs-gutter-x: #{gutter-rem(3)};
+  --bs-gutter-y: #{gutter-rem(0)};
+}
+.checkbox-imp {
+  color: $livebtn-clr;
+  text-decoration: none;
+}
+.terms-condition {
+  text-decoration: underline;
+  color: $form-blue;
+}
+.input-align {
+  width: gutter-sp(15);
+  height: gutter-sp(15);
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: $form-focus;
 }

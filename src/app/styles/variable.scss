@@ -66,6 +66,12 @@ $chevron-background: #EDE4F7;
 $font-dull: #534D59;
 $font-lite: #716e6e;
 $calenderDate: #1b1616;
+$event-input-border-clr: #CACACA;
+$event-acc-btn-clr: #F0961BC7;
+$time-part-line-clr: #DCE3E7;
+$time-part-bg-clr: #ECF6FB;
+$form-blue:#124DBD;
+$form-focus:#86b7fe;
 
 @function gutter-sp($key) {
   @return #{$key}px;

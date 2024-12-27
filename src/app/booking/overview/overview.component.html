@@ -16,7 +16,7 @@
     <!-- Backbutton & title Section End -->
 
     <!-- Image Section Start -->
-    <div class="row overview__imageSection position-relative w-100 gap-4 gap-sm-4 gap-lg-0">
+    <div class="row overview__imageSection position-relative w-100 gap-4 gap-sm-4 gap-lg-0 m-auto">
         <div class="col-12 col-lg-8">
             <img src="{{ItemDetails?.image}}" alt="Overview Image" width="100%">
         </div>
@@ -34,10 +34,10 @@
     <!-- Image Section End -->
 
     <!-- Description Section Start -->
-    <div class="row overview__content w-100 gap-4 gap-sm-4 gap-lg-0">
+    <div class="row overview__content w-100 gap-4 gap-sm-4 gap-lg-0 m-auto">
         <div class="col-12 col-lg-8 overview__content__descSection">
             <p class="title fs-24 fw-medium mb-0 pb-20">{{ItemDetails?.deposite}}</p>
-            <p class="text m-0 lh-36">{{ItemDetails?.depositeDesc}}</p>
+            <p class="text m-0 lh-36 pr-md-40">{{ItemDetails?.depositeDesc}}</p>
             <span class="overview__content__amenities"><app-amenities></app-amenities></span>
         </div>
         <div class="col-12 col-lg-4 overview__content__edit">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="dateSection">
-                    <div class="d-flex mb-3 align-items-center border-clr">
+                    <div class="d-flex mb-3 align-items-center border-clr flex-column flex-md-row flex-lg-column flex-xl-row">
                         <div class="input-group" id="datepicker">
                             <span class="input-group-text basic-icon"><img
                                     src="../../../assets/images/icons/calendar.png" alt="calender" width="25"></span>
@@ -62,7 +62,7 @@
                                 <label for="guestCount">Check-in</label>
                             </div>
                         </div>
-                        <span class="spacebar">
+                        <span class="spacebar d-none d-md-flex">
                             <p class="line"></p>
                         </span>
                         <div class="input-group" id="datepicker">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex gap-3 w-100">
+                <div class="d-flex gap-3 w-100 flex-column flex-md-row flex-lg-column flex-xl-row">
                     <div class="fs-20 fw-medium overview__content__edit__section__editArticle text-center">Add Articles
                     </div>
                     <div class="fs-20 fw-medium overview__content__edit__section__editArticle text-center">Choose Menu
@@ -99,7 +99,7 @@
                 </div>
                 <div class="fs-40 pt-20 fw-bold">€ 4200.00</div>
                 <p class="fs-12 m-0 pb-20">Excluding taxes and fees</p>
-                <div class="fs-30 mt-20 overview__content__edit__section__reverse text-center">Reserve</div>
+                <div class="fs-24 mt-20 overview__content__edit__section__reverse text-center">Reserve</div>
             </div>
         </div>
     </div>

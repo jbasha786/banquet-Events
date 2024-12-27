@@ -4,12 +4,12 @@
         <p class="title fw-bold fs-20 fs-lg-32 m-0">WPD World Cup 2024</p>
         <p class="desc fs-18 fw-medium m-0 pb-10">Organized by world para darts association</p>
         <p class="numoftickets fs-18 mb-0 fw-medium">Tickets Available: {{numberOfTickets}}</p>
-        <div class="d-flex justify-content-between qty gap-20">
+        <div class="d-flex justify-content-between qty gap-20 flex-column flex-md-row flex-lg-column flex-xl-row">
             <div>
                 <p class="fs-22 fw-bold m-0 pb-2">5 Days / 4 Nights</p>
                 <p class="fs-14 m-0 items">4x Breakfast / 3x Lunch / 4x Dinner</p>
             </div>
-            <div class="d-flex qtySection justify-content-between gap-4 align-items-center">
+            <div class="d-flex qtySection gap-4 align-items-center justify-content-center">
                 <mat-icon fontIcon="remove" (click)="decrement()" [ngClass]="isbtnActive ? 'active' : 'inActive' "
                     class="cursor"></mat-icon>
                 <p class="value mb-0 fs-30">{{itemQty}}</p>
@@ -17,7 +17,7 @@
                     class="cursor"></mat-icon>
             </div>
         </div>
-        <div class="d-flex justify-content-between tickets__price">
+        <div class="d-flex justify-content-between tickets__price flex-column flex-md-row flex-lg-column flex-xl-row">
             <div>
                 <p class="pTitle m-0">Price</p>
                 <p class="color fs-30 fs-lg-34 fw-bold">€ 399,00 p.p.</p>
