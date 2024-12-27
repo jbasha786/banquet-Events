@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class PlannerHeaderComponent {
   notificationCount: number = 5; // Example notification count
+    @Input() headerInfo: any;
+  
 
   viewNotifications(): void {
     console.log('Notifications clicked!');
