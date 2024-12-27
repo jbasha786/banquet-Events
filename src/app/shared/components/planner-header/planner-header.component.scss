@@ -85,18 +85,88 @@
   object-fit: cover;
 }
 
-.user-id {
+// .user-id {
+//   font-size: 14px;
+//   color: #555;
+// }
+
+
+
+.user-menu {
+  position: relative;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.user-info .user-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info .user-name {
+  font-size: 14px;
+  color: #333;
+}
+
+.user-info i {
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-card {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  z-index: 100;
+}
+.dropdown-user {
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.dropdown-user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.dropdown-user-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dropdown-menu {
+  // list-style: none;
+  // padding: 0;
+  // margin: 0;
+}
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
   font-size: 14px;
   color: #555;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .search-input {
-    width: 100px; /* Smaller search bar for mobile */
-  }
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
 
-  .user-id {
-    display: none; /* Hide user ID on smaller screens */
-  }
+.dropdown-menu i {
+  font-size: 16px;
+  color: #555;
 }

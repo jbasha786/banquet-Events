@@ -15,9 +15,28 @@
         <i class="bi bi-bell"></i> 
         <span class="badge">3</span>
       </div>
-      <div class="user-info">
-        <img src="user-image.jpg" alt="User Image" class="user-img" />
-        <span class="user-id">JohnDoe</span>
+     
+      <div class="user-menu">
+        <div class="user-info" (click)="toggleDropdown()">
+          <img src="../../../../assets/images/planner/header/header_user.png" alt="User Image" class="user-img" />
+          <span class="user-id">{{userName}}</span>
+          <i [class]="dropdownOpen ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"></i>
+        </div>
+        @if(dropdownOpen){
+        <div class="dropdown-card d-block">
+          <div class="dropdown-user d-flex align-items-center">
+            <img src="../../../../assets/images/planner/header/header_user.png" alt="User Image" class="user-img" />
+            <span class="user-id">{{userName}}</span>
+          <!-- <div class="d-flex"> -->
+            <ul class="dropdown-menu d-flex flex-column">
+              <li><i class="bi bi-gear"></i> Settings</li>
+              <li><i class="bi bi-box-arrow-right"></i> Logout</li>
+            </ul>
+          </div>
+
+          <!-- </div> -->
+        </div>
+      }
       </div>
     </div>
   </header>
