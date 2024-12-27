@@ -2,7 +2,7 @@
 @import "../../../src/styles.scss";
 
 .tableInvoice {
-    margin-top: 70px;
+    margin-top: gutter-sp(70);
 
     .tableCell {
         height: gutter-sp(45);
