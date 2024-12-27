@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './planner-header.component.scss'
 })
 export class PlannerHeaderComponent {
-  notificationCount: number = 5; // Example notification count
+  notificationCount: number = 5; 
     @Input() headerInfo: any;
   
 
