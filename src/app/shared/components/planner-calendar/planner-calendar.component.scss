@@ -1,0 +1,85 @@
+@import "../../../styles/variable.scss";
+
+hr {
+    color: $cal-current-date-bg;
+    opacity: gutter-per(20);
+}
+
+.section {
+    background: $cal-bg;
+    color: $white;
+    padding: gutter-vw(1.5);
+    height: gutter-vh(100);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    min-width: gutter-sp(400);
+
+    .calerdar_view {
+        .text {
+            padding: gutter-sp(10);
+            opacity: gutter-per(50);
+        }
+
+        .weekdays {
+            padding: gutter-sp(0) gutter-sp(10);
+
+            .weekday {
+                width: gutter-per(14);
+                text-transform: uppercase;
+            }
+        }
+
+        .days {
+            padding: gutter-sp(0) gutter-sp(10);
+            display: flex;
+            flex-direction: column;
+            width: gutter-per(100);
+
+            .week {
+                display: flex;
+
+                .active {
+                    background: $cal-current-date-bg;
+                    color: $black;
+                    border-radius: gutter-sp(50);
+                }
+
+                .day {
+                    padding: gutter-sp(10);
+                    width: gutter-per(14);
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .today-meetings {
+        padding-bottom: gutter-sp(20);
+
+        .today_events {
+            .dot {
+                background: $cal-avilable-event-clr;
+                height: gutter-sp(10);
+                width: gutter-sp(10);
+                border-radius: gutter-sp(50);
+            }
+
+            .location {
+                color: $cal-event-loc-clr;
+            }
+        }
+    }
+
+    .upcoming_events {
+        .dot {
+            background: $cal-avilable-event-clr;
+            height: gutter-sp(10);
+            width: gutter-sp(10);
+            border-radius: gutter-sp(50);
+        }
+    }
+
+    .viewmore {
+        color: $editbtn;
+    }
+}

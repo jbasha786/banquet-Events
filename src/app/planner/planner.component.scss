@@ -1,0 +1,15 @@
+@import "../styles/variable.scss";
+
+.planner {
+    .section {
+        display: flex;
+
+        .calender {
+            flex: $value-null $value-null auto;
+        }
+
+        .view {
+            flex: 1 $value-null auto;
+        }
+    }
+}

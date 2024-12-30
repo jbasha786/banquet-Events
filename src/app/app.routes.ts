@@ -30,6 +30,7 @@ export const routes: Routes = [
     { path: 'liveEvents', component: LiveEventsComponent },
     { path: 'wedding', component: WeddingPageComponent },
     { path: 'continueasguest', component: ContinueGuestComponent },
+    { path: 'planner', loadComponent:() =>  import("./planner/planner.component").then(c => c.PlannerComponent)},
     { path: 'welcomeguests', component: WelcomeGuestsComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
