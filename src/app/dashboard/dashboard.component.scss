@@ -145,13 +145,13 @@
 
 // Spacing Utilities
 .g-6 {
-  --bs-gutter-x: 4rem;
-  --bs-gutter-y: 4rem;
+  --bs-gutter-x: gutter-rem(4);
+  --bs-gutter-y: gutter-rem(4);
 }
 
 // Arrangements Section
 .arrangements {
-   padding: gutter-vw(0) gutter-vw(6) gutter-vw(5);
+   padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
 .heading {
 		text-overflow: ellipsis;
 		overflow: hidden;

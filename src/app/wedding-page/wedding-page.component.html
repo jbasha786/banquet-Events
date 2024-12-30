@@ -13,7 +13,7 @@
 
   <!-- Loop through the events -->
   <div *ngFor="let event of events">
-    <div class="wedding__border mb-4">
+    <div class="wedding__border mb-4 mt-30">
       <div class="row g-0 content-sec d-flex gap-18">
         <!-- Image Section -->
         <div class="col-xl-4 image-section">
@@ -34,7 +34,7 @@
         <!-- Content Section -->
         <div class="col-xl-7 container-text">
           <div>
-            <p class="title mb-1 fs-30 fw-500">{{ event.title }}</p>
+            <p class="title mb-1 fs-22 fs-lg-30 fw-500">{{ event.title }}</p>
             <p class="room-details fs-14 fw-300">
               <span
                 *ngFor="let part of getRoomDetailsParts(event); let last = last"

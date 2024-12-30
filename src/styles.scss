@@ -268,6 +268,14 @@ body {
     }
   }
 
+  .gx-#{$i} {
+    --bs-gutter-x: #{$i}rem;
+  }
+  .gx-lg-#{$i} {
+    @media (min-width: 992px) {
+      --bs-gutter-x: #{$i}rem !important;
+    }
+  }
 
   // FontSizes in vw
   .fv-#{$i} {
