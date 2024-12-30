@@ -1,7 +1,7 @@
 @import '../../../styles/variable.scss';
 
 .calender {
-  overflow: auto;
+  overflow: hidden;
 
   .days-grid {
     max-width: gutter-per(100);
@@ -49,9 +49,8 @@
 
   @media screen and (max-width: 992px) {
     .calendar-grid {
-      overflow: auto;
+      overflow: hidden;
       max-width: gutter-per(100);
-      padding: gutter-sp(10);
     }
 
     .calendar-day {

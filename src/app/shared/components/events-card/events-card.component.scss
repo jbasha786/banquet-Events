@@ -1,6 +1,7 @@
 @import "../../../../app/styles/variable.scss";
 
 .card{
+    border-radius: gutter-sp(15);
     .card-title{
         color: $font-dull;
     }
