@@ -72,6 +72,8 @@ $time-part-line-clr: #DCE3E7;
 $time-part-bg-clr: #ECF6FB;
 $form-blue:#124DBD;
 $form-focus:#86b7fe;
+$admin-table-text:#003861;
+$admin-search:#595959;
 
 @function gutter-sp($key) {
   @return #{$key}px;

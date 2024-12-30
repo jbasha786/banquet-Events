@@ -1,0 +1,71 @@
+@import "../../app/styles/variable.scss";
+
+.welcomeguests {
+  .welcomeguests-table th.mat-mdc-header-cell {
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    font-size: gutter-sp(14);
+    color: $tableCellColor;
+    white-space: nowrap;
+  }
+
+  .welcomeguests-table td.mat-mdc-cell {
+    font-family: "poppins", sans-serif;
+    font-size: gutter-sp(14);
+    color: $admin-table-text;
+    white-space: nowrap;
+  }
+  .welcomeguests-table {
+    .eyeImg {
+      height: gutter-sp(12);
+      width: gutter-sp(20);
+    }
+
+    .downloadImg {
+      height: gutter-sp(18);
+      width: gutter-sp(18);
+    }
+  }
+}
+.btn-addnew {
+  background-color: $secondary-color;
+  color: $white;
+  border-radius: gutter-sp(30);
+  border: gutter-sp(0) solid $secondary-color;
+  font-size: gutter-sp(16);
+  font-weight: 500;
+  width: gutter-sp(230);
+  padding: gutter-sp(8);
+}
+.custom-search .input-group {
+  border: gutter-sp(2) solid $admin-search;
+  overflow: hidden;
+  background-color: transparent;
+}
+.custom-search i {
+  color: $admin-search;
+  font-size: gutter-sp(14);
+}
+
+.custom-search {
+  font-size: gutter-sp(14);
+}
+
+.custom-search .input-group-text {
+  padding-right:  gutter-rem(0.25);
+}
+
+.custom-placeholder::placeholder {
+  font-size: gutter-sp(14);
+  color: $admin-search;
+}
+
+.custom-placeholder {
+  padding-left: gutter-rem(0.3);
+  width: gutter-sp(150);
+  background-color: transparent;
+}
+.custom-placeholder:focus {
+  outline: none;
+  box-shadow: none;
+}
