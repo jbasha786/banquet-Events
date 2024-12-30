@@ -1,8 +1,9 @@
+@import "../app/styles/variable.scss";
 #webPage {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height:gutter-vh(100); 
   }
   router-outlet {
-    flex: 1 0 auto;  
+    flex: 1 $value-null auto;  
   }
