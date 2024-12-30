@@ -4,7 +4,7 @@
   overflow: hidden;
 
   .days-grid {
-    max-width: gutter-per(100);
+    width: gutter-per(100);
   }
 
   .calendar-day.disabled {
@@ -47,15 +47,9 @@
     color: $white;
   }
 
-  @media screen and (max-width: 992px) {
-    .calendar-grid {
-      overflow: hidden;
-      max-width: gutter-per(100);
-    }
-
-    .calendar-day {
-      padding: gutter-sp(0) gutter-sp(7);
-    }
+  .calendar-grid {
+    overflow: scroll;
+    scrollbar-width: none;
+    max-width: gutter-per(100);
   }
-
 }

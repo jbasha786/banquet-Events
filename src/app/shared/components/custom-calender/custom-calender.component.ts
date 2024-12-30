@@ -35,6 +35,7 @@ export class CustomCalenderComponent {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.adjustVisibleRange();
+      this.scrollDates(0);
       window.addEventListener('resize', this.adjustVisibleRange.bind(this));
     }
   }
@@ -47,8 +48,10 @@ export class CustomCalenderComponent {
 
     if (typeof window !== 'undefined') {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 576) {
-        this.visibleRange = 5;
+      if (screenWidth <= 320) {
+        this.visibleRange = 3;
+      } else if (screenWidth > 320 && screenWidth < 576) {
+        this.visibleRange = 3;
       } else if (screenWidth >= 576 && screenWidth < 768) {
         this.visibleRange = 8;
       } else if (screenWidth >= 768 && screenWidth < 992) {
