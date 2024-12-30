@@ -1,5 +1,5 @@
 <div class="hallsView col-md-10 col-lg-10 col-xl-8 m-md-auto mb-10">
-    <div class="d-flex justify-content-center align-items-center flex-column gap-2 gap-lg-12">
+    <div class="d-flex justify-content-center align-items-center flex-column gap-2 gap-lg-12 mb-200">
         <p class="text-center fs-28 fw-500 text-black">Type of Halls?</p>
         <form action="" class="card hallsView__card px-2 mt-2 col-12">
             <div class="d-flex flex-md-row justify-content-center align-item-center flex-column">
@@ -46,7 +46,7 @@
         </form>
 
         @for(item of hallsList; track $index){
-        <div class="d-flex justify-content-center align-items-center flex-column flex-lg-row hall-list gap-4 p-2 mt-10">
+        <div class="d-flex align-items-center flex-column flex-lg-row hall-list gap-4 p-2 mt-10">
             <div class="d-flex hallsView__images">
                 <img class="hallsView__images__img "
                     [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}" width=""
