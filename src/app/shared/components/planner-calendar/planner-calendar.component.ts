@@ -71,7 +71,6 @@ export class PlannerCalendarComponent {
     }
     this.weeksInMonth = [];
     let currentWeek: number[] = new Array(firstDayOfMonth).fill(0);
-    console.log(currentWeek, firstDayOfMonth, numberOfDaysInMonth)
     for (let i = 1; i <= numberOfDaysInMonth; i++) {
       currentWeek.push(i);
       if (currentWeek.length === 7) {
