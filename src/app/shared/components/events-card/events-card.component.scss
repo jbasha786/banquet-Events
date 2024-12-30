@@ -8,6 +8,7 @@
     .priceSection{
         border: gutter-sp(1) solid $priceBackGrnd;
         background-color: $priceBackGrnd;
+        border-radius: gutter-sp(8);
     }
     .booknowBtn{
         border: none;
