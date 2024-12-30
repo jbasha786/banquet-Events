@@ -1,43 +1,82 @@
 <header class="header">
-    <div class="header-left">
-      <a class="navbar-brand cursor mx-auto">
-        <img class="logo mb-0 w-90 w-lg-140 h-76" src="../../../../assets/images/logo/de-bonte-wever.svg" alt="" (click)="goToHome()">
-     </a>
+  <div class="header-left">
+    <a class="navbar-brand cursor mx-auto">
+      <img class="logo mb-0 w-90 w-lg-140 h-76" src="../../../../assets/images/logo/de-bonte-wever.svg" alt=""
+        (click)="goToHome()">
+    </a>
+  </div>
+  <div class="header-menu d-flex align-items-center gap-40">
+    <form class="search" role="search">
+      <button class="btn_search border-0" type="submit">
+        <i class="bi bi-search"></i>
+      </button>
+      <input class="form-control pl-30 py-2 search_input fs-12 ml-2 wid-sm-100" type="Search" placeholder="Search..."
+        aria-label="Search">
+    </form>
+    <div class="notification" (click)="openNotifications()">
+      <i class="bi bi-bell"></i>
+      <span class="badge">3</span>
     </div>
-    <div class="header-right">
-      <form class="search-form" role="search">
-        <input type="text" placeholder="Search" class="search-input" />
-        <button type="submit" class="search-btn">
-          <i class="bi bi-search"></i> 
-        </button>
-      </form>
-      <div class="notification">
-        <i class="bi bi-bell"></i> 
-        <span class="badge">3</span>
-      </div>
-     
-      <div class="user-menu">
-        <div class="user-info" (click)="toggleDropdown()">
-          <img src="../../../../assets/images/planner/header/header_user.png" alt="User Image" class="user-img" />
-          <span class="user-id">{{userName}}</span>
-          <i [class]="dropdownOpen ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"></i>
+    @if(isDivOpen){
+    <div class="dropdown-card notification-card col-4 h-100 d-flex">
+      <div>
+        <div>
+          <i class="bi bi-bell"></i>
+          <span>Notifications</span>
+          <button>clear all</button>
         </div>
-        @if(dropdownOpen){
-        <div class="dropdown-card d-block">
-          <div class="dropdown-user d-flex align-items-center">
-            <img src="../../../../assets/images/planner/header/header_user.png" alt="User Image" class="user-img" />
-            <span class="user-id">{{userName}}</span>
-          <!-- <div class="d-flex"> -->
-            <ul class="dropdown-menu d-flex flex-column">
-              <li><i class="bi bi-gear"></i> Settings</li>
-              <li><i class="bi bi-box-arrow-right"></i> Logout</li>
-            </ul>
+        <div class="notification-close cursor" (click)="close()">
+          <mat-icon fontIcon="close"></mat-icon>
+        </div>
+      </div>
+      <div *ngFor="let notification of plannerHeaderNotification">
+        <div>
+          {{notification.src}}
+        </div>
+        <div>
+          <span>{{notification.notifiTitle}}</span>
+          <span>{{notification.time}}</span>
+          <span>{{notification.duration}}</span>
+        </div>
+        <div>
+          <button>{{notification.statusButton}}</button>
+        </div>
+      </div>
+    </div>
+    }
+
+    <div class="user-menu">
+      <div class="user-info" (click)="toggleDropdown()">
+        <img src="../../../../assets/images/planner/header/header_user.png" alt="User Image" class="user-img" />
+        <div class="d-flex flex-column">
+          <span class="user-id">{{userName}}</span>
+          <span class="fs-10 fw-300">{{designation}}</span>
+        </div>
+        <i [class]="dropdownOpen ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"></i>
+      </div>
+      @if(dropdownOpen){
+      <div class="dropdown-card d-flex">
+        <div class="dropdown-user d-flex flex-column">
+          <img src="../../../../assets/images/planner/header/header_user.svg" alt="User Image"
+            class="dropdown-user-img mt-3" />
+          <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <span class="user-id fs-18 fw-bold">{{userName}}</span>
+            <span class="user-id fs-14 fw-300">{{designation}}</span>
           </div>
 
-          <!-- </div> -->
+          <!-- <div class="d-flex"> -->
+          <hr class="w-100 mt-1">
+          <div class="d-flex flex-column gap-3 w-100 ms-5">
+            <span class="fw-300"> Language</span>
+            <span class="fw-300"> Booking History</span>
+            <span class="fw-300"> Settings</span>
+            <span class="text-danger fw-300"> Logout</span>
+          </div>
         </div>
-      }
+
+        <!-- </div> -->
       </div>
+      }
     </div>
-  </header>
-  
+  </div>
+</header>
