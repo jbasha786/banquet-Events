@@ -497,8 +497,8 @@
             "contactnumber": "Banquet Hall  450/Sqft",
             "welcomemessage": "€ 4200.00",
             "actions": {
-                "srcEyeAction": "Edit",
-                "download": "Delete"
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/eyeAction.svg"
             }
         },
         {
