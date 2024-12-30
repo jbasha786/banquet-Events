@@ -47,18 +47,18 @@ export class CustomCalenderComponent {
 
     if (typeof window !== 'undefined') {
       const screenWidth = window.innerWidth;
-  if (screenWidth < 576) {
-    this.visibleRange = 2;
-  } else if (screenWidth >= 576 && screenWidth < 768) {
-    this.visibleRange = 3; 
-  } else if (screenWidth >= 768 && screenWidth < 992) {
-    this.visibleRange = 10; 
-  } else if (screenWidth >= 992 && screenWidth < 1200) {
-    this.visibleRange = 12; 
-  } else {
-    this.visibleRange = 15;
-  }
-      this.updatePaginatedDays();
+      if (screenWidth < 576) {
+        this.visibleRange = 5;
+      } else if (screenWidth >= 576 && screenWidth < 768) {
+        this.visibleRange = 8;
+      } else if (screenWidth >= 768 && screenWidth < 992) {
+        this.visibleRange = 10;
+      } else if (screenWidth >= 992 && screenWidth < 1200) {
+        this.visibleRange = 14;
+      } else {
+        this.visibleRange = 15;
+      }
+      this.currentIndex = 0;
       this.cdr.detectChanges();
     }
   }
@@ -107,11 +107,11 @@ export class CustomCalenderComponent {
 
   scrollToStart(): void {
     if (isPlatformBrowser(this.platformId)) {
-    const calendarGrid = document.querySelector('.calendar-grid');
-    if (calendarGrid) {
-      (calendarGrid as HTMLElement).scrollLeft = 0; 
+      const calendarGrid = document.querySelector('.calendar-grid');
+      if (calendarGrid) {
+        (calendarGrid as HTMLElement).scrollLeft = 0;
+      }
     }
-  }
   }
   ngAfterViewInit(): void {
     this.scrollToStart();

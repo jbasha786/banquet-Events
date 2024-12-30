@@ -44,7 +44,7 @@
         gap: gutter-sp(0);
         opacity: gutter-sp(0);
         rotate: -180 deg;
-        clip-path: polygon( gutter-per(0) gutter-per(0), gutter-per(91)  gutter-per(0), gutter-per(100) gutter-per(50), gutter-per(91) gutter-per(100), gutter-per(0) gutter-per(100));
+        clip-path: polygon(gutter-per(0) gutter-per(0), gutter-per(91) gutter-per(0), gutter-per(100) gutter-per(50), gutter-per(91) gutter-per(100), gutter-per(0) gutter-per(100));
         color: $white;
         padding-right: gutter-sp(15);
         padding-left: gutter-sp(10);
@@ -63,7 +63,7 @@
 
     .rating_booking {
         position: absolute;
-        top: gutter-sp(27);
+        top: gutter-sp(17);
         gap: gutter-sp(6);
     }
 
@@ -76,6 +76,10 @@
     .address {
         color: $adresscolor;
         font-size: gutter-sp(10);
+        flex-wrap: wrap;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
     }
 
 }

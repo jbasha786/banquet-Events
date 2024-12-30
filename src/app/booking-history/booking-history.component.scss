@@ -1,38 +1,83 @@
 @import '../styles/variable.scss';
+@import '../../styles.scss';
 
-.booking-view { 
-    .mat-mdc-tab-group {
-        margin: gutter-vw(0) gutter-vw(5);
-        padding: gutter-vw(0) gutter-vw(5);
-        width: gutter-per(100);
-    }
 
-    .tabTitle .mat-ink-bar {
-        display: none;
+.booking-view {
+  .tab-header {
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .search {
+    position: absolute;
+    top: gutter-sp(23);
+    z-index: 4;
+    right: gutter-sp(0);
+    display: flex;
+    align-items: center;
+  }
+
+  .search .form-control:focus {
+    box-shadow: none;
+    border: gutter-sp(1) solid $black;
+  }
+
+  .btn_search {
+    position: absolute;
+    left: gutter-sp(4);
+    background-color: $white;
+  }
+
+  .tab-main {
+    position: relative;
+  }
+
+  .search_input {
+    max-width: guttre-per(100);
+  }
+
+  .search_input::placeholder {
+    color: $black;
+  }
+
+  .tabTitle .mat-ink-bar {
+    display: none;
+  }
+
+  .tabTitle ::ng-deep .mdc-tab__text-label {
+    font-size: gutter-sp(30);
+    letter-spacing: normal;
+    margin-right: gutter-sp(30);
+    text-transform: none;
+  }
+
+  .tabTitle ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
+    display: none;
+  }
+
+  .tabTitle ::ng-deep .mdc-tab-indicator--active {
+    font-size: gutter-sp(30);
+    letter-spacing: normal;
+    padding: gutter-sp(0);
+  }
+
+  ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+    color: $black;
+    font-weight: 500;
+  }
+
+  ::ng-deep .mat-tab-label {
+    color: $footer-text-color;
+  }
+
+  @media (min-width: 320px) and (max-width: 1172px) {
+    .search {
+      top: gutter-sp(90);
+      right: gutter-sp(0);
     }
 
     .tabTitle ::ng-deep .mdc-tab__text-label {
-        font-size: gutter-sp(25);
-        letter-spacing: normal;
-        font-weight: 100;
-        text-transform: none;
+      font-size: gutter-sp(22);
     }
-
-    .tabTitle ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
-        display: none;
-    }
-
-    .tabTitle ::ng-deep .mdc-tab-indicator--active {
-        font-size: gutter-sp(30);
-        letter-spacing: normal;
-        padding: gutter-sp(0);
-    }
-
-     ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
-        color: $black;
-      }
-      
-      ::ng-deep .mat-tab-label {
-        color: $footer-text-color; 
-      }
+  }
 }

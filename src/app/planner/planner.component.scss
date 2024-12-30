@@ -1,12 +1,15 @@
 @import "../styles/variable.scss";
-.planner {
-    .calender {
-        min-width: gutter-vw(20);
-        max-width: gutter-vw(20);
-    }
 
-    .view {
-        min-width: gutter-vw(79);
-        max-width: gutter-vw(79);
+.planner {
+    .section {
+        display: flex;
+
+        .calender {
+            flex: $value-null $value-null auto;
+        }
+
+        .view {
+            flex: 1 $value-null auto;
+        }
     }
 }

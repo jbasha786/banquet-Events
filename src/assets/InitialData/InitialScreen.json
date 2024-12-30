@@ -488,6 +488,80 @@
             }
         }
     ],
+    "admin_welcomeTable": [
+        {
+            "timings":"fshgs",
+            "date": "10 oct 2024",
+            "resourcedetails": "IT0110102024",
+            "contactperson": "Queens Lagoon Suite",
+            "contactnumber": "Banquet Hall  450/Sqft",
+            "welcomemessage": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/eyeAction.svg"
+            }
+        },
+        {
+            "timings":"fshgs",
+            "date": "12 oct 2024",
+            "resourcedetails": "IT0110102024",
+            "contactperson": "Queens Lagoon Suite",
+            "contactnumber": "Banquet Hall  450/Sqft",
+            "welcomemessage": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        },
+        {
+            "timings":"fshgs",
+            "date": "13 oct 2024",
+            "resourcedetails": "IT0110102024",
+            "contactperson": "Queens Lagoon Suite",
+            "contactnumber": "Banquet Hall  450/Sqft",
+            "welcomemessage": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        },
+        {
+            "timings":"fshgs",
+            "date": "10 oct 2024",
+            "resourcedetails": "IT0110102024",
+            "contactperson": "Queens Lagoon Suite",
+            "contactnumber": "Banquet Hall  450/Sqft",
+            "welcomemessage": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        },
+        {
+            "timings":"fshgs",
+            "date": "10 oct 2024",
+            "resourcedetails": "IT0110102024",
+            "contactperson": "Queens Lagoon Suite",
+            "contactnumber": "Banquet Hall  450/Sqft",
+            "welcomemessage": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        },
+        {
+            "timings":"fshgs",
+            "date": "10 oct 2024",
+            "resourcedetails": "IT0110102024",
+            "contactperson": "Queens Lagoon Suite",
+            "contactnumber": "Banquet Hall  450/Sqft",
+            "welcomemessage": "€ 4200.00",
+            "actions": {
+                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
+                "download": "/assets/images/invoiceHistory/download.svg"
+            }
+        }
+    ],
     "navEvent_Items": [
         {
             "eventName": "Overview"
@@ -595,7 +669,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -612,7 +686,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -629,7 +703,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -646,7 +720,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -663,7 +737,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -680,7 +754,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -697,7 +771,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -714,7 +788,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -731,7 +805,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -748,7 +822,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -765,7 +839,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         },
@@ -782,7 +856,7 @@
                 "place": "at De Bonte Wever Assen"
             },
             "card_footer": {
-                "price": "€ 399,00 p.p on wards",
+                "price": "p.p on wards",
                 "booknow": "Book Now"
             }
         }

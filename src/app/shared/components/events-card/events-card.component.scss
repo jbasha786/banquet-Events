@@ -1,12 +1,14 @@
 @import "../../../../app/styles/variable.scss";
 
 .card{
+    border-radius: gutter-sp(15);
     .card-title{
         color: $font-dull;
     }
     .priceSection{
         border: gutter-sp(1) solid $priceBackGrnd;
         background-color: $priceBackGrnd;
+        border-radius: gutter-sp(8);
     }
     .booknowBtn{
         border: none;
