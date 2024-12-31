@@ -1,9 +1,10 @@
 @import '../../../styles/variable.scss';
 
 .calender {
+  overflow: hidden;
 
   .days-grid {
-    max-width: gutter-per(100);
+    width: gutter-per(100);
   }
 
   .calendar-day.disabled {
@@ -29,7 +30,7 @@
 
   .btnmain {
     border: none;
-    background: none
+    background: none;
   }
 
   .calendar-day {
@@ -46,15 +47,9 @@
     color: $white;
   }
 
-  @media screen and (max-width: 760px) {
-    .calendar-grid {
-      overflow: auto;
-      max-width: gutter-per(100);
-      padding: gutter-sp(10);
-    }
-    .calendar-day{
-    padding: gutter-sp(0) gutter-sp(8);
-    }
+  .calendar-grid {
+    overflow: scroll;
+    scrollbar-width: none;
+    max-width: gutter-per(100);
   }
-
 }

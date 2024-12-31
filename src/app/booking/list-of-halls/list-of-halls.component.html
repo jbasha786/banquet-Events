@@ -1,5 +1,5 @@
 <div class="hallsView col-md-10 col-lg-10 col-xl-8 m-md-auto mb-10">
-    <div class="d-flex justify-content-center align-items-center flex-column gap-2 gap-lg-12">
+    <div class="d-flex justify-content-center align-items-center flex-column gap-2 gap-lg-12 mb-200">
         <p class="text-center fs-28 fw-500 text-black">Type of Halls?</p>
         <form action="" class="card hallsView__card px-2 mt-2 col-12">
             <div class="d-flex flex-md-row justify-content-center align-item-center flex-column">
@@ -9,7 +9,7 @@
                         <span matPrefix class="cursor">
                             <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img" alt="">
                         </span>
-                        <input type="text" value="40 Adults, 12 children..." matInput readonly class="halls-input lh-1">
+                        <input type="text" value="40 Adults, 12 children..." matInput readonly class="hallsView__card__halls-input lh-1">
                     </mat-form-field>
                 </div>
                 <hr class="d-md-none m-0">
@@ -46,7 +46,7 @@
         </form>
 
         @for(item of hallsList; track $index){
-        <div class="d-flex justify-content-center align-items-center flex-column flex-lg-row hall-list gap-4 p-2 mt-10">
+        <div class="d-flex align-items-center flex-column flex-lg-row hall-list gap-4 p-2 mt-10">
             <div class="d-flex hallsView__images">
                 <img class="hallsView__images__img "
                     [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}" width=""
@@ -62,7 +62,7 @@
                     <p class="fs-15 fw-500 hallsView__images__icon__conformed-color mt-2">Booking Confirmed</p>
                 </div>
             </div>
-            <div class="m-0 m-lg-10">
+            <div class="m-0 m-lg-10 wid-lg-100">
                 <p class="fs-22 fw-500 lh-1 mb-0 text-black">{{item.name}}</p>
                 <div class="mb-2 font-color d-flex gap-2">
                     <div> <span class="fs-12">{{item.desc}}</span></div>
@@ -77,11 +77,11 @@
                     <span class="fs-26 fw-bold hallsView__priceColor">{{item.price}}</span><span
                         class="font-color fs-12">{{item.taxText}}</span>
                 </div>
-                <div class="d-flex justify-content-between flex-column flex-md-row flex-lg-row">
-                    <div class="d-flex align-items-center  flex-row">
-                        <button mat-flat-button class="cancel fw-500 fs-14 border rounded-pill" *ngIf="!reserveBtn"
+                <div class="d-flex justify-content-between flex-column flex-md-row">
+                    <div class="d-flex align-items-center  flex-row gap-3">
+                        <button class="cancel fw-500 fs-14 border rounded-pill px-4 py-1" *ngIf="!reserveBtn"
                             (click)="cancelReservation()">Cancel</button>
-                        <button mat-flat-button class="reserve border rounded-pill" *ngIf="reserveBtn"
+                        <button class="reserve border rounded-pill px-4 py-1" *ngIf="reserveBtn"
                             (click)="reserve(item)">Select</button>
                         <span class="ms-2 hallsView__articles fs-14 fw-500" role="button" (click)="addArticles()">Add
                             Articles</span>

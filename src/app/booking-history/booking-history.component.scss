@@ -33,7 +33,6 @@
   }
 
   .search_input {
-    width: gutter-sp(345);
     max-width: guttre-per(100);
   }
 
@@ -46,6 +45,7 @@
   }
 
   .tabTitle ::ng-deep .mdc-tab__text-label {
+    font-family: "poppins", sans-serif;
     font-size: gutter-sp(30);
     letter-spacing: normal;
     margin-right: gutter-sp(30);
@@ -67,42 +67,19 @@
     font-weight: 500;
   }
 
-  ::ng-deep .mat-tab-label {
-    color: $footer-text-color;
+  ::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+    color: $font-lite;
+    font-weight: 400;
   }
 
-  @media screen and (max-width: 768px) {
-    .tab-header {
-      flex-direction: row;
-      justify-content: space-between;
-      width: gutter-per(100);
-    }
-
-    .tabTitle {
-      flex-grow: 1;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
+  @media (min-width: 320px) and (max-width: 1172px) {
+    .search {
+      top: gutter-sp(90);
+      right: gutter-sp(0);
     }
 
     .tabTitle ::ng-deep .mdc-tab__text-label {
-      font-size: gutter-sp(20);
-      letter-spacing: normal;
-      text-transform: none;
+      font-size: gutter-sp(22);
     }
-
-    .search {
-      position: absolute;
-      top: gutter-sp(66);
-      width: gutter-per(100);
-      right: gutter-sp(0);
-      display: flex;
-      align-items: center;
-    }
-
-    ::ng-deep .mat-mdc-tab-body-wrapper {
-      top: gutter-sp(10);
-    }
-
   }
 }

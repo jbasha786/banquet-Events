@@ -78,8 +78,17 @@ $notifyTimeColor: #5A6474;
 $notifyNewColor: #4AAF91;
 $notufyNewBg: #EDF7F4;
 $notifyPendingColor: #E39A37;
-$notifyPendingBg: 
+$notifyPendingBg: rgba(255, 173.43, 76.50, 0.18);
 
+$cal-bg: #2B2B2B;
+$cal-current-date-bg: #DAEF84;
+$cal-avilable-event-clr: #20CA9A;
+$cal-event-loc-clr: #E345B9;
+$cal-view-title-clr: #003861;
+$select-bg: #F3F3F3;
+$cal-view-border-clr: #E8E8E8;
+$admin-table-text:#003861;
+$admin-search:#595959;
 
 @function gutter-sp($key) {
   @return #{$key}px;

@@ -1,16 +1,16 @@
-<div class="">
+<div class="eventsPage">
     <div class="eventsmainImg">
         <img class="eventsmainImg__events_main" src="../../assets/images/events/events_main.png" alt="">
     </div>
-    <div class="events d-flex justify-content-center flex-column page_content">
+    <div class="events d-flex justify-content-center flex-column page_content pt-0">
         <div class="d-flex gap-2">
             <span class="fs-24 fw-500">Featured </span><span class="events-text fs-24 fw-500">Events:</span> <span class="events-text fs-24 fw-500">12</span>
         </div>
         <app-custom-calender></app-custom-calender>
-        <div class="row">
+        <div class="row event-card-section">
 
             @for( obj of events; track $index){
-            <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 events__cardSection">
+            <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 col-xxl-4 events__cardSection gx-5">
                 <app-events-card picture="{{obj.src}}" title="{{obj.img_title}}" subtitle="{{obj.img_subtitle}}"
                     calenderImage="{{obj.date_time.cal_img}}" period="{{obj.date_time.period}}"
                     locationImage="{{obj.location.loc_img}}" place="{{obj.location.place}}"

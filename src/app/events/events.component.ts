@@ -17,7 +17,6 @@ export class EventsComponent {
   constructor(private defaultService: DefaultService) { }
   ngOnInit() {
     this.getInitialData();
-    console.log(this.events)
   }
 
   getInitialData() {

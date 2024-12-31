@@ -4,14 +4,16 @@
 .overview {
 
     &__title {
-        padding: gutter-vw(5) gutter-vw(5) gutter-vw(0);
+        padding: gutter-vw(2) gutter-vw(5) gutter-vw(0);
 
         &__back {
             border-radius: gutter-vw(50);
             display: flex;
             align-items: center;
             justify-content: center;
-            width: max-content;
+            width: gutter-sp(40);
+            height: gutter-sp(40);
+            color: $black;
             background: $back-btn-color-overview;
         }
 
@@ -21,7 +23,7 @@
 
     // Image section
     &__imageSection {
-        padding: gutter-vw(2) gutter-vw(5) gutter-vw(0);
+        padding: gutter-vw(0) gutter-vw(5) gutter-vw(0);
 
         img {
             height: gutter-per(100);
@@ -111,7 +113,7 @@
                 .border-clr-none {
                     padding: gutter-rem(1.5) gutter-rem(0.25) gutter-rem(0.25);
                     border: gutter-sp(1) solid $white;
-                    font-size: gutter-sp(16);
+                    font-size: gutter-sp(18);
                 }
 
                 .border-clr {
@@ -154,6 +156,10 @@
     // Rationg Section
     .rating {
         padding: gutter-vw(6) gutter-vw(14) gutter-vw(0);
+
+        .rating-price {
+            font-weight: 600;
+        }
 
         &__desc {
             line-height: gutter-sp(25);
