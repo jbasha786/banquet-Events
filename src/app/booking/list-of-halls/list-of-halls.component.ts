@@ -110,10 +110,10 @@ export class ListOfHallsComponent {
 
   chooseMenu(){
     this.dialog.open(ChooseMenuComponent, {
-      width: '90%',
-      height: '100%',
+      width: '100%',
+      height: '100vh',
+      maxWidth: '100%',
       panelClass: 'choosemenu-dialog',
-      position: { left: '10%' }, 
     });
   }
 

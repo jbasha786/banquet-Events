@@ -1,5 +1,17 @@
 @import '../../../styles/variable.scss';
 
-.menu-card{
+.menu-card {
     background-color: $menucard-white;
+}
+
+.choosemenutitle {
+    color: $black;
+}
+
+.menuCard {
+    color: $black;
+}
+
+.dialog-btns {
+    display: none;
 }

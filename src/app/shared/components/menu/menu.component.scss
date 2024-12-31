@@ -14,7 +14,9 @@
             }
 
             &__search-input::placeholder {
-                color: $footer-text-color;
+                color: $searchPholder;
+                font-size: 14px;
+                font-weight: 200;
                 padding-left: gutter-sp(22);
             }
 
@@ -36,10 +38,11 @@
             overflow: auto;
         }
 
-        .table_header {
-            border-bottom: none;
+        .menuTable .mat-mdc-header-cell{
             padding: gutter-sp(0);
-            font-size: gutter-per(16);
+            font-size: gutter-per(20);
+            font-family: "poppins", sans-serif;
+            border-bottom-width: none;
         }
 
         .table_data {
@@ -58,9 +61,8 @@
         }
 
         .menu_headings {
-            color: $booknow-pink;
+            color: $secondary-color;
         }
-
         .mat-mdc-dialog-surface .mdc-dialog__surface {
             border-radius:  gutter-sp(12);
         }
@@ -71,6 +73,17 @@
         &__save-btn{
             background-color: $secondary-color;
             color: $lite-white;
+        }
+        .title{
+            color: $black;
+        }
+        .selectTitle{
+            color: $black;
+
+        }
+        .selected-number{
+            color: $black;
+            
         }
 
     }
