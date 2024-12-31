@@ -6,7 +6,7 @@ export const errorHandlerInterceptor: HttpInterceptorFn = (req, next) => {
     catchError((error: HttpErrorResponse) => {
       let errorMessage = '';
 
-      if (error.error instanceof ErrorEvent) {
+      if (error.error instanceof HttpErrorResponse) {
         // Client-side error
         errorMessage = `Client-side error: ${error.error.message}`;
       } else {

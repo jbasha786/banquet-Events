@@ -17,6 +17,10 @@
             color: $cal-view-title-clr
         }
 
+        .status:focus {
+            box-shadow: none;
+        }
+
         .add_btn {
             color: $white;
             background: $secondary-color;
@@ -29,12 +33,42 @@
 
     .cal-header {
         color: $cal-view-title-clr;
-        padding: gutter-sp(20);
         border-top: gutter-sp(1) solid $cal-view-border-clr;
         border-bottom: gutter-sp(1) solid $cal-view-border-clr;
 
         .clr {
             color: $secondary-color;
         }
+
+        .viewType {
+            background: none;
+            border: none;
+            color:$cal-view-title-clr;
+            width: gutter-sp(80);
+            height: gutter-sp(30);
+        }
+        .active {
+            background-color: $cal-current-date-bg;
+            font-weight: 700;
+            border-radius: gutter-sp(8);
+        }
     }
 }
+
+.time-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+  }
+  
+  .time-item {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .time-item:last-child {
+    border-bottom: none;
+  }
+  

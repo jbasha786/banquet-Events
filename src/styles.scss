@@ -331,3 +331,37 @@ html {
 .page_content {
   padding: gutter-vw(2) gutter-vw(9) gutter-vw(6) gutter-vw(10.4);
 }
+
+.calendar_view_section {
+  .fc .fc-timegrid-slot {
+    height: gutter-rem(3);
+  }
+
+  .fc-theme-standard th {
+    height: gutter-sp(80);
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    color: $cal-day-text-clr;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: gutter-sp(16);
+    padding: gutter-sp(10) gutter-sp(20);
+  }
+
+  .fc .fc-daygrid-day-number {
+    color: $cal-day-text-clr;
+    text-decoration: none;
+  }
+
+  .fc-day-today {
+    text-align: left;
+
+    a {
+      color: $cal-day-text-clr;
+      text-decoration: none;
+      font-size: gutter-sp(16);
+      padding: gutter-sp(10) gutter-sp(20);
+    }
+  }
+}

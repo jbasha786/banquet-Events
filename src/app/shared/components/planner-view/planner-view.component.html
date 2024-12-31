@@ -11,17 +11,31 @@
         </div>
     </div>
     <div class="cal-header">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between align-items-center p-2">
             <p class="d-flex m-0">
                 <mat-icon class="cursor clr">arrow_back_ios</mat-icon>
-                <span class="ml-5 mr-5">Week</span>
+                <span class="ml-5 mr-5">{{selectViewType}}</span>
                 <mat-icon class="cursor clr">arrow_forward_ios</mat-icon>
             </p>
-            <div class="d-flex gap-4">
-                <p class="m-0">Day</p>
-                <p class="m-0">Week</p>
-                <p class="m-0">Month</p>
+            <div class="d-flex gap-2">
+                <button (click)="selectView('Day')" class="viewType"
+                    [ngClass]="selectViewType === 'Day' ? 'active' : ''">Day</button>
+                <button (click)="selectView('Week')" class="viewType"
+                    [ngClass]="selectViewType === 'Week' ? 'active' : ''">Week</button>
+                <button (click)="selectView('Month')" class="viewType"
+                    [ngClass]="selectViewType === 'Month' ? 'active' : ''">Month</button>
             </div>
         </div>
+    </div>
+    <div class="calendar_view_section">
+        <div class="time-grid">
+            <div *ngFor="let time of timeSlots" class="time-item">
+              {{ time }}
+            </div>
+          </div>
+        
+        <!-- <full-calendar *ngIf="selectViewType === 'Day'" [events]="calendarEvents" [options]="calendarOptionsDay"></full-calendar>
+        <full-calendar *ngIf="selectViewType === 'Week'" [options]="calendarOptionsWeek"></full-calendar>
+        <full-calendar *ngIf="selectViewType === 'Month'" [options]="calendarOptionsMonth"></full-calendar> -->
     </div>
 </div>

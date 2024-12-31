@@ -81,6 +81,8 @@ $select-bg: #F3F3F3;
 $cal-view-border-clr: #E8E8E8;
 $admin-table-text:#003861;
 $admin-search:#595959;
+$cal-day-text-clr: #969696;
+$cal-day-bg-clr: #D4D5F4;
 
 @function gutter-sp($key) {
   @return #{$key}px;
