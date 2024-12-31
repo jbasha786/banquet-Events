@@ -21,7 +21,7 @@ export class PlannerHeaderComponent {
   @Input() headerInfo: any;
   dropdownOpen: boolean = false;
   isDivOpen: boolean = false;
-  src: string = "";
+  src: any;
   notifiTitle: string = "";
   time: string = "";
   duartion: string = "";
