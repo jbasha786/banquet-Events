@@ -173,13 +173,13 @@
 }
 
 .newBtn {
-  color: white;
-  background-color: green;
+  color: $notifyNewColor;
+  background-color: $notufyNewBg;
 }
 
 .pendingBtn {
-  color: white;
-  background-color: red;
+  color: $notifyPendingColor;
+  background-color: $notifyPendingBg;
 }
 
 .notifyTitle {
