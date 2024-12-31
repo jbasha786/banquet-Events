@@ -1,13 +1,19 @@
 @import "../../app/styles/variable.scss";
 
-.eventsmainImg {
-    &__events_main {
-        height:  gutter-per(100);
-        width: gutter-per(100);
-        margin-bottom:  gutter-per(2);
+.eventsPage {
+    .eventsmainImg {
+        &__events_main {
+            height: gutter-per(100);
+            width: gutter-per(100);
+            margin-bottom: gutter-per(2);
+        }
     }
-}
 
-.events-text{
-    color: $viewdetailbtn;
+    .event-card-section {
+        --bs-gutter-x: 50px;
+    }
+
+    .events-text {
+        color: $viewdetailbtn;
+    }
 }

@@ -45,6 +45,7 @@
   }
 
   .tabTitle ::ng-deep .mdc-tab__text-label {
+    font-family: "poppins", sans-serif;
     font-size: gutter-sp(30);
     letter-spacing: normal;
     margin-right: gutter-sp(30);
@@ -66,8 +67,9 @@
     font-weight: 500;
   }
 
-  ::ng-deep .mat-tab-label {
-    color: $footer-text-color;
+  ::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+    color: $font-lite;
+    font-weight: 400;
   }
 
   @media (min-width: 320px) and (max-width: 1172px) {

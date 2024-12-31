@@ -4,9 +4,10 @@
 .booking {
 
     &__model {
-        height: gutter-vh(70);
-        overflow-y: auto;
-        scrollbar-width: gutter-vw(5);
+        height: auto;
+        overflow-y: scroll;
+        max-height: gutter-vh(100);
+        scrollbar-width: none;
     }
 
     &__process {

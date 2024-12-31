@@ -9,6 +9,8 @@
         border-radius: gutter-sp(5);
         align-items: center;
         height: gutter-per(100);
+        width: gutter-per(100);
+
 
         .font-color {
             color: $font-ash;
@@ -31,6 +33,8 @@
 
         .mat-mdc-input-element {
             font-size: gutter-sp(14);
+            height: gutter-sp(16);
+            font-family: "poppins", sans-serif;
         }
 
     }
