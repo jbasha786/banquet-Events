@@ -6,12 +6,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #f8f9fa; 
+  background-color: #f8f9fa;
   border-bottom: 1px solid #ddd;
 }
 
 .header-left .logo {
-  height: 40px; 
+  height: 40px;
 }
 
 .header-menu {
@@ -38,17 +38,18 @@
   font-size: 12px;
   padding: 2px 5px;
 }
-.notification-card{
+
+.notification-card {
   position: absolute;
   top: 56px;
-  left: 195px;
+  left: 145px;
   background: white;
   border-radius: 5px;
   padding: 10px;
-  width: 400px;
+  width: 450px;
   height: auto;
   z-index: 100;
-  box-shadow: -25px 0px 20px -20px rgba(0,0,0,0.45);
+  box-shadow: -20px 0px 20px -16px rgba(0, 0, 0, 0.45);
 }
 
 .user-info {
@@ -67,12 +68,14 @@
 .user-menu {
   position: relative;
 }
+
 .user-info {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
 }
+
 .user-info .user-img {
   width: 35px;
   height: 35px;
@@ -101,18 +104,21 @@
   width: 300px;
   z-index: 100;
 }
+
 .dropdown-user {
   width: 100%;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
+
 .dropdown-user-img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
+
 .dropdown-user-name {
   font-size: 16px;
   font-weight: bold;
@@ -126,6 +132,7 @@
   color: $footer-text-color;
   background-color: $white;
 }
+
 .search_input {
   width: gutter-sp(260);
   height: gutter-sp(45);
@@ -139,16 +146,50 @@
   font-size: 16px;
   font-weight: 300;
 }
+
 .search .form-control:focus {
   box-shadow: none;
   border: gutter-sp(1) solid $black;
 }
-.bg-none{
+
+.bg-none {
   background-color: $white;
 }
-.notifyImg{
+
+.notifyImg {
   height: 35px;
 }
-.tableImg{
+
+.tableImg {
   height: 38px;
+}
+
+.notifyBtn {
+  color: $notificationColor;
+}
+
+.clearallBtn {
+  color: $notificationColor;
+}
+
+.newBtn {
+  color: white;
+  background-color: green;
+}
+
+.pendingBtn {
+  color: white;
+  background-color: red;
+}
+
+.notifyTitle {
+  color: $notificationColor;
+}
+
+.notifyTime {
+  color: $notifyTimeColor;
+}
+
+.notifyDuration {
+  color: $notifyTimeColor;
 }
