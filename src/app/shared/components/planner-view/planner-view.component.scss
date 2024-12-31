@@ -1,0 +1,40 @@
+@import "../../../styles/variable.scss";
+
+.planner-view {
+    .header {
+        padding: gutter-sp(20);
+
+        .title {
+            color: $cal-view-title-clr;
+        }
+
+        .status {
+            border: gutter-sp(1) solid $light-silver;
+            padding: gutter-sp(10);
+            min-width: gutter-sp(160);
+            background-color: $select-bg;
+            border-radius: gutter-sp(6);
+            color: $cal-view-title-clr
+        }
+
+        .add_btn {
+            color: $white;
+            background: $secondary-color;
+            border: none;
+            border-radius: gutter-sp(6);
+            padding: gutter-sp(5) gutter-sp(10);
+            min-width: gutter-sp(220);
+        }
+    }
+
+    .cal-header {
+        color: $cal-view-title-clr;
+        padding: gutter-sp(20);
+        border-top: gutter-sp(1) solid $cal-view-border-clr;
+        border-bottom: gutter-sp(1) solid $cal-view-border-clr;
+
+        .clr {
+            color: $secondary-color;
+        }
+    }
+}

@@ -346,7 +346,9 @@
             "contact": "Contact",
             "desc": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
             "name": "Vivian is a Superhost",
-            "phone": "0592-356 000,       |        0592-356 000       |        0592-356 000",
+            "phone1": "0592-356 000",
+            "phone2": "0592-356 000",
+            "phone3": "0592-356 000",
             "respondRate": "Response rate: 100%",
             "responseTime": "Responds within an hour"
         }
