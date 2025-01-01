@@ -1,6 +1,10 @@
 @import '../../../styles/variable.scss';
 
 .menu_model {
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: gutter-sp(10);
+
     .menu {
         &__search {
             position: relative;
@@ -9,7 +13,7 @@
                 border-radius: gutter-sp(3);
                 border: gutter-sp(1) solid $gray;
                 background-color: $gray;
-                min-height:  gutter-sp(30);
+                min-height: gutter-sp(30);
                 width: gutter-per(100);
             }
 
@@ -38,11 +42,27 @@
             overflow: auto;
         }
 
-        .menuTable .mat-mdc-header-cell{
-            padding: gutter-sp(0);
-            font-size: gutter-per(20);
+        .table_header .mat-mdc-header-cell {
+            font-size: gutter-per(22);
+        }
+
+        .menuTable .mat-mdc-header-cell {
             font-family: "poppins", sans-serif;
-            border-bottom-width: none;
+            padding: gutter-sp(0) gutter-sp(0) gutter-sp(10) gutter-sp(0);
+            border-bottom: none;
+        }
+
+        .menuTable .mat-mdc-cell {
+            font-family: "poppins", sans-serif;
+            text-wrap: nowrap;
+        }
+
+        .menuTable .mat-mdc-row {
+            height: 40px;
+        }
+
+        .menuTable ::ng-deep .mdc-checkbox .mdc-checkbox__background {
+            left: 1px;
         }
 
         .table_data {
@@ -63,29 +83,31 @@
         .menu_headings {
             color: $secondary-color;
         }
+
         .mat-mdc-dialog-surface .mdc-dialog__surface {
-            border-radius:  gutter-sp(12);
+            border-radius: gutter-sp(12);
         }
 
         .mat-mdc-header-row {
             height: fit-content;
         }
-        &__save-btn{
+
+        &__save-btn {
             background-color: $secondary-color;
             color: $lite-white;
         }
-        .title{
+
+        .title {
             color: $black;
         }
-        .selectTitle{
+
+        .selectTitle {
             color: $black;
 
         }
-        .selected-number{
-            color: $black;
-            
-        }
 
+        .selected-number {
+            color: $black;
+        }
     }
-
 }
