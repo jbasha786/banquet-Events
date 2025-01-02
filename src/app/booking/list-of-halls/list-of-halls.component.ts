@@ -64,7 +64,7 @@ export class ListOfHallsComponent {
     this.dialog.open(DialogueComponent, {
       width:"500px",
       disableClose: true,
-      position: { top: '0', left: '0' }, 
+      position: { top: '12%', left: '33%' }, 
     });
    }
   reserve(reserve: any) {

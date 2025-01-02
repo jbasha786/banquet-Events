@@ -82,6 +82,8 @@ $cal-view-border-clr: #E8E8E8;
 $admin-table-text:#003861;
 $admin-search:#595959;
 $searchPholder: #9AA5B5;
+$cancelcolor: #E42E2E;
+$dialogfontcolor: #272727;
 
 @function gutter-sp($key) {
   @return #{$key}px;

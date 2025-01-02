@@ -6,6 +6,8 @@
     padding: gutter-sp(10);
 
     .menu {
+        overflow: scroll;
+        scrollbar-width: none;
         &__search {
             position: relative;
 
@@ -69,7 +71,9 @@
             border: none;
             padding: gutter-sp(0);
         }
-
+         .price{
+            text-wrap: nowrap;
+        }
         .mat-cell {
             padding: gutter-sp(2);
         }

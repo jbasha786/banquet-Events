@@ -23,17 +23,21 @@
         }
 
         &__label-hall {
+            font-family: "poppins", sans-serif;
             color: $secondory-color;
         }
 
         .hall-img {
-            width: gutter-sp(28);
-            height: gutter-sp(30);
+            width: gutter-sp(34);
+            height: gutter-sp(32);
+            margin-top: gutter-sp(6);
         }
 
         .mat-mdc-input-element {
             font-size: gutter-sp(14);
-            height: gutter-sp(16);
+            height: gutter-sp(20);
+            color: $black;
+            position: relative;
             font-family: "poppins", sans-serif;
         }
 
@@ -69,10 +73,11 @@
         }
 
         &__img {
-            width: gutter-sp(250);
-            height: auto;
+            width: gutter-sp(310);
+            height: gutter-per(100);
             flex: 1;
             object-fit: cover;
+            border-radius:  gutter-sp(6);;
         }
 
         @media (max-width: 991px) {
@@ -95,12 +100,14 @@
     }
 
     .cancel {
-        border: gutter-sp(1) solid var(--primary-color);
-        color: var(--primary-color);
+        border: gutter-sp(1) solid $cancelcolor;
+        color: $cancelcolor;
+        background: $white;
     }
 
     &__articles {
         color: $secondory-color;
+        text-wrap: nowrap;
     }
 
     &__image_desc {
@@ -127,4 +134,11 @@
     ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
         display: none
     }
+
+    ::ng-deep .mat-mdc-floating-label.mdc-floating-label {
+        margin-top: gutter-sp(10);
+    }
+    // .imagebody{
+    //     height: 100%;
+    // }
 }

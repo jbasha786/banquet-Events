@@ -1,7 +1,14 @@
 @import "../../../../app/styles/variable.scss";
 @import "../../../custom-css/custom-material-colors.scss";
 .mat-body{
-   
+   .title{
+    color: $dialogfontcolor;
+    font-family: 'Poppins', sans-serif;
+   }
+   .areyou{
+    color: $dialogfontcolor;
+    font-family: 'Poppins', sans-serif;
+   }
     .buttons{
         display: flex;
         justify-content: center;
@@ -11,7 +18,8 @@
             border: 1px solid black;
         }
         .span_color{
-            color: black;
+            color: $dialogfontcolor;
+            font-family: 'Poppins', sans-serif;
             background: rgba(39, 39, 39, 1);
         }
         &__cancel{
