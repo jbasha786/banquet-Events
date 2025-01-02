@@ -1,0 +1,139 @@
+@import '../../../styles/variable.scss';
+@import '../../../custom-css/custom-material-colors.scss';
+
+.hallsView {
+    padding: gutter-vw(0) gutter-vw(5);
+
+    .hall-list {
+        border: gutter-sp(1) solid $footer-email-border;
+        border-radius: gutter-sp(5);
+        align-items: center;
+        height: gutter-per(100);
+        width: gutter-per(100);
+
+
+        .font-color {
+            color: $font-ash;
+        }
+    }
+
+    &__card {
+        .mat-mdc-form-field {
+            width: gutter-per(100);
+        }
+
+        &__label-hall {
+            color: $secondory-color;
+        }
+
+        .hall-img {
+            width: gutter-sp(28);
+            height: gutter-sp(30);
+        }
+
+        .mat-mdc-input-element {
+            font-size: gutter-sp(14);
+            height: gutter-sp(16);
+            font-family: "poppins", sans-serif;
+        }
+
+    }
+
+    &__images {
+        position: relative;
+
+        &__icon {
+            position: absolute;
+            top: gutter-per(16);
+            right: gutter-sp(0);
+            left: gutter-sp(0);
+            bottom: gutter-sp(0);
+            margin: gutter-sp(0) auto;
+            height: gutter-per(100);
+            width: gutter-per(100);
+            text-align: center;
+
+            &__conformed-color {
+                color: $confirm-text-clr;
+            }
+
+            .sentImg {
+                width: gutter-sp(100);
+                height: gutter-sp(100);
+            }
+
+            .reserveID {
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+
+        &__img {
+            width: gutter-sp(250);
+            height: auto;
+            flex: 1;
+            object-fit: cover;
+        }
+
+        @media (max-width: 991px) {
+            &__img {
+                width: gutter-per(100);
+                height: auto;
+                flex: 1;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__priceColor {
+        color: var(--primary-color);
+    }
+
+    .reserve {
+        background-color: $green-select;
+        color: $white;
+    }
+
+    .cancel {
+        border: gutter-sp(1) solid $cancel-btn-border;
+        color: $cancel-btn-border;
+        background: $white;
+    }
+
+    &__articles {
+        color: $secondory-color;
+    }
+
+    &__image_desc {
+        max-width: gutter-per(40);
+        flex: 1 1 auto;
+    }
+
+    ::ng-deep .mat-mdc-text-field-wrapper {
+        background-color: none;
+    }
+
+    ::ng-deep .mdc-text-field--filled {
+        background: none;
+    }
+
+    ::ng-deep .mat-input-element {
+        font-size: gutter-sp(12);
+    }
+
+    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+    }
+
+    ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+        display: none
+    }
+}
+
+.together {
+    font-style: italic;
+    color: $white;
+    bottom: gutter-sp(0);
+    left: gutter-sp(0);
+    right: gutter-sp(0);
+}

@@ -164,6 +164,12 @@ body {
     padding-bottom: 0px + $i;
   }
 
+  .pb-md-#{$i} {
+    @media (min-width: 992px) {
+      padding-bottom: #{$i}px !important;
+    }
+  }
+
   .pl-#{$i} {
     padding-left: 0px + $i !important;
   }

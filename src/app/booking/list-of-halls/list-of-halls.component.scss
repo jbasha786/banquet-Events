@@ -54,7 +54,7 @@
             text-align: center;
 
             &__conformed-color {
-                color: green;
+                color: $confirm-text-clr;
             }
 
             .sentImg {
@@ -91,12 +91,12 @@
 
     .reserve {
         background-color: $green-select;
-        color: white;
+        color: $white;
     }
 
-    .cancel {
-        border: gutter-sp(1) solid var(--primary-color);
-        color: var(--primary-color);
+    .selected {
+        border: gutter-sp(1) solid $selected-border-clr;
+        background: $white;
     }
 
     &__articles {

@@ -63,31 +63,32 @@ export class ListOfHallsComponent {
 
   cancelReservation() {
     this.dialog.open(DialogueComponent, {
-      width:"500px",
+      width: "500px",
       disableClose: true,
-      position: { top: '0', left: '0' }, 
+      position: { top: '0', left: '0' },
     });
-   }
+  }
   reserve(reserve: any) {
+    reserve.isActive = true
     this.selectedItem = reserve.id;
     this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
     this.requestSent = false;
   }
 
-  getDetails(){
+  getDetails() {
     this.dialog.closeAll();
     this.router.navigate(['overview']);
   }
 
-  getGuestDetails(){
+  getGuestDetails() {
     const adults = this.eventACService.getSelectedAdultCount();
     const elderChild = this.eventACService.getSelectedElderChildCount();
     const youngerChild = this.eventACService.getSelectedYoungerChildCount();
     const babies = this.eventACService.getSelectedBabiesCount();
   }
 
-  getDateAndSlots(){
+  getDateAndSlots() {
     const selectedDate = this.eventDSService.getSelectedDate();
     const slots = this.eventDSService.getAvailableSlots();
   }
@@ -101,7 +102,7 @@ export class ListOfHallsComponent {
     this.zIndexService.setHeaderZIndex(1000);
     const dialogRef = this.dialog.open(ArticlesComponent, {
       panelClass: 'fixed-dialog',
-      position: { top: '34px' }, 
+      position: { top: '34px' },
     });
 
     dialogRef.afterClosed().subscribe(() => {
@@ -110,12 +111,12 @@ export class ListOfHallsComponent {
   }
 
 
-  chooseMenu(){
+  chooseMenu() {
     this.dialog.open(ChooseMenuComponent, {
       width: '90%',
       height: '100%',
       panelClass: 'choosemenu-dialog',
-      position: { left: '10%' }, 
+      position: { left: '10%' },
     });
   }
 
