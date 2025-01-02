@@ -7,6 +7,13 @@
 
     .image {
         padding: gutter-sp(26);
+
+        .active {
+            border: gutter-sp(1) solid $secondary-color;
+            color: $secondary-color;
+            background: $shape-bg;
+        }
+
         &__section {
             padding: gutter-vw(2) gutter-vw(2) gutter-vw(0);
             border: gutter-sp(1) solid $event-input-border-clr;
@@ -20,6 +27,11 @@
             .name {
                 opacity: gutter-per(90);
             }
+        }
+
+        &__section:hover {
+            border: gutter-sp(1) solid $secondary-color;
+            background: $shape-bg;
         }
     }
 }

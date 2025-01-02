@@ -79,9 +79,9 @@
                 </div>
                 <div class="d-flex justify-content-between flex-column flex-md-row">
                     <div class="d-flex align-items-center  flex-row gap-3">
-                        <button class="cancel fw-500 fs-14 border rounded-pill px-4 py-1" *ngIf="!reserveBtn"
+                        <button class="cancel fw-500 fs-14 border rounded-pill px-4 py-1" *ngIf="!reserveBtn && item.id === selectedItem"
                             (click)="cancelReservation()">Cancel</button>
-                        <button class="reserve border rounded-pill px-4 py-1" *ngIf="reserveBtn"
+                        <button class="reserve border rounded-pill px-4 py-1" *ngIf="item.id !== selectedItem"
                             (click)="reserve(item)">Select</button>
                         <span class="ms-2 hallsView__articles fs-14 fw-500" role="button" (click)="addArticles()">Add
                             Articles</span>

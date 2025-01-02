@@ -37,6 +37,7 @@ export class ListOfHallsComponent {
   reserveBtn: boolean = true;
   requestSent: boolean = true;
   requestAccepted: boolean = true;
+  selectedItem: number = 0;
 
   constructor(private defaultService: DefaultService,
     private dialog: MatDialog,
@@ -68,6 +69,7 @@ export class ListOfHallsComponent {
     });
    }
   reserve(reserve: any) {
+    this.selectedItem = reserve.id;
     this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
     this.requestSent = false;

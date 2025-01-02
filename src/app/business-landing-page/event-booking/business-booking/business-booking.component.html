@@ -16,7 +16,8 @@
         <app-shapes></app-shapes>
         }
         @if(currentStep == 4){
-        <app-business-booking-review></app-business-booking-review>
+        <app-list-of-halls></app-list-of-halls>
+        <!-- <app-business-booking-review></app-business-booking-review> -->
         }
 
     </div>
@@ -27,10 +28,10 @@
                     (click)="returnToHome()">Cancel</button>
                 <div class="d-flex flex-md-row flex-lg-row flex-xl-row justify-content-between flex-xxl-row">
                     <button type="button" class="btn btn_back rounded-pill px-5 h-40" (click)="back()">Back</button>
-                    <button type="button" class="ms-3 btn btn_next border rounded-pill px-5" [ngClass]="currentStep == 4 ? 'd-none' : ''"
-                        (click)="next()">Next</button>
-                    <button type="button" class="ms-3 btn btn_next border rounded-pill px-5" [ngClass]="currentStep == 4 ? '' : 'd-none'"
-                        (click)="next()">Confirm Reservation</button>
+                    <button type="button" class="ms-3 btn btn_next border rounded-pill px-5"
+                        [ngClass]="currentStep == 4 ? 'd-none' : ''" (click)="next()">Next</button>
+                    <button type="button" class="ms-3 btn btn_next border rounded-pill px-5"
+                        [ngClass]="currentStep == 4 ? '' : 'd-none'" (click)="next()">Confirm Reservation</button>
                 </div>
             </div>
 

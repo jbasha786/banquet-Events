@@ -7,6 +7,11 @@
   --accent-color: #A62784;
   --warn-color: red;
   --font-size: '16px';
+  --mdc-outlined-text-field-outline-color: #CACACA;
+  --mdc-outlined-text-field-hover-outline-color: #CACACA;
+  --mdc-outlined-text-field-hover-outline-width: 0.5px;
+  --mdc-outlined-text-field-focus-outline-color: #CACACA;
+  --mdc-outlined-text-field-focus-outline-width: 0.5px;
 }
 
 
@@ -56,7 +61,7 @@ input:-webkit-autofill,
 .mdc-text-field--focused,
 .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label,
 .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above {
-  color: var(--primary-color) !important;
+  color: black !important;
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
@@ -3280,19 +3285,4 @@ body {
 
 .mdc-list-item:focus::before {
   background-color: transparent !important;
-}
-
-
-.cdk-overlay-connected-position-bounding-box {
-  .cdk-overlay-pane:before {
-    width: 0 !important;
-    height: 0 !important;
-    border-left: 8px solid transparent !important;
-    border-right: 8px solid transparent !important;
-    border-bottom: 8px solid $secondory-color !important;
-    content: " " !important;
-    position: absolute !important;
-    top: -8px !important;
-    right: 2px;
-  }
 }

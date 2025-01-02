@@ -4,8 +4,8 @@ import { AboutEventComponent } from '../about-event/about-event.component';
 import { CommonModule } from '@angular/common';
 import { AccommodationComponent } from '../accommodation/accommodation.component';
 import { ShapesComponent } from '../shapes/shapes.component';
-import { TimePartComponent } from '../time-part/time-part.component';
 import { BusinessBookingReviewComponent } from '../business-booking-review/business-booking-review.component';
+import { ListOfHallsComponent } from '../../../booking/list-of-halls/list-of-halls.component';
 
 @Component({
   selector: 'app-business-booking',
@@ -16,8 +16,8 @@ import { BusinessBookingReviewComponent } from '../business-booking-review/busin
     AccommodationComponent,
     ShapesComponent,
     BusinessBookingReviewComponent,
-    CommonModule,
-    TimePartComponent
+    ListOfHallsComponent,
+    CommonModule
   ],
   templateUrl: './business-booking.component.html',
   styleUrl: './business-booking.component.scss'
