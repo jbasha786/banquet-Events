@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class PlannerHeaderComponent {
   // notifications: notificationModel[] = [];
-
+  isSearchBarVisible: boolean = true;
   notificationCount: number = 5;
   userName: string = "Priyanka Kalidindi";
   designation: string = "Receptionist"
@@ -43,49 +43,56 @@ export class PlannerHeaderComponent {
       statusButton: "New"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/planner/header/notifications/Avatar-pink.svg",
       notifiTitle: "Magenta",
       time: "7 Nov 2024  08:00 AM - 11:30 AM",
       duration: "15 min ago",
       statusButton: "New"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/planner/header/notifications/Avatar-purple.svg",
       notifiTitle: "Magenta",
       time: "7 Nov 2024  08:00 AM - 11:30 AM",
       duration: "2 hours ago",
       statusButton: "New"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/planner/header/notifications/Avatar-cienta.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "6 hours ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/planner/header/notifications/Avatar-blue.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/planner/header/notifications/Avatar-cienta.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/planner/header/notifications/Avatar-green.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/planner/header/notifications/Avatar-ash.svg",
+      notifiTitle: "Magenta",
+      time: "6 Nov 2024  08:00 AM - 11:30 AM",
+      duration: "5 min ago",
+      statusButton: "Pending"
+    },
+    {
+      src: "/assets/images/planner/header/notifications/Avatar-blue.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
@@ -101,6 +108,7 @@ export class PlannerHeaderComponent {
 
   openNotifications(): void {
     this.isDivOpen = true;
+    this.isSearchBarVisible = false; 
   }
 
   toggleDropdown() {
@@ -117,5 +125,6 @@ export class PlannerHeaderComponent {
   // }
   close() {
     this.isDivOpen = false;
+    this.isSearchBarVisible = true; 
   }
 }

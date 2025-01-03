@@ -2,16 +2,8 @@
 @import '../../../../styles.scss';
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ddd;
-}
-
-.header-left .logo {
-  height: 40px;
+  background-color: $white;
+  border-bottom: gutter-sp(1) solid $black;
 }
 
 .header-menu {
@@ -25,7 +17,7 @@
 
 .notification i {
   font-size: 20px;
-  color: #555;
+  color: $cal-view-title-clr;
 }
 
 .notification .badge {
@@ -40,16 +32,19 @@
 }
 
 .notification-card {
-  position: absolute;
-  top: 56px;
-  left: 145px;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  border-top: $black;
   background: white;
-  border-radius: 5px;
   padding: 10px;
   width: 450px;
   height: auto;
   z-index: 100;
   box-shadow: -20px 0px 20px -16px rgba(0, 0, 0, 0.45);
+}
+.notification-close{
+  color: $notifyclose;
 }
 
 .user-info {
@@ -170,16 +165,24 @@
 
 .clearallBtn {
   color: $notificationColor;
+  font-weight: 300;
 }
 
 .newBtn {
   color: $notifyNewColor;
+  border-radius: gutter-sp(5);
+  font-size: gutter-sp(14);
   background-color: $notufyNewBg;
 }
 
 .pendingBtn {
   color: $notifyPendingColor;
+  border-radius: gutter-sp(5);
+  font-size: gutter-sp(14);
   background-color: $notifyPendingBg;
+}
+.designation{
+  color: $desigcolor;
 }
 
 .notifyTitle {
