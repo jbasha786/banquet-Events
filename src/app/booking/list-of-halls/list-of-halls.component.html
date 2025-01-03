@@ -1,4 +1,4 @@
-<div class="hallsView col-md-10 col-lg-10 col-xl-8 m-md-auto mb-10">
+<div class="hallsView  col-md-10 col-lg-10 col-xl-8 m-auto mb-10">
     <div class="d-flex justify-content-center align-items-center flex-column gap-4 gap-lg-12 mb-200">
         <p class="text-center fs-32 fw-500 text-black mb-0">Type of Halls?</p>
         <form action="" class="card hallsView__card px-2 col-12">
@@ -47,7 +47,7 @@
         </form>
 
         @for(item of hallsList; track $index){
-        <div class="d-flex align-items-center flex-column flex-lg-row hall-list gap-4 py-2 px-3 mt-10">
+        <div class="d-flex align-items-center flex-column flex-lg-row hall-list gap-4 mt-10">
             <div class="d-flex hallsView__images">
                 <img class="hallsView__images__img mt-2 mt-md-0"
                     [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}" width=""
@@ -63,18 +63,18 @@
                     <p class="fs-15 fw-500 hallsView__images__icon__conformed-color mt-2">Booking Confirmed</p>
                 </div>
             </div>
-            <!-- <div class=" d-flex flex-column m-lg-10 wid-lg-100 h-auto">
-                <p class="fs-22 fs-lg-26 fw-500 lh-1 my-1 text-black" (click)="getDetails()">{{item.name}}</p>
-                <div class="mb-2 font-color d-flex justify-content-between flex-column flex-md-row gap-2  gap-lg-3 mt-2">
-                    <div> <span class="fs-13 text-nowrap">{{item.desc}}</span></div>
+            <div class=" d-flex flex-column m-lg-10 wid-lg-100 h-auto">
+                <p class="fs-22 fs-lg-26 fw-500 lh-1 text-black" (click)="getDetails()">{{item.name}}</p>
+                <div class="font-color d-flex justify-content-between flex-column flex-md-row gap-2  gap-lg-3">
+                    <div> <span class="fs-13">{{item.desc}}</span></div>
                     <div class="d-none d-md-flex"><span>|</span></div>
-                    <div><span class="fs-13 text-nowrap">{{item.diamensions}}</span></div>
+                    <div><span class="fs-13">{{item.diamensions}}</span></div>
                     <div class="d-none d-md-flex"><span>| </span></div>
-                    <div><span class="fs-13 text-nowrap"> {{item.status}}</span></div>
+                    <div><span class="fs-13"> {{item.status}}</span></div>
                 </div>
                 <p class="fs-16 fw-500 mb-0 text-black mt-3">{{item.deposite}}</p>
                 <p class="hallsView__desc font-color mb-0 fs-13 wid-lg-70 mt-2">{{item.depositeDesc}}</p>
-                <div class="my-3 d-flex align-items-baseline flex-wrap">
+                <div class="d-flex align-items-baseline flex-wrap">
                     <span class="fs-36 fw-bold hallsView__priceColor">{{item.price}}</span><span
                         class="font-color fs-13">{{item.taxText}}</span>
                 </div>
@@ -97,8 +97,8 @@
                             class="fw-500 fs-14 mt-2 mt-md-0">View
                             Details &rarr;</span></div>
                 </div>
-            </div> -->
-            <div class="d-flex flex-column">
+            </div>
+            <!-- <div class="d-flex flex-column">
                 <div class="d-flex">
                     <span class="fs-22 fs-lg-26 fw-500 text-black" (click)="getDetails()">{{item.name}}</span>
                 </div>
@@ -141,7 +141,7 @@
                             Details &rarr;</span></div>
                 </div>
 
-            </div>
+            </div> -->
         </div>
         }
     </div>
