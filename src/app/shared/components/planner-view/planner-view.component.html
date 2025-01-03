@@ -28,14 +28,9 @@
         </div>
     </div>
     <div class="calendar_view_section">
-        <div class="time-grid">
-            <div *ngFor="let time of timeSlots" class="time-item">
-              {{ time }}
-            </div>
-          </div>
         
-        <!-- <full-calendar *ngIf="selectViewType === 'Day'" [events]="calendarEvents" [options]="calendarOptionsDay"></full-calendar>
+        <full-calendar *ngIf="selectViewType === 'Day'" [events]="calendarEvents" [options]="calendarOptionsDay"></full-calendar>
         <full-calendar *ngIf="selectViewType === 'Week'" [options]="calendarOptionsWeek"></full-calendar>
-        <full-calendar *ngIf="selectViewType === 'Month'" [options]="calendarOptionsMonth"></full-calendar> -->
+        <full-calendar *ngIf="selectViewType === 'Month'" [options]="calendarOptionsMonth"></full-calendar>
     </div>
 </div>

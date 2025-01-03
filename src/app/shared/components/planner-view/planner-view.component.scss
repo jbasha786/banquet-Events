@@ -54,21 +54,4 @@
         }
     }
 }
-
-.time-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 10px;
-  }
-  
-  .time-item {
-    padding: 5px 10px;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .time-item:last-child {
-    border-bottom: none;
-  }
   

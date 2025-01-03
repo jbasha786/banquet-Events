@@ -16,10 +16,8 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 export class PlannerViewComponent {
 
   selectViewType: string = "Day";
-  timeSlots: string[] = [];
 
   ngOnInit(): void {
-    this.generateTimeSlots();
   }
 
   calendarOptionsDay: CalendarOptions = {
@@ -30,7 +28,11 @@ export class PlannerViewComponent {
     weekends: true,
     // events: [
     //   { title: 'Meeting', start: new Date() }
-    // ]
+    // ],
+    dayHeaderFormat: {
+      weekday: 'short',
+      day: "2-digit"
+    }
   };
 
   calendarOptionsWeek: CalendarOptions = {
@@ -42,7 +44,11 @@ export class PlannerViewComponent {
     allDaySlot: false,
     events: [
       { title: 'Meeting', start: new Date() }
-    ]
+    ],
+    dayHeaderFormat: {
+      weekday: 'short',
+      day: "2-digit"
+    }
   };
 
   calendarOptionsMonth: CalendarOptions = {
@@ -63,15 +69,5 @@ export class PlannerViewComponent {
 
   selectView(view: string): void {
     this.selectViewType = view;
-  }
-
-  generateTimeSlots() {
-    let startHour = 0;
-    let endHour = 23;
-    for (let i = startHour; i <= endHour; i++) {
-      let hour = i % 12 || 12;
-      let ampm = i < 12 ? 'am' : 'pm';
-      this.timeSlots.push(`${hour} ${ampm}`);
-    }
   }
 }
