@@ -1,5 +1,4 @@
 @import "../../../../app/styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
 .mat-body{
    
     .buttons{
@@ -24,7 +23,7 @@
         &__yes{
             border-radius: 50vw;
             width: 5vw;
-            background-color: $secondory-color;
+            background-color: $secondary-color;
             color: $white;
         }
     }

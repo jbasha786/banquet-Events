@@ -1,5 +1,4 @@
 @import "../../app/styles/variable.scss";
-@import "../../app/custom-css/custom-material-colors.scss";
 
 .chatSection {
   position: fixed;
@@ -114,8 +113,8 @@ input:focus {
   transform: translateY(gutter-per(-52));
 }
 .chat__btn {
-  color: $secondory-color;
-  border: gutter-sp(1) solid $secondory-color;
+  color: $secondary-color;
+  border: gutter-sp(1) solid $secondary-color;
   background: none;
   padding: gutter-sp(10) gutter-sp(22);
   border-radius: gutter-sp(6);

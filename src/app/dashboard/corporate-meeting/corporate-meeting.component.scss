@@ -1,5 +1,4 @@
 @import "../../styles/variable.scss";
-@import "../../custom-css/custom-material-colors.scss";
 
 .corporate {
 	display: flex;
@@ -12,7 +11,7 @@
 		gap: $gutter-14sp;
 
         &__color {
-            color: $secondory-color;
+            color: $secondary-color;
         }
 
         &__familycolor {
@@ -20,8 +19,8 @@
         }
 		&__btn,
 		&__familybtn {
-			color: $secondory-color;
-			border: $gutter-1sp solid $secondory-color;
+			color: $secondary-color;
+			border: $gutter-1sp solid $secondary-color;
 			background: none;
 			padding: $gutter-10sp $gutter-22sp;
 			border-radius: $gutter-6sp;
