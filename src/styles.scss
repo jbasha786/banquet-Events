@@ -163,6 +163,12 @@ body {
     padding-bottom: 0px + $i;
   }
 
+  .pb-md-#{$i} {
+    @media (min-width: 992px) {
+      padding-bottom: #{$i}px !important;
+    }
+  }
+
   .pl-#{$i} {
     padding-left: 0px + $i !important;
   }
@@ -270,6 +276,7 @@ body {
   .gx-#{$i} {
     --bs-gutter-x: #{$i}rem;
   }
+
   .gx-lg-#{$i} {
     @media (min-width: 992px) {
       --bs-gutter-x: #{$i}rem !important;
@@ -337,4 +344,16 @@ html {
 
 .page_content {
   padding: gutter-vw(2) gutter-vw(9) gutter-vw(6) gutter-vw(10.4);
+}
+
+.accommodation {
+  .mat-mdc-form-field-icon-prefix {
+    opacity: gutter-per(40);
+  }
+
+  .custom_date {
+    .mat-date-range-input-container {
+      font-size: gutter-sp(14);
+    }
+  }
 }
