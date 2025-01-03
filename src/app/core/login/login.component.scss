@@ -1,5 +1,4 @@
 @import "../../../app/styles/variable.scss";
-@import "../../custom-css/custom-material-colors.scss";
 
 .loginForm {
     margin: 0 auto;
@@ -28,13 +27,13 @@
 
         &__loginbtndiv {
             &__continue__guest{
-                color:$secondory-color;
-                border:gutter-sp(1) solid $secondory-color;
+                color:$secondary-color;
+                border:gutter-sp(1) solid $secondary-color;
                 background-color: transparent;
             }
             &__loginbox {
                 color: $white;
-                background-color: $secondory-color;
+                background-color: $secondary-color;
                 border: none;
             }
         }

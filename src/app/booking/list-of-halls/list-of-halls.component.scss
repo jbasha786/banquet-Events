@@ -1,5 +1,4 @@
 @import '../../styles/variable.scss';
-@import '../../custom-css/custom-material-colors.scss';
 
 .hallsView {
     padding: gutter-vw(0) gutter-vw(5);
@@ -23,7 +22,7 @@
         }
 
         &__label-hall {
-            color: $secondory-color;
+            color: $secondary-color;
         }
 
         .hall-img {
@@ -86,21 +85,21 @@
     }
 
     &__priceColor {
-        color: var(--primary-color);
+        color: $primary-color;
     }
 
     .reserve {
         background-color: $green-select;
-        color: white;
+        color: $white;
     }
 
     .cancel {
-        border: gutter-sp(1) solid var(--primary-color);
-        color: var(--primary-color);
+        border: gutter-sp(1) solid $primary-color;
+        color: $primary-color;
     }
 
     &__articles {
-        color: $secondory-color;
+        color: $secondary-color;
     }
 
     &__image_desc {
