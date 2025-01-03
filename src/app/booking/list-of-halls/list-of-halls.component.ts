@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DefaultService } from '../../services/default.service';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogueComponent } from '../../shared/components/dialogue/dialogue.component';
 import { Router } from '@angular/router';
@@ -17,6 +17,7 @@ import { EventDateSlotsService } from '../../services/event-date-slot/event-date
 import { ArticlesComponent } from '../../shared/components/articles/articles.component';
 import { ZindexService } from '../../../app/services/zindex.service';
 import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-menu.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -27,7 +28,8 @@ import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-
     MatIconModule,
     MatButtonModule,
     NgxMatTimepickerModule,
-    CommonModule],
+    CommonModule,
+    FormsModule],
   templateUrl: './list-of-halls.component.html',
   styleUrl: './list-of-halls.component.scss'
 })
@@ -38,6 +40,16 @@ export class ListOfHallsComponent {
   requestSent: boolean = true;
   requestAccepted: boolean = true;
   selectedItem: number = 0;
+  checkinDate: string | null;
+  checkOutDate: string | null;
+  tomorrowDate = new Date();
+
+  slots = [
+    { id: 1, shift: "8AM - 11 PM" },
+    { id: 2, shift: "12AM - 3 PM" },
+    { id: 3, shift: "4PM - 7 PM" },
+    { id: 4, shift: "8AM - 11 PM" },
+  ]
 
   constructor(private defaultService: DefaultService,
     private dialog: MatDialog,
@@ -46,8 +58,12 @@ export class ListOfHallsComponent {
     private eventPlaning: EventPlanService,
     private eventACService: EventGuestsService,
     private eventDSService: EventDateSlotsService,
-    private zIndexService: ZindexService
-  ) { }
+    private zIndexService: ZindexService,
+    private datePipe: DatePipe
+  ) {
+    this.checkinDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
+    this.checkOutDate = this.datePipe.transform(this.tomorrowDate.setDate(new Date().getDate() + 1), 'yyyy-MM-dd');
+  }
 
   ngOnInit() {
     this.getHalsList();
