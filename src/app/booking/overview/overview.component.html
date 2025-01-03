@@ -44,7 +44,7 @@
             <div class="overview__content__edit__section">
                 <div class="input-group mb-3 border-clr">
                     <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/profile.png"
-                            alt="user" width="25"></span>
+                            alt="user"></span>
                     <div class="form-floating">
                         <input type="email" class="form-control border-clr-none" id="guestCount" placeholder="Guests"
                             value="40 Adults, 12 Children">
@@ -52,26 +52,19 @@
                     </div>
                 </div>
                 <div class="dateSection">
-                    <div class="d-flex mb-3 align-items-center border-clr flex-column flex-md-row flex-lg-column flex-xl-row">
-                        <div class="input-group" id="datepicker">
-                            <span class="input-group-text basic-icon"><img
-                                    src="../../../assets/images/icons/calendar.png" alt="calender" width="25"></span>
+                    <div class="d-flex mb-3 align-items-center flex-column flex-md-row flex-lg-column flex-xl-row gap-2">
+                        <div class="input-group custom_icon border-clr" id="datepicker">
                             <div class="form-floating">
-                                <input type="text" class="form-control border-clr-none" id="datepicker"
-                                    placeholder="Guests" value="Tue, Apr 1, 2025">
-                                <label for="guestCount">Check-in</label>
+                                <input type="date" class="form-control border-clr-none" id="datepicker"
+                                    placeholder="Guests" [value]="checkinDate" [(ngModel)]="checkinDate">
+                                <label for="guestCount" class="customLabel">Check-in</label>
                             </div>
                         </div>
-                        <span class="spacebar d-none d-md-flex">
-                            <p class="line"></p>
-                        </span>
-                        <div class="input-group" id="datepicker">
-                            <span class="input-group-text basic-icon"><img
-                                    src="../../../assets/images/icons/calendar.png" alt="calender" width="25"></span>
+                        <div class="input-group border-clr custom_icon" id="datepicker">
                             <div class="form-floating">
-                                <input type="text" class="form-control border-clr-none" id="datepicker"
-                                    placeholder="Guests" value="Tue, Apr 1, 2025">
-                                <label for="guestCount">Check-out</label>
+                                <input type="date" class="form-control border-clr-none" id="datepicker"
+                                    placeholder="Guests" [(ngModel)]="checkOutDate" [value]="checkOutDate">
+                                <label for="guestCount" class="customLabel">Check-out</label>
                             </div>
                         </div>
                     </div>
@@ -79,7 +72,7 @@
                 <div>
                     <div class="input-group mb-3 border-clr">
                         <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/clock.png"
-                                alt="user" width="25"></span>
+                                alt="user"></span>
                         <div class="form-floating">
                             <select class="form-select border-clr-none" id="duration"
                                 aria-label="Default select example">
@@ -97,7 +90,7 @@
                     <div class="fs-20 fw-medium overview__content__edit__section__editArticle text-center">Choose Menu
                     </div>
                 </div>
-                <div class="fs-40 fs-lg-60 pt-20 fw-bold">€ 4200.00</div>
+                <div class="fs-40 fs-lg-50 pt-20 fw-bold">€ 4200.00</div>
                 <p class="fs-12 m-0 pb-20">Excluding taxes and fees</p>
                 <div class="fs-24 mt-20 overview__content__edit__section__reverse text-center">Reserve</div>
             </div>

@@ -1,6 +1,5 @@
 @use "@angular/material" as mat;
 @import "./app/styles/variable.scss";
-@import "./app/custom-css/custom-material-colors.scss";
 @import 'typeface-poppins/index.css';
 @include mat.core();
 $VipsBanquetOffers-primary: mat.define-palette(mat.$indigo-palette);
