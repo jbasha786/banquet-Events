@@ -3,13 +3,13 @@
 
 .header {
   background-color: $white;
-  border-bottom: gutter-sp(1) solid $black;
-}
-
-.header-menu {
+  border-bottom: gutter-sp(1) solid $tableCellColor;
   position: relative;
 }
 
+.form-search{
+  position: relative;
+}
 .notification {
   position: relative;
   cursor: pointer;
@@ -22,41 +22,40 @@
 
 .notification .badge {
   position: absolute;
-  top: -5px;
-  right: -5px;
-  background: #00BF86;
+  top: gutter-sp(0);
+  left: gutter-sp(10);
+  background: $notifyBadge;
   color: white;
-  border-radius: 50%;
-  font-size: 12px;
-  padding: 2px 5px;
+  border-radius: gutter-per(50);
+  font-size: gutter-sp(8);
+  font-weight: 400;
+  padding: gutter-sp(4) gutter-sp(4) gutter-sp(2);
 }
 
 .notification-card {
-  position: fixed;
-  top: 70px;
-  right: 0;
+  position: absolute;
+  top: gutter-sp(72);
+  right: gutter-sp(0);
   border-top: $black;
   background: white;
-  padding: 10px;
-  width: 450px;
+  padding: gutter-sp(10);
+  // width: gutter-sp(450);
   height: auto;
   z-index: 100;
-  box-shadow: -20px 0px 20px -16px rgba(0, 0, 0, 0.45);
+  box-shadow: gutter-sp(-14) gutter-sp(6) gutter-sp(14) gutter-sp(-13) $font-lite;
 }
 .notification-close{
   color: $notifyclose;
 }
 
 .user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  // gap:  gutter-sp(10);
 }
 
 .user-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  width: gutter-sp(35);
+  height: gutter-sp(35);
+  border-radius: gutter-per(50);
   object-fit: cover;
 }
 
@@ -67,78 +66,76 @@
 .user-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: gutter-sp(10);
   cursor: pointer;
+}
+.user-id{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-info .user-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  width: gutter-sp(35);
+  height: gutter-sp(35);
+  border-radius: gutter-per(50);
   object-fit: cover;
 }
 
 .user-info .user-name {
-  font-size: 14px;
+  font-size: gutter-sp(14);
   color: #333;
 }
 
 .user-info i {
-  font-size: 14px;
+  font-size: gutter-sp(14);
   color: #333;
 }
 
 .dropdown-card {
   position: absolute;
-  top: 44px;
+  top: gutter-sp(44);
   right: 0;
   background: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  width: 300px;
+  box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $font-ash; //0px 4px 8px  rgba(0, 0, 0, 0.1);
+  border-radius: gutter-sp(5);
+  padding: gutter-sp(10);
+  // width: gutter-sp(300);
   z-index: 100;
 }
 
 .dropdown-user {
-  width: 100%;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  width: gutter-per(100);
+  gap: gutter-sp(10);
+  margin-bottom: gutter-sp(10);
 }
 
 .dropdown-user-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: gutter-sp(100);
+  height: gutter-sp(100);
+  border-radius: gutter-per(50);
   object-fit: cover;
-}
-
-.dropdown-user-name {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
 }
 
 .btn_search {
   position: absolute;
   left: gutter-sp(5);
-  top: 9px;
+  top: gutter-sp(9);
   color: $footer-text-color;
   background-color: $white;
 }
 
 .search_input {
-  width: gutter-sp(260);
-  height: gutter-sp(45);
+  // width: gutter-sp(260);
+  // height: gutter-sp(45);
   max-width: guttre-per(100);
-  font-size: 16px;
+  // font-size: gutter-sp(16);
   font-weight: 300;
 }
 
 .search_input::placeholder {
   color: $footer-text-color;
-  font-size: 16px;
+  font-size: gutter-sp(16);
   font-weight: 300;
 }
 
@@ -152,11 +149,11 @@
 }
 
 .notifyImg {
-  height: 35px;
+  height: gutter-sp(35);
 }
 
 .tableImg {
-  height: 38px;
+  height: gutter-sp(38);
 }
 
 .notifyBtn {
@@ -171,7 +168,7 @@
 .newBtn {
   color: $notifyNewColor;
   border-radius: gutter-sp(5);
-  font-size: gutter-sp(14);
+  // font-size: gutter-sp(14);
   background-color: $notufyNewBg;
 }
 
