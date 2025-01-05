@@ -1,4 +1,4 @@
-<div class="hallsView  col-md-10 col-lg-10 col-xl-8 m-auto mb-10">
+<div class="hallsView  col-md-10 col-lg-12 col-xl-10 m-auto mb-10">
     <div class="d-flex justify-content-center align-items-center flex-column gap-4 gap-lg-12 mb-200">
         <p class="text-center fs-32 fw-500 text-black mb-0">Type of Halls?</p>
         <form action="" class="card hallsView__card px-2 col-12">
@@ -63,19 +63,19 @@
                     <p class="fs-15 fw-500 hallsView__images__icon__conformed-color mt-2">Booking Confirmed</p>
                 </div>
             </div>
-            <div class=" d-flex flex-column m-lg-10 wid-lg-100 h-auto">
-                <p class="fs-22 fs-lg-26 fw-500 lh-1 text-black" (click)="getDetails()">{{item.name}}</p>
-                <div class="font-color d-flex justify-content-between flex-column flex-md-row gap-2  gap-lg-3">
+            <div class=" d-flex flex-column">
+                <span class="fs-22 fs-lg-26 fw-500 text-black" (click)="getDetails()">{{item.name}}</span>
+                <div class="font-color d-flex flex-column align-items-start align-items-lg-center flex-md-row gap-2 gap-lg-4 pe-lg-5">
                     <div> <span class="fs-13">{{item.desc}}</span></div>
                     <div class="d-none d-md-flex"><span>|</span></div>
                     <div><span class="fs-13">{{item.diamensions}}</span></div>
                     <div class="d-none d-md-flex"><span>| </span></div>
                     <div><span class="fs-13"> {{item.status}}</span></div>
                 </div>
-                <p class="fs-16 fw-500 mb-0 text-black mt-3">{{item.deposite}}</p>
+                <p class="fs-17 fw-500 mb-0 text-black mt-3">{{item.deposite}}</p>
                 <p class="hallsView__desc font-color mb-0 fs-13 wid-lg-70 mt-2">{{item.depositeDesc}}</p>
                 <div class="d-flex align-items-baseline flex-wrap">
-                    <span class="fs-36 fw-bold hallsView__priceColor">{{item.price}}</span><span
+                    <span class="fs-36 fw-bold hallsView__priceColor my-1 my-lg-3">{{item.price}}</span><span
                         class="font-color fs-13">{{item.taxText}}</span>
                 </div>
                 <div class="d-flex justify-content-between flex-column flex-md-row">

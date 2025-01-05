@@ -20,6 +20,9 @@
         &__input {
             width: gutter-per(100);
         }
+        &__input::placeholder {
+            font-size: gutter-sp(14);
+        }
 
         input:focus {
             outline: none;

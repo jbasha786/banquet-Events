@@ -2,7 +2,8 @@
 @import '../../custom-css/custom-material-colors.scss';
 
 .hallsView {
-    padding: gutter-vw(0) gutter-vw(5);
+    padding: gutter-vw(0) gutter-vw(10);
+    margin: gutter-vw(0) gutter-vw(7);
 
     .hall-list {
         border: gutter-sp(1) solid $footer-email-border;

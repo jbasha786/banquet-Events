@@ -19,6 +19,8 @@ export class CustomCalenderComponent {
   daysInMonth: number[] = Array.from({ length: 31 }, (_, i) => i + 1);
   currentDate: Date = new Date();
   currentMonth: string = '';
+  // dayName: string ='';
+  // dayNames: string= '';
   currentYear: number = this.currentDate.getFullYear();
   currentIndex: number = 0;
   visibleRange: number = 15;
@@ -28,6 +30,7 @@ export class CustomCalenderComponent {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.generateMonthData();
+    // this.generateweekname();
     this.updatePaginatedDays();
     this.updateVisibleDates();
   }
@@ -71,6 +74,12 @@ export class CustomCalenderComponent {
     const month = this.currentDate.getMonth();
     this.currentMonth = this.getMonthName(month);
   }
+  // generateweekname(){
+  //   const date = new Date(); // Replace with your desired date
+  //   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  //   const dayName = dayNames[date.getDay()];
+  //   console.log(dayName); 
+  // }
   getMonthName(monthIndex: number): string {
     const monthNames = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -88,6 +97,11 @@ export class CustomCalenderComponent {
     this.currentYear = this.currentDate.getFullYear();
     this.generateMonthData();
   }
+  // getDayName(date: Date): string {
+  //   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  //   return dayNames[date.getDay()];
+  //   console.log(this.dayNames)
+  // }
 
   selectDate(day: number | null) {
     if (day) {
