@@ -29,8 +29,8 @@
     </div>
     <div class="calendar_view_section">
         
-        <full-calendar *ngIf="selectViewType === 'Day'" [events]="calendarEvents" [options]="calendarOptionsDay"></full-calendar>
-        <full-calendar *ngIf="selectViewType === 'Week'" [options]="calendarOptionsWeek"></full-calendar>
+        <full-calendar *ngIf="selectViewType === 'Day'" [events]="calendarDailyEvents" [options]="calendarOptionsDay"></full-calendar>
+        <full-calendar #calendar *ngIf="selectViewType === 'Week'" [events]="calendarWeekEvents" [options]="calendarOptionsWeek"></full-calendar>
         <full-calendar *ngIf="selectViewType === 'Month'" [options]="calendarOptionsMonth"></full-calendar>
     </div>
 </div>

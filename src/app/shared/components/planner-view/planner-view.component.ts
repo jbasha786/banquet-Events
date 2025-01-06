@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { FullCalendarModule } from '@fullcalendar/angular';
+import { FullCalendarComponent, FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core';
 import timeGridPlugin from '@fullcalendar/timegrid'
 import dayGridPlugin from '@fullcalendar/daygrid'
@@ -14,10 +14,54 @@ import dayGridPlugin from '@fullcalendar/daygrid'
   styleUrl: './planner-view.component.scss'
 })
 export class PlannerViewComponent {
+  @ViewChild('calendar') calendar!: FullCalendarComponent;
 
   selectViewType: string = "Day";
 
+  calendarDailyEvents = [
+    {
+      title: 'Event 1',
+      start: "2025-01-06T10:30:00",
+      end: '2025-01-06T11:30:00',
+      condition: 'high'
+    },
+    {
+      title: 'Meeting with John Deo',
+      start: '2025-01-06T00:00:00',
+      end: '2025-01-06T23:00:00',
+      description: 'Discuss project details',
+      condition: "low"
+    }, {
+      title: 'Meeting with John',
+      start: '2025-01-06T00:00:00',
+      end: '2025-01-06T23:00:00',
+      description: 'Discuss project details'
+    },
+  ];
+
+  calendarWeekEvents = [
+    {
+      title: 'Event 1',
+      start: "2025-01-06T10:30:00",
+      end: '2025-01-06T11:30:00',
+      condition: 'high'
+    },
+    {
+      title: 'Meeting with John Deo',
+      start: '2025-01-06T00:00:00',
+      end: '2025-01-06T23:00:00',
+      description: 'Discuss project details',
+      condition: "low"
+    }, {
+      title: 'Meeting with John',
+      start: '2025-01-07T00:00:00',
+      end: '2025-01-07T23:00:00',
+      description: 'Discuss project details'
+    },
+  ];
+
   ngOnInit(): void {
+    console.log(new Date())
   }
 
   calendarOptionsDay: CalendarOptions = {
@@ -26,9 +70,24 @@ export class PlannerViewComponent {
     allDaySlot: false,
     headerToolbar: false,
     weekends: true,
-    // events: [
-    //   { title: 'Meeting', start: new Date() }
-    // ],
+    eventDidMount: (info: any) => {
+      const event = info.event;
+      const el = info.el;
+      if (event.extendedProps.condition === 'high') {
+        el.style.backgroundColor = '#4AAF91'
+        el.style.width = "200px"
+        el.style.border = 'none'
+      } else if (event.extendedProps.condition === 'low') {
+        el.style.backgroundColor = '#A85191',
+          el.style.width = "200px"
+        el.style.border = 'none'
+      } else {
+        el.style.color = 'black',
+          el.style.width = "200px",
+          el.style.border = "1px",
+          el.style.borderColor = "#FFDE24"
+      }
+    },
     dayHeaderFormat: {
       weekday: 'short',
       day: "2-digit"
@@ -42,18 +101,9 @@ export class PlannerViewComponent {
     weekends: true,
     dayCellClassNames: 'week',
     allDaySlot: false,
-    events: [
-      { title: 'Meeting', start: new Date() }
-    ],
     dayHeaderFormat: {
       weekday: 'short',
       day: "2-digit"
-    },
-    dayHeaderContent: (args) => {
-      const weekday = args.date.toLocaleDateString('en-US', { weekday: 'short' });
-      const day = args.date.getDate().toString().padStart(2, '0');
-      return `<span class="weekday" > ${weekday} </span>
-        < span class="day-number" > ${day} </span>`;
     },
   };
 
@@ -68,12 +118,10 @@ export class PlannerViewComponent {
     ]
   };
 
-  calendarEvents = [
-    { title: 'Event 1', date: '2024-12-31' },
-    { title: 'Event 2', date: '2024-12-31' }
-  ];
-
   selectView(view: string): void {
     this.selectViewType = view;
   }
+
+
+
 }
