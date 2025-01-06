@@ -48,7 +48,13 @@ export class PlannerViewComponent {
     dayHeaderFormat: {
       weekday: 'short',
       day: "2-digit"
-    }
+    },
+    dayHeaderContent: (args) => {
+      const weekday = args.date.toLocaleDateString('en-US', { weekday: 'short' });
+      const day = args.date.getDate().toString().padStart(2, '0');
+      return `<span class="weekday" > ${weekday} </span>
+        < span class="day-number" > ${day} </span>`;
+    },
   };
 
   calendarOptionsMonth: CalendarOptions = {
