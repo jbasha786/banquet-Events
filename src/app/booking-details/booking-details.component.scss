@@ -1,4 +1,4 @@
-@import '../styles/variable.scss';
+@import "../styles/variable.scss";
 
 .btn {
   &-cancel {
@@ -15,8 +15,8 @@
     font-weight: 500;
   }
 }
-.status-badge{
-    font-size: gutter-sp(11);
+.status-badge {
+  font-size: gutter-sp(11);
 }
 .section-title {
   color: $editbtn;

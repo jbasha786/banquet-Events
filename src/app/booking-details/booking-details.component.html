@@ -1,165 +1,184 @@
 <div class="container py-4">
-    <!-- Header Section -->
-   
-        <div class="header-bar d-flex flex-column flex-lg-row justify-content-between pb-26 gap-20">
-            <div class="d-flex align-items-center gap-14 goback">
-                <img src="../../assets/images/banquetplanner/backarrow.svg" alt="" class="gobackicon" width="30px">
-                <p class="booking-header m-0 fs-20 fw-bold">Booking Details</p>
+  <!-- Header Section -->
+  <div class="header-bar d-flex flex-column flex-lg-row justify-content-between pb-26 gap-20" >
+    <div class="d-flex align-items-center gap-14 goback">
+      <img
+        src="../../assets/images/banquetplanner/backarrow.svg"
+        alt=""
+        class="gobackicon"
+        width="30px"/>
+      <p class="booking-header m-0 fs-20 fw-bold">Booking Details</p>
+    </div>
+    <div class="book-detail d-flex gap-14 justify-content-end">
+      <button class="btn btn-cancel">Cancel Booking</button>
+      <button class="btn btn-edit">Edit Booking</button>
+    </div>
+  </div>
+  <div class="row g-3">
+    <!-- Booking Details Section -->
+    <div class="col-xl-8 col-lg-12 col-12 d-flex flex-column">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <p class="section-title mb-0 fs-18 fw-bold">LARGE HALLS</p>
+            <span class="status-badge badge bg-success text-white fw-medium">Confirmed</span >
+          </div>
+          <div class="row mb-0">
+            <!-- Image Section -->
+            <div class="col-12 col-lg-4 col-xl-4 col-xxl-5 mb-20 mb-lg-0">
+              <img
+                src="../../assets/images/banquetplanner/bookingtable-image.svg"
+                alt="Hall Image"
+                class="img-fluid rounded"
+                width="100%"
+              />
             </div>
-            <div class="book-detail d-flex gap-14 justify-content-end">
-                <button class="btn btn-cancel">Cancel Booking</button>
-                <button class="btn btn-edit">Edit Booking</button>
-            </div>
-        </div>
-      <div class="row g-3">
             <!-- Booking Details Section -->
-            <div class="col-xl-8 col-lg-12 col-12 d-flex flex-column">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <p class="section-title mb-0 fs-18 fw-bold">LARGE HALLS</p>
-                            <span class="status-badge badge bg-success text-white fw-medium">Confirmed</span>
-                        </div>
-                        <div class="row mb-0">
-                            <!-- Image Section -->
-                            <div class="col-12 col-lg-4 col-xl-4 col-xxl-5 mb-20 mb-lg-0">
-                                <img src="../../assets/images/banquetplanner/bookingtable-image.svg" alt="Hall Image" class="img-fluid rounded" width="100%">
-                            </div>
-                            <!-- Booking Details Section -->
-                            <div class="col-12 col-lg-8 col-xl-8 col-xxl-7">
-                                <div class="">
-                                    <p class="roomType fs-22 lh-22 fw-medium m-0">New Plaza <small class="small-text fs-10 fw-normal">450/sqft</small></p>
-                                    <p class="small-text fs-10 fw-normal pb-26 m-0">Booking ID: 12474</p>
-                                </div>
-                                
-                                <div class="row mb-16 gx-5">
-                                    <!-- Block 1 -->
-                                    <div class="col-md-4 mb-10">
-                                         <p class="text-head checkin m-0 pb-1">Check In</p>
-                                            <p class="text-para m-0">Thu 04-Nov-2024</p>
-                                            </div>
-                                    <!-- Block 2 -->
-                                    <div class="col-md-4 mb-10">
-                                            <p class="text-head checkout m-0 pb-1">Check Out</p>
-                                            <p class="text-para m-0">Thu 04-Nov-2024</p>
-                                             </div>
-                                    <!-- Block 3 -->
-                                    <div class="col-md-4 mb-10">
-                                            <p class="text-head m-0 pb-1">Duration</p>
-                                            <p class="text-para m-0">8 <span>hrs</span></p>
-                                            </div>
-                                </div>
-                                <div class="row mb-16 gx-5">
-                                    <!-- Block 1 -->
-                                    <div class="col-md-4 mb-10">
-                                        
-                                            <p class="text-head m-0 pb-1">No. of Guests</p>
-                                            <p class="text-para m-0">50</p>
-                                            </div>
-                                    <!-- Block 2 -->
-                                    <div class="col-md-4 mb-10">
-                                            <p class="text-head m-0 pb-1">Arrangement Type</p>
-                                            <p class="text-para m-0">U-Shaped</p>
-                                          </div>
-                                    <!-- Block 3 -->
-                                    <div class="col-md-4 mb-10">
-                                            <p class="text-head m-0 pb-1">Package</p>
-                                            <p class="text-para m-0">Birthday</p>                                             
-                                        </div>
-                                </div>
-                                <div class="row gx-5">
-                                    <!-- Block 1 -->
-                                    <div class="col-md-4 mb-10 mb-lg-0">
-                                            <p class="text-head m-0 pb-1">Menu<span class="lunch fs-10"> (Lunch) </span></p>
-                                            <p class="text-para m-0">50 <span class="fs-12 fw-normal">items</span> <a href="#" class="view-link fs-10 ms-1">View Menu</a></p>
-                                      </div>
-                                    <!-- Block 2 -->
-                                    <div class="col-md-4 mb-10 mb-lg-0">
-                                             <p class="text-head m-0 pb-1">Articles</p>
-                                            <p class="text-para m-0">20 <span class="fs-12 fw-normal">items</span> <a href="#" class="view-link fs-10 ms-1">View Articles</a></p>
-                                        </div>
-                                    <!-- Block 3 -->
-                                    <div class="col-md-4 mb-0 mb-lg-10">
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-12 col-lg-8 col-xl-8 col-xxl-7">
+              <div class="">
+                <p class="roomType fs-22 lh-22 fw-medium m-0">
+                  New Plaza
+                  <small class="small-text fs-10 fw-normal">450/sqft</small>
+                </p>
+                <p class="small-text fs-10 fw-normal pb-26 m-0">
+                  Booking ID: 12474
+                </p>
+              </div>
+
+              <div class="row mb-16 gx-5">
+                <!-- Block 1 -->
+                <div class="col-md-4 mb-10">
+                  <p class="text-head checkin m-0 pb-1">Check In</p>
+                  <p class="text-para m-0">Thu 04-Nov-2024</p>
                 </div>
-            </div>
-    
-            <!-- Payment Details Section -->
-            <div class="col-xl-4 col-lg-12 col-12 d-flex flex-column">
-                <div class="card h-100">
-                    <div class="card-body payment-details">
-                        <p class="payment-title mb-3 fs-18 fw-medium">Payment Details</p>
-                        <p class="amountpaid fs-10 fw-medium m-0 pb-14 main-name">AMOUNT PAID</p>
-                        <ul class="list-unstyled">
-                            <li class="d-flex justify-content-between">
-                                <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
-                                <span class="amount fw-medium fs-16">&euro; 4000.00</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
-                                <span class="amount fw-medium fs-16">&euro; 4000.00</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
-                                <span class="amount fw-medium fs-16">&euro; 4000.00</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
-                                <span class="amount fw-medium fs-16">&euro; 4000.00</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span class="amountpaid fs-16 fw-medium">Total Paid</span>
-                                <span class="amount fw-medium fs-16">&euro; 16000.00</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="d-flex justify-content-between align-items-center mt-28">
-                            <span class="amountpaid fw-medium fs-16">Payment Due</span>
-                            <span class="final-amount fw-medium fs-22 ">&euro; 40000.00</span>
-                        </div>
-                    </div>
+                <!-- Block 2 -->
+                <div class="col-md-4 mb-10">
+                  <p class="text-head checkout m-0 pb-1">Check Out</p>
+                  <p class="text-para m-0">Thu 04-Nov-2024</p>
                 </div>
+                <!-- Block 3 -->
+                <div class="col-md-4 mb-10">
+                  <p class="text-head m-0 pb-1">Duration</p>
+                  <p class="text-para m-0">8 <span>hrs</span></p>
+                </div>
+              </div>
+              <div class="row mb-16 gx-5">
+                <!-- Block 1 -->
+                <div class="col-md-4 mb-10">
+                  <p class="text-head m-0 pb-1">No. of Guests</p>
+                  <p class="text-para m-0">50</p>
+                </div>
+                <!-- Block 2 -->
+                <div class="col-md-4 mb-10">
+                  <p class="text-head m-0 pb-1">Arrangement Type</p>
+                  <p class="text-para m-0">U-Shaped</p>
+                </div>
+                <!-- Block 3 -->
+                <div class="col-md-4 mb-10">
+                  <p class="text-head m-0 pb-1">Package</p>
+                  <p class="text-para m-0">Birthday</p>
+                </div>
+              </div>
+              <div class="row gx-5">
+                <!-- Block 1 -->
+                <div class="col-md-4 mb-10 mb-lg-0">
+                  <p class="text-head m-0 pb-1">
+                    Menu<span class="lunch fs-10"> (Lunch) </span>
+                  </p>
+                  <p class="text-para m-0">
+                    50 <span class="fs-12 fw-normal">items</span>
+                    <a href="#" class="view-link fs-10 ms-1">View Menu</a>
+                  </p>
+                </div>
+                <!-- Block 2 -->
+                <div class="col-md-4 mb-10 mb-lg-0">
+                  <p class="text-head m-0 pb-1">Articles</p>
+                  <p class="text-para m-0">
+                    20 <span class="fs-12 fw-normal">items</span>
+                    <a href="#" class="view-link fs-10 ms-1">View Articles</a>
+                  </p>
+                </div>
+                <!-- Block 3 -->
+                <div class="col-md-4 mb-0 mb-lg-10"></div>
+              </div>
             </div>
+          </div>
         </div>
-      <div class="card mt-30">
-           <div class="card-body">
-            <div class="row">
-            <div class="col-md-8 mb-30 mb-lg-0">
-                <p class="text-cust fs-18 fw-bold">Customer Details</p>
-                <div class="row">
-                    <div class="details col-md-4">
-                        <p class="fs-16 main-name">Organizer Contact Person</p>
-                        <p class="mb-0 fw-medium fs-18">John Doe</p>
-                        <p class="fs-12">+31 447 258 8520</p>
-                    </div>
-                    <div class="details col-md-4">
-                        <p class=" fs-16 main-name">Internal Employee</p>
-                        <p class="mb-0 fw-medium fs-18">John Doe</p>
-                        <p class="fs-12">+31 447 258 8520</p>
-                    </div>
-                    <div class="details col-md-4">
-                        <p class="fs-16 main-name">Relation</p>
-                        <p class="mb-0 fw-medium fs-18">Friend</p>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Host Details -->
-            <div class="col-md-4">
-                <p class="text-cust fs-18 fw-bold">Host Details</p>
-                <div class="details">
-                  <p class="fs-16 main-name">Front Office Manager</p>
-                  <p class="fw-medium fs-18 mb-0">DPK Riya Roy</p>
-                  <p class="fs-12">+31 447 258 8520</p>
-                </div>
-            </div>
+      </div>
+    </div>
+
+    <!-- Payment Details Section -->
+    <div class="col-xl-4 col-lg-12 col-12 d-flex flex-column">
+      <div class="card h-100">
+        <div class="card-body payment-details">
+          <p class="payment-title mb-3 fs-18 fw-medium">Payment Details</p>
+          <p class="amountpaid fs-10 fw-medium m-0 pb-14 main-name">
+            AMOUNT PAID
+          </p>
+          <ul class="list-unstyled">
+            <li class="d-flex justify-content-between">
+              <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
+              <span class="amount fw-medium fs-16">&euro; 4000.00</span>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
+              <span class="amount fw-medium fs-16">&euro; 4000.00</span>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
+              <span class="amount fw-medium fs-16">&euro; 4000.00</span>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span class="amountpaid fs-14 pb-14">04-Nov-2024</span>
+              <span class="amount fw-medium fs-16">&euro; 4000.00</span>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span class="amountpaid fs-16 fw-medium">Total Paid</span>
+              <span class="amount fw-medium fs-16">&euro; 16000.00</span>
+            </li>
+          </ul>
+
+          <div class="d-flex justify-content-between align-items-center mt-28">
+            <span class="amountpaid fw-medium fs-16">Payment Due</span>
+            <span class="final-amount fw-medium fs-22">&euro; 40000.00</span>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mt-30">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8 mb-30 mb-lg-0">
+          <p class="text-cust fs-18 fw-bold">Customer Details</p>
+          <div class="row">
+            <div class="details col-md-4">
+              <p class="fs-16 main-name">Organizer Contact Person</p>
+              <p class="mb-0 fw-medium fs-18">John Doe</p>
+              <p class="fs-12">+31 447 258 8520</p>
             </div>
+            <div class="details col-md-4">
+              <p class="fs-16 main-name">Internal Employee</p>
+              <p class="mb-0 fw-medium fs-18">John Doe</p>
+              <p class="fs-12">+31 447 258 8520</p>
+            </div>
+            <div class="details col-md-4">
+              <p class="fs-16 main-name">Relation</p>
+              <p class="mb-0 fw-medium fs-18">Friend</p>
+            </div>
+          </div>
         </div>
-    
-    
+
+        <!-- Host Details -->
+        <div class="col-md-4">
+          <p class="text-cust fs-18 fw-bold">Host Details</p>
+          <div class="details">
+            <p class="fs-16 main-name">Front Office Manager</p>
+            <p class="fw-medium fs-18 mb-0">DPK Riya Roy</p>
+            <p class="fs-12">+31 447 258 8520</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
