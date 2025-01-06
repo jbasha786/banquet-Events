@@ -1,4 +1,5 @@
 //colors
+$primary-color: #F0961B;
 $secondary-color: #a62784; 
 $gray: #F0F0F3;
 $border-gray:#e1e1e1;
@@ -67,6 +68,7 @@ $font-dull: #534D59;
 $font-lite: #716e6e;
 $calenderDate: #1b1616;
 $event-input-border-clr: #CACACA;
+$event-radio-border-clr: #49454F;
 $event-acc-btn-clr: #F0961BC7;
 $time-part-line-clr: #DCE3E7;
 $time-part-bg-clr: #ECF6FB;
@@ -86,6 +88,10 @@ $cancelcolor: #E42E2E;
 $dialogfontcolor: #272727;
 $dialogBG1: #676767;
 $dialogBG2: #C8B0AA;
+$shape-bg: #f0f6fb;
+$cancel-btn-border: #E42E2E;
+$confirm-text-clr: #008000;
+$selected-border-clr: #1F8730;
 
 @function gutter-sp($key) {
   @return #{$key}px;

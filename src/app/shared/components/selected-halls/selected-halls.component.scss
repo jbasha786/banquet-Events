@@ -1,0 +1,181 @@
+@import '../../../styles/variable.scss';
+
+.hallsView {
+    padding: gutter-vw(0) gutter-vw(5);
+
+    .hall-list {
+        border: gutter-sp(1) solid $footer-email-border;
+        border-radius: gutter-sp(5);
+        align-items: center;
+        height: gutter-per(100);
+        width: gutter-per(100);
+
+
+        .font-color {
+            color: $font-ash;
+        }
+    }
+
+    &__card {
+        .mat-mdc-form-field {
+            width: gutter-per(100);
+        }
+
+        .custom_clr {
+            color: $secondary-color;
+        }
+
+        .hall-img {
+            width: gutter-sp(28);
+            height: gutter-sp(30);
+        }
+
+        .mat-mdc-input-element {
+            font-size: gutter-sp(14);
+            height: gutter-sp(16);
+            font-family: "poppins", sans-serif;
+        }
+
+        .input-group {
+
+            input,
+            select {
+                border: none;
+            }
+
+            input:focus,
+            select:focus {
+                border: none;
+                box-shadow: none;
+            }
+
+            .custom_select select {
+                --bs-form-select-bg-img: none
+            }
+        }
+
+        .dateSection {
+            border-radius: gutter-rem(0.375);
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                opacity: 1;
+                display: block;
+                background-image: url("../../../../assets/images/icons/calendar.png");
+                background-repeat: no-repeat;
+                width: gutter-sp(25);
+                height: gutter-sp(25);
+                border-width: thin;
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                position: absolute;
+                left: gutter-per(2);
+                top: gutter-per(25);
+            }
+
+            input::-webkit-datetime-edit-fields-wrapper {
+                position: relative;
+                left: gutter-sp(18);
+            }
+
+            input::-webkit-datetime-edit {
+                position: relative;
+                left: gutter-sp(18);
+            }
+
+            .customLabel {
+                left: gutter-sp(38);
+                color: $secondary-color;
+            }
+        }
+
+        .basic-icon {
+            background-color: $white;
+            border: gutter-sp(1) solid $white;
+            padding: gutter-rem(0.375) gutter-rem(0.25);
+
+            img {
+                width: gutter-sp(25);
+                height: gutter-sp(25);
+            }
+        }
+
+    }
+
+    &__images {
+        position: relative;
+
+        &__icon {
+            position: absolute;
+            top: gutter-per(16);
+            right: gutter-sp(0);
+            left: gutter-sp(0);
+            bottom: gutter-sp(0);
+            margin: gutter-sp(0) auto;
+            height: gutter-per(100);
+            width: gutter-per(100);
+            text-align: center;
+
+            &__conformed-color {
+                color: $confirm-text-clr;
+            }
+
+            .sentImg {
+                width: gutter-sp(100);
+                height: gutter-sp(100);
+            }
+
+            .reserveID {
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+
+        &__img {
+            width: gutter-sp(250);
+            height: auto;
+            flex: 1;
+            object-fit: cover;
+        }
+
+        @media (max-width: 991px) {
+            &__img {
+                width: gutter-per(100);
+                height: auto;
+                flex: 1;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__priceColor {
+        color: $primary-color;
+    }
+
+    .reserve {
+        background-color: $green-select;
+        color: $white;
+    }
+
+    .selected {
+        border: gutter-sp(1) solid $selected-border-clr;
+        background: $white;
+    }
+
+    &__articles {
+        color: $secondary-color;
+    }
+
+    &__image_desc {
+        max-width: gutter-per(40);
+        flex: 1 1 auto;
+    }
+}
+
+.together {
+    font-style: italic;
+    color: $white;
+    bottom: gutter-sp(0);
+    left: gutter-sp(0);
+    right: gutter-sp(0);
+}

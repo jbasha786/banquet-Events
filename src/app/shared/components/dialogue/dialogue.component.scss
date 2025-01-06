@@ -1,5 +1,4 @@
 @import "../../../../app/styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
 .hallDialog{
    .title{
     color: $dialogfontcolor;
@@ -30,7 +29,7 @@
         &__yes{
             border-radius: gutter-vw(50);
             width: gutter-vw(5);
-            background-color: $secondory-color;
+            background-color: $secondary-color;
         }
         ::ng-deep .mat-mdc-button  .mdc-button__label{
             color: $white;

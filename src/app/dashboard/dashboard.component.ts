@@ -1,7 +1,6 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CardComponent } from '../shared/components/card/card.component';
 import { CardSideContentComponent } from '../shared/components/card-side-content/card-side-content.component';
-import { CarouselComponent } from '../shared/components/carousel/carousel.component';
 import { CorporateMeetingComponent } from './corporate-meeting/corporate-meeting.component';
 import { FAQComponent } from './faq/faq.component';
 import { Router, RouterLink, RouterModule } from '@angular/router';
@@ -21,12 +20,10 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
   standalone: true,
   imports: [CardComponent,
     CardSideContentComponent,
-    CarouselComponent,
     CorporateMeetingComponent,
     UpcomingEventsListComponent,
     FAQComponent,
     ChatComponent,
-    RouterLink,
     RouterModule,
     MatDatepickerModule,
     MatNativeDateModule,

@@ -1,5 +1,5 @@
 @import '../../styles/variable.scss';
-@import '../../custom-css/custom-material-colors.scss';
+@import '../../../styles.scss';
 
 .hallsView {
     padding: gutter-vw(0) gutter-vw(10);
@@ -24,7 +24,11 @@
 
         &__label-hall {
             font-family: "poppins", sans-serif;
-            color: $secondory-color;
+            color: $secondary-color;
+        }
+
+        .custom_clr {
+            color: $secondary-color;
         }
 
         .hall-img {
@@ -33,13 +37,77 @@
             margin-top: gutter-sp(6);
         }
 
-        .mat-mdc-input-element {
-            font-size: gutter-sp(14);
-            height: gutter-sp(20);
-            color: $black;
-            position: relative;
-            font-family: "poppins", sans-serif;
-            width: gutter-sp(170);
+        // .mat-mdc-input-element {
+        //     font-size: gutter-sp(14);
+        //     height: gutter-sp(20);
+        //     color: $black;
+        //     position: relative;
+        //     font-family: "poppins", sans-serif;
+        //     width: gutter-sp(170);
+        // }
+       
+        .input-group {
+
+            input,
+            select {
+                border: none;
+            }
+
+            input:focus,
+            select:focus {
+                border: none;
+                box-shadow: none;
+            }
+
+            .custom_select select {
+                --bs-form-select-bg-img: none
+            }
+        }
+
+        .dateSection {
+            border-radius: gutter-rem(0.375);
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                opacity: 1;
+                display: block;
+                background-image: url("../../../assets/images/halls/calender-hall.png");
+                background-repeat: no-repeat;
+                width: gutter-sp(32);
+                height: gutter-sp(36);
+                border-width: thin;
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                position: absolute;
+                left: gutter-per(2);
+                top: gutter-per(25);
+            }
+
+            input::-webkit-datetime-edit-fields-wrapper {
+                position: relative;
+                left: gutter-sp(18);
+            }
+
+            input::-webkit-datetime-edit {
+                position: relative;
+                left: gutter-sp(18);
+            }
+
+            .customLabel {
+                left: gutter-sp(38);
+                color: $secondary-color;
+            }
+        }
+
+        .basic-icon {
+            background-color: $white;
+            border: gutter-sp(1) solid $white;
+            padding: gutter-rem(0.375) gutter-rem(0);
+
+            img {
+                width: gutter-sp(25);
+                height: gutter-sp(25);
+            }
         }
 
     }
@@ -59,7 +127,7 @@
             text-align: center;
 
             &__conformed-color {
-                color: green;
+                color: $confirm-text-clr;
             }
 
             .sentImg {
@@ -78,7 +146,8 @@
             height: gutter-per(100);
             flex: 1;
             object-fit: cover;
-            border-radius:  gutter-sp(6);;
+            border-radius: gutter-sp(6);
+            ;
         }
 
         @media (max-width: 991px) {
@@ -92,54 +161,26 @@
     }
 
     &__priceColor {
-        color: var(--primary-color);
+        color: $primary-color;
     }
 
     .reserve {
         background-color: $green-select;
-        color: white;
+        color: $white;
     }
 
-    .cancel {
-        border: gutter-sp(1) solid $cancelcolor;
-        color: $cancelcolor;
+    .selected {
+        border: gutter-sp(1) solid $selected-border-clr;
         background: $white;
     }
 
     &__articles {
-        color: $secondory-color;
         text-wrap: nowrap;
+        color: $secondary-color;
     }
 
     &__image_desc {
         max-width: gutter-per(40);
         flex: 1 1 auto;
     }
-
-    ::ng-deep .mat-mdc-text-field-wrapper {
-        background-color: none;
-    }
-
-    ::ng-deep .mdc-text-field--filled {
-        background: none;
-    }
-
-    ::ng-deep .mat-input-element {
-        font-size: gutter-sp(12);
-    }
-
-    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
-        display: none;
-    }
-
-    ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
-        display: none
-    }
-
-    ::ng-deep .mat-mdc-floating-label.mdc-floating-label {
-        margin-top: gutter-sp(10);
-    }
-    // .imagebody{
-    //     height: 100%;
-    // }
 }

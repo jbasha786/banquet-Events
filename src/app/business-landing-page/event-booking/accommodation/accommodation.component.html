@@ -1,41 +1,40 @@
 <div class="accommodation">
     <p class="title fs-24 fs-lg-30 text-center fw-medium pb-20">Accommodation Details?</p>
-    <form action="" class="row w-100">
-        <div class="col-10 col-lg-4 m-auto">
+    <div class="row w-100">
+        <div class="col-10 col-lg-4 m-auto pb-70 pb-md-20">
             <div class="mb-4">
                 <label for="guests" class="custom_label mb-1">Number of Guests</label>
                 <input type="number" id="guests" placeholder="select No.of Guests" class="form-control custom_input">
             </div>
-            <div class="mb-4">
-                <label for="guests" class="custom_label mb-1">Check-In Date</label>   
-                <select class="form-select custom_select" aria-label="Default select example" placeholder="DD-MM-YY">
-                    <option value="1">10-11-2025 to 10-11-2025</option>
-                    <option value="2">11-11-2025 to 11-11-2025</option>
-                    <option value="3">12-11-2025 to 12-11-2025</option>
-                  </select>        
+            <div class="custom-outlined-field">
+                <label for="guests" class="custom_label mb-1">Check-In Date</label>
+                <mat-form-field class="w-100 custom_date" appearance="outline">
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Start date">
+                        <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-icon matIconPrefix>calendar_month</mat-icon>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker">
+
+                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
             </div>
             <div class="mb-4">
                 <label for="duration" class="custom_label mb-1">Event Duration</label>
-                <div class="row g-4">
-                   <div class="col-12 col-md-4">
-                    <select class="form-select custom_select" aria-label="Default select example" placeholder="Start Time">
-                        <option value="1">10:00 AM</option>
-                        <option value="2">12:00 PM</option>
-                        <option value="3">02:00 PM</option>
-                      </select>
-                   </div>
-                   <div class="col-12 col-md-4">
-                    <select class="form-select custom_select" aria-label="Default select example" placeholder="End Time">
-                        <option value="1">11:00 AM</option>
-                        <option value="2">01:00 PM</option>
-                        <option value="3">03:00 PM</option>
-                      </select>
-                   </div>
-                   <div class="col-12 col-md-4">
-                    <p class="custom_btn fs-16 text-center cursor" (click)="timePart()">Time Planner</p>
-                   </div>
+                <div class="gap-4 d-flex flex-column flex-md-row flex-lg-column flex-xl-row align-items-end">
+                    <div class="flex-fill w-100">
+                        <label for="startTime" class="custom_label">Start Time</label>
+                        <input type="time" id="startTime" class="form-control custom_input custom_time" placeholder="Start Time">
+                    </div>
+                    <div class="flex-fill w-100">
+                        <label for="endTime" class="custom_label">End Time</label>
+                        <input type="time" id="endTime" class="form-control custom_input custom_time" placeholder="End Time">
+                    </div>
+                    <p class="custom_btn fs-16 text-center cursor m-0 flex-fill w-100" (click)="timePart()">Time Part</p>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
 </div>

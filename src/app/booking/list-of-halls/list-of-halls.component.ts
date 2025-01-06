@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DefaultService } from '../../services/default.service';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogueComponent } from '../../shared/components/dialogue/dialogue.component';
 import { Router } from '@angular/router';
@@ -17,6 +17,7 @@ import { EventDateSlotsService } from '../../services/event-date-slot/event-date
 import { ArticlesComponent } from '../../shared/components/articles/articles.component';
 import { ZindexService } from '../../../app/services/zindex.service';
 import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-menu.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -27,7 +28,8 @@ import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-
     MatIconModule,
     MatButtonModule,
     NgxMatTimepickerModule,
-    CommonModule],
+    CommonModule,
+    FormsModule],
   templateUrl: './list-of-halls.component.html',
   styleUrl: './list-of-halls.component.scss'
 })
@@ -38,6 +40,17 @@ export class ListOfHallsComponent {
   reserveBtn: boolean = true;
   requestSent: boolean = true;
   requestAccepted: boolean = true;
+  selectedItem: number = 0;
+  checkinDate: string | null;
+  checkOutDate: string | null;
+  tomorrowDate = new Date();
+
+  slots = [
+    { id: 1, shift: "8AM - 11 PM" },
+    { id: 2, shift: "12AM - 3 PM" },
+    { id: 3, shift: "4PM - 7 PM" },
+    { id: 4, shift: "8AM - 11 PM" },
+  ]
 
   constructor(private defaultService: DefaultService,
     private dialog: MatDialog,
@@ -46,8 +59,12 @@ export class ListOfHallsComponent {
     private eventPlaning: EventPlanService,
     private eventACService: EventGuestsService,
     private eventDSService: EventDateSlotsService,
-    private zIndexService: ZindexService
-  ) { }
+    private zIndexService: ZindexService,
+    private datePipe: DatePipe
+  ) {
+    this.checkinDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
+    this.checkOutDate = this.datePipe.transform(this.tomorrowDate.setDate(new Date().getDate() + 1), 'yyyy-MM-dd');
+  }
 
   ngOnInit() {
     this.getHalsList();
@@ -63,30 +80,32 @@ export class ListOfHallsComponent {
 
   cancelReservation() {
     this.dialog.open(DialogueComponent, {
-      width:"500px",
+      width: "500px",
       disableClose: true,
-      position: { top: '12%', left: '33%' }, 
+      position: { top: '0', left: '0' },
     });
-   }
+  }
   reserve(reserve: any) {
+    reserve.isActive = true
+    this.selectedItem = reserve.id;
     this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
     this.requestSent = false;
   }
 
-  getDetails(){
+  getDetails() {
     this.dialog.closeAll();
     this.router.navigate(['overview']);
   }
 
-  getGuestDetails(){
+  getGuestDetails() {
     const adults = this.eventACService.getSelectedAdultCount();
     const elderChild = this.eventACService.getSelectedElderChildCount();
     const youngerChild = this.eventACService.getSelectedYoungerChildCount();
     const babies = this.eventACService.getSelectedBabiesCount();
   }
 
-  getDateAndSlots(){
+  getDateAndSlots() {
     const selectedDate = this.eventDSService.getSelectedDate();
     const slots = this.eventDSService.getAvailableSlots();
   }
@@ -101,7 +120,7 @@ export class ListOfHallsComponent {
     this.zIndexService.setHeaderZIndex(1000);
     const dialogRef = this.dialog.open(ArticlesComponent, {
       panelClass: 'fixed-dialog',
-      position: { top: '34px' }, 
+      position: { top: '34px' },
     });
 
     dialogRef.afterClosed().subscribe(() => {
@@ -110,12 +129,13 @@ export class ListOfHallsComponent {
   }
 
 
-  chooseMenu(){
+  chooseMenu() {
     this.dialog.open(ChooseMenuComponent, {
       width: '100%',
       height: '100vh',
       maxWidth: '100%',
       panelClass: 'choosemenu-dialog',
+      position: { left: '10%' },
     });
   }
 

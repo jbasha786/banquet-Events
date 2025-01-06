@@ -1,71 +1,69 @@
-<div class="hallsView col-md-10 col-lg-12 col-xl-10 m-auto d-flex justify-content-center align-items-center">
-    <div class="flex-column gap-4 gap-lg-12 mb-200">
-        <p class="text-center fs-32 fw-500 text-black mb-0">Type of Halls?</p>
-        <form action="" class="card hallsView__card px-2 col-12 mb-30 mt-4 col-md-8 col-lg-12 mx-auto">
-            <div class="d-flex flex-md-row justify-content-center align-item-center col-12 flex-column">
-                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                    <mat-form-field>
-                        <mat-label class="hallsView__card__label-hall fs-16">Guest</mat-label>
-                        <span matPrefix class="cursor">
-                            <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img" alt="">
-                        </span>
-                        <input type="text" value="40 Adults, 12 children..." matInput readonly
-                            class="hallsView__card__halls-input lh-1">
-                    </mat-form-field>
+<div class="hallsView col-md-10 col-lg-10 col-xl-9 m-md-auto mb-10">
+    <div class="d-flex justify-content-center align-items-center flex-column gap-2 gap-lg-12 pb-70 pb-md-20">
+        <p class="text-center fs-28 fw-500 text-black">Type of Halls?</p>
+        <div class="card hallsView__card px-2 mt-2 col-12">
+            <div class="row w-100">
+                <div class="col-12 col-lg-4">
+                    <div class="input-group border-clr">
+                        <span class="input-group-text basic-icon">
+                            <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img"
+                                alt="user"></span>
+                        <div class="form-floating">
+                            <input type="email" class="form-control guest" id="guestCount" placeholder="Guests"
+                                value="40 Adults, 12 Children">
+                            <label for="guestCount" class="custom_clr">Guests</label>
+                        </div>
+                    </div>
                 </div>
-                <hr class="d-md-none m-0">
-                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                    <mat-form-field>
-                        <mat-label class="hallsView__card__label-hall fs-14">Check-In</mat-label>
-                        <span matPrefix (click)="checkin.open()" class="cursor">
-                            <img src="../../../assets/images/halls/calender-hall.png" alt="" class="hall-img">
-                        </span>
-                        <input type="date" matInput readonly value=" " [matDatepicker]="checkin">
-                        <mat-datepicker #checkin></mat-datepicker>
-                    </mat-form-field>
+                <div class="col-12 col-lg-3">
+                    <div class="dateSection">
+                        <div class="input-group custom_icon border-clr" id="datepicker">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="datepicker" placeholder="Guests"
+                                    [value]="checkinDate" [(ngModel)]="checkinDate">
+                                <label for="guestCount" class="customLabel">Check-in</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr class="d-md-none m-0">
-                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                    <mat-form-field>
-                        <mat-label class="hallsView__card__label-hall fs-14">Check-Out</mat-label>
-                        <span matPrefix (click)="checkout.open()" class="cursor">
-                            <img src="../../../assets/images/halls/calender-hall.png" alt="" class="hall-img">
-                        </span>
-                        <input type="date" matInput readonly value=" " [matDatepicker]="checkout">
-                        <mat-datepicker #checkout></mat-datepicker>
-                    </mat-form-field>
+                <div class="col-12 col-lg-3">
+                    <div class="dateSection">
+                        <div class="input-group border-clr custom_icon" id="datepicker">
+                            <div class="form-floating">
+                                <input type="date" class="form-control " id="datepicker" placeholder="Guests"
+                                    [(ngModel)]="checkOutDate" [value]="checkOutDate">
+                                <label for="guestCount" class="customLabel">Check-out</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr class="d-md-none m-0">
-                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                    <mat-form-field>
-                        <mat-label class="hallsView__card__label-hall fs-14">Duration</mat-label>
-                        <input type="time" matInput [ngxMatTimepicker]="time" />
-                        <ngx-mat-timepicker #time></ngx-mat-timepicker>
-                    </mat-form-field>
+                <div class="col-12 col-lg-2">
+                    <div class="input-group border-clr">
+                        <span class="input-group-text basic-icon d-block d-lg-none"><img
+                                src="../../../../assets/images/icons/clock.png" alt="user"></span>
+                        <div class="form-floating custom_select">
+                            <select class="form-select w-150" id="duration" aria-label="Default select example">
+                                <ng-container *ngFor="let item of slots">
+                                    <option [value]="item.id">{{item.shift}}</option>
+                                </ng-container>
+                            </select>
+                            <label for="duration" class="custom_clr">Duration</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </form>
+        </div>
 
         @for(item of hallsList; track $index){
-        <div class="d-flex align-items-center flex-column flex-lg-row hall-list gap-4 mt-10 mb-30 col-md-8 col-lg-12 mx-auto">
+        <div
+            class="d-flex align-items-center flex-column flex-lg-row hall-list gap-4 mt-10 mb-30 col-md-8 col-lg-12 mx-auto">
             <div class="d-flex hallsView__images">
-                <img class="hallsView__images__img mt-2 mt-md-0"
-                    [ngStyle]="{'opacity': requestSent && requestAccepted ? '1' : '0.2'}" src="{{item.src}}" width=""
-                    alt="{{item.name}}">
-                <div *ngIf="!requestSent" class="hallsView__images__icon">
-                    <img src="../../../assets/images/halls/sent.gif" class="sentImg">
-                    <p class="fs-16 fw-bold mt-2 mb-0 mb-md-2">Reservation Request Sent</p>
-                    <p class="fs-12">Our representative will get back to you shortly Reservation ID: <a
-                            (click)="confirm()" class="cursor reserveID">234566</a></p>
-                </div>
-                <div *ngIf="!requestAccepted" class="hallsView__images__icon p-20">
-                    <img src="../../../assets/images/halls/confirm.gif" class="h-120 w-120 m-auto" alt="">
-                    <p class="fs-15 fw-500 hallsView__images__icon__conformed-color mt-2">Booking Confirmed</p>
-                </div>
+                <img class="hallsView__images__img " src="{{item.src}}" width="" alt="{{item.name}}">
             </div>
             <div class=" d-flex flex-column">
                 <span class="fs-20 fs-md-22 fs-lg-26 fw-500 text-black" (click)="getDetails()">{{item.name}}</span>
-                <div class="font-color d-flex flex-column align-items-start align-items-lg-center flex-md-row gap-2 gap-lg-4 pe-lg-5">
+                <div
+                    class="font-color d-flex flex-column align-items-start align-items-lg-center flex-md-row gap-2 gap-lg-4 pe-lg-5">
                     <div> <span class="fs-13">{{item.desc}}</span></div>
                     <div class="d-none d-md-flex"><span>|</span></div>
                     <div><span class="fs-13">{{item.diamensions}}</span></div>
@@ -79,22 +77,19 @@
                         class="font-color fs-13">{{item.taxText}}</span>
                 </div>
                 <div class="d-flex justify-content-between flex-column flex-md-row">
-                    <div class="d-flex align-items-center  flex-column flex-md-row gap-3">
-                        <button class="cancel fw-500 fs-16 border rounded-pill px-4 py-1" *ngIf="!reserveBtn"
-                            (click)="cancelReservation()">Cancel</button>
-                        <button class="reserve border rounded-pill px-4 py-2 fs-18" *ngIf="reserveBtn"
-                            (click)="reserve(item)">Select</button>
-                        <div class="d-flex align-items-center gap-2 justify-content-between">
-                            <span class="ms-lg-2 hallsView__articles fs-16 fw-500" role="button"
-                                (click)="addArticles()">Add
-                                Articles</span>
-                            <span class="ms-lg-2 hallsView__articles fs-16 fw-500" role="button" (click)="chooseMenu()">
-                                Choose Menu
-                            </span>
-                        </div>
+                    <div class="d-flex align-items-center  flex-row gap-3">
+                        <button class="selected fw-500 fs-14 rounded-pill px-4 py-1"
+                            *ngIf="item.isActive">Selected</button>
+                        <button class="reserve border rounded-pill px-4 py-1"
+                            *ngIf="item.id !== selectedItem && !item.isActive" (click)="reserve(item)">Select</button>
+                        <span class="ms-2 hallsView__articles fs-14 fw-500" role="button" (click)="addArticles()">Add
+                            Articles</span>
+                        <span class="ms-2 hallsView__articles fs-14 fw-500" role="button" (click)="chooseMenu()">
+                            Choose Menu
+                        </span>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center cursor p-2 text-nowrap" (click)="getDetails()"><span
-                            class="fw-500 fs-14 mt-2 mt-md-0">View
+                    <div class="d-flex align-items-center justify-content-center cursor p-2 text-nowrap"
+                        (click)="getDetails()"><span class="fw-500 fs-14 mt-2 mt-md-0">View
                             Details &rarr;</span></div>
                 </div>
             </div>
