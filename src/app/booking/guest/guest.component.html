@@ -1,11 +1,11 @@
 <div class="guest">
     <p class="guest__title text-center fs-28 fw-500 text-black">For How Many?</p>
-    <div class="guest__form row d-flex justify-content-center col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+    <div class="guest__form row d-flex justify-content-center col-sm-8 col-md-8 col-lg-4 col-xl-4 col-xxl-4 mt-4">
         <ng-container *ngFor="let field of guestFields">
-            <div class="guest__card col-10 col-lg-10 mb-3 border rounded p-2">
+            <div class="guest__card col-10 col-lg-10 mb-3 border rounded p-2 my-3">
                 <p class="guest__card__label mb-2 fs-14 fw-500">{{ field.label }}</p>
-                <input class="guest__card__input p-10 border rounded fs-20 fw-500" type="number" [(ngModel)]="field.value" min="1"
-                    [placeholder]="'Enter No of ' + field.label" (input)="field.changeFunction(field.value)">
+                <input class="guest__card__input p-10 border rounded fs-20 fw-500" type="number"  min="1"
+                    [placeholder]="'Enter No of ' + field.label">
             </div>
         </ng-container>
     </div>

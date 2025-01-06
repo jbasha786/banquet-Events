@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { SelectedDatesComponent } from './selected-dates/selected-dates.component';
@@ -21,7 +21,7 @@ import { ChooseMenuComponent } from '../shared/components/choose-menu/choose-men
   styleUrl: './booking.component.scss'
 })
 export class BookingComponent {
-
+  @Input() buttonNext: string = 'Next';
   currentStep: number = 1;
   defaultProgressSize: number = 0;
   progressbarWidth: any;
@@ -52,6 +52,9 @@ export class BookingComponent {
 
   updatePage() {
     this.progressbarWidth = this.defaultProgressSize * this.currentStep + "%";
+  }
+  onButtonChange(Proceed: string): void {
+    this.buttonNext = Proceed; // Update the button text
   }
 
 }

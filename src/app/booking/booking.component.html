@@ -16,7 +16,7 @@
         <app-guest></app-guest>
         }
         @if(currentStep == 4){
-        <app-list-of-halls></app-list-of-halls>
+        <app-list-of-halls (buttonChangeEvent)="onButtonChange($event)"></app-list-of-halls>
         }
         @if(currentStep == 5){
             <app-choose-menu></app-choose-menu>
@@ -28,7 +28,7 @@
                 <button type="button" class="btn btn_cancel fw-500 border rounded-pill mb-10 px-5" (click)="returnToHome()">Cancel</button>
                 <div class="d-flex flex-md-row flex-lg-row flex-xl-row justify-content-between flex-xxl-row">
                     <button type="button" class="btn btn_back rounded-pill px-5 h-40" (click)="back()">Back</button>
-                    <button type="button" class="ms-3 btn btn_next border rounded-pill px-5" (click)="next()">Next</button>
+                    <button type="button" class="ms-3 btn btn_next border rounded-pill px-5" (click)="next()">{{buttonNext}}</button>
                 </div>
             </div>
 

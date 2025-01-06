@@ -323,7 +323,8 @@ html {
   transform: translate(0%, -17%);
   position: fixed;
   z-index: 1050;
-  overflow: auto;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 

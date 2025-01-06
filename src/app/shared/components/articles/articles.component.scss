@@ -29,14 +29,16 @@
     .mat-mdc-table {
         width: gutter-per(100);
         height: gutter-sp(200);
-        overflow: auto;
         box-shadow: none;
-
-
+    }
+    .mat-mdc-header-cell{
+        font-family: "poppins", sans-serif;
     }
 
     .mat-mdc-cell {
         border-bottom-color: white;
+        font-family: "poppins", sans-serif;
+        text-wrap: nowrap;
     }
 
     &__save-btn {

@@ -11,8 +11,6 @@
         align-items: center;
         padding: gutter-sp(14);
         height: gutter-per(100);
-        width: gutter-per(100);
-
 
         .font-color {
             color: $font-ash;
@@ -41,6 +39,7 @@
             color: $black;
             position: relative;
             font-family: "poppins", sans-serif;
+            width: gutter-sp(170);
         }
 
     }

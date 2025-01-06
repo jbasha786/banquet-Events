@@ -74,7 +74,8 @@ export class MenuComponent {
   }
 
   closeDialog() {
-    this.dialogRef.close();
+    this.dialog.closeAll();
+    this.router.navigate(['hallsList']);
   }
   hideIcon() {
     this.isIconDisabled = true;

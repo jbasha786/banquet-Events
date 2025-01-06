@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -32,7 +32,8 @@ import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-
   styleUrl: './list-of-halls.component.scss'
 })
 export class ListOfHallsComponent {
-
+  @Output() buttonChangeEvent = new EventEmitter<string>();
+  buttonNext: string = 'Next';
   hallsList: any;
   reserveBtn: boolean = true;
   requestSent: boolean = true;
@@ -93,6 +94,7 @@ export class ListOfHallsComponent {
   confirm() {
     this.requestSent = true;
     this.requestAccepted = false;
+    this.buttonChangeEvent.emit('Proceed'); 
   }
 
   addArticles() {
