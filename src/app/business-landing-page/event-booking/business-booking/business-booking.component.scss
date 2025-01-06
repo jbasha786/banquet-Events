@@ -1,5 +1,4 @@
 @import "../../../styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
 
 .booking {
 
@@ -17,7 +16,7 @@
             height: gutter-sp(8);
 
             .progress-bar {
-                background-color: var(--primary-color);
+                background-color: $primary-color;
             }
         }
     }
@@ -30,8 +29,8 @@
     }
 
     .btn_back {
-        color: $secondory-color;
-        border: gutter-sp(1) solid $secondory-color;
+        color: $secondary-color;
+        border: gutter-sp(1) solid $secondary-color;
         font-size: gutter-sp(19);
         height: gutter-sp(40);
         font-weight: 500;
@@ -39,7 +38,7 @@
 
     .btn_next {
         color: $white;
-        background: $secondory-color;
+        background: $secondary-color;
         font-size: gutter-sp(19);
         height: gutter-sp(40);
         font-weight: 500;

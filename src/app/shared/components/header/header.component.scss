@@ -1,8 +1,7 @@
 @import "../../../../app/styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
 
 .main_line, .main_line1 {
-  background-color: $secondory-color;
+  background-color: $secondary-color;
   position: absolute;
   left: $value-null;
   width: gutter-per(100);
