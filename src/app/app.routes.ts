@@ -14,6 +14,7 @@ import { LiveEventsComponent } from './live-events/live-events.component';
 import { WeddingPageComponent } from './wedding-page/wedding-page.component';
 import { ContinueGuestComponent } from './core/continue-guest/continue-guest.component';
 import { WelcomeGuestsComponent } from './welcome-guests/welcome-guests.component';
+import { BookingDetailsComponent } from './booking-details/booking-details.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,7 @@ export const routes: Routes = [
     { path: 'hallsList', component: ListOfHallsComponent },
     { path: 'liveEvents', component: LiveEventsComponent },
     { path: 'wedding', component: WeddingPageComponent },
+    { path: 'bokkingDetails', component: BookingDetailsComponent },
     { path: 'continueasguest', component: ContinueGuestComponent },
     { path: 'planner', loadComponent:() =>  import("./planner/planner.component").then(c => c.PlannerComponent)},
     { path: 'welcomeguests', component: WelcomeGuestsComponent },

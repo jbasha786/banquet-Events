@@ -81,6 +81,11 @@ $select-bg: #F3F3F3;
 $cal-view-border-clr: #E8E8E8;
 $admin-table-text:#003861;
 $admin-search:#595959;
+$view-link: #2e70d4;
+$checkin: #00a2a2;
+$checkout: #f24822;
+$payment-bg: #f7f9fc;
+$amount-paid: #406a89;
 
 @function gutter-sp($key) {
   @return #{$key}px;

@@ -1,0 +1,91 @@
+@import '../styles/variable.scss';
+
+.btn {
+  &-cancel {
+    font-size: gutter-sp(11);
+    background-color: $cancelbtn;
+    color: $white;
+    font-weight: 500;
+  }
+
+  &-edit {
+    font-size: gutter-sp(11);
+    background-color: $editbtn;
+    color: $white;
+    font-weight: 500;
+  }
+}
+.status-badge{
+    font-size: gutter-sp(11);
+}
+.section-title {
+  color: $editbtn;
+}
+
+.booking-header,
+.roomType,
+.small-text,
+.text-head,
+.text-para,
+.details {
+  color: $cal-view-title-clr;
+
+  &.small-text {
+    opacity: gutter-per(60);
+  }
+
+  &.text-head {
+    font-size: gutter-sp(12);
+  }
+
+  &.text-para {
+    font-size: gutter-sp(14);
+    font-weight: 500;
+  }
+
+  &.details {
+    color: $cal-view-title-clr;
+  }
+}
+
+.view-link {
+  color: $view-link;
+  text-decoration: none;
+}
+
+.checkin {
+  color: $checkin;
+}
+
+.checkout {
+  color: $checkout;
+}
+
+.payment-details {
+  background-color: $payment-bg;
+  border-radius: gutter-sp(6);
+
+  .payment-title {
+    color: $cal-view-title-clr;
+  }
+
+  .amountpaid {
+    color: $amount-paid;
+  }
+
+  .amount {
+    color: $editbtn;
+  }
+
+  .final-amount {
+    color: $secondary-color;
+  }
+}
+
+.text-cust {
+  color: $editbtn;
+}
+
+.main-name {
+  opacity: gutter-per(75);
+}
