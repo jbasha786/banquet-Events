@@ -425,7 +425,7 @@ html {
     flex-direction: column;
   }
 
-  .fc-dayGridMonth-view .fc-daygrid-event-dot{
+  .fc-dayGridMonth-view .fc-daygrid-event-dot {
     border: none;
     border-radius: gutter-sp(0);
     box-sizing: content-box;
@@ -493,5 +493,21 @@ html {
     background-color: $event-bg-orange;
     border-color: $event-bg-orange;
     color: $white;
+  }
+
+  .eventStyle {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: gutter-sp(10);
+
+    .eventImage {
+      width: gutter-sp(30);
+      height: gutter-sp(30);
+      padding: gutter-sp(5);
+      background: $white;
+      border-radius: gutter-sp(50);
+    }
   }
 }
