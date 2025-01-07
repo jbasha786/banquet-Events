@@ -6,6 +6,8 @@ import { GuestComponent } from './guest/guest.component';
 import { PlaningComponent } from './planing/planing.component';
 import { ListOfHallsComponent } from './list-of-halls/list-of-halls.component';
 import { ChooseMenuComponent } from '../shared/components/choose-menu/choose-menu.component';
+import { BusinessBookingReviewComponent } from '../business-landing-page/event-booking/business-booking-review/business-booking-review.component';
+import { SelectedHallsComponent } from '../shared/components/selected-halls/selected-halls.component';
 
 @Component({
   selector: 'app-booking',
@@ -16,7 +18,9 @@ import { ChooseMenuComponent } from '../shared/components/choose-menu/choose-men
     GuestComponent,
     PlaningComponent,
     ListOfHallsComponent,
-    ChooseMenuComponent],
+    ChooseMenuComponent,
+    BusinessBookingReviewComponent,
+    SelectedHallsComponent],
   templateUrl: './booking.component.html',
   styleUrl: './booking.component.scss'
 })
@@ -25,7 +29,7 @@ export class BookingComponent {
   currentStep: number = 1;
   defaultProgressSize: number = 0;
   progressbarWidth: any;
-  defaultPages: number = 5;
+  defaultPages: number = 6;
 
   constructor(public dialogRef: MatDialogRef<BookingComponent>) {
     this.defaultProgressSize = 100 / this.defaultPages;

@@ -74,8 +74,7 @@ export class MenuComponent {
   }
 
   closeDialog() {
-    this.dialog.closeAll();
-    this.router.navigate(['hallsList']);
+    this.dialogRef.close();
   }
   hideIcon() {
     this.isIconDisabled = true;
@@ -84,7 +83,6 @@ export class MenuComponent {
     this.isIconDisabled = this.searchQuery.trim().length > 0;
   }
   onSave(): void {
-    this.dialog.closeAll();
-    this.router.navigate(['hallsList']);
+    this.dialogRef.close();
   }
 }

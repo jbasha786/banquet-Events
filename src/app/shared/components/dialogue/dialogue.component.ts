@@ -23,6 +23,5 @@ export class DialogueComponent {
   }
   confirm(): void {
     this.dialogRef.close();
-    this.router.navigate(['hallsList']);
   }
 }

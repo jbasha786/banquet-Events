@@ -2,7 +2,7 @@
 
 .selction_dates {
     &__calender {
-        ::ng-deep .mdc-button__label{
+        ::ng-deep .mdc-button__label {
             color: $calenderDate;
             font-weight: 400;
         }
@@ -13,6 +13,16 @@
             .card:hover {
                 border-color: $secondary-color;
             }
+        }
+
+        .calenderDiv ::ng-deep .mat-calendar-body-cell-content.mat-focus-indicator.mat-calendar-body-today {
+            background-color: $secondary-color;
+            color: $white;
+            border: none;
+        }
+
+        .calenderDiv ::ng-deep .mat-calendar-body-selected {
+            background: $primary-color;
         }
     }
 

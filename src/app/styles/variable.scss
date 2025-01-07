@@ -92,6 +92,7 @@ $shape-bg: #f0f6fb;
 $cancel-btn-border: #E42E2E;
 $confirm-text-clr: #008000;
 $selected-border-clr: #1F8730;
+$calenderhover: #F0961B;
 
 @function gutter-sp($key) {
   @return #{$key}px;

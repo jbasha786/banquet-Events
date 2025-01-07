@@ -1,23 +1,25 @@
 <div class="article p-24">
-    <div class="article__header d-flex justify-content-between align-items-top mt-10">
-        <div class="d-flex flex-column">
-            <p class="fs-25 fw-500 my-2">Add Articles</p>
-            <div class="d-flex flex-column flex-md-row mb-2">
-                <p class="fs-12 me-4"> Selected: 12 </p>
-                <span class="fs-12">Total Price: € 1400.00</span>
+    <div class="article__header d-flex flex-column justify-content-between align-items-top mt-10">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column">
+                <p class="fs-25 fw-500 my-2">Add Articles</p>
+                <div class="d-flex flex-column flex-md-row mb-2">
+                    <p class="fs-12 me-4"> Selected: 12 </p>
+                    <span class="fs-12">Total Price: € 1400.00</span>
+                </div>
+            </div>
+            <div (click)="close()" class="cursor mt-3">
+                <mat-icon fontIcon="close"></mat-icon>
             </div>
         </div>
-        <div (click)="close()" class="cursor mt-3">
-            <mat-icon fontIcon="close"></mat-icon>
+        <div class="article__search">
+            <input class="article__search__search-input pl-10" autocomplete="off" placeholder="search for basic..." />
+            <mat-icon class="article__search__search-icon w-20 h-20 fs-19" role="button" (click)="doSomething()"
+                fontIcon="search"></mat-icon>
         </div>
     </div>
-    <div class="article__search">
-        <input class="article__search__search-input pl-10" autocomplete="off" placeholder="search for basic..." />
-        <mat-icon class="article__search__search-icon w-20 h-20 fs-19" role="button" (click)="doSomething()"
-            fontIcon="search"></mat-icon>
-    </div>
-    <div class="mt-20 mb-20">
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <div class="mt-20 mb-20 table h-300 h-lg-400 h-xl-500">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tableArticle">
             <!-- Checkbox Column -->
             <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
@@ -59,9 +61,9 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
         </table>
-        <div class=" button-container mt-10 mr-8 d-flex justify-content-end align-item-center ">
-            <button mat-raised-button color="primary" class="p-2 px-4 border rounded-pill article__save-btn"
-                (click)="onSave()">Save</button>
-        </div>
+    </div>
+    <div class=" buttonSave mt-10 mr-8 d-flex justify-content-end align-item-center ">
+        <button mat-raised-button color="primary" class="p-2 px-4 border rounded-pill article__save-btn"
+            (click)="onSave()">Save</button>
     </div>
 </div>

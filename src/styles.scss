@@ -13,8 +13,7 @@ $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetO
         accent: $VipsBanquetOffers-accent,
         warn: $VipsBanquetOffers-warn,
       ),
-      typography: mat.define-typography-config(
-        $font-family: 'Poppins, sans-serif'
+      typography: mat.define-typography-config($font-family: 'Poppins, sans-serif'
       ),
       density: 0,
     ));
@@ -233,6 +232,12 @@ body {
     }
   }
 
+  .h-xl-#{$i} {
+    @media (min-width: 1440px) {
+      height: #{$i}px;
+    }
+  }
+
   // line-height
   .lh-#{$i} {
     line-height: #{$i}px;
@@ -330,12 +335,15 @@ html {
 
 .fixed-dialog {
   transform: translate(0%, -17%);
-  position: fixed;
+  position: relative;
+  border-radius: gutter-sp(10);
   z-index: 1050;
   overflow: scroll;
   scrollbar-width: none;
 }
-
+.fixed-dialog .mat-mdc-dialog-container .mdc-dialog__surface {
+  overflow: hidden;
+}
 
 .timePartLocation {
   position: absolute !important;

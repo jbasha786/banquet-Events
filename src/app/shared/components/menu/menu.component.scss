@@ -1,13 +1,13 @@
 @import '../../../styles/variable.scss';
 
 .menu_model {
-    overflow: scroll;
-    scrollbar-width: none;
     padding: gutter-sp(10);
-
+    
     .menu {
-        overflow: scroll;
-        scrollbar-width: none;
+        .table {
+            overflow: scroll;
+            scrollbar-width: none;
+        }
         &__search {
             position: relative;
 
@@ -38,10 +38,9 @@
         }
 
         .mat-mdc-table {
-            box-shadow: none;
             width: gutter-sp(500);
-            height: gutter-sp(200);
             overflow: auto;
+            box-shadow: none;
         }
 
         .table_header .mat-mdc-header-cell {
@@ -49,13 +48,13 @@
         }
 
         .menuTable .mat-mdc-header-cell {
-            font-family: "poppins", sans-serif;
             padding: gutter-sp(0) gutter-sp(0) gutter-sp(10) gutter-sp(0);
-            border-bottom: none;
+            border-bottom: gutter-sp(1) solid $white;
         }
-
+        .mdc-data-table__table {
+            border-bottom: gutter-sp(1) solid $white;
+        }
         .menuTable .mat-mdc-cell {
-            font-family: "poppins", sans-serif;
             text-wrap: nowrap;
         }
 

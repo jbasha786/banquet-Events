@@ -91,6 +91,7 @@ export class ListOfHallsComponent {
     this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
     this.requestSent = false;
+    this.buttonChangeEvent.emit('Proceed'); 
   }
 
   getDetails() {
@@ -113,14 +114,13 @@ export class ListOfHallsComponent {
   confirm() {
     this.requestSent = true;
     this.requestAccepted = false;
-    this.buttonChangeEvent.emit('Proceed'); 
   }
 
   addArticles() {
     this.zIndexService.setHeaderZIndex(1000);
     const dialogRef = this.dialog.open(ArticlesComponent, {
       panelClass: 'fixed-dialog',
-      position: { top: '34px' },
+      position: { top: '75px' },
     });
 
     dialogRef.afterClosed().subscribe(() => {

@@ -2,8 +2,26 @@
 @import '../../../styles.scss';
 
 .hallsView {
-    padding: gutter-vw(0) gutter-vw(10);
-    margin: gutter-vw(0) gutter-vw(7);
+    .guest {
+        font-size: gutter-sp(13);
+        padding-left: gutter-sp(12);
+    }
+
+    .guestLabel {
+        font-size: gutter-sp(14);
+        padding-left: gutter-sp(8);
+        padding-top: gutter-sp(22);
+    }
+    .guestClockLabel {
+        font-size: gutter-sp(14);
+        padding-left: gutter-sp(5);
+        padding-top: gutter-sp(22);
+    }
+
+    .guestclock {
+        font-size: gutter-sp(13);
+        padding-left: gutter-sp(7);
+    }
 
     .hall-list {
         border: gutter-sp(1) solid $footer-email-border;
@@ -23,7 +41,6 @@
         }
 
         &__label-hall {
-            font-family: "poppins", sans-serif;
             color: $secondary-color;
         }
 
@@ -37,15 +54,6 @@
             margin-top: gutter-sp(6);
         }
 
-        // .mat-mdc-input-element {
-        //     font-size: gutter-sp(14);
-        //     height: gutter-sp(20);
-        //     color: $black;
-        //     position: relative;
-        //     font-family: "poppins", sans-serif;
-        //     width: gutter-sp(170);
-        // }
-       
         .input-group {
 
             input,
@@ -105,6 +113,17 @@
             padding: gutter-rem(0.375) gutter-rem(0);
 
             img {
+                width: gutter-sp(18);
+                height: gutter-sp(18);
+            }
+        }
+
+        .userImg {
+            background-color: $white;
+            border: gutter-sp(1) solid $white;
+            padding: gutter-rem(0.375) gutter-rem(0);
+
+            img {
                 width: gutter-sp(25);
                 height: gutter-sp(25);
             }
@@ -142,12 +161,10 @@
         }
 
         &__img {
-            width: gutter-sp(310);
-            height: gutter-per(100);
+            width: gutter-per(100);
+            height: auto;
             flex: 1;
-            object-fit: cover;
             border-radius: gutter-sp(6);
-            ;
         }
 
         @media (max-width: 991px) {
@@ -167,11 +184,13 @@
     .reserve {
         background-color: $green-select;
         color: $white;
+        padding: gutter-sp(12) gutter-sp(49);
     }
 
     .selected {
         border: gutter-sp(1) solid $selected-border-clr;
         background: $white;
+        padding: gutter-sp(12) gutter-sp(40);
     }
 
     &__articles {
