@@ -100,7 +100,7 @@
 
                     input[type="date"]::-webkit-calendar-picker-indicator {
                         position: absolute;
-                        left: gutter-per(2);
+                        left: gutter-sp(2);
                         top: gutter-per(25);
                     }
 
@@ -115,7 +115,7 @@
                     }
 
                     .customLabel {
-                        left: gutter-sp(38);
+                        left: gutter-sp(36);
                     }
                 }
 
@@ -133,7 +133,7 @@
                 .border-clr-none {
                     padding: gutter-rem(1.5) gutter-rem(0.25) gutter-rem(0.25);
                     border: gutter-sp(1) solid $white;
-                    font-size: gutter-sp(18);
+                    font-size: gutter-sp(15);
                 }
 
                 .border-clr {
