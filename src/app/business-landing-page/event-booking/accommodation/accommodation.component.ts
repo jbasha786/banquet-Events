@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 
 @Component({
   selector: 'app-accommodation',
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatIcon,
     CommonModule,
-    FormsModule],
+    FormsModule,
+    NgxMatTimepickerModule],
   providers: [],
   templateUrl: './accommodation.component.html',
   styleUrl: './accommodation.component.scss'

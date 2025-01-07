@@ -8,10 +8,10 @@
             </div>
             <div class="custom-outlined-field">
                 <label for="guests" class="custom_label mb-1">Check-In Date</label>
-                <mat-form-field class="w-100 custom_date" appearance="outline">
+                <mat-form-field class="w-100 custom_date" appearance="outline" (click)="picker.open()">
                     <mat-date-range-input [rangePicker]="picker">
-                        <input matStartDate placeholder="Start date">
-                        <input matEndDate placeholder="End date">
+                        <input matStartDate placeholder="Start date" class="custom_time">
+                        <input matEndDate placeholder="End date" class="custom_time">
                     </mat-date-range-input>
                     <mat-icon matIconPrefix>calendar_month</mat-icon>
                     <mat-datepicker-toggle matIconSuffix [for]="picker">
@@ -23,16 +23,19 @@
             </div>
             <div class="mb-4">
                 <label for="duration" class="custom_label mb-1">Event Duration</label>
-                <div class="gap-4 d-flex flex-column flex-md-row flex-lg-column flex-xl-row align-items-end">
-                    <div class="flex-fill w-100">
-                        <label for="startTime" class="custom_label">Start Time</label>
-                        <input type="time" id="startTime" class="form-control custom_input custom_time" placeholder="Start Time">
-                    </div>
-                    <div class="flex-fill w-100">
-                        <label for="endTime" class="custom_label">End Time</label>
-                        <input type="time" id="endTime" class="form-control custom_input custom_time" placeholder="End Time">
-                    </div>
-                    <p class="custom_btn fs-16 text-center cursor m-0 flex-fill w-100" (click)="timePart()">Time Part</p>
+                <div class="gap-0 gap-sm-4 gap-lg-0 gap-xl-4 d-flex flex-column flex-md-row flex-lg-column flex-xl-row align-items-start">
+                    <mat-form-field class="w-100 custom_date" appearance="outline" (click)="startTimepicker.open()">
+                        <input matInput [ngxMatTimepicker]="startTimepicker" placeholder="Start Time" class="custom_time">
+                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                        <ngx-mat-timepicker #startTimepicker></ngx-mat-timepicker>
+                    </mat-form-field>
+                    <mat-form-field class="w-100 custom_date" appearance="outline" (click)="endTimepicker.open()">
+                        <input matInput [ngxMatTimepicker]="endTimepicker" placeholder="End Time" class="custom_time">
+                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                        <ngx-mat-timepicker #endTimepicker></ngx-mat-timepicker>
+                    </mat-form-field>
+                    <p class="custom_btn fs-16 text-center cursor m-0 flex-fill w-100" (click)="timePart()">Time Part
+                    </p>
                 </div>
             </div>
         </div>
