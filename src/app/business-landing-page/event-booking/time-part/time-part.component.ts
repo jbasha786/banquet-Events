@@ -1,11 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  CdkDragPlaceholder,
+  CdkDrag,
+  CdkDropList,
+} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-time-part',
   standalone: true,
-  imports: [MatDialogModule, CommonModule],
+  imports: [MatDialogModule, CommonModule, CdkDropList, CdkDrag, CdkDragPlaceholder],
   templateUrl: './time-part.component.html',
   styleUrl: './time-part.component.scss'
 })
@@ -32,7 +39,15 @@ export class TimePartComponent {
   }
 
   selectTimePart(item: any) {
-    item.isActive = !item.isActive;
+    item.isActive = true;
     this.selectedItemId = item.id;
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.timeParts, event.previousIndex, event.currentIndex);
+  }
+
+  editTimePart(item: any) {
+    console.log(item)
   }
 }

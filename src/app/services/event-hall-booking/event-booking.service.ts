@@ -5,15 +5,19 @@ import { Injectable } from '@angular/core';
 })
 export class EventBookingService {
 
-  confirmedHallDetails!: any;
+  confirmedHallDetails: any[] = [];
 
   constructor() { }
 
   setSelectedHall(event: any) {
-    this.confirmedHallDetails = event;
+    this.confirmedHallDetails.push(event);
   }
 
-  getSelectedHall() {
+  getSelectedHall(): any {
     return this.confirmedHallDetails;
+  }
+
+  clearSelectedServices(){
+    this.confirmedHallDetails = [];
   }
 }

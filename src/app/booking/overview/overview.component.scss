@@ -1,5 +1,4 @@
 @import "../../styles/variable.scss";
-@import "../../custom-css/custom-material-colors.scss";
 
 .overview {
 
@@ -73,7 +72,7 @@
                 &__editArticle {
                     position: relative;
                     padding: gutter-sp(10);
-                    color: $secondory-color;
+                    color: $secondary-color;
                     border-radius: gutter-sp(10);
                     width: gutter-per(100);
                     border: gutter-sp(1) solid $secondary-color;
@@ -87,27 +86,48 @@
                 }
 
                 .dateSection {
-                    background: $white;
                     border-radius: gutter-rem(0.375);
 
-                    .spacebar {
-                        color: $black;
-                        background: $black;
+                    input[type="date"]::-webkit-calendar-picker-indicator {
+                        opacity: 1;
+                        display: block;
+                        background-image: url("../../../assets/images/icons/calendar.png");
+                        background-repeat: no-repeat;
+                        width: gutter-sp(25);
+                        height: gutter-sp(25);
+                        border-width: thin;
                     }
 
-                    .line {
-                        height: gutter-sp(1);
-                        background-color: $black;
-                        width: gutter-sp(15);
-                        margin: gutter-sp(0);
+                    input[type="date"]::-webkit-calendar-picker-indicator {
+                        position: absolute;
+                        left: gutter-per(2);
+                        top: gutter-per(25);
+                    }
+
+                    input::-webkit-datetime-edit-fields-wrapper {
+                        position: relative;
+                        left: gutter-sp(18);
+                    }
+
+                    input::-webkit-datetime-edit {
+                        position: relative;
+                        left: gutter-sp(18);
+                    }
+
+                    .customLabel {
+                        left: gutter-sp(38);
                     }
                 }
-
 
                 .basic-icon {
                     background-color: $white;
                     border: gutter-sp(1) solid $white;
                     padding: gutter-rem(0.375) gutter-rem(0.25);
+
+                    img {
+                        width: gutter-sp(25);
+                        height: gutter-sp(25); 
+                    }
                 }
 
                 .border-clr-none {

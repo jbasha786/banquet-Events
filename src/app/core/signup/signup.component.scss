@@ -1,5 +1,4 @@
 @import "../../../app/styles/variable.scss";
-@import "../../custom-css/custom-material-colors.scss";
 
 .signup {
   margin: $value-null auto;
@@ -7,7 +6,7 @@
   margin-bottom: gutter-vw(4);
 
   &__color {
-    color: $secondory-color;
+    color: $secondary-color;
     
   }
 
@@ -15,7 +14,7 @@
     text-align: center;
 
     &__btn {
-      background-color: $secondory-color;
+      background-color: $secondary-color;
       color: $white;
       border: $value-null;
       border-radius: gutter-sp(5);

@@ -1,4 +1,5 @@
 //colors
+$primary-color: #F0961B;
 $secondary-color: #a62784; 
 $gray: #F0F0F3;
 $border-gray:#e1e1e1;
@@ -67,6 +68,7 @@ $font-dull: #534D59;
 $font-lite: #716e6e;
 $calenderDate: #1b1616;
 $event-input-border-clr: #CACACA;
+$event-radio-border-clr: #49454F;
 $event-acc-btn-clr: #F0961BC7;
 $time-part-line-clr: #DCE3E7;
 $time-part-bg-clr: #ECF6FB;
@@ -81,11 +83,18 @@ $select-bg: #F3F3F3;
 $cal-view-border-clr: #E8E8E8;
 $admin-table-text:#003861;
 $admin-search:#595959;
+
 $view-link: #2e70d4;
 $checkin: #00a2a2;
 $checkout: #f24822;
 $payment-bg: #f7f9fc;
 $amount-paid: #406a89;
+
+$shape-bg: #f0f6fb;
+$cancel-btn-border: #E42E2E;
+$confirm-text-clr: #008000;
+$selected-border-clr: #1F8730;
+
 
 @function gutter-sp($key) {
   @return #{$key}px;

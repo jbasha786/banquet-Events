@@ -1,7 +1,7 @@
 @import "../../../styles/variable.scss";
 
 .time-part {
-    padding: gutter-vw(2);
+    padding: gutter-sp(20);
 
     &__section {
         border: gutter-sp(1) solid $event-input-border-clr;
@@ -15,7 +15,7 @@
         scrollbar-width: none;
 
         .section {
-            padding: gutter-sp(14);
+            padding: gutter-sp(10);
         }
 
         .active {
@@ -47,6 +47,19 @@
             align-items: center;
             justify-content: center;
         }
+
+        .drag-item {
+            cursor: move;
+        }
+
+        .cdk-drag-animating {
+            transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+        }
+
+        .custom-placeholder {
+            background: $white;
+            min-height: gutter-sp(60);
+        }
     }
 
     .footer_btn {
@@ -54,6 +67,15 @@
         width: gutter-sp(120);
         border: none;
         color: $white;
+        padding: gutter-sp(10);
+        border-radius: gutter-sp(50);
+    }
+
+    .footer_btn_skip {
+        border: gutter-sp(1) solid $secondary-color;
+        width: gutter-sp(120);
+        color: $secondary-color;
+        background: $white;
         padding: gutter-sp(10);
         border-radius: gutter-sp(50);
     }
