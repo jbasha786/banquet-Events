@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -34,7 +34,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './list-of-halls.component.scss'
 })
 export class ListOfHallsComponent {
-
+  @Output() buttonChangeEvent = new EventEmitter<string>();
+  buttonNext: string = 'Next';
   hallsList: any;
   reserveBtn: boolean = true;
   requestSent: boolean = true;
@@ -90,6 +91,7 @@ export class ListOfHallsComponent {
     this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
     this.requestSent = false;
+    this.buttonChangeEvent.emit('Proceed'); 
   }
 
   getDetails() {
@@ -118,7 +120,7 @@ export class ListOfHallsComponent {
     this.zIndexService.setHeaderZIndex(1000);
     const dialogRef = this.dialog.open(ArticlesComponent, {
       panelClass: 'fixed-dialog',
-      position: { top: '34px' },
+      position: { top: '75px' },
     });
 
     dialogRef.afterClosed().subscribe(() => {
@@ -129,8 +131,9 @@ export class ListOfHallsComponent {
 
   chooseMenu() {
     this.dialog.open(ChooseMenuComponent, {
-      width: '90%',
-      height: '100%',
+      width: '100%',
+      height: '100vh',
+      maxWidth: '100%',
       panelClass: 'choosemenu-dialog',
       position: { left: '10%' },
     });

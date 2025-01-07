@@ -5,17 +5,19 @@
         <button class="btn_search border-0" type="submit">
           <i class="bi bi-search"></i>
         </button>
-        <input class="form-control pl-30 py-2 search_input fs-12 ml-2" type="search" placeholder="Search For Bookings"
+        <input class="form-control pl-30 py-2 search_input fs-12 ml-2" type="search" placeholder="Search..."
           aria-label="Search">
       </form>
-      <mat-tab-group mat-stretch-tabs="false" class="tabTitle">
-        <mat-tab label="Booking History" class="tabLabel">
-          <app-booking-history-view></app-booking-history-view>
-        </mat-tab>
-        <mat-tab label="Invoice History">
-          <app-invoice-history></app-invoice-history>
-        </mat-tab>
-      </mat-tab-group>
+      <div>
+        <mat-tab-group mat-stretch-tabs="false" class="tabTitle">
+          <mat-tab label="Booking History" class="tabLabel">
+            <app-booking-history-view></app-booking-history-view>
+          </mat-tab>
+          <mat-tab label="Invoice History">
+            <app-invoice-history></app-invoice-history>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
     </div>
   </div>
 </div>

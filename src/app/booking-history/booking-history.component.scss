@@ -44,11 +44,19 @@
     display: none;
   }
 
+  .tabTitle ::ng-deep .mat-mdc-tab-header-pagination-controls-enabled .mat-mdc-tab-header-pagination {
+    display: none;
+  }
+
+  .tabTitle ::ng-deep .mdc-tab {
+    padding: 0;
+  }
+
   .tabTitle ::ng-deep .mdc-tab__text-label {
     font-family: "poppins", sans-serif;
     font-size: gutter-sp(30);
     letter-spacing: normal;
-    margin-right: gutter-sp(30);
+    margin-right: gutter-vw(3);
     text-transform: none;
   }
 
@@ -79,7 +87,8 @@
     }
 
     .tabTitle ::ng-deep .mdc-tab__text-label {
-      font-size: gutter-sp(22);
+      font-size: gutter-sp(16);
+      // margin: 0px 4px;
     }
   }
 }
