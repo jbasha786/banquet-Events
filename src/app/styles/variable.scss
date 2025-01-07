@@ -83,6 +83,9 @@ $admin-table-text:#003861;
 $admin-search:#595959;
 $cal-day-text-clr: #969696;
 $cal-day-bg-clr: #D4D5F4;
+$event-bg-green:#4AAF91;
+$event-bg-orange:#E39A37;
+
 
 @function gutter-sp($key) {
   @return #{$key}px;

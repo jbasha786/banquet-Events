@@ -9,7 +9,7 @@ hr {
     background: $cal-bg;
     color: $white;
     padding: gutter-vw(1.5);
-    height: gutter-vh(100);
+    height: gutter-per(100);
     overflow-y: scroll;
     scrollbar-width: thin;
     min-width: gutter-sp(400);

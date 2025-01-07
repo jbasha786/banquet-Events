@@ -14,114 +14,68 @@ import dayGridPlugin from '@fullcalendar/daygrid'
   styleUrl: './planner-view.component.scss'
 })
 export class PlannerViewComponent {
-  @ViewChild('calendar') calendar!: FullCalendarComponent;
-
-  selectViewType: string = "Day";
-
   calendarDailyEvents = [
     {
       title: 'Event 1',
       start: "2025-01-06T10:30:00",
       end: '2025-01-06T11:30:00',
-      condition: 'high'
+      description:'text',
+      imageUrl:"",
+      classNames:['event-green']
     },
     {
       title: 'Meeting with John Deo',
       start: '2025-01-06T00:00:00',
-      end: '2025-01-06T23:00:00',
+      end: '2025-01-06T05:00:00',
+      imageUrl:"",
       description: 'Discuss project details',
-      condition: "low"
+      classNames:['event-primary']
     }, {
       title: 'Meeting with John',
-      start: '2025-01-06T00:00:00',
-      end: '2025-01-06T23:00:00',
-      description: 'Discuss project details'
-    },
-  ];
-
-  calendarWeekEvents = [
-    {
-      title: 'Event 1',
-      start: "2025-01-06T10:30:00",
-      end: '2025-01-06T11:30:00',
-      condition: 'high'
-    },
-    {
-      title: 'Meeting with John Deo',
-      start: '2025-01-06T00:00:00',
-      end: '2025-01-06T23:00:00',
+      start: '2025-01-06T06:00:00',
+      end: '2025-01-06T11:00:00',
       description: 'Discuss project details',
-      condition: "low"
-    }, {
-      title: 'Meeting with John',
-      start: '2025-01-07T00:00:00',
-      end: '2025-01-07T23:00:00',
-      description: 'Discuss project details'
+      classNames:['event-orange']
     },
   ];
 
   ngOnInit(): void {
-    console.log(new Date())
   }
 
   calendarOptionsDay: CalendarOptions = {
-    plugins: [timeGridPlugin],
+    plugins: [timeGridPlugin, dayGridPlugin],
     initialView: 'timeGridDay',
     allDaySlot: false,
-    headerToolbar: false,
     weekends: true,
-    eventDidMount: (info: any) => {
-      const event = info.event;
-      const el = info.el;
-      if (event.extendedProps.condition === 'high') {
-        el.style.backgroundColor = '#4AAF91'
-        el.style.width = "200px"
-        el.style.border = 'none'
-      } else if (event.extendedProps.condition === 'low') {
-        el.style.backgroundColor = '#A85191',
-          el.style.width = "200px"
-        el.style.border = 'none'
-      } else {
-        el.style.color = 'black',
-          el.style.width = "200px",
-          el.style.border = "1px",
-          el.style.borderColor = "#FFDE24"
+    headerToolbar: {
+      left: `prev,next`,
+      right: 'timeGridDay,timeGridWeek,dayGridMonth'
+    },
+    dayHeaderFormat: {
+      weekday: 'short',
+      day: "2-digit"
+    },
+    views: {
+      dayGridMonth: {
+        dayHeaderFormat: { weekday: 'short' },
       }
     },
-    dayHeaderFormat: {
-      weekday: 'short',
-      day: "2-digit"
-    }
+    // eventContent: function(arg) {
+    //   const { event } = arg;
+    //   const imageUrl = event.extendedProps[0].imageUrl || '';
+    //   const description = event.extendedProps[0].description || '';
+      
+    //   return {
+    //     html: `
+    //       <div class="event-content">
+    //         <img src="${imageUrl}" alt="Event Image" class="event-image"/>
+    //         <div class="event-details">
+    //           <span class="event-title">${event.title}</span>
+    //           <span class="event-description">${description}</span>
+    //         </div>
+    //       </div>
+    //     `
+    //   };
+    // },
   };
-
-  calendarOptionsWeek: CalendarOptions = {
-    plugins: [timeGridPlugin],
-    initialView: 'timeGridWeek',
-    headerToolbar: false,
-    weekends: true,
-    dayCellClassNames: 'week',
-    allDaySlot: false,
-    dayHeaderFormat: {
-      weekday: 'short',
-      day: "2-digit"
-    },
-  };
-
-  calendarOptionsMonth: CalendarOptions = {
-    plugins: [dayGridPlugin],
-    initialView: 'dayGridMonth',
-    headerToolbar: false,
-    weekends: true,
-    allDaySlot: false,
-    events: [
-      { title: 'Meeting', start: new Date() }
-    ]
-  };
-
-  selectView(view: string): void {
-    this.selectViewType = view;
-  }
-
-
-
 }

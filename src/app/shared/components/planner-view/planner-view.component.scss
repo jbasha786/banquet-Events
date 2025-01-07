@@ -43,10 +43,11 @@
         .viewType {
             background: none;
             border: none;
-            color:$cal-view-title-clr;
+            color: $cal-view-title-clr;
             width: gutter-sp(80);
             height: gutter-sp(30);
         }
+
         .active {
             background-color: $cal-current-date-bg;
             font-weight: 700;
@@ -54,4 +55,13 @@
         }
     }
 }
-  
+
+
+.calendar_view_section {
+    --fc-today-bg-color: #{$white};
+    --fc-button-bg-color: #{$white};
+    --fc-button-border-color:#{$white};
+    --fc-button-text-color:#{$cal-view-title-clr};
+    --fc-button-active-bg-color: #{$cal-current-date-bg};
+    --fc-button-active-border-color:#{$cal-current-date-bg};
+}
