@@ -449,6 +449,94 @@
             "src": "/assets/images/moment/2.svg"
         }
     ],
+    "bookingdetails": [
+        {
+            "title": "Check In",
+            "desc": "Thu 04-Nov-2024"
+           
+        },
+        {
+            "title": "Check Out",
+            "desc": "Thu 04-Nov-2024"
+           
+        },
+        {
+            "title": "Duration",
+            "desc": "8 hrs"
+            
+        },
+        {
+            "title": "No. of Guests",
+            "desc": "50"
+           
+        },
+        {
+            "title": "Arrangement Type",
+            "desc": "U-Shaped"
+           
+        },
+        {
+            "title": "Package",
+            "desc": "Birthday"
+            
+        },
+        {
+            "title": "Menu",
+            "desc": "50"
+            
+        },
+        {
+            "title": "Articles",
+            "desc": "50"
+            
+        }
+    ],
+    "paymentDetails": [
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "Total Paid",
+          "amount": "16000.00"
+        }
+      ],
+    "customerDetails":  [
+        {
+          "title": "Organizer Contact Person",
+          "name": "John Doe",
+          "phone": "+31 447 258 8520"
+        },
+        {
+          "title": "Internal Employee",
+          "name": "John Doe",
+          "phone": "+31 447 258 8520"
+        },
+        {
+          "title": "Relation",
+          "name": "Friend"
+        }
+      ],
+    
+      "host": [
+        {
+          "title": "Front Office Manager",
+          "name":  "DPK Riya Roy",
+          "phone": "+31 447 258 8520"
+        }
+      ],
     "invoice_historyTable": [
         {
             "date": "10 oct 2024",

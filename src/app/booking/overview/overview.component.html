@@ -51,21 +51,20 @@
                         <label for="guestCount">Guests</label>
                     </div>
                 </div>
-                <div class="dateSection">
-                    <div class="d-flex mb-3 align-items-center flex-column flex-md-row flex-lg-column flex-xl-row gap-2">
-                        <div class="input-group custom_icon border-clr" id="datepicker">
-                            <div class="form-floating">
-                                <input type="date" class="form-control border-clr-none" id="datepicker"
-                                    placeholder="Guests" [value]="checkinDate" [(ngModel)]="checkinDate">
-                                <label for="guestCount" class="customLabel">Check-in</label>
-                            </div>
+                <div
+                    class="dateSection d-flex mb-3 align-items-center flex-column flex-md-row flex-lg-column flex-xxl-row gap-2">
+                    <div class="input-group custom_icon border-clr" id="datepicker">
+                        <div class="form-floating">
+                            <input type="date" class="form-control border-clr-none" id="datepicker" placeholder="Guests"
+                                [value]="checkinDate" [(ngModel)]="checkinDate">
+                            <label for="guestCount" class="customLabel">Check-in</label>
                         </div>
-                        <div class="input-group border-clr custom_icon" id="datepicker">
-                            <div class="form-floating">
-                                <input type="date" class="form-control border-clr-none" id="datepicker"
-                                    placeholder="Guests" [(ngModel)]="checkOutDate" [value]="checkOutDate">
-                                <label for="guestCount" class="customLabel">Check-out</label>
-                            </div>
+                    </div>
+                    <div class="input-group border-clr custom_icon" id="datepicker">
+                        <div class="form-floating">
+                            <input type="date" class="form-control border-clr-none" id="datepicker" placeholder="Guests"
+                                [(ngModel)]="checkOutDate" [value]="checkOutDate">
+                            <label for="guestCount" class="customLabel">Check-out</label>
                         </div>
                     </div>
                 </div>
@@ -84,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex gap-3 w-100 flex-column flex-md-row flex-lg-column flex-xl-row">
+                <div class="d-flex gap-3 w-100 flex-column flex-md-row flex-lg-column flex-xxl-row">
                     <div class="fs-20 fw-medium overview__content__edit__section__editArticle text-center">Add Articles
                     </div>
                     <div class="fs-20 fw-medium overview__content__edit__section__editArticle text-center">Choose Menu

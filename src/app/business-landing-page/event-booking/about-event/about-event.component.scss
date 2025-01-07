@@ -1,10 +1,21 @@
 @import "../../../styles/variable.scss";
 
 .about-business-event {
+
     .custom_label,
     .custom_radio,
     .custom_radio_label {
         opacity: gutter-per(75);
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
     }
 
     .custom_input:focus,
@@ -33,7 +44,7 @@
         font-weight: 500;
     }
 
-    .custom_radio:checked{
+    .custom_radio:checked {
         background-color: $font-clr;
     }
 }

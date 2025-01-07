@@ -3,7 +3,7 @@
 .booking {
 
     &__model {
-        height: gutter-vh(70);
+        height: gutter-per(90);
         overflow-y: auto;
         scrollbar-width: gutter-vw(5);
     }
