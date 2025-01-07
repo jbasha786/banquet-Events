@@ -1,7 +1,7 @@
 @use "@angular/material" as mat;
 @import "./app/styles/variable.scss";
-@import "./app/custom-css/custom-material-colors.scss";
-@import 'typeface-poppins/index.css';
+@import 'typeface-poppins';
+
 @include mat.core();
 $VipsBanquetOffers-primary: mat.define-palette(mat.$indigo-palette);
 $VipsBanquetOffers-accent: mat.define-palette(mat.$pink-palette,
@@ -13,18 +13,19 @@ $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetO
         accent: $VipsBanquetOffers-accent,
         warn: $VipsBanquetOffers-warn,
       ),
-      typography: mat.define-typography-config(),
+      typography: mat.define-typography-config($font-family: 'Poppins, sans-serif'
+      ),
       density: 0,
     ));
 @include mat.all-component-themes($VipsBanquetOffers-theme);
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
   color: $font-clr !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 @for $i from 0 through 500 {
@@ -164,6 +165,12 @@ body {
     padding-bottom: 0px + $i;
   }
 
+  .pb-md-#{$i} {
+    @media (min-width: 992px) {
+      padding-bottom: #{$i}px !important;
+    }
+  }
+
   .pl-#{$i} {
     padding-left: 0px + $i !important;
   }
@@ -225,6 +232,12 @@ body {
     }
   }
 
+  .h-xl-#{$i} {
+    @media (min-width: 1440px) {
+      height: #{$i}px;
+    }
+  }
+
   // line-height
   .lh-#{$i} {
     line-height: #{$i}px;
@@ -271,6 +284,7 @@ body {
   .gx-#{$i} {
     --bs-gutter-x: #{$i}rem;
   }
+
   .gx-lg-#{$i} {
     @media (min-width: 992px) {
       --bs-gutter-x: #{$i}rem !important;
@@ -321,11 +335,21 @@ html {
 
 .fixed-dialog {
   transform: translate(0%, -17%);
-  position: fixed;
+  position: relative;
+  border-radius: gutter-sp(10);
   z-index: 1050;
-  overflow: auto;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.fixed-dialog .mat-mdc-dialog-container .mdc-dialog__surface {
+  overflow: hidden;
 }
 
+.shape-dialog-wrapper {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    scrollbar-width: none;
+  }
+}
 
 .timePartLocation {
   position: absolute !important;
@@ -333,9 +357,22 @@ html {
 
   .mat-mdc-dialog-container .mdc-dialog__surface {
     border-radius: gutter-sp(12);
+    scrollbar-width: none;
   }
 }
 
 .page_content {
   padding: gutter-vw(2) gutter-vw(9) gutter-vw(6) gutter-vw(10.4);
+}
+
+.accommodation {
+  .mat-mdc-form-field-icon-prefix {
+    opacity: gutter-per(40);
+  }
+
+  .custom_date {
+    .mat-date-range-input-container {
+      font-size: gutter-sp(14);
+    }
+  }
 }

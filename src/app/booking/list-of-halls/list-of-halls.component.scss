@@ -1,16 +1,34 @@
 @import '../../styles/variable.scss';
-@import '../../custom-css/custom-material-colors.scss';
+@import '../../../styles.scss';
 
 .hallsView {
-    padding: gutter-vw(0) gutter-vw(5);
+    .guest {
+        font-size: gutter-sp(13);
+        padding-left: gutter-sp(12);
+    }
+
+    .guestLabel {
+        font-size: gutter-sp(14);
+        padding-left: gutter-sp(8);
+        padding-top: gutter-sp(22);
+    }
+    .guestClockLabel {
+        font-size: gutter-sp(14);
+        padding-left: gutter-sp(5);
+        padding-top: gutter-sp(22);
+    }
+
+    .guestclock {
+        font-size: gutter-sp(13);
+        padding-left: gutter-sp(7);
+    }
 
     .hall-list {
         border: gutter-sp(1) solid $footer-email-border;
         border-radius: gutter-sp(5);
         align-items: center;
+        padding: gutter-sp(14);
         height: gutter-per(100);
-        width: gutter-per(100);
-
 
         .font-color {
             color: $font-ash;
@@ -23,18 +41,92 @@
         }
 
         &__label-hall {
-            color: $secondory-color;
+            color: $secondary-color;
+        }
+
+        .custom_clr {
+            color: $secondary-color;
         }
 
         .hall-img {
-            width: gutter-sp(28);
-            height: gutter-sp(30);
+            width: gutter-sp(34);
+            height: gutter-sp(32);
+            margin-top: gutter-sp(6);
         }
 
-        .mat-mdc-input-element {
-            font-size: gutter-sp(14);
-            height: gutter-sp(16);
-            font-family: "poppins", sans-serif;
+        .input-group {
+
+            input,
+            select {
+                border: none;
+            }
+
+            input:focus,
+            select:focus {
+                border: none;
+                box-shadow: none;
+            }
+
+            .custom_select select {
+                --bs-form-select-bg-img: none
+            }
+        }
+
+        .dateSection {
+            border-radius: gutter-rem(0.375);
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                opacity: 1;
+                display: block;
+                background-image: url("../../../assets/images/halls/calender-hall.png");
+                background-repeat: no-repeat;
+                width: gutter-sp(32);
+                height: gutter-sp(36);
+                border-width: thin;
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                position: absolute;
+                left: gutter-per(2);
+                top: gutter-per(25);
+            }
+
+            input::-webkit-datetime-edit-fields-wrapper {
+                position: relative;
+                left: gutter-sp(18);
+            }
+
+            input::-webkit-datetime-edit {
+                position: relative;
+                left: gutter-sp(18);
+            }
+
+            .customLabel {
+                left: gutter-sp(38);
+                color: $secondary-color;
+            }
+        }
+
+        .basic-icon {
+            background-color: $white;
+            border: gutter-sp(1) solid $white;
+            padding: gutter-rem(0.375) gutter-rem(0);
+
+            img {
+                width: gutter-sp(18);
+                height: gutter-sp(18);
+            }
+        }
+
+        .userImg {
+            background-color: $white;
+            border: gutter-sp(1) solid $white;
+            padding: gutter-rem(0.375) gutter-rem(0);
+
+            img {
+                width: gutter-sp(25);
+                height: gutter-sp(25);
+            }
         }
 
     }
@@ -54,7 +146,7 @@
             text-align: center;
 
             &__conformed-color {
-                color: green;
+                color: $confirm-text-clr;
             }
 
             .sentImg {
@@ -69,10 +161,10 @@
         }
 
         &__img {
-            width: gutter-sp(250);
+            width: gutter-per(100);
             height: auto;
             flex: 1;
-            object-fit: cover;
+            border-radius: gutter-sp(6);
         }
 
         @media (max-width: 991px) {
@@ -86,45 +178,28 @@
     }
 
     &__priceColor {
-        color: var(--primary-color);
+        color: $primary-color;
     }
 
     .reserve {
         background-color: $green-select;
-        color: white;
+        color: $white;
+        padding: gutter-sp(12) gutter-sp(49);
     }
 
-    .cancel {
-        border: gutter-sp(1) solid var(--primary-color);
-        color: var(--primary-color);
+    .selected {
+        border: gutter-sp(1) solid $selected-border-clr;
+        background: $white;
+        padding: gutter-sp(12) gutter-sp(40);
     }
 
     &__articles {
-        color: $secondory-color;
+        text-wrap: nowrap;
+        color: $secondary-color;
     }
 
     &__image_desc {
         max-width: gutter-per(40);
         flex: 1 1 auto;
-    }
-
-    ::ng-deep .mat-mdc-text-field-wrapper {
-        background-color: none;
-    }
-
-    ::ng-deep .mdc-text-field--filled {
-        background: none;
-    }
-
-    ::ng-deep .mat-input-element {
-        font-size: gutter-sp(12);
-    }
-
-    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
-        display: none;
-    }
-
-    ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
-        display: none
     }
 }

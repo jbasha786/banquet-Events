@@ -9,6 +9,7 @@
         height: gutter-sp(45);
         color: $tableCellColor;
         font-weight: 500;
+        text-wrap: nowrap;
         font-size: gutter-sp(15);
     }
 
@@ -17,6 +18,7 @@
         font-size: gutter-sp(15);
         background: $tabHeadercolor;
         color: $black;
+        text-wrap: nowrap;
         font-weight: 400;
     }
 

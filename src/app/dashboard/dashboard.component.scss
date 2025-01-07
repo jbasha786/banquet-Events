@@ -1,5 +1,4 @@
 @import "../../app/styles/variable.scss";
-@import "../../app/custom-css/custom-material-colors.scss";
 
 //main banner with content
 @mixin full-background($image-path) {
@@ -50,7 +49,7 @@
 				border: none;
 				color: $white;
 				margin-top: gutter-sp(20);
-				background: var(--primary-color);
+				background: $primary-color;
 				opacity: 0;
 				animation: fadeIn 4s forwards;
 				padding: gutter-sp(8) gutter-sp(42);
@@ -292,11 +291,11 @@
 
 
 	&__color {
-		color: $secondory-color;
+		color: $secondary-color;
 	}
 
 	&__btn {
-		background: $secondory-color;
+		background: $secondary-color;
 		color: $white;
 		border-radius: gutter-sp(8);
 		border: none;

@@ -4,9 +4,11 @@
     &__section {
         border: gutter-sp(1) solid $event-input-border-clr;
         border-radius: gutter-sp(6);
-        padding: gutter-vw(2);
-        max-height: gutter-sp(380);
+        padding: gutter-sp(20);
         overflow-y: auto;
         scrollbar-width: thin;
+    }
+    .eventInfo {
+        word-wrap: break-word;
     }
 }

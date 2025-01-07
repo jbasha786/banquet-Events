@@ -1,5 +1,4 @@
 @import "../../styles/variable.scss";
-@import "../../custom-css/custom-material-colors.scss";
 
 .planing {
     &__process {
@@ -7,7 +6,7 @@
             height: gutter-sp(8);
 
             .progress-bar {
-                background-color: $secondory-color;
+                background-color: $secondary-color;
             }
         }
     }

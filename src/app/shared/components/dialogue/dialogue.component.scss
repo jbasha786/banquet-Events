@@ -1,30 +1,37 @@
 @import "../../../../app/styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
-.mat-body{
-   
+.hallDialog{
+   .title{
+    color: $dialogfontcolor;
+    font-family: 'Poppins', sans-serif;
+   }
+   .areyou{
+    color: $dialogfontcolor;
+    font-family: 'Poppins', sans-serif;
+   }
     .buttons{
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
-        padding: 10px;
+        margin-bottom: gutter-sp(20);
+        padding: gutter-sp(10);
         .mat-button{
-            border: 1px solid black;
+            border: gutter-sp(1) solid $black;
         }
-        .span_color{
-            color: black;
-            background: rgba(39, 39, 39, 1);
+        .title{
+            color: $dialogfontcolor;
+            font-family: 'Poppins', sans-serif;
+            background: $dialogfontcolor;
         }
         &__cancel{
-            border-radius: 50vw;
-            width: 5vw;
-            background: linear-gradient(90deg, #676767 0%, #C8B0AA 100%);
-            color: $white;
-            ;
+            border-radius: gutter-vw(50);
+            width: gutter-vw(5);
+            background: linear-gradient(90deg, $dialogBG1 gutter-per(0), $dialogBG2 gutter-per(100));
         }
         &__yes{
-            border-radius: 50vw;
-            width: 5vw;
-            background-color: $secondory-color;
+            border-radius: gutter-vw(50);
+            width: gutter-vw(5);
+            background-color: $secondary-color;
+        }
+        ::ng-deep .mat-mdc-button  .mdc-button__label{
             color: $white;
         }
     }
