@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './planner-header.component.scss'
 })
 export class PlannerHeaderComponent {
-  // notifications: notificationModel[] = [];
   isSearchBarVisible: boolean = true;
   notificationCount: number = 5;
   userName: string = "Priyanka Kalidindi";
