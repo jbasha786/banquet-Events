@@ -5,6 +5,7 @@
   background-color: $white;
   border-bottom: gutter-sp(1) solid $tableCellColor;
   position: relative;
+  height: gutter-sp(72);
 }
 
 .form-search{
@@ -34,7 +35,7 @@
 
 .notification-card {
   position: absolute;
-  top: gutter-sp(72);
+  top: gutter-sp(71);
   right: gutter-sp(0);
   border-top: $black;
   background: white;
@@ -46,10 +47,6 @@
 }
 .notification-close{
   color: $notifyclose;
-}
-
-.user-info {
-  // gap:  gutter-sp(10);
 }
 
 .user-img {
@@ -100,7 +97,6 @@
   box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $font-ash; //0px 4px 8px  rgba(0, 0, 0, 0.1);
   border-radius: gutter-sp(5);
   padding: gutter-sp(10);
-  // width: gutter-sp(300);
   z-index: 100;
 }
 
@@ -126,10 +122,7 @@
 }
 
 .search_input {
-  // width: gutter-sp(260);
-  // height: gutter-sp(45);
   max-width: guttre-per(100);
-  // font-size: gutter-sp(16);
   font-weight: 300;
 }
 
@@ -168,7 +161,6 @@
 .newBtn {
   color: $notifyNewColor;
   border-radius: gutter-sp(5);
-  // font-size: gutter-sp(14);
   background-color: $notufyNewBg;
 }
 

@@ -5,14 +5,14 @@
         (click)="goToHome()">
     </a>
   </div>
-  <div class="header-menu d-flex align-items-center gap-auto gap-lg-40">
+  <div class="header-menu d-flex align-items-center gap-30 gap-lg-40">
     @if(isSearchBarVisible){
     <div class="form-search">
       <form class="search" role="search">
         <button class="btn_search border-0" type="submit">
           <i class="bi bi-search"></i>
         </button>
-        <input class="form-control pl-30 py-2 search_input fs-12 ml-2 w-sm-80 w-md-120 w-lg-260 h-40 h-md-45 fs-10 fs-lg-16" type="Search" placeholder="Search..."
+        <input class="form-control pl-30 py-2 search_input fs-12 ml-2 w-md-120 w-lg-260 h-40 h-md-45 fs-10 fs-lg-16" type="Search" placeholder="Search..."
           aria-label="Search">
       </form>
     </div>
@@ -22,7 +22,7 @@
       <span class="badge">3</span>
     </div>
     @if(isDivOpen){
-    <div class="notification-card d-flex flex-column gy-5 wid-sm-90 w-lg-420">
+    <div class="notification-card d-flex flex-column gy-5 wid-sm-55 w-lg-420">
       <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
           <img src="../../../../assets/images/planner/header/notifications/notify.svg" class="notifyImg mr-20">
