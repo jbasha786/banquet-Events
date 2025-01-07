@@ -28,7 +28,7 @@ export class BusinessLandingPageComponent {
       width: '100vw',
       height: '100vh',
       maxWidth: '100vw',
-      panelClass: 'custom-dialog-wrapper',
+      panelClass: 'shape-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true

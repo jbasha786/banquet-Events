@@ -345,12 +345,19 @@ html {
   overflow: hidden;
 }
 
+.shape-dialog-wrapper {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    scrollbar-width: none;
+  }
+}
+
 .timePartLocation {
   position: absolute !important;
   top: gutter-sp(10);
 
   .mat-mdc-dialog-container .mdc-dialog__surface {
     border-radius: gutter-sp(12);
+    scrollbar-width: none;
   }
 }
 
