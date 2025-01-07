@@ -397,37 +397,37 @@
         "refNumber": "123456-2023",
         "vat": "00000000"
     },
-    "menu" : [
-              {
-                "id": 1, 
-                "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
-                "qty": 222,
-                "price": "$4"
-              },
-              {
-                "id": 2, 
-                "name": "Onbeperkt koffie thee en fris ",
-                "qty": 3,
-                "price": "€ 7.70"
-              },
-              {
-                "id": 3, 
-                "name": "Kaas broodjes (vega)",
-                "qty": 4,
-                "price": "€ 7.70"
-              },
-              {
-                "id": 4, 
-                "name": "Pizzapunt",
-                "qty": 5,
-                "price": "€ 7.70"
-              },
-              {
-                "id": 5, 
-                "name": "Zacht wit puntje met spread sla en kipfilet",
-                "qty": 5,
-                "price": "€ 7.70"
-              }
+    "menu": [
+        {
+            "id": 1,
+            "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+            "qty": 222,
+            "price": "$4"
+        },
+        {
+            "id": 2,
+            "name": "Onbeperkt koffie thee en fris ",
+            "qty": 3,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 3,
+            "name": "Kaas broodjes (vega)",
+            "qty": 4,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 4,
+            "name": "Pizzapunt",
+            "qty": 5,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 5,
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "qty": 5,
+            "price": "€ 7.70"
+        }
     ],
     "moment": [
         {
