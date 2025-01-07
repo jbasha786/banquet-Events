@@ -90,20 +90,12 @@ export class PlannerHeaderComponent {
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "Pending"
-    },
-    {
-      src: "/assets/images/planner/header/notifications/Avatar-blue.svg",
-      notifiTitle: "Magenta",
-      time: "6 Nov 2024  08:00 AM - 11:30 AM",
-      duration: "5 min ago",
-      statusButton: "Pending"
     }
 
   ]
 
   constructor(private router: Router, private defaultService: DefaultService) { }
   ngOnInit() {
-  // this.getInitialData();
   }
 
   openNotifications(): void {
@@ -118,11 +110,6 @@ export class PlannerHeaderComponent {
     this.router.navigate(['']);
   }
 
-  // getInitialData() {
-  //   this.defaultService.getJSON().subscribe((result: any) => {
-  //     this.notifications = result?.plannerHeaderNotification;
-  //   })
-  // }
   close() {
     this.isDivOpen = false;
     this.isSearchBarVisible = true; 
