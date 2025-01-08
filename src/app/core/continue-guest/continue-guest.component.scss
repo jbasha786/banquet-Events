@@ -1,5 +1,4 @@
 @import "../../../app/styles/variable.scss";
-@import "../../custom-css/custom-material-colors.scss";
 
 .signup {
   margin: $value-null auto;
@@ -7,7 +6,7 @@
   margin-bottom: gutter-vw(4);
 
   &__color {
-    color: $secondory-color;
+    color: $secondary-color;
   }
  }
  textarea::placeholder {

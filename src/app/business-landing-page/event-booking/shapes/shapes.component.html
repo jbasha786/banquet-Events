@@ -1,10 +1,10 @@
-<div class="shapes">
+<div class="shapes mb-300 mb-lg-200">
     <p class="fs-24 fs-lg-30 fw-medium text-center pb-20">Shape of Arrangements?</p>
     <div class="shapes__section">
-        <div class="row w-100">
+        <div class="row w-100 p-0">
             <ng-container *ngFor="let shape of shapes">
-                <div class="col-10 col-lg-3 text-center image m-auto">
-                    <div class="image__section">
+                <div class="col-10 col-lg-3 text-center image m-auto p-15" (click)="selectShape(shape)">
+                    <div class="image__section" [ngClass]="shape.isActive && selectedShapeId === shape.id ? 'active': ''">
                         <img [src]="shape.src" [alt]="shape.name">
                         <p class="m-0 pt-15 pb-15 fw-medium fs-16 name">{{shape.name}}</p>
                     </div>

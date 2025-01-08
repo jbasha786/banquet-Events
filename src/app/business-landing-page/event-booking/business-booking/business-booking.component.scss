@@ -1,10 +1,9 @@
 @import "../../../styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
 
 .booking {
 
     &__model {
-        height: gutter-vh(70);
+        height: gutter-per(100);
         overflow-y: auto;
         scrollbar-width: gutter-vw(5);
     }
@@ -17,7 +16,7 @@
             height: gutter-sp(8);
 
             .progress-bar {
-                background-color: var(--primary-color);
+                background-color: $primary-color;
             }
         }
     }
@@ -30,8 +29,8 @@
     }
 
     .btn_back {
-        color: $secondory-color;
-        border: gutter-sp(1) solid $secondory-color;
+        color: $secondary-color;
+        border: gutter-sp(1) solid $secondary-color;
         font-size: gutter-sp(19);
         height: gutter-sp(40);
         font-weight: 500;
@@ -39,7 +38,7 @@
 
     .btn_next {
         color: $white;
-        background: $secondory-color;
+        background: $secondary-color;
         font-size: gutter-sp(19);
         height: gutter-sp(40);
         font-weight: 500;
@@ -48,8 +47,8 @@
     .dialog-btns {
         position: fixed;
         bottom: gutter-sp(0);
-        background: white;
-        box-shadow: gutter-sp(0) gutter-sp(3) gutter-sp(18) $shadow-black;
+        background: $white;
+        box-shadow: gutter-sp(0) gutter-sp(-8) gutter-sp(34) gutter-sp(-18) $shadow-black;
         z-index: 1;
     }
 }

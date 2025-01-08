@@ -59,6 +59,30 @@
             "price": 15,
             "qty": 8,
             "total": "O"
+        },
+        {
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 15,
+            "qty": 8,
+            "total": "O"
+        },
+        {
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 15,
+            "qty": 8,
+            "total": "O"
+        },
+        {
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 15,
+            "qty": 8,
+            "total": "O"
+        },
+        {
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "price": 15,
+            "qty": 8,
+            "total": "O"
         }
     ],
     "arrangements": [
@@ -311,7 +335,8 @@
             "price": "€ 4200.00",
             "src": "/assets/images/halls/hall.svg",
             "status": "Stage Available",
-            "taxText": "/Excluding taxes and fees"
+            "taxText": "/Excluding taxes and fees",
+            "isActive": false
         },
         {
             "deposite": "Deposited Required",
@@ -323,19 +348,21 @@
             "price": "€ 3200.00",
             "src": "/assets/images/halls/hall.svg",
             "status": "Stage Available",
-            "taxText": "/Excluding taxes and fees"
+            "taxText": "/Excluding taxes and fees",
+            "isActive": false
         },
         {
             "deposite": "Deposited Required",
             "depositeDesc": "Unlock unbeatable savings with our exclusive deals and enjoy luxurious stays at top-rated hotels!",
             "desc": "Accommodates upto 60 members",
             "diamensions": "420 to 443 ft²",
-            "id": 2,
+            "id": 3,
             "name": "Queens Lagoon Suite",
             "price": "€ 3200.00",
             "src": "/assets/images/halls/hall.svg",
             "status": "Stage Available",
-            "taxText": "/Excluding taxes and fees"
+            "taxText": "/Excluding taxes and fees",
+            "isActive": false
         }
     ],
     "header": {
@@ -370,37 +397,37 @@
         "refNumber": "123456-2023",
         "vat": "00000000"
     },
-    "menu" : [
-              {
-                "id": 1, 
-                "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
-                "qty": 222,
-                "price": "$4"
-              },
-              {
-                "id": 2, 
-                "name": "Onbeperkt koffie thee en fris ",
-                "qty": 3,
-                "price": "€ 7.70"
-              },
-              {
-                "id": 3, 
-                "name": "Kaas broodjes (vega)",
-                "qty": 4,
-                "price": "€ 7.70"
-              },
-              {
-                "id": 4, 
-                "name": "Pizzapunt",
-                "qty": 5,
-                "price": "€ 7.70"
-              },
-              {
-                "id": 5, 
-                "name": "Zacht wit puntje met spread sla en kipfilet",
-                "qty": 5,
-                "price": "€ 7.70"
-              }
+    "menu": [
+        {
+            "id": 1,
+            "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+            "qty": 222,
+            "price": "$4"
+        },
+        {
+            "id": 2,
+            "name": "Onbeperkt koffie thee en fris ",
+            "qty": 3,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 3,
+            "name": "Kaas broodjes (vega)",
+            "qty": 4,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 4,
+            "name": "Pizzapunt",
+            "qty": 5,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 5,
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "qty": 5,
+            "price": "€ 7.70"
+        }
     ],
     "moment": [
         {
@@ -422,6 +449,94 @@
             "src": "/assets/images/moment/2.svg"
         }
     ],
+    "bookingdetails": [
+        {
+            "title": "Check In",
+            "desc": "Thu 04-Nov-2024"
+           
+        },
+        {
+            "title": "Check Out",
+            "desc": "Thu 04-Nov-2024"
+           
+        },
+        {
+            "title": "Duration",
+            "desc": "8 hrs"
+            
+        },
+        {
+            "title": "No. of Guests",
+            "desc": "50"
+           
+        },
+        {
+            "title": "Arrangement Type",
+            "desc": "U-Shaped"
+           
+        },
+        {
+            "title": "Package",
+            "desc": "Birthday"
+            
+        },
+        {
+            "title": "Menu",
+            "desc": "50"
+            
+        },
+        {
+            "title": "Articles",
+            "desc": "50"
+            
+        }
+    ],
+    "paymentDetails": [
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "04-Nov-2024",
+          "amount": "4000.00"
+        },
+        {
+          "date": "Total Paid",
+          "amount": "16000.00"
+        }
+      ],
+    "customerDetails":  [
+        {
+          "title": "Organizer Contact Person",
+          "name": "John Doe",
+          "phone": "+31 447 258 8520"
+        },
+        {
+          "title": "Internal Employee",
+          "name": "John Doe",
+          "phone": "+31 447 258 8520"
+        },
+        {
+          "title": "Relation",
+          "name": "Friend"
+        }
+      ],
+    
+      "host": [
+        {
+          "title": "Front Office Manager",
+          "name":  "DPK Riya Roy",
+          "phone": "+31 447 258 8520"
+        }
+      ],
     "invoice_historyTable": [
         {
             "date": "10 oct 2024",

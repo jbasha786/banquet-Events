@@ -4,9 +4,18 @@
     &__section {
         padding: $value-null gutter-vw(10);
     }
+    .row > * {
+        padding: gutter-sp(0);
+    }
 
     .image {
-        padding: gutter-sp(26);
+
+        .active {
+            border: gutter-sp(1) solid $secondary-color;
+            color: $secondary-color;
+            background: $shape-bg;
+        }
+
         &__section {
             padding: gutter-vw(2) gutter-vw(2) gutter-vw(0);
             border: gutter-sp(1) solid $event-input-border-clr;
@@ -19,7 +28,14 @@
 
             .name {
                 opacity: gutter-per(90);
+                overflow: hidden;
+                text-wrap: nowrap;
             }
+        }
+
+        &__section:hover {
+            border: gutter-sp(1) solid $secondary-color;
+            background: $shape-bg;
         }
     }
 }

@@ -1,7 +1,7 @@
 <div class="header-placeholder"></div>
 <nav class="navbar navbar-expand-lg bg-white fixed-top shadow" [ngStyle]="{ 'z-index': navZIndex }">
    <p class="main_line h-4 m-0 d-none d-lg-block"></p>
-   <div class="container left pr-lg-45 pl-lg-60 pr-md-30 pl-md-30 pr-0 pl-0">
+   <div class="left header-align">
       <div class="header__logo one order-lg-0 order-2">
          <a class="navbar-brand cursor mx-auto">
             <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{headerInfo?.logo}}" alt="" (click)="goToHome()">
@@ -31,7 +31,7 @@
                      <div class="link-dark link-underline-opacity-0" mat-button (click)="goTo(item.link)">
                         <img class="ps-2 pe-2 header-images" style="width:28px;opacity: 0.7;" src="{{item.src}}"
                            alt="{{item.name}}">
-                        <span class="fs-14 fs-lg-11">{{item.name}}</span>
+                        <span class="fs-14 fs-lg-11 fw-300" role="button">{{item.name}}</span>
                      </div>
                   </li>
                   }

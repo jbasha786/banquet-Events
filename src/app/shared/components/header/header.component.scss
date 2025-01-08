@@ -1,13 +1,22 @@
 @import "../../../../app/styles/variable.scss";
-@import "../../../custom-css/custom-material-colors.scss";
 
 .main_line, .main_line1 {
-  background-color: $secondory-color;
+  background-color: $secondary-color;
   position: absolute;
   left: $value-null;
   width: gutter-per(100);
 }
-
+.header-align{
+  display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    width: gutter-per(100);
+    padding: gutter-vw(0) gutter-vw(9) gutter-vw(0) gutter-vw(10.4);
+    @media (min-width: 992px) and (max-width: 1120px) {
+      padding: gutter-vw(0) gutter-vw(4) gutter-vw(0) gutter-vw(4); 
+    }
+}
 .main_line {
   top: $value-null;
 }

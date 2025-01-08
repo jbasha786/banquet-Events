@@ -1,19 +1,21 @@
 @import "../../app/styles/variable.scss";
-@import "../../../src/styles.scss";
 
 .tableInvoice {
     margin-top: gutter-sp(70);
 
-    .tableCell {
+    .tableCell .mat-mdc-cell{
         height: gutter-sp(45);
         color: $tableCellColor;
         font-weight: 500;
+        text-wrap: nowrap;
         font-size: gutter-sp(15);
     }
 
     .invoice-table .mat-mdc-header-cell {
+        font-size: gutter-sp(15);
         background: $tabHeadercolor;
         color: $black;
+        text-wrap: nowrap;
         font-weight: 400;
     }
 
@@ -26,6 +28,11 @@
         .downloadImg {
             height: gutter-sp(18);
             width: gutter-sp(18);
+        }
+    }
+    @media (min-width: 320px) and (max-width: 768px) {
+        .tableCell .mat-mdc-cell{
+            font-size:  gutter-sp(11);
         }
     }
 }

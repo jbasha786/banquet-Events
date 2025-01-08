@@ -1,6 +1,10 @@
 @import '../../../styles/variable.scss';
 
 .article {
+    .table {
+        overflow: scroll;
+        scrollbar-width: none;
+    }
 
     &__search {
         position: relative;
@@ -9,7 +13,7 @@
             border-radius: gutter-sp(4);
             border: gutter-sp(1) solid $lite-white;
             background-color: $gray;
-            min-height:  gutter-sp(30);
+            min-height: gutter-sp(30);
             width: gutter-per(100);
         }
 
@@ -26,17 +30,16 @@
         }
     }
 
-    .mat-mdc-table {
+    .tableArticle .mat-mdc-table {
         width: gutter-per(100);
         height: gutter-sp(200);
         overflow: auto;
         box-shadow: none;
-
-
     }
 
     .mat-mdc-cell {
-        border-bottom-color: white;
+            text-wrap: nowrap;
+            border-bottom-color: $white;
     }
 
     &__save-btn {

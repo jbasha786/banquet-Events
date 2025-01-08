@@ -5,7 +5,22 @@
         margin: gutter-sp(0) auto;
     }
 
-    .custom_label{
+    .mat-icon {
+        opacity: gutter-per(75);
+        color: $drop-down-icon-clr;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .custom_label {
         opacity: gutter-per(75);
     }
 
@@ -20,12 +35,14 @@
         border: gutter-sp(1) solid $event-input-border-clr;
         box-shadow: none;
         font-size: gutter-sp(14);
-        height: gutter-sp(40);
+        height: gutter-sp(50);
+        border-radius: gutter-sp(6);
     }
 
-    .custom_input::placeholder {
+    .custom_input::placeholder,
+    .custom_time::placeholder {
         opacity: gutter-per(45);
-        font-size: gutter-sp(12);
+        font-size: gutter-sp(14);
         font-weight: 500;
     }
 
@@ -34,7 +51,21 @@
         border-radius: gutter-sp(50);
         border: none;
         color: $black;
-        width: gutter-per(100);
         padding: gutter-sp(8) gutter-sp(0);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: gutter-sp(56);
+        font-weight: 400;
+    }
+
+    .custom_time::-webkit-calendar-picker-indicator {
+        opacity: gutter-per(45);
+    }
+
+    .custom_date {
+        --mdc-outlined-text-field-outline-color: #{$event-input-border-clr};
+        --mdc-outlined-text-field-hover-outline-color: #{$event-input-border-clr};
+        --mdc-outlined-text-field-focus-outline-color: #{$event-input-border-clr};
     }
 }

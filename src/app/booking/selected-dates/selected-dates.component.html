@@ -1,17 +1,17 @@
-<div class="selction_dates d-flex flex-column justify-content-center align-items-center col-10 m-auto">
+<div class="selction_dates d-flex flex-column justify-content-center align-items-center col-md-10 col-lg-8 col-8 mx-auto mb-220">
     <p class="selction_dates__title text-center fs-28 fw-500 text-black">When?</p>
-    <div class="card col-sm-12 col-lg-6 p-2 selction_dates__content border-0">
-        <div class="row selction_dates__calender w-100 m-auto d-flex justify-content-center align-items-center flex-column flex-lg-row flex-nowrap" *ngIf="specificDaysView">
-            <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                <mat-calendar (selectedChange)="_onSelectedChange($event)" [selected]="selectedDateRange">
+    <div class="card col-sm-8 col-md-10 col-lg-8 p-2 selction_dates__content border-0">
+        <div class="row selction_dates__calender w-100 m-auto d-flex justify-content-center align-items-center flex-column flex-md-row flex-nowrap" *ngIf="specificDaysView">
+            <div class="col-sm-12 col-md-6 col-lg-8 col-xxl-6 h-330 h-lg-345 calenderDiv">
+                <mat-calendar (selectedChange)="_onSelectedChange($event)" [selected]="selectedDateRange" class="matCalender">
                 </mat-calendar>
             </div>
-            <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
+            <div class="col-sm-12 col-md-6 col-lg-8 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
                 id="availableSlots">
                 <h4 class="text-center p-2 mb-0">Available Slots</h4>
                 <mat-selection-list #slot [multiple]="false" class="slots_radio" (selectionChange)="slotsChange($event)">
                     @for (slot of slots; track $index) {
-                    <div class="card m-10 align-items-center">
+                    <div class="card m-10 align-items-center mx-auto ">
                         <mat-list-option [value]="slot"><span  class="fs-13 fw-400">{{slot.shift}}</span></mat-list-option>
                     </div>
                     }

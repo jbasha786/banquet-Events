@@ -1,5 +1,4 @@
 @import "../../styles/variable.scss";
-@import "../../custom-css/custom-material-colors.scss";
 
 .planing {
     &__process {
@@ -7,7 +6,7 @@
             height: gutter-sp(8);
 
             .progress-bar {
-                background-color: $secondory-color;
+                background-color: $secondary-color;
             }
         }
     }
@@ -22,15 +21,20 @@
         &__section {
             border: gutter-sp(1) solid $border-silver;
             border-radius: gutter-sp(8);
-            cursor: pointer;        
+            cursor: pointer;
         }
+
+        &__section .mdc-list-item--with-trailing-radio.mdc-list-item {
+            border-radius: gutter-sp(8);
+        }
+
         &__section:hover {
-            border-color: $secondary-color; 
-            cursor: pointer; 
-          }
+            border-color: $secondary-color;
+            cursor: pointer;
+        }
     }
 
     .planning-radio ::ng-deep .mat-mdc-list-option .mdc-radio {
-        display: none ;
+        display: none;
     }
 }

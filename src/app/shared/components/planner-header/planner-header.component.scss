@@ -1,0 +1,185 @@
+@import '../../../../app/styles/variable.scss';
+
+.header {
+  background-color: $white;
+  border-bottom: gutter-sp(1) solid $tableCellColor;
+  position: relative;
+  height: gutter-sp(72);
+}
+
+.form-search{
+  position: relative;
+}
+.notification {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification i {
+  font-size: gutter-sp(20);
+  color: $cal-view-title-clr;
+}
+
+.notification .badge {
+  position: absolute;
+  top: gutter-sp(0);
+  left: gutter-sp(10);
+  background: $notifyBadge;
+  color: $white;
+  border-radius: gutter-per(50);
+  font-size: gutter-sp(8);
+  font-weight: 400;
+  padding: gutter-sp(4) gutter-sp(4) gutter-sp(2);
+}
+
+.notification-card {
+  position: absolute;
+  top: gutter-sp(71);
+  right: gutter-sp(0);
+  border-top: $black;
+  background: $white;
+  padding: gutter-sp(10);
+  height: auto;
+  z-index: 100;
+  box-shadow: gutter-sp(-14) gutter-sp(6) gutter-sp(14) gutter-sp(-13) $font-lite;
+}
+.notification-close{
+  color: $notifyclose;
+}
+
+.user-img {
+  width: gutter-sp(35);
+  height: gutter-sp(35);
+  border-radius: gutter-per(50);
+  object-fit: cover;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: gutter-sp(10);
+  cursor: pointer;
+}
+.user-id{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-info .user-img {
+  width: gutter-sp(35);
+  height: gutter-sp(35);
+  border-radius: gutter-per(50);
+  object-fit: cover;
+}
+
+.user-info .user-name {
+  font-size: gutter-sp(14);
+  color: $headerUser;
+}
+
+.user-info i {
+  font-size: gutter-sp(14);
+  color: $headerUser;
+}
+
+.dropdown-card {
+  position: absolute;
+  top: gutter-sp(44);
+  right: gutter-sp(0);
+  background: $white;
+  box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $font-ash;
+  border-radius: gutter-sp(5);
+  padding: gutter-sp(10);
+  z-index: 100;
+}
+
+.dropdown-user {
+  width: gutter-per(100);
+  gap: gutter-sp(10);
+  margin-bottom: gutter-sp(10);
+}
+
+.dropdown-user-img {
+  width: gutter-sp(100);
+  height: gutter-sp(100);
+  border-radius: gutter-per(50);
+  object-fit: cover;
+}
+
+.btn_search {
+  position: absolute;
+  left: gutter-sp(5);
+  top: gutter-sp(9);
+  color: $footer-text-color;
+  background-color: $white;
+}
+
+.search_input {
+  max-width: guttre-per(100);
+  font-weight: 300;
+}
+
+.search_input::placeholder {
+  color: $footer-text-color;
+  font-size: gutter-sp(16);
+  font-weight: 300;
+}
+
+.search .form-control:focus {
+  box-shadow: none;
+  border: gutter-sp(1) solid $black;
+}
+
+.bg-none {
+  background-color: $white;
+}
+
+.notifyImg {
+  height: gutter-sp(35);
+}
+
+.tableImg {
+  height: gutter-sp(34);
+}
+
+.notifyBtn {
+  color: $notificationColor;
+}
+
+.clearallBtn {
+  color: $notificationColor;
+  font-weight: 300;
+}
+
+.newBtn {
+  color: $notifyNewColor;
+  border-radius: gutter-sp(5);
+  background-color: $notufyNewBg;
+}
+
+.pendingBtn {
+  color: $notifyPendingColor;
+  border-radius: gutter-sp(5);
+  font-size: gutter-sp(14);
+  background-color: $notifyPendingBg;
+}
+.designation{
+  color: $desigcolor;
+}
+
+.notifyTitle {
+  color: $notificationColor;
+}
+
+.notifyTime {
+  color: $notifyTimeColor;
+}
+
+.notifyDuration {
+  color: $notifyTimeColor;
+}

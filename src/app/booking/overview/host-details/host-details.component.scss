@@ -14,6 +14,12 @@
                 p {
                     margin: gutter-sp(0);
                 }
+                .custom_star {
+                    font-size: gutter-sp(16);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
 
             .item:last-child {
@@ -38,16 +44,17 @@
                 background: $host-security-clr;
                 border-radius: gutter-sp(50);
                 position: absolute;
-                height: gutter-sp(30);
-                width: gutter-sp(30);
+                height: gutter-sp(40);
+                width: gutter-sp(40);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
-                img {
-                    width: gutter-per(70);
-                }
+                color: $white;
             }
+        }
+
+        .wrap {
+            text-wrap: nowrap;
         }
     }
 }
