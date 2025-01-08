@@ -1,5 +1,4 @@
 @import '../../styles/variable.scss';
-@import '../../../styles.scss';
 
 .hallsView {
     .guest {
@@ -10,17 +9,21 @@
     .guestLabel {
         font-size: gutter-sp(14);
         padding-left: gutter-sp(8);
-        padding-top: gutter-sp(22);
+        padding-top: gutter-sp(20);
     }
     .guestClockLabel {
         font-size: gutter-sp(14);
         padding-left: gutter-sp(5);
-        padding-top: gutter-sp(22);
+        padding-top: gutter-sp(20);
     }
 
     .guestclock {
         font-size: gutter-sp(13);
         padding-left: gutter-sp(7);
+    }
+
+    .pleft-3{
+        padding-left: gutter-sp(3);
     }
 
     .hall-list {
@@ -30,9 +33,10 @@
         padding: gutter-sp(14);
         height: gutter-per(100);
 
-        .font-color {
-            color: $font-ash;
+        .fontcolor {
+            color: $hallsListFont;
         }
+
     }
 
     &__card {
@@ -136,7 +140,7 @@
 
         &__icon {
             position: absolute;
-            top: gutter-per(16);
+            top: gutter-per(23);
             right: gutter-sp(0);
             left: gutter-sp(0);
             bottom: gutter-sp(0);
