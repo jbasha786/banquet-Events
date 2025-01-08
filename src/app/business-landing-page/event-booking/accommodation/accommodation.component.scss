@@ -5,6 +5,11 @@
         margin: gutter-sp(0) auto;
     }
 
+    .mat-icon {
+        opacity: gutter-per(75);
+        color: $drop-down-icon-clr;
+    }
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;

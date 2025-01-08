@@ -1,5 +1,4 @@
 @import '../styles/variable.scss';
-@import '../../styles.scss';
 
 
 .booking-view {
@@ -49,11 +48,10 @@
   }
 
   .tabTitle ::ng-deep .mdc-tab {
-    padding: 0;
+    padding: gutter-sp(0);
   }
 
   .tabTitle ::ng-deep .mdc-tab__text-label {
-    font-family: "poppins", sans-serif;
     font-size: gutter-sp(30);
     letter-spacing: normal;
     margin-right: gutter-vw(3);
@@ -80,7 +78,7 @@
     font-weight: 400;
   }
 
-  @media (min-width: 320px) and (max-width: 1172px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     .search {
       top: gutter-sp(80);
       right: gutter-sp(0);
@@ -88,7 +86,13 @@
 
     .tabTitle ::ng-deep .mdc-tab__text-label {
       font-size: gutter-sp(16);
-      // margin: 0px 4px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 940px) {
+    .search {
+      top: gutter-sp(80);
+      right: gutter-sp(0);
     }
   }
 }

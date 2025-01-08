@@ -1,11 +1,9 @@
 @import "../../app/styles/variable.scss";
-@import "../../../src/styles.scss";
 
 .tableInvoice {
     margin-top: gutter-sp(70);
 
     .tableCell .mat-mdc-cell{
-        font-family: "poppins", sans-serif;
         height: gutter-sp(45);
         color: $tableCellColor;
         font-weight: 500;
@@ -14,7 +12,6 @@
     }
 
     .invoice-table .mat-mdc-header-cell {
-        font-family: "poppins", sans-serif;
         font-size: gutter-sp(15);
         background: $tabHeadercolor;
         color: $black;

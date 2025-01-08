@@ -35,4 +35,8 @@
     .slots_radio ::ng-deep .mat-mdc-list-option .mdc-radio {
         display: none;
     }
+
+    .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item {
+        border-radius: gutter-sp(6);
+    }
 }
