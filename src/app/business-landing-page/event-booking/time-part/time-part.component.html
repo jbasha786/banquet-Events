@@ -5,7 +5,7 @@
                 alt="close" width="20"></p>
     </div>
     <div class="time-part__section">
-        <div cdkDropList class="content h-350 h-lg-500" (cdkDropListDropped)="drop($event)">
+        <div cdkDropList class="content h-350 h-lg-450" (cdkDropListDropped)="drop($event)">
             @for (item of timeParts; track item) {
             <div cdkDrag cdkDragBoundary=".content">
                 <div class="custom-placeholder" *cdkDragPlaceholder></div>

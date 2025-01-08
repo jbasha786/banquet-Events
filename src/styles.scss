@@ -101,7 +101,7 @@ body {
 
   // Paddings
   .p-#{$i} {
-    padding: 0px + $i;
+    padding: 0px + $i !important;
   }
 
   .p-md-#{$i} {
@@ -341,6 +341,7 @@ html {
   overflow: scroll;
   scrollbar-width: none;
 }
+
 .fixed-dialog .mat-mdc-dialog-container .mdc-dialog__surface {
   overflow: hidden;
 }
@@ -374,5 +375,13 @@ html {
     .mat-date-range-input-container {
       font-size: gutter-sp(14);
     }
+
+    .mat-date-range-input-separator {
+      opacity: gutter-per(45);
+    }
   }
+}
+
+::ng-deep .cdk-overlay-pane {
+  z-index: 1050 !important;  /* Ensure overlay is above .fixed-top */
 }
