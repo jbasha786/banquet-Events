@@ -24,8 +24,11 @@
                     <label [for]="'sub-checkbox-' + i + '-' + subItem.label" class="fs-12 fw-500 ms-2 subLabel">
                         {{ subItem.label }}
                     </label>
-                    <button class="border-0 i-icon"><img src="../../../../assets/images/Planner/rightPannel/i-icon.svg"
-                            alt=""></button>
+                    <button class="border-0 i-icon" (click)="openHallDetails()"><img
+                            src="../../../../assets/images/Planner/rightPannel/i-icon.svg" alt=""></button>
+                    <div *ngIf="showHallDetails">
+                        <app-hall-detail class="hallDetail"></app-hall-detail>
+                    </div>
                 </div>
             </div>
         </div>

@@ -71,3 +71,10 @@
           }
     }
 }
+.hallDetail{
+    position: absolute;
+    top: gutter-sp(72);
+    right: gutter-sp(0);
+    width: gutter-sp(210);
+    z-index: 5;
+  }

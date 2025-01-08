@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HallDetailComponent } from '../hall-detail/hall-detail.component';
 
 @Component({
   selector: 'app-right-pannel',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HallDetailComponent],
   templateUrl: './right-pannel.component.html',
   styleUrl: './right-pannel.component.scss'
 })
 export class RightPannelComponent {
+  showHallDetails = false;
   mainItems = [
     {
       label: 'Large Halls',
@@ -92,5 +94,8 @@ export class RightPannelComponent {
     this.mainItems.forEach((item, i) => {
       item.showDropdown = i === index ? !item.showDropdown : false;
     });
+  }
+  openHallDetails() {
+    this.showHallDetails = true;
   }
 }

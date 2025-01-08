@@ -1,0 +1,44 @@
+<div class="hallDetailMain w-200 w-lg-300 p-2">
+    <div class="d-flex align-item-center justify-content-between">
+        <div class="d-flex">
+            <button class="border-0 i-icon"><img src="../../../../assets/images/Planner/rightPannel/i-icon.svg"
+                    alt=""></button>
+            <span>Plaza</span>
+        </div>
+        <div (click)="close()" class="" role="button">
+            <mat-icon fontIcon="close"></mat-icon>
+        </div>
+    </div>
+    <hr class="d-flex w-100 my-2">
+    <div class="d-flex flex-column align-items-start">
+        <span>ABOUT</span>
+        <p>{{description}}</p>
+    </div>
+    <div class="d-flex flex-column">
+        <span>IMAGES</span>
+        <img src="../../../../assets/images/BookingHistory/bookingHistory.png" alt="">
+    </div>
+    <div class="d-flex flex-column">
+        <span>DIMENSIONS</span>
+        <span>420 to 443ft²</span>
+    </div>
+    <div class="d-flex flex-column">
+        <span>GUESTS LIMIT</span>
+        <span>Min 450 to Max 550 Guests</span>
+    </div>
+    <div class="d-flex flex-column">
+        <span>SHAPES FITS WITH</span>
+        <div class="row images">
+            <ng-container *ngFor="let shape of shapes">
+                <div class="text-center m-auto p-15">
+                    <div class="imageSection">
+                        <img [src]="shape.src" [alt]="shape.name">
+                        <p class="">{{shape.name}}</p>
+                    </div>
+                </div>
+            </ng-container>
+            
+        </div>
+    </div>
+
+</div>
