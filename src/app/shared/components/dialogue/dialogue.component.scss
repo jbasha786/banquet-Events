@@ -2,11 +2,9 @@
 .hallDialog{
    .title{
     color: $dialogfontcolor;
-    font-family: 'Poppins', sans-serif;
    }
    .areyou{
     color: $dialogfontcolor;
-    font-family: 'Poppins', sans-serif;
    }
     .buttons{
         display: flex;
@@ -18,7 +16,6 @@
         }
         .title{
             color: $dialogfontcolor;
-            font-family: 'Poppins', sans-serif;
             background: $dialogfontcolor;
         }
         &__cancel{
