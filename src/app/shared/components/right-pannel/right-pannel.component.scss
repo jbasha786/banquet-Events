@@ -1,0 +1,73 @@
+@import ' ../../../../../../app/styles/variable.scss';
+.rightPannel{
+    background: $rightPannelbg;
+    height: gutter-vh(92);
+    .title{
+        color: $notificationColor;
+    }
+    .mainCheckbox{
+        background: $white;
+        border: gutter-sp(1) solid $rightpannelBorder;
+        border-radius: gutter-sp(3);
+    }
+    .lable, .toggleBtn, .subLabel{
+        color: $notificationColor;
+    }
+    .toggleBtn{
+        background-color: $white;
+    }
+    .dropdowncount{
+        color: $dropdowncount;
+    }
+    .i-icon{
+        background-color: $white;
+    }
+    .main-checkbox{
+        position: relative;
+        input[type="checkbox"]{
+            appearance: none;
+            width: gutter-sp(12);
+            height: gutter-sp(12);
+            border: gutter-sp(1) solid $checkboxBorder;
+            border-radius: gutter-sp(2);
+        }
+        input[type="checkbox"]:checked::after {
+            content: '✔'; 
+            color: $white;
+            font-size: gutter-sp(8);
+            position: absolute;
+            top: gutter-sp(7);
+            left: gutter-sp(3);
+          }
+          input[type="checkbox"]:checked {
+            background-color: $notifyBadge; 
+            border-color: $checkboxBorder; 
+            border-radius: gutter-sp(2);
+            color: white;
+          }
+    }
+    .sub-checkbox{
+        position: relative;
+        input[type="checkbox"]{
+            appearance: none;
+            width: gutter-sp(11);
+            height: gutter-sp(11);
+            border: gutter-sp(1) solid $checkboxBorder;
+            border-radius: gutter-sp(2);
+        }
+        input[type="checkbox"]:checked::after {
+            content: '✔'; 
+            color: $white;
+            font-size: gutter-sp(8);
+            position: absolute;
+            top: gutter-sp(7);
+            left: gutter-sp(3);
+          }
+          input[type="checkbox"]:checked {
+            background-color: $notifyBadge; 
+            border-color: $checkboxBorder; 
+            border-radius: gutter-sp(2);
+            color: white;
+          }
+    }
+}
