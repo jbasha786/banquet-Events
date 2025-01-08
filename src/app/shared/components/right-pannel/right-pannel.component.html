@@ -1,0 +1,33 @@
+<div class="rightPannel ps-3 pe-3 pb-3 pt-1">
+    <div class="mt-2 mb-3">
+        <span class="title fs-13">Available Halls</span>
+    </div>
+    <div class="d-flex flex-column gap-2">
+        <div *ngFor="let mainItem of mainItems; let i = index" class="p-1 mainCheckbox">
+            <div class="main-checkbox d-flex align-items-center justify-content-between ml-6">
+                <div>
+                    <input type="checkbox" [id]="'main-checkbox-' + i" [(ngModel)]="mainItem.checked" class="checkbox"
+                        role="button" />
+                    <label [for]="'main-checkbox-' + i" class="fs-13 ms-2 lable">{{ mainItem.label }}</label>
+                    <span class="fs-12 dropdowncount"> ({{ mainItem.subItems.length }})</span>
+                </div>
+                <button (click)="toggleDropdown(i)" class="border-0 bg-none toggleBtn">
+                    <span *ngIf="!mainItem.showDropdown"><i class="bi bi-chevron-right fs-8 chevron"></i></span>
+                    <span *ngIf="mainItem.showDropdown"><i class="bi bi-chevron-down fs-8"></i></span>
+                </button>
+            </div>
+
+            <div class="dropdown ms-3 d-flex flex-column my-1 mb-2" *ngIf="mainItem.showDropdown">
+                <div *ngFor="let subItem of mainItem.subItems" class="d-flex align-items-center sub-checkbox ml-6">
+                    <input type="checkbox" [id]="'sub-checkbox-' + i + '-' + subItem.label"
+                        [(ngModel)]="subItem.checked" role="button" />
+                    <label [for]="'sub-checkbox-' + i + '-' + subItem.label" class="fs-12 fw-500 ms-2 subLabel">
+                        {{ subItem.label }}
+                    </label>
+                    <button class="border-0 i-icon"><img src="../../../../assets/images/Planner/rightPannel/i-icon.svg"
+                            alt=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

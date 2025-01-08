@@ -4,11 +4,12 @@ import { RouterLink, Router } from '@angular/router';
 import { DefaultService } from '../../../services/default.service';
 import { notificationModel } from '../../_models/notificationModel';
 import { CommonModule } from '@angular/common';
+import { RightPannelComponent } from '../right-pannel/right-pannel.component';
 
 @Component({
   selector: 'app-planner-header',
   standalone: true,
-  imports: [MatIconModule, RouterLink, CommonModule],
+  imports: [MatIconModule, RouterLink, CommonModule, RightPannelComponent],
   templateUrl: './planner-header.component.html',
   styleUrl: './planner-header.component.scss'
 })
@@ -99,7 +100,7 @@ export class PlannerHeaderComponent {
 
   openNotifications(): void {
     this.isDivOpen = true;
-    this.isSearchBarVisible = false; 
+    this.isSearchBarVisible = false;
   }
 
   toggleDropdown() {
@@ -111,6 +112,6 @@ export class PlannerHeaderComponent {
 
   close() {
     this.isDivOpen = false;
-    this.isSearchBarVisible = true; 
+    this.isSearchBarVisible = true;
   }
 }
