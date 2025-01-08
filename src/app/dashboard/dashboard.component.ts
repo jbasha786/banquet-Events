@@ -92,7 +92,7 @@ export class DashboardComponent {
   }
 
   scrollToSection(sectionId: string) {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && typeof document !== 'undefined') {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -101,7 +101,7 @@ export class DashboardComponent {
   }
 
   scrollToTop() {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && typeof document !== 'undefined') {
       const element = document.getElementById('webPage');
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });

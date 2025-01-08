@@ -23,6 +23,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 body {
   color: $font-clr !important;
   font-family: 'Poppins', sans-serif !important;
@@ -367,6 +371,14 @@ html {
 }
 
 .calendar_view_section {
+
+  .fc-scrollgrid-sync-inner {
+    text-align: left;
+    a {
+      text-align: center;
+    }
+  }
+
   .fc .fc-timegrid-slot {
     height: gutter-rem(3);
   }
@@ -392,6 +404,29 @@ html {
     text-align: left;
   }
 
+  .fc-dayGridMonth-view {
+    .custom_date_number {
+      display: none;
+    }
+  }
+
+  .custom_date_number {
+    color: $cal-day-text-clr;
+  }
+
+  .fc-day-today .custom_date_number {
+    width: gutter-sp(40);
+    height: gutter-sp(40);
+    margin-top: gutter-sp(10);
+    margin-left: gutter-sp(10);
+    background: $editbtn;
+    color: $white;
+    border-radius: gutter-sp(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .fc-daygrid-body .fc-day-today {
     .fc-daygrid-day-number {
       width: gutter-sp(40);
@@ -407,25 +442,50 @@ html {
     }
   }
 
-  .fc .fc-button-primary:hover {
-    background-color: transparent;
+  .fc .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-button-primary {
+    background-color: $white;
     color: $cal-view-title-clr;
+    border-color: $white;
+    padding: gutter-sp(0) gutter-sp(4);
+    text-transform: capitalize;
   }
 
-  .fc .fc-timeGridDay-button.fc-button-primary,
-  .fc .fc-timeGridWeek-button.fc-button-primary,
-  .fc .fc-dayGridMonth-button.fc-button-primary {
+  .fc .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-button-primary:hover {
+    background-color: $white;
+    color: $cal-view-title-clr;
+    border-color: $white;
+  }
+
+  .fc .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-button-primary:hover {
+    background-color: transparent;
+    color: $cal-view-title-clr;
+    border-color: $cal-current-date-bg;
+  }
+
+  .fc .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-timeGridDay-button.fc-button-primary,
+  .fc .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-timeGridWeek-button.fc-button-primary,
+  .fc .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-dayGridMonth-button.fc-button-primary {
     width: gutter-sp(80);
     height: gutter-sp(30);
     padding: gutter-sp(0);
     border-radius: gutter-sp(8);
+    text-transform: capitalize;
   }
 
-  .fc .fc-button-primary:not(:disabled).fc-button-active,
-  .fc .fc-button-primary:not(:disabled):active {
+  .fc .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-button-primary:not(:disabled).fc-button-active,
+  .fc .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-button-primary:not(:disabled):active {
     border: none;
     font-weight: 700;
     border-radius: gutter-sp(8);
+  }
+
+  .fc .fc-scroller {
+    scrollbar-width: none;
+  }
+
+  .fc .fc-scrollgrid table,
+  .fc .fc-timegrid-body {
+    width: gutter-per(100) !important;
   }
 
   .fc .fc-button-primary:not(:disabled).fc-button-active:focus,
@@ -473,7 +533,7 @@ html {
   }
 
   .fc .fc-daygrid-event {
-    margin-top: gutter-sp(5);
+    margin: gutter-sp(5);
   }
 
   .fc-daygrid-dot-event {
@@ -493,40 +553,55 @@ html {
     .event-orange {
       color: $event-bg-orange;
       border: gutter-sp(4);
+      border-radius: gutter-sp(4);
     }
 
     .event-primary {
       color: $secondary-color;
       border: gutter-sp(4);
+      border-radius: gutter-sp(4);
     }
 
     .event-green {
       color: $event-bg-green;
       border: gutter-sp(4);
+      border-radius: gutter-sp(4);
     }
   }
 
-  .fc-dayGridMonth-view .fc-event-title {
+  .fc-dayGridMonth-view .fc-event-today .fc-event-title {
     background-color: $white;
     padding: gutter-sp(4) gutter-sp(0) gutter-sp(4) gutter-sp(4);
+    border-top-right-radius: gutter-sp(4);
+    border-bottom-right-radius: gutter-sp(4);
+  }
+
+  .fc-dayGridMonth-view .fc-event-title {
+    background-color: $event-name-bg;
+    padding: gutter-sp(4) gutter-sp(0) gutter-sp(4) gutter-sp(4);
+    border-top-right-radius: gutter-sp(4);
+    border-bottom-right-radius: gutter-sp(4);
   }
 
   .event-green {
     background-color: $event-bg-green;
     border-color: $event-bg-green;
     color: $white;
+    border-radius: gutter-sp(4);
   }
 
   .event-primary {
     background-color: $secondary-color;
     border-color: $secondary-color;
     color: $white;
+    border-radius: gutter-sp(4);
   }
 
   .event-orange {
     background-color: $event-bg-orange;
     border-color: $event-bg-orange;
     color: $white;
+    border-radius: gutter-sp(4);
   }
 
   .eventStyle {
@@ -543,7 +618,41 @@ html {
       background: $white;
       border-radius: gutter-sp(50);
     }
+
+    .contact_Section {
+      width: gutter-per(90);
+      bottom: gutter-sp(10);
+    }
+
+    .event_title,
+    .event_time {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: gutter-per(100);
+    }
   }
+
+  .fc-daygrid-day {
+    height: 134px;
+    overflow: hidden;
+  }
+
+  // .fc-timegrid-event-harness {
+  //   width: gutter-per(100);
+  // }
+
+  // .fc-timegrid-event.fc-overlap {
+  //   margin-left: gutter-sp(5);
+  // }
+
+  // .fc-timegrid-event {
+  //   position: absolute;
+  //   top: gutter-sp(0);
+  //   left: gutter-sp(0);
+  //   width: calc(100% / 2 - 10px);
+  //   z-index: 1;
+  // }
 }
 
 .accommodation {
@@ -560,9 +669,4 @@ html {
       opacity: gutter-per(45);
     }
   }
-}
-
-::ng-deep .cdk-overlay-pane {
-  z-index: 1050 !important;
-  /* Ensure overlay is above .fixed-top */
 }

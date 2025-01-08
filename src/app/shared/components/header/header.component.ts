@@ -54,7 +54,7 @@ export class HeaderComponent implements OnInit {
 
   }
   adjustLayoutForMobile() {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && typeof  window !== 'undefined') {
       const screenWidth = window.innerWidth;
       const leftContainer = this.el.nativeElement.querySelector('.left');
       const rightDiv = this.el.nativeElement.querySelector('.right');

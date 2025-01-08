@@ -39,7 +39,7 @@ export class CustomCalenderComponent {
   }
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && typeof  window !== 'undefined') {
       this.adjustVisibleRange();
       this.updatePaginatedDays();
       this.scrollDates(0);
@@ -127,7 +127,7 @@ export class CustomCalenderComponent {
     this.visibleDates = this.datesWithWeekdays.slice(this.currentIndex, this.currentIndex + this.visibleRange);
   }
   scrollToStart(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && typeof document !== 'undefined') {
       const calendarGrid = document.querySelector('.calendar-grid');
       if (calendarGrid) {
         (calendarGrid as HTMLElement).scrollLeft = 0;
@@ -138,7 +138,7 @@ export class CustomCalenderComponent {
     this.scrollToStart();
   }
   ngOnDestroy(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && typeof window !== 'undefined') {
       window.removeEventListener('resize', this.adjustVisibleRange.bind(this));
     }
   }
