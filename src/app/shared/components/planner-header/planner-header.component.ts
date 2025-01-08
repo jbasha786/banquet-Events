@@ -29,63 +29,70 @@ export class PlannerHeaderComponent {
 
   plannerHeaderNotification = [
     {
-      src: "/assets/images/planner/header/notifications/Avatar-orange.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-orange.svg",
       notifiTitle: "ABC Plaza",
       time: " 5 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "New"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-indigo.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-indigo.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "10 min ago",
       statusButton: "New"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-pink.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-pink.svg",
       notifiTitle: "Magenta",
       time: "7 Nov 2024  08:00 AM - 11:30 AM",
       duration: "15 min ago",
       statusButton: "New"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-purple.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-purple.svg",
       notifiTitle: "Magenta",
       time: "7 Nov 2024  08:00 AM - 11:30 AM",
       duration: "2 hours ago",
       statusButton: "New"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-cienta.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-cienta.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "6 hours ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-blue.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-blue.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-cienta.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-cienta.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-green.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-green.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
       statusButton: "Pending"
     },
     {
-      src: "/assets/images/planner/header/notifications/Avatar-ash.svg",
+      src: "/assets/images/Planner/header/notifications/Avatar-ash.svg",
+      notifiTitle: "Magenta",
+      time: "6 Nov 2024  08:00 AM - 11:30 AM",
+      duration: "5 min ago",
+      statusButton: "Pending"
+    },
+    {
+      src: "/assets/images/Planner/header/notifications/Avatar-ash.svg",
       notifiTitle: "Magenta",
       time: "6 Nov 2024  08:00 AM - 11:30 AM",
       duration: "5 min ago",
