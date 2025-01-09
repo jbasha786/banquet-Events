@@ -329,19 +329,22 @@ html {
 }
 
 .fixed-dialog {
-  transform: translate(0%, -17%);
+  transform: translate(gutter-per(0), gutter-per(-17));
   position: fixed;
   z-index: 1050;
   overflow: auto;
 }
-
-
 .timePartLocation {
   position: absolute !important;
   top: gutter-sp(10);
 
   .mat-mdc-dialog-container .mdc-dialog__surface {
     border-radius: gutter-sp(12);
+  }
+}
+.custom-dialog-panel,.custom-dialog-success-panel{
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    box-shadow:none;
   }
 }
 
@@ -359,4 +362,40 @@ html {
       font-size: gutter-sp(14);
     }
   }
+}
+.custom-dialog-backdrop {
+  background-color: $dialogue-backclr;
+  z-index:2;
+}
+.custom-dialog-panel {
+  border-radius: gutter-sp(24);
+  background: white;
+  padding: gutter-sp(16);
+  box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $dialogue-box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed !important;
+  top: gutter-per(50);
+  left: gutter-per(50);
+  transform: translate(gutter-per(-50), gutter-per(-50));
+}
+.custom-dialog-success-panel {
+  border-radius: gutter-sp(12);
+  background: white;
+  border:1px solid $dialogue-border;
+  padding: gutter-sp(32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed !important;
+  top: gutter-per(50);
+  left: gutter-per(50);
+  transform: translate(gutter-per(-50), gutter-per(-50));
+}
+.custom-dialog-success-backdrop{
+  background-color: $dialogue-lightclr;
+  z-index:2;
 }

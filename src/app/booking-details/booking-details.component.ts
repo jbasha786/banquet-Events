@@ -1,6 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultService } from '../services/default.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogueComponent } from '../shared/components/dialogue/dialogue.component';
+import { SuccessDialogueComponent } from '../shared/components/success-dialogue/success-dialogue.component';
 
 @Component({
   selector: 'app-booking-details',
@@ -17,7 +20,7 @@ export class BookingDetailsComponent implements OnInit {
   hostInfo: any[] = [];
 
  
-  constructor(private defaultService: DefaultService) {}
+  constructor(private defaultService: DefaultService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.getInitialData();
@@ -44,5 +47,22 @@ export class BookingDetailsComponent implements OnInit {
         console.error('Error fetching booking details:', error);
       }
     );
+  }
+ cancelReservation() {
+    const screenWidth = window.innerWidth;
+    this.dialog.open(DialogueComponent, {
+      backdropClass: 'custom-dialog-backdrop', 
+      panelClass: 'custom-dialog-panel', 
+      width: "550px",
+      disableClose: true,
+    });
+  }
+  successReservation() {
+    const screenWidth = window.innerWidth;
+    this.dialog.open(SuccessDialogueComponent, {
+      backdropClass: 'custom-dialog-success-backdrop', 
+      panelClass: 'custom-dialog-success-panel', 
+      width: "550px",
+    });
   }
 }
