@@ -12,7 +12,9 @@
       <p class="booking-header m-0 fs-20 fw-bold">Booking Details</p>
     </div>
     <div class="book-detail d-flex gap-14 justify-content-end">
-      <button class="btn btn-cancel">Cancel Booking</button>
+      <button class="btn btn-cancel" (click)="cancelReservation()">
+        Cancel Booking
+      </button>
       <button class="btn btn-edit">Edit Booking</button>
     </div>
   </div>
@@ -24,7 +26,7 @@
           <div class="d-flex justify-content-between align-items-center mb-3">
             <p class="section-title mb-0 fs-18 fw-bold">LARGE HALLS</p>
             <span class="status-badge badge bg-success text-white fw-medium"
-              >Confirmed</span>
+              (click)="successReservation()">Confirmed</span>
           </div>
           <div class="row mb-0">
             <!-- Image Section -->
@@ -49,10 +51,10 @@
               </div>
               <div class="row gx-5">
                 <div *ngFor="let detail of bookingdetailsInfo; let i = index"
-                [ngClass]="{
+                  [ngClass]="{
                     'mb-26': i < bookingdetailsInfo.length - 2 || isSmallScreen,
-                    'mb-lg-0': !isSmallScreen && i >= bookingdetailsInfo.length - 2
-                }" class="col-md-4">
+                    'mb-lg-0':!isSmallScreen && i >= bookingdetailsInfo.length - 2}"
+                  class="col-md-4">
                   <p
                     class="text-head m-0 pb-1"
                     [ngClass]="{
@@ -63,10 +65,14 @@
                   </p>
                   <p class="text-para m-0">
                     {{ detail.desc }}
-                    <span *ngIf="i >= bookingdetailsInfo.length - 2"
-                      class="fs-12 fw-normal">items</span>
-                    <a *ngIf="i === 6" href="#" class="view-link fs-10 ms-1">View Menu</a>
-                    <a *ngIf="i === 7" href="#" class="view-link fs-10 ms-1" >View Articles</a>
+                    <span
+                      *ngIf="i >= bookingdetailsInfo.length - 2"
+                      class="fs-12 fw-normal"
+                      >items</span>
+                    <a *ngIf="i === 6" href="#" class="view-link fs-10 ms-1"
+                      >View Menu</a>
+                    <a *ngIf="i === 7" href="#" class="view-link fs-10 ms-1"
+                      >View Articles</a>
                   </p>
                 </div>
               </div>
@@ -85,7 +91,7 @@
             AMOUNT PAID
           </p>
           <ul class="list-unstyled">
-            <li  *ngFor="let detail of paymentDetailsInfo; let i = index"
+            <li *ngFor="let detail of paymentDetailsInfo; let i = index"
               class="d-flex justify-content-between">
               <span class="amountpaid fs-14 pb-14"
                 [ngClass]="{
