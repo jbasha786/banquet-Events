@@ -4,9 +4,11 @@
     &__section {
         padding: $value-null gutter-vw(10);
     }
+    .row > * {
+        padding: gutter-sp(0);
+    }
 
     .image {
-        padding: gutter-sp(26);
 
         .active {
             border: gutter-sp(1) solid $secondary-color;
@@ -26,6 +28,8 @@
 
             .name {
                 opacity: gutter-per(90);
+                overflow: hidden;
+                text-wrap: nowrap;
             }
         }
 

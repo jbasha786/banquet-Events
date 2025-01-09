@@ -1,0 +1,101 @@
+<header class="header px-2 px-md-3 px-lg-4 py-2 d-flex justify-content-between align-items-center">
+  <div class="header-left">
+    <a class="navbar-brand cursor mx-auto">
+      <img class="logo mb-0 w-60 w-md-90 w-lg-100 h-50" src="../../../../assets/images/Planner/header/de-bonte-wever-logo.png" alt=""
+        (click)="goToHome()">
+    </a>
+  </div>
+  <div class="header-menu d-flex align-items-center gap-30 gap-lg-40">
+    @if(isSearchBarVisible){
+    <div class="form-search">
+      <form class="search" role="search">
+        <button class="btn_search border-0" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+        <input class="form-control pl-30 py-2 search_input fs-12 ml-2 w-md-120 w-lg-260 h-40 h-md-45 fs-10 fs-lg-16" type="Search" placeholder="Search..."
+          aria-label="Search">
+      </form>
+    </div>
+  }
+    <div class="notification" (click)="openNotifications()">
+      <i class="bi bi-bell"></i>
+      <span class="badge">3</span>
+    </div>
+    @if(isDivOpen){
+    <div class="notification-card d-flex flex-column gy-5 wid-sm-55 w-lg-380">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <img src="../../../../assets/images/Planner/header/notifications/notify.svg" class="notifyImg mr-20">
+          <div class="d-flex align-items-baseline gap-1">
+            <span class="fs-12 fs-lg-16 fw-500 notifyBtn">Notifications</span>
+            <button class="fs-8 fs-lg-10 bg-none border-0 clearallBtn">clear all</button>
+          </div>
+        </div>
+        <div class="notification-close cursor" (click)="close()" role="button">
+          <mat-icon fontIcon="close"></mat-icon>
+        </div>
+      </div>
+      <hr class="d-flex w-100 my-2">
+      <div *ngFor="let notification of plannerHeaderNotification" class="d-flex flex-column">
+        <div class="d-flex align-items-center">
+          <div>
+            <img src="{{notification.src}}" alt="" class="tableImg mr-20">
+          </div>
+          <div class="d-flex justify-content-around align-items-center w-100 gap-2 me-3">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="d-flex flex-column">
+                <span class="fs-13 fw-500 notifyTitle">{{notification.notifiTitle}}</span>
+                <span class="fs-11 fw-500 notifyTime">{{notification.time}}</span>
+                <span class="fs-10 notifyDuration">{{notification.duration}}</span>
+              </div>
+              <div class="d-flex">
+                <button class="border-0 py-1 px-2 fs-11 fs-md-12 fw-500" [ngClass]="{'newBtn': notification.statusButton === 'New', 'pendingBtn': notification.statusButton === 'Pending'}">
+                  {{notification.statusButton}}</button>
+              </div>
+            </div>
+            <div class="rolecolor">
+              <i class="bi bi-chevron-right" role="button"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <hr class="d-flex w-100 my-2">
+        </div>
+      </div>
+    </div>
+    }
+
+    <div class="user-menu">
+      <div class="d-flex align-items-center gap-10 user-info" (click)="toggleDropdown()">
+        <img src="../../../../assets/images/Planner/header/header_user.png" alt="User Image" class="user-img" />
+        <div class="d-flex flex-column">
+          <span class="fs-10 fs-lg-14 user-id notifyBtn">{{userName}}</span>
+          <span class="fs-8 fs-lg-10 fw-300 rolecolor">{{designation}}</span>
+        </div>
+        <i [class]="dropdownOpen ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"></i>
+      </div>
+      @if(dropdownOpen){
+      <div class="dropdown-card w-sm-200 w-md-250 w-lg-270 d-flex">
+        <div class="dropdown-user d-flex flex-column align-items-center">
+          <img src="../../../../assets/images/Planner/header/header_user.svg" alt="User Image"
+            class="dropdown-user-img mt-3" />
+          <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <span class="user-id fs-18 fw-bold">{{userName}}</span>
+            <span class="fs-14 fw-300 rolecolor">{{designation}}</span>
+          </div>
+
+          <hr class="w-100 my-1 hrlinecolor">
+          <div class="d-flex flex-column gap-1 w-100 ms-5 ">
+            <span class="fw-300 my-2 fs-14"> Language</span>
+            <span class="fw-300 my-2 fs-14"> Booking History</span>
+            <span class="fw-300 my-2 fs-14"> Settings</span>
+            <span class="text-danger my-2 fs-14 fw-300"> Logout</span>
+          </div>
+        </div>
+
+      </div>
+      }
+    </div>
+  </div>
+<app-right-pannel class="pannelMain"></app-right-pannel>
+</header>

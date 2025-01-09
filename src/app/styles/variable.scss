@@ -74,6 +74,16 @@ $time-part-line-clr: #DCE3E7;
 $time-part-bg-clr: #ECF6FB;
 $form-blue:#124DBD;
 $form-focus:#86b7fe;
+$notificationColor: #003861;
+$notifyBadge: #00BF86;
+$newBtncolor: #4AAF91;
+$notifyTimeColor: #5A6474;
+$notifyNewColor: #4AAF91;
+$notufyNewBg: #EDF7F4;
+$notifyPendingColor: #E39A37;
+$notifyPendingBg: rgba(255, 173.43, 76.50, 0.18);
+$notifyclose: #809CB0;
+$desigcolor: #383A3B;
 $cal-bg: #2B2B2B;
 $cal-current-date-bg: #DAEF84;
 $cal-avilable-event-clr: #20CA9A;
@@ -83,12 +93,21 @@ $select-bg: #F3F3F3;
 $cal-view-border-clr: #E8E8E8;
 $admin-table-text:#003861;
 $admin-search:#595959;
+
 //planner
+
+$searchPholder: #9AA5B5;
+$cancelcolor: #E42E2E;
+$dialogfontcolor: #272727;
+$dialogBG1: #676767;
+$dialogBG2: #C8B0AA;
+
 $view-link: #2e70d4;
 $checkin: #00a2a2;
 $checkout: #f24822;
 $payment-bg: #f7f9fc;
 $amount-paid: #406a89;
+
 $dialogue-backclr:rgba(0, 0, 0, 0.66);
 $dialogue-lightclr:rgba(247, 247, 247, 0.87);
 $dialogue-box-shadow:rgba(0, 0, 0, 0.25);
@@ -105,6 +124,15 @@ $shape-bg: #f0f6fb;
 $cancel-btn-border: #E42E2E;
 $confirm-text-clr: #008000;
 $selected-border-clr: #1F8730;
+$calenderhover: #F0961B;
+$drop-down-icon-clr:#999AA5;
+$headerUser: #333;
+$rightPannelbg: #F3F3F3;
+$rightpannelBorder: #E8E8E8;
+$dropdowncount: #a0bdd3;
+$checkboxBorder: #D9D9D9;
+$hallsListFont: #7a7178;
+$rolecolor: #a5a8ae;
 
 
 @function gutter-sp($key) {

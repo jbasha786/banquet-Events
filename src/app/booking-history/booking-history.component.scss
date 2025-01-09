@@ -1,5 +1,4 @@
 @import '../styles/variable.scss';
-@import '../../styles.scss';
 
 
 .booking-view {
@@ -44,11 +43,18 @@
     display: none;
   }
 
+  .tabTitle ::ng-deep .mat-mdc-tab-header-pagination-controls-enabled .mat-mdc-tab-header-pagination {
+    display: none;
+  }
+
+  .tabTitle ::ng-deep .mdc-tab {
+    padding: gutter-sp(0);
+  }
+
   .tabTitle ::ng-deep .mdc-tab__text-label {
-    font-family: "poppins", sans-serif;
     font-size: gutter-sp(30);
     letter-spacing: normal;
-    margin-right: gutter-sp(30);
+    margin-right: gutter-vw(3);
     text-transform: none;
   }
 
@@ -72,14 +78,21 @@
     font-weight: 400;
   }
 
-  @media (min-width: 320px) and (max-width: 1172px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     .search {
       top: gutter-sp(80);
       right: gutter-sp(0);
     }
 
     .tabTitle ::ng-deep .mdc-tab__text-label {
-      font-size: gutter-sp(22);
+      font-size: gutter-sp(16);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 940px) {
+    .search {
+      top: gutter-sp(80);
+      right: gutter-sp(0);
     }
   }
 }

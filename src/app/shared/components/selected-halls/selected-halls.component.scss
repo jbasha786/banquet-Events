@@ -1,14 +1,35 @@
 @import '../../../styles/variable.scss';
 
 .hallsView {
-    padding: gutter-vw(0) gutter-vw(5);
+    
+
+    .guest {
+        font-size: gutter-sp(13);
+        padding-left: gutter-sp(12);
+    }
+
+    .guestLabel {
+        font-size: gutter-sp(14);
+        padding-left: gutter-sp(8);
+        padding-top: gutter-sp(20);
+    }
+    .guestClockLabel {
+        font-size: gutter-sp(14);
+        padding-left: gutter-sp(5);
+        padding-top: gutter-sp(20);
+    }
+
+    .guestclock {
+        font-size: gutter-sp(13);
+        padding-left: gutter-sp(7);
+    }
 
     .hall-list {
         border: gutter-sp(1) solid $footer-email-border;
         border-radius: gutter-sp(5);
         align-items: center;
+        padding: gutter-sp(14);
         height: gutter-per(100);
-        width: gutter-per(100);
 
 
         .font-color {
@@ -26,14 +47,14 @@
         }
 
         .hall-img {
-            width: gutter-sp(28);
-            height: gutter-sp(30);
+            width: gutter-sp(34);
+            height: gutter-sp(32);
+            margin-top: gutter-sp(6);
         }
 
         .mat-mdc-input-element {
             font-size: gutter-sp(14);
             height: gutter-sp(16);
-            font-family: "poppins", sans-serif;
         }
 
         .input-group {
@@ -60,10 +81,10 @@
             input[type="date"]::-webkit-calendar-picker-indicator {
                 opacity: 1;
                 display: block;
-                background-image: url("../../../../assets/images/icons/calendar.png");
+                background-image: url("../../../../assets/images/halls/calender-hall.png");
                 background-repeat: no-repeat;
-                width: gutter-sp(25);
-                height: gutter-sp(25);
+                width: gutter-sp(32);
+                height: gutter-sp(36);
                 border-width: thin;
             }
 
@@ -95,6 +116,16 @@
             padding: gutter-rem(0.375) gutter-rem(0.25);
 
             img {
+                width: gutter-sp(18);
+                height: gutter-sp(18);
+            }
+        }
+        .userImg {
+            background-color: $white;
+            border: gutter-sp(1) solid $white;
+            padding: gutter-rem(0.375) gutter-rem(0);
+
+            img {
                 width: gutter-sp(25);
                 height: gutter-sp(25);
             }
@@ -107,13 +138,10 @@
 
         &__icon {
             position: absolute;
-            top: gutter-per(16);
             right: gutter-sp(0);
             left: gutter-sp(0);
             bottom: gutter-sp(0);
             margin: gutter-sp(0) auto;
-            height: gutter-per(100);
-            width: gutter-per(100);
             text-align: center;
 
             &__conformed-color {
@@ -132,10 +160,10 @@
         }
 
         &__img {
-            width: gutter-sp(250);
+            width: gutter-per(100);
             height: auto;
             flex: 1;
-            object-fit: cover;
+            border-radius: gutter-sp(6);
         }
 
         @media (max-width: 991px) {
@@ -155,6 +183,12 @@
     .reserve {
         background-color: $green-select;
         color: $white;
+    }
+    .cancel{
+        background-color: $white;
+        color: $cancelcolor;
+        border: gutter-sp(1) solid $cancel-btn-border ;
+        padding: gutter-sp(9) gutter-sp(33);
     }
 
     .selected {

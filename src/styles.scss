@@ -13,8 +13,7 @@ $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetO
         accent: $VipsBanquetOffers-accent,
         warn: $VipsBanquetOffers-warn,
       ),
-      typography: mat.define-typography-config(
-        $font-family: 'Poppins, sans-serif'
+      typography: mat.define-typography-config($font-family: 'Poppins, sans-serif'
       ),
       density: 0,
     ));
@@ -102,7 +101,7 @@ body {
 
   // Paddings
   .p-#{$i} {
-    padding: 0px + $i;
+    padding: 0px + $i !important;
   }
 
   .p-md-#{$i} {
@@ -233,6 +232,12 @@ body {
     }
   }
 
+  .h-xl-#{$i} {
+    @media (min-width: 1440px) {
+      height: #{$i}px;
+    }
+  }
+
   // line-height
   .lh-#{$i} {
     line-height: #{$i}px;
@@ -329,17 +334,33 @@ html {
 }
 
 .fixed-dialog {
+
   transform: translate(gutter-per(0), gutter-per(-17));
   position: fixed;
   z-index: 1050;
-  overflow: auto;
+  overflow: scroll;
+  scrollbar-width: none;
 }
+
+.fixed-dialog .mat-mdc-dialog-container .mdc-dialog__surface {
+  overflow: hidden;
+}
+
+
+.shape-dialog-wrapper {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    scrollbar-width: none;
+  }
+}
+
+
 .timePartLocation {
   position: absolute !important;
   top: gutter-sp(10);
 
   .mat-mdc-dialog-container .mdc-dialog__surface {
     border-radius: gutter-sp(12);
+    scrollbar-width: none;
   }
 }
 .custom-dialog-panel,.custom-dialog-success-panel{
@@ -361,8 +382,13 @@ html {
     .mat-date-range-input-container {
       font-size: gutter-sp(14);
     }
+
+    .mat-date-range-input-separator {
+      opacity: gutter-per(45);
+    }
   }
 }
+
 .custom-dialog-backdrop {
   background-color: $dialogue-backclr;
   z-index:2;
@@ -398,4 +424,8 @@ html {
 .custom-dialog-success-backdrop{
   background-color: $dialogue-lightclr;
   z-index:2;
+
+  ::ng-deep .cdk-overlay-pane {
+  z-index: 1050 !important;  /* Ensure overlay is above .fixed-top */
+
 }

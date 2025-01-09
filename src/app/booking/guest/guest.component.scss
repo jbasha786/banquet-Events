@@ -2,7 +2,7 @@
 
 .guest {
     &__form {
-        margin: gutter-sp(0) auto;
+        margin: gutter-sp(0) auto gutter-sp(220);
     }
 
     &__title {
@@ -18,6 +18,9 @@
 
         &__input {
             width: gutter-per(100);
+        }
+        &__input::placeholder {
+            font-size: gutter-sp(14);
         }
 
         input:focus {

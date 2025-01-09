@@ -2,7 +2,7 @@
 
 .selction_dates {
     &__calender {
-        ::ng-deep .mdc-button__label{
+        ::ng-deep .mdc-button__label {
             color: $calenderDate;
             font-weight: 400;
         }
@@ -14,6 +14,16 @@
                 border-color: $secondary-color;
             }
         }
+
+        .calenderDiv ::ng-deep .mat-calendar-body-cell-content.mat-focus-indicator.mat-calendar-body-today {
+            background-color: $secondary-color;
+            color: $white;
+            border: none;
+        }
+
+        .calenderDiv ::ng-deep .mat-calendar-body-selected {
+            background: $primary-color;
+        }
     }
 
     &__footer {
@@ -24,5 +34,9 @@
 
     .slots_radio ::ng-deep .mat-mdc-list-option .mdc-radio {
         display: none;
+    }
+
+    .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item {
+        border-radius: gutter-sp(6);
     }
 }

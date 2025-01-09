@@ -1,7 +1,13 @@
 @import '../../../styles/variable.scss';
 
 .menu_model {
+    padding: gutter-sp(10);
+    
     .menu {
+        .table {
+            overflow: scroll;
+            scrollbar-width: none;
+        }
         &__search {
             position: relative;
 
@@ -9,12 +15,14 @@
                 border-radius: gutter-sp(3);
                 border: gutter-sp(1) solid $gray;
                 background-color: $gray;
-                min-height:  gutter-sp(30);
+                min-height: gutter-sp(30);
                 width: gutter-per(100);
             }
 
             &__search-input::placeholder {
-                color: $footer-text-color;
+                color: $searchPholder;
+                font-size: 14px;
+                font-weight: 200;
                 padding-left: gutter-sp(22);
             }
 
@@ -30,23 +38,41 @@
         }
 
         .mat-mdc-table {
-            box-shadow: none;
             width: gutter-sp(500);
-            height: gutter-sp(200);
             overflow: auto;
+            box-shadow: none;
         }
 
-        .table_header {
-            border-bottom: none;
-            padding: gutter-sp(0);
-            font-size: gutter-per(16);
+        .table_header .mat-mdc-header-cell {
+            font-size: gutter-per(22);
+        }
+
+        .menuTable .mat-mdc-header-cell {
+            padding: gutter-sp(0) gutter-sp(0) gutter-sp(10) gutter-sp(0);
+            border-bottom: gutter-sp(1) solid $white;
+        }
+        .mdc-data-table__table {
+            border-bottom: gutter-sp(1) solid $white;
+        }
+        .menuTable .mat-mdc-cell {
+            text-wrap: nowrap;
+        }
+
+        .menuTable .mat-mdc-row {
+            height: 40px;
+        }
+
+        .menuTable ::ng-deep .mdc-checkbox .mdc-checkbox__background {
+            left: 1px;
         }
 
         .table_data {
             border: none;
             padding: gutter-sp(0);
         }
-
+         .price{
+            text-wrap: nowrap;
+        }
         .mat-cell {
             padding: gutter-sp(2);
         }
@@ -58,21 +84,33 @@
         }
 
         .menu_headings {
-            color: $booknow-pink;
+            color: $secondary-color;
         }
 
         .mat-mdc-dialog-surface .mdc-dialog__surface {
-            border-radius:  gutter-sp(12);
+            border-radius: gutter-sp(12);
         }
 
         .mat-mdc-header-row {
             height: fit-content;
         }
-        &__save-btn{
+
+        &__save-btn {
             background-color: $secondary-color;
             color: $lite-white;
         }
 
-    }
+        .title {
+            color: $black;
+        }
 
+        .selectTitle {
+            color: $black;
+
+        }
+
+        .selected-number {
+            color: $black;
+        }
+    }
 }

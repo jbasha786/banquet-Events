@@ -10,7 +10,7 @@
     }
 
     .event-card-section {
-        --bs-gutter-x: 50px;
+        --bs-gutter-x: #{gutter-rem(3.125)};
     }
 
     .events-text {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogActions, MatDialogContent, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dialogue',
@@ -13,7 +14,8 @@ import { MatDialogActions, MatDialogContent, MatDialogRef } from '@angular/mater
 export class DialogueComponent {
 
   constructor(
-    public dialogRef: MatDialogRef<DialogueComponent>
+    public dialogRef: MatDialogRef<DialogueComponent>,
+    private router: Router
   ) { }
 
   cancel(): void {

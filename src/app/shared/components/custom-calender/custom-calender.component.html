@@ -13,10 +13,10 @@
       <mat-icon class="btn_chevron">chevron_left</mat-icon>
     </button>
     <div class="calendar-grid d-flex justify-content-start align-items-center gap-18 gap-md-2 ">
-      <div class="calendar-day d-flex justify-content-center align-items-center" *ngFor="let day of visibleDates" (click)="selectDate(day)">
+      <div class="calendar-day d-flex justify-content-center align-items-center" *ngFor="let day of visibleDates" (click)="selectDate(day.date)">
         <div class="d-flex row">
-          <div class="month">{{currentMonth}}</div>
-          <div class="day lh-lg">{{ day }}</div>
+          <div class="month">{{day.weekday }}</div>
+          <div class="day lh-lg">{{ day.date | date:'dd ' }}</div>
         </div>
       </div>
     </div>
