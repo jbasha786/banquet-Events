@@ -6,7 +6,7 @@
                 @for(plan of planningData; track $index){
                 <div class="col-10 col-md-6 col-lg-4 p-1 m-auto">
                     <div class="d-flex planing__type__section">
-                        <mat-list-option [value]="plan">
+                        <mat-list-option [value]="plan" class="list" [ngClass]="plan.isActive && selectedItemId === plan.id ? 'active' : ''">
                            <div class="d-flex justify-content-start">
                             <div>
                                 <img class="h-18 align-text-top" src="{{plan.src}}" alt="{{plan.name}}">

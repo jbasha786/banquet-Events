@@ -20,18 +20,35 @@
 
         &__section {
             border: gutter-sp(1) solid $border-silver;
-            border-radius: gutter-sp(8);
+            border-radius: gutter-sp(7);
             cursor: pointer;
+
+            .active {
+                background-color: $active-list-bg-clr;
+                border: gutter-sp(1) solid $secondary-color;
+            }
         }
 
         &__section .mdc-list-item--with-trailing-radio.mdc-list-item {
-            border-radius: gutter-sp(8);
+            border-radius: gutter-sp(6);
+
         }
 
         &__section:hover {
             border-color: $secondary-color;
             cursor: pointer;
         }
+
+        &__section mat-list-option.mat-focused {
+            background-color: $active-list-bg-clr; 
+            color: $active-list-bg-clr;           
+          }
+          
+          &__section mat-list-option:focus {
+            background-color: $active-list-bg-clr;
+            color: $active-list-bg-clr;
+          }
+          
     }
 
     .planning-radio ::ng-deep .mat-mdc-list-option .mdc-radio {

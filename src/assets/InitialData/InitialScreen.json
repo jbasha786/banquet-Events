@@ -4,84 +4,98 @@
             "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
             "price": 1,
             "qty": 1,
+            "time": "12:12",
             "total": "H"
         },
         {
             "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
             "price": 12,
             "qty": 6,
+            "time": "12:12",
             "total": "C"
         },
         {
             "name": "Kaas broodjes (vega)",
             "price": 18,
             "qty": 9,
+            "time": "12:12",
             "total": "F"
         },
         {
             "name": "Kaas broodjes (vega)",
             "price": 6,
             "qty": 3,
+            "time": "12:12",
             "total": "Li"
         },
         {
             "name": "Onbeperkt koffie thee en fris ",
             "price": 14,
             "qty": 7,
+            "time": "12:12",
             "total": "N"
         },
         {
             "name": "Onbeperkt koffie thee en fris ",
             "price": 4,
             "qty": 2,
+            "time": "12:12",
             "total": "He"
         },
         {
             "name": "Pizzapunt ",
             "price": 9,
             "qty": 4,
+            "time": "12:12",
             "total": "Be"
         },
         {
             "name": "Pizzapunt",
             "price": 20,
             "qty": 10,
+            "time": "12:12",
             "total": "Ne"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
             "price": 10,
             "qty": 5,
+            "time": "12:12",
             "total": "B"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
             "price": 15,
             "qty": 8,
+            "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
             "price": 15,
             "qty": 8,
+            "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
             "price": 15,
             "qty": 8,
+            "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
             "price": 15,
             "qty": 8,
+            "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
             "price": 15,
             "qty": 8,
+            "time": "12:12",
             "total": "O"
         }
     ],
@@ -982,62 +996,74 @@
         {
             "id": 1,
             "name": "Birthday",
-            "src": "/assets/images/planing/cake.svg"
+            "src": "/assets/images/planing/cake.svg",
+            "isActive": false
         },
         {
             "id": 10,
             "name": "Conferences",
-            "src": "/assets/images/planing/conference.svg"
+            "src": "/assets/images/planing/conference.svg",
+            "isActive": false
         },
         {
             "id": 11,
             "name": "Small Meetings",
-            "src": "/assets/images/planing/conversation.svg"
+            "src": "/assets/images/planing/conversation.svg",
+            "isActive": false
         },
         {
             "id": 12,
             "name": "Others",
-            "src": "/assets/images/planing/restaurant.svg"
+            "src": "/assets/images/planing/restaurant.svg",
+            "isActive": false
         },
         {
             "id": 2,
             "name": "Wedding",
-            "src": "/assets/images/planing/wedding-rings.svg"
+            "src": "/assets/images/planing/wedding-rings.svg",
+            "isActive": false
         },
         {
             "id": 3,
             "name": "Social Events",
-            "src": "/assets/images/planing/bar.svg"
+            "src": "/assets/images/planing/bar.svg",
+            "isActive": false
         },
         {
             "id": 4,
             "name": "Bussiness Meetings",
-            "src": "/assets/images/planing/talk.svg"
+            "src": "/assets/images/planing/talk.svg",
+            "isActive": false
         },
         {
             "id": 5,
             "name": "Engagement",
-            "src": "/assets/images/planing/confetti.svg"
+            "src": "/assets/images/planing/confetti.svg",
+            "isActive": false
         },
         {
             "id": 5,
             "name": "Social Events",
-            "src": "/assets/images/planing/bar.svg"
+            "src": "/assets/images/planing/bar.svg",
+            "isActive": false
         },
         {
             "id": 7,
             "name": "Work Event",
-            "src": "/assets/images/planing/briefcase.svg"
+            "src": "/assets/images/planing/briefcase.svg",
+            "isActive": false
         },
         {
             "id": 8,
             "name": "Family Event",
-            "src": "/assets/images/planing/parents.svg"
+            "src": "/assets/images/planing/parents.svg",
+            "isActive": false
         },
         {
             "id": 9,
             "name": "Get Together",
-            "src": "/assets/images/planing/collaboration.svg"
+            "src": "/assets/images/planing/collaboration.svg",
+            "isActive": false
         }
     ],
     "promotions": [

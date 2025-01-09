@@ -11,6 +11,7 @@
         padding-left: gutter-sp(8);
         padding-top: gutter-sp(20);
     }
+
     .guestClockLabel {
         font-size: gutter-sp(14);
         padding-left: gutter-sp(5);
@@ -22,7 +23,7 @@
         padding-left: gutter-sp(7);
     }
 
-    .pleft-3{
+    .pleft-3 {
         padding-left: gutter-sp(3);
     }
 
@@ -36,7 +37,12 @@
         .fontcolor {
             color: $hallsListFont;
         }
+    }
 
+    .imgDesc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__card {
@@ -151,11 +157,6 @@
 
             &__conformed-color {
                 color: $confirm-text-clr;
-            }
-
-            .sentImg {
-                width: gutter-sp(100);
-                height: gutter-sp(100);
             }
 
             .reserveID {

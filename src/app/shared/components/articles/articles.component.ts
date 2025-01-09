@@ -19,7 +19,7 @@ import { Router } from '@angular/router';
 })
 export class ArticlesComponent {
 
-  displayedColumns: string[] = ['select', 'name', 'price', 'qty', 'total'];
+  displayedColumns: string[] = ['select', 'name', 'price', 'qty', 'time', 'total'];
   dataSource = new MatTableDataSource<any>([]);
   selection = new SelectionModel<any>(true, []);
 
@@ -74,6 +74,5 @@ export class ArticlesComponent {
   }
   onSave(): void {
     this.dialog.closeAll();
-    this.router.navigate(['hallsList']);
   }
 }
