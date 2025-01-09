@@ -18,7 +18,6 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
   searchQuery: string = '';
-  isIconDisabled: boolean = false;
   displayedColumns: string[] = ['select', 'name', 'qty', 'price',];
   dataSource = new MatTableDataSource<any>([]);
   selection = new SelectionModel<any>(true, []);
@@ -76,12 +75,7 @@ export class MenuComponent {
   closeDialog() {
     this.dialogRef.close();
   }
-  hideIcon() {
-    this.isIconDisabled = true;
-  }
-  onInputChange(): void {
-    this.isIconDisabled = this.searchQuery.trim().length > 0;
-  }
+ 
   onSave(): void {
     this.dialogRef.close();
   }

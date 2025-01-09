@@ -3,7 +3,14 @@
 .article {
     .table {
         overflow: scroll;
-        scrollbar-width: none;
+    }
+
+    .iconclose {
+        font-size: gutter-sp(30);
+    }
+
+    .time-input::-webkit-calendar-picker-indicator {
+        display: none;
     }
 
     &__search {
@@ -14,6 +21,7 @@
             border: gutter-sp(1) solid $lite-white;
             background-color: $gray;
             min-height: gutter-sp(30);
+            font-size: gutter-sp(12);
             width: gutter-per(100);
         }
 
@@ -25,7 +33,7 @@
 
         &__search-icon {
             position: absolute;
-            right: gutter-sp(6);
+            left: gutter-sp(6);
             top: gutter-sp(8);
         }
     }
@@ -36,10 +44,17 @@
         overflow: auto;
         box-shadow: none;
     }
+    .tableArticle .quantity{
+        border: gutter-sp(1) solid $black;
+    }
 
     .mat-mdc-cell {
-            text-wrap: nowrap;
-            border-bottom-color: $white;
+        text-wrap: nowrap;
+        border-bottom-color: $white;
+    }
+
+    .mdc-data-table__row:last-child .mat-mdc-cell {
+        border-bottom: gutter-sp(1) solid $white;
     }
 
     &__save-btn {

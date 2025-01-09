@@ -6,7 +6,6 @@
     .menu {
         .table {
             overflow: scroll;
-            scrollbar-width: none;
         }
         &__search {
             position: relative;
@@ -17,24 +16,27 @@
                 background-color: $gray;
                 min-height: gutter-sp(30);
                 width: gutter-per(100);
+                font-size: gutter-sp(12);
             }
 
             &__search-input::placeholder {
                 color: $searchPholder;
-                font-size: 14px;
+                font-size: gutter-sp(14);
                 font-weight: 200;
-                padding-left: gutter-sp(22);
+                padding-left: gutter-sp(1);
             }
 
             &__search-icon {
                 position: absolute;
-                left: gutter-sp(13);
-                top: gutter-sp(9);
-                color: $footer-text-color;
-                cursor: none;
-                pointer-events: none;
+                left: gutter-sp(6);
+                top: gutter-sp(8);
             }
 
+        }
+        .menuTable{
+            .quantity{
+                border: gutter-sp(1) solid $black;
+            }
         }
 
         .mat-mdc-table {
@@ -59,11 +61,11 @@
         }
 
         .menuTable .mat-mdc-row {
-            height: 40px;
+            height: gutter-sp(40);
         }
 
         .menuTable ::ng-deep .mdc-checkbox .mdc-checkbox__background {
-            left: 1px;
+            left: gutter-sp(1);
         }
 
         .table_data {
