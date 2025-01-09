@@ -1,10 +1,10 @@
 <div class="hallDialog">
   <mat-dialog-content >
-    <p class="d-flex justify-content-center fs-18 fw-bold title" >Are You Sure?</p>
-      <div class=" text-center areyou">You want Cancel Booking <span class="title fw-bold">“Queens Lagoon Suite”.</span> You can’t undo this action.</div>
-  </mat-dialog-content>
-  <mat-dialog-actions class="buttons">
-    <button mat-button class="buttons__cancel" (click)="cancel()">No</button>
-    <button mat-button class="buttons__yes" (click)="confirm()" cdkFocusInitial>Yes</button>
+     <p class="d-flex justify-content-center fs-18 fs-md-24 fw-medium dialogue-heading m-0 p-20" >Are You Sure?</p>
+      <div class=" text-center dialogue-content fs-16 lh-30 pb-20 pr-0 pr-md-50 pl-0 pl-md-50 ">You want Cancel Booking <span class="span_color fw-bold">“Queens Lagoon Suite”.</span> You can’t undo this action.</div>
+ </mat-dialog-content>
+  <mat-dialog-actions class="buttons gap-20">
+    <button mat-button class="buttons__cancel fs-16 fw-600" (click)="cancel()">No</button>
+    <button mat-button class="buttons__yes fs-16 fw-600" (click)="confirm()">Yes</button>
   </mat-dialog-actions>
 </div>

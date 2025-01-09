@@ -334,9 +334,9 @@ html {
 }
 
 .fixed-dialog {
-  transform: translate(0%, -17%);
-  position: relative;
-  border-radius: gutter-sp(10);
+
+  transform: translate(gutter-per(0), gutter-per(-17));
+  position: fixed;
   z-index: 1050;
   overflow: scroll;
   scrollbar-width: none;
@@ -346,11 +346,13 @@ html {
   overflow: hidden;
 }
 
+
 .shape-dialog-wrapper {
   .mat-mdc-dialog-container .mdc-dialog__surface {
     scrollbar-width: none;
   }
 }
+
 
 .timePartLocation {
   position: absolute !important;
@@ -359,6 +361,11 @@ html {
   .mat-mdc-dialog-container .mdc-dialog__surface {
     border-radius: gutter-sp(12);
     scrollbar-width: none;
+  }
+}
+.custom-dialog-panel,.custom-dialog-success-panel{
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    box-shadow:none;
   }
 }
 
@@ -382,6 +389,43 @@ html {
   }
 }
 
-::ng-deep .cdk-overlay-pane {
+.custom-dialog-backdrop {
+  background-color: $dialogue-backclr;
+  z-index:2;
+}
+.custom-dialog-panel {
+  border-radius: gutter-sp(24);
+  background: white;
+  padding: gutter-sp(16);
+  box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $dialogue-box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed !important;
+  top: gutter-per(50);
+  left: gutter-per(50);
+  transform: translate(gutter-per(-50), gutter-per(-50));
+}
+.custom-dialog-success-panel {
+  border-radius: gutter-sp(12);
+  background: white;
+  border:1px solid $dialogue-border;
+  padding: gutter-sp(32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed !important;
+  top: gutter-per(50);
+  left: gutter-per(50);
+  transform: translate(gutter-per(-50), gutter-per(-50));
+}
+.custom-dialog-success-backdrop{
+  background-color: $dialogue-lightclr;
+  z-index:2;
+
+  ::ng-deep .cdk-overlay-pane {
   z-index: 1050 !important;  /* Ensure overlay is above .fixed-top */
+
 }

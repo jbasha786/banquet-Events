@@ -1,36 +1,36 @@
 @import "../../../../app/styles/variable.scss";
-.hallDialog{
-   .title{
-    color: $dialogfontcolor;
-   }
-   .areyou{
-    color: $dialogfontcolor;
-   }
-    .buttons{
-        display: flex;
-        justify-content: center;
-        margin-bottom: gutter-sp(20);
-        padding: gutter-sp(10);
-        .mat-button{
-            border: gutter-sp(1) solid $black;
-        }
-        .title{
-            color: $dialogfontcolor;
-            background: $dialogfontcolor;
-        }
-        &__cancel{
-            border-radius: gutter-vw(50);
-            width: gutter-vw(5);
-            background: linear-gradient(90deg, $dialogBG1 gutter-per(0), $dialogBG2 gutter-per(100));
-        }
-        &__yes{
-            border-radius: gutter-vw(50);
-            width: gutter-vw(5);
-            background-color: $secondary-color;
-        }
-        ::ng-deep .mat-mdc-button  .mdc-button__label{
-            color: $white;
-        }
+
+.mat-body {
+  .dialogue-heading {
+    color: $dialogue-heading;
+  }
+  .dialogue-content {
+    .span_color {
+      color: $dialogue-contenthighlight;
+     }
+  }
+  .buttons .buttons__cancel {
+    height: gutter-sp(42);
+    font-size: gutter-sp(16);
+    background: linear-gradient(90deg, $btn-no-grdleft gutter-per(0), $btn-no-grdright gutter-per(100));
+    border-radius: gutter-vw(50);
+    width: gutter-sp(100);
+    color: $white;
+  }
+  .buttons .buttons__yes {
+    height: gutter-sp(42);
+    font-size: gutter-sp(16);
+    border-radius: gutter-vw(50);
+    width: gutter-sp(100);
+    background: linear-gradient(90deg, $btn-yes-grdleft 0%, $secondary-color 100%);
+    color: $white;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    padding: gutter-sp(0) gutter-sp(20) gutter-sp(20);
+    .mat-button {
+      border: gutter-sp(1) solid $black;
     }
-    
+  }
 }

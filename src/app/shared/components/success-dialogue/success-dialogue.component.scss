@@ -1,0 +1,15 @@
+@import "../../../../app/styles/variable.scss";
+.mat-body {
+  .dialogue-heading {
+    color: $dialogue-success;
+  }
+  .dialogue-content {
+    color: $cal-view-title-clr;
+    padding-bottom: gutter-sp(4);
+  }
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
