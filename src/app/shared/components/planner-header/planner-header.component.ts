@@ -5,11 +5,12 @@ import { DefaultService } from '../../../services/default.service';
 import { notificationModel } from '../../_models/notificationModel';
 import { CommonModule } from '@angular/common';
 import { RightPannelComponent } from '../right-pannel/right-pannel.component';
+import { HallDetailComponent } from '../hall-detail/hall-detail.component';
 
 @Component({
   selector: 'app-planner-header',
   standalone: true,
-  imports: [MatIconModule, RouterLink, CommonModule, RightPannelComponent],
+  imports: [MatIconModule, RouterLink, CommonModule, RightPannelComponent, HallDetailComponent],
   templateUrl: './planner-header.component.html',
   styleUrl: './planner-header.component.scss'
 })

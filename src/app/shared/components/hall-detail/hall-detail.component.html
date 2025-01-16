@@ -1,9 +1,10 @@
-<div class="hallDetailMain w-200 w-lg-300 p-2">
+@if(isVisible){
+<div class="hallDetailMain w-200 w-lg-300 p-3">
     <div class="d-flex align-item-center justify-content-between">
-        <div class="d-flex">
+        <div class="d-flex align-items-center">
             <button class="border-0 i-icon"><img src="../../../../assets/images/Planner/rightPannel/i-icon.svg"
                     alt=""></button>
-            <span>Plaza</span>
+            <span class="fs-15">Plaza</span>
         </div>
         <div (click)="close()" class="" role="button">
             <mat-icon fontIcon="close"></mat-icon>
@@ -11,12 +12,12 @@
     </div>
     <hr class="d-flex w-100 my-2">
     <div class="d-flex flex-column align-items-start">
-        <span>ABOUT</span>
-        <p>{{description}}</p>
+        <span class="fs-12">ABOUT</span>
+        <p class="fs-10">{{description}}</p>
     </div>
     <div class="d-flex flex-column">
         <span>IMAGES</span>
-        <img src="../../../../assets/images/BookingHistory/bookingHistory.png" alt="">
+        <img src="../../../../assets/images/BookingHistory/bookingHistory.png" alt="" class="diningImg">
     </div>
     <div class="d-flex flex-column">
         <span>DIMENSIONS</span>
@@ -28,8 +29,9 @@
     </div>
     <div class="d-flex flex-column">
         <span>SHAPES FITS WITH</span>
-        <div class="row images">
-            <ng-container *ngFor="let shape of shapes">
+        <!-- <div class="row images">
+            @for(shape of shapes; track $index){
+            <ng-container>
                 <div class="text-center m-auto p-15">
                     <div class="imageSection">
                         <img [src]="shape.src" [alt]="shape.name">
@@ -37,8 +39,8 @@
                     </div>
                 </div>
             </ng-container>
-            
-        </div>
+            }
+        </div> -->
     </div>
-
 </div>
+}

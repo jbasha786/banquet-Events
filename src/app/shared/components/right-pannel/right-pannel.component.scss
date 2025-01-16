@@ -1,5 +1,6 @@
 @import ' ../../../../../../app/styles/variable.scss';
 .rightPannel{
+    position: relative;
     background: $rightPannelbg;
     height: gutter-vh(92);
     .title{

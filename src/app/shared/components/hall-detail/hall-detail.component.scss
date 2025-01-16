@@ -1,0 +1,8 @@
+@import '../../../../app/styles/variable.scss';
+.hallDetailMain{
+    height: gutter-vh(92);
+    width: gutter-sp(435);
+    .diningImg{
+        border-radius: gutter-sp(10);
+    }
+}

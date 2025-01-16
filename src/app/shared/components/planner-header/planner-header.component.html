@@ -1,8 +1,8 @@
 <header class="header px-2 px-md-3 px-lg-4 py-2 d-flex justify-content-between align-items-center">
   <div class="header-left">
     <a class="navbar-brand cursor mx-auto">
-      <img class="logo mb-0 w-60 w-md-90 w-lg-100 h-50" src="../../../../assets/images/Planner/header/de-bonte-wever-logo.png" alt=""
-        (click)="goToHome()">
+      <img class="logo mb-0 w-60 w-md-90 w-lg-100 h-50"
+        src="../../../../assets/images/Planner/header/de-bonte-wever-logo.png" alt="" (click)="goToHome()">
     </a>
   </div>
   <div class="header-menu d-flex align-items-center gap-30 gap-lg-40">
@@ -12,11 +12,11 @@
         <button class="btn_search border-0" type="submit">
           <i class="bi bi-search"></i>
         </button>
-        <input class="form-control pl-30 py-2 search_input fs-12 ml-2 w-md-120 w-lg-260 h-40 h-md-45 fs-10 fs-lg-16" type="Search" placeholder="Search..."
-          aria-label="Search">
+        <input class="form-control pl-30 py-2 search_input fs-12 ml-2 w-md-120 w-lg-260 h-40 h-md-45 fs-10 fs-lg-16"
+          type="Search" placeholder="Search..." aria-label="Search">
       </form>
     </div>
-  }
+    }
     <div class="notification" (click)="openNotifications()">
       <i class="bi bi-bell"></i>
       <span class="badge">3</span>
@@ -49,7 +49,8 @@
                 <span class="fs-10 notifyDuration">{{notification.duration}}</span>
               </div>
               <div class="d-flex">
-                <button class="border-0 py-1 px-2 fs-11 fs-md-12 fw-500" [ngClass]="{'newBtn': notification.statusButton === 'New', 'pendingBtn': notification.statusButton === 'Pending'}">
+                <button class="border-0 py-1 px-2 fs-11 fs-md-12 fw-500"
+                  [ngClass]="{'newBtn': notification.statusButton === 'New', 'pendingBtn': notification.statusButton === 'Pending'}">
                   {{notification.statusButton}}</button>
               </div>
             </div>
@@ -97,5 +98,6 @@
       }
     </div>
   </div>
-<app-right-pannel class="pannelMain"></app-right-pannel>
+  <app-right-pannel class="pannelMain"></app-right-pannel>
+  <app-hall-detail class="hallDetail"></app-hall-detail>
 </header>

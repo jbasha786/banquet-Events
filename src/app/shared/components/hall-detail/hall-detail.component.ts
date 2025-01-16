@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import {  MatIconModule } from '@angular/material/icon';
+import { HallService } from '../../../services/hall.service';
 
 @Component({
   selector: 'app-hall-detail',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule, MatDialogModule],
   templateUrl: './hall-detail.component.html',
   styleUrl: './hall-detail.component.scss'
 })
 export class HallDetailComponent {
+  isVisible: boolean = false;
+
+  constructor(private hallservice: HallService,
+    // public dialogRef: MatDialogRef<HallDetailComponent>,
+  ) { }
 
   description: string = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page..."
   shapes: any = [
@@ -20,4 +28,15 @@ export class HallDetailComponent {
     { id: 7, name: "Class Room Style", price: "€ 15.40", src: "/assets/images/businessEvents/shapes/Class_Room_Style.svg", isActive: false },
     { id: 8, name: "T-Shape Style", price: "€ 15.40", src: "/assets/images/businessEvents/shapes/T-Shape_Style.svg", isActive: false }
   ]
+
+  ngOnInit() {
+    this.hallservice.hallDetailVisible$.subscribe((isVisible) => {
+      this.isVisible = isVisible;
+    });
+  }
+
+
+  close() {
+    // this.dialogRef.close();
+  }
 }

@@ -192,3 +192,10 @@
   width: gutter-sp(210);
   z-index: 5;
 }
+.hallDetail{
+  position: absolute;
+  top: gutter-sp(72);
+  right: gutter-sp(0);
+  z-index: 6;
+  background-color: $white;
+}

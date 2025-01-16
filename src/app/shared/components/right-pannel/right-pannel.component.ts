@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HallDetailComponent } from '../hall-detail/hall-detail.component';
+import { HallService } from '../../../services/hall.service';
 
 @Component({
   selector: 'app-right-pannel',
@@ -12,6 +13,7 @@ import { HallDetailComponent } from '../hall-detail/hall-detail.component';
 })
 export class RightPannelComponent {
   showHallDetails = false;
+  constructor(private hallservice: HallService) {}
   mainItems = [
     {
       label: 'Large Halls',
@@ -96,6 +98,6 @@ export class RightPannelComponent {
     });
   }
   openHallDetails() {
-    this.showHallDetails = true;
+    this.hallservice.toggleHallDetailVisibility(true);
   }
 }
