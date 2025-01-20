@@ -4,7 +4,7 @@
         <div class="card hallsView__card px-2 mt-2 mb-3 col-12">
             <div class="row w-100">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="input-group border-clr pleft-3 ms-2 ">
+                    <div class="input-group border-clr">
                         <span class="input-group-text userImg">
                             <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img"
                                 alt="user"></span>
@@ -16,30 +16,36 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="dateSection">
+                    <div class="dateSection" (click)="matcheckinDate.open()">
                         <div class="input-group custom_icon border-clr" id="datepicker">
+                            <span class="input-group-text custom_img" id="basic-addon1"><img src="../../assets/images/halls/calender-hall.png"
+                            alt=""></span>
                             <div class="form-floating">
-                                <input type="date" class="form-control guest" id="datepicker" placeholder="Guests"
-                                    [value]="checkinDate" [(ngModel)]="checkinDate">
+                                <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
+                                    [value]="checkinDate" [(ngModel)]="checkinDate" matInput [matDatepicker]="matcheckinDate">
+                                    <mat-datepicker #matcheckinDate></mat-datepicker>
                                 <label for="guestCount" class="customLabel guestLabel">Check-in</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="dateSection">
+                    <div class="dateSection" (click)="matcheckOutDate.open()">
                         <div class="input-group border-clr custom_icon" id="datepicker">
+                            <span class="input-group-text custom_img" id="basic-addon1"><img src="../../assets/images/halls/calender-hall.png"
+                            alt=""></span>
                             <div class="form-floating">
-                                <input type="date" class="form-control guest" id="datepicker" placeholder="Guests"
-                                    [(ngModel)]="checkOutDate" [value]="checkOutDate">
+                                <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
+                                    [(ngModel)]="checkOutDate" [value]="checkOutDate" matInput [matDatepicker]="matcheckOutDate">
+                                    <mat-datepicker #matcheckOutDate></mat-datepicker>
                                 <label for="guestCount" class="customLabel guestLabel">Check-out</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="input-group border-clr d-flex align-items-center ms-3">
-                        <span class="input-group-text basic-icon d-block d-lg-none me-1"><img
+                    <div class="input-group border-clr d-flex align-items-center ms-1">
+                        <span class="input-group-text basic-icon d-block d-lg-none"><img
                                 src="../../../../assets/images/icons/clock.png" alt="user"></span>
                         <div class="form-floating custom_select">
                             <select class="form-select guestclock" id="duration" aria-label="Default select example">

@@ -38,7 +38,7 @@
     <div class="row g-4">
       @for (obj of subbannerInfo; track $index) {
       <div class="col-12 col-lg-4">
-        <div class="subbanner__item position-relative">
+        <div class="subbanner__item position-relative cursor" (click)="goTolandingPages(obj.id)">
           <img class="subbanner__image" src="{{ obj.src }}" alt="subbanner Image" />
           <p class="subbanner__text position-absolute text-center fs-30 fw-bold">
             {{ obj.desc }}

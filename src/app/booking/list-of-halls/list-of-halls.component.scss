@@ -85,35 +85,31 @@
         .dateSection {
             border-radius: gutter-rem(0.375);
 
-            input[type="date"]::-webkit-calendar-picker-indicator {
-                opacity: 1;
-                display: block;
-                background-image: url("../../../assets/images/halls/calender-hall.png");
-                background-repeat: no-repeat;
-                width: gutter-sp(32);
-                height: gutter-sp(36);
-                border-width: thin;
+            .custom_img {
+                background: $white;
+                border: none;
+                padding: gutter-rem(0.375) gutter-rem(0);
+                img {
+                    width: gutter-sp(30);
+                    height: gutter-sp(30);
+                }
             }
 
-            input[type="date"]::-webkit-calendar-picker-indicator {
-                position: absolute;
-                left: gutter-per(2);
-                top: gutter-per(25);
-            }
-
-            input::-webkit-datetime-edit-fields-wrapper {
-                position: relative;
-                left: gutter-sp(18);
-            }
-
-            input::-webkit-datetime-edit {
-                position: relative;
-                left: gutter-sp(18);
+            .custom_date_input {
+                border: none;
+                padding-left: gutter-sp(3);
+                font-size: gutter-sp(13);
             }
 
             .customLabel {
-                left: gutter-sp(38);
+                padding-left: gutter-sp(0);
                 color: $secondary-color;
+
+            }
+
+            .custom_date_input:focus {
+                box-shadow: none;
+                border-color: $custom-input-border-clr;
             }
         }
 
@@ -123,8 +119,8 @@
             padding: gutter-rem(0.375) gutter-rem(0);
 
             img {
-                width: gutter-sp(18);
-                height: gutter-sp(18);
+                width: gutter-sp(20);
+                height: gutter-sp(20);
             }
         }
 
