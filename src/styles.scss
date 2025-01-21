@@ -26,6 +26,7 @@ html {
 body {
   color: $font-clr !important;
   font-family: 'Poppins', sans-serif !important;
+  --mat-dialog-container-small-max-width: gutter-vw(90);
 }
 
 .cursor {
@@ -464,4 +465,8 @@ html {
 
 .mat-calendar-body-selected.mat-calendar-body-today {
   box-shadow: none !important;
+}
+
+.timepicker-dial__control:focus {
+  background-color: transparent !important;
 }
