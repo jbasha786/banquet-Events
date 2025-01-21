@@ -111,4 +111,8 @@ export class HeaderComponent implements OnInit {
   goTo(link: any) {
     this.router.navigate([link]);
   }
+
+  handleButtonClick() {
+    this.router.navigate(['liveEvents'])
+  }
 }
