@@ -31,8 +31,8 @@ export class SelectedHallsComponent {
   requestSent: boolean = true;
   requestAccepted: boolean = true;
   selectedHalls: any[] = [];
-  checkinDate!: string | null;
-  checkOutDate!: string | null;
+  checkinDate: Date | null = null;
+  checkOutDate: Date | null = null;
   tomorrowDate = new Date();
 
   slots = [
@@ -48,8 +48,9 @@ export class SelectedHallsComponent {
     private datePipe: DatePipe
   ) {
     this.getSelectedHalls();
-    this.checkinDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
-    this.checkOutDate = this.datePipe.transform(this.tomorrowDate.setDate(new Date().getDate() + 1), 'yyyy-MM-dd');
+    this.checkinDate = new Date();
+    this.checkOutDate = new Date();
+    this.checkOutDate.setDate(this.checkOutDate.getDate() + 1);
   }
 
   getSelectedHalls() {

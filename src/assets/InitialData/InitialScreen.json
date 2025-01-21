@@ -288,14 +288,17 @@
     ],
     "subbannerInfo": [
         {
+            "id": 1,
             "desc": "BUSINESS",
             "src": "/assets/images/exinfo/business.svg"
         },
         {
+            "id": 2,
             "desc": "LEISURE",
             "src": "/assets/images/exinfo/leisure.svg"
         },
         {
+            "id": 3,
             "desc": "SPORTS",
             "src": "/assets/images/exinfo/sports.svg"
         }

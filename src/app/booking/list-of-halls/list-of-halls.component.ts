@@ -41,8 +41,8 @@ export class ListOfHallsComponent {
   requestSent: boolean = true;
   requestAccepted: boolean = true;
   selectedItem: number = 0;
-  checkinDate: string | null;
-  checkOutDate: string | null;
+  checkinDate: Date | null = null;
+  checkOutDate: Date | null = null;
   tomorrowDate = new Date();
 
   slots = [
@@ -62,8 +62,9 @@ export class ListOfHallsComponent {
     private zIndexService: ZindexService,
     private datePipe: DatePipe
   ) {
-    this.checkinDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
-    this.checkOutDate = this.datePipe.transform(this.tomorrowDate.setDate(new Date().getDate() + 1), 'yyyy-MM-dd');
+    this.checkinDate = new Date();
+    this.checkOutDate = new Date();
+    this.checkOutDate.setDate(this.checkOutDate.getDate() + 1);
   }
 
   ngOnInit() {
@@ -91,7 +92,7 @@ export class ListOfHallsComponent {
     this.eventBookingService.setSelectedHall(reserve);
     this.reserveBtn = false;
     this.requestSent = false;
-    this.buttonChangeEvent.emit('Proceed'); 
+    this.buttonChangeEvent.emit('Proceed');
   }
 
   getDetails() {

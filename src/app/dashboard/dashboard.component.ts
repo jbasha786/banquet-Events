@@ -44,12 +44,12 @@ export class DashboardComponent {
   personalizedInfo: any;
   promotionsInfo: any;
   shortDesc: boolean = true;
- 
+
 
   customOptionsforPersonalizedInfo: OwlOptions = {
     loop: true,
     autoplay: true,
-    autoplayTimeout: 5000, 
+    autoplayTimeout: 5000,
     autoplayHoverPause: true,
     center: false,
     dots: false,
@@ -57,7 +57,7 @@ export class DashboardComponent {
     autoWidth: false,
     items: 3,
     margin: 50,
-    smartSpeed: 300, 
+    smartSpeed: 300,
     lazyLoad: true,
     responsive: {
       0: { items: 1, margin: 10 },
@@ -66,8 +66,8 @@ export class DashboardComponent {
     },
     lazyLoadEager: 1,
   };
-  
-  
+
+
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
     private defaultService: DefaultService
@@ -111,12 +111,10 @@ export class DashboardComponent {
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
-      // width: "100vw",
-      // height: "100vh",
       width: '100vw',
       height: '100vh',
       maxWidth: '100vw',
-     
+
       panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
@@ -130,6 +128,26 @@ export class DashboardComponent {
 
   readMore(personalInfo: any) {
     personalInfo.showFullContent = !personalInfo.showFullContent;
+  }
+
+  goTolandingPages(id: number) {
+    this.router.navigate([this.getPages(id)]);
+  }
+
+  getPages(id: number): string {
+    let redirectComponent: string = '';
+    switch (id) {
+      case 1:
+        redirectComponent = 'business';
+        break;
+      case 2:
+        redirectComponent = '';
+        break;
+      case 3:
+        redirectComponent = '';
+        break
+    }
+    return redirectComponent;
   }
 
 }
