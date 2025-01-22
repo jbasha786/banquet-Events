@@ -19,8 +19,10 @@ import { Router } from '@angular/router';
 export class MenuComponent {
   searchQuery: string = '';
   displayedColumns: string[] = ['select', 'name', 'qty', 'price',];
-  dataSource = new MatTableDataSource<any>([]);
-  selection = new SelectionModel<any>(true, []);
+  startersDataSource = new MatTableDataSource<any>([]);
+  mainCourseDataSource = new MatTableDataSource<any>([]);
+  selectionStarters = new SelectionModel<any>(true, []);
+  selectionMainCourse = new SelectionModel<any>(true, []);
 
   constructor(
     public dialogRef: MatDialogRef<MenuComponent>,
@@ -42,7 +44,8 @@ export class MenuComponent {
 
   getInitalData() {
     this.defaultService.getJSON().subscribe(result => {
-      this.dataSource = result?.menu;
+      this.startersDataSource.data = result?.menuStarters || [];
+      this.mainCourseDataSource.data = result?.menuMainCourse || [];
     })
   }
 
@@ -50,27 +53,27 @@ export class MenuComponent {
     item.qty = event.data;
   }
 
-  isAllSelected() {
-    const numSelected = this.selection.selected.length;
-    const numRows = this.dataSource?.data?.length;
+  isAllSelected(selection: SelectionModel<any>, dataSource: MatTableDataSource<any>) {
+    const numSelected = selection.selected.length;
+    const numRows = dataSource?.data?.length;
     return numSelected === numRows;
   }
 
-  checkboxLabel(row?: any): string {
+  checkboxLabel(selection: SelectionModel<any>, row?: any): string {
     if (!row) {
-      return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
+      return `${this.isAllSelected(selection, this.startersDataSource) ? 'deselect' : 'select'} all`;
     }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+    return `${selection.isSelected(row) ? 'deselect' : 'select'} row`;
   }
 
-  toggleAllRows() {
-    if (this.isAllSelected()) {
-      this.selection.clear();
+  toggleAllRows(selection: SelectionModel<any>, dataSource: MatTableDataSource<any>) {
+    if (this.isAllSelected(selection, dataSource)) {
+      selection.clear();
       return;
     }
-
-    this.selection.select(...this.dataSource?.data);
+    selection.select(...dataSource.data);
   }
+
 
   closeDialog() {
     this.dialogRef.close();

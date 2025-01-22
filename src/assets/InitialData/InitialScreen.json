@@ -2,99 +2,99 @@
     "addArticles": [
         {
             "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
-            "price": 1,
+            "price": 1.01,
             "qty": 1,
             "time": "12:12",
             "total": "H"
         },
         {
             "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
-            "price": 12,
+            "price": 12.02,
             "qty": 6,
             "time": "12:12",
             "total": "C"
         },
         {
             "name": "Kaas broodjes (vega)",
-            "price": 18,
-            "qty": 9,
+            "price": 18.01,
+            "qty": 2,
             "time": "12:12",
             "total": "F"
         },
         {
             "name": "Kaas broodjes (vega)",
-            "price": 6,
+            "price": 6.01,
             "qty": 3,
             "time": "12:12",
             "total": "Li"
         },
         {
             "name": "Onbeperkt koffie thee en fris ",
-            "price": 14,
+            "price": 14.01,
             "qty": 7,
             "time": "12:12",
             "total": "N"
         },
         {
             "name": "Onbeperkt koffie thee en fris ",
-            "price": 4,
+            "price": 4.01,
             "qty": 2,
             "time": "12:12",
             "total": "He"
         },
         {
             "name": "Pizzapunt ",
-            "price": 9,
+            "price": 9.01,
             "qty": 4,
             "time": "12:12",
             "total": "Be"
         },
         {
             "name": "Pizzapunt",
-            "price": 20,
-            "qty": 10,
+            "price": 20.01,
+            "qty": 2,
             "time": "12:12",
             "total": "Ne"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
-            "price": 10,
-            "qty": 5,
+            "price": 10.01,
+            "qty": 1,
             "time": "12:12",
             "total": "B"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
-            "price": 15,
-            "qty": 8,
+            "price": 15.01,
+            "qty": 1,
             "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
-            "price": 15,
-            "qty": 8,
+            "price": 15.01,
+            "qty": 1,
             "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
-            "price": 15,
-            "qty": 8,
+            "price": 15.01,
+            "qty": 1,
             "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
-            "price": 15,
-            "qty": 8,
+            "price": 15.01,
+            "qty": 1,
             "time": "12:12",
             "total": "O"
         },
         {
             "name": "Zacht wit puntje met spread sla en kipfilet",
-            "price": 15,
-            "qty": 8,
+            "price": 15.01,
+            "qty": 1,
             "time": "12:12",
             "total": "O"
         }
@@ -399,14 +399,16 @@
     ],
     "invoiceView": {
         "account": "American bank",
-        "address": "24th Street, Dallas, 43201, America",
+        "address": "24th Street, Dallas,",
+        "addressSub": "43201, America",
         "bicCode": "0000000",
         "billFrom": "De Bonte Weaver 34c B-block, Dutch.",
         "billTo": "Valarie Carlson 24th Street, Dallas, 43201, America",
         "coc": "000000000",
         "desc": "Queens Lagoon Suite- Banquet Hall  450/Sqft",
         "ibanNumber": "GB00 0000 0000 0000 00",
-        "InvoiceId": "INV-2400346",
+        "InvoiceId": "INV-24",
+        "InvoiceIdSub": "00346",
         "issuedDate": "05/06/2024",
         "logo": "/assets/images/logo/de-bonte-wever.svg",
         "paymentInfo": "Payment is due within 15 days of the issued date. Please contact tubeladder@mail.com for any questions.",
@@ -414,12 +416,44 @@
         "refNumber": "123456-2023",
         "vat": "00000000"
     },
-    "menu": [
+    "menuStarters": [
         {
             "id": 1,
             "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
             "qty": 222,
-            "price": "$4"
+            "price": "$4.07"
+        },
+        {
+            "id": 2,
+            "name": "Onbeperkt koffie thee en fris ",
+            "qty": 3,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 3,
+            "name": "Kaas broodjes (vega)",
+            "qty": 4,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 4,
+            "name": "Pizzapunt",
+            "qty": 5,
+            "price": "€ 7.70"
+        },
+        {
+            "id": 5,
+            "name": "Zacht wit puntje met spread sla en kipfilet",
+            "qty": 5,
+            "price": "€ 7.70"
+        }
+    ],
+    "menuMainCourse": [
+        {
+            "id": 1,
+            "name": "Candybars (Mars, Snickers, Twix, Balisto etc)",
+            "qty": 222,
+            "price": "$4.07"
         },
         {
             "id": 2,

@@ -5,12 +5,12 @@
                 <p class="fs-25 fw-500 my-2">Add Articles</p>
             </div>
             <div (click)="close()" class="cursor" role="button">
-                <img src="../../../../assets/images/halls/close.svg" alt="">
+                <img src="../../../../assets/images/halls/close.svg" alt="" class="h-18">
             </div>
         </div>
         <div class="d-flex flex-column flex-md-row mb-2">
-            <p class="fs-12 me-0 me-md-4 mb-0"> Selected: 12 </p>
-            <span class="fs-12">Total Price: € 1400.00</span>
+            <p class="fs-12 me-0 me-md-4 mb-0 color"> Selected: 12 </p>
+            <span class="fs-12 color">Total Price: € 1400.00</span>
         </div>
         <div class="article__search">
             <input class="article__search__search-input pl-30" autocomplete="off" placeholder="search for basic..." />
@@ -23,12 +23,20 @@
             <!-- Checkbox Column -->
             <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
-                </th>
-                <td mat-cell *matCellDef="let row">
-                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
-                        [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                    <mat-checkbox
+                      (change)="toggleAllRows($event.checked)"
+                      [checked]="isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()">
                     </mat-checkbox>
-                </td>
+                  </th>
+                  <td mat-cell *matCellDef="let row">
+                    <mat-checkbox
+                      (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(row) : null"
+                      [checked]="selection.isSelected(row)"
+                      [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                  </td>
             </ng-container>
 
             <!-- Item Name Column -->
@@ -40,34 +48,34 @@
             <!-- Price Column -->
             <ng-container matColumnDef="price">
                 <th mat-header-cell *matHeaderCellDef> Price </th>
-                <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                <td mat-cell *matCellDef="let element"> <span class="mr-4">€</span>{{element.price}} </td>
             </ng-container>
 
             <!-- Quantity Column -->
             <ng-container matColumnDef="qty">
                 <th mat-header-cell *matHeaderCellDef class="col-6 col-md-2 w-70"> Quantity </th>
                 <td mat-cell *matCellDef="let element">
-                    <input type="number" [value]="element.qty" (input)="updateQty(element, $event)"
+                    <input type="number" [value]="element.qty" (input)="updateValue(element, $event, 'qty')" 
                         class="text-center col-6 quantity">
                 </td>
             </ng-container>
             <!-- time -->
             <ng-container matColumnDef="time">
-                <th mat-header-cell *matHeaderCellDef class="col-6 col-md-2 w-70"> Time </th>
+                <th mat-header-cell *matHeaderCellDef class="col-6 col-md-2 w-70 pl-22"> Time </th>
                 <td mat-cell *matCellDef="let element">
-                     <input type="time" [value]="element.time" (input)="updateQty(element, $event)"
-                        class="text-center col-8 time-input lh-1 py-1 quantity"> 
+                     <input type="time" [value]="element.time" (input)="updateValue(element, $event, 'time')" 
+                        class="text-center col-sm-10 col-lg-9 col-xl-6 time-input lh-15 quantity"> 
                     </td>
             </ng-container>
 
             <!-- Total Column -->
             <ng-container matColumnDef="total">
                 <th mat-header-cell *matHeaderCellDef> Total </th>
-                <td mat-cell *matCellDef="let element">{{element.price * element.qty}}</td>
+                <td mat-cell *matCellDef="let element"><span class="mr-4">€</span>{{element.price * element.qty}}</td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;">
         </table>
     </div>
     <div class=" buttonSave mt-10 mr-8 d-flex justify-content-end align-item-center ">

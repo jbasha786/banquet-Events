@@ -12,7 +12,7 @@ export class FooterComponent {
   footerColumns = [
     {
       title: 'Quick links',
-      links: ['Mew and Upcoming events', 'Best Rate Guarantee','Activities', 'Gift Cards'],
+      links: ['New and Upcoming events', 'Best Rate Guarantee','Activities', 'Gift Cards'],
     },
     {
       title: 'Travel Professionals',

@@ -5,17 +5,17 @@
                 <span class="title fw-500 fs-22">Menu Details</span>
             </div>
             <div (click)="closeDialog()" class="cursor close_btn" role="button">
-                <img src="../../../../assets/images/halls/menuclose.svg" alt="">
+                <img src="../../../../assets/images/halls/menuclose.svg" alt="" class="h-18">
             </div>
         </div>
         <div class="d-flex col">
             <div>
                 <span class="fw-400 fs-12 selectTitle">Selected:</span>
-                <span class="fw-400 fs-12 me-4 selected-number">12</span>
+                <span class="fw-400 fs-12 me-4 selectTitle">12</span>
             </div>
             <div class="price">
-                <span class="fw-400 fs-12 ">Total Price:</span>
-                <span class="fw-400 fs-12 ">€ 1400.00</span>
+                <span class="fw-400 fs-12 selectTitle">Total Price:</span>
+                <span class="fw-400 fs-12 selectTitle">€ 1400.00</span>
             </div>
         </div>
         <div class="menu__search my-2">
@@ -28,43 +28,47 @@
         </div>
         <div class="h-400 table">
             <div class="mb-2">
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-500 menuTable">
+                <table mat-table [dataSource]="startersDataSource" class="mat-elevation-z8 w-500 menuTable">
                     <div class="d-flex">
                         <!-- Checkbox Column -->
                         <ng-container matColumnDef="select">
-                            <th mat-header-cell *matHeaderCellDef class="table_header fw-light"> ITEM NAME </th>
-                            <td mat-cell *matCellDef="let row"
-                                class="table_data me-3 d-flex justify-content-start align-items-center">
-                                <mat-checkbox (click)="$event.stopPropagation()"
-                                    (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)"
-                                    [aria-label]="checkboxLabel(row)">
-                                </mat-checkbox>{{row.name}}
-                            </td>
+                            <th mat-header-cell *matHeaderCellDef class="table_header fw-light">
+                                <mat-checkbox (change)="toggleAllRows(selectionStarters, startersDataSource)"
+                                              [checked]="isAllSelected(selectionStarters, startersDataSource)">
+                                </mat-checkbox>
+                              </th>
+                              <td mat-cell *matCellDef="let row" class="table_data">
+                                <mat-checkbox (click)="$event.stopPropagation()" 
+                                              (change)="selectionStarters.toggle(row)" 
+                                              [checked]="selectionStarters.isSelected(row)" 
+                                              [aria-label]="checkboxLabel(selectionStarters, row)">
+                                </mat-checkbox>
+                              </td>
                         </ng-container>
     
                         <!-- Item Name Column -->
                         <ng-container matColumnDef="name">
-                            <th mat-header-cell *matHeaderCellDef class="table_header fw-light"></th>
-                            <td mat-cell *matCellDef="let element" class="table_data"> </td>
+                            <th mat-header-cell *matHeaderCellDef class="table_header">Name</th>
+                            <td mat-cell *matCellDef="let element" class="table_data"> {{element.name}}  </td>
                         </ng-container>
                     </div>
     
                     <!-- Quantity Column -->
                     <ng-container matColumnDef="qty">
-                        <th mat-header-cell *matHeaderCellDef class="table_header fw-light"> QUANTITY </th>
-                        <td mat-cell *matCellDef="let element" class="table_data">
-                            <input type="number" class="col-6 col-md-3 ms-1 quantity" [value]="element.qty" (input)="updateQty(element, $event)">
+                        <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> QUANTITY </th>
+                        <td mat-cell *matCellDef="let element" class="table_data_Qty ">
+                            <input type="number" class="col-10 col-md-4 ms-1 quantity" [value]="element.qty" (input)="updateQty(element, $event)">
                         </td>
                     </ng-container>
     
                     <!-- Price Column -->
-                    <ng-container matColumnDef="price">
-                        <th mat-header-cell *matHeaderCellDef class="table_header fw-light"> PRICE </th>
-                        <td mat-cell *matCellDef="let element" class="table_data"> {{element.price}} </td>
+                    <ng-container matColumnDef="price" class="mr-3">
+                        <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> PRICE </th>
+                        <td mat-cell *matCellDef="let element" class="table_price_data"> {{element.price}} </td>
                     </ng-container>
     
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
                 </table>
             </div>
     
@@ -72,43 +76,47 @@
                 <span class="fw-400 fs-18 menu_headings">Main Course</span>
             </div>
             <div class="mb-2">
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 menuTable">
+                <table mat-table [dataSource]="mainCourseDataSource" class="mat-elevation-z8 menuTable">
                     <div class="d-flex">
                         <!-- Checkbox Column -->
                         <ng-container matColumnDef="select" class="mb-4">
-                            <th mat-header-cell *matHeaderCellDef class="table_header fw-light"> ITEM NAME </th>
-                            <td mat-cell *matCellDef="let row"
-                                class="table_data me-3 d-flex justify-content-start align-items-center">
-                                <mat-checkbox (click)="$event.stopPropagation()" class="checkbox"
-                                    (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)"
-                                    [aria-label]="checkboxLabel(row)">
-                                </mat-checkbox>{{row.name}}
-                            </td>
+                            <th mat-header-cell *matHeaderCellDef class="table_header">
+                                <mat-checkbox (change)="toggleAllRows(selectionMainCourse, mainCourseDataSource)"
+                                              [checked]="isAllSelected(selectionMainCourse, mainCourseDataSource)">
+                                </mat-checkbox>
+                              </th>
+                              <td mat-cell *matCellDef="let row" class="table_data">
+                                <mat-checkbox (click)="$event.stopPropagation()" 
+                                              (change)="selectionMainCourse.toggle(row)" 
+                                              [checked]="selectionMainCourse.isSelected(row)" 
+                                              [aria-label]="checkboxLabel(selectionMainCourse, row)">
+                                </mat-checkbox>
+                              </td>
                         </ng-container>
     
                         <!-- Item Name Column -->
                         <ng-container matColumnDef="name">
-                            <th mat-header-cell *matHeaderCellDef class="table_header fw-light"></th>
-                            <td mat-cell *matCellDef="let element" class="table_data"> </td>
+                            <th mat-header-cell *matHeaderCellDef class="table_header">Name</th>
+                            <td mat-cell *matCellDef="let element" class="table_data"> {{element.name}}  </td>
                         </ng-container>
                     </div>
     
                     <!-- Quantity Column -->
                     <ng-container matColumnDef="qty">
-                        <th mat-header-cell *matHeaderCellDef class="table_header fw-light"> QUANTITY </th>
-                        <td mat-cell *matCellDef="let element" class="table_data">
-                            <input type="number" class="col-6 col-md-3 ms-1" [value]="element.qty" (input)="updateQty(element, $event)">
+                        <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> QUANTITY </th>
+                        <td mat-cell *matCellDef="let element" class="table_data_Qty">
+                            <input type="number" class="col-10 col-md-4 ms-1 quantity" [value]="element.qty" (input)="updateQty(element, $event)">
                         </td>
                     </ng-container>
     
                     <!-- Price Column -->
                     <ng-container matColumnDef="price">
-                        <th mat-header-cell *matHeaderCellDef class="table_header fw-light"> PRICE </th>
-                        <td mat-cell *matCellDef="let element" class="table_data"> {{element.price}} </td>
+                        <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> PRICE </th>
+                        <td mat-cell *matCellDef="let element" class="table_price_data"> {{element.price}} </td>
                     </ng-container>
     
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectionMainCourse.toggle(row)">
                 </table>
             </div>
         </div>

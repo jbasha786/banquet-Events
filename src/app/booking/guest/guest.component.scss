@@ -2,7 +2,7 @@
 
 .guest {
     &__form {
-        margin: gutter-sp(0) auto gutter-sp(220);
+        margin: gutter-sp(0) auto gutter-sp(290);
     }
 
     &__title {
@@ -17,6 +17,11 @@
         }
 
         &__input {
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
             width: gutter-per(100);
         }
         &__input::placeholder {

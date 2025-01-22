@@ -129,7 +129,6 @@ export class ListOfHallsComponent {
     });
   }
 
-
   chooseMenu() {
     this.dialog.open(ChooseMenuComponent, {
       width: '100%',
@@ -138,6 +137,15 @@ export class ListOfHallsComponent {
       panelClass: 'choosemenu-dialog',
       position: { left: '10%' },
     });
+  }
+  toggleSelection(item: any) {
+    item.isActive = !item.isActive;
+  
+    if (item.isActive) {
+      this.selectedItem = item.id; 
+    } else {
+      this.selectedItem = 0; 
+    }
   }
 
 }
