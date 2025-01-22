@@ -47,40 +47,63 @@
         </div>
         <div class="col-lg-6 col-sm-12 mb-20">
           <label for="password" class="fs-14 mb-6">Password</label>
-          <input
-            id="password"
-            type="password"
-            formControlName="password"
-            class="form-control sign-up-form"
-          />
+          <div class="password-container position-relative">
+            <input 
+              class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
+              (keydown.tab)="$event.stopPropagation()" 
+              [type]="isPasswordVisible ? 'text' : 'password'" 
+              id="password" 
+              formControlName="password" 
+              name="password" 
+              required
+            >
+            <img 
+              class="toggle-password position-absolute"
+              [src]="isPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'" 
+              alt="Toggle Password Visibility"
+              (click)="togglePasswordVisibility()"
+            />
+          </div>
         </div>
         <div class="col-lg-6 col-sm-12 mb-20">
           <label for="confirmPassword" class="fs-14 mb-6"
             >Confirm Password</label
           >
-          <input
-            type="password"
-            formControlName="confirmPassword"
-            class="form-control sign-up-form"
-          />
+          <div class="password-container position-relative">
+            <input 
+              class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
+              (keydown.tab)="$event.stopPropagation()" 
+              [type]="isconfirmPasswordVisible ? 'text' : 'password'" 
+              id="confirmPassword" 
+              formControlName="confirmPassword" 
+              name="password" 
+              required
+            >
+            <img 
+              class="toggle-password position-absolute"
+              [src]="isconfirmPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'" 
+              alt="Toggle Confirm Password Visibility"
+              (click)="toggleconfirmPasswordVisibility()"
+            />
+          </div>
         </div>
-        <label
+        <div
           class="fs-14 d-flex align-items-center gap-10 terms-condition mb-10"
         >
           <input type="checkbox" class="input-align" />
           <span>Terms & Conditions<span class="checkbox-imp">*</span></span>
-        </label>
-        <label class="fs-14 d-flex align-items-center gap-10 mb-40">
+      </div>
+        <div class="fs-14 d-flex align-items-center gap-10 mb-40">
           <input type="checkbox" class="input-align" />
           Subscribe to Email Notification
-        </label>
+        </div>
         <div class="signup__button">
           <button
             class="signup__button__btn"
             type="submit"
             (click)="register()"
           >
-            Sign in
+            Sign Up
           </button>
         </div>
       </div>
