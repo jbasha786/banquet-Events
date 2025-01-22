@@ -5,7 +5,8 @@
     
     .menu {
         .table {
-            overflow: scroll;
+            overflow: auto;
+            padding-right: gutter-sp(10);
         }
         &__search {
             position: relative;
@@ -35,7 +36,13 @@
         }
         .menuTable{
             .quantity{
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button {
+                  -webkit-appearance: none;
+                  margin: gutter-sp(0);
+                }
                 border: gutter-sp(1) solid $black;
+                text-align: center;
             }
         }
 
@@ -45,19 +52,36 @@
             box-shadow: none;
         }
 
+        .table_price_data {
+            border: none;
+            padding: gutter-sp(0);
+            padding: gutter-sp(2) gutter-sp(14);
+        }
+
         .table_header .mat-mdc-header-cell {
             font-size: gutter-per(22);
         }
+        .table_header_Qty.mat-mdc-header-cell{
+            text-align: center;
+        }
+        .table_data_Qty{
+            text-align: center;
+        }
 
         .menuTable .mat-mdc-header-cell {
-            padding: gutter-sp(0) gutter-sp(0) gutter-sp(10) gutter-sp(0);
             border-bottom: gutter-sp(1) solid $white;
+            color: $black;
         }
         .mdc-data-table__table {
             border-bottom: gutter-sp(1) solid $white;
         }
         .menuTable .mat-mdc-cell {
             text-wrap: nowrap;
+            border-bottom: none;
+        }
+            
+        .menuTable .mdc-data-table__header-cell{
+            padding: gutter-sp(0);
         }
 
         .menuTable .mat-mdc-row {
@@ -111,8 +135,5 @@
 
         }
 
-        .selected-number {
-            color: $black;
-        }
     }
 }

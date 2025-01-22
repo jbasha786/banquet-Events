@@ -2,43 +2,28 @@
 
 .invoice-view {
     position: relative;
-    padding-top: 3vw;
 
-    p {
-        margin-bottom: 5px;
+    .invoiceId {
+        color: $invoiceIdBlue;
     }
 
-    &__bill,
-    &__total {
-        background: $white-smoke;
-        padding-left: 25px;
-        padding-right: 25px;
-
-        &__section {
-            padding-top: 2vw;
-            padding-bottom: 2vw;
-        }
+    .invoiceSub {
+        color: $invoiceSub;
     }
 
-    &__service,
-    &__payment,
-    &__head,
-    &__details {
-        padding-left: 25px;
-        padding-right: 25px;
+    .refclr {
+        color: $lite-black;
     }
 
-    &__close {
-        position: absolute;
-        top: 0;
-        right: 0;
+    .vatclr {
+        color: $vatclr;
+    }
 
-        &__icon {
-            mat-icon {
-                background: $close-btn;
-                border-radius: 50%;
-                color: $white;
-            }
-        }
+    .priceweight {
+        font-weight: 600;
+    }
+
+    .logo {
+        height: gutter-sp(50);
     }
 }

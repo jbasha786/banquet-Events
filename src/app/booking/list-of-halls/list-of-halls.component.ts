@@ -40,7 +40,7 @@ export class ListOfHallsComponent {
   reserveBtn: boolean = true;
   requestSent: boolean = true;
   requestAccepted: boolean = true;
-  selectedItem: number = 0;
+  selectedItem: number | null = null;
   checkinDate: string | null;
   checkOutDate: string | null;
   tomorrowDate = new Date();
@@ -128,7 +128,6 @@ export class ListOfHallsComponent {
     });
   }
 
-
   chooseMenu() {
     this.dialog.open(ChooseMenuComponent, {
       width: '100%',
@@ -137,6 +136,15 @@ export class ListOfHallsComponent {
       panelClass: 'choosemenu-dialog',
       position: { left: '10%' },
     });
+  }
+  toggleSelection(item: any) {
+    item.isActive = !item.isActive;
+  
+    if (item.isActive) {
+      this.selectedItem = item.id; 
+    } else {
+      this.selectedItem = null; 
+    }
   }
 
 }

@@ -1,36 +1,34 @@
 @import "../../../../app/styles/variable.scss";
 
-.mat-body {
-  .dialogue-heading {
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: gutter-sp(0) gutter-sp(20) gutter-sp(20);
+  .mat-button {
+    border: gutter-sp(1) solid $black;
+  }
+}
+.buttons .buttons__cancel {
+  height: gutter-sp(42);
+  font-size: gutter-sp(16);
+  background: linear-gradient(90deg, $btn-no-grdleft gutter-per(0), $btn-no-grdright gutter-per(100));
+  border-radius: gutter-vw(50);
+  width: gutter-sp(100);
+  color: $white;
+}
+.buttons .buttons__yes {
+  height: gutter-sp(42);
+  font-size: gutter-sp(16);
+  border-radius: gutter-vw(50);
+  width: gutter-sp(100);
+  background: linear-gradient(90deg, $btn-yes-grdleft 0%, $secondary-color 100%);
+  color: $white;
+}
+.dialogue-heading {
     color: $dialogue-heading;
   }
   .dialogue-content {
     .span_color {
       color: $dialogue-contenthighlight;
      }
-  }
-  .buttons .buttons__cancel {
-    height: gutter-sp(42);
-    font-size: gutter-sp(16);
-    background: linear-gradient(90deg, $btn-no-grdleft gutter-per(0), $btn-no-grdright gutter-per(100));
-    border-radius: gutter-vw(50);
-    width: gutter-sp(100);
-    color: $white;
-  }
-  .buttons .buttons__yes {
-    height: gutter-sp(42);
-    font-size: gutter-sp(16);
-    border-radius: gutter-vw(50);
-    width: gutter-sp(100);
-    background: linear-gradient(90deg, $btn-yes-grdleft 0%, $secondary-color 100%);
-    color: $white;
-  }
-  .buttons {
-    display: flex;
-    justify-content: center;
-    padding: gutter-sp(0) gutter-sp(20) gutter-sp(20);
-    .mat-button {
-      border: gutter-sp(1) solid $black;
-    }
-  }
 }

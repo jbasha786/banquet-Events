@@ -43,7 +43,7 @@ export class ArticlesComponent {
 
   getInitalData() {
     this.defaultService.getJSON().subscribe(result => {
-      this.dataSource = result?.addArticles;
+      this.dataSource = new MatTableDataSource(result?.addArticles || []);
     })
   }
 
@@ -53,13 +53,12 @@ export class ArticlesComponent {
     return numSelected === numRows;
   }
 
-  toggleAllRows() {
-    if (this.isAllSelected()) {
+  toggleAllRows(checked: boolean) {
+    if (checked) {
+      this.selection.select(...this.dataSource.data); 
+    } else {
       this.selection.clear();
-      return;
     }
-
-    this.selection.select(...this.dataSource?.data);
   }
 
   checkboxLabel(row?: any): string {
@@ -69,10 +68,10 @@ export class ArticlesComponent {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
   }
 
-  updateQty(item: any, event: any) {
-    item.qty = event.data;
+  updateValue(element: any, event: any, key: string): void {
+    element[key] = event.target.value; 
   }
   onSave(): void {
-    this.dialog.closeAll();
+    this.dialogRef.close();
   }
 }

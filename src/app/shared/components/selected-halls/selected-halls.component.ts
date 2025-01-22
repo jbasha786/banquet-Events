@@ -57,23 +57,10 @@ export class SelectedHallsComponent {
   }
 
   cancelReservation() {
-    const screenWidth = window.innerWidth;
-    let dialogPosition: { top: string; left: string };
-    if(screenWidth <= 425){
-      dialogPosition = { top: '8%', left: '10%' };
-    } else if (screenWidth <= 768) {
-      dialogPosition = { top: '8%', left: '17%' };
-    } else if (screenWidth <= 1280) {
-      dialogPosition = { top: '8%', left: '22%' };
-    } else if (screenWidth <= 1440) {
-      dialogPosition = { top: '10%', left: '25%' };
-    } else {
-      dialogPosition = { top: '10%', left: '35%' };
-    }
     this.dialog.open(DialogueComponent, {
       width: "500px",
       disableClose: true,
-      position:dialogPosition,
+      panelClass: 'custom-dialog-panel'
     });
   }
 

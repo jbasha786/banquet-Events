@@ -40,15 +40,17 @@
         }
 
         &__section mat-list-option.mat-focused {
-            background-color: $active-list-bg-clr; 
-            color: $active-list-bg-clr;           
-          }
-          
-          &__section mat-list-option:focus {
             background-color: $active-list-bg-clr;
             color: $active-list-bg-clr;
-          }
-          
+        }
+
+        &__section mat-list-option:focus {
+            background-color: $active-list-bg-clr;
+            color: $active-list-bg-clr;
+        }
+        ::ng-deep .mdc-list-item__primary-text{
+            color: $black;
+        }
     }
 
     .planning-radio ::ng-deep .mat-mdc-list-option .mdc-radio {
