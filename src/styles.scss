@@ -490,7 +490,7 @@ html {
 }
 
 .invoive-view {
-  transform: translate(0%, -15%);
+  transform: translate(gutter-per(0), gutter-per(-15));
   position: relative;
 }
 

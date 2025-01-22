@@ -21,7 +21,7 @@
   font-size: gutter-sp(16);
   border-radius: gutter-vw(50);
   width: gutter-sp(100);
-  background: linear-gradient(90deg, $btn-yes-grdleft 0%, $secondary-color 100%);
+  background: linear-gradient(90deg, $btn-yes-grdleft gutter-per(0), $secondary-color gutter-per(100));
   color: $white;
 }
 .dialogue-heading {
