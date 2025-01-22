@@ -288,14 +288,17 @@
     ],
     "subbannerInfo": [
         {
+            "id": 1,
             "desc": "BUSINESS",
             "src": "/assets/images/exinfo/business.svg"
         },
         {
+            "id": 2,
             "desc": "LEISURE",
             "src": "/assets/images/exinfo/leisure.svg"
         },
         {
+            "id": 3,
             "desc": "SPORTS",
             "src": "/assets/images/exinfo/sports.svg"
         }
@@ -647,80 +650,6 @@
             "itemDetails": "Queens Lagoon Suite",
             "type": "Banquet Hall  450/Sqft",
             "amount": "€ 4200.00",
-            "actions": {
-                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
-                "download": "/assets/images/invoiceHistory/download.svg"
-            }
-        }
-    ],
-    "admin_welcomeTable": [
-        {
-            "timings":"fshgs",
-            "date": "10 oct 2024",
-            "resourcedetails": "IT0110102024",
-            "contactperson": "Queens Lagoon Suite",
-            "contactnumber": "Banquet Hall  450/Sqft",
-            "welcomemessage": "€ 4200.00",
-            "actions": {
-                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
-                "download": "/assets/images/invoiceHistory/eyeAction.svg"
-            }
-        },
-        {
-            "timings":"fshgs",
-            "date": "12 oct 2024",
-            "resourcedetails": "IT0110102024",
-            "contactperson": "Queens Lagoon Suite",
-            "contactnumber": "Banquet Hall  450/Sqft",
-            "welcomemessage": "€ 4200.00",
-            "actions": {
-                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
-                "download": "/assets/images/invoiceHistory/download.svg"
-            }
-        },
-        {
-            "timings":"fshgs",
-            "date": "13 oct 2024",
-            "resourcedetails": "IT0110102024",
-            "contactperson": "Queens Lagoon Suite",
-            "contactnumber": "Banquet Hall  450/Sqft",
-            "welcomemessage": "€ 4200.00",
-            "actions": {
-                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
-                "download": "/assets/images/invoiceHistory/download.svg"
-            }
-        },
-        {
-            "timings":"fshgs",
-            "date": "10 oct 2024",
-            "resourcedetails": "IT0110102024",
-            "contactperson": "Queens Lagoon Suite",
-            "contactnumber": "Banquet Hall  450/Sqft",
-            "welcomemessage": "€ 4200.00",
-            "actions": {
-                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
-                "download": "/assets/images/invoiceHistory/download.svg"
-            }
-        },
-        {
-            "timings":"fshgs",
-            "date": "10 oct 2024",
-            "resourcedetails": "IT0110102024",
-            "contactperson": "Queens Lagoon Suite",
-            "contactnumber": "Banquet Hall  450/Sqft",
-            "welcomemessage": "€ 4200.00",
-            "actions": {
-                "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
-                "download": "/assets/images/invoiceHistory/download.svg"
-            }
-        },
-        {
-            "timings":"fshgs",
-            "date": "10 oct 2024",
-            "resourcedetails": "IT0110102024",
-            "contactperson": "Queens Lagoon Suite",
-            "contactnumber": "Banquet Hall  450/Sqft",
-            "welcomemessage": "€ 4200.00",
             "actions": {
                 "srcEyeAction": "/assets/images/invoiceHistory/eyeAction.svg",
                 "download": "/assets/images/invoiceHistory/download.svg"

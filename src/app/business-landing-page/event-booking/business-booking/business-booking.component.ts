@@ -43,6 +43,9 @@ export class BusinessBookingComponent {
   }
 
   back() {
+    if (this.currentStep === 1) {
+      this.returnToHome();
+    }
     if (this.currentStep > 1) {
       this.currentStep--;
     }

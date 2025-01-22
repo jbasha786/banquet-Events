@@ -53,18 +53,24 @@
                 </div>
                 <div
                     class="dateSection d-flex mb-3 align-items-center flex-column flex-md-row flex-lg-column flex-xxl-row gap-2">
-                    <div class="input-group custom_icon border-clr" id="datepicker">
+                    <div class="input-group custom_icon border-clr" id="datepicker" (click)="matcheckinDate.open()">
+                        <span class="input-group-text custom_img" id="basic-addon1"><img src="../../assets/images/halls/calender-hall.png"
+                        alt=""></span>
                         <div class="form-floating">
-                            <input type="date" class="form-control border-clr-none" id="datepicker" placeholder="Guests"
-                                [value]="checkinDate" [(ngModel)]="checkinDate">
-                            <label for="guestCount" class="customLabel">Check-in</label>
+                            <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
+                                [value]="checkinDate" [(ngModel)]="checkinDate" matInput [matDatepicker]="matcheckinDate">
+                                <mat-datepicker #matcheckinDate></mat-datepicker>
+                            <label for="guestCount" class="customLabel guestLabel">Check-in</label>
                         </div>
                     </div>
-                    <div class="input-group border-clr custom_icon" id="datepicker">
+                    <div class="input-group border-clr custom_icon" id="datepicker" (click)="matcheckOutDate.open()">
+                        <span class="input-group-text custom_img" id="basic-addon1"><img src="../../assets/images/halls/calender-hall.png"
+                        alt=""></span>
                         <div class="form-floating">
-                            <input type="date" class="form-control border-clr-none" id="datepicker" placeholder="Guests"
-                                [(ngModel)]="checkOutDate" [value]="checkOutDate">
-                            <label for="guestCount" class="customLabel">Check-out</label>
+                            <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
+                                [(ngModel)]="checkOutDate" [value]="checkOutDate" matInput [matDatepicker]="matcheckOutDate">
+                                <mat-datepicker #matcheckOutDate></mat-datepicker>
+                            <label for="guestCount" class="customLabel guestLabel">Check-out</label>
                         </div>
                     </div>
                 </div>

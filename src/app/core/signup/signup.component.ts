@@ -13,7 +13,8 @@ import { SignUpService } from '../../services/signUp/sign-up.service';
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
-
+  isPasswordVisible = false;
+  isconfirmPasswordVisible = false;
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -27,7 +28,12 @@ export class SignupComponent {
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
   });
-
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+  toggleconfirmPasswordVisibility(): void {
+    this.isconfirmPasswordVisible = !this.isconfirmPasswordVisible;
+  }
   returnToLogin() {
     this.router.navigate(['login']);
   }

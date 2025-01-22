@@ -26,6 +26,11 @@ html {
 body {
   color: $font-clr !important;
   font-family: 'Poppins', sans-serif !important;
+  --mat-dialog-container-small-max-width: gutter-vw(90);
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 @for $i from 0 through 500 {
@@ -487,4 +492,32 @@ html {
 .invoive-view {
   transform: translate(0%, -15%);
   position: relative;
+}
+
+
+.mat-calendar-body-selected {
+  background-color: $primary-color !important;
+  color: $white;
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  border: none;
+  background-color: $secondary-color !important;
+  color: $white;
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background-color: $active-list-bg-clr !important;
+}
+
+.mat-calendar-body-in-range::before {
+  background: $light-silver !important;
+}
+
+.mat-calendar-body-selected.mat-calendar-body-today {
+  box-shadow: none !important;
+}
+
+.timepicker-dial__control:focus {
+  background-color: transparent !important;
 }

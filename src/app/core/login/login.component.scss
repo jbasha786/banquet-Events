@@ -52,3 +52,23 @@ input:focus {
     box-shadow: none;
     border-color: $form-focus;
   }
+//password
+.password-container {
+    position: relative;
+  
+    .toggle-password {
+      top: gutter-per(50);
+      right: gutter-sp(10);
+      transform: translateY(gutter-per(-50));
+      cursor: pointer;
+      z-index: 10;
+      width: gutter-sp(20); 
+      height: gutter-sp(20);
+    }
+  
+    input {
+      padding-right: gutter-sp(40);
+    }
+  }
+  
+  

@@ -45,6 +45,8 @@
     }
 
     .custom_radio:checked {
-        background-color: $font-clr;
+        background-color: $secondary-color;
+        border: gutter-sp(1) solid $secondary-color;
+        box-shadow: 0 0 0 gutter-rem(0.25) rgba($secondary-color, 0.24);
     }
 }

@@ -19,9 +19,24 @@
                         <a class="loginForm__form__pwddiv__pwd__forgotpwd fs-12 mb-6" href="/forgotpwd">
                             Forgot password?</a>
                     </div>
-                    <input class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
-                        (keydown.tab)="$event.stopPropagation()" type="password" id="password"
-                        formControlName="password" name="password" required>
+                    <div class="password-container position-relative">
+                        <input 
+                          class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
+                          (keydown.tab)="$event.stopPropagation()" 
+                          [type]="isPasswordVisible ? 'text' : 'password'" 
+                          id="password" 
+                          formControlName="password" 
+                          name="password" 
+                          required
+                        >
+                        <img 
+                          class="toggle-password position-absolute"
+                          [src]="isPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'" 
+                          alt="Toggle Password Visibility"
+                          (click)="togglePasswordVisibility()"
+                        />
+                      </div>
+                      
                 </div>
                 <div class="loginForm__form__signupdiv d-flex fs-12 mb-20 gap-6">
                     <span>New User?</span>
@@ -32,8 +47,8 @@
                         (click)="onSubmit()">Login</button>
                 </div>
                 <div class="loginForm__form__loginbtndiv d-flex flex-column mb-30">
-                    <button class="loginForm__form__loginbtndiv__continue__guest p-2 rounded-2 fs-16 fw-500" type="submit"
-                        (click)="onSubmit()">Continue as Guest </button>
+                    <button class="loginForm__form__loginbtndiv__continue__guest p-2 rounded-2 fs-16 fw-500"  type="submit"
+                        (click)="onSubmit()" [routerLink]="['/continueasguest']">Continue as Guest </button>
                 </div>
 
                 
