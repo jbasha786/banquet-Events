@@ -25,7 +25,12 @@ export class SelectedDatesComponent {
 
   constructor(private eventDSService: EventDateSlotsService) { }
 
-  _onSelectedChange(date: Date): void {
+  _onSelectedChange(date: Date | null): void {
+    if (!date) {
+      console.error('No date selected');
+      return;
+    }
+  
     if (
       this.selectedDateRange &&
       this.selectedDateRange.start &&
@@ -39,16 +44,22 @@ export class SelectedDatesComponent {
     } else {
       this.selectedDateRange = new DateRange(date, null);
     }
-
+  
     this.eventDSService.setSelectedDate(this.selectedDateRange);
-  };
-
+  }
+  
   slots = [
     { id: 1, shift: "Morning 8Am - 11 PM" },
     { id: 2, shift: "Afternoon 12Am - 3 PM" },
     { id: 3, shift: "Night 4Am - 7 PM" },
     { id: 4, shift: "Night 8Am - 11 PM" },
   ]
+
+  dateFilter = (date: Date | null): boolean => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Reset to midnight
+    return (date || today) >= today;
+  };
 
   slotsChange(event: MatSelectionListChange) {
     this.eventDSService.setAvailableSlots(event.options[0].value);

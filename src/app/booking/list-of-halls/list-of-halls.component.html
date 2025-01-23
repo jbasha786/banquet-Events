@@ -10,7 +10,7 @@
                                 alt="user"></span>
                         <div class="form-floating">
                             <input type="email" class="form-control guestclock" id="guestCount" placeholder="Guests"
-                                value="40 Adults, 12 Children">
+                                value="40 Adults, 12 Children" readonly>
                             <label for="guestCount" class="custom_clr guestClockLabel">Guests</label>
                         </div>
                     </div>
@@ -90,18 +90,17 @@
                     </div>
                     <div>
                         <div class="d-flex align-items-baseline flex-wrap">
-                            <span
-                                class="fs-36 fw-bold hallsView__priceColor my-0 lh-35 mt-3">{{item.price}}</span><span
+                            <span class="fs-36 fw-bold hallsView__priceColor my-0 lh-35 mt-3">{{item.price}}</span><span
                                 class="fontcolor fs-12">{{item.taxText}}</span>
                         </div>
                         <div
                             class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
                             <div class="d-flex flex-column-reverse flex-md-row align-items-center  flex-row gap-2">
                                 <button class="selected selectBtn fw-500 fs-14 rounded-pill"
-                                    *ngIf="item.isActive">Selected</button>
+                                    *ngIf="item.isActive" (click)="toggleSelection(item)">Selected</button>
                                 <button class="reserve selectBtn border fs-14 rounded-pill "
                                     *ngIf="item.id !== selectedItem && !item.isActive"
-                                    (click)="reserve(item)">Select</button>
+                                    (click)="reserve(item)" (click)="toggleSelection(item)">Select</button>
                                 <div class="d-flex gap-2 my-3 my-md-0">
                                     <span class="ms-2 hallsView__articles fs-14 fw-500" role="button"
                                         (click)="addArticles()">Add
@@ -120,16 +119,7 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
-
-
-
-
-
         }
     </div>
 </div>

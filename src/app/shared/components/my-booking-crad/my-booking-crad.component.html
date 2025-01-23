@@ -23,7 +23,7 @@
                     <button class="border rounded bg-white d-none"><img [src]="shareImg" alt=""></button>
                     <button class="border rounded bg-white d-none"><img [src]="favImg" alt=""></button>
                     <button class="border rounded bg-white"><img [src]="viewImage" alt=""></button>
-                    <button class="border rounded cancel fs-10 h-30 px-2">{{cancelbooking}}</button>
+                    <button class="border rounded cancel fs-10 h-30 px-2" (click)="cancelBooking()">{{cancelbooking}}</button>
                     <button class="border rounded edit fs-10 h-30 px-2">{{editbooking}}</button>
                     <button class="border rounded view fs-10 h-30 px-2">{{viewdetails}}</button>
                 </div>

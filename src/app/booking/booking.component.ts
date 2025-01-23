@@ -31,7 +31,7 @@ export class BookingComponent {
   progressbarWidth: any;
   defaultPages: number = 6;
 
-  constructor(public dialogRef: MatDialogRef<BookingComponent>) {
+  constructor(public dialogRef: MatDialogRef<BookingComponent>,private router: Router) {
     this.defaultProgressSize = 100 / this.defaultPages;
     this.progressbarWidth = this.defaultProgressSize + "%";
   }
@@ -41,10 +41,12 @@ export class BookingComponent {
   }
 
   back() {
-    if (this.currentStep > 1) {
+    if (this.currentStep === 1) {
+      this.returnToHome();
+    } else if (this.currentStep > 1) {
       this.currentStep--;
+      this.updatePage();
     }
-    this.updatePage();
   }
 
   next() {
@@ -58,7 +60,7 @@ export class BookingComponent {
     this.progressbarWidth = this.defaultProgressSize * this.currentStep + "%";
   }
   onButtonChange(Proceed: string): void {
-    this.buttonNext = Proceed; // Update the button text
+    this.buttonNext = Proceed;
   }
 
 }
