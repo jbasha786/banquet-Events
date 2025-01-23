@@ -521,3 +521,122 @@ html {
 .timepicker-dial__control:focus {
   background-color: transparent !important;
 }
+
+  //hover-change
+  .card{
+  &-button {
+    border: none;
+    background-color: transparent;
+    color: $secondary-color;
+    cursor: pointer;
+    animation: readmore 0.5s;
+    display: inline-flex;
+    align-items: center;
+}
+
+//hover-change
+&-button .arrow {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-left: gutter-sp(5);
+}
+
+//hover-change
+&-button:hover .arrow {
+    opacity: 1;
+    transform: translateX(gutter-sp(8));
+}
+}
+
+// Base styles for buttons
+.btn-base {
+  padding: gutter-sp(10) gutter-sp(22);
+  border-radius: gutter-sp(6);
+  border: gutter-sp(1) solid $secondary-color;
+  position: relative; 
+  color: $secondary-color; 
+  background-color: transparent;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: $value-null;
+    left: $value-null;
+    width: gutter-per(100);
+    height: gutter-per(100);
+    background-color: $secondary-color; 
+    transition: transform 0.3s ease;
+    transform: scaleX(0); 
+    transform-origin: left; 
+    z-index: -1; 
+    border-radius: gutter-sp(4);
+  }
+
+  
+  &:hover,
+  &:focus {
+    color: $white; 
+    
+    transform: translateX(gutter-sp(0)); 
+
+    &::after {
+      transform: scaleX(1); 
+    }
+  }
+}
+
+
+.border__btn {
+  @extend .btn-base;
+}
+
+
+.corporatebtn {
+  @extend .btn-base;
+}
+
+
+.familybtn {
+  @extend .btn-base;
+  border: gutter-sp(1) solid $family-yellow;
+  color: $family-yellow;
+  &::after {
+    background-color: $family-yellow; 
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    &::after {
+      background-color: $family-yellow; 
+    }
+  }
+}
+//image  hover
+.image__item {
+  border-radius: gutter-sp(14);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.image__item:hover {
+  box-shadow: $value-null gutter-sp(5) gutter-sp(15) $chat-overlay;
+  border-radius:gutter-sp(14);
+  transform: translateY(gutter-sp(-5));
+}
+//backgroundbtn
+// Base styles for .memberbtn
+.memberbtn {
+  background: $secondary-color; 
+  color: $white; 
+  border-radius: gutter-sp(8); 
+  border: gutter-sp(1) solid transparent; 
+  padding: gutter-sp(10) gutter-sp(20); 
+
+}
+.memberbtn:hover{
+  background-color:transparent;
+  color: $secondary-color;
+  border: gutter-sp(1) solid $secondary-color;
+}

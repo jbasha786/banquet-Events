@@ -206,3 +206,31 @@
         flex: 1 1 auto;
     }
 }
+
+//hover-change
+.halldetails {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    animation: view 0.5s;
+}
+ 
+//hover-change
+.halldetails .arrow {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-left: gutter-sp(2);
+}
+ 
+//hover-change
+.halldetails:hover .arrow {
+    opacity: 1;
+    transform: translateX(gutter-sp(8));
+    color: $secondary-color ;
+}
+ 
+//hover-change
+.view:hover {
+    color: $secondary-color;
+}

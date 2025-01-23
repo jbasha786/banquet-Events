@@ -6,4 +6,5 @@ export interface headerModel extends BaseModel {
     name: string;
     link: string;
     eventName : string;
+    hoverSrc : string;
 }
