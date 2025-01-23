@@ -2,19 +2,19 @@
 
 .events {
   background: $gray;
-  border-radius: $gutter-16sp;
+  border-radius: gutter-sp(16);
 
   &__content {
     display: flex;
     flex-flow: column;
 
     &__title {
-      line-height: $gutter-42sp;
-      letter-spacing: $gutter-1sp;
+      line-height: gutter-sp(42);
+      letter-spacing: gutter-sp(1);
       background: linear-gradient(
         to right,
-        $text-gradient-clr1 $gutter-10per,
-        $text-gradient-clr2 $gutter-50per
+        $text-gradient-clr1 gutter-per(10),
+        $text-gradient-clr2 gutter-per(50)
       );
       background-clip: text;
       color: transparent;

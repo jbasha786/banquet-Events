@@ -10,127 +10,116 @@
 }
 
 .banner {
+  &__image {
+    min-height: calc(gutter-vh(100) - gutter-sp(362));
+    width: gutter-per(100);
+    position: relative;
+    @include full-background("../../assets/images/logo/landingImage.svg");
 
-	&__image {
-		min-height: calc(gutter-vh(100) - gutter-sp(362));
-		width: gutter-per(100);
-		position: relative;
-		@include full-background("../../assets/images/logo/landingImage.svg");
+    &__content {
+      &__title {
+        color: $white;
+        margin-bottom: gutter-sp(10);
+        transform: translateX(-100%);
+        animation: slideIn 1s forwards;
+      }
 
+      @keyframes slideIn {
+        to {
+          transform: translateX(0);
+        }
+      }
 
-		&__content {
+      &__desc {
+        color: $white;
+        transform: translateX(-100%);
+        animation: slideIn 4s forwards;
+      }
 
+      //hover-change
+      &__btn {
+        flex-shrink: 0;
+        border-radius: gutter-sp(32);
+        letter-spacing: gutter-sp(1);
+        border: none;
+        color: $white;
+        margin-top: gutter-sp(20);
+        background: $primary-color;
+        opacity: 0;
+        animation: fadeIn 4s forwards;
+        padding: gutter-sp(8) gutter-sp(42);
+        position: relative;
+        overflow: hidden;
+      }
 
-			&__title {
-				color: $white;
-				margin-bottom: gutter-sp(10);
-				transform: translateX(-100%);
-				animation: slideIn 1s forwards;
-			}
+      //hover-change
+      &__btn::after {
+        content: "";
+        position: absolute;
+        top: gutter-per(50);
+        left: gutter-per(50);
+        width: $value-null;
+        height: $value-null;
+        background: transparent;
+        border-radius: gutter-per(50);
+        box-shadow: 0 0 gutter-sp(5) gutter-sp(2) $ratingBackground,
+          0 0 gutter-sp(10) gutter-sp(3) $ratingBackground,
+          0 0 gutter-sp(15) gutter-sp(5) $ratingBackground;
+        transform: translate(gutter-per(-50), gutter-per(-50));
+        opacity: 0;
+        transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+      }
 
+      //hover-change
+      &__btn:hover::after {
+        width: gutter-sp(200);
+        height: gutter-sp(200);
+        opacity: 1;
+      }
 
-			@keyframes slideIn {
-				to {
-					transform: translateX(0);
-				}
-			}
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    }
 
-			&__desc {
-				color: $white;
-				transform: translateX(-100%);
-				animation: slideIn 4s forwards;
-			}
-
-			//hover-change
-            &__btn {
-                flex-shrink: 0;
-                border-radius: gutter-sp(32);
-                letter-spacing: gutter-sp(1);
-                border: none;
-                color: $white;
-                margin-top: gutter-sp(20);
-                background: $primary-color;
-                opacity: 0;
-                animation: fadeIn 4s forwards;
-                padding: gutter-sp(8) gutter-sp(42);
-                position: relative;
-                overflow: hidden;
-            }
- 
-            //hover-change
-            &__btn::after {
-                content: '';
-                position: absolute;
-                top: gutter-per(50);
-                left: gutter-per(50);
-                width: $value-null;
-                height: $value-null;
-                background: transparent;
-                border-radius: gutter-per(50);
-				box-shadow: 
-				0 0 gutter-sp(5) gutter-sp(2) $ratingBackground, 
-				0 0 gutter-sp(10) gutter-sp(3) $ratingBackground, 
-				0 0 gutter-sp(15) gutter-sp(5) $ratingBackground;
-                transform: translate(gutter-per(-50), gutter-per(-50));
-                opacity: 0;
-                transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
-            }
- 
-            //hover-change
-            &__btn:hover::after {
-                width: gutter-sp(200);
-                height: gutter-sp(200);
-                opacity: 1;
-            }
- 
-            @keyframes fadeIn {
-                to {
-                    opacity: 1;
-                }
-            }
-       }
-
-		&__downIcon {
-			bottom: gutter-sp(30);
-			right: gutter-sp(80);
-		}
-
-	}
-
+    &__downIcon {
+      bottom: gutter-sp(30);
+      right: gutter-sp(80);
+    }
+  }
 }
 
 .subbanner {
-
-	padding: gutter-vw(3) gutter-vw(5) gutter-vw(0)
+  padding: gutter-vw(3) gutter-vw(5) gutter-vw(0);
 }
 
 .subbanner__image {
-	width: gutter-per(100);
-	height: auto;
-	display: block;
+  width: gutter-per(100);
+  height: auto;
+  display: block;
 }
 
 .subbanner__text {
-	position: absolute;
-	bottom: $value-null;
-	left: $value-null;
-	right: $value-null;
-	text-align: center;
-	color: $white;
-	padding: gutter-sp(20) $value-null;
-	margin: $value-null;
-	box-sizing: border-box;
-	letter-spacing: gutter-sp(4);
-	text-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(10) $black-overlay;
-
+  position: absolute;
+  bottom: $value-null;
+  left: $value-null;
+  right: $value-null;
+  text-align: center;
+  color: $white;
+  padding: gutter-sp(20) $value-null;
+  margin: $value-null;
+  box-sizing: border-box;
+  letter-spacing: gutter-sp(4);
+  text-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(10) $black-overlay;
 }
 
 //main banner with content
 .events {
   padding: gutter-vw(6) gutter-vw(5);
-	transition-delay: 1s;
-	transition: transform 0.5s ease;
-
+  transition-delay: 1s;
+  transition: transform 0.5s ease;
 }
 
 //arrangements
@@ -141,33 +130,31 @@
 }
 
 .card {
+  &-image {
+    border-radius: gutter-sp(14);
+  }
 
-	&-image {
-		border-radius: gutter-sp(14);
-	}
+  &-button {
+    border: none;
+    background-color: transparent;
+    color: $secondary-color;
+  }
 
-	&-button {
-		border: none;
-		background-color: transparent;
-		color: $secondary-color;
-	}
+  &-heading {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-	&-heading {
-		display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	&-text {
-		display: -webkit-box;
-		-webkit-line-clamp: 5;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
+  &-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 // Spacing Utilities
@@ -178,234 +165,221 @@
 
 // Arrangements Section
 .arrangements {
-   padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
-.heading {
-		text-overflow: ellipsis;
-		overflow: hidden;
-		display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-orient: vertical;
-	}
+  padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
+  .heading {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
 
-	.text {
-		text-overflow: ellipsis;
-		overflow: hidden;
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		min-height: gutter-sp(68);
-	}
-&__color {
+  .text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: gutter-sp(68);
+  }
+  &__color {
     color: $secondary-color;
   }
 }
 
 //personalized
 .personalized {
+  padding: gutter-vw(4) gutter-vw(5);
+  background-color: $white-smoke;
+  margin: gutter-vw(0) gutter-vw(0) gutter-vw(6);
 
-	padding: gutter-vw(4) gutter-vw(5);
-	background-color: $white-smoke;
-	margin: gutter-vw(0) gutter-vw(0) gutter-vw(6);
+  .section {
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
-	.section {
-		.item {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
+      .image {
+        width: gutter-per(100);
+        height: gutter-per(100);
+      }
 
-			.image {
-				width: gutter-per(100);
-				height: gutter-per(100);
-			}
+      .title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
 
-			.title {
-				text-overflow: ellipsis;
-				overflow: hidden;
-				display: -webkit-box;
-				-webkit-line-clamp: 1;
-				-webkit-box-orient: vertical;
-			}
-
-			.desc {
-				text-overflow: ellipsis;
-				overflow: hidden;
-				display: -webkit-box;
-				-webkit-line-clamp: 2;
-				-webkit-box-orient: vertical;
-				min-height: gutter-sp(68);
-			}
-		}
-	}
-
+      .desc {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        min-height: gutter-sp(68);
+      }
+    }
+  }
 }
 //experience
 .experience {
+  padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 
-	padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
+  &__color {
+    color: $secondary-color;
+  }
 
-	&__color {
-		color: $secondary-color;
-	}
+  &__section {
+    --bs-gutter-x: 0;
+  }
 
-	&__section {
-		--bs-gutter-x: 0;
-	}
+  &__item {
+    position: relative;
+    overflow: hidden;
+  }
 
-	&__item {
-		position: relative;
-		overflow: hidden;
-	}
+  &__image {
+    width: gutter-per(100);
+    height: auto;
+    display: block;
+  }
 
-	&__image {
-		width: gutter-per(100);
-		height: auto;
-		display: block;
-	}
+  &__overlay {
+    position: absolute;
+    top: gutter-sp(0);
+    left: gutter-sp(0);
+    width: gutter-per(100);
+    height: gutter-per(100);
+    background-color: $white-smoke;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  &__text {
+    letter-spacing: gutter-sp(4);
+  }
 
-	&__overlay {
-		position: absolute;
-		top: gutter-sp(0);
-		left: gutter-sp(0);
-		width: gutter-per(100);
-		height: gutter-per(100);
-		background-color: $white-smoke;
-		display: flex;
-		flex-direction: column;
-		opacity: 0;
-		transition: opacity 0.3s ease-in-out;
-	}
-	&__text{
-		letter-spacing: gutter-sp(4);
-	}
+  &__item:hover &__overlay {
+    opacity: 0.9;
+  }
 
-	&__item:hover &__overlay {
-		opacity: 0.9;
-	}
-
-	&__text {
-		color: $black-overlay;
-	}
-
+  &__text {
+    color: $black-overlay;
+  }
 }
 
 //corporate-family
 .corporate-family {
-
-	padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
-
+  padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
 }
 
 //promotions
 .promotions {
-
-	padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
+  padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 }
 
 //member section
 .join-text {
+  padding: gutter-vw(4) gutter-vw(8);
 
-	padding: gutter-vw(4) gutter-vw(8);
-
-	@media (min-width: 992px) and (max-width: 1280px) {
-		padding: gutter-vw(2) gutter-vw(4);
-	}
+  @media (min-width: 992px) and (max-width: 1280px) {
+    padding: gutter-vw(2) gutter-vw(4);
+  }
 }
 
 .memberSection {
-	position: relative;
-	background: $white-smoke;
-	margin: gutter-vw(0) gutter-vw(5) gutter-vw(6);
-	border-radius: gutter-sp(16);
+  position: relative;
+  background: $white-smoke;
+  margin: gutter-vw(0) gutter-vw(5) gutter-vw(6);
+  border-radius: gutter-sp(16);
 
+  &__color {
+    color: $secondary-color;
+  }
 
-	&__color {
-		color: $secondary-color;
-	}
+  &__btn {
+    background: $secondary-color;
+    color: $white;
+    border-radius: gutter-sp(8);
+    border: none;
+    padding: gutter-sp(10) gutter-sp(20);
+  }
 
-	&__btn {
-		background: $secondary-color;
-		color: $white;
-		border-radius: gutter-sp(8);
-		border: none;
-		padding: gutter-sp(10) gutter-sp(20);
-	}
-     
-	&__desc {
-		font-weight: 300;
-		line-height: gutter-sp(26);
-	}
+  &__desc {
+    font-weight: 300;
+    line-height: gutter-sp(26);
+  }
 
-	&__image {
-		display: flex;
-		justify-content: center;
-		position: relative;
+  &__image {
+    display: flex;
+    justify-content: center;
+    position: relative;
 
-		img {
-			position: absolute;
-			bottom: $value-null;
-			width: gutter-per(54);
-			right: gutter-per(30);
+    img {
+      position: absolute;
+      bottom: $value-null;
+      width: gutter-per(54);
+      right: gutter-per(30);
 
-			@media screen and (max-width:991px) {
-				position: relative;
-				right: gutter-per(0);
-			}
-		}
-
+      @media screen and (max-width: 991px) {
+        position: relative;
+        right: gutter-per(0);
+      }
     }
   }
+}
 
 //step in to wonders moment
 
 .moment::before {
-
-	position: absolute;
-	content: "";
-	background: url("../../assets/images/moment/atumn.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: gutter-sp(464);
-	top: gutter-sp(0);
-	left: gutter-sp(0);
-	width: gutter-per(100);
+  position: absolute;
+  content: "";
+  background: url("../../assets/images/moment/atumn.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: gutter-sp(464);
+  top: gutter-sp(0);
+  left: gutter-sp(0);
+  width: gutter-per(100);
 }
 .moment__card ::ng-deep .moment__card__start .card .card-body {
-	border-bottom-right-radius: gutter-sp(8);
-	border-bottom-left-radius: gutter-sp(8);
+  border-bottom-right-radius: gutter-sp(8);
+  border-bottom-left-radius: gutter-sp(8);
+}
+.moment__card ::ng-deep .moment__card__start .card {
+  position: relative;
+  transition: filter 0.3s ease;
+  cursor: pointer;
+
+  .card-img-top {
+    border-top-right-radius: gutter-sp(8);
+    border-top-left-radius: gutter-sp(8);
+    transition: filter 0.3s ease;
   }
-  .moment__card ::ng-deep .moment__card__start .card {
-	position: relative; 
-	transition: filter 0.3s ease; 
-	cursor: pointer;
-  
-	.card-img-top {
-	  border-top-right-radius: gutter-sp(8);
-	  border-top-left-radius: gutter-sp(8);
-	  transition: filter 0.3s ease; 
-	}
-  
-	&:hover .card-img-top {
-	  filter: grayscale(gutter-per(100)); 
-	}
+
+  &:hover .card-img-top {
+    filter: grayscale(gutter-per(100));
   }
-  .moment__card ::ng-deep .moment__card__start .card {
-	border-top-right-radius: gutter-sp(8);
-	border-top-left-radius: gutter-sp(8);
-  }
+}
+.moment__card ::ng-deep .moment__card__start .card {
+  border-top-right-radius: gutter-sp(8);
+  border-top-left-radius: gutter-sp(8);
+}
 .moment {
-	padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
+  padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
 
-	&__content {
-
-		height: gutter-sp(344);
-		justify-content: center;
-		align-items: center;
-		color: $white-smoke;
-		opacity: $opacity-halfless;
-		text-align: center;
-		letter-spacing: gutter-sp(1);
-	}
-
+  &__content {
+    height: gutter-sp(344);
+    justify-content: center;
+    align-items: center;
+    color: $white-smoke;
+    opacity: $opacity-halfless;
+    text-align: center;
+    letter-spacing: gutter-sp(1);
+  }
 }
 //faq
 .faq-section {
@@ -413,11 +387,16 @@
 }
 
 css for scroll .fade {
-	pointer-events: none;
-	background: linear-gradient(90deg, $lite-black, transparent gutter-per(30), transparent gutter-per(70), $lite-black);
-	position: absolute;
-	inset: 0;
-
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    $lite-black,
+    transparent gutter-per(30),
+    transparent gutter-per(70),
+    $lite-black
+  );
+  position: absolute;
+  inset: 0;
 }
 
 @keyframes loop {
@@ -430,85 +409,79 @@ css for scroll .fade {
   }
 }
 
-
 .mouse_scroll {
-	display: block;
-	margin: gutter-sp(0) auto;
-	width: gutter-sp(24);
-	height: gutter-sp(100);
-	cursor: pointer;
-
+  display: block;
+  margin: gutter-sp(0) auto;
+  width: gutter-sp(24);
+  height: gutter-sp(100);
+  cursor: pointer;
 }
 
 .m_scroll_arrows {
-
-	display: block;
-	-ms-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-	border-right: gutter-sp(2) solid $white;
-	border-bottom: gutter-sp(2) solid $white;
-	margin: gutter-sp(0) gutter-sp(0) gutter-sp(3) gutter-sp(4);
-	width: gutter-sp(16);
-	height: gutter-sp(16);
-
+  display: block;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: gutter-sp(2) solid $white;
+  border-bottom: gutter-sp(2) solid $white;
+  margin: gutter-sp(0) gutter-sp(0) gutter-sp(3) gutter-sp(4);
+  width: gutter-sp(16);
+  height: gutter-sp(16);
 }
 
 .unu,
 .doi,
 .trei {
-
-	-webkit-animation: mouse-scroll 1s infinite;
-	-moz-animation: mouse-scroll 1s infinite;
-	animation: mouse-scroll 1s infinite;
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
 }
 
 .unu {
-	-webkit-animation-delay: .1s;
-	-moz-animation-delay: .1s;
-	-webkit-animation-direction: alternate;
-	animation-direction: alternate;
-	animation-delay: alternate;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  animation-delay: alternate;
 }
 
 .doi {
-	-webkit-animation-delay: .2s;
-	-moz-animation-delay: .2s;
-	-webkit-animation-direction: alternate;
-	animation-delay: .2s;
-	animation-direction: alternate;
-	margin-top: -gutter-sp(6);
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+  margin-top: -gutter-sp(6);
 }
 
 .trei {
-	-webkit-animation-delay: .3s;
-	-moz-animation-delay: .3s;
-	-webkit-animation-direction: alternate;
-	animation-delay: .3s;
-	animation-direction: alternate;
-	margin-top: -gutter-sp(6);
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-direction: alternate;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+  margin-top: -gutter-sp(6);
 }
 
 .mouse {
-	height: gutter-sp(42);
-	width: gutter-sp(24);
-	border-radius: gutter-sp(14);
-	transform: none;
-	border: gutter-sp(2) solid $white;
-	top: gutter-sp(170);
+  height: gutter-sp(42);
+  width: gutter-sp(24);
+  border-radius: gutter-sp(14);
+  transform: none;
+  border: gutter-sp(2) solid $white;
+  top: gutter-sp(170);
 }
 
 .wheel {
-	display: block;
-	margin: gutter-sp(5) auto;
-	background: $white;
-	position: relative;
-	height: gutter-sp(4);
-	width: gutter-sp(4);
-	border: gutter-sp(2) solid $white;
-	-webkit-border-radius: gutter-sp(8);
-	border-radius: gutter-sp(8);
-
+  display: block;
+  margin: gutter-sp(5) auto;
+  background: $white;
+  position: relative;
+  height: gutter-sp(4);
+  width: gutter-sp(4);
+  border: gutter-sp(2) solid $white;
+  -webkit-border-radius: gutter-sp(8);
+  border-radius: gutter-sp(8);
 }
 
 .wheel {
@@ -534,77 +507,69 @@ css for scroll .fade {
 }
 
 @-moz-keyframes mouse-wheel {
+  0% {
+    top: gutter-sp(1);
+  }
 
-	0% {
-		top: gutter-sp(1);
-	}
+  25% {
+    top: gutter-sp(2);
+  }
 
-	25% {
-		top: gutter-sp(2);
-	}
+  50% {
+    top: gutter-sp(3);
+  }
 
-	50% {
-		top: gutter-sp(3);
-	}
+  75% {
+    top: gutter-sp(2);
+  }
 
-	75% {
-		top: gutter-sp(2);
-	}
-
-	100% {
-		top: gutter-sp(1);
-	}
-
+  100% {
+    top: gutter-sp(1);
+  }
 }
 
 @-o-keyframes mouse-wheel {
- 
-	0% {
-		top: gutter-sp(1);
-	}
+  0% {
+    top: gutter-sp(1);
+  }
 
-	25% {
-		top: gutter-sp(2);
-	}
+  25% {
+    top: gutter-sp(2);
+  }
 
-	50% {
-		top: gutter-sp(3);
-	}
+  50% {
+    top: gutter-sp(3);
+  }
 
-	75% {
-		top: gutter-sp(2);
-	}
+  75% {
+    top: gutter-sp(2);
+  }
 
-	100% {
-		top: gutter-sp(1);
-	}
-
+  100% {
+    top: gutter-sp(1);
+  }
 }
 
 @keyframes mouse-wheel {
- 
+  0% {
+    top: gutter-sp(1);
+  }
 
+  25% {
+    top: gutter-sp(2);
+  }
 
-	0% {
-		top: gutter-sp(1);
-	}
+  50% {
+    top: gutter-sp(3);
+  }
 
-	25% {
-		top: gutter-sp(2);
-	}
+  75% {
+    top: gutter-sp(2);
+  }
 
-	50% {
-		top: gutter-sp(3);
-	}
-
-	75% {
-		top: gutter-sp(2);
-	}
-
-	100% {
-		top: gutter-sp(1);
-	}
-
+  100% {
+    top: gutter-sp(1);
+  }
 }
 
 @-webkit-keyframes mouse-scroll {

@@ -2,7 +2,7 @@
 .custom-accordion{ 
     .accordion-item {
     border: none; 
-    border-top:gutter-sp(1) solid #ddd; 
+    border-top:gutter-sp(1) solid $faq-border; 
     border-top-left-radius: gutter-sp(0);
     border-top-right-radius: gutter-sp(0);
 }
