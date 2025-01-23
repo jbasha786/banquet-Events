@@ -10,7 +10,12 @@
   padding: gutter-sp(12);
   border: gutter-sp(1) solid $input-border;
 }
-
+.title{
+  cursor: pointer;
+  &:hover {
+    color:$secondary-color;
+  }
+}
 .image-section {
   background-size: cover;
   border-radius: gutter-sp(12);
@@ -31,6 +36,10 @@
   font-weight: 500;
   width: gutter-sp(230);
   padding: gutter-sp(8);
+  &:hover {
+    background-color: $primary-hover; 
+    box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black; 
+    }
 }
 .btn-download,
 .btn-quote {
@@ -42,6 +51,11 @@
   font-weight: 500;
   width: gutter-sp(230);
   padding: gutter-sp(8);
+  &:hover {
+    background-color: $secondary-backgroundhvr; 
+    color: $primary-hover; 
+    border-color: $primary-hover; 
+  }
 }
 
 .left-column {
