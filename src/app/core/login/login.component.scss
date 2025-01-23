@@ -25,19 +25,6 @@
             }
         }
 
-        &__loginbtndiv {
-            &__continue__guest{
-                color:$secondary-color;
-                border:gutter-sp(1) solid $secondary-color;
-                background-color: transparent;
-            }
-            &__loginbox {
-                color: $white;
-                background-color: $secondary-color;
-                border: none;
-            }
-        }
-
         &__signupdiv {
             &__signUp {
                 color: $form-blue;
