@@ -41,26 +41,54 @@
 				animation: slideIn 4s forwards;
 			}
 
-			&__btn {
-
-				flex-shrink: 0;
-				border-radius: gutter-sp(32);
-				letter-spacing: gutter-sp(1);
-				border: none;
-				color: $white;
-				margin-top: gutter-sp(20);
-				background: $primary-color;
-				opacity: 0;
-				animation: fadeIn 4s forwards;
-				padding: gutter-sp(8) gutter-sp(42);
-			}
-
-			@keyframes fadeIn {
-				to {
-					opacity: 1;
-				}
-			}
-		}
+			//hover-change
+            &__btn {
+                flex-shrink: 0;
+                border-radius: gutter-sp(32);
+                letter-spacing: gutter-sp(1);
+                border: none;
+                color: $white;
+                margin-top: gutter-sp(20);
+                background: $primary-color;
+                opacity: 0;
+                animation: fadeIn 4s forwards;
+                padding: gutter-sp(8) gutter-sp(42);
+                position: relative;
+                overflow: hidden;
+            }
+ 
+            //hover-change
+            &__btn::after {
+                content: '';
+                position: absolute;
+                top: gutter-per(50);
+                left: gutter-per(50);
+                width: $value-null;
+                height: $value-null;
+                background: transparent;
+                border-radius: gutter-per(50);
+				box-shadow: 
+				0 0 gutter-sp(5) gutter-sp(2) $ratingBackground, 
+				0 0 gutter-sp(10) gutter-sp(3) $ratingBackground, 
+				0 0 gutter-sp(15) gutter-sp(5) $ratingBackground;
+                transform: translate(gutter-per(-50), gutter-per(-50));
+                opacity: 0;
+                transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+            }
+ 
+            //hover-change
+            &__btn:hover::after {
+                width: gutter-sp(200);
+                height: gutter-sp(200);
+                opacity: 1;
+            }
+ 
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+       }
 
 		&__downIcon {
 			bottom: gutter-sp(30);
@@ -301,7 +329,7 @@
 		border: none;
 		padding: gutter-sp(10) gutter-sp(20);
 	}
-
+     
 	&__desc {
 		font-weight: 300;
 		line-height: gutter-sp(26);
@@ -345,9 +373,20 @@
 	border-bottom-right-radius: gutter-sp(8);
 	border-bottom-left-radius: gutter-sp(8);
   }
-  .moment__card ::ng-deep .moment__card__start .card .card-img-top {
-	border-top-right-radius: gutter-sp(8);
-	border-top-left-radius: gutter-sp(8);
+  .moment__card ::ng-deep .moment__card__start .card {
+	position: relative; 
+	transition: filter 0.3s ease; 
+	cursor: pointer;
+  
+	.card-img-top {
+	  border-top-right-radius: gutter-sp(8);
+	  border-top-left-radius: gutter-sp(8);
+	  transition: filter 0.3s ease; 
+	}
+  
+	&:hover .card-img-top {
+	  filter: grayscale(gutter-per(100)); 
+	}
   }
   .moment__card ::ng-deep .moment__card__start .card {
 	border-top-right-radius: gutter-sp(8);

@@ -24,12 +24,14 @@ import { ZindexService } from '../../../services/zindex.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-
+  hoverSrc: string | undefined;
   navZIndex: number = 1030;
   @Input() headerInfo: any;
   navList: headerModel[] = [];
   navEvent_Items: headerModel[] = [];
   openpopup: boolean = false;
+  hoveredItem: headerModel | null = null;
+  specialIndex = 2;
 
   constructor(private router: Router,
     private defaultService: DefaultService,
@@ -115,4 +117,14 @@ export class HeaderComponent implements OnInit {
   handleButtonClick() {
     this.router.navigate(['liveEvents'])
   }
+   
+   onMouseEnter(item: headerModel): void {
+    this.hoveredItem = item; 
+  }
+
+  
+  onMouseLeave(): void {
+    this.hoveredItem = null;  
+  }
+  
 }

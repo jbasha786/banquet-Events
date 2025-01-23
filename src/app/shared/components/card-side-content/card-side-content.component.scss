@@ -1,26 +1,27 @@
 @import "../../../styles/variable.scss";
 
 .events {
-    background: $gray;
-    border-radius: $gutter-16sp;
+  background: $gray;
+  border-radius: $gutter-16sp;
 
-    &__content {
-        display: flex;
-        flex-flow: column;
+  &__content {
+    display: flex;
+    flex-flow: column;
 
-        &__title {
-            line-height: $gutter-42sp;
-            letter-spacing: $gutter-1sp;
-            background: linear-gradient(to right, $text-gradient-clr1 $gutter-10per, $text-gradient-clr2 $gutter-50per);
-            background-clip: text;
-            color: transparent;
-        }
-
-        &__btn {
-            padding: $gutter-10sp $gutter-22sp;
-            border-radius: $gutter-6sp;
-            border: $gutter-1sp solid $secondary-color;
-            color: $secondary-color;
-        }
+    &__title {
+      line-height: $gutter-42sp;
+      letter-spacing: $gutter-1sp;
+      background: linear-gradient(
+        to right,
+        $text-gradient-clr1 $gutter-10per,
+        $text-gradient-clr2 $gutter-50per
+      );
+      background-clip: text;
+      color: transparent;
     }
+
+   
+      
+      
+  }
 }

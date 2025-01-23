@@ -643,27 +643,32 @@
         {
             "link": "",
             "name": "0592-356 000",
-            "src": "../../../../assets/images/logo/phone-call.png"
+            "src": "../../../../assets/images/logo/phone.svg",
+            "hoverSrc": "../../../../assets/images/logo/phone-hover.svg"
         },
         {
             "link": "",
             "name": "English",
-            "src": "../../../../assets/images/logo/world.png"
+            "src": "../../../../assets/images/logo/language.svg",
+            "hoverSrc": "../../../../assets/images/logo/language-hover.svg"
         },
         {
             "link": "",
             "name": "Help",
-            "src": "../../../../assets/images/logo/question-sign.png"
+            "src": "../../../../assets/images/logo/question-sign.svg",
+            "hoverSrc": "../../../../assets/images/logo/question-sign-hover.svg"
         },
         {
             "link": "mybooking",
             "name": "My Bookings",
-            "src": "../../../../assets/images/logo/shopping-bag.png"
+            "src": "../../../../assets/images/logo/mybookings.svg",
+            "hoverSrc": "../../../../assets/images/logo/mybookings-hover.svg"
         },
         {
             "link": "login",
             "name": "Sign In Or Join",
-            "src": "../../../../assets/images/logo/user.png"
+            "src": "../../../../assets/images/logo/signin.svg",
+            "hoverSrc": "../../../../assets/images/logo/signin-hover.svg"
         }
     ],
     "overview": {
