@@ -28,8 +28,9 @@ export class InvoiceHistoryComponent {
   }
   overview() {
     this.dialog.open(InvoiceHistotyViewComponent, {
-      width: "700px",
-      height: "600px"
+      width: "530px",
+      height: "75vh",
+      panelClass: 'invoive-view',
     })
   }
   getInitialData() {

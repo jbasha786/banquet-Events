@@ -1,91 +1,103 @@
-<div class="invoice-view">
+<div class="invoice-view pt-5 pb-1">
     <!-- Header section -->
-    <div
-        class="invoice-view__head mb-20 container d-sm-block d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-between align-items-center">
-        <div>
-            <img src="{{InvoiceViewData.logo}}" alt="Invoice Logo">
-            <p>{{InvoiceViewData.address}}</p>
-            <p>{{InvoiceViewData.phone}}</p>
+    <div class="invoice-view__head mb-20 d-flex flex-column px-5">
+        <div class="d-flex justify-content-between mb-10 align-items-center">
+            <img src="{{InvoiceViewData.logo}}" alt="Invoice Logo" class="logo">
+            <div class="d-flex gap-2">
+                <p class="fs-15 fs-md-22 priceweight invoiceId">{{InvoiceViewData.InvoiceId}}</p>
+                <p class="fs-15 fs-md-22 priceweight invoiceSub">{{InvoiceViewData.InvoiceIdSub}}</p>
+            </div>
         </div>
-        <div class="text-end">
-            <h2>{{InvoiceViewData.InvoiceId}}</h2>
-            <p>Ref No: {{InvoiceViewData.refNumber}}</p>
-            <p>Issued Date: {{InvoiceViewData.issuedDate}}</p>
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column">
+                <span class="fs-8 fs-md-10 priceweight">{{InvoiceViewData.address}}</span>
+                <span class="fs-8 fs-md-10 priceweight">{{InvoiceViewData.addressSub}}</span>
+                <span class="fs-8 fs-md-10 priceweight">{{InvoiceViewData.phone}}</span>
+            </div>
+            <div class="d-flex flex-column">
+                <div class="d-flex justify-content-between">
+                    <span class="fs-8 fs-md-10 fw-bold refclr">Ref No:</span>
+                    <span class="ms-4 fs-8 fs-md-10 priceweight">{{InvoiceViewData.refNumber}}</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="fs-8 fs-md-10 fw-bold refclr">Issued Date:</span>
+                    <span class="ms-4 fs-8 fs-md-10 priceweight">{{InvoiceViewData.issuedDate}}</span>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Bill Section -->
-    <div class="container-fluid invoice-view__bill mt-20 mb-20">
+    <div class="invoice-view__bill mb-20">
         <div
-            class="container invoice-view__bill__section d-sm-block d-md-flex d-lg-flex justify-content-between align-items-center gap-2">
-            <div>
-                <h6>Bill To</h6>
-                <p>{{InvoiceViewData.billTo}}</p>
+            class="invoice-view__bill__section d-flex justify-content-between align-items-start g-3 px-5">
+            <div class="col-4">
+                <p class="fs-13 mb-1 priceweight invoiceId">Bill To</p>
+                <p class="fs-11 refclr">{{InvoiceViewData.billTo}}</p>
             </div>
-            <div>
-                <h6>Bill From</h6>
-                <p>{{InvoiceViewData.billFrom}}</p>
+            <div class="col-3">
+                <p class="fs-13 mb-1 priceweight invoiceId">Bill From</p>
+                <p class="fs-11 refclr">{{InvoiceViewData.billFrom}}</p>
             </div>
-            <div>
-                <h6>Description</h6>
-                <p>{{InvoiceViewData.desc}}</p>
+            <div class="col-4">
+                <p class="fs-13 mb-1 priceweight invoiceId">Description</p>
+                <p class="fs-11 refclr">{{InvoiceViewData.desc}}</p>
             </div>
         </div>
     </div>
     <!-- Services Section -->
-    <div class="invoice-view__service container mt-20 mb-20">
-        <h6 class="fw-bold">Services</h6>
+    <div class="invoice-view__service mt-20 mb-20 px-5">
+        <span class="fw-bold fs-13">Services</span>
         <hr>
         <div class="d-flex justify-content-between">
-            <h6>Queens Lagoon Suite</h6>
-            <span>€ 4200.00</span>
+            <span class="fw-bold fs-13">Queens Lagoon Suite</span>
+            <span class="invoiceId priceweight fs-13">€ 4200.00</span>
         </div>
         <div class="d-flex justify-content-between">
-            <h6>Total Cost</h6>
-            <span>€ 4200.00</span>
+            <span class="fw-bold fs-13">Total Cost</span>
+            <span class="invoiceId priceweight fs-13">€ 4200.00</span>
         </div>
         <hr>
         <div class="d-flex justify-content-between">
-            <h6>Subtotal</h6>
-            <span>€ 4200.00</span>
+            <span class="fw-bold fs-13">Subtotal</span>
+            <span class="invoiceId priceweight fs-13">€ 4200.00</span>
         </div>
         <div class="d-flex justify-content-between">
-            <h6>VAT 21%</h6>
-            <span>€ 40.00</span>
+            <span class="vatclr fs-12">VAT 21%</span>
+            <span class="vatclr fs-12">€ 40.00</span>
         </div>
     </div>
 
     <!-- Total Section -->
-    <div class="container-fluid mt-20 mb-20 invoice-view__total">
-        <div class="container d-flex justify-content-between invoice-view__total__section">
-            <h6>Total</h6>
-            <span>€ 4240.00</span>
+    <div class="mt-20 mb-20 invoice-view__total">
+        <div class="d-flex justify-content-between invoice-view__total__section px-5">
+            <span class="fw-bold fs-13">Total</span>
+            <span class="invoiceId priceweight fs-13">€ 4240.00</span>
         </div>
     </div>
 
     <!-- Details Section -->
 
-    <div class="invoice-view__details container mt-20 mb-20">
-        <div
-            class="invoice-view__details d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-between align-items-center gap-2">
+    <div class="invoice-view__details mt-10 mb-10">
+        <div class="invoice-view__details d-flex justify-content-between align-items-start px-5 gap-2 flex-wrap">
             <div>
-                <h6>Account</h6>
-                <p>{{InvoiceViewData.account}}</p>
+                <span class="fs-10 fw-500" >Account</span>
+                <p class="invoiceSub fs-10">{{InvoiceViewData.account}}</p>
             </div>
             <div>
-                <h6>IBAN number</h6>
-                <p>{{InvoiceViewData.ibanNumber}}</p>
+                <span class="fs-10 fw-500 text-nowrap">IBAN number</span>
+                <p class="invoiceSub fs-10">{{InvoiceViewData.ibanNumber}}</p>
             </div>
             <div>
-                <h6>BIC code</h6>
-                <p>{{InvoiceViewData.bicCode}}</p>
+                <span class="fs-10 fw-500 text-nowrap">BIC code</span>
+                <p class="invoiceSub fs-10">{{InvoiceViewData.bicCode}}</p>
             </div>
             <div>
-                <h6>VAT</h6>
-                <p>{{InvoiceViewData.vat}}</p>
+                <span class="fs-10 fw-500">VAT</span>
+                <p class="invoiceSub fs-10">{{InvoiceViewData.vat}}</p>
             </div>
             <div>
-                <h6>CoC</h6>
-                <p>{{InvoiceViewData.coc}}</p>
+                <span class="fs-10 fw-500">CoC</span>
+                <p class="invoiceSub fs-10">{{InvoiceViewData.coc}}</p>
             </div>
         </div>
 
@@ -93,14 +105,14 @@
 
     <!-- payment Text Desc -->
 
-    <div class="invoice-view__payment container mt-20 mb-20">
-        <p class="text-center">{{InvoiceViewData.paymentInfo}}</p>
+    <div class="invoice-view__payment px-5">
+        <p class="fs-7">{{InvoiceViewData.paymentInfo}}</p>
     </div>
 
     <!-- close Icon -->
-    <div class="invoice-view__close">
+    <!-- <div class="invoice-view__close">
         <div class="invoice-view__close__icon cursor" (click)="close()">
             <mat-icon fontIcon="close"></mat-icon>
         </div>
-    </div>
+    </div> -->
 </div>

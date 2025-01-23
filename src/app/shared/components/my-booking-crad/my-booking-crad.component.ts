@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, input, Input } from '@angular/core';
 import { bookingHistoryModel } from '../../_models/bookingHistoryModel';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogueComponent } from '../dialogue/dialogue.component';
 
 @Component({
   selector: 'app-my-booking-crad',
@@ -36,6 +38,14 @@ export class MyBookingCradComponent {
   @Input() cancelbooking: any;
   @Input() editbooking: any;
   @Input() viewdetails: any;
+  constructor(private dialog: MatDialog){}
   ngOnInIt() {
+  }
+  cancelBooking(){
+     this.dialog.open(DialogueComponent, {
+          width: "500px",
+          disableClose: true,
+          panelClass: 'custom-dialog-panel'
+        });
   }
 }

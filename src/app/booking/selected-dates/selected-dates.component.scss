@@ -13,6 +13,9 @@
             .card:hover {
                 border-color: $secondary-color;
             }
+            .card ::ng-deep .mdc-list-item__primary-text{
+                color: $black;
+            }
         }
 
         .calenderDiv ::ng-deep .mat-calendar-body-cell-content.mat-focus-indicator.mat-calendar-body-today {

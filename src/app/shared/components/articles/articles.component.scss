@@ -2,9 +2,24 @@
 
 .article {
     .table {
-        overflow: scroll;
+        overflow: auto;
     }
-
+    .table::-webkit-scrollbar {
+        width: gutter-sp(5);
+        height: gutter-sp(5);
+    }
+   
+    .table::-webkit-scrollbar-thumb {
+        border-radius: gutter-sp(6);
+        background-color: $lite-white;
+    }
+   
+    .table::-webkit-scrollbar-track {
+        background: $white-lite;
+    }
+    .color{
+        color: $black;
+    }
     .iconclose {
         font-size: gutter-sp(30);
     }
@@ -45,7 +60,13 @@
         box-shadow: none;
     }
     .tableArticle .quantity{
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: gutter-sp(0);
+        }
         border: gutter-sp(1) solid $black;
+        height: gutter-sp(26);
     }
 
     .mat-mdc-cell {
