@@ -38,7 +38,7 @@
     <div class="row g-4">
       @for (obj of subbannerInfo; track $index) {
       <div class="col-12 col-lg-4">
-        <div class="subbanner__item position-relative cursor" (click)="goTolandingPages(obj.id)">
+        <div class="image__item position-relative cursor" (click)="goTolandingPages(obj.id)">
           <img class="subbanner__image" src="{{ obj.src }}" alt="subbanner Image" />
           <p class="subbanner__text position-absolute text-center fs-30 fw-bold">
             {{ obj.desc }}
@@ -69,13 +69,13 @@
           <ng-container *ngIf="!arr.showFullContent">
             <p class="text fs-14 lh-34 mb-0">{{ arr.desc }}</p>
             <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(arr)">
-              Read more ->
+              Read more <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
             </p>
           </ng-container>
           <ng-container *ngIf="arr.showFullContent">
             <p class=" fs-14 lh-34 mb-0">{{ arr.desc }}</p>
             <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(arr)">
-              Read less ->
+              Read less <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
             </p>
           </ng-container>
         </div>
@@ -109,13 +109,13 @@
                 <ng-container *ngIf="!personal.showFullContent">
                   <p class="desc fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
                   <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(personal)">
-                    Read more ->
+                    Read more <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
                   </p>
                 </ng-container>
                 <ng-container *ngIf="personal.showFullContent">
                   <p class="fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
                   <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(personal)">
-                    Read less ->
+                    Read less <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
                   </p>
                 </ng-container>
               </div>
@@ -177,8 +177,8 @@
         Not a member yet? Join now to receive member exclusive rates, earn
         points towards free nights and many more.
       </p>
-      <button class="memberSection__btn">
-        join for free <span class="ml-5">-></span>
+      <button class="memberbtn" [routerLink]="'/signUp'">
+        join for free <span class="ml-5"></span>
       </button>
     </div>
     <div class="col-12 col-lg-6 memberSection__image">

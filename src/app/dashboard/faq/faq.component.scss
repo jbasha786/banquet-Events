@@ -1,13 +1,27 @@
 @import "../../styles/variable.scss";
-.custom-accordion .accordion-item {
+.custom-accordion{ 
+    .accordion-item {
     border: none; 
-    border-top:1px solid #ddd; 
+    border-top:gutter-sp(1) solid $faq-border; 
+    border-top-left-radius: gutter-sp(0);
+    border-top-right-radius: gutter-sp(0);
 }
 .accordion-header{
-    padding: $gutter-18sp $gutter-0sp;
+    padding: gutter-sp(18) gutter-sp(0);
 }
 .accordion-button{
-    font-size:$gutter-14sp;
+    font-size:gutter-sp(14);
     font-weight:500;
-
+}
+.accordion-button:not(.collapsed){
+    background-color: transparent;
+    box-shadow: none;
+    color: $secondary-color;
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.accordion-button:hover{
+    color:$secondary-color;
+}
 }

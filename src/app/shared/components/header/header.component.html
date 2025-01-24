@@ -26,17 +26,38 @@
             <!-- sidebar-body -->
             <div class="offcanvas-body my-30  ">
                <ul class="navbar-nav justify-content-end flex-grow-1 gap-18 gap-lg-30">
-                  @for(item of navList; track $index){
-                  <li class="nav-item p-10 p-lg-0 fw-400 cursor">
-                     <div class="link-dark link-underline-opacity-0" mat-button (click)="goTo(item.link)">
-                        <img class="ps-2 pe-2 header-images" style="width:28px;opacity: 0.7;" src="{{item.src}}"
-                           alt="{{item.name}}">
-                        <span class="fs-14 fs-lg-11 fw-300" role="button">{{item.name}}</span>
-                     </div>
+                  <li
+                    class="nav-item p-10 p-lg-0 fw-400 cursor"
+                    *ngFor="let item of navList; let i = index"
+                    (click)="goTo(item.link)"
+                  >
+                    <div
+                      class="link-dark link-underline-opacity-0 hover-container"
+                      (mouseenter)="onMouseEnter(item)"
+                      (mouseleave)="onMouseLeave()"
+                    >
+                      <img
+                        class="ps-2 pe-2 header-images"
+                        [ngStyle]="{ 
+                          width: i === specialIndex ? '26px' : '28px', 
+                          opacity: hoveredItem === item ? '1' : '0.7' 
+                        }"
+                        [src]="hoveredItem === item ? item.hoverSrc : item.src"
+                        alt="{{ item.name }}"
+                      />
+                      <span
+                        class="fs-14 fs-lg-11 fw-300 event_name"
+                        [ngClass]="{ 'hovered-text': hoveredItem === item }"
+                        role="button"
+                      >
+                        {{ item.name }}
+                      </span>
+                    </div>
                   </li>
-                  }
-               </ul>
-            </div>
+                </ul>
+                
+                
+             </div>
          </div>
       </div>
       <!-- Header-below-line -->
@@ -61,7 +82,7 @@
                <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 gap-18 gap-lg-35">
                   @for(item of navEvent_Items; track $index) {
                   <li class="nav-item p-10 p-lg-0 fs-15">
-                     <a class="link-dark link-underline-opacity-0 fw-regular" href="#">
+                     <a class="link-dark link-underline-opacity-0 fw-regular event_name" href="#">
                         {{item.eventName}}
                      </a>
                   </li>

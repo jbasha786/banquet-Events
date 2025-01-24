@@ -8,7 +8,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: $gutter-14sp;
+		gap: gutter-sp(14);
 
         &__color {
             color: $secondary-color;
@@ -17,67 +17,56 @@
         &__familycolor {
             color: $family-yellow;
         }
-		&__btn,
-		&__familybtn {
-			color: $secondary-color;
-			border: $gutter-1sp solid $secondary-color;
-			background: none;
-			padding: $gutter-10sp $gutter-22sp;
-			border-radius: $gutter-6sp;
-			cursor: pointer;
-			transition: background-color 0.3s, color 0.3s;
-		}
-
-		&__familybtn {
-			color: $family-yellow;
-			border: $gutter-1sp solid $family-yellow;
-			background: none;
-			padding: $gutter-10sp $gutter-22sp;
-			border-radius: $gutter-6sp;
-			cursor: pointer;
-			transition: background-color 0.3s, color 0.3s;
-		}
-
-		&__image {
-			position: relative;
-			display: inline-block;
-
-			&__main {
-				width: $gutter-100per;
-				height: $gutter-100per;
-				border-radius: $gutter-10sp;
-				object-fit: cover;
-			}
-
-
 		}
 	}
-
+	@keyframes pulse {
+		0% {
+		  transform: scale(1);
+		}
+		50% {
+		  transform: scale(1.2); 
+		}
+		100% {
+		  transform: scale(1);
+		}
+	  }
 	.corporate__image__video,
 	.family__image__video  {
 		position: absolute;
-		top: $gutter-40per;
-		left: $gutter-48per;
-		width: $gutter-10per;
+		top: gutter-per(40);
+		left: gutter-per(48);
+		width: gutter-per(10);
 		height: auto;
 	}
 	.family__image__video  {
-		left: $gutter-40per;
+		left: gutter-per(40);
 	}
 	.corporate__image__main,
 	.family__image__main {
-		width:$gutter-100per
+		width:gutter-per(100);
+		
 	}
 
 	.image-border,
 	.image-border-family {
 		position: relative;
-		height: $gutter-100per;
+		height: gutter-per(100);
 		display: flex;
 	    justify-content: flex-end;
+		cursor: pointer;
 
 	}
-}
+	.image-border-family:hover .family__image__video {
+		animation: pulse 1.5s infinite ease-in-out;
+		box-shadow: gutter-sp(0) gutter-sp(0) gutter-sp(15) gutter-sp(5) $familyvideo-shadow;
+		border-radius: gutter-per(50)
+	  }
+	  .image-border:hover .corporate__image__video {
+		animation: pulse 1.5s infinite ease-in-out;
+		box-shadow: gutter-sp(0) gutter-sp(0) gutter-sp(15) gutter-sp(5) $corporatevideo-shadow;
+		border-radius: gutter-per(50)
+	  }
+
 
 
 
