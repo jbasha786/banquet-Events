@@ -28,15 +28,6 @@
   text-decoration: underline;
   color: $form-blue;
 }
-.input-align {
-  width: gutter-sp(15);
-  height: gutter-sp(15);
-}
-input:focus, textarea:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: $form-focus;
-}
 textarea{
     border: gutter-sp(1) solid $border-silver;
 }
