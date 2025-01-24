@@ -38,10 +38,6 @@
   text-decoration: underline;
   color: $form-blue;
 }
-.input-align {
-  width: gutter-sp(15);
-  height: gutter-sp(15);
-}
 input:focus {
   outline: none;
   box-shadow: none;

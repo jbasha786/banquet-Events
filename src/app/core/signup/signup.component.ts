@@ -4,15 +4,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
 import { SignUpService } from '../../services/signUp/sign-up.service';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, FormsModule],
+  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, FormsModule, MatCheckboxModule, FormsModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
+  isChecked = false;
+  checked = false;
   isPasswordVisible = false;
   isconfirmPasswordVisible = false;
   constructor(

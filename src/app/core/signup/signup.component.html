@@ -4,105 +4,57 @@
     <p class="text-center fs-20 fw-500 pb-20 m-0">Sign Up</p>
     <p class="fs-16 pb-30 m-0">
       Already have an account?
-      <span class="signup__color cursor fw-500" (click)="returnToLogin()"
-        >Login</span>
+      <span class="signup__color cursor fw-500" (click)="returnToLogin()">Login</span>
     </p>
     <form [formGroup]="registrationForm">
       <div class="row g-4">
         <div class="col-lg-6 col-sm-12 mb-40">
           <label for="firstName" class="fs-14 mb-6">Full Name</label>
-          <input
-            id="firstName"
-            type="text"
-            formControlName="firstName"
-            class="form-control sign-up-form"
-          />
+          <input id="firstName" type="text" formControlName="firstName" class="form-control sign-up-form" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-40">
           <label for="lastName" class="fs-14 mb-6">Email</label>
-          <input
-            id="lastName"
-            type="text"
-            formControlName="lastName"
-            class="form-control sign-up-form"
-          />
+          <input id="lastName" type="text" formControlName="lastName" class="form-control sign-up-form" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-40">
           <label for="fullName" class="fs-14 mb-6">Relatie</label>
-          <input
-            id="fullName"
-            type="text"
-            formControlName="fullName"
-            class="form-control sign-up-form"
-          />
+          <input id="fullName" type="text" formControlName="fullName" class="form-control sign-up-form" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-40">
           <label for="phone" class="fs-14 mb-6">Phone</label>
-          <input
-            id="phone"
-            type="text"
-            formControlName="phone"
-            class="form-control sign-up-form"
-          />
+          <input id="phone" type="text" formControlName="phone" class="form-control sign-up-form" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-20">
           <label for="password" class="fs-14 mb-6">Password</label>
           <div class="password-container position-relative">
-            <input 
-              class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
-              (keydown.tab)="$event.stopPropagation()" 
-              [type]="isPasswordVisible ? 'text' : 'password'" 
-              id="password" 
-              formControlName="password" 
-              name="password" 
-              required
-            >
-            <img 
-              class="toggle-password position-absolute"
-              [src]="isPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'" 
-              alt="Toggle Password Visibility"
-              (click)="togglePasswordVisibility()"
-            />
+            <input class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
+              (keydown.tab)="$event.stopPropagation()" [type]="isPasswordVisible ? 'text' : 'password'" id="password"
+              formControlName="password" name="password" required>
+            <img class="toggle-password position-absolute"
+              [src]="isPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'"
+              alt="Toggle Password Visibility" (click)="togglePasswordVisibility()" />
           </div>
         </div>
         <div class="col-lg-6 col-sm-12 mb-20">
-          <label for="confirmPassword" class="fs-14 mb-6"
-            >Confirm Password</label
-          >
+          <label for="confirmPassword" class="fs-14 mb-6">Confirm Password</label>
           <div class="password-container position-relative">
-            <input 
-              class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
-              (keydown.tab)="$event.stopPropagation()" 
-              [type]="isconfirmPasswordVisible ? 'text' : 'password'" 
-              id="confirmPassword" 
-              formControlName="confirmPassword" 
-              name="password" 
-              required
-            >
-            <img 
-              class="toggle-password position-absolute"
-              [src]="isconfirmPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'" 
-              alt="Toggle Confirm Password Visibility"
-              (click)="toggleconfirmPasswordVisibility()"
-            />
+            <input class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
+              (keydown.tab)="$event.stopPropagation()" [type]="isconfirmPasswordVisible ? 'text' : 'password'"
+              id="confirmPassword" formControlName="confirmPassword" name="password" required>
+            <img class="toggle-password position-absolute"
+              [src]="isconfirmPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'"
+              alt="Toggle Confirm Password Visibility" (click)="toggleconfirmPasswordVisibility()" />
           </div>
         </div>
-        <div
-          class="fs-14 d-flex align-items-center gap-10 terms-condition mb-10"
-        >
-          <input type="checkbox" class="input-align" />
-          <span>Terms & Conditions<span class="checkbox-imp">*</span></span>
-      </div>
-        <div class="fs-14 d-flex align-items-center gap-10 mb-40">
-          <input type="checkbox" class="input-align" />
-          Subscribe to Email Notification
+        <div class="fs-14 d-flex align-items-center terms-condition pl-13 h-22 mt-2">
+          <mat-checkbox disableRipple [(ngModel)]="isChecked" [ngModelOptions]="{standalone: true}" ></mat-checkbox>
+          <span class="d-flex" role="button">Terms & Conditions<span class="checkbox-imp">*</span></span>
+        </div>
+        <div class="fs-14 d-flex align-items-center pl-13 gap-10 mb-40" role="button">
+          <mat-checkbox disableRipple [(ngModel)]="checked" [ngModelOptions]="{standalone: true}" > Subscribe to Email Notification</mat-checkbox>
         </div>
         <div class="signup__button">
-          <button
-            class="signup__button__btn"
-            type="submit"
-            (click)="register()"
-          >
+          <button class="signup__button__btn" type="submit" (click)="register()">
             Sign Up
           </button>
         </div>
