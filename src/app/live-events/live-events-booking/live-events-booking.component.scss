@@ -25,6 +25,12 @@
         border: none;
         padding: gutter-sp(15);
         width: gutter-per(100);
+        border: gutter-sp(1) solid transparent;
+    }
+    &__bookbtn:hover {
+        border: gutter-sp(1) solid $secondary-color;
+        color: $secondary-color;
+        background: transparent;
     }
 
     &__section {
@@ -62,6 +68,7 @@
         .qtySection {
             .inActive {
                 background-color: $add-remove-btn-clr;
+                border: gutter-sp(1) solid transparent;
                 color: $tickets-tile-clr;
                 border-radius: gutter-sp(2);
                 width: gutter-sp(40);
@@ -69,6 +76,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .inActive:hover, .active:hover {
+                background-color: transparent;
+                border: gutter-sp(1) solid $tickets-tile-clr;
+                color: $tickets-tile-clr;
             }
 
             .active {

@@ -24,21 +24,6 @@
         opacity: gutter-per(75);
     }
 
-    .custom_input:focus,
-    .custom_select:focus {
-        border: gutter-sp(1) solid $event-input-border-clr;
-        box-shadow: none;
-    }
-
-    .custom_input,
-    .custom_select {
-        border: gutter-sp(1) solid $event-input-border-clr;
-        box-shadow: none;
-        font-size: gutter-sp(14);
-        height: gutter-sp(50);
-        border-radius: gutter-sp(6);
-    }
-
     .custom_input::placeholder,
     .custom_time::placeholder {
         opacity: gutter-per(45);

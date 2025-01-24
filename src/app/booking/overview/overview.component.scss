@@ -76,20 +76,17 @@
                 background-color: $guest-background-clr;
                 border-radius: gutter-sp(10);
 
-                &__editArticle {
-                    position: relative;
-                    padding: gutter-sp(10);
-                    color: $secondary-color;
-                    border-radius: gutter-sp(10);
-                    width: gutter-per(100);
-                    border: gutter-sp(1) solid $secondary-color;
-                }
-
                 &__reverse {
                     background: linear-gradient(90.69deg, $rev-gradient-clr1 0.85%, $rev-gradient-clr2 100.99%);
                     border-radius: gutter-sp(5);
                     padding: gutter-sp(5);
                     color: $white;
+                    border: gutter-sp(1) solid transparent;
+                }
+                &__reverse:hover {
+                    color: $secondary-color;
+                    background: transparent;
+                    border: gutter-sp(1) solid $secondary-color;
                 }
 
                 .dateSection {
@@ -146,6 +143,9 @@
                     background: $white;
                     padding: gutter-sp(0) gutter-sp(10);
                 }
+                .border-clr:focus-within {
+                    border-color: $secondary-color;
+                }
 
                 .border-clr-none:focus,
                 .border-clr-none:focus-visible,
@@ -154,7 +154,6 @@
                     background-color: $white;
                     outline: gutter-sp(0);
                     box-shadow: none;
-                    border-color: $secondary-color;
                 }
 
                 label {

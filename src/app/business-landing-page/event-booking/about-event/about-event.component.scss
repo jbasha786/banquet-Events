@@ -18,18 +18,10 @@
         -moz-appearance: textfield;
     }
 
-    .custom_input:focus,
     .custom_radio:focus {
-        border: gutter-sp(1) solid $event-input-border-clr;
-        box-shadow: none;
-    }
-
-    .custom_input {
-        border: gutter-sp(1) solid $event-input-border-clr;
-        box-shadow: none;
-        font-size: gutter-sp(14);
-        height: gutter-sp(50);
-        border-radius: gutter-sp(6);
+        background-color: $secondary-color;
+        border: gutter-sp(1) solid $secondary-color;
+        box-shadow: 0 0 0 gutter-rem(0.25) rgba($secondary-color, 0.24);
     }
 
     .custom_radio {
