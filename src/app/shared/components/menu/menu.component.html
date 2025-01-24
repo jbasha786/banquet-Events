@@ -33,12 +33,12 @@
                         <!-- Checkbox Column -->
                         <ng-container matColumnDef="select">
                             <th mat-header-cell *matHeaderCellDef class="table_header fw-light">
-                                <mat-checkbox (change)="toggleAllRows(selectionStarters, startersDataSource)"
+                                <mat-checkbox disableRipple (change)="toggleAllRows(selectionStarters, startersDataSource)"
                                               [checked]="isAllSelected(selectionStarters, startersDataSource)">
                                 </mat-checkbox>
                               </th>
                               <td mat-cell *matCellDef="let row" class="table_data">
-                                <mat-checkbox (click)="$event.stopPropagation()" 
+                                <mat-checkbox disableRipple (click)="$event.stopPropagation()" 
                                               (change)="selectionStarters.toggle(row)" 
                                               [checked]="selectionStarters.isSelected(row)" 
                                               [aria-label]="checkboxLabel(selectionStarters, row)">
@@ -81,12 +81,12 @@
                         <!-- Checkbox Column -->
                         <ng-container matColumnDef="select" class="mb-4">
                             <th mat-header-cell *matHeaderCellDef class="table_header">
-                                <mat-checkbox (change)="toggleAllRows(selectionMainCourse, mainCourseDataSource)"
+                                <mat-checkbox disableRipple (change)="toggleAllRows(selectionMainCourse, mainCourseDataSource)"
                                               [checked]="isAllSelected(selectionMainCourse, mainCourseDataSource)">
                                 </mat-checkbox>
                               </th>
                               <td mat-cell *matCellDef="let row" class="table_data">
-                                <mat-checkbox (click)="$event.stopPropagation()" 
+                                <mat-checkbox disableRipple (click)="$event.stopPropagation()" 
                                               (change)="selectionMainCourse.toggle(row)" 
                                               [checked]="selectionMainCourse.isSelected(row)" 
                                               [aria-label]="checkboxLabel(selectionMainCourse, row)">

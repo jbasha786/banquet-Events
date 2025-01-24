@@ -522,8 +522,30 @@ html {
   background-color: transparent !important;
 }
 
-  //hover-change
-  .card{
+//mat-checkbox
+.mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
+  border-color: $secondary-color !important;
+  background-color: $secondary-color !important;
+  height: gutter-sp(15);
+  width: gutter-sp(15);
+}
+
+.mdc-checkbox__background {
+  height: gutter-sp(15) !important;
+  width: gutter-sp(15) !important;
+}
+
+.mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+  border-color: $secondary-color !important;
+  background-color: $secondary-color !important;
+}
+
+.mdc-checkbox__ripple {
+  display: none !important;
+}
+
+//hover-change
+.card {
   &-button {
     border: none;
     background-color: transparent;
@@ -532,21 +554,21 @@ html {
     animation: readmore 0.5s;
     display: inline-flex;
     align-items: center;
-}
+  }
 
-//hover-change
-&-button .arrow {
+  //hover-change
+  &-button .arrow {
     opacity: 0;
     transform: translateX(0);
     transition: opacity 0.3s ease, transform 0.3s ease;
     margin-left: gutter-sp(5);
-}
+  }
 
-//hover-change
-&-button:hover .arrow {
+  //hover-change
+  &-button:hover .arrow {
     opacity: 1;
     transform: translateX(gutter-sp(8));
-}
+  }
 }
 
 // Base styles for buttons
@@ -554,12 +576,12 @@ html {
   padding: gutter-sp(10) gutter-sp(22);
   border-radius: gutter-sp(6);
   border: gutter-sp(1) solid $secondary-color;
-  position: relative; 
-  color: $secondary-color; 
+  position: relative;
+  color: $secondary-color;
   background-color: transparent;
   transition: color 0.3s ease, transform 0.3s ease;
 
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -567,23 +589,23 @@ html {
     left: $value-null;
     width: gutter-per(100);
     height: gutter-per(100);
-    background-color: $secondary-color; 
+    background-color: $secondary-color;
     transition: transform 0.3s ease;
-    transform: scaleX(0); 
-    transform-origin: left; 
-    z-index: -1; 
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
     border-radius: gutter-sp(4);
   }
 
-  
+
   &:hover,
   &:focus {
-    color: $white; 
-    
-    transform: translateX(gutter-sp(0)); 
+    color: $white;
+
+    transform: translateX(gutter-sp(0));
 
     &::after {
-      transform: scaleX(1); 
+      transform: scaleX(1);
     }
   }
 }
@@ -603,61 +625,71 @@ html {
   @extend .btn-base;
   border: gutter-sp(1) solid $family-yellow;
   color: $family-yellow;
+
   &::after {
-    background-color: $family-yellow; 
+    background-color: $family-yellow;
   }
 
   &:hover,
   &:focus {
     color: $white;
+
     &::after {
-      background-color: $family-yellow; 
+      background-color: $family-yellow;
     }
   }
 }
+
 //image  hover
 .image__item {
   border-radius: gutter-sp(14);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .image__item:hover {
   box-shadow: $value-null gutter-sp(5) gutter-sp(15) $chat-overlay;
-  border-radius:gutter-sp(14);
+  border-radius: gutter-sp(14);
   transform: translateY(gutter-sp(-5));
 }
+
 //backgroundbtn
 // Base styles for .memberbtn
 .memberbtn {
-  background: $secondary-color; 
-  color: $white; 
-  border-radius: gutter-sp(8); 
-  border: gutter-sp(1) solid transparent; 
-  padding: gutter-sp(10) gutter-sp(20); 
+  background: $secondary-color;
+  color: $white;
+  border-radius: gutter-sp(8);
+  border: gutter-sp(1) solid transparent;
+  padding: gutter-sp(10) gutter-sp(20);
 
 }
-.memberbtn:hover{
-  background-color:transparent;
+
+.memberbtn:hover {
+  background-color: transparent;
   color: $secondary-color;
   border: gutter-sp(1) solid $secondary-color;
 }
+
 //primary and secondary and cancel
-.secondarybtn{
-  color:$secondary-color;
-  border:gutter-sp(1) solid $secondary-color;
+.secondarybtn {
+  color: $secondary-color;
+  border: gutter-sp(1) solid $secondary-color;
   background-color: transparent;
+
   &:hover {
-      background-color: $secondary-backgroundhvr; 
-      color: $primary-hover; 
-      border-color: $primary-hover; 
-    }
- 
+    background-color: $secondary-backgroundhvr;
+    color: $primary-hover;
+    border-color: $primary-hover;
+  }
+
 }
+
 .primarybtn {
   color: $white;
   background-color: $secondary-color;
   border: none;
+
   &:hover {
-    background-color: $primary-hover; 
-    box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black; 
-    }
+    background-color: $primary-hover;
+    box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
+  }
 }
