@@ -7,7 +7,10 @@
 
   &__color {
     color: $secondary-color;
-    
+  
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__button {
@@ -41,11 +44,6 @@
 .terms-condition {
   text-decoration: underline;
   color: $form-blue;
-}
-input:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: $form-focus;
 }
 .password-container {
   position: relative;
