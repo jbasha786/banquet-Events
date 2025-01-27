@@ -33,6 +33,7 @@
 
     .custom_btn {
         background: $event-acc-btn-clr;
+        border: gutter-sp(1) solid transparent;
         border-radius: gutter-sp(50);
         border: none;
         color: $black;
@@ -44,6 +45,12 @@
         font-weight: 400;
     }
 
+    .custom_btn:hover {
+        background: transparent;
+        color: $event-acc-btn-clr;
+        border: gutter-sp(1) solid $event-acc-btn-clr;
+    }
+
     .custom_time::-webkit-calendar-picker-indicator {
         opacity: gutter-per(45);
     }
@@ -51,6 +58,7 @@
     .custom_date {
         --mdc-outlined-text-field-outline-color: #{$event-input-border-clr};
         --mdc-outlined-text-field-hover-outline-color: #{$event-input-border-clr};
-        --mdc-outlined-text-field-focus-outline-color: #{$event-input-border-clr};
+        --mdc-outlined-text-field-focus-outline-color: #{$secondary-color};
+        --mdc-outlined-text-field-focus-outline-width: #{gutter-sp(1)};
     }
 }

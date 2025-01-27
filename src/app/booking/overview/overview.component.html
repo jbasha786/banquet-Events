@@ -3,7 +3,7 @@
     <!-- Backbutton & title Section Start -->
     <div class="overview__title">
         <div class="d-flex align-items-center gap-3">
-            <span class="overview__title__back cursor"><mat-icon fontIcon="chevron_left"></mat-icon></span>
+            <span class="overview__title__back cursor" (click)="goToBack()"><mat-icon fontIcon="chevron_left"></mat-icon></span>
             <span class="fs-24 fw-medium">{{ItemDetails?.name}}</span>
         </div>
 
