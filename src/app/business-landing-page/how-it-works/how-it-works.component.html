@@ -4,7 +4,7 @@
 
     <div class="row how-it-works__cards g-4">
         <ng-container *ngFor="let meet of meetingDetails">
-            <div class="col-12 col-lg-4 text-center">
+            <div class="col-12 col-lg-4 text-center image__item cursor">
                 <img [src]="meet.src" [alt]="meet.title">
                 <p class="fs-18 fw-bold pt-20 pb-10 m-0">{{meet.title}}</p>
                 <p class="fs-14 lh-34 mb-0 text">{{meet.text}}</p>

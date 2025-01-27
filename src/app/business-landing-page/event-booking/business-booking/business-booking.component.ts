@@ -38,6 +38,10 @@ export class BusinessBookingComponent {
     this.progressbarWidth = this.defaultProgressSize + "%";
   }
 
+  ngOnInit(): void {
+    this.getSelectedTabIndex();
+  }
+
   returnToHome() {
     this.dialogRef.close();
   }
@@ -48,6 +52,7 @@ export class BusinessBookingComponent {
     }
     if (this.currentStep > 1) {
       this.currentStep--;
+      this.eventBookingService.setSelectedStepNumber(this.currentStep);
     }
     this.updatePage();
   }
@@ -55,6 +60,7 @@ export class BusinessBookingComponent {
   next() {
     if (this.currentStep < this.defaultPages) {
       this.currentStep++;
+      this.eventBookingService.setSelectedStepNumber(this.currentStep);
     }
     this.updatePage();
   }
@@ -64,7 +70,15 @@ export class BusinessBookingComponent {
   }
 
   confirmBooking() {
+    if (this.currentStep === 6) {
+      this.currentStep = 1;
+    }
     this.dialogRef.close();
     this.eventBookingService.clearSelectedServices();
+    this.eventBookingService.setSelectedStepNumber(1);
+  }
+
+  getSelectedTabIndex() {
+    this.currentStep = this.eventBookingService.getSelectedStepNumber();
   }
 }

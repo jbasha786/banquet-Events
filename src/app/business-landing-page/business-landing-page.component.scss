@@ -35,15 +35,50 @@
             padding: gutter-sp(8) gutter-sp(20);
             width: gutter-sp(150);
             height: gutter-sp(40);
+            animation: fadeIn 4s forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        &__btn::after {
+            content: "";
+            position: absolute;
+            top: gutter-per(50);
+            left: gutter-per(50);
+            width: $value-null;
+            height: $value-null;
+            background: transparent;
+            border-radius: gutter-per(50);
+            box-shadow: 0 0 gutter-sp(5) gutter-sp(2) $ratingBackground,
+                0 0 gutter-sp(10) gutter-sp(3) $ratingBackground,
+                0 0 gutter-sp(15) gutter-sp(5) $ratingBackground;
+            transform: translate(gutter-per(-50), gutter-per(-50));
+            opacity: 0;
+            transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+        }
+
+        //hover-change
+        &__btn:hover::after {
+            width: gutter-sp(200);
+            height: gutter-sp(200);
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     }
-    
+
 
     &__itworks {
         padding: gutter-vw(3) gutter-vw(6) gutter-vw(0);
     }
 
-    &__corporate, &__oneControl, &__world-class {
+    &__corporate,
+    &__oneControl,
+    &__world-class {
         padding: gutter-vw(5) gutter-vw(9) gutter-vw(0);
     }
 

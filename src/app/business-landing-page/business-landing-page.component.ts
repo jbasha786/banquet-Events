@@ -6,6 +6,7 @@ import { OneControlComponent } from './one-control/one-control.component';
 import { CorporateComponent } from './corporate/corporate.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { BusinessBookingComponent } from './event-booking/business-booking/business-booking.component';
+import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
 
 @Component({
   selector: 'app-business-landing-page',
@@ -21,7 +22,13 @@ import { BusinessBookingComponent } from './event-booking/business-booking/busin
 })
 export class BusinessLandingPageComponent {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog,
+    private eventBookingService: EventBookingService
+  ) { }
+
+  ngOnInit(): void {
+    this.getOverviewPageStatus();
+  }
 
   bookEvents(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BusinessBookingComponent, {
@@ -34,4 +41,13 @@ export class BusinessLandingPageComponent {
       disableClose: true
     });
   }
+
+  getOverviewPageStatus() {
+    this.eventBookingService.getOverviewPage().subscribe(data => {
+      if (data) {
+        this.bookEvents('300ms', '300ms');
+      }
+    });
+  }
+
 }

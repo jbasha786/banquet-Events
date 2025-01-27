@@ -14,6 +14,7 @@ import { BannerModel } from './Models/banner.model';
 import { ChatComponent } from '../chat/chat.component';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
+import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -70,13 +71,15 @@ export class DashboardComponent {
 
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
-    private defaultService: DefaultService
+    private defaultService: DefaultService,
+    private eventBookingService: EventBookingService
   ) {
   }
 
   ngOnInit() {
     this.scrollToTop();
     this.getInitialData();
+    this.getOverviewPageStatus();
   }
 
   getInitialData() {
@@ -148,6 +151,14 @@ export class DashboardComponent {
         break
     }
     return redirectComponent;
+  }
+
+  getOverviewPageStatus() {
+    this.eventBookingService.getOverviewPage().subscribe(data => {
+      if (data) {
+        this.continueBooking('300ms', '300ms');
+      }
+    });
   }
 
 }
