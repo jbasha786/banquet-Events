@@ -23,10 +23,22 @@ html {
   scroll-behavior: smooth;
 }
 
+// material theme update
+.mat-toolbar.mat-primary {
+  --mat-toolbar-container-background-color: #{$secondary-color} !important;
+}
+
+.mat-mdc-mini-fab.mat-primary {
+  --mdc-fab-small-container-color : #{$secondary-color} !important;
+}
+
+.mat-mdc-button.mat-primary {
+  --mdc-text-button-label-text-color: #{$secondary-color} !important;
+}
+
 body {
   color: $font-clr !important;
   font-family: 'Poppins', sans-serif !important;
-  --mat-dialog-container-small-max-width: gutter-vw(90);
 }
 
 .cursor {
@@ -725,4 +737,29 @@ select.form-control:focus {
   outline: none;
   box-shadow: none;
   border-color: $secondary-color;
+}
+
+
+@media screen and (max-width: 375px) {
+  ngx-mat-timepicker-face .clock-face {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__number--outer {
+    height: gutter-sp(100) !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__number {
+    top: calc(gutter-per(50) - gutter-sp(100)) !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__clock-hand_minute>button {
+    top: gutter-sp(-15) !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__clock-hand {
+    height: gutter-sp(85) !important;
+    top: calc(gutter-per(50) - gutter-sp(85)) !important;
+  }
 }
