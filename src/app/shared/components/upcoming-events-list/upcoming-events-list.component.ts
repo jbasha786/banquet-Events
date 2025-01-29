@@ -13,18 +13,6 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 export class UpcomingEventsListComponent {
 
   promotionsInfo: any;
-  customOptionsforPromotionsInfo: OwlOptions = {
-    loop: true,
-    dots: false,
-    nav: false,
-    center: false,
-    slideTransition: 'linear',
-    items: 4,
-    margin: 20,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
-
   constructor(private defaultService: DefaultService) {
     this.getInitialData();
   }

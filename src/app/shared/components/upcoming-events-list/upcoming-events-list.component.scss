@@ -17,18 +17,24 @@ $animationSpeed: 40s;
             display: flex;
             width: calc(250px *10);
 
+            &:hover {
+                animation-play-state: paused;
+              }
+
             .item {
                 display: flex;
                 align-items: center;
                 padding: gutter-sp(12) gutter-sp(16) gutter-sp(80);
 
             }
+
             img:hover {
                 box-shadow: gutter-sp(0) gutter-sp(1) gutter-sp(12) gutter-sp(0) $promotionshadow;
                 border-radius: gutter-sp(14);
-                filter:grayscale(100)
-              }
+                filter: grayscale(100)
+            }
         }
+
     }
 
     @keyframes promotions {
@@ -37,7 +43,7 @@ $animationSpeed: 40s;
         }
 
         100% {
-            transform: translateX(calc(-250px * 3));
+            transform: translateX(calc(-250px * 5));
         }
     }
 }
