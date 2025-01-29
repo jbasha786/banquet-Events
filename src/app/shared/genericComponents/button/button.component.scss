@@ -105,6 +105,12 @@
     }
 }
 
+.sideTransitionButtonArticle {
+    @extend .sideTransitionButton;
+    width: gutter-per(100);
+    font-weight: 500;
+}
+
 .basicButton {
     background: $secondary-color;
     color: $white;
@@ -117,4 +123,30 @@
     background-color: transparent;
     color: $secondary-color;
     border: gutter-sp(1) solid $secondary-color;
+}
+
+.gradientButton {
+    @extend .basicButton;
+    background: linear-gradient(90.69deg, $rev-gradient-clr1 gutter-per(0.85), $rev-gradient-clr2 gutter-per(100.99));
+    width: gutter-per(100);
+    font-weight: bold;
+    font-size: gutter-sp(20);
+    padding: gutter-sp(15);
+
+    &:hover {
+        background: $white;
+    }
+}
+
+.gradientButtonReserve {
+    @extend .basicButton;
+    background: linear-gradient(90.69deg, $rev-gradient-clr1 0.85%, $rev-gradient-clr2 100.99%);
+    width: gutter-per(100);
+    font-weight: bold;
+    font-size: gutter-sp(20);
+    padding: gutter-sp(5);
+
+    &:hover {
+        background: $guest-background-clr;
+    }
 }

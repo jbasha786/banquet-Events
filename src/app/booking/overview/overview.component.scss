@@ -76,19 +76,6 @@
                 background-color: $guest-background-clr;
                 border-radius: gutter-sp(10);
 
-                &__reverse {
-                    background: linear-gradient(90.69deg, $rev-gradient-clr1 0.85%, $rev-gradient-clr2 100.99%);
-                    border-radius: gutter-sp(5);
-                    padding: gutter-sp(5);
-                    color: $white;
-                    border: gutter-sp(1) solid transparent;
-                }
-                &__reverse:hover {
-                    color: $secondary-color;
-                    background: transparent;
-                    border: gutter-sp(1) solid $secondary-color;
-                }
-
                 .dateSection {
                     border-radius: gutter-rem(0.375);
 
@@ -172,6 +159,10 @@
 
                 .userImage {
                     width: gutter-per(60);
+                }
+
+                .editArticle {
+                    flex: 1;
                 }
             }
         }
