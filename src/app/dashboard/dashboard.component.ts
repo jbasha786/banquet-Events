@@ -15,6 +15,7 @@ import { ChatComponent } from '../chat/chat.component';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
+import { ButtonComponent } from '../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -30,7 +31,8 @@ import { EventBookingService } from '../services/event-hall-booking/event-bookin
     MatNativeDateModule,
     MatDialogModule,
     CommonModule,
-    CarouselModule],
+    CarouselModule,
+    ButtonComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -117,7 +119,6 @@ export class DashboardComponent {
       width: '100vw',
       height: '100vh',
       maxWidth: '100vw',
-
       panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
@@ -125,8 +126,8 @@ export class DashboardComponent {
     });
   }
 
-  goToSignUp() {
-    this.router.navigate(['signUp']);
+  navigateUrl(urlName: string) {
+    this.router.navigate([urlName]);
   }
 
   readMore(personalInfo: any) {

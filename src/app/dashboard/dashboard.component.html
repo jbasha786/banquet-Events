@@ -13,9 +13,7 @@
       </p>
       <p></p>
       <div>
-        <button class="banner__image__content__btn fs-20 fw-bold" (click)="continueBooking('300ms', '300ms')">
-          {{ bannerInfo.buttonName }}
-        </button>
+        <app-button [btnClass]="'bannerActionButton'" [btnName]="bannerInfo.buttonName" (bannerActionEvent)="continueBooking('300ms', '300ms')"></app-button>
       </div>
     </div>
     <div
@@ -177,9 +175,7 @@
         Not a member yet? Join now to receive member exclusive rates, earn
         points towards free nights and many more.
       </p>
-      <button class="memberbtn" [routerLink]="'/signUp'">
-        join for free <span class="ml-5"></span>
-      </button>
+      <app-button [btnClass]="'basicButton'" [btnName]="'Join for free'" (bannerActionEvent)="navigateUrl('signUp')"></app-button>
     </div>
     <div class="col-12 col-lg-6 memberSection__image">
       <img src="/assets/images/member/member.svg" alt="member" />
