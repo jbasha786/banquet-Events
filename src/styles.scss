@@ -23,10 +23,22 @@ html {
   scroll-behavior: smooth;
 }
 
+// material theme update
+.mat-toolbar.mat-primary {
+  --mat-toolbar-container-background-color: #{$secondary-color} !important;
+}
+
+.mat-mdc-mini-fab.mat-primary {
+  --mdc-fab-small-container-color : #{$secondary-color} !important;
+}
+
+.mat-mdc-button.mat-primary {
+  --mdc-text-button-label-text-color: #{$secondary-color} !important;
+}
+
 body {
   color: $font-clr !important;
   font-family: 'Poppins', sans-serif !important;
-  --mat-dialog-container-small-max-width: gutter-vw(90);
 }
 
 .cursor {
@@ -620,6 +632,14 @@ html {
   @extend .btn-base;
 }
 
+.editArticle {
+  @extend .btn-base;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
 
 .familybtn {
   @extend .btn-base;
@@ -693,20 +713,37 @@ html {
     box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
   }
 }
+
 //input select focus
 input.form-control:focus,
 textarea.form-control:focus,
 select.form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: $form-focus;
-  box-shadow: $value-null $value-null gutter-sp(5) $shadow-black;
+  border-color: $secondary-color;
+}
+
+.form-control.custom_input,
+.form-control.custom_select {
+  border: gutter-sp(1) solid $event-input-border-clr;
+  box-shadow: none;
+  font-size: gutter-sp(14);
+  height: gutter-sp(50);
+  border-radius: gutter-sp(6);
+}
+
+.form-control.custom_input:focus,
+.form-control.custom_select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: $secondary-color;
 }
 //scroll design
 ::-webkit-scrollbar-track {
   background-color: $white;
   border-radius: gutter-sp(10);
 }
+
 
 
 ::-webkit-scrollbar {
@@ -732,3 +769,29 @@ select.form-control:focus {
   scrollbar-color: $secondary-color $white;
   scrollbar-width: thin;
 }
+
+
+@media screen and (max-width: 375px) {
+  ngx-mat-timepicker-face .clock-face {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__number--outer {
+    height: gutter-sp(100) !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__number {
+    top: calc(gutter-per(50) - gutter-sp(100)) !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__clock-hand_minute>button {
+    top: gutter-sp(-15) !important;
+  }
+
+  ngx-mat-timepicker-face .clock-face__clock-hand {
+    height: gutter-sp(85) !important;
+    top: calc(gutter-per(50) - gutter-sp(85)) !important;
+  }
+}
+

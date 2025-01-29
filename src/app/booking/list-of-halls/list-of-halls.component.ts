@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -35,6 +35,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ListOfHallsComponent {
   @Output() buttonChangeEvent = new EventEmitter<string>();
+  @Input() view: string = '';
   buttonNext: string = 'Next';
   hallsList: any;
   reserveBtn: boolean = true;
@@ -97,7 +98,7 @@ export class ListOfHallsComponent {
 
   getDetails() {
     this.dialog.closeAll();
-    this.router.navigate(['overview']);
+    this.router.navigate(['overview'], { queryParams: { name: this.view } });
   }
 
   getGuestDetails() {
@@ -140,11 +141,11 @@ export class ListOfHallsComponent {
   }
   toggleSelection(item: any) {
     item.isActive = !item.isActive;
-  
+
     if (item.isActive) {
-      this.selectedItem = item.id; 
+      this.selectedItem = item.id;
     } else {
-      this.selectedItem = 0; 
+      this.selectedItem = 0;
     }
   }
 

@@ -24,21 +24,6 @@
         opacity: gutter-per(75);
     }
 
-    .custom_input:focus,
-    .custom_select:focus {
-        border: gutter-sp(1) solid $event-input-border-clr;
-        box-shadow: none;
-    }
-
-    .custom_input,
-    .custom_select {
-        border: gutter-sp(1) solid $event-input-border-clr;
-        box-shadow: none;
-        font-size: gutter-sp(14);
-        height: gutter-sp(50);
-        border-radius: gutter-sp(6);
-    }
-
     .custom_input::placeholder,
     .custom_time::placeholder {
         opacity: gutter-per(45);
@@ -48,6 +33,7 @@
 
     .custom_btn {
         background: $event-acc-btn-clr;
+        border: gutter-sp(1) solid transparent;
         border-radius: gutter-sp(50);
         border: none;
         color: $black;
@@ -59,6 +45,12 @@
         font-weight: 400;
     }
 
+    .custom_btn:hover {
+        background: transparent;
+        color: $event-acc-btn-clr;
+        border: gutter-sp(1) solid $event-acc-btn-clr;
+    }
+
     .custom_time::-webkit-calendar-picker-indicator {
         opacity: gutter-per(45);
     }
@@ -66,6 +58,7 @@
     .custom_date {
         --mdc-outlined-text-field-outline-color: #{$event-input-border-clr};
         --mdc-outlined-text-field-hover-outline-color: #{$event-input-border-clr};
-        --mdc-outlined-text-field-focus-outline-color: #{$event-input-border-clr};
+        --mdc-outlined-text-field-focus-outline-color: #{$secondary-color};
+        --mdc-outlined-text-field-focus-outline-width: #{gutter-sp(1)};
     }
 }

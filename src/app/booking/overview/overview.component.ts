@@ -14,6 +14,8 @@ import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { MatInputModule } from '@angular/material/input';
 import { HostDetailsComponent } from './host-details/host-details.component';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { EventBookingService } from '../../services/event-hall-booking/event-booking.service';
 
 @Component({
   selector: 'app-overview',
@@ -46,6 +48,7 @@ export class OverviewComponent {
   checkinDate: string | null;
   checkOutDate: string | null;
   tomorrowDate = new Date();
+  routerName: any;
   slots = [
     { id: 1, shift: "8AM - 11 PM" },
     { id: 2, shift: "12AM - 3 PM" },
@@ -53,7 +56,10 @@ export class OverviewComponent {
     { id: 4, shift: "8AM - 11 PM" },
   ]
   constructor(private defaultService: DefaultService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private activatedRoute: ActivatedRoute,
+    private route: Router,
+    private eventBookingService: EventBookingService
   ) {
     this.checkinDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
     this.checkOutDate = this.datePipe.transform(this.tomorrowDate.setDate(new Date().getDate() + 1), 'yyyy-MM-dd');
@@ -61,6 +67,7 @@ export class OverviewComponent {
 
   ngOnInit(): void {
     this.getInitialData();
+    this.routerName = this.activatedRoute.snapshot.queryParamMap.get('name');
   }
 
   getInitialData() {
@@ -71,6 +78,10 @@ export class OverviewComponent {
     })
   };
 
+  goToBack() {
+    this.eventBookingService.setOverviewPage(true);
+    this.route.navigate([this.routerName]);
+  }
 
 
 }
