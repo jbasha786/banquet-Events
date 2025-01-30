@@ -42,6 +42,28 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        .hallName{
+            color: $black;
+        }
+        .hallName:hover{
+            color: $secondary-color;
+        }
+        .halldetails .arrow {
+            opacity: 0;
+            transform: translateX(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            margin-left: gutter-sp(2);
+        }
+        
+        //hover-change
+        .halldetails:hover .arrow {
+            opacity: 1;
+            transform: translateX(gutter-sp(8));
+            color: $secondary-color ;
+        }
+        .view:hover {
+            color: $secondary-color;
+        }
     }
 
     &__card {
@@ -89,6 +111,7 @@
                 background: $white;
                 border: none;
                 padding: gutter-rem(0.375) gutter-rem(0);
+
                 img {
                     width: gutter-sp(30);
                     height: gutter-sp(30);
@@ -197,8 +220,14 @@
     .cancel {
         background-color: $white;
         color: $cancelcolor;
-        border: gutter-sp(1) solid $cancel-btn-border ;
+        border: gutter-sp(1) solid $cancelcolor ;
         padding: gutter-sp(9) gutter-sp(33);
+    }
+
+    .cancel:hover {
+        background-color: $cancelhover;
+        color: $cancelcolor;
+        border-color: $cancelcolor;
     }
 
     .selected {

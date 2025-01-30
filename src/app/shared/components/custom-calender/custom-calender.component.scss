@@ -28,6 +28,22 @@
     justify-content: center;
   }
 
+  .rightchevron {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+
+  .rightchevron:hover {
+    filter: drop-shadow(gutter-sp(2) gutter-sp(2) gutter-sp(5) $cal-view-title-clr);
+  }
+
+  .gobackicon {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+
+  .gobackicon:hover {
+    filter: drop-shadow(gutter-sp(2) gutter-sp(2) gutter-sp(5) $cal-view-title-clr);
+  }
+
   .btnmain {
     border: none;
     background: none;

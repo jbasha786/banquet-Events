@@ -25,6 +25,7 @@ constructor(private zIndexService: ZindexService,
     const dialogRef =  this.dialog.open(MenuComponent, {
       width: '700px',
       panelClass: 'fixed-dialog',
+      autoFocus: false,
     });
     dialogRef.afterClosed().subscribe(() => {
       this.zIndexService.setHeaderZIndex(1030);

@@ -23,10 +23,17 @@
     }
 
     .btn_cancel {
-        background: $cancel-color-pink;
+        color: $cancelcolor;
+        border: gutter-sp(1) solid $cancelcolor;
         font-size: gutter-sp(19);
         height: gutter-sp(40);
         font-weight: 500;
+    }
+
+    .btn_cancel:hover {
+        background-color: $cancelhover;
+        color: $cancelcolor;
+        border-color: $cancelcolor;
     }
 
     .btn_back {
@@ -35,6 +42,17 @@
         font-size: gutter-sp(19);
         height: gutter-sp(40);
         font-weight: 500;
+    }
+
+    .btn_back:hover {
+        background-color: $secondary-backgroundhvr;
+        color: $primary-hover;
+        border-color: $primary-hover;
+    }
+
+    .btn_next:hover {
+        background-color: $primary-hover;
+        box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $nexthovershadow;
     }
 
     .btn_next {

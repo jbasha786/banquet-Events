@@ -69,7 +69,7 @@
                 <div class="col-12 col-md-12 col-lg-8 col-xl-8 imgDesc gap-lg-2">
                     <div class="d-flex flex-column gap-2 gap-xl-3">
                         <div>
-                            <span class="fs-20 fs-md-22 fs-lg-26 fw-500 text-black lh-1" role="button"
+                            <span class="fs-20 fs-md-22 fs-lg-26 fw-500 lh-1 hallName" role="button"
                                 (click)="getDetails()">{{item.name}}</span>
                             <div
                                 class="d-flex flex-column align-items-start align-items-lg-center flex-md-row gap-2 gap-lg-3">
@@ -93,12 +93,11 @@
                             <span class="fs-36 fw-bold hallsView__priceColor my-0 lh-35 mt-3">{{item.price}}</span><span
                                 class="fontcolor fs-12">{{item.taxText}}</span>
                         </div>
-                        <div
-                            class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
+                        <div class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
                             <div class="d-flex flex-column-reverse flex-md-row align-items-center  flex-row gap-2">
                                 <button class="selected selectBtn fw-500 fs-14 rounded-pill"
                                     *ngIf="item.isActive" (click)="toggleSelection(item)">Selected</button>
-                                <button class="reserve selectBtn border fs-14 rounded-pill "
+                                <button class="reserve selectBtn fs-14 rounded-pill "
                                     *ngIf="item.id !== selectedItem && !item.isActive"
                                     (click)="reserve(item)" (click)="toggleSelection(item)">Select</button>
                                 <div class="d-flex gap-2 my-3 my-md-0">

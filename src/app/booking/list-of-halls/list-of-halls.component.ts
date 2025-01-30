@@ -122,6 +122,7 @@ export class ListOfHallsComponent {
     const dialogRef = this.dialog.open(ArticlesComponent, {
       panelClass: 'fixed-dialog',
       position: { top: '75px' },
+      autoFocus: false,
     });
 
     dialogRef.afterClosed().subscribe(() => {
