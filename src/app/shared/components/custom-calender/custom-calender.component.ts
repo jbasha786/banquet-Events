@@ -83,12 +83,11 @@ export class CustomCalenderComponent {
     const dayName = dayNames[date.getDay()];
   }
   generateDatesWithWeekdays(year: number): void {
-    let cmonth: number = new Date().getMonth();
-    const daysInMonth = new Date(year, cmonth + 1, 0).getDate();
+    const currentMonth = this.currentDate.getMonth();
+    const daysInMonth = new Date(year, currentMonth + 1, 0).getDate();
     this.datesWithWeekdays = [];
-
     for (let day = 1; day <= daysInMonth; day++) {
-      const date = new Date(year, cmonth, day);
+      const date = new Date(year, currentMonth, day);
       const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
       this.datesWithWeekdays.push({ date: date.toDateString(), weekday });
     }
@@ -108,16 +107,17 @@ export class CustomCalenderComponent {
   changeMonth(offset: number) {
     this.currentDate.setMonth(this.currentDate.getMonth() + offset);
     this.currentYear = this.currentDate.getFullYear();
-    this.generateMonthData();
+    this.generateMonthData(); 
+    this.generateDatesWithWeekdays(this.currentYear); 
     this.currentIndex = 0;
-    this.visibleDates = this.datesWithWeekdays.slice(0, this.visibleRange);
+    this.updateVisibleDates();
   }
   selectDate(selectedDate: string) {
     alert(`Selected Date: ${selectedDate}`);
   }
   scrollDates(step: number): void {
     const nextIndex = this.currentIndex + step;
-    const daysInMon = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 0).getDate(); // Number of days in the month
+    const daysInMon = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 0).getDate();
     if (nextIndex >= 0 && nextIndex <= daysInMon - this.visibleRange) {
       this.currentIndex = nextIndex;
       this.updateVisibleDates();

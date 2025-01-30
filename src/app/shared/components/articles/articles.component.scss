@@ -4,22 +4,25 @@
     .table {
         overflow: auto;
     }
+
     .table::-webkit-scrollbar {
         width: gutter-sp(5);
         height: gutter-sp(5);
     }
-   
+
     .table::-webkit-scrollbar-thumb {
         border-radius: gutter-sp(6);
         background-color: $lite-white;
     }
-   
+
     .table::-webkit-scrollbar-track {
         background: $white-lite;
     }
-    .color{
+
+    .color {
         color: $black;
     }
+
     .iconclose {
         font-size: gutter-sp(30);
     }
@@ -39,6 +42,20 @@
             font-size: gutter-sp(12);
             width: gutter-per(100);
         }
+        &__search-input::placeholder{
+            color: $searchPholder;
+            font-weight: 300;
+        }
+
+        &__search-input:focus-within {
+            border-radius: gutter-sp(4);
+            border-color: $secondary-color;
+            box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+            background-color: $gray;
+            min-height: gutter-sp(30);
+            font-size: gutter-sp(12);
+            width: gutter-per(100);
+        }
 
         input:focus,
         textarea:focus,
@@ -50,6 +67,7 @@
             position: absolute;
             left: gutter-sp(6);
             top: gutter-sp(8);
+            color: $searchPholder;
         }
     }
 
@@ -59,14 +77,19 @@
         overflow: auto;
         box-shadow: none;
     }
-    .tableArticle .quantity{
+
+    .tableArticle .quantity {
+
         &::-webkit-inner-spin-button,
         &::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: gutter-sp(0);
+            -webkit-appearance: none;
+            margin: gutter-sp(0);
         }
+
         border: gutter-sp(1) solid $black;
         height: gutter-sp(26);
+        border-radius: gutter-sp(4);
+        color: $lite-black;
     }
 
     .mat-mdc-cell {
@@ -81,6 +104,12 @@
     &__save-btn {
         background-color: $secondary-color;
         color: $lite-white;
+    }
+
+    .custom-search {
+        border: gutter-sp(2) solid $admin-search;
+        overflow: hidden;
+        background-color: transparent;
     }
 
 }

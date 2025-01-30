@@ -50,7 +50,7 @@ export class MenuComponent {
   }
 
   updateQty(item: any, event: any) {
-    item.qty = event.data;
+    item.qty = event.target.value;
   }
 
   isAllSelected(selection: SelectionModel<any>, dataSource: MatTableDataSource<any>) {
@@ -78,7 +78,7 @@ export class MenuComponent {
   closeDialog() {
     this.dialogRef.close();
   }
- 
+
   onSave(): void {
     this.dialogRef.close();
   }

@@ -24,7 +24,7 @@
             cursor: pointer;
 
             .active {
-                background-color: $active-list-bg-clr;
+                background-color: transparent;
                 border: gutter-sp(1) solid $secondary-color;
             }
         }
@@ -36,6 +36,7 @@
 
         &__section:hover {
             border-color: $secondary-color;
+            background-color: $active-list-bg-clr;
             cursor: pointer;
         }
 
