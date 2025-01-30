@@ -57,20 +57,16 @@
     }
 
     .pdfView {
-        background-image: url('/assets/images/BookingHistory/pdf.svg'); 
+        background-image: url('/assets/images/BookingHistory/pdf.svg');
         width: gutter-sp(30);
         background-size: gutter-per(60);
         background-position: center;
         background-repeat: no-repeat;
         padding: gutter-sp(4);
-    }
-    .pdfView:hover{
-        background-image: url('/assets/images/BookingHistory/pdf-clr.svg'); 
-        width: gutter-sp(30);
-        background-size: gutter-per(60);
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: gutter-sp(4);
+
+        &:hover {
+            background-image: url('/assets/images/BookingHistory/pdf-clr.svg');
+        }
     }
 
     .booking_status {
