@@ -24,7 +24,7 @@
             cursor: pointer;
 
             .active {
-                background-color: transparent;
+                background-color: $active-list-bg-clr;
                 border: gutter-sp(1) solid $secondary-color;
             }
         }

@@ -7,7 +7,7 @@
             <p class="lh-28 fs-14 m-0">Get in touch with us to give your employees and channel partners </p>
             <p class="lh-28 fs-14 m-0">a delightful experience will take care of end-to-end</p>
             <p class="lh-28 fs-14 m-0">management of all your official events</p>
-            <button class="banner-content__btn fw-bold fs-16" (click)="bookEvents('300ms', '300ms')">Book Now</button>
+             <app-button [btnClass]="'businessBannerActionButton'" [btnName]="'Book Now'" (bannerActionEvent)="bookEvents('300ms', '300ms')"></app-button>
         </div>
     </div>
 

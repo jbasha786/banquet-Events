@@ -10,7 +10,9 @@
                 <div class="eventInfo">
                     <div class="d-flex justify-content-between">
                         <p class="fw-medium text-decoration-underline m-0" >Event Detail</p>
-                        <img src="../../../../assets/images/icons/edit_icon.svg" alt="edit">
+                        <div class="edit">
+                            <img class="icon" src="../../../../assets/images/icons/edit_icon.svg" alt="edit">
+                        </div>
                     </div>
                     <ng-container *ngFor="let item of eventInfo">
                         <p class="m-0 mb-1 fs-14">
@@ -23,7 +25,9 @@
                 <div class="articleInfo pt-20">
                     <div class="d-flex justify-content-between">
                         <p class="fw-medium text-decoration-underline m-0" >Article Details</p>
-                        <img src="../../../../assets/images/icons/edit_icon.svg" alt="edit">
+                        <div class="edit">
+                            <img class="icon" src="../../../../assets/images/icons/edit_icon.svg" alt="edit">
+                        </div>
                     </div>
                     <ng-container *ngFor="let item of articleInfo">
                         <p class="m-0 mb-1 fs-14">
@@ -36,7 +40,9 @@
                 <div class="menuDetails pt-20">
                     <div class="d-flex justify-content-between">
                         <p class="fw-medium text-decoration-underline m-0" >Menu Details</p>
-                        <img src="../../../../assets/images/icons/edit_icon.svg" alt="edit">
+                        <div class="edit">
+                            <img class="icon" src="../../../../assets/images/icons/edit_icon.svg" alt="edit">
+                        </div>
                     </div>
                     <ng-container *ngFor="let item of articleInfo">
                         <p class="m-0 mb-1 fs-14">
@@ -44,7 +50,6 @@
                             <span class="ml-10">{{item.value}}</span>
                         </p>
                     </ng-container>
-
                 </div>
             </div>
         </div>
