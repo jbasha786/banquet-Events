@@ -16,15 +16,22 @@
     align-items: center;
   }
 
-  .search .form-control:focus {
-    box-shadow: none;
-    border: gutter-sp(1) solid $black;
+  .search_input:focus-within {
+    border-color: $secondary-color;
+    box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+    background-color: $gray;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
   }
 
   .btn_search {
     position: absolute;
     left: gutter-sp(4);
-    background-color: $white;
+    background-color: inherit;
   }
 
   .tab-main {
@@ -33,10 +40,6 @@
 
   .search_input {
     max-width: guttre-per(100);
-  }
-
-  .search_input::placeholder {
-    color: $black;
   }
 
   .tabTitle .mat-ink-bar {
@@ -69,7 +72,7 @@
   }
 
   ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
-    color: $black;
+    color: $secondary-color;
     font-weight: 500;
   }
 
@@ -81,7 +84,7 @@
   @media (min-width: 320px) and (max-width: 767px) {
     .search {
       top: gutter-sp(80);
-      right: gutter-sp(0);
+      right: gutter-sp(4);
     }
 
     .tabTitle ::ng-deep .mdc-tab__text-label {
@@ -92,7 +95,15 @@
   @media (min-width: 768px) and (max-width: 940px) {
     .search {
       top: gutter-sp(80);
-      right: gutter-sp(0);
+      right: gutter-sp(3);
     }
+  }
+
+  ::ng-deep .mdc-tab__content:hover {
+    background: $white;
+  }
+
+  ::ng-deep .mat-mdc-tab .mdc-tab__text-label:hover {
+    color: $secondary-color;
   }
 }

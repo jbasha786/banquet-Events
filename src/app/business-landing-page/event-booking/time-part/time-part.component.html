@@ -20,7 +20,7 @@
                     </div>
                     <span (click)="editTimePart(item)" class="edit mt-10 mt-md-0 cursor"
                         [ngClass]="item.isActive && item.id === selectedItemId ? '' : 'd-none'"><img [src]="item.src"
-                            [alt]="item.location"></span>
+                            [alt]="item.location" class="icon"></span>
                 </div>
             </div>
             }
@@ -28,7 +28,7 @@
     </div>
 
     <div class="d-flex gap-4 justify-content-end mt-10">
-        <button class="footer_btn_skip fs-16 fw-medium" (click)="close()">SKIP</button>
-        <button class="footer_btn fs-16 fw-medium" (click)="close()">SAVE</button>
+        <app-button [btnClass]="'basicButtonforSkip'" [btnName]="'SKIP'" (bannerActionEvent)="close()"></app-button>
+        <app-button [btnClass]="'basicButtonforSave'" [btnName]="'SAVE'" (bannerActionEvent)="close()"></app-button>
     </div>
 </div>

@@ -7,6 +7,8 @@ import { CorporateComponent } from './corporate/corporate.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { BusinessBookingComponent } from './event-booking/business-booking/business-booking.component';
 import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
+import { ButtonComponent } from '../shared/genericComponents/button/button.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-business-landing-page',
@@ -16,7 +18,9 @@ import { EventBookingService } from '../services/event-hall-booking/event-bookin
     WorldClassComponent,
     OneControlComponent,
     CorporateComponent,
-    MatDialogModule],
+    MatDialogModule,
+    ButtonComponent,
+    CommonModule],
   templateUrl: './business-landing-page.component.html',
   styleUrl: './business-landing-page.component.scss'
 })

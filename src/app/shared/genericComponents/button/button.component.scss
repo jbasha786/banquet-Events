@@ -48,6 +48,13 @@
     }
 }
 
+.businessBannerActionButton {
+    @extend .bannerActionButton;
+    padding: gutter-sp(8) gutter-sp(20);
+    font-size: gutter-sp(16);
+    width: gutter-sp(150);
+    height: gutter-sp(40);
+}
 
 
 // side transition Button CSS
@@ -105,6 +112,12 @@
     }
 }
 
+.sideTransitionButtonArticle {
+    @extend .sideTransitionButton;
+    width: gutter-per(100);
+    font-weight: 500;
+}
+
 .basicButton {
     background: $secondary-color;
     color: $white;
@@ -118,6 +131,7 @@
     color: $secondary-color;
     border: gutter-sp(1) solid $secondary-color;
 }
+
 //live
 .dot {
     height: gutter-sp(8);
@@ -322,4 +336,134 @@
 }
   
 
+
+
+
+.basicButtonforSkip {
+    color: $secondary-color;
+    background: $white;
+    border: gutter-sp(1) solid $secondary-color;
+    width: gutter-sp(120);
+    padding: gutter-sp(10);
+    border-radius: gutter-sp(50);
+    font-size: gutter-sp(16);
+}
+
+.basicButtonforSkip:hover {
+    color: $white;
+    background: $secondary-color;
+    border: gutter-sp(1) solid $secondary-color;
+}
+
+.basicButtonforSave {
+    color: $white;
+    background: $secondary-color;
+    border: gutter-sp(1) solid $secondary-color;
+    width: gutter-sp(120);
+    padding: gutter-sp(10);
+    border-radius: gutter-sp(50);
+    font-size: gutter-sp(16);
+}
+
+.basicButtonforSave:hover {
+    color: $secondary-color;
+    background: $white;
+    border: gutter-sp(1) solid $secondary-color;
+}
+
+
+.gradientButton {
+    @extend .basicButton;
+    background: linear-gradient(90.69deg, $rev-gradient-clr1 gutter-per(0.85), $rev-gradient-clr2 gutter-per(100.99));
+    width: gutter-per(100);
+    font-weight: bold;
+    font-size: gutter-sp(20);
+    padding: gutter-sp(15);
+
+    &:hover {
+        background: linear-gradient(90.69deg, $rev-gradient-clr2 gutter-per(0.85), $rev-gradient-clr1 gutter-per(100.99));
+        box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
+        color: $white;
+    }
+}
+
+.gradientButtonReserve {
+    @extend .basicButton;
+    background: linear-gradient(90.69deg, $rev-gradient-clr1 0.85%, $rev-gradient-clr2 100.99%);
+    width: gutter-per(100);
+    font-weight: bold;
+    font-size: gutter-sp(20);
+    padding: gutter-sp(5);
+
+    &:hover {
+        background: linear-gradient(90.69deg, $rev-gradient-clr2 0.85%, $rev-gradient-clr1 100.99%);
+        box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
+        color: $white;
+    }
+}
+
+
+.buttonforTimepart {
+    background: $event-acc-btn-clr;
+    border: gutter-sp(1) solid transparent;
+    border-radius: gutter-sp(50);
+    color: $black;
+    padding: gutter-sp(8) gutter-sp(0);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: gutter-sp(56);
+    width: gutter-per(100);
+    font-weight: 400;
+    font-size: gutter-sp(16);
+}
+
+.buttonforTimepart:hover {
+    background: transparent;
+    color: $event-acc-btn-clr;
+    border: gutter-sp(1) solid $event-acc-btn-clr;
+}
+
+.buttonCancel {
+    color: $cancelcolor;
+    border: gutter-sp(1) solid $cancelcolor;
+    font-size: gutter-sp(19);
+    height: gutter-sp(40);
+    font-weight: 500;
+    background: transparent;
+}
+
+.buttonCancel:hover {
+    background-color: $cancelhover;
+    color: $cancelcolor;
+    border-color: $cancelcolor;
+}
+
+.buttonBack {
+    color: $secondary-color;
+    border: gutter-sp(1) solid $secondary-color;
+    font-size: gutter-sp(19);
+    height: gutter-sp(40);
+    font-weight: 500;
+    background: transparent;
+}
+
+.buttonBack:hover {
+    background-color: $secondary-backgroundhvr;
+    color: $primary-hover;
+    border-color: $primary-hover;
+}
+
+.buttonNext:hover {
+    background-color: $primary-hover;
+    box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $nexthovershadow;
+}
+
+.buttonNext {
+    color: $white;
+    background: $secondary-color;
+    font-size: gutter-sp(19);
+    height: gutter-sp(40);
+    font-weight: 500;
+}
 

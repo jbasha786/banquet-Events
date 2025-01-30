@@ -15,6 +15,10 @@
   border-radius: gutter-vw(50);
   width: gutter-sp(100);
   color: $white;
+  &:hover{
+     background: linear-gradient(90deg, $btn-no-grdright gutter-per(0), $btn-no-grdleft gutter-per(100));
+      box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow; 
+  }     
 }
 .buttons .buttons__yes {
   height: gutter-sp(42);
@@ -23,6 +27,10 @@
   width: gutter-sp(100);
   background: linear-gradient(90deg, $btn-yes-grdleft gutter-per(0), $secondary-color gutter-per(100));
   color: $white;
+  &:hover {
+    background: linear-gradient(90deg, $secondary-color gutter-per(0), $btn-yes-grdleft gutter-per(100)); 
+    box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow; 
+  }
 }
 .dialogue-heading {
     color: $dialogue-heading;
