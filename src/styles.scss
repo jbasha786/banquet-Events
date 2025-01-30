@@ -715,6 +715,11 @@ html {
 }
 
 //input select focus
+input::-ms-reveal,
+input::-ms-clear {
+  display: none ;
+}
+
 input.form-control:focus,
 textarea.form-control:focus,
 select.form-control:focus {
