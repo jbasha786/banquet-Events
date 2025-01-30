@@ -11,7 +11,7 @@
             <app-about-event *ngSwitchCase="1"></app-about-event>
             <app-accommodation *ngSwitchCase="2"></app-accommodation>
             <app-shapes *ngSwitchCase="3"></app-shapes>
-            <app-list-of-halls *ngSwitchCase="4" [view]="'business'"></app-list-of-halls>
+            <app-list-of-halls *ngSwitchCase="4" (buttonChangeEvent)="onButtonChange($event)" [view]="'business'"></app-list-of-halls>
             <app-business-booking-review *ngSwitchCase="5"></app-business-booking-review>
             <app-selected-halls *ngSwitchCase="6"></app-selected-halls>
         </div>
@@ -21,34 +21,14 @@
             class="booking__btn wid-50  wid-lg-100 p-1 ml-0 mr-0 ml-md-60 mr-md-60 ml-lg-100 mr-lg-100  m-auto m-lg-2 mx-lg-5 px-lg-5">
             <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
                 <div class="d-flex flex-column">
-                    <!-- <button type="button"
-                        class="d-flex align-items-center justify-content-center btn btn_cancel fw-500 border rounded-pill px-5"
-                        (click)="returnToHome()">Cancel</button> -->
-                    <app-button [btnClass]="'basicButton'" [btnName]="cancelBtnText"
+                    <app-button [btnClass]="'buttonCancel rounded-pill px-5 w-100'" [btnName]="cancelBtnText"
                         (bannerActionEvent)="returnToHome()"></app-button>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
-                    <!-- <button type="button"
-                        class="d-flex align-items-center justify-content-center btn btn_back rounded-pill px-5 h-40"
-                        (click)="back()">Back</button> -->
-
-                    <app-button [btnClass]="'basicButtonforSkip'" [btnName]="backBtnText" (bannerActionEvent)="back()"></app-button>
-                    <app-button [btnClass]="'basicButtonforSave'" [btnName]="nextBtnText"
+                <div class="d-flex flex-column flex-md-row gap-2">
+                    <app-button [btnClass]="'buttonBack rounded-pill px-5 w-100'" [btnName]="backBtnText"
+                        (bannerActionEvent)="back()"></app-button>
+                    <app-button [btnClass]="'buttonNext border rounded-pill px-5 w-100'" [btnName]="nextBtnText"
                         (bannerActionEvent)=" currentStep === 6 ? confirmBooking () : next()"></app-button>
-                    <!-- <button type="button"
-                        class="d-flex align-items-center justify-content-center btn btn_next border rounded-pill px-5"
-                        [ngClass]="currentStep == 4 || currentStep == 5 ||  currentStep == 6? 'd-none' : ''"
-                        (click)="next()">Next</button> -->
-                    <!-- <button type="button"
-                        class="d-flex align-items-center justify-content-center btn btn_next border rounded-pill px-5"
-                        [ngClass]="currentStep != 4 ? 'd-none' : ''" (click)="next()">Proceed</button>
-                    <button type="button"
-                        class="d-flex align-items-center justify-content-center btn btn_next border rounded-pill px-5"
-                        [ngClass]="currentStep == 5 ? '' : 'd-none'" (click)="next()">Confirm
-                        Reservation</button>
-                    <button type="button"
-                        class="d-flex align-items-center justify-content-center btn btn_next border rounded-pill px-5"
-                        [ngClass]="currentStep == 6 ? '' : 'd-none'" (click)="confirmBooking()">Next</button> -->
                 </div>
             </div>
 

@@ -36,6 +36,7 @@
 
         &__section:hover {
             border-color: $secondary-color;
+            background-color: $active-list-bg-clr;
             cursor: pointer;
         }
 

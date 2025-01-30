@@ -22,33 +22,10 @@
         }
     }
 
-    .btn_cancel {
-        background: $cancel-color-pink;
-        font-size: gutter-sp(19);
-        height: gutter-sp(40);
-        font-weight: 500;
-    }
-
-    .btn_back {
-        color: $secondary-color;
-        border: gutter-sp(1) solid $secondary-color;
-        font-size: gutter-sp(19);
-        height: gutter-sp(40);
-        font-weight: 500;
-    }
-
-    .btn_next {
-        color: $white;
-        background: $secondary-color;
-        font-size: gutter-sp(19);
-        height: gutter-sp(40);
-        font-weight: 500;
-    }
-
     .dialog-btns {
         position: fixed;
         bottom: gutter-sp(0);
-        background: white;
+        background: $white;
         box-shadow: gutter-sp(0) gutter-sp(3) gutter-sp(18) $shadow-black;
         z-index: 1;
     }

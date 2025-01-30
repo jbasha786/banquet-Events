@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { AboutEventComponent } from '../about-event/about-event.component';
 import { CommonModule } from '@angular/common';
 import { AccommodationComponent } from '../accommodation/accommodation.component';
@@ -37,6 +37,7 @@ export class BusinessBookingComponent {
   nextBtnText: string = 'Next';
 
   constructor(public dialogRef: MatDialogRef<BusinessBookingComponent>,
+    private dialog: MatDialog,
     private eventBookingService: EventBookingService
   ) {
     this.defaultProgressSize = 100 / this.defaultPages;
@@ -49,6 +50,8 @@ export class BusinessBookingComponent {
 
   returnToHome() {
     this.dialogRef.close();
+    this.dialog.closeAll();
+    this.eventBookingService.clearSelectedServices();
   }
 
   back() {
@@ -76,11 +79,16 @@ export class BusinessBookingComponent {
     this.progressbarWidth = this.defaultProgressSize * this.currentStep + "%";
   }
 
+  onButtonChange(Proceed: string): void {
+    this.nextBtnText = Proceed;
+  }
+
   confirmBooking() {
     if (this.currentStep === 6) {
       this.currentStep = 1;
     }
     this.dialogRef.close();
+    this.dialog.closeAll();
     this.eventBookingService.clearSelectedServices();
     this.eventBookingService.setSelectedStepNumber(1);
   }
@@ -89,7 +97,7 @@ export class BusinessBookingComponent {
     this.currentStep = this.eventBookingService.getSelectedStepNumber();
   }
 
-  updateNextBtnText(currentStepNumber:number) {
-   this.nextBtnText =  currentStepNumber === 4 ? 'Proceed' : currentStepNumber === 5 ? 'Confirm Reservation' : 'Next';
+  updateNextBtnText(currentStepNumber: number) {
+    this.nextBtnText = currentStepNumber === 5 ? 'Confirm Reservation' : 'Next';
   }
 }

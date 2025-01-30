@@ -8,7 +8,27 @@
         overflow-y: auto;
         scrollbar-width: thin;
     }
+
     .eventInfo {
         word-wrap: break-word;
+    }
+
+    .edit {
+        background: $white;
+        border-radius: gutter-per(50);
+        width: gutter-sp(50);
+        height: gutter-sp(50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .edit:hover {
+        background: $secondary-color;
+    }
+
+    .edit:hover .icon {
+        content: url("/assets/images/icons/edit-icon_white.svg");
+        width: gutter-sp(20);
     }
 }

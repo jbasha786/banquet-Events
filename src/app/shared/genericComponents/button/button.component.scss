@@ -216,3 +216,46 @@
     color: $event-acc-btn-clr;
     border: gutter-sp(1) solid $event-acc-btn-clr;
 }
+
+.buttonCancel {
+    color: $cancelcolor;
+    border: gutter-sp(1) solid $cancelcolor;
+    font-size: gutter-sp(19);
+    height: gutter-sp(40);
+    font-weight: 500;
+    background: transparent;
+}
+
+.buttonCancel:hover {
+    background-color: $cancelhover;
+    color: $cancelcolor;
+    border-color: $cancelcolor;
+}
+
+.buttonBack {
+    color: $secondary-color;
+    border: gutter-sp(1) solid $secondary-color;
+    font-size: gutter-sp(19);
+    height: gutter-sp(40);
+    font-weight: 500;
+    background: transparent;
+}
+
+.buttonBack:hover {
+    background-color: $secondary-backgroundhvr;
+    color: $primary-hover;
+    border-color: $primary-hover;
+}
+
+.buttonNext:hover {
+    background-color: $primary-hover;
+    box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $nexthovershadow;
+}
+
+.buttonNext {
+    color: $white;
+    background: $secondary-color;
+    font-size: gutter-sp(19);
+    height: gutter-sp(40);
+    font-weight: 500;
+}

@@ -19,18 +19,33 @@
                 width: gutter-per(100);
                 font-size: gutter-sp(12);
             }
+            &__search-input:focus-within {
+                border-radius: gutter-sp(3);
+                border-color: $secondary-color;
+                box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+                background-color: $gray;
+                min-height: gutter-sp(30);
+                width: gutter-per(100);
+                font-size: gutter-sp(12);
+            }
 
             &__search-input::placeholder {
                 color: $searchPholder;
                 font-size: gutter-sp(14);
-                font-weight: 200;
+                font-weight: 300;
                 padding-left: gutter-sp(1);
+            }
+            input:focus,
+            textarea:focus,
+            select:focus {
+                outline: none;
             }
 
             &__search-icon {
                 position: absolute;
                 left: gutter-sp(6);
-                top: gutter-sp(8);
+                top: gutter-sp(7);
+                color: $searchPholder;
             }
 
         }
@@ -43,6 +58,8 @@
                 }
                 border: gutter-sp(1) solid $black;
                 text-align: center;
+                border-radius: gutter-sp(4);
+                color: $lite-black;
             }
         }
 

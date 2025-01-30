@@ -42,4 +42,7 @@
     .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item {
         border-radius: gutter-sp(6);
     }
+    .selction_dates .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item:focus{
+        background-color: $white;
+    }
 }

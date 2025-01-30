@@ -46,6 +46,14 @@
             align-items: center;
             justify-content: center;
         }
+        .edit:hover {
+            background: $secondary-color;
+        }
+
+        .edit:hover .icon {
+            content: url("/assets/images/icons/edit-icon_white.svg");
+            width: gutter-sp(20);
+        }
 
         .drag-item {
             cursor: move;
