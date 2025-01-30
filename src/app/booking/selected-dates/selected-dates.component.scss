@@ -13,7 +13,8 @@
             .card:hover {
                 border-color: $secondary-color;
             }
-            .card ::ng-deep .mdc-list-item__primary-text{
+
+            .card ::ng-deep .mdc-list-item__primary-text {
                 color: $black;
             }
         }
@@ -41,8 +42,19 @@
 
     .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item {
         border-radius: gutter-sp(6);
+        height: 47px;
     }
-    .selction_dates .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item:focus{
+
+    .mdc-list-item:focus::before {
+        background-color: $white;
+    }
+
+    .mdc-list-item:focus {
+        border: 1px solid $secondary-color;
+        outline: none;
+    }
+
+    .selction_dates .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item:focus {
         background-color: $white;
     }
 }

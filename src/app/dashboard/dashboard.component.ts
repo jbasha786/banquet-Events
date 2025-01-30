@@ -122,7 +122,8 @@ export class DashboardComponent {
       panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
-      disableClose: true
+      disableClose: true,
+      autoFocus: false
     });
   }
 
