@@ -5,11 +5,12 @@ import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { LoginService } from '../../services/login/login.service';
 import { loginModel } from '../../_models/login.model';
+import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, RouterModule],
+  imports: [FormsModule, ReactiveFormsModule, RouterModule,ButtonComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

@@ -54,9 +54,11 @@
           <mat-checkbox disableRipple [(ngModel)]="checked" [ngModelOptions]="{standalone: true}" > Subscribe to Email Notification</mat-checkbox>
         </div>
         <div class="signup__button">
-          <button class="signup__button__btn" type="submit" (click)="register()">
-            Sign Up
-          </button>
+          <app-button
+          [btnClass]="'signup-btn'"
+          [btnName]="'Sign Up'"
+          (bannerActionEvent)="register()">
+          </app-button>
         </div>
       </div>
     </form>

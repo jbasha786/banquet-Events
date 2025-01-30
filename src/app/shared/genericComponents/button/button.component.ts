@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -12,6 +12,7 @@ export class ButtonComponent {
 
   @Input() btnName: string = '';
   @Input() btnClass: string = '';
+  @Input() showDot: boolean = false;
   @Output() bannerActionEvent = new EventEmitter<boolean>();
 
 

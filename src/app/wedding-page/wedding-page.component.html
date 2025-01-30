@@ -33,6 +33,7 @@
 
         <!-- Content Section -->
         <div class="col-xl-7 container-text">
+          <div class="d-flex flex-column gap-4">
           <div>
             <p class="title mb-1 fs-22 fs-lg-30 fw-500">{{ event.title }}</p>
             <p class="room-details fs-14 fw-300">
@@ -52,7 +53,7 @@
             </p>
             <div class="list-container">
               <ul
-                class="mb-24 mt-16 mb-xl-7 fs-14 fs-lg-13 fw-300 d-flex flex-lg-row flex-column gap-0 gap-lg-20"
+                class="mt-16 fs-14 fs-lg-13 fw-300 d-flex flex-lg-row flex-column gap-0 gap-lg-20"
               >
                 <div class="left-column">
                   <li *ngFor="let amenity of event.amenities.slice(0, 4)">
@@ -67,7 +68,7 @@
               </ul>
             </div>
           </div>
-
+        </div>
           <div>
             <div class="price mb-3 fs-36 lh-25">
               {{ event.price }}
@@ -77,9 +78,9 @@
             <div
               class="d-flex flex-md-row flex-column gap-12 justify-content-center justify-content-lg-start align-items-center align-items-lg-start"
             >
-              <button class="btn-book">Book now</button>
-              <button class="btn-download">Download Brochure</button>
-              <button class="btn-quote">Request a Quote</button>
+            <app-button [btnClass]="'btn-book'" [btnName]="'Book now'"> </app-button>
+            <app-button [btnClass]="'btn-download'" [btnName]="'Download Brochure'"> </app-button>
+            <app-button [btnClass]="'btn-quote'" [btnName]="'Request a Quote'"> </app-button>
             </div>
           </div>
         </div>
