@@ -42,6 +42,10 @@
             font-size: gutter-sp(12);
             width: gutter-per(100);
         }
+        &__search-input::placeholder{
+            color: $searchPholder;
+            font-weight: 300;
+        }
 
         &__search-input:focus-within {
             border-radius: gutter-sp(4);
@@ -63,6 +67,7 @@
             position: absolute;
             left: gutter-sp(6);
             top: gutter-sp(8);
+            color: $searchPholder;
         }
     }
 
@@ -83,6 +88,8 @@
 
         border: gutter-sp(1) solid $black;
         height: gutter-sp(26);
+        border-radius: gutter-sp(4);
+        color: $lite-black;
     }
 
     .mat-mdc-cell {

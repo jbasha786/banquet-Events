@@ -24,7 +24,7 @@
             cursor: pointer;
 
             .active {
-                background-color: transparent !important;
+                background-color: transparent;
                 border: gutter-sp(1) solid $secondary-color;
             }
         }
