@@ -34,8 +34,9 @@
                         <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
                         <ngx-mat-timepicker #endTimepicker></ngx-mat-timepicker>
                     </mat-form-field>
-                    <p class="custom_btn fs-16 text-center cursor m-0 flex-fill w-100" (click)="timePart()">Time Part
-                    </p>
+                    <div class="flex-fill w-100">
+                        <app-button [btnClass]="'buttonforTimepart'" [btnName]="'Time Part'" (bannerActionEvent)="timePart()"></app-button>
+                    </div>
                 </div>
             </div>
         </div>

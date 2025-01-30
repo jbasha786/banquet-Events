@@ -60,22 +60,4 @@
             min-height: gutter-sp(60);
         }
     }
-
-    .footer_btn {
-        background: $secondary-color;
-        width: gutter-sp(120);
-        border: none;
-        color: $white;
-        padding: gutter-sp(10);
-        border-radius: gutter-sp(50);
-    }
-
-    .footer_btn_skip {
-        border: gutter-sp(1) solid $secondary-color;
-        width: gutter-sp(120);
-        color: $secondary-color;
-        background: $white;
-        padding: gutter-sp(10);
-        border-radius: gutter-sp(50);
-    }
 }

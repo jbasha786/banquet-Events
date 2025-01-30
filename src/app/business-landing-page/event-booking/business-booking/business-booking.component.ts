@@ -8,6 +8,7 @@ import { BusinessBookingReviewComponent } from '../business-booking-review/busin
 import { ListOfHallsComponent } from '../../../booking/list-of-halls/list-of-halls.component';
 import { SelectedHallsComponent } from '../../../shared/components/selected-halls/selected-halls.component';
 import { EventBookingService } from '../../../services/event-hall-booking/event-booking.service';
+import { ButtonComponent } from '../../../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-business-booking',
@@ -20,6 +21,7 @@ import { EventBookingService } from '../../../services/event-hall-booking/event-
     BusinessBookingReviewComponent,
     ListOfHallsComponent,
     SelectedHallsComponent,
+    ButtonComponent,
     CommonModule
   ],
   templateUrl: './business-booking.component.html',
@@ -30,6 +32,9 @@ export class BusinessBookingComponent {
   defaultProgressSize: number = 0;
   progressbarWidth: any;
   defaultPages: number = 6;
+  cancelBtnText: string = 'Cancel';
+  backBtnText: string = 'Back';
+  nextBtnText: string = 'Next';
 
   constructor(public dialogRef: MatDialogRef<BusinessBookingComponent>,
     private eventBookingService: EventBookingService
@@ -53,6 +58,7 @@ export class BusinessBookingComponent {
     if (this.currentStep > 1) {
       this.currentStep--;
       this.eventBookingService.setSelectedStepNumber(this.currentStep);
+      this.updateNextBtnText(this.currentStep);
     }
     this.updatePage();
   }
@@ -61,6 +67,7 @@ export class BusinessBookingComponent {
     if (this.currentStep < this.defaultPages) {
       this.currentStep++;
       this.eventBookingService.setSelectedStepNumber(this.currentStep);
+      this.updateNextBtnText(this.currentStep);
     }
     this.updatePage();
   }
@@ -80,5 +87,9 @@ export class BusinessBookingComponent {
 
   getSelectedTabIndex() {
     this.currentStep = this.eventBookingService.getSelectedStepNumber();
+  }
+
+  updateNextBtnText(currentStepNumber:number) {
+   this.nextBtnText =  currentStepNumber === 4 ? 'Proceed' : currentStepNumber === 5 ? 'Confirm Reservation' : 'Next';
   }
 }
