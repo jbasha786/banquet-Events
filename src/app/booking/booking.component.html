@@ -16,7 +16,7 @@
         <app-guest></app-guest>
         }
         @if(currentStep == 4){
-        <app-list-of-halls (buttonChangeEvent)="onButtonChange($event)"></app-list-of-halls>
+        <app-list-of-halls (buttonChangeEvent)="onButtonChange($event)" [view]="'home'"></app-list-of-halls>
         }
         @if(currentStep == 5){
             <app-business-booking-review></app-business-booking-review>

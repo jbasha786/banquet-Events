@@ -2,12 +2,17 @@
   <div class="slider">
     <div class="items">
       @for(image of promotionsInfo; track $index){
-      <a class="item" href="{{ image.href }}">
+      <a class="item">
         <img src="{{ image.src }}" alt="" />
       </a>
       }
-       @for(image of promotionsInfo; track $index){
-      <a class="item" href="{{ image.href }}">
+      @for(image of promotionsInfo; track $index){
+      <a class="item">
+        <img src="{{ image.src }}" alt="" />
+      </a>
+      }
+      @for(image of promotionsInfo; track $index){
+      <a class="item">
         <img src="{{ image.src }}" alt="" />
       </a>
       }

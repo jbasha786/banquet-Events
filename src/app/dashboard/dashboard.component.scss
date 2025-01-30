@@ -35,53 +35,6 @@
         transform: translateX(-100%);
         animation: slideIn 4s forwards;
       }
-
-      //hover-change
-      &__btn {
-        flex-shrink: 0;
-        border-radius: gutter-sp(32);
-        letter-spacing: gutter-sp(1);
-        border: none;
-        color: $white;
-        margin-top: gutter-sp(20);
-        background: $primary-color;
-        opacity: 0;
-        animation: fadeIn 4s forwards;
-        padding: gutter-sp(8) gutter-sp(42);
-        position: relative;
-        overflow: hidden;
-      }
-
-      //hover-change
-      &__btn::after {
-        content: "";
-        position: absolute;
-        top: gutter-per(50);
-        left: gutter-per(50);
-        width: $value-null;
-        height: $value-null;
-        background: transparent;
-        border-radius: gutter-per(50);
-        box-shadow: 0 0 gutter-sp(5) gutter-sp(2) $ratingBackground,
-          0 0 gutter-sp(10) gutter-sp(3) $ratingBackground,
-          0 0 gutter-sp(15) gutter-sp(5) $ratingBackground;
-        transform: translate(gutter-per(-50), gutter-per(-50));
-        opacity: 0;
-        transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
-      }
-
-      //hover-change
-      &__btn:hover::after {
-        width: gutter-sp(200);
-        height: gutter-sp(200);
-        opacity: 1;
-      }
-
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-        }
-      }
     }
 
     &__downIcon {

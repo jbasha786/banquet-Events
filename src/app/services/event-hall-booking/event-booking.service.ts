@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,8 @@ import { Injectable } from '@angular/core';
 export class EventBookingService {
 
   confirmedHallDetails: any[] = [];
+  selectedStep: number = 1;
+  isOverviewpageClose: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor() { }
 
@@ -17,7 +20,22 @@ export class EventBookingService {
     return this.confirmedHallDetails;
   }
 
-  clearSelectedServices(){
+  clearSelectedServices() {
     this.confirmedHallDetails = [];
+  }
+
+  setSelectedStepNumber(step: number) {
+    this.selectedStep = step;
+  }
+
+  getSelectedStepNumber(): number {
+    return this.selectedStep;
+  }
+  setOverviewPage(isActive: boolean) {
+    return this.isOverviewpageClose.next(isActive);
+  }
+
+  getOverviewPage() {
+    return this.isOverviewpageClose;
   }
 }

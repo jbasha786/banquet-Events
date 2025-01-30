@@ -1,0 +1,120 @@
+@import "../../../styles/variable.scss";
+
+.bannerActionButton {
+    flex-shrink: 0;
+    border-radius: gutter-sp(32);
+    letter-spacing: gutter-sp(1);
+    border: none;
+    color: $white;
+    margin-top: gutter-sp(20);
+    background: $primary-color;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    padding: gutter-sp(8) gutter-sp(42);
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: gutter-sp(20);
+}
+
+//hover-change
+.bannerActionButton::after {
+    content: "";
+    position: absolute;
+    top: gutter-per(50);
+    left: gutter-per(50);
+    width: $value-null;
+    height: $value-null;
+    background: transparent;
+    border-radius: gutter-per(50);
+    box-shadow: 0 0 gutter-sp(5) gutter-sp(2) $ratingBackground,
+        0 0 gutter-sp(10) gutter-sp(3) $ratingBackground,
+        0 0 gutter-sp(15) gutter-sp(5) $ratingBackground;
+    transform: translate(gutter-per(-50), gutter-per(-50));
+    opacity: 0;
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+}
+
+//hover-change
+.bannerActionButton:hover::after {
+    width: gutter-sp(200);
+    height: gutter-sp(200);
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+// side transition Button CSS
+
+.sideTransitionButton {
+    padding: gutter-sp(10) gutter-sp(22);
+    border-radius: gutter-sp(6);
+    border: gutter-sp(1) solid $secondary-color;
+    position: relative;
+    color: $secondary-color;
+    background-color: transparent;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: gutter-sp(16);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: $value-null;
+        left: $value-null;
+        width: gutter-per(100);
+        height: gutter-per(100);
+        background-color: $secondary-color;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        z-index: -1;
+        border-radius: gutter-sp(4);
+    }
+
+
+    &:hover,
+    &:focus {
+        color: $white;
+
+        transform: translateX(gutter-sp(0));
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.sideTransitionButtonPrimary {
+    @extend .sideTransitionButton;
+    color: $family-yellow;
+    border-color: $family-yellow;
+
+    &::after {
+        background-color: $family-yellow;
+    }
+
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+}
+
+.basicButton {
+    background: $secondary-color;
+    color: $white;
+    border-radius: gutter-sp(8);
+    border: gutter-sp(1) solid transparent;
+    padding: gutter-sp(10) gutter-sp(20);
+}
+
+.basicButton:hover {
+    background-color: transparent;
+    color: $secondary-color;
+    border: gutter-sp(1) solid $secondary-color;
+}

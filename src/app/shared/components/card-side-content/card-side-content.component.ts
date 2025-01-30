@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { ButtonComponent } from '../../genericComponents/button/button.component';
 
 @Component({
   selector: 'app-card-side-content',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './card-side-content.component.html',
   styleUrl: './card-side-content.component.scss'
 })

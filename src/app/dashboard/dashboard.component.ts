@@ -14,6 +14,8 @@ import { BannerModel } from './Models/banner.model';
 import { ChatComponent } from '../chat/chat.component';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
+import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
+import { ButtonComponent } from '../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,7 +31,8 @@ import { UpcomingEventsListComponent } from '../shared/components/upcoming-event
     MatNativeDateModule,
     MatDialogModule,
     CommonModule,
-    CarouselModule],
+    CarouselModule,
+    ButtonComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -70,13 +73,15 @@ export class DashboardComponent {
 
   constructor(private router: Router, private dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
-    private defaultService: DefaultService
+    private defaultService: DefaultService,
+    private eventBookingService: EventBookingService
   ) {
   }
 
   ngOnInit() {
     this.scrollToTop();
     this.getInitialData();
+    this.getOverviewPageStatus();
   }
 
   getInitialData() {
@@ -114,7 +119,6 @@ export class DashboardComponent {
       width: '100vw',
       height: '100vh',
       maxWidth: '100vw',
-
       panelClass: 'custom-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
@@ -122,8 +126,8 @@ export class DashboardComponent {
     });
   }
 
-  goToSignUp() {
-    this.router.navigate(['signUp']);
+  navigateUrl(urlName: string) {
+    this.router.navigate([urlName]);
   }
 
   readMore(personalInfo: any) {
@@ -148,6 +152,14 @@ export class DashboardComponent {
         break
     }
     return redirectComponent;
+  }
+
+  getOverviewPageStatus() {
+    this.eventBookingService.getOverviewPage().subscribe(data => {
+      if (data) {
+        this.continueBooking('300ms', '300ms');
+      }
+    });
   }
 
 }

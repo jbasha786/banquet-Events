@@ -23,6 +23,13 @@
         padding: gutter-sp(10);
         border-radius: gutter-sp(15);
         margin: gutter-sp(0) auto;
+        border: gutter-sp(1) solid transparent;
+    }
+
+    &__btn:hover {
+        background: $white;
+        border: gutter-sp(1) solid $bg-world-btn;
+        color: $bg-world-btn;
     }
 
     &__image {
