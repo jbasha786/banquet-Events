@@ -1,5 +1,5 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig, inject } from '@angular/core';
+import { NavigationStart, provideRouter, Router, withRouterConfig } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -16,5 +16,21 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(withInterceptors([errorHandlerInterceptor]), withFetch()),
     provideNativeDateAdapter(),
-    DatePipe]
+    DatePipe,{
+      provide: 'APP_INITIALIZER',
+      useFactory: () => {
+        return () => {
+          const router = inject(Router);
+          router.events.subscribe(event => {
+            if (event instanceof NavigationStart) {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            }
+          });
+        };
+      },
+      multi: true
+    }]
 };
