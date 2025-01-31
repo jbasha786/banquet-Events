@@ -8,11 +8,12 @@ import {
   CdkDrag,
   CdkDropList,
 } from '@angular/cdk/drag-drop';
+import { ButtonComponent } from "../../../shared/genericComponents/button/button.component";
 
 @Component({
   selector: 'app-time-part',
   standalone: true,
-  imports: [MatDialogModule, CommonModule, CdkDropList, CdkDrag, CdkDragPlaceholder],
+  imports: [MatDialogModule, CommonModule, CdkDropList, CdkDrag, CdkDragPlaceholder, ButtonComponent],
   templateUrl: './time-part.component.html',
   styleUrl: './time-part.component.scss'
 })

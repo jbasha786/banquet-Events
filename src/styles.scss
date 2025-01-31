@@ -627,39 +627,6 @@ html {
   @extend .btn-base;
 }
 
-
-.corporatebtn {
-  @extend .btn-base;
-}
-
-.editArticle {
-  @extend .btn-base;
-
-  &:hover,
-  &:focus {
-    color: $white;
-  }
-}
-
-.familybtn {
-  @extend .btn-base;
-  border: gutter-sp(1) solid $family-yellow;
-  color: $family-yellow;
-
-  &::after {
-    background-color: $family-yellow;
-  }
-
-  &:hover,
-  &:focus {
-    color: $white;
-
-    &::after {
-      background-color: $family-yellow;
-    }
-  }
-}
-
 //image  hover
 .image__item {
   border-radius: gutter-sp(14);
@@ -715,6 +682,11 @@ html {
 }
 
 //input select focus
+input::-ms-reveal,
+input::-ms-clear {
+  display: none ;
+}
+
 input.form-control:focus,
 textarea.form-control:focus,
 select.form-control:focus {

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { SelectedDatesComponent } from './selected-dates/selected-dates.component';
 import { GuestComponent } from './guest/guest.component';
@@ -9,6 +9,8 @@ import { ChooseMenuComponent } from '../shared/components/choose-menu/choose-men
 import { BusinessBookingReviewComponent } from '../business-landing-page/event-booking/business-booking-review/business-booking-review.component';
 import { SelectedHallsComponent } from '../shared/components/selected-halls/selected-halls.component';
 import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
+import { CommonModule } from '@angular/common';
+import { ButtonComponent } from '../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-booking',
@@ -21,7 +23,9 @@ import { EventBookingService } from '../services/event-hall-booking/event-bookin
     ListOfHallsComponent,
     ChooseMenuComponent,
     BusinessBookingReviewComponent,
-    SelectedHallsComponent],
+    SelectedHallsComponent,
+    CommonModule,
+    ButtonComponent],
   templateUrl: './booking.component.html',
   styleUrl: './booking.component.scss'
 })
@@ -31,8 +35,11 @@ export class BookingComponent {
   defaultProgressSize: number = 0;
   progressbarWidth: any;
   defaultPages: number = 6;
+  cancelBtnText: string = 'Cancel';
+  backBtnText: string = 'Back';
+  nextBtnText: string = 'Next';
 
-  constructor(public dialogRef: MatDialogRef<BookingComponent>, private router: Router,
+  constructor(public dialogRef: MatDialogRef<BookingComponent>, private dialog: MatDialog,
     private eventBookingService: EventBookingService
   ) {
     this.defaultProgressSize = 100 / this.defaultPages;
@@ -45,6 +52,8 @@ export class BookingComponent {
 
   returnToHome() {
     this.dialogRef.close();
+    this.dialog.closeAll();
+    this.eventBookingService.clearSelectedServices();
   }
 
   back() {
@@ -54,6 +63,7 @@ export class BookingComponent {
       this.currentStep--;
       this.eventBookingService.setSelectedStepNumber(this.currentStep);
       this.updatePage();
+      this.updateNextBtnText(this.currentStep);
     }
   }
 
@@ -61,6 +71,7 @@ export class BookingComponent {
     if (this.currentStep < this.defaultPages) {
       this.currentStep++;
       this.eventBookingService.setSelectedStepNumber(this.currentStep);
+      this.updateNextBtnText(this.currentStep);
     }
     this.updatePage();
   }
@@ -68,12 +79,28 @@ export class BookingComponent {
   updatePage() {
     this.progressbarWidth = this.defaultProgressSize * this.currentStep + "%";
   }
+
   onButtonChange(Proceed: string): void {
-    this.buttonNext = Proceed;
+    this.nextBtnText = Proceed;
+  }
+
+
+  confirmBooking() {
+    if (this.currentStep === 6) {
+      this.currentStep = 1;
+    }
+    this.dialogRef.close();
+    this.dialog.closeAll();
+    this.eventBookingService.clearSelectedServices();
+    this.eventBookingService.setSelectedStepNumber(1);
   }
 
   getSelectedTabIndex() {
     this.currentStep = this.eventBookingService.getSelectedStepNumber();
+  }
+
+  updateNextBtnText(currentStepNumber: number) {
+    this.nextBtnText = currentStepNumber === 5 ? 'Confirm Reservation' : 'Next';
   }
 
 }
