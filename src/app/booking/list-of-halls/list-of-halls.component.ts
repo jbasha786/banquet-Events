@@ -18,6 +18,8 @@ import { ArticlesComponent } from '../../shared/components/articles/articles.com
 import { ZindexService } from '../../../app/services/zindex.service';
 import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-menu.component';
 import { FormsModule } from '@angular/forms';
+import { hallModel } from '../../_models/halls.model';
+import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -29,11 +31,12 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     NgxMatTimepickerModule,
     CommonModule,
-    FormsModule],
+    FormsModule, ButtonComponent],
   templateUrl: './list-of-halls.component.html',
   styleUrl: './list-of-halls.component.scss'
 })
 export class ListOfHallsComponent {
+  hallInfo!: hallModel | undefined;
   @Output() buttonChangeEvent = new EventEmitter<string>();
   @Input() view: string = '';
   buttonNext: string = 'Next';
@@ -148,6 +151,11 @@ export class ListOfHallsComponent {
     } else {
       this.selectedItem = 0;
     }
+  }
+  getInitialData() {
+    this.defaultService.getJSON().subscribe((result: any) => {
+      this.hallInfo = result?.hallSection;
+    });
   }
 
 }

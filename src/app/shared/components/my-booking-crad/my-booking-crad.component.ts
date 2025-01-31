@@ -12,6 +12,7 @@ import { DialogueComponent } from '../dialogue/dialogue.component';
   styleUrl: './my-booking-crad.component.scss'
 })
 export class MyBookingCradComponent {
+  isHovered = false;
   @Input() title: string | undefined;
   @Input() price: any;
   @Input() picture: any;
@@ -34,6 +35,7 @@ export class MyBookingCradComponent {
   @Input() address: any;
   @Input() rating: any;
   @Input() viewImage: any;
+  @Input() hoverImage: any;
   @Input() conformationID: any;
   @Input() cancelbooking: any;
   @Input() editbooking: any;
