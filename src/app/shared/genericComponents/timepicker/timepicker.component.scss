@@ -6,6 +6,7 @@
     --mdc-outlined-text-field-hover-outline-color: #{$event-input-border-clr};
     --mdc-outlined-text-field-focus-outline-color: #{$secondary-color};
     --mdc-outlined-text-field-focus-outline-width: #{gutter-sp(1)};
+    width: gutter-per(100);
 }
 
 .custom_input::placeholder,

@@ -24,12 +24,18 @@
             <div class="mb-4">
                 <label for="duration" class="custom_label mb-1">Event Duration</label>
                 <div class="gap-0 gap-sm-4 gap-lg-0 gap-xl-4 d-flex flex-column flex-md-row flex-lg-column flex-xl-row">
-                    <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedStartTime()"
-                        [matPickerClass]="'startTimepicker'" [placeHolderText]="'Start Time'"></app-timepicker>
-                    <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedEndTime()"
-                        [matPickerClass]="'endTimepicker'" [placeHolderText]="'End Time'"></app-timepicker>
-                    <app-button [btnClass]="'buttonforTimepart'" [btnName]="'Time Part'"
-                        (bannerActionEvent)="timePart()"></app-button>
+                    <div class="">
+                        <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedStartTime()"
+                            [matPickerClass]="'startTimepicker'" [placeHolderText]="'Start Time'"></app-timepicker>
+                    </div>
+                    <div class="">
+                        <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedEndTime()"
+                            [matPickerClass]="'endTimepicker'" [placeHolderText]="'End Time'"></app-timepicker>
+                    </div>
+                    <div class="flex-grow-1">
+                        <app-button [btnClass]="'buttonforTimepart'" [btnName]="'Time Part'"
+                            (bannerActionEvent)="timePart()"></app-button>
+                    </div>
                 </div>
             </div>
         </div>
