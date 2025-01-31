@@ -42,7 +42,6 @@
 
     .slots_radio .mdc-list-item--with-trailing-radio.mdc-list-item {
         border-radius: gutter-sp(6);
-        height: 47px;
     }
 
     .mdc-list-item:focus::before {
@@ -50,7 +49,7 @@
     }
 
     .mdc-list-item:focus {
-        border: 1px solid $secondary-color;
+        border: gutter-sp(1) solid $secondary-color;
         outline: none;
     }
 
