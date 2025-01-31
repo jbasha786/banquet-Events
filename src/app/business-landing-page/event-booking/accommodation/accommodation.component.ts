@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { ButtonComponent } from '../../../shared/genericComponents/button/button.component';
+import { TimepickerComponent } from '../../../shared/genericComponents/timepicker/timepicker.component';
 
 @Component({
   selector: 'app-accommodation',
@@ -22,7 +23,8 @@ import { ButtonComponent } from '../../../shared/genericComponents/button/button
     CommonModule,
     FormsModule,
     ButtonComponent,
-    NgxMatTimepickerModule],
+    NgxMatTimepickerModule,
+  TimepickerComponent],
   providers: [],
   templateUrl: './accommodation.component.html',
   styleUrl: './accommodation.component.scss'
@@ -43,5 +45,8 @@ export class AccommodationComponent {
       console.log(data);
     })
   }
+
+  selectedStartTime(){}
+  selectedEndTime(){}
 
 }
