@@ -217,20 +217,7 @@
         color: $white;
     }
 
-    .cancel {
-        background-color: $white;
-        color: $cancelcolor;
-        border: gutter-sp(1) solid $cancelcolor ;
-        padding: gutter-sp(9) gutter-sp(33);
-    }
-
-    .cancel:hover {
-        background-color: $cancelhover;
-        color: $cancelcolor;
-        border-color: $cancelcolor;
-    }
-
-    .selected {
+        .selected {
         border: gutter-sp(1) solid $selected-border-clr;
         background: $white;
     }

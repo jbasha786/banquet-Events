@@ -118,3 +118,42 @@
     color: $secondary-color;
     border: gutter-sp(1) solid $secondary-color;
 }
+
+.selected {
+    border: gutter-sp(1) solid $selected-border-clr;
+    background: $white;
+    padding: gutter-sp(12) gutter-sp(40);
+    border-radius: gutter-sp(24);
+    font-size: gutter-sp(14);
+    font-weight: 500;
+}
+
+.reserve {
+    background-color: $green-select;
+    border: gutter-sp(1) solid $green-select;
+    color: $white;
+    padding: gutter-sp(12) gutter-sp(49);
+    border-radius: gutter-sp(24);
+    font-size: gutter-sp(14);
+    font-weight: 500;
+
+    &:hover {
+        background: $white;
+        border: gutter-sp(1) solid $selected-border-clr;
+        color: $black;
+        padding: gutter-sp(12) gutter-sp(49);
+    }
+}
+
+.cancel {
+    background-color: $white;
+    color: $cancelcolor;
+    border: gutter-sp(1) solid $cancelcolor ;
+    padding: gutter-sp(9) gutter-sp(33);
+
+    &:hover {
+        background-color: $cancelhover;
+        color: $cancelcolor;
+        border-color: $cancelcolor;
+    }
+}

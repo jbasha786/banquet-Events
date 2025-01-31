@@ -128,10 +128,6 @@
         "subTitle": "De Bonte Wever Assen!",
         "title": "Welkom bij Hotel"
     },
-    "hallSection": {
-        "buttonSelect": "Select",
-        "buttonSelected": "Selected"
-    },
     "bookingHistory": [
         {
             "shareimg": "/assets/images/BookingHistory/share.png",

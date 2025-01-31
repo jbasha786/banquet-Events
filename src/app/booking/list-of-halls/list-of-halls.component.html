@@ -18,12 +18,13 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="dateSection" (click)="matcheckinDate.open()">
                         <div class="input-group custom_icon border-clr" id="datepicker">
-                            <span class="input-group-text custom_img" id="basic-addon1"><img src="../../assets/images/halls/calender-hall.png"
-                            alt=""></span>
+                            <span class="input-group-text custom_img" id="basic-addon1"><img
+                                    src="../../assets/images/halls/calender-hall.png" alt=""></span>
                             <div class="form-floating">
                                 <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
-                                    [value]="checkinDate" [(ngModel)]="checkinDate" matInput [matDatepicker]="matcheckinDate">
-                                    <mat-datepicker #matcheckinDate></mat-datepicker>
+                                    [value]="checkinDate" [(ngModel)]="checkinDate" matInput
+                                    [matDatepicker]="matcheckinDate">
+                                <mat-datepicker #matcheckinDate></mat-datepicker>
                                 <label for="guestCount" class="customLabel guestLabel">Check-in</label>
                             </div>
                         </div>
@@ -32,12 +33,13 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="dateSection" (click)="matcheckOutDate.open()">
                         <div class="input-group border-clr custom_icon" id="datepicker">
-                            <span class="input-group-text custom_img" id="basic-addon1"><img src="../../assets/images/halls/calender-hall.png"
-                            alt=""></span>
+                            <span class="input-group-text custom_img" id="basic-addon1"><img
+                                    src="../../assets/images/halls/calender-hall.png" alt=""></span>
                             <div class="form-floating">
                                 <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
-                                    [(ngModel)]="checkOutDate" [value]="checkOutDate" matInput [matDatepicker]="matcheckOutDate">
-                                    <mat-datepicker #matcheckOutDate></mat-datepicker>
+                                    [(ngModel)]="checkOutDate" [value]="checkOutDate" matInput
+                                    [matDatepicker]="matcheckOutDate">
+                                <mat-datepicker #matcheckOutDate></mat-datepicker>
                                 <label for="guestCount" class="customLabel guestLabel">Check-out</label>
                             </div>
                         </div>
@@ -93,17 +95,14 @@
                             <span class="fs-36 fw-bold hallsView__priceColor my-0 lh-35 mt-3">{{item.price}}</span><span
                                 class="fontcolor fs-12">{{item.taxText}}</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
+                        <div
+                            class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
                             <div class="d-flex flex-column-reverse flex-md-row align-items-center  flex-row gap-2">
-                                <!-- <button class="selected  fw-500 fs-14 rounded-pill"
-                                    *ngIf="item.isActive" (click)="toggleSelection(item)">Selected</button> -->
+                                <app-button [btnClass]="'selected'" [btnName]="buttonSelected" *ngIf="item.isActive"
+                                    (click)="toggleSelection(item)"></app-button>
+                                <app-button [btnClass]="'reserve'" [btnName]="buttonSelect" *ngIf="!item.isActive"
+                                    (click)="toggleSelection(item)"></app-button>
 
-                                    <!-- <div> -->
-                                        <app-button [btnClass]="'selected'" [btnName]="hallInfo.buttonSelect" *ngIf="item?.isActive" (click)="toggleSelection(item)"></app-button>
-                                      <!-- </div> -->
-                                <button class="reserve selectBtn fs-14 rounded-pill "
-                                    *ngIf="item.id !== selectedItem && !item.isActive"
-                                    (click)="reserve(item)" (click)="toggleSelection(item)">Select</button>
                                 <div class="d-flex gap-2 my-3 my-md-0">
                                     <span class="ms-2 hallsView__articles fs-14 fw-500" role="button"
                                         (click)="addArticles()">Add

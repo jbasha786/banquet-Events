@@ -106,8 +106,9 @@
                         </div>
                         <div class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
                             <div class="d-flex align-items-center  flex-row gap-3">
-                                <button class="cancel fw-500 fs-14 rounded-pill mt-2 mt-md-0"
-                                    (click)="cancelReservation()">Cancel</button>
+                                <!-- <button class="cancel fw-500 fs-14 rounded-pill mt-2 mt-md-0"
+                                    (click)="cancelReservation()">Cancel</button> -->
+                                    <app-button [btnClass]="'cancel'" [btnName]="cancelBtn" (click)="cancelReservation()"></app-button>
                             </div>
 
                             <div class="d-flex align-items-center justify-content-center cursor halldetails"

@@ -46,10 +46,11 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    
+
     .hallName {
         color: $black;
     }
+
     .hallName:hover {
         color: $secondary-color;
     }
@@ -190,26 +191,6 @@
 
     &__priceColor {
         color: $primary-color;
-    }
-
-    .reserve {
-        background-color: $green-select;
-        border: gutter-sp(1) solid $green-select;
-        color: $white;
-        padding: gutter-sp(12) gutter-sp(49);
-    }
-
-    .reserve:hover {
-        background: $white;
-        border: gutter-sp(1) solid $selected-border-clr;
-        color: $black;
-        padding: gutter-sp(12) gutter-sp(49);
-    }
-
-    .selected {
-        border: gutter-sp(1) solid $selected-border-clr;
-        background: $white;
-        padding: gutter-sp(12) gutter-sp(40);
     }
 
     &__articles {

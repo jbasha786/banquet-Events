@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { EventBookingService } from '../../../services/event-hall-booking/event-booking.service';
 import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from '../../genericComponents/button/button.component';
 
 @Component({
   selector: 'app-selected-halls',
@@ -22,12 +23,13 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     NgxMatTimepickerModule,
     CommonModule,
-    FormsModule],
+    FormsModule,
+    ButtonComponent],
   templateUrl: './selected-halls.component.html',
   styleUrl: './selected-halls.component.scss'
 })
 export class SelectedHallsComponent {
-
+  cancelBtn: string = "Cancel";
   requestSent: boolean = true;
   requestAccepted: boolean = true;
   selectedHalls: any[] = [];
