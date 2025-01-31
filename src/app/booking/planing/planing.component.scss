@@ -20,13 +20,19 @@
 
         &__section {
             border: gutter-sp(1) solid $border-silver;
+            outline: none;
             border-radius: gutter-sp(7);
             cursor: pointer;
 
             .active {
-                background-color: $active-list-bg-clr;
+                background-color: $white;
                 border: gutter-sp(1) solid $secondary-color;
             }
+        }
+
+        .mdc-list-item:focus::before {
+            background-color: $white;
+            outline: none;
         }
 
         &__section .mdc-list-item--with-trailing-radio.mdc-list-item {
@@ -36,20 +42,15 @@
 
         &__section:hover {
             border-color: $secondary-color;
-            background-color: $active-list-bg-clr;
+            border: gutter-sp(1) solid $secondary-color;
             cursor: pointer;
         }
 
-        &__section mat-list-option.mat-focused {
-            background-color: $active-list-bg-clr;
+        &__section mat-list-option:focus {
             color: $active-list-bg-clr;
         }
 
-        &__section mat-list-option:focus {
-            background-color: $active-list-bg-clr;
-            color: $active-list-bg-clr;
-        }
-        ::ng-deep .mdc-list-item__primary-text{
+        ::ng-deep .mdc-list-item__primary-text {
             color: $black;
         }
     }

@@ -11,8 +11,8 @@
                 <h4 class="text-center p-2 mb-0">Available Slots</h4>
                 <mat-selection-list #slot [multiple]="false" class="slots_radio" (selectionChange)="slotsChange($event)">
                     @for (slot of slots; track $index) {
-                    <div class="card m-10 align-items-center mx-auto ">
-                        <mat-list-option [value]="slot"><span  class="fs-13 fw-400">{{slot.shift}}</span></mat-list-option>
+                    <div class="card m-10 align-items-center mx-auto slot">
+                        <mat-list-option [value]="slot"><span  class="fs-13 fw-400 ">{{slot.shift}}</span></mat-list-option>
                     </div>
                     }
                 </mat-selection-list>
