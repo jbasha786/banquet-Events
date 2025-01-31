@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CustomCalenderComponent } from '../shared/components/custom-calender/custom-calender.component';
+import { ButtonComponent } from '../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-wedding-page',
   standalone: true,
-  imports: [CommonModule, CarouselModule, CustomCalenderComponent],
+  imports: [CommonModule, CarouselModule, CustomCalenderComponent,ButtonComponent],
   templateUrl: './wedding-page.component.html',
   styleUrls: ['./wedding-page.component.scss'],
 })

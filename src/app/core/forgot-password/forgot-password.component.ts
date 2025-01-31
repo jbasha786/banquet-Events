@@ -5,11 +5,12 @@ import { DefaultService } from '../../services/default.service';
 import { forgotpwdModel } from '../../_models/forgotpwd.model';
 import { ForgotpwdService } from '../../services/forgotpwd/forgotpwd.service';
 import { Router } from '@angular/router';
+import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-forgot-password',
   standalone: true,
-  imports: [MatFormFieldModule, FormsModule, ReactiveFormsModule],
+  imports: [MatFormFieldModule, FormsModule, ReactiveFormsModule,ButtonComponent],
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.scss'
 })

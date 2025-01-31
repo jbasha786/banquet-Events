@@ -27,36 +27,7 @@
 .list-container {
   width: gutter-per(90);
 }
-.btn-book {
-  background-color: $secondary-color;
-  color: $white;
-  border-radius: gutter-sp(30);
-  border: gutter-sp(0) solid $secondary-color;
-  font-size: gutter-sp(16);
-  font-weight: 500;
-  width: gutter-sp(230);
-  padding: gutter-sp(8);
-  &:hover {
-    background-color: $primary-hover; 
-    box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black; 
-    }
-}
-.btn-download,
-.btn-quote {
-  background-color: $white;
-  color: $secondary-color;
-  border-radius: gutter-sp(30);
-  border: gutter-sp(1) solid $secondary-color;
-  font-size: gutter-sp(16);
-  font-weight: 500;
-  width: gutter-sp(230);
-  padding: gutter-sp(8);
-  &:hover {
-    background-color: $secondary-backgroundhvr; 
-    color: $primary-hover; 
-    border-color: $primary-hover; 
-  }
-}
+
 
 .left-column {
   flex: 3;

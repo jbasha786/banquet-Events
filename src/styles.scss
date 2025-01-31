@@ -656,30 +656,6 @@ html {
   border: gutter-sp(1) solid $secondary-color;
 }
 
-//primary and secondary and cancel
-.secondarybtn {
-  color: $secondary-color;
-  border: gutter-sp(1) solid $secondary-color;
-  background-color: transparent;
-
-  &:hover {
-    background-color: $secondary-backgroundhvr;
-    color: $primary-hover;
-    border-color: $primary-hover;
-  }
-
-}
-
-.primarybtn {
-  color: $white;
-  background-color: $secondary-color;
-  border: none;
-
-  &:hover {
-    background-color: $primary-hover;
-    box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
-  }
-}
 
 //input select focus
 input::-ms-reveal,

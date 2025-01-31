@@ -16,17 +16,7 @@
   &__button {
     text-align: center;
 
-    &__btn {
-      background-color: $secondary-color;
-      color: $white;
-      border: $value-null;
-      border-radius: gutter-sp(5);
-      padding:gutter-sp(10) gutter-sp(100);
-      &:hover {
-        background-color: $primary-hover; 
-            box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black; 
-      }
-    }
+    
   }
 }
 .sign-up-form {

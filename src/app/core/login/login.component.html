@@ -43,12 +43,21 @@
                     <a class="loginForm__form__signupdiv__signUp fw-500" (click)="signUp()">Sign Up</a>
                 </div>
                 <div class="loginForm__form__loginbtndiv d-flex flex-column mb-14">
-                    <button class="loginForm__form__loginbtndiv primarybtn p-2 rounded-2 fs-16 fw-500" type="submit"
-                        (click)="onSubmit()">Login</button>
+                    <app-button
+                    [btnClass]="'loginForm__form__loginbtndiv primarybtn p-2 rounded-2 fs-16 fw-500'"
+                    [btnName]="'Login'"
+                    (bannerActionEvent)="onSubmit()">
+                    </app-button>
+                   
                 </div>
                 <div class="loginForm__form__loginbtndiv d-flex flex-column mb-30">
-                    <button class="loginForm__form__loginbtndiv secondarybtn p-2 rounded-2 fs-16 fw-500"  type="submit"
-                        (click)="onSubmit()" [routerLink]="['/continueasguest']">Continue as Guest </button>
+                    <app-button
+                    [btnClass]="'loginForm__form__loginbtndiv secondarybtn p-2 rounded-2 fs-16 fw-500'"
+                    [btnName]="'Continue as Guest'"
+                    (bannerActionEvent)="onSubmit()"
+                    [routerLink]="['/continueasguest']">
+                    </app-button>
+                   
                 </div>
 
                 
