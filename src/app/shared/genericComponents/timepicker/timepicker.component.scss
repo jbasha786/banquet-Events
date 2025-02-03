@@ -1,0 +1,26 @@
+@import "../../../styles/variable.scss";
+
+
+.custom_date {
+    --mdc-outlined-text-field-outline-color: #{$event-input-border-clr};
+    --mdc-outlined-text-field-hover-outline-color: #{$event-input-border-clr};
+    --mdc-outlined-text-field-focus-outline-color: #{$secondary-color};
+    --mdc-outlined-text-field-focus-outline-width: #{gutter-sp(1)};
+    width: gutter-per(100);
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    opacity: gutter-per(45);
+    font-size: gutter-sp(14);
+    font-weight: 500;
+}
+
+.custom_label {
+    opacity: gutter-per(75);
+}
+
+.mat-icon {
+    opacity: gutter-per(75);
+    color: $drop-down-icon-clr;
+}
+  

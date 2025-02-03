@@ -8,34 +8,23 @@
             </div>
             <div class="custom-outlined-field">
                 <label for="guests" class="custom_label mb-1">Check-In Date</label>
-                <mat-form-field class="w-100 custom_date" appearance="outline" (click)="picker.open()">
-                    <mat-date-range-input [rangePicker]="picker">
-                        <input matStartDate placeholder="Start date" class="custom_time">
-                        <input matEndDate placeholder="End date" class="custom_time">
-                    </mat-date-range-input>
-                    <mat-icon matIconPrefix>calendar_month</mat-icon>
-                    <mat-datepicker-toggle matIconSuffix [for]="picker">
-
-                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-                    </mat-datepicker-toggle>
-                    <mat-date-range-picker #picker></mat-date-range-picker>
-                </mat-form-field>
+                <app-date-range-picker [className]="'w-100 custom_date'" [matPickerClass]="'rangePicker'" [placeholderClass1]="'Start date'"
+                [placeholderClass2]="'End date'" (selectedDate)="selectedDateRange($event)"></app-date-range-picker>
             </div>
             <div class="mb-4">
                 <label for="duration" class="custom_label mb-1">Event Duration</label>
-                <div class="gap-0 gap-sm-4 gap-lg-0 gap-xl-4 d-flex flex-column flex-md-row flex-lg-column flex-xl-row align-items-start">
-                    <mat-form-field class="w-100 custom_date" appearance="outline" (click)="startTimepicker.open()">
-                        <input matInput [ngxMatTimepicker]="startTimepicker" placeholder="Start Time" class="custom_time">
-                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-                        <ngx-mat-timepicker #startTimepicker></ngx-mat-timepicker>
-                    </mat-form-field>
-                    <mat-form-field class="w-100 custom_date" appearance="outline" (click)="endTimepicker.open()">
-                        <input matInput [ngxMatTimepicker]="endTimepicker" placeholder="End Time" class="custom_time">
-                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-                        <ngx-mat-timepicker #endTimepicker></ngx-mat-timepicker>
-                    </mat-form-field>
-                    <div class="flex-fill w-100">
-                        <app-button [btnClass]="'buttonforTimepart'" [btnName]="'Time Part'" (bannerActionEvent)="timePart()"></app-button>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedStartTime($event)"
+                            [matPickerClass]="'startTimepicker'" [placeHolderText]="'Start Time'"></app-timepicker>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedEndTime($event)"
+                            [matPickerClass]="'endTimepicker'" [placeHolderText]="'End Time'"></app-timepicker>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <app-button [btnClass]="'buttonforTimepart'" [btnName]="'Time Part'"
+                            (bannerActionEvent)="timePart()"></app-button>
                     </div>
                 </div>
             </div>
