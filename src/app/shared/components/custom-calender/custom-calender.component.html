@@ -1,17 +1,17 @@
 <div class="calender text-center my-3 d-flex align-items-center flex-column">
   <div class="d-flex align-items-center justify-content-center py-4">
-    <button class="btnmain" mat-icon-button (click)="changeMonth(-1)">
+    <p class="btnmain mb-0 mr-6" mat-icon-button (click)="changeMonth(-1)">
       <img src="../../../../assets/images/events/backarrow.svg" alt="" class="gobackicon" width="30px" />
-    </button>
+    </p>
     <span class="mb-0">{{ currentMonth }} {{ currentYear }}</span>
-    <button class="btnmain" mat-icon-button (click)="changeMonth(1)">
+    <p class="btnmain mb-0 ml-6" mat-icon-button (click)="changeMonth(1)" role="button">
       <img src="../../../../assets/images/events/rightchevron.svg" alt="" class="rightchevron" width="30px" />
-    </button>
+    </p>
   </div>
   <div class="d-flex align-items-center justify-content-between days-grid">
-    <button class="btnmain pl-0" mat-icon-button (click)="scrollDates(-1)">
+    <p class="btnmain pl-0 mb-0 mr-6" mat-icon-button (click)="scrollDates(-1)">
       <img src="../../../../assets/images/events/backarrow.svg" alt="" class="gobackicon" width="30px" />
-    </button>
+    </p>
     <div class="calendar-grid d-flex justify-content-start align-items-center gap-18 gap-md-2 ">
       <div class="calendar-day d-flex justify-content-center align-items-center" *ngFor="let day of visibleDates"
         (click)="selectDate(day.date)">
@@ -21,9 +21,8 @@
         </div>
       </div>
     </div>
-    <button class="btnmain pr-0" mat-icon-button (click)="scrollDates(1)"
-      [disabled]="currentIndex + visibleRange >= daysInMonth.length">
+    <p class="btnmain pr-0 mb-0 ml-6" mat-icon-button (click)="scrollDates(1)">
       <img src="../../../../assets/images/events/rightchevron.svg" alt="" class="rightchevron" width="30px" />
-    </button>
+  </p>
   </div>
 </div>

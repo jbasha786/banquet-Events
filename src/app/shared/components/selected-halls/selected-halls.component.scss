@@ -42,25 +42,29 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        .hallName{
+
+        .hallName {
             color: $black;
         }
-        .hallName:hover{
+
+        .hallName:hover {
             color: $secondary-color;
         }
+
         .halldetails .arrow {
             opacity: 0;
             transform: translateX(0);
             transition: opacity 0.3s ease, transform 0.3s ease;
             margin-left: gutter-sp(2);
         }
-        
+
         //hover-change
         .halldetails:hover .arrow {
             opacity: 1;
             transform: translateX(gutter-sp(8));
             color: $secondary-color ;
         }
+
         .view:hover {
             color: $secondary-color;
         }
@@ -210,16 +214,6 @@
 
     &__priceColor {
         color: $primary-color;
-    }
-
-    .reserve {
-        background-color: $green-select;
-        color: $white;
-    }
-
-        .selected {
-        border: gutter-sp(1) solid $selected-border-clr;
-        background: $white;
     }
 
     &__articles {

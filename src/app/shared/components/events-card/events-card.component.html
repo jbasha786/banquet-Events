@@ -23,7 +23,7 @@
       </div>
       <div class="d-flex align-items-center justify-content-center gap-lg-2">
         <span class="pipe">|</span>
-        <button class="booknowBtn p-1 fs-12 fs-md-14 fs-lg-16">{{bookNow}}</button>
+        <app-button [btnClass]="'booknowBtn'" [btnName]="bookNow"  (bannerActionEvent)="booknow()"></app-button>
       </div>
     </div>
   </div>

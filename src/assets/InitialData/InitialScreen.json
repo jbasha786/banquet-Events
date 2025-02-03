@@ -202,7 +202,7 @@
                 "value": "Cancelled Booking"
             },
             "viewDetails": "View Details",
-            "viewImage": "/assets/images/BookingHistory/view_image.png",
+            "viewImage": "/assets/images/BookingHistory/pdf.svg",
             "hoverImage": "/assets/images/BookingHistory/pdf-clr.svg"
         },
         {
@@ -240,7 +240,7 @@
                 "value": "Booking Confirmed"
             },
             "viewDetails": "View Details",
-            "viewImage": "/assets/images/BookingHistory/view_image.png",
+            "viewImage": "/assets/images/BookingHistory/pdf.svg",
             "hoverImage": "/assets/images/BookingHistory/pdf-clr.svg"
         },
         {
@@ -278,7 +278,7 @@
                 "value": "Cancelled Booking"
             },
             "viewDetails": "View Details",
-            "viewImage": "/assets/images/BookingHistory/view_image.png",
+            "viewImage": "/assets/images/BookingHistory/pdf.svg",
             "hoverImage": "/assets/images/BookingHistory/pdf-clr.svg"
         }
     ],

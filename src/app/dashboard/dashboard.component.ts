@@ -79,7 +79,6 @@ export class DashboardComponent {
   }
 
   ngOnInit() {
-    this.scrollToTop();
     this.getInitialData();
     this.getOverviewPageStatus();
   }
@@ -105,14 +104,6 @@ export class DashboardComponent {
     }
   }
 
-  scrollToTop() {
-    if (isPlatformBrowser(this.platformId)) {
-      const element = document.getElementById('webPage');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {

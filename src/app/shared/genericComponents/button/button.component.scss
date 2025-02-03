@@ -150,10 +150,69 @@
     color: $cancelcolor;
     border: gutter-sp(1) solid $cancelcolor ;
     padding: gutter-sp(9) gutter-sp(33);
+    font-size: gutter-sp(14);
+    font-weight: 500;
+    border-radius: gutter-sp(24);
 
     &:hover {
         background-color: $cancelhover;
         color: $cancelcolor;
         border-color: $cancelcolor;
+    }
+}
+
+.booknowBtn {
+    color: $booknow-pink;
+    font-weight: 700;
+    background-color: $priceBackGrnd;
+    border: none;
+    &:hover {
+        color: $hoversecondary-clr;
+    
+    }
+}
+
+.cancelBooking {
+    background-color: $cancelbtn;
+    color: $white;
+    border: gutter-sp(1) solid $cancelbtn;
+    border-radius: gutter-sp(6);
+    font-size: gutter-sp(10);
+    height: gutter-sp(30);
+    padding: gutter-sp(0) gutter-sp(5);
+    &:hover {
+        background-color: $white;
+        color: $cancelbtn;
+        border: gutter-sp(1) solid $cancelbtn;
+    }
+}
+
+.editBooking {
+    background-color: $editbtn;
+    color: $white;
+    border: gutter-sp(1) solid $editbtn;
+    border-radius: gutter-sp(6);
+    font-size: gutter-sp(10);
+    height: gutter-sp(30);
+    padding: gutter-sp(0) gutter-sp(5);
+    &:hover {
+        background-color: $white;
+        color: $editbtn;
+        border: gutter-sp(1) solid $editbtn;
+    }
+}
+
+.viewDetail {
+    background-color: $viewdetailbtn;
+    color: $white;
+    border: gutter-sp(1) solid $viewdetailbtn;
+    border-radius: gutter-sp(6);
+    font-size: gutter-sp(10);
+    height: gutter-sp(30);
+    padding: gutter-sp(0) gutter-sp(5);
+    &:hover {
+        background-color: $white;
+        color: $viewdetailbtn;
+        border: gutter-sp(1) solid $viewdetailbtn;
     }
 }

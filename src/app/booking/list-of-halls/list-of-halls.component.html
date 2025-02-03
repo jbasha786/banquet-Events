@@ -99,9 +99,9 @@
                             class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
                             <div class="d-flex flex-column-reverse flex-md-row align-items-center  flex-row gap-2">
                                 <app-button [btnClass]="'selected'" [btnName]="buttonSelected" *ngIf="item.isActive"
-                                    (click)="toggleSelection(item)"></app-button>
+                                    (bannerActionEvent)="toggleSelection(item)"></app-button>
                                 <app-button [btnClass]="'reserve'" [btnName]="buttonSelect" *ngIf="!item.isActive"
-                                    (click)="toggleSelection(item)"></app-button>
+                                    (bannerActionEvent)="reserve(item)"></app-button>
 
                                 <div class="d-flex gap-2 my-3 my-md-0">
                                     <span class="ms-2 hallsView__articles fs-14 fw-500" role="button"

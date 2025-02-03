@@ -10,22 +10,11 @@
         background-color: $priceBackGrnd;
         border-radius: gutter-sp(8);
     }
-    .booknowBtn{
-        border: none;
-    }
+    
     .card-text{
         font-weight: 500;
         font-size: gutter-sp(13);
         color: $font-dull;
-    }
-    .booknowBtn{
-        color: $booknow-pink;
-        font-weight: 700;
-        background-color: $priceBackGrnd;
-    }
-    .booknowBtn:hover{
-        color: $hoversecondary-clr;
- 
     }
     .pipe{
         color: $priceColor;
