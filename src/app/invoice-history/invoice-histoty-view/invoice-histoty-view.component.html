@@ -1,6 +1,6 @@
 <div class="invoice-view pt-5 pb-1">
     <!-- Header section -->
-    <div class="invoice-view__head mb-20 d-flex flex-column px-5">
+    <div class="invoice-view__head mb-20 d-flex flex-column px-4 px-md-5">
         <div class="d-flex justify-content-between mb-10 align-items-center">
             <img src="{{InvoiceViewData.logo}}" alt="Invoice Logo" class="logo">
             <div class="d-flex gap-2">
@@ -29,7 +29,7 @@
     <!-- Bill Section -->
     <div class="invoice-view__bill mb-20">
         <div
-            class="invoice-view__bill__section d-flex justify-content-between align-items-start g-3 px-5">
+            class="invoice-view__bill__section d-flex justify-content-between align-items-start g-3 px-4 px-md-5">
             <div class="col-4">
                 <p class="fs-13 mb-1 priceweight invoiceId">Bill To</p>
                 <p class="fs-11 refclr">{{InvoiceViewData.billTo}}</p>
@@ -45,7 +45,7 @@
         </div>
     </div>
     <!-- Services Section -->
-    <div class="invoice-view__service mt-20 mb-20 px-5">
+    <div class="invoice-view__service mt-20 mb-20 px-4 px-md-5">
         <span class="fw-bold fs-13">Services</span>
         <hr>
         <div class="d-flex justify-content-between">
@@ -69,7 +69,7 @@
 
     <!-- Total Section -->
     <div class="mt-20 mb-20 invoice-view__total">
-        <div class="d-flex justify-content-between invoice-view__total__section px-5">
+        <div class="d-flex justify-content-between invoice-view__total__section px-4 px-md-5">
             <span class="fw-bold fs-13">Total</span>
             <span class="invoiceId priceweight fs-13">€ 4240.00</span>
         </div>
@@ -78,26 +78,26 @@
     <!-- Details Section -->
 
     <div class="invoice-view__details mt-10 mb-10">
-        <div class="invoice-view__details d-flex justify-content-between align-items-start px-5 gap-2 flex-wrap">
+        <div class="invoice-view__details d-flex justify-content-between align-items-start px-4 px-md-5 gap-2 flex-wrap">
             <div>
                 <span class="fs-10 fw-500" >Account</span>
-                <p class="invoiceSub fs-10">{{InvoiceViewData.account}}</p>
+                <p class="invoiceSub fs-10 mb-0">{{InvoiceViewData.account}}</p>
             </div>
             <div>
                 <span class="fs-10 fw-500 text-nowrap">IBAN number</span>
-                <p class="invoiceSub fs-10">{{InvoiceViewData.ibanNumber}}</p>
+                <p class="invoiceSub fs-10 mb-0">{{InvoiceViewData.ibanNumber}}</p>
             </div>
             <div>
                 <span class="fs-10 fw-500 text-nowrap">BIC code</span>
-                <p class="invoiceSub fs-10">{{InvoiceViewData.bicCode}}</p>
+                <p class="invoiceSub fs-10 mb-0">{{InvoiceViewData.bicCode}}</p>
             </div>
             <div>
                 <span class="fs-10 fw-500">VAT</span>
-                <p class="invoiceSub fs-10">{{InvoiceViewData.vat}}</p>
+                <p class="invoiceSub fs-10 mb-0">{{InvoiceViewData.vat}}</p>
             </div>
             <div>
                 <span class="fs-10 fw-500">CoC</span>
-                <p class="invoiceSub fs-10">{{InvoiceViewData.coc}}</p>
+                <p class="invoiceSub fs-10 mb-0">{{InvoiceViewData.coc}}</p>
             </div>
         </div>
 
@@ -105,14 +105,7 @@
 
     <!-- payment Text Desc -->
 
-    <div class="invoice-view__payment px-5">
+    <div class="invoice-view__payment px-4 px-md-5">
         <p class="fs-7">{{InvoiceViewData.paymentInfo}}</p>
     </div>
-
-    <!-- close Icon -->
-    <!-- <div class="invoice-view__close">
-        <div class="invoice-view__close__icon cursor" (click)="close()">
-            <mat-icon fontIcon="close"></mat-icon>
-        </div>
-    </div> -->
 </div>
