@@ -8,15 +8,17 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ButtonComponent } from '../../genericComponents/button/button.component';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MatCheckboxModule, MatTableModule, MatIconModule, MatDialogActions, FormsModule],
+  imports: [MatCheckboxModule, MatTableModule, MatIconModule, MatDialogActions, FormsModule, ButtonComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
+  saveBtn:string = "Save";
   searchQuery: string = '';
   displayedColumns: string[] = ['select', 'name', 'qty', 'price',];
   startersDataSource = new MatTableDataSource<any>([]);

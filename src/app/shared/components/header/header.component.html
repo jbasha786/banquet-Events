@@ -1,79 +1,39 @@
 <div class="header-placeholder"></div>
-<nav
-  class="navbar navbar-expand-lg bg-white fixed-top shadow"
-  [ngStyle]="{ 'z-index': navZIndex }"
->
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow" [ngStyle]="{ 'z-index': navZIndex }">
   <p class="main_line h-4 m-0 d-none d-lg-block"></p>
   <div class="left header-align">
     <div class="header__logo one order-lg-0 order-2">
       <a class="navbar-brand cursor mx-auto">
-        <img
-          class="logo mb-0 w-90 w-lg-140 h-76"
-          src="{{ headerInfo?.logo }}"
-          alt=""
-          (click)="goToHome()"
-        />
+        <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{ headerInfo?.logo }}" alt="" (click)="goToHome()" />
       </a>
     </div>
 
     <!-- Header-above-line -->
     <div class="second order-lg-2 order-2">
-      <button
-        class="navbar-toggler nav-togleuser"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar"
-        aria-label="Toggle navigation"
-      >
+      <p class="navbar-toggler nav-togleuser mb-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </p>
       <!-- side-bar -->
-      <div
-        class="side-bar offcanvas offcanvas-start w-70"
-        tabindex="-1"
-        id="offcanvasNavbar2"
-        aria-labelledby="offcanvasNavbarLabel"
-      >
+      <div class="side-bar offcanvas offcanvas-start w-70" tabindex="-1" id="offcanvasNavbar2"
+        aria-labelledby="offcanvasNavbarLabel">
         <!-- sidebar-header -->
         <div class="offcanvas-header text-dark">
-          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>    offcanvasNavbar2 -->
-          <button
-            type="button"
-            class="btn-close fw-bolder"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+          <p type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></p>
         </div>
         <!-- sidebar-body -->
         <div class="offcanvas-body my-30">
-          <ul
-            class="navbar-nav justify-content-end flex-grow-1 gap-18 gap-lg-30"
-          >
-            <li
-              class="nav-item p-10 p-lg-0 fw-400 cursor"
-              *ngFor="let item of navList; let i = index"
-              (click)="goTo(item.link)"
-            >
-              <div
-                class="link-dark link-underline-opacity-0 hover-container"
-                (mouseenter)="onMouseEnter(item)"
-                (mouseleave)="onMouseLeave()"
-              >
-                <img
-                  class="ps-2 pe-2 header-images"
-                  [ngStyle]="{
+          <ul class="navbar-nav justify-content-end flex-grow-1 gap-18 gap-lg-30">
+            <li class="nav-item p-10 p-lg-0 fw-400 cursor" *ngFor="let item of navList; let i = index"
+              (click)="goTo(item.link)">
+              <div class="link-dark link-underline-opacity-0 hover-container" (mouseenter)="onMouseEnter(item)"
+                (mouseleave)="onMouseLeave()">
+                <img class="ps-2 pe-2 header-images" [ngStyle]="{
                     width: i === specialIndex ? '26px' : '28px',
                     opacity: hoveredItem === item ? '1' : '0.7'
-                  }"
-                  [src]="hoveredItem === item ? item.hoverSrc : item.src"
-                  alt="{{ item.name }}"
-                />
-                <span
-                  class="fs-14 fs-lg-11 fw-300 event_name"
-                  [ngClass]="{ 'hovered-text': hoveredItem === item }"
-                  role="button"
-                >
+                  }" [src]="hoveredItem === item ? item.hoverSrc : item.src" alt="{{ item.name }}" />
+                <span class="fs-14 fs-lg-11 fw-300 event_name" [ngClass]="{ 'hovered-text': hoveredItem === item }"
+                  role="button">
                   {{ item.name }}
                 </span>
               </div>
@@ -84,66 +44,38 @@
     </div>
     <!-- Header-below-line -->
     <div class="third d-flex flex-lg-grow-1 order-lg-2 order-1">
-      <button
-        class="navbar-toggler nav-togleuser"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar2"
-        aria-controls="offcanvasNavbar"
-        aria-label="Toggle navigation"
-      >
+      <p class="navbar-toggler nav-togleuser mb-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="">
-          <img
-            class="usericon h-20"
-            src="../../../../assets/images/logo/user.svg"
-            alt=""
-          />
+          <img class="usericon h-20" src="../../../../assets/images/logo/user.svg" alt="" />
         </span>
-      </button>
+      </p>
       <!-- side-bar -->
-      <div
-        class="side-bar offcanvas offcanvas-end w-70"
-        tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel"
-      >
+      <div class="side-bar offcanvas offcanvas-end w-70" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
         <!-- sidebar-header -->
         <div class="offcanvas-header text-dark">
-          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
-          <button
-            type="button"
-            class="btn-close fw-bolder m-0"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+          <p type="button" class="btn-close fw-bolder m-0" data-bs-dismiss="offcanvas" aria-label="Close"></p>
         </div>
         <!-- sidebar-body -->
         <div class="offcanvas-body mt-lg-18">
-          <ul
-            class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 gap-18 gap-lg-35"
-          >
+          <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 gap-18 gap-lg-35">
             @for(item of navEvent_Items; track $index) {
             <li class="nav-item p-10 p-lg-0 fs-15">
-              <a
-                class="link-dark link-underline-opacity-0 fw-regular event_name"
-                href="#"
-              >
+              <a class="link-dark link-underline-opacity-0 fw-regular event_name" href="#">
                 {{ item.eventName }}
               </a>
             </li>
             <!-- Add a button after the last item -->
             @if (item.eventName === "Corporate Events") {
             <li class="nav-item p-10 p-lg-0 fs-17">
-              <app-button
-                [btnClass]="'btn-live gif-btn fw-500 fs-12 gap-6'"
-                [btnName]="'LIVE EVENTS'"
-                [showDot]="true"
+              <app-button [btnClass]="'btn-live gif-btn fw-500 fs-12 gap-6'" [btnName]="'LIVE EVENTS'" [showDot]="true"
                 (bannerActionEvent)="handleButtonClick()">
-               </app-button>
-              
+              </app-button>
+
             </li>
-         } 
-      }
+            }
+            }
           </ul>
         </div>
       </div>

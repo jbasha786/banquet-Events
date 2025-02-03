@@ -33,45 +33,47 @@
                         <!-- Checkbox Column -->
                         <ng-container matColumnDef="select">
                             <th mat-header-cell *matHeaderCellDef class="table_header fw-light">
-                                <mat-checkbox disableRipple (change)="toggleAllRows(selectionStarters, startersDataSource)"
-                                              [checked]="isAllSelected(selectionStarters, startersDataSource)">
+                                <mat-checkbox disableRipple
+                                    (change)="toggleAllRows(selectionStarters, startersDataSource)"
+                                    [checked]="isAllSelected(selectionStarters, startersDataSource)">
                                 </mat-checkbox>
-                              </th>
-                              <td mat-cell *matCellDef="let row" class="table_data">
-                                <mat-checkbox disableRipple (click)="$event.stopPropagation()" 
-                                              (change)="selectionStarters.toggle(row)" 
-                                              [checked]="selectionStarters.isSelected(row)" 
-                                              [aria-label]="checkboxLabel(selectionStarters, row)">
+                            </th>
+                            <td mat-cell *matCellDef="let row" class="table_data">
+                                <mat-checkbox disableRipple (click)="$event.stopPropagation()"
+                                    (change)="selectionStarters.toggle(row)"
+                                    [checked]="selectionStarters.isSelected(row)"
+                                    [aria-label]="checkboxLabel(selectionStarters, row)">
                                 </mat-checkbox>
-                              </td>
+                            </td>
                         </ng-container>
-    
+
                         <!-- Item Name Column -->
                         <ng-container matColumnDef="name">
                             <th mat-header-cell *matHeaderCellDef class="table_header">Name</th>
-                            <td mat-cell *matCellDef="let element" class="table_data"> {{element.name}}  </td>
+                            <td mat-cell *matCellDef="let element" class="table_data"> {{element.name}} </td>
                         </ng-container>
                     </div>
-    
+
                     <!-- Quantity Column -->
                     <ng-container matColumnDef="qty">
                         <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> QUANTITY </th>
                         <td mat-cell *matCellDef="let element" class="table_data_Qty ">
-                            <input type="number" class="col-10 col-md-4 ms-1 quantity" [value]="element.qty" (input)="updateQty(element, $event)">
+                            <input type="number" class="col-10 col-md-4 ms-1 quantity" [value]="element.qty"
+                                (input)="updateQty(element, $event)">
                         </td>
                     </ng-container>
-    
+
                     <!-- Price Column -->
                     <ng-container matColumnDef="price" class="mr-3">
                         <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> PRICE </th>
                         <td mat-cell *matCellDef="let element" class="table_price_data"> {{element.price}} </td>
                     </ng-container>
-    
+
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;">
                 </table>
             </div>
-    
+
             <div class="my-2">
                 <span class="fw-400 fs-18 menu_headings">Main Course</span>
             </div>
@@ -81,47 +83,51 @@
                         <!-- Checkbox Column -->
                         <ng-container matColumnDef="select" class="mb-4">
                             <th mat-header-cell *matHeaderCellDef class="table_header">
-                                <mat-checkbox disableRipple (change)="toggleAllRows(selectionMainCourse, mainCourseDataSource)"
-                                              [checked]="isAllSelected(selectionMainCourse, mainCourseDataSource)">
+                                <mat-checkbox disableRipple
+                                    (change)="toggleAllRows(selectionMainCourse, mainCourseDataSource)"
+                                    [checked]="isAllSelected(selectionMainCourse, mainCourseDataSource)">
                                 </mat-checkbox>
-                              </th>
-                              <td mat-cell *matCellDef="let row" class="table_data">
-                                <mat-checkbox disableRipple (click)="$event.stopPropagation()" 
-                                              (change)="selectionMainCourse.toggle(row)" 
-                                              [checked]="selectionMainCourse.isSelected(row)" 
-                                              [aria-label]="checkboxLabel(selectionMainCourse, row)">
+                            </th>
+                            <td mat-cell *matCellDef="let row" class="table_data">
+                                <mat-checkbox disableRipple (click)="$event.stopPropagation()"
+                                    (change)="selectionMainCourse.toggle(row)"
+                                    [checked]="selectionMainCourse.isSelected(row)"
+                                    [aria-label]="checkboxLabel(selectionMainCourse, row)">
                                 </mat-checkbox>
-                              </td>
+                            </td>
                         </ng-container>
-    
+
                         <!-- Item Name Column -->
                         <ng-container matColumnDef="name">
                             <th mat-header-cell *matHeaderCellDef class="table_header">Name</th>
-                            <td mat-cell *matCellDef="let element" class="table_data"> {{element.name}}  </td>
+                            <td mat-cell *matCellDef="let element" class="table_data"> {{element.name}} </td>
                         </ng-container>
                     </div>
-    
+
                     <!-- Quantity Column -->
                     <ng-container matColumnDef="qty">
                         <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> QUANTITY </th>
                         <td mat-cell *matCellDef="let element" class="table_data_Qty">
-                            <input type="number" class="col-10 col-md-4 ms-1 quantity" [value]="element.qty" (input)="updateQty(element, $event)">
+                            <input type="number" class="col-10 col-md-4 ms-1 quantity" [value]="element.qty"
+                                (input)="updateQty(element, $event)">
                         </td>
                     </ng-container>
-    
+
                     <!-- Price Column -->
                     <ng-container matColumnDef="price">
                         <th mat-header-cell *matHeaderCellDef class="table_header_Qty"> PRICE </th>
                         <td mat-cell *matCellDef="let element" class="table_price_data"> {{element.price}} </td>
                     </ng-container>
-    
+
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;">
                 </table>
             </div>
         </div>
         <div class=" button-container mt-10 mr-8 d-flex justify-content-end align-item-center ">
-            <button mat-raised-button color="primary" class="p-2 px-4 border rounded-pill menu__save-btn" (click)="onSave()">Save</button>
-          </div>
+            <!-- <button mat-raised-button color="primary" class="p-2 px-4 border rounded-pill menu__save-btn" (click)="onSave()">Save</button> -->
+            <app-button [btnClass]="'menu-save-btn p-2 px-4 border rounded-pill'" [btnName]="saveBtn"
+                (bannerActionEvent)="onSave()"></app-button>
+        </div>
     </div>
 </div>
