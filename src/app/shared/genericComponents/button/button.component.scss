@@ -141,6 +141,7 @@
     font-weight: 500;
 }
 
+//Events card buttons
 .reserve {
     background-color: $green-select;
     border: gutter-sp(1) solid $green-select;
@@ -179,9 +180,10 @@
     font-weight: 700;
     background-color: $priceBackGrnd;
     border: none;
+
     &:hover {
         color: $hoversecondary-clr;
-    
+
     }
 }
 
@@ -193,6 +195,7 @@
     font-size: gutter-sp(10);
     height: gutter-sp(30);
     padding: gutter-sp(0) gutter-sp(5);
+
     &:hover {
         background-color: $white;
         color: $cancelbtn;
@@ -208,6 +211,7 @@
     font-size: gutter-sp(10);
     height: gutter-sp(30);
     padding: gutter-sp(0) gutter-sp(5);
+
     &:hover {
         background-color: $white;
         color: $editbtn;
@@ -223,12 +227,14 @@
     font-size: gutter-sp(10);
     height: gutter-sp(30);
     padding: gutter-sp(0) gutter-sp(5);
+
     &:hover {
         background-color: $white;
         color: $viewdetailbtn;
         border: gutter-sp(1) solid $viewdetailbtn;
     }
 }
+
 //live
 .dot {
     height: gutter-sp(8);
@@ -236,17 +242,17 @@
     background-color: $livebtn-clr;
     border-radius: gutter-per(50);
     display: inline-block;
-  }
-  
-  .btn-live {
+}
+
+.btn-live {
     background-color: transparent;
     color: $livebtn-clr;
     border: gutter-sp(2) solid $livebtn-clr;
     padding: gutter-sp(4) gutter-sp(10);
     border-radius: gutter-sp(4);
-  }
-  
-  .gif-btn {
+}
+
+.gif-btn {
     background-image: url("../../../../assets/images/overview/liveevents.gif");
     background-size: cover;
     background-position: center;
@@ -254,11 +260,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
- 
-  
-  //livebutton
-  button {
+}
+
+
+//livebutton
+button {
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -268,87 +274,88 @@
     padding: gutter-sp(4) gutter-sp(10);
     border-radius: gutter-sp(4);
     overflow: hidden;
-  }
-   
-  span.dot {
+}
+
+span.dot {
     height: gutter-sp(8);
     width: gutter-sp(8);
     background-color: $livebtn-clr;
     border-radius: gutter-per(50);
     display: inline-block;
-  }
-   
-  .btn-live::before,
-  .btn-live::after {
+}
+
+.btn-live::before,
+.btn-live::after {
     content: "";
     width: $value-null;
     height: gutter-sp(1);
     position: absolute;
     transition: all 0.2s linear;
     background: $livebtn-clr;
-  }
-   
-  span::before,
-  span::after {
+}
+
+span::before,
+span::after {
     content: "";
     width: gutter-sp(1);
     height: $value-null;
     position: absolute;
     transition: all 0.2s linear;
     background: $livebtn-clr;
-  }
-   
-  button:hover::before,
-  button:hover::after {
+}
+
+button:hover::before,
+button:hover::after {
     width: gutter-per(100);
-  }
-   
-  button:hover span::before,
-  button:hover span::after {
+}
+
+button:hover span::before,
+button:hover span::after {
     height: gutter-per(100);
-  }
-   
-  .btn-live::before,
-  .btn-live::after {
+}
+
+.btn-live::before,
+.btn-live::after {
     transition-delay: 0s;
-  }
-   
-  .btn-live span::before,
-  .btn-live span::after {
+}
+
+.btn-live span::before,
+.btn-live span::after {
     transition-delay: 0.2s;
-  }
-   
-  .btn-live::before {
+}
+
+.btn-live::before {
     right: $value-null;
     top: $value-null;
-  }
-   
-  .btn-live::after {
+}
+
+.btn-live::after {
     left: $value-null;
     bottom: $value-null;
-  }
-   
-  .btn-live span::before {
+}
+
+.btn-live span::before {
     left: $value-null;
     top: $value-null;
-  }
-   
-  .btn-live span::after {
+}
+
+.btn-live span::after {
     right: $value-null;
     bottom: $value-null;
-  }
-   
-  .btn-live:hover::before,
-  .btn-live:hover::after {
+}
+
+.btn-live:hover::before,
+.btn-live:hover::after {
     transition-delay: 0.2s;
-  }
-   
-  .btn-live:hover span::before,
-  .btn-live:hover span::after {
+}
+
+.btn-live:hover span::before,
+.btn-live:hover span::after {
     transition-delay: 0s;
-  }
-  //wedding
-  .btn-book {
+}
+
+//wedding
+.btn-book {
     background-color: $secondary-color;
     color: $white;
     border-radius: gutter-sp(30);
@@ -357,13 +364,15 @@
     font-weight: 500;
     width: gutter-sp(230);
     padding: gutter-sp(8);
+
     &:hover {
-      background-color: $primary-hover; 
-      box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black; 
-      }
-  }
-  .btn-download,
-  .btn-quote {
+        background-color: $primary-hover;
+        box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
+    }
+}
+
+.btn-download,
+.btn-quote {
     background-color: $white;
     color: $secondary-color;
     border-radius: gutter-sp(30);
@@ -372,38 +381,40 @@
     font-weight: 500;
     width: gutter-sp(230);
     padding: gutter-sp(8);
+
     &:hover {
-      background-color: $secondary-backgroundhvr; 
-      color: $primary-hover; 
-      border-color: $primary-hover; 
+        background-color: $secondary-backgroundhvr;
+        color: $primary-hover;
+        border-color: $primary-hover;
     }
-  }
-  //primary and secondary and cancel
+}
+
+//primary and secondary and cancel
 .secondarybtn {
     color: $secondary-color;
     border: gutter-sp(1) solid $secondary-color;
     background-color: transparent;
-    width:gutter-per(100);
-  
+    width: gutter-per(100);
+
     &:hover {
-      background-color: $secondary-backgroundhvr;
-      color: $primary-hover;
-      border-color: $primary-hover;
+        background-color: $secondary-backgroundhvr;
+        color: $primary-hover;
+        border-color: $primary-hover;
     }
-  
-  }
-  
-  .primarybtn {
+
+}
+
+.primarybtn {
     color: $white;
     background-color: $secondary-color;
     border: none;
-    width:gutter-per(100);
-  
+    width: gutter-per(100);
+
     &:hover {
-      background-color: $primary-hover;
-      box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
+        background-color: $primary-hover;
+        box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
     }
-  }
+}
 
 //signup
 .signup-btn {
@@ -411,12 +422,14 @@
     color: $white;
     border: $value-null;
     border-radius: gutter-sp(5);
-    padding:gutter-sp(10) gutter-sp(100);
+    padding: gutter-sp(10) gutter-sp(100);
+
     &:hover {
-      background-color: $primary-hover; 
-          box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black; 
+        background-color: $primary-hover;
+        box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
     }
-  }
+}
+
 //forgot
 .forgot-btn {
     background: $secondary-color;
@@ -426,15 +439,12 @@
     margin-top: gutter-vw(2);
     border-radius: gutter-sp(10);
     width: gutter-per(100);
+
     &:hover {
-        background-color: $primary-hover; 
-        box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black; 
-      }
+        background-color: $primary-hover;
+        box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
+    }
 }
-  
-
-
-
 
 .basicButtonforSkip {
     color: $secondary-color;
@@ -564,3 +574,43 @@
     font-weight: 500;
 }
 
+//article table save button
+.article-save-btn {
+    background-color: $secondary-color;
+    color: $lite-white;
+}
+
+//Menu table save button
+.menu-save-btn {
+    background-color: $secondary-color;
+    color: $lite-white;
+}
+
+//dialogue buttons
+.dialogue-cancel {
+    height: gutter-sp(42);
+    font-size: gutter-sp(16);
+    background: linear-gradient(90deg, $btn-no-grdleft gutter-per(0), $btn-no-grdright gutter-per(100));
+    border-radius: gutter-vw(50);
+    width: gutter-sp(100);
+    color: $white;
+    border: none;
+    &:hover {
+        background: linear-gradient(90deg, $btn-no-grdright gutter-per(0), $btn-no-grdleft gutter-per(100));
+        box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
+    }
+}
+
+.dialogue-yes {
+    height: gutter-sp(42);
+    font-size: gutter-sp(16);
+    border-radius: gutter-vw(50);
+    width: gutter-sp(100);
+    background: linear-gradient(90deg, $btn-yes-grdleft gutter-per(0), $secondary-color gutter-per(100));
+    color: $white;
+    border: none;
+    &:hover {
+        background: linear-gradient(90deg, $secondary-color gutter-per(0), $btn-yes-grdleft gutter-per(100));
+        box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
+    }
+}

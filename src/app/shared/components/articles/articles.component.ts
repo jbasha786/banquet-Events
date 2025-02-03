@@ -7,18 +7,19 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialog } from '@angular/material/dialog';
 import { DefaultService } from '../../../services/default.service';
 import { Router } from '@angular/router';
+import { ButtonComponent } from '../../genericComponents/button/button.component';
 
 
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [MatIconModule, MatCheckboxModule, MatTableModule, MatDialogActions],
+  imports: [MatIconModule, MatCheckboxModule, MatTableModule, MatDialogActions, ButtonComponent],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss'
 })
 export class ArticlesComponent {
-
+  saveBtn: string = "Save";
   displayedColumns: string[] = ['select', 'name', 'price', 'qty', 'time', 'total'];
   dataSource = new MatTableDataSource<any>([]);
   selection = new SelectionModel<any>(true, []);

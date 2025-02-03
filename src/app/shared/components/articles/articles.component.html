@@ -23,20 +23,16 @@
             <!-- Checkbox Column -->
             <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
-                    <mat-checkbox disableRipple
-                      (change)="toggleAllRows($event.checked)"
-                      [checked]="isAllSelected()"
-                      [indeterminate]="selection.hasValue() && !isAllSelected()">
+                    <mat-checkbox disableRipple (change)="toggleAllRows($event.checked)" [checked]="isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()">
                     </mat-checkbox>
-                  </th>
-                  <td mat-cell *matCellDef="let row">
-                    <mat-checkbox disableRipple
-                      (click)="$event.stopPropagation()"
-                      (change)="$event ? selection.toggle(row) : null"
-                      [checked]="selection.isSelected(row)"
-                      [aria-label]="checkboxLabel(row)">
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox disableRipple (click)="$event.stopPropagation()"
+                        (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)"
+                        [aria-label]="checkboxLabel(row)">
                     </mat-checkbox>
-                  </td>
+                </td>
             </ng-container>
 
             <!-- Item Name Column -->
@@ -55,7 +51,7 @@
             <ng-container matColumnDef="qty">
                 <th mat-header-cell *matHeaderCellDef class="col-6 col-md-2 w-70"> Quantity </th>
                 <td mat-cell *matCellDef="let element">
-                    <input type="number" [value]="element.qty" (input)="updateValue(element, $event, 'qty')" 
+                    <input type="number" [value]="element.qty" (input)="updateValue(element, $event, 'qty')"
                         class="text-center col-6 quantity">
                 </td>
             </ng-container>
@@ -63,9 +59,9 @@
             <ng-container matColumnDef="time">
                 <th mat-header-cell *matHeaderCellDef class="col-6 col-md-2 w-70 pl-22"> Time </th>
                 <td mat-cell *matCellDef="let element">
-                     <input type="time" [value]="element.time" (input)="updateValue(element, $event, 'time')" 
-                        class="text-center col-sm-10 col-lg-9 col-xl-6 time-input lh-15 quantity"> 
-                    </td>
+                    <input type="time" [value]="element.time" (input)="updateValue(element, $event, 'time')"
+                        class="text-center col-sm-10 col-lg-9 col-xl-6 time-input lh-15 quantity">
+                </td>
             </ng-container>
 
             <!-- Total Column -->
@@ -79,7 +75,7 @@
         </table>
     </div>
     <div class=" buttonSave mt-10 mr-8 d-flex justify-content-end align-item-center ">
-        <button mat-raised-button color="primary" class="p-2 px-4 border rounded-pill article__save-btn"
-            (click)="onSave()">Save</button>
+        <app-button [btnClass]="'article-save-btn p-2 px-4 border rounded-pill'" [btnName]="saveBtn"
+            (bannerActionEvent)="onSave()"></app-button>
     </div>
 </div>

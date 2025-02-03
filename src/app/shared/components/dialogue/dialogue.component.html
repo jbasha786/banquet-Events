@@ -4,7 +4,9 @@
       <div class=" text-center dialogue-content fs-16 lh-30 pb-20 pr-0 pr-md-50 pl-0 pl-md-50 ">You want Cancel Booking <span class="span_color fw-bold">“Queens Lagoon Suite”.</span> You can’t undo this action.</div>
  </mat-dialog-content>
   <mat-dialog-actions class="buttons gap-20">
-    <button mat-button class="buttons__cancel fs-16 fw-600" (click)="cancel()">No</button>
-    <button mat-button class="buttons__yes fs-16 fw-600" (click)="confirm()">Yes</button>
+    <app-button [btnClass]="'dialogue-cancel fs-16 fw-600'" [btnName]="cancelBtn"
+    (bannerActionEvent)="cancel()"></app-button>
+    <app-button [btnClass]="'dialogue-yes fs-16 fw-600'" [btnName]="confirmBtn"
+    (bannerActionEvent)="confirm()"></app-button>
   </mat-dialog-actions>
 </div>
