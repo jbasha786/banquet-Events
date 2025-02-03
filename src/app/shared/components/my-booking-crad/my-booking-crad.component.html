@@ -19,13 +19,20 @@
                     <img [src]="frameImg" class="frameImg" alt="">
                     <span class="ps-2 fs-18 fw-500">{{title}}</span>
                 </div>
+                <!-- buttons for medium screens and above -->
                 <div class="d-none d-md-flex gap-2 flex-row flex-md-row flex-wrap mt-2 mt-lg-0">
-                    <button class="border rounded bg-white d-none"><img [src]="shareImg" alt=""></button>
-                    <button class="border rounded bg-white d-none"><img [src]="favImg" alt=""></button>
-                    <button class="border rounded bg-white pdfView"></button>
-                    <button class="rounded cancel fs-10 h-30 px-2" (click)="cancelBooking()">{{cancelbooking}}</button>
-                    <button class="rounded edit fs-10 h-30 px-2">{{editbooking}}</button>
-                    <button class="rounded view fs-10 h-30 px-2">{{viewdetails}}</button>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="shareImg" alt=""></p>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="favImg" alt=""></p>
+                    <p class="border rounded bg-white mb-0 pl-3 pr-3" (mouseenter)="isHovered = true"
+                        (mouseleave)="isHovered = false">
+                        <img [src]="isHovered ? hoverImage : viewImage" alt="" class="h-13">
+                    </p>
+                    <app-button [btnClass]="'cancelBooking px-2'" [btnName]="cancelBtn"
+                        (bannerActionEvent)="cancelBooking()"></app-button>
+                    <app-button [btnClass]="'editBooking'" [btnName]="editBtn"
+                        (bannerActionEvent)="editBooking()"></app-button>
+                    <app-button [btnClass]="'viewDetail'" [btnName]="viewBtn"
+                        (bannerActionEvent)="viewDetail()"></app-button>
                 </div>
             </div>
             <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
@@ -61,18 +68,31 @@
                     <p class="d-flex flex-wrap mb-0">{{address}}</p>
                 </div>
             </div>
+            <!-- buttons for small screens -->
             <div class="d-flex gap-2 flex-column flex-md-row flex-wrap mt-2 mt-lg-0 d-md-none col-12">
                 <div>
-                    <button class="border rounded bg-white d-none"><img [src]="shareImg" alt=""></button>
-                    <button class="border rounded bg-white d-none"><img [src]="favImg" alt=""></button>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="shareImg" alt=""></p>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="favImg" alt=""></p>
                 </div>
                 <div class="d-flex justify-content-between gap-1">
-                    <button class="border rounded bg-white col-6"><img [src]="viewImage" alt=""></button>
-                    <button class="border rounded cancel fs-10 h-30 px-2 col-6">{{cancelbooking}}</button>
+                    <p class="border rounded bg-white mb-0 pl-3 pr-3 col-6 h-30 d-flex justify-content-center align-items-center" (mouseenter)="isHovered = true"
+                        (mouseleave)="isHovered = false">
+                        <img [src]="isHovered ? hoverImage : viewImage" alt="" class="h-13">
+                    </p>
+                    <div class="col-6 h-30">
+                        <app-button [btnClass]="'cancelBooking px-3 col-12'" [btnName]="cancelBtn"
+                            (bannerActionEvent)="cancelBooking()"></app-button>
+                    </div>
                 </div>
                 <div class="d-flex justify-content-between gap-1">
-                    <button class="border rounded edit fs-10 h-30 px-2 col-6">{{editbooking}}</button>
-                    <button class="border rounded view fs-10 h-30 px-2 col-6">{{viewdetails}}</button>
+                    <div class="col-6 h-30">
+                        <app-button [btnClass]="'editBooking px-2 col-12'" [btnName]="editBtn"
+                            (bannerActionEvent)="editBooking()"></app-button>
+                    </div>
+                    <div class="col-6 h-30">
+                        <app-button [btnClass]="'viewDetail px-2 col-12'" [btnName]="viewBtn"
+                            (bannerActionEvent)="viewDetail()"></app-button>
+                    </div>
                 </div>
             </div>
         </div>

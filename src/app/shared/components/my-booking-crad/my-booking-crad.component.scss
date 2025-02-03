@@ -20,42 +20,6 @@
         width: gutter-per(100);
     }
 
-    .cancel {
-        background-color: $cancelbtn;
-        color: $white;
-        border: gutter-sp(1) solid $cancelbtn;
-    }
-
-    .cancel:hover {
-        background-color: $white;
-        color: $cancelbtn;
-        border: gutter-sp(1) solid $cancelbtn;
-    }
-
-    .edit {
-        background-color: $editbtn;
-        color: $white;
-        border: gutter-sp(1) solid $editbtn;
-    }
-
-    .edit:hover {
-        background-color: $white;
-        color: $editbtn;
-        border: gutter-sp(1) solid $editbtn;
-    }
-
-    .view {
-        background-color: $viewdetailbtn;
-        color: $white;
-        border: gutter-sp(1) solid $viewdetailbtn;
-    }
-
-    .view:hover {
-        background-color: $white;
-        color: $viewdetailbtn;
-        border: gutter-sp(1) solid $viewdetailbtn;
-    }
-
     .pdfView {
         background-image: url('/assets/images/BookingHistory/pdf.svg');
         width: gutter-sp(30);

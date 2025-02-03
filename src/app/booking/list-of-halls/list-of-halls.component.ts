@@ -18,6 +18,7 @@ import { ArticlesComponent } from '../../shared/components/articles/articles.com
 import { ZindexService } from '../../../app/services/zindex.service';
 import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-menu.component';
 import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -29,11 +30,13 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     NgxMatTimepickerModule,
     CommonModule,
-    FormsModule],
+    FormsModule, ButtonComponent],
   templateUrl: './list-of-halls.component.html',
   styleUrl: './list-of-halls.component.scss'
 })
 export class ListOfHallsComponent {
+  buttonSelected: string = "Selected";
+  buttonSelect: string = "Select";
   @Output() buttonChangeEvent = new EventEmitter<string>();
   @Input() view: string = '';
   buttonNext: string = 'Next';

@@ -8,6 +8,7 @@ export interface bookingHistoryModel extends baseModel {
     ratingSrc: any;
     rating: any;
     viewImage: any;
+    hoverImage: any;
     cancelBooking: any;
     editBooking: any;
     viewDetails: any;

@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { DefaultService } from '../../services/default.service';
 import { MatCardModule } from '@angular/material/card';
-import { CommonModule, DatePipe } from '@angular/common';
+import { CommonModule, DatePipe, isPlatformBrowser } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { ThingsToKnowComponent } from '../../shared/components/things-to-know/things-to-know.component';
@@ -61,7 +61,8 @@ export class OverviewComponent {
     private datePipe: DatePipe,
     private activatedRoute: ActivatedRoute,
     private route: Router,
-    private eventBookingService: EventBookingService
+    private eventBookingService: EventBookingService,
+     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.checkinDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
     this.checkOutDate = this.datePipe.transform(this.tomorrowDate.setDate(new Date().getDate() + 1), 'yyyy-MM-dd');
@@ -84,6 +85,4 @@ export class OverviewComponent {
     this.eventBookingService.setOverviewPage(true);
     this.route.navigate([this.routerName]);
   }
-
-
 }

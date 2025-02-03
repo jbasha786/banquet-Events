@@ -16,10 +16,30 @@
     align-items: center;
   }
 
-  .search_input:focus-within {
+  .search-input {
+    border-radius: gutter-sp(6);
+    border: gutter-sp(1) solid $light-silver;
+    background-color: $white;
+    min-height: gutter-sp(30);
+    width: gutter-per(100);
+    font-size: gutter-sp(12);
+  }
+
+  .search-input:focus-within {
+    border-radius: gutter-sp(6);
     border-color: $secondary-color;
     box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
     background-color: $gray;
+    min-height: gutter-sp(30);
+    width: gutter-per(100);
+    font-size: gutter-sp(12);
+  }
+
+  .search-input::placeholder {
+    color: $searchPholder;
+    font-size: gutter-sp(14);
+    font-weight: 300;
+    padding-left: gutter-sp(1);
   }
 
   input:focus,
@@ -28,18 +48,16 @@
     outline: none;
   }
 
-  .btn_search {
+  .search-icon {
     position: absolute;
-    left: gutter-sp(4);
+    left: gutter-sp(11);
+    top: gutter-sp(9);
     background-color: inherit;
+    color: $searchPholder;
   }
 
   .tab-main {
     position: relative;
-  }
-
-  .search_input {
-    max-width: guttre-per(100);
   }
 
   .tabTitle .mat-ink-bar {

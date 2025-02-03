@@ -1,13 +1,10 @@
 <div class="page_content">
   <div class="booking-view">
     <div class="py-3 tab-main">
-      <form class="search wid-sm-100 w-253 w-lg-274 wid-md-50" role="search">
-        <button class="btn_search border-0" type="submit">
-          <i class="bi bi-search"></i>
-        </button>
-        <input class="form-control pl-30 py-2 search_input fs-12 ml-2" type="search" placeholder="Search..."
-          aria-label="Search">
-      </form>
+      <div class="search wid-sm-100 w-253 w-lg-274 wid-md-50" #searchInput>
+        <input class="search-input pl-30 py-2 pe-2 fs-12 ml-2" placeholder="search for basic..." />
+        <mat-icon class="search-icon w-20 h-20 fs-19" role="button" fontIcon="search"></mat-icon>
+      </div>
       <div>
         <mat-tab-group mat-stretch-tabs="false" class="tabTitle">
           <mat-tab label="Booking History" class="tabLabel">

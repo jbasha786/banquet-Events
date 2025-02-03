@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, Inject } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { DefaultService } from './services/default.service';
+import { filter } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID } from '@angular/core';
+import { supportsScrollBehavior } from '@angular/cdk/platform';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,10 +19,11 @@ export class AppComponent {
 
   headerDetails: any;
 
-  constructor(private defaultService: DefaultService) { }
+  constructor(private defaultService: DefaultService, private router: Router, @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
     this.getHeaderDetails();
+    this.setupScrollRestoration();
   }
 
   getHeaderDetails() {
@@ -26,4 +31,17 @@ export class AppComponent {
       this.headerDetails = result?.header;
     })
   }
+  setupScrollRestoration() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe(() => {
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+      window.onload = () => {
+        window.scrollTo({top:0, behavior:'smooth'});
+      };
+    }
+  }
+  
 }
