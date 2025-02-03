@@ -653,19 +653,24 @@
     ],
     "navEvent_Items": [
         {
-            "eventName": "Overview"
+            "eventName": "Overview",
+            "eventLink": "/overview"
         },
         {
-            "eventName": "Best Deals"
+            "eventName": "Best Deals",
+            "eventLink": "/home"
         },
         {
-            "eventName": "Social Events"
+            "eventName": "Social Events",
+            "eventLink": "/events"
         },
         {
-            "eventName": "Family Events"
+            "eventName": "Family Events",
+            "eventLink": "/wedding"
         },
         {
-            "eventName": "Corporate Events"
+            "eventName": "Corporate Events",
+            "eventLink": "/business"
         }
     ],
     "navList": [

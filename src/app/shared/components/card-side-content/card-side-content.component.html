@@ -6,7 +6,7 @@
     <div class="col-12 col-lg-6 events__content fs-34 fs-lg-52 gap-22">
         <p class="events__content__title fw-bold  mb-0">{{obj.title}}</p>
         <p class="events__content__desc lh-32 fs-14 mb-0">{{obj.desc}}</p>
-        <app-button [btnClass]="'sideTransitionButton'" [btnName]="obj.btn"></app-button>
+        <app-button [btnClass]="'sideTransitionButton'" [btnName]="obj.btn"  (bannerActionEvent)="booknowDarts()"></app-button>
     </div>
     }
 </div>
