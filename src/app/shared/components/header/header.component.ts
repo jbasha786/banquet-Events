@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../../../core/login/login.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ZindexService } from '../../../services/zindex.service';
+import { ButtonComponent } from '../../genericComponents/button/button.component';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,8 @@ import { ZindexService } from '../../../services/zindex.service';
     MatMenuModule,
     MatButtonModule,
     DialogueComponent,
-    CommonModule],
+    CommonModule,
+    ButtonComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

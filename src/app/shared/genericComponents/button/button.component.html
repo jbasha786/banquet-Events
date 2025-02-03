@@ -1,1 +1,6 @@
-<button [ngClass]="btnClass" (click)="buttonAction()">{{ btnName }}</button>
+<button [ngClass]="btnClass" (click)="buttonAction()">
+    <ng-content></ng-content>
+    {{ btnName }}
+    <span *ngIf="showDot" class="dot"></span>
+  </button>
+  

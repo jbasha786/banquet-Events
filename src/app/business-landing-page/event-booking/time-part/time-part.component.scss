@@ -46,6 +46,14 @@
             align-items: center;
             justify-content: center;
         }
+        .edit:hover {
+            background: $secondary-color;
+        }
+
+        .edit:hover .icon {
+            content: url("/assets/images/icons/edit-icon_white.svg");
+            width: gutter-sp(20);
+        }
 
         .drag-item {
             cursor: move;
@@ -59,23 +67,5 @@
             background: $white;
             min-height: gutter-sp(60);
         }
-    }
-
-    .footer_btn {
-        background: $secondary-color;
-        width: gutter-sp(120);
-        border: none;
-        color: $white;
-        padding: gutter-sp(10);
-        border-radius: gutter-sp(50);
-    }
-
-    .footer_btn_skip {
-        border: gutter-sp(1) solid $secondary-color;
-        width: gutter-sp(120);
-        color: $secondary-color;
-        background: $white;
-        padding: gutter-sp(10);
-        border-radius: gutter-sp(50);
     }
 }

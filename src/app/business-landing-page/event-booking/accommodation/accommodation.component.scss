@@ -31,26 +31,6 @@
         font-weight: 500;
     }
 
-    .custom_btn {
-        background: $event-acc-btn-clr;
-        border: gutter-sp(1) solid transparent;
-        border-radius: gutter-sp(50);
-        border: none;
-        color: $black;
-        padding: gutter-sp(8) gutter-sp(0);
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        height: gutter-sp(56);
-        font-weight: 400;
-    }
-
-    .custom_btn:hover {
-        background: transparent;
-        color: $event-acc-btn-clr;
-        border: gutter-sp(1) solid $event-acc-btn-clr;
-    }
-
     .custom_time::-webkit-calendar-picker-indicator {
         opacity: gutter-per(45);
     }

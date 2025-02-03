@@ -21,6 +21,7 @@ $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetO
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 // material theme update
@@ -338,10 +339,6 @@ body {
 }
 
 
-html {
-  height: 100%;
-}
-
 .cdk-global-overlay-wrapper {
   top: gutter-sp(105);
 }
@@ -627,39 +624,6 @@ html {
   @extend .btn-base;
 }
 
-
-.corporatebtn {
-  @extend .btn-base;
-}
-
-.editArticle {
-  @extend .btn-base;
-
-  &:hover,
-  &:focus {
-    color: $white;
-  }
-}
-
-.familybtn {
-  @extend .btn-base;
-  border: gutter-sp(1) solid $family-yellow;
-  color: $family-yellow;
-
-  &::after {
-    background-color: $family-yellow;
-  }
-
-  &:hover,
-  &:focus {
-    color: $white;
-
-    &::after {
-      background-color: $family-yellow;
-    }
-  }
-}
-
 //image  hover
 .image__item {
   border-radius: gutter-sp(14);
@@ -689,30 +653,6 @@ html {
   border: gutter-sp(1) solid $secondary-color;
 }
 
-//primary and secondary and cancel
-.secondarybtn {
-  color: $secondary-color;
-  border: gutter-sp(1) solid $secondary-color;
-  background-color: transparent;
-
-  &:hover {
-    background-color: $secondary-backgroundhvr;
-    color: $primary-hover;
-    border-color: $primary-hover;
-  }
-
-}
-
-.primarybtn {
-  color: $white;
-  background-color: $secondary-color;
-  border: none;
-
-  &:hover {
-    background-color: $primary-hover;
-    box-shadow: $value-null gutter-sp(4) gutter-sp(8) $shadow-black;
-  }
-}
 
 //input select focus
 input::-ms-reveal,

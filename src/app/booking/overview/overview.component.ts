@@ -16,6 +16,7 @@ import { HostDetailsComponent } from './host-details/host-details.component';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventBookingService } from '../../services/event-hall-booking/event-booking.service';
+import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
 
 @Component({
   selector: 'app-overview',
@@ -35,7 +36,8 @@ import { EventBookingService } from '../../services/event-hall-booking/event-boo
     MatInputModule,
     HostDetailsComponent,
     FormsModule,
-    CommonModule],
+    CommonModule,
+    ButtonComponent],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.scss'
 })

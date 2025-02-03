@@ -22,51 +22,10 @@
         }
     }
 
-    .btn_cancel {
-        color: $cancelcolor;
-        border: gutter-sp(1) solid $cancelcolor;
-        font-size: gutter-sp(19);
-        height: gutter-sp(40);
-        font-weight: 500;
-    }
-
-    .btn_cancel:hover {
-        background-color: $cancelhover;
-        color: $cancelcolor;
-        border-color: $cancelcolor;
-    }
-
-    .btn_back {
-        color: $secondary-color;
-        border: gutter-sp(1) solid $secondary-color;
-        font-size: gutter-sp(19);
-        height: gutter-sp(40);
-        font-weight: 500;
-    }
-
-    .btn_back:hover {
-        background-color: $secondary-backgroundhvr;
-        color: $primary-hover;
-        border-color: $primary-hover;
-    }
-
-    .btn_next:hover {
-        background-color: $primary-hover;
-        box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $nexthovershadow;
-    }
-
-    .btn_next {
-        color: $white;
-        background: $secondary-color;
-        font-size: gutter-sp(19);
-        height: gutter-sp(40);
-        font-weight: 500;
-    }
-
     .dialog-btns {
         position: fixed;
         bottom: gutter-sp(0);
-        background: white;
+        background: $white;
         box-shadow: gutter-sp(0) gutter-sp(3) gutter-sp(18) $shadow-black;
         z-index: 1;
     }
