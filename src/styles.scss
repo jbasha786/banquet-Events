@@ -21,6 +21,7 @@ $VipsBanquetOffers-theme: mat.define-light-theme((color: (primary: $VipsBanquetO
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 // material theme update
@@ -337,10 +338,6 @@ body {
   letter-spacing: 0.2em;
 }
 
-
-html {
-  height: 100%;
-}
 
 .cdk-global-overlay-wrapper {
   top: gutter-sp(105);
