@@ -4,12 +4,13 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TimePartComponent } from '../time-part/time-part.component';
 import { MatInputModule } from '@angular/material/input';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { ButtonComponent } from '../../../shared/genericComponents/button/button.component';
 import { TimepickerComponent } from '../../../shared/genericComponents/timepicker/timepicker.component';
+import { DateRangePickerComponent } from '../../../shared/genericComponents/date-range-picker/date-range-picker.component';
 
 @Component({
   selector: 'app-accommodation',
@@ -19,12 +20,12 @@ import { TimepickerComponent } from '../../../shared/genericComponents/timepicke
     MatDialogModule,
     MatInputModule,
     MatIconModule,
-    MatIcon,
     CommonModule,
     FormsModule,
     ButtonComponent,
     NgxMatTimepickerModule,
-  TimepickerComponent],
+    TimepickerComponent,
+    DateRangePickerComponent],
   providers: [],
   templateUrl: './accommodation.component.html',
   styleUrl: './accommodation.component.scss'
@@ -46,7 +47,16 @@ export class AccommodationComponent {
     })
   }
 
-  selectedStartTime(){}
-  selectedEndTime(){}
+  selectedStartTime(event: any) {
+    console.log(event);
+    
+  }
+  selectedEndTime(event: any) {
+    console.log(event);
+  }
+
+  selectedDateRange(event: { startDate: any, endDate: any }) {
+    console.log(event);
+  }
 
 }

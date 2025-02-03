@@ -396,16 +396,6 @@ html {
   .mat-mdc-form-field-icon-prefix {
     opacity: gutter-per(40);
   }
-
-  .custom_date {
-    .mat-date-range-input-container {
-      font-size: gutter-sp(14);
-    }
-
-    .mat-date-range-input-separator {
-      opacity: gutter-per(45);
-    }
-  }
 }
 
 .custom-dialog-backdrop {

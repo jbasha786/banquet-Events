@@ -24,18 +24,9 @@
         opacity: gutter-per(75);
     }
 
-    .custom_input::placeholder,
-    .custom_time::placeholder {
+    .custom_input::placeholder{
         opacity: gutter-per(45);
         font-size: gutter-sp(14);
         font-weight: 500;
-    }
-
-    .custom_time::-webkit-calendar-picker-indicator {
-        opacity: gutter-per(45);
-    }
-
-    .flex-1 {
-        flex: 1;
     }
 }

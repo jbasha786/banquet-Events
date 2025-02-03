@@ -1,0 +1,11 @@
+<mat-form-field [class]="className" appearance="outline" (click)="matPickerClass.open()">
+    <mat-date-range-input [rangePicker]="matPickerClass">
+        <input matStartDate [placeholder]="placeholderClass1" class="custom_time" #dateRangeStart>
+        <input matEndDate [placeholder]="placeholderClass2" class="custom_time" #dateRangeEnd (dateChange)="dateRangeChange(dateRangeStart, dateRangeEnd)">
+    </mat-date-range-input>
+    <mat-icon matIconPrefix class="mat-icon">calendar_month</mat-icon>
+    <mat-datepicker-toggle matIconSuffix [for]="matPickerClass">
+        <mat-icon matDatepickerToggleIcon class="mat-icon">keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-date-range-picker #matPickerClass></mat-date-range-picker>
+</mat-form-field>

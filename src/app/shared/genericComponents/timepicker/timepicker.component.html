@@ -1,5 +1,5 @@
 <mat-form-field [ngClass]="calssName" appearance="outline" (click)="matPickerClass.open()">
-    <input matInput [ngxMatTimepicker]="matPickerClass" [placeholder]="placeHolderText" class="custom_time">
-    <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-    <ngx-mat-timepicker #matPickerClass></ngx-mat-timepicker>
+    <input matInput [(ngModel)]="selectedTimefromPicker" [ngxMatTimepicker]="matPickerClass" [placeholder]="placeHolderText" class="custom_time" (ngModelChange)="onTimeChange($event)">
+    <mat-icon matSuffix class="mat-icon">keyboard_arrow_down</mat-icon>
+    <ngx-mat-timepicker #matPickerClass pannelClass="custom-timepicker-panel"></ngx-mat-timepicker>
 </mat-form-field>
