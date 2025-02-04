@@ -23,15 +23,15 @@
             <!-- Checkbox Column -->
             <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
-                    <mat-checkbox disableRipple (change)="toggleAllRows($event.checked)" [checked]="isAllSelected()"
-                        [indeterminate]="selection.hasValue() && !isAllSelected()">
-                    </mat-checkbox>
+                    <app-custom-mat-checkbox [disableRipple]="true" [checked]="isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()"
+                        (checkedChange)="toggleAllRows($event)">
+                    </app-custom-mat-checkbox>
                 </th>
                 <td mat-cell *matCellDef="let row">
-                    <mat-checkbox disableRipple (click)="$event.stopPropagation()"
-                        (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)"
-                        [aria-label]="checkboxLabel(row)">
-                    </mat-checkbox>
+                    <app-custom-mat-checkbox [disableRipple]="true" [checked]="selection.isSelected(row)"
+                        [ariaLabel]="checkboxLabel(row)" [row]="row" (checkboxChange)="selection.toggle($event)">
+                    </app-custom-mat-checkbox>
                 </td>
             </ng-container>
 
