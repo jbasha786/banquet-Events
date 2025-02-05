@@ -68,6 +68,13 @@ export class ArticlesComponent {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
   }
+  onRowCheckboxChange(isChecked: boolean, row: any) {
+    if (isChecked) {
+      this.selection.select(row);
+    } else {
+      this.selection.deselect(row);
+    }
+  }
 
   updateValue(element: any, event: any, key: string): void {
     element[key] = event.target.value; 

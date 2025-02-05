@@ -15,9 +15,8 @@ export class CustomMatCheckboxComponent {
   @Input() disableRipple: boolean = false;
   @Output() checkedChange = new EventEmitter<boolean>(); 
   @Input() ariaLabel: string = '';
-  @Input() row: any;
 
-  toggleChecked(event: MatCheckboxChange) {
+  onCheckboxChange(event: MatCheckboxChange) {
     this.checkedChange.emit(event.checked);
   }
   
