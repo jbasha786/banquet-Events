@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
@@ -6,7 +6,8 @@ import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox
   standalone: true,
   imports: [MatCheckboxModule],
   templateUrl: './custom-mat-checkbox.component.html',
-  styleUrl: './custom-mat-checkbox.component.scss'
+  styleUrl: './custom-mat-checkbox.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class CustomMatCheckboxComponent {
   @Input() label: string = ''; 
