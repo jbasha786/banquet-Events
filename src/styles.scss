@@ -24,19 +24,6 @@ html {
   height: 100%;
 }
 
-// material theme update
-.mat-toolbar.mat-primary {
-  --mat-toolbar-container-background-color: #{$secondary-color} !important;
-}
-
-.mat-mdc-mini-fab.mat-primary {
-  --mdc-fab-small-container-color : #{$secondary-color} !important;
-}
-
-.mat-mdc-button.mat-primary {
-  --mdc-text-button-label-text-color: #{$secondary-color} !important;
-}
-
 body {
   color: $font-clr !important;
   font-family: 'Poppins', sans-serif !important;
@@ -493,10 +480,6 @@ body {
   position: relative;
 }
 
-.timepicker-dial__control:focus {
-  background-color: transparent !important;
-}
-
 //mat-checkbox
 .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
   border-color: $secondary-color !important;
@@ -679,30 +662,5 @@ select.form-control:focus {
 * {
   scrollbar-color: $secondary-color $white;
   scrollbar-width: thin;
-}
-
-
-@media screen and (max-width: 375px) {
-  ngx-mat-timepicker-face .clock-face {
-    width: 220px !important;
-    height: 220px !important;
-  }
-
-  ngx-mat-timepicker-face .clock-face__number--outer {
-    height: gutter-sp(100) !important;
-  }
-
-  ngx-mat-timepicker-face .clock-face__number {
-    top: calc(gutter-per(50) - gutter-sp(100)) !important;
-  }
-
-  ngx-mat-timepicker-face .clock-face__clock-hand_minute>button {
-    top: gutter-sp(-15) !important;
-  }
-
-  ngx-mat-timepicker-face .clock-face__clock-hand {
-    height: gutter-sp(85) !important;
-    top: calc(gutter-per(50) - gutter-sp(85)) !important;
-  }
 }
 

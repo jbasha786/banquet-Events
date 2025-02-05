@@ -76,37 +76,6 @@
                 background-color: $guest-background-clr;
                 border-radius: gutter-sp(10);
 
-                .dateSection {
-                    border-radius: gutter-rem(0.375);
-
-                    .custom_img {
-                        background: $white;
-                        border: none;
-                        padding: gutter-rem(0.375) gutter-rem(0);
-                        img {
-                            width: gutter-sp(30);
-                            height: gutter-sp(30);
-                        }
-                    }
-        
-                    .custom_date_input {
-                        border: none;
-                        padding-left: gutter-sp(3);
-                        font-size: gutter-sp(13);
-                    }
-        
-                    .customLabel {
-                        padding-left: gutter-sp(0);
-                        color: $secondary-color;
-        
-                    }
-        
-                    .custom_date_input:focus {
-                        box-shadow: none;
-                        border-color: $custom-input-border-clr;
-                    }
-                }
-
                 .basic-icon {
                     background-color: $white;
                     border: gutter-sp(1) solid $white;
@@ -132,6 +101,7 @@
                 }
                 .border-clr:focus-within {
                     border-color: $secondary-color;
+                    box-shadow: 0 0 gutter-sp(5) rgba(0, 0, 0, 0.2);
                 }
 
                 .border-clr-none:focus,

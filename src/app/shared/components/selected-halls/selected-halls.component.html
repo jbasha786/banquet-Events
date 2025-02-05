@@ -16,34 +16,12 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="dateSection" (click)="matcheckinDate.open()">
-                        <div class="input-group custom_icon border-clr" id="datepicker">
-                            <span class="input-group-text custom_img" id="basic-addon1"><img
-                                    src="../../assets/images/halls/calender-hall.png" alt=""></span>
-                            <div class="form-floating">
-                                <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
-                                    [value]="checkinDate" [(ngModel)]="checkinDate" matInput
-                                    [matDatepicker]="matcheckinDate">
-                                <mat-datepicker #matcheckinDate></mat-datepicker>
-                                <label for="guestCount" class="customLabel guestLabel">Check-in</label>
-                            </div>
-                        </div>
-                    </div>
+                    <app-date-picker [label]="'Check-in'" [matDatepickerName]="'matcheckinDate'"
+                        [image]="'/assets/images/halls/calender-hall.png'" [date]="checkinDate"></app-date-picker>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="dateSection" (click)="matcheckOutDate.open()">
-                        <div class="input-group border-clr custom_icon" id="datepicker">
-                            <span class="input-group-text custom_img" id="basic-addon1"><img
-                                    src="../../assets/images/halls/calender-hall.png" alt=""></span>
-                            <div class="form-floating">
-                                <input class="form-control custom_date_input" id="datepicker" placeholder="Guests"
-                                    [(ngModel)]="checkOutDate" [value]="checkOutDate" matInput
-                                    [matDatepicker]="matcheckOutDate">
-                                <mat-datepicker #matcheckOutDate></mat-datepicker>
-                                <label for="guestCount" class="customLabel guestLabel">Check-out</label>
-                            </div>
-                        </div>
-                    </div>
+                    <app-date-picker [label]="'Check-out'" [matDatepickerName]="'matcheckOutDate'"
+                        [image]="'/assets/images/halls/calender-hall.png'" [date]="checkOutDate"></app-date-picker>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="input-group border-clr d-flex align-items-center">

@@ -19,6 +19,7 @@ import { ZindexService } from '../../../app/services/zindex.service';
 import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-menu.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
+import { DatePickerComponent } from '../../shared/genericComponents/date-picker/date-picker.component';
 
 @Component({
   selector: 'app-list-of-halls',
@@ -30,7 +31,9 @@ import { ButtonComponent } from '../../shared/genericComponents/button/button.co
     MatButtonModule,
     NgxMatTimepickerModule,
     CommonModule,
-    FormsModule, ButtonComponent],
+    FormsModule,
+    ButtonComponent,
+    DatePickerComponent],
   templateUrl: './list-of-halls.component.html',
   styleUrl: './list-of-halls.component.scss'
 })

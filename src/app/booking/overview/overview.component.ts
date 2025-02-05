@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventBookingService } from '../../services/event-hall-booking/event-booking.service';
 import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
+import { DatePickerComponent } from '../../shared/genericComponents/date-picker/date-picker.component';
 
 @Component({
   selector: 'app-overview',
@@ -37,7 +38,8 @@ import { ButtonComponent } from '../../shared/genericComponents/button/button.co
     HostDetailsComponent,
     FormsModule,
     CommonModule,
-    ButtonComponent],
+    ButtonComponent,
+    DatePickerComponent],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.scss'
 })
@@ -47,8 +49,8 @@ export class OverviewComponent {
   hostDetails: any;
   ratingSection: any;
   ratingValues: number[] = [5, 4, 3, 2, 1];
-  checkinDate: string | null;
-  checkOutDate: string | null;
+  checkinDate: Date | null;
+  checkOutDate: Date | null;
   tomorrowDate = new Date();
   routerName: any;
   slots = [
@@ -62,10 +64,11 @@ export class OverviewComponent {
     private activatedRoute: ActivatedRoute,
     private route: Router,
     private eventBookingService: EventBookingService,
-     @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    this.checkinDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
-    this.checkOutDate = this.datePipe.transform(this.tomorrowDate.setDate(new Date().getDate() + 1), 'yyyy-MM-dd');
+    this.checkinDate = new Date();
+    this.checkOutDate = new Date();
+    this.checkOutDate.setDate(this.checkOutDate.getDate() + 1);
   }
 
   ngOnInit(): void {

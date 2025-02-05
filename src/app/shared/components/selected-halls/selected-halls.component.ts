@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 import { EventBookingService } from '../../../services/event-hall-booking/event-booking.service';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../../genericComponents/button/button.component';
+import { DatePickerComponent } from '../../genericComponents/date-picker/date-picker.component';
 
 @Component({
   selector: 'app-selected-halls',
@@ -24,7 +25,8 @@ import { ButtonComponent } from '../../genericComponents/button/button.component
     NgxMatTimepickerModule,
     CommonModule,
     FormsModule,
-    ButtonComponent],
+    ButtonComponent,
+    DatePickerComponent],
   templateUrl: './selected-halls.component.html',
   styleUrl: './selected-halls.component.scss'
 })
