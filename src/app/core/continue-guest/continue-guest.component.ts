@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CustomMatCheckboxComponent } from '../../shared/genericComponents/custom-mat-checkbox/custom-mat-checkbox.component';
 
 @Component({
   selector: 'app-continue-guest',
   standalone: true,
-  imports: [MatCheckboxModule, FormsModule, CommonModule, ReactiveFormsModule],
+  imports: [MatCheckboxModule, FormsModule, CommonModule, ReactiveFormsModule,CustomMatCheckboxComponent],
   templateUrl: './continue-guest.component.html',
   styleUrl: './continue-guest.component.scss'
 })
