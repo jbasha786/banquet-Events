@@ -7,12 +7,6 @@
         padding-left: gutter-sp(12);
     }
 
-    .guestLabel {
-        font-size: gutter-sp(14);
-        padding-left: gutter-sp(8);
-        padding-top: gutter-sp(20);
-    }
-
     .guestClockLabel {
         font-size: gutter-sp(14);
         padding-left: gutter-sp(5);
@@ -92,37 +86,7 @@
             }
         }
 
-        .dateSection {
-            border-radius: gutter-rem(0.375);
-
-            .custom_img {
-                background: $white;
-                border: none;
-                padding: gutter-rem(0.375) gutter-rem(0);
-
-                img {
-                    width: gutter-sp(30);
-                    height: gutter-sp(30);
-                }
-            }
-
-            .custom_date_input {
-                border: none;
-                padding-left: gutter-sp(3);
-                font-size: gutter-sp(13);
-            }
-
-            .customLabel {
-                padding-left: gutter-sp(0);
-                color: $secondary-color;
-
-            }
-
-            .custom_date_input:focus {
-                box-shadow: none;
-                border-color: $custom-input-border-clr;
-            }
-        }
+       
 
         .basic-icon {
             background-color: $white;

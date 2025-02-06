@@ -49,7 +49,10 @@ export class BusinessLandingPageComponent {
   getOverviewPageStatus() {
     this.eventBookingService.getOverviewPage().subscribe(data => {
       if (data) {
-        this.bookEvents('300ms', '300ms');
+        const selectedStepNumber = this.eventBookingService.getSelectedStepNumber();
+        if(selectedStepNumber !== 1){
+          this.bookEvents('300ms', '300ms');
+        }
       }
     });
   }

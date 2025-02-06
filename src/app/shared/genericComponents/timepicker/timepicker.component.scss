@@ -2,14 +2,10 @@
 
 
 .custom_date {
-    --mdc-outlined-text-field-outline-color: #{$event-input-border-clr};
-    --mdc-outlined-text-field-hover-outline-color: #{$event-input-border-clr};
-    --mdc-outlined-text-field-focus-outline-color: #{$secondary-color};
-    --mdc-outlined-text-field-focus-outline-width: #{gutter-sp(1)};
     width: gutter-per(100);
 }
 
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
     opacity: gutter-per(45);
     font-size: gutter-sp(14);
     font-weight: 500;
@@ -23,4 +19,58 @@
     opacity: gutter-per(75);
     color: $drop-down-icon-clr;
 }
-  
+
+
+.timepicker-dial .timepicker-dial__container .timepicker-dial__time .timepicker-dial__control {
+    &:focus {
+        background-color: transparent;
+    }
+}
+
+.mat-toolbar.timepicker-header,
+.mat-toolbar.clock-face__clock-hand,
+.mat-toolbar.clock-face__center,
+.clock-face .mat-mdc-mini-fab {
+    background: $secondary-color;
+}
+
+.clock-face .mat-mdc-mini-fab.mat-unthemed {
+    background: transparent;
+}
+
+.mdc-dialog__actions .mdc-button .mdc-button__label {
+    color: $secondary-color;
+}
+
+.ngx-mat-timepicker-dialog .mdc-dialog__actions .mdc-button:hover {
+    background: $secondary-color;
+
+    .mdc-button__label {
+        color: $white;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .timepicker__body .clock-face {
+        width: 220px;
+        height: 220px;
+    }
+
+    .timepicker__body .clock-face__number--outer {
+        height: gutter-sp(100);
+    }
+
+    .timepicker__body .clock-face__number {
+        top: calc(gutter-per(50) - gutter-sp(100));
+    }
+
+    .timepicker__body .clock-face__clock-hand_minute>button {
+        top: gutter-sp(-15);
+    }
+
+    .timepicker__body .clock-face__clock-hand {
+        height: gutter-sp(85);
+        top: calc(gutter-per(50) - gutter-sp(85));
+    }
+}

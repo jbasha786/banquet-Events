@@ -63,6 +63,7 @@ export class BookingComponent {
     this.dialogRef.close();
     this.dialog.closeAll();
     this.eventBookingService.clearSelectedServices();
+    this.eventBookingService.setSelectedStepNumber(1);
   }
 
   back() {

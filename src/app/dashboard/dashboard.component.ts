@@ -149,7 +149,10 @@ export class DashboardComponent {
   getOverviewPageStatus() {
     this.eventBookingService.getOverviewPage().subscribe(data => {
       if (data) {
+       const selectedStepNumber = this.eventBookingService.getSelectedStepNumber();
+       if(selectedStepNumber !== 1){
         this.continueBooking('300ms', '300ms');
+       }
       }
     });
   }
