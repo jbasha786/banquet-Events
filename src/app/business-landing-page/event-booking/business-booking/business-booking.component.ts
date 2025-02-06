@@ -9,6 +9,8 @@ import { ListOfHallsComponent } from '../../../booking/list-of-halls/list-of-hal
 import { SelectedHallsComponent } from '../../../shared/components/selected-halls/selected-halls.component';
 import { EventBookingService } from '../../../services/event-hall-booking/event-booking.service';
 import { ButtonComponent } from '../../../shared/genericComponents/button/button.component';
+import { NavigationStart, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-business-booking',
@@ -28,6 +30,7 @@ import { ButtonComponent } from '../../../shared/genericComponents/button/button
   styleUrl: './business-booking.component.scss'
 })
 export class BusinessBookingComponent {
+  private routerSubscription: Subscription;
   currentStep: number = 1;
   defaultProgressSize: number = 0;
   progressbarWidth: any;
@@ -38,10 +41,16 @@ export class BusinessBookingComponent {
 
   constructor(public dialogRef: MatDialogRef<BusinessBookingComponent>,
     private dialog: MatDialog,
+    private router: Router,
     private eventBookingService: EventBookingService
   ) {
     this.defaultProgressSize = 100 / this.defaultPages;
     this.progressbarWidth = this.defaultProgressSize + "%";
+    this.routerSubscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.dialogRef.close();
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -99,5 +108,8 @@ export class BusinessBookingComponent {
 
   updateNextBtnText(currentStepNumber: number) {
     this.nextBtnText = currentStepNumber === 5 ? 'Confirm Reservation' : 'Next';
+  }
+  ngOnDestroy(): void {
+    this.routerSubscription.unsubscribe();
   }
 }
