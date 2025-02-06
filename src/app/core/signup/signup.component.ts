@@ -6,11 +6,12 @@ import { Router } from '@angular/router';
 import { SignUpService } from '../../services/signUp/sign-up.service';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
+import { CustomMatCheckboxComponent } from '../../shared/genericComponents/custom-mat-checkbox/custom-mat-checkbox.component';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, FormsModule, MatCheckboxModule, FormsModule,ButtonComponent],
+  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, FormsModule, MatCheckboxModule, FormsModule,ButtonComponent,CustomMatCheckboxComponent],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })

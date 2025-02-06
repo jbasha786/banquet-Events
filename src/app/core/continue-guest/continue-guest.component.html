@@ -27,11 +27,12 @@
             placeholder="Write your comments here..."></textarea>
         </div>
         <div class="fs-14 d-flex align-items-center terms-condition pl-13 h-22 mt-2">
-          <mat-checkbox disableRipple [(ngModel)]="isChecked" [ngModelOptions]="{standalone: true}" ></mat-checkbox>
-          <span class="d-flex" role="button">Terms & Conditions<span class="checkbox-imp">*</span></span>
+          <app-custom-mat-checkbox [disableRipple]="true"></app-custom-mat-checkbox>
+          <span class="d-flex" >Terms & Conditions<span class="checkbox-imp">*</span></span>
         </div>
-        <div class="fs-14 d-flex align-items-center pl-13 gap-10 mb-40" role="button">
-          <mat-checkbox disableRipple [(ngModel)]="checked" [ngModelOptions]="{standalone: true}" > Subscribe to Email Notification</mat-checkbox>
+        <div class="fs-14 d-flex align-items-center pl-13 mb-40" role="button">
+          <app-custom-mat-checkbox [disableRipple]="true"> </app-custom-mat-checkbox>
+          <span class="d-flex">Subscribe to Email Notification</span>
         </div>
 
       </div>

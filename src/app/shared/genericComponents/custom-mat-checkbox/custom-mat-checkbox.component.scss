@@ -1,7 +1,5 @@
 @import '../../../styles/variable.scss';
 
-
-//mat-checkbox
 .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
     border-color: $secondary-color ;
     background-color: $secondary-color ;
@@ -26,7 +24,7 @@
     width: gutter-sp(15);
 }
 
-// Remove ripple effect
+
 .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__ripple,
 .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:focus:checked~.mdc-checkbox__ripple,
 .mat-mdc-checkbox .mdc-checkbox .mat-mdc-checkbox-touch-target {
@@ -38,6 +36,38 @@
     cursor: default ;
 }
 
-.mat-mdc-checkbox .mdc-checkbox__native-control {
-    cursor: pointer ;
+
+.mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control {
+    cursor: pointer;
+    position: absolute;
+    top: gutter-per(50);
+    height: gutter-sp(15);
+    left: gutter-per(50);
+    width: gutter-sp(15);
+    transform: translate(gutter-per(-50), gutter-per(-50));
+}
+
+
+.mat-mdc-checkbox .mdc-checkbox {
+    cursor: default;
+}
+.mat-mdc-checkbox:hover .mdc-checkbox {
+    background-color :$secondary-color;
+}
+.mat-mdc-checkbox .mdc-checkbox:hover {
+    background-color: transparent; 
+    border-color: transparent; 
+}
+
+.mat-mdc-checkbox .mdc-checkbox:hover .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+}
+
+.mat-mdc-checkbox .mdc-checkbox:hover .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+}
+.mat-mdc-checkbox .mdc-checkbox:hover .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background{
+    border-color: $checkbox-border-color;
 }
