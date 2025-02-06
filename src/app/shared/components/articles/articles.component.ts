@@ -8,13 +8,14 @@ import { MatDialog } from '@angular/material/dialog';
 import { DefaultService } from '../../../services/default.service';
 import { Router } from '@angular/router';
 import { ButtonComponent } from '../../genericComponents/button/button.component';
+import { CustomMatCheckboxComponent } from '../../genericComponents/custom-mat-checkbox/custom-mat-checkbox.component';
 
 
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [MatIconModule, MatCheckboxModule, MatTableModule, MatDialogActions, ButtonComponent],
+  imports: [MatIconModule, MatCheckboxModule, MatTableModule, MatDialogActions, ButtonComponent, CustomMatCheckboxComponent],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss'
 })
@@ -54,19 +55,25 @@ export class ArticlesComponent {
     return numSelected === numRows;
   }
 
-  toggleAllRows(checked: boolean) {
-    if (checked) {
-      this.selection.select(...this.dataSource.data); 
+  toggleAllRows(isChecked: boolean) {
+    if (isChecked) {
+      this.selection.select(...this.dataSource.data);
     } else {
       this.selection.clear();
     }
   }
-
   checkboxLabel(row?: any): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+  }
+  onRowCheckboxChange(isChecked: boolean, row: any) {
+    if (isChecked) {
+      this.selection.select(row);
+    } else {
+      this.selection.deselect(row);
+    }
   }
 
   updateValue(element: any, event: any, key: string): void {

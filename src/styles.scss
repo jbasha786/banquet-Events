@@ -479,29 +479,6 @@ body {
   transform: translate(gutter-per(0), gutter-per(-15));
   position: relative;
 }
-
-//mat-checkbox
-.mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
-  border-color: $secondary-color !important;
-  background-color: $secondary-color !important;
-  height: gutter-sp(15);
-  width: gutter-sp(15);
-}
-
-.mdc-checkbox__background {
-  height: gutter-sp(15) !important;
-  width: gutter-sp(15) !important;
-}
-
-.mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
-  border-color: $secondary-color !important;
-  background-color: $secondary-color !important;
-}
-
-.mdc-checkbox__ripple {
-  display: none !important;
-}
-
 //hover-change
 .card {
   &-button {

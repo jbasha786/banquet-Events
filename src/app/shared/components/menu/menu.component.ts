@@ -9,11 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ButtonComponent } from '../../genericComponents/button/button.component';
+import { CustomMatCheckboxComponent } from '../../genericComponents/custom-mat-checkbox/custom-mat-checkbox.component';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MatCheckboxModule, MatTableModule, MatIconModule, MatDialogActions, FormsModule, ButtonComponent],
+  imports: [MatCheckboxModule, MatTableModule, MatIconModule, MatDialogActions, FormsModule, ButtonComponent, CustomMatCheckboxComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
@@ -55,27 +56,34 @@ export class MenuComponent {
     item.qty = event.target.value;
   }
 
-  isAllSelected(selection: SelectionModel<any>, dataSource: MatTableDataSource<any>) {
+  isAllSelected(selection: SelectionModel<any>, dataSource: MatTableDataSource<any>): boolean {
     const numSelected = selection.selected.length;
-    const numRows = dataSource?.data?.length;
-    return numSelected === numRows;
+    const numRows = dataSource.data.length;
+    return numSelected === numRows && numRows > 0;
   }
 
   checkboxLabel(selection: SelectionModel<any>, row?: any): string {
     if (!row) {
-      return `${this.isAllSelected(selection, this.startersDataSource) ? 'deselect' : 'select'} all`;
+      return `${this.isAllSelected(selection, this.startersDataSource) ? 'Deselect' : 'Select'} all`;
     }
-    return `${selection.isSelected(row) ? 'deselect' : 'select'} row`;
+    return `${selection.isSelected(row) ? 'Deselect' : 'Select'}`;
   }
 
-  toggleAllRows(selection: SelectionModel<any>, dataSource: MatTableDataSource<any>) {
-    if (this.isAllSelected(selection, dataSource)) {
+  toggleAllRows(isChecked: boolean, selection: SelectionModel<any>, dataSource: MatTableDataSource<any>) {
+    if (isChecked) {
+      selection.select(...dataSource.data);
+    } else {
       selection.clear();
-      return;
     }
-    selection.select(...dataSource.data);
   }
-
+  onRowCheckboxChange(isChecked: boolean, selection: SelectionModel<any>, row: any) {
+    if (isChecked) {
+      selection.select(row);
+    } else {
+      selection.deselect(row);
+    }
+  }
+  
 
   closeDialog() {
     this.dialogRef.close();

@@ -1,0 +1,8 @@
+<mat-checkbox
+  [checked]="checked"
+  [indeterminate]="indeterminate"
+  [disableRipple]="disableRipple"
+  [aria-label]="ariaLabel"
+  (click)="$event.stopPropagation()"
+  (change)="onCheckboxChange($event)">
+</mat-checkbox>

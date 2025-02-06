@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { SelectedDatesComponent } from './selected-dates/selected-dates.component';
 import { GuestComponent } from './guest/guest.component';
 import { PlaningComponent } from './planing/planing.component';
@@ -11,6 +11,7 @@ import { SelectedHallsComponent } from '../shared/components/selected-halls/sele
 import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../shared/genericComponents/button/button.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-booking',
@@ -30,6 +31,8 @@ import { ButtonComponent } from '../shared/genericComponents/button/button.compo
   styleUrl: './booking.component.scss'
 })
 export class BookingComponent {
+  private routerSubscription: Subscription;
+
   @Input() buttonNext: string = 'Next';
   currentStep: number = 1;
   defaultProgressSize: number = 0;
@@ -40,10 +43,16 @@ export class BookingComponent {
   nextBtnText: string = 'Next';
 
   constructor(public dialogRef: MatDialogRef<BookingComponent>, private dialog: MatDialog,
-    private eventBookingService: EventBookingService
+    private eventBookingService: EventBookingService,
+    private router: Router
   ) {
     this.defaultProgressSize = 100 / this.defaultPages;
     this.progressbarWidth = this.defaultProgressSize + "%";
+    this.routerSubscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.dialogRef.close();
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -85,7 +94,9 @@ export class BookingComponent {
     this.nextBtnText = Proceed;
   }
 
-
+  closeDialog() {
+    this.dialogRef.close();
+  }
   confirmBooking() {
     if (this.currentStep === 6) {
       this.currentStep = 1;
@@ -103,5 +114,7 @@ export class BookingComponent {
   updateNextBtnText(currentStepNumber: number) {
     this.nextBtnText = currentStepNumber === 5 ? 'Confirm Reservation' : 'Next';
   }
-
+  ngOnDestroy(): void {
+    this.routerSubscription.unsubscribe();
+  }
 }
