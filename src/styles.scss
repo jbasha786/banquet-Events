@@ -24,18 +24,6 @@ html {
   height: 100%;
 }
 
-// material theme update
-.mat-toolbar.mat-primary {
-  --mat-toolbar-container-background-color: #{$secondary-color} !important;
-}
-
-.mat-mdc-mini-fab.mat-primary {
-  --mdc-fab-small-container-color : #{$secondary-color} !important;
-}
-
-.mat-mdc-button.mat-primary {
-  --mdc-text-button-label-text-color: #{$secondary-color} !important;
-}
 *{
   font-family: 'Poppins', sans-serif;
 }
