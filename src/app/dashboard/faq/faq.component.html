@@ -1,18 +1,18 @@
 <div class="row d-flex align-items-end">
     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ">
-        <p class="pb-20 fs-24 fw-500">Frequently Asked Questions</p>
+        <p class="pb-20 fs-24 fs-xl-32 fs-xxl-40 fw-500">Frequently Asked Questions</p>
         <div class="accordion custom-accordion" id="accordionFlushExample">
             @for(faq of faqList; track faq.id) {
             <div class="accordion-item">
                 <p class="accordion-header mb-0" id="flush-headingOne_{{faq.id}}">
-                    <button class="accordion-button collapsed p-0" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed p-0 fs-14 fs-xl-18 fs-xxl-22" type="button" data-bs-toggle="collapse"
                         [attr.data-bs-target]="'#flush-collapseOne_'+ faq.id" aria-expanded="false" aria-controls="flush-collapseOne">
                         {{faq.name}}
                     </button>
                 </p>
                 <div id="flush-collapseOne_{{faq.id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">{{faq.value}}</div>
+                    <div class="accordion-body fs-16 fs-xl-20 fs-xxl-24">{{faq.value}}</div>
                 </div>
             </div>
             }

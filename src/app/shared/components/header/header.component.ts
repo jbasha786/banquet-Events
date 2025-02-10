@@ -95,7 +95,37 @@ export class HeaderComponent implements OnInit {
       }
     }
   }
-
+  getImageWidth(index: number, item: any): string {
+    if (!item) {
+      return '28px'; 
+    }
+  
+    const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+  
+   
+    let defaultSize = '28px';
+    if (screenWidth >= 2560) {
+      defaultSize = '32px';
+    } else if (screenWidth >= 1920) {
+      defaultSize = '30px';
+    } else if (screenWidth >= 992) {
+      defaultSize = '28px';
+    }
+  
+    
+    if (index === 2) {
+      if (defaultSize === '34px') return '31px';
+      if (defaultSize === '32px') return '29px';
+      if (defaultSize === '30px') return '27px';
+      if (defaultSize === '28px') return '25px';
+    }
+  
+    return defaultSize; 
+  }
+  
+  
+  
+  
   getNavList() {
     this.defaultService.getJSON().subscribe(result => {
       this.navList = result.navList;
