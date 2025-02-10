@@ -1,36 +1,46 @@
 @import "../../../styles/variable.scss";
+
 .mat-calendar-table td .mat-calendar-body-selected {
-    background-color: $primary-color;
-    color: $white;
-  }
-  
-  
-  .mat-calendar-table td .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-    border: none;
-    background-color: $secondary-color ;
-    color: $white;
-  }
-  
-  .mat-calendar-table td .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-    background-color: $active-list-bg-clr ;
-  }
-  
-  .mat-calendar-table td .mat-calendar-body-in-range::before {
-    background: $light-silver ;
-  }
-  
-  .mat-calendar-table td .mat-calendar-body-selected.mat-calendar-body-today {
-    box-shadow: none ;
-  } 
+  background-color: $primary-color;
+  color: $white;
+}
+
+
+.mat-calendar-table td .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  border: none;
+  background-color: $secondary-color ;
+  color: $white;
+}
+
+.mat-calendar-table td .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background-color: $active-list-bg-clr ;
+}
+
+.mat-calendar-table td .mat-calendar-body-in-range::before {
+  background: $light-silver ;
+}
+
+.mat-calendar-table td .mat-calendar-body-selected.mat-calendar-body-today {
+  box-shadow: none;
+}
+
 .custom_date {
-    --mdc-outlined-text-field-outline-color: #{$event-input-border-clr};
-    --mdc-outlined-text-field-hover-outline-color: #{$event-input-border-clr};
-    --mdc-outlined-text-field-focus-outline-color: #{$secondary-color};
-    --mdc-outlined-text-field-focus-outline-width: #{gutter-sp(1)};
-    width: gutter-per(100);
+
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing,
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing,
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading {
+    border-color: $event-input-border-clr;
+  }
+
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline .mdc-notched-outline__trailing,
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline .mdc-notched-outline__leading {
+    border-color: $secondary-color;
+    border-width: gutter-sp(1);
+  }
 }
 
 .mat-icon {
-    opacity: gutter-per(75);
-    color: $drop-down-icon-clr;
+  opacity: gutter-per(75);
+  color: $drop-down-icon-clr;
 }
