@@ -5,19 +5,26 @@
   color: $white;
 }
 
+.cdk-program-focused .mat-calendar-table .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  border: none;
+  background-color: $secondary-color;
+  color: $white;
+}
+
 
 .mat-calendar-table td .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
   border: none;
-  background-color: $secondary-color ;
+  background-color: $secondary-color;
   color: $white;
 }
 
 .mat-calendar-table td .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-  background-color: $active-list-bg-clr ;
+  background-color: $primary-color;
+  color: $white;
 }
 
 .mat-calendar-table td .mat-calendar-body-in-range::before {
-  background: $light-silver ;
+  background: $light-silver;
 }
 
 .mat-calendar-table td .mat-calendar-body-selected.mat-calendar-body-today {

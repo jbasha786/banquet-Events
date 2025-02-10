@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { DateRange, DefaultMatCalendarRangeStrategy, MAT_DATE_RANGE_SELECTION_STRATEGY, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, provideNativeDateAdapter } from '@angular/material/core';
 import { MatListModule, MatSelectionListChange } from '@angular/material/list';
@@ -14,7 +14,8 @@ import { EventDateSlotsService } from '../../services/event-date-slot/event-date
     useClass: DefaultMatCalendarRangeStrategy
   }],
   templateUrl: './selected-dates.component.html',
-  styleUrl: './selected-dates.component.scss'
+  styleUrl: './selected-dates.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class SelectedDatesComponent {
 

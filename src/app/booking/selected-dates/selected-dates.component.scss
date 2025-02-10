@@ -57,3 +57,25 @@
         background-color: $white;
     }
 }
+
+.calenderDiv {
+
+    .mat-calendar .mat-calendar-content .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+    .mat-calendar-body-selected {
+        background-color: $primary-color;
+        color: $white;
+        border: none;
+        box-shadow: none;
+    }
+
+    .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+        background-color: $secondary-color;
+        color: $white;
+        border: none;
+        box-shadow: none;
+    }
+
+    .mat-calendar-table td .mat-calendar-body-in-range::before {
+        background: $light-silver;
+    }
+}
