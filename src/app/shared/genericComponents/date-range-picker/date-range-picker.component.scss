@@ -1,7 +1,7 @@
 @import "../../../styles/variable.scss";
 
 .mat-calendar-table td .mat-calendar-body-selected {
-  background-color: $primary-color;
+  background-color: $secondary-color;
   color: $white;
 }
 
@@ -13,13 +13,15 @@
 
 
 .mat-calendar-table td .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-  border: none;
-  background-color: $secondary-color;
-  color: $white;
+  background-color: transparent;
+  color: $black;
+  border: gutter-sp(2) solid $secondary-color;
+  box-shadow: none;
 }
 
 .mat-calendar-table td .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-  background-color: $primary-color;
+  background-color: $secondary-color;
+  filter: brightness(1.2);
   color: $white;
 }
 
