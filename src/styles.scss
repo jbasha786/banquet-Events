@@ -24,9 +24,11 @@ html {
   height: 100%;
 }
 
+*{
+  font-family: 'Poppins', sans-serif;
+}
 body {
-  color: $font-clr !important;
-  font-family: 'Poppins', sans-serif !important;
+  color: $font-clr;
 }
 
 .cursor {
@@ -194,6 +196,16 @@ body {
       gap: #{$i}px;
     }
   }
+  .gap-lg-#{$i} {
+    @media (min-width: 992px) {
+      gap: #{$i}px;
+    }
+  }
+  .gap-xl-#{$i} {
+    @media (min-width: 1920px) {
+      gap: #{$i}px;
+    }
+  }
 
   // width
   .w-#{$i} {
@@ -211,6 +223,17 @@ body {
       width: #{$i}px;
     }
   }
+  .w-xl-#{$i} {
+    @media (min-width: 1920px) {
+      width: #{$i}px !important;
+    }
+  }
+
+  .w-xxl-#{$i} {
+    @media (min-width: 2560px) {
+      width: #{$i}px !important;
+    }
+  }
 
   .wid-sm-#{$i} {
     @media (min-width: 425px) {
@@ -223,6 +246,7 @@ body {
       width: #{$i + '%'} !important;
     }
   }
+ 
 
 
 
@@ -253,6 +277,11 @@ body {
       line-height: #{$i}px !important;
     }
   }
+  .lh-xl-#{$i} {
+    @media (min-width: 1920px) {
+      line-height: #{$i}px !important;
+    }
+  }
 
   // FontSizes
   // SCSS Loop for Font Sizes
@@ -269,6 +298,17 @@ body {
 
   .fs-lg-#{$i} {
     @media (min-width: 992px) {
+      font-size: #{$i}px !important;
+    }
+  }
+  .fs-xl-#{$i} {
+    @media (min-width: 1920px) {
+      font-size: #{$i}px !important;
+    }
+  }
+
+  .fs-xxl-#{$i} {
+    @media (min-width: 2560px) {
       font-size: #{$i}px !important;
     }
   }
