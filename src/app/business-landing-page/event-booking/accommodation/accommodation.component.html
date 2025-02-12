@@ -15,11 +15,11 @@
                 <label for="duration" class="custom_label fs-xl-18 mb-1">Event Duration</label>
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedStartTime($event)"
+                        <app-timepicker [calssName]="'custom_date time_picker'" (selectedTime)="selectedStartTime($event)"
                             [matPickerClass]="'startTimepicker'" [placeHolderText]="'Start Time'"></app-timepicker>
                     </div>
                     <div class="col-12 col-md-4">
-                        <app-timepicker [calssName]="'custom_date'" (selectedTime)="selectedEndTime($event)"
+                        <app-timepicker [calssName]="'custom_date time_picker'" (selectedTime)="selectedEndTime($event)"
                             [matPickerClass]="'endTimepicker'" [placeHolderText]="'End Time'"></app-timepicker>
                     </div>
                     <div class="col-12 col-md-4">
