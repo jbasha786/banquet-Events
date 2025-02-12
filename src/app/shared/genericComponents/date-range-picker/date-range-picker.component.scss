@@ -33,6 +33,17 @@
   box-shadow: none;
 }
 
+.mat-date-range-input .mat-date-range-input-container input::placeholder,
+.mat-date-range-input .mat-date-range-input-container .mat-date-range-input-separator{
+  opacity: gutter-per(45);
+}
+
+.mat-date-range-input .mat-date-range-input-container input {
+  opacity: gutter-per(100);
+  font-size: gutter-sp(14);
+  font-weight: 500;
+}
+
 .custom_date {
 
   .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing,
