@@ -38,6 +38,7 @@ import { ButtonComponent } from '../shared/genericComponents/button/button.compo
 })
 
 export class DashboardComponent {
+  activeIndex: number | null = null;
   bannerInfo!: BannerModel | undefined;
   eventsInfo: any;
   arrangementsInfo: any;
@@ -103,7 +104,8 @@ export class DashboardComponent {
       }
     }
   }
-
+  
+  
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
@@ -155,6 +157,16 @@ export class DashboardComponent {
        }
       }
     });
+  }
+
+  showOverlay(index: number) {
+    this.activeIndex = index;
+  }
+
+  hideOverlay(index: number) {
+    if (this.activeIndex === index) {
+      this.activeIndex = null;
+    }
   }
 
 }

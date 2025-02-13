@@ -13,7 +13,8 @@
       </p>
       <p></p>
       <div>
-        <app-button [btnClass]="'bannerActionButton'" [btnName]="bannerInfo.buttonName" (bannerActionEvent)="continueBooking('300ms', '300ms')"></app-button>
+        <app-button [btnClass]="'bannerActionButton'" [btnName]="bannerInfo.buttonName" (bannerActionEvent)="continueBooking('300ms', '300ms')" aria-label="Book Now"
+         ></app-button>
       </div>
     </div>
     <div
@@ -36,8 +37,8 @@
     <div class="row g-4">
       @for (obj of subbannerInfo; track $index) {
       <div class="col-12 col-lg-4">
-        <div class="image__item position-relative cursor" (click)="goTolandingPages(obj.id)">
-          <img class="subbanner__image" src="{{ obj.src }}" alt="subbanner Image" />
+        <div class="image__item position-relative cursor" role="link" tabindex="0" (click)="goTolandingPages(obj.id)" (keydown.enter)="goTolandingPages(obj.id)" [attr.aria-label]="obj.desc">
+          <img class="subbanner__image" src="{{ obj.src }}" [attr.alt]="obj.desc" />
           <p class="subbanner__text position-absolute text-center fs-30 fw-bold">
             {{ obj.desc }}
           </p>
@@ -58,22 +59,60 @@
     Our <span class="arrangements__color">Arrangements</span>
   </p>
   <div class="row gx-lg-4 gx-0">
-    @for( arr of arrangementsInfo; track $index){
+    @for (arr of arrangementsInfo; track $index) {
     <div class="col-12 col-lg-4">
       <div class="card no-border gap-26">
-        <img src="{{ arr.src }}" [alt]="arr.name" class="image" />
+        <!-- Accessible Image -->
+        <img 
+          src="{{ arr.src }}" 
+          [attr.alt]="arr.name" 
+          class="image" 
+          role="img"
+          [attr.aria-label]="arr.name"
+        />
+
         <div class="card-content d-flex flex-column gap-20">
-          <p class="heading fs-18 fw-500 mb-0" [title]="arr.name">{{ arr.name }}</p>
+          <!-- Accessible Heading -->
+          <p 
+            class="heading fs-18 fw-500 mb-0" 
+            [attr.title]="arr.name"
+            role="heading" 
+            aria-level="2"
+          >
+            {{ arr.name }}
+          </p>
+
           <ng-container *ngIf="!arr.showFullContent">
             <p class="text fs-14 lh-34 mb-0">{{ arr.desc }}</p>
-            <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(arr)">
-              Read more <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
+            <p 
+              class="card-button readmore-btn fs-14 fw-500 p-0 cursor"
+              role="button"
+              tabindex="0"
+              (click)="readMore(arr)"
+              (keydown.enter)="readMore(arr)"
+              [attr.aria-label]="'Read more about ' + arr.name"
+            >
+              Read more 
+              <span class="arrow">
+                <img src="../../assets/images/halls/arrow-color.svg" alt="Arrow Icon">
+              </span>
             </p>
           </ng-container>
+
           <ng-container *ngIf="arr.showFullContent">
-            <p class=" fs-14 lh-34 mb-0">{{ arr.desc }}</p>
-            <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(arr)">
-              Read less <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
+            <p class="fs-14 lh-34 mb-0">{{ arr.desc }}</p>
+            <p 
+              class="card-button readmore-btn fs-14 fw-500 p-0 cursor"
+              role="button"
+              tabindex="0"
+              (click)="readMore(arr)"
+              (keydown.enter)="readMore(arr)"
+              [attr.aria-label]="'Read less about ' + arr.name"
+            >
+              Read less 
+              <span class="arrow">
+                <img src="../../assets/images/halls/arrow-color.svg" alt="Arrow Icon">
+              </span>
             </p>
           </ng-container>
         </div>
@@ -87,33 +126,75 @@
 <div class="personalized">
   <div class="Personalized-content">
     <p class="pb-24 fs-24 lh-30 m-0 fw-500">
-      Create your own
-      <span class="arrangements__color">personalized</span> ideal model.
+      Create your own <span class="arrangements__color">personalized</span> ideal model.
     </p>
     <p class="fs-16 lh-24 pb-40">
-      Experience the change of seasons from a remote cabin, spacious view models
-      villa or overlooking with your loved persons.
+      Experience the change of seasons from a remote cabin, spacious view models villa, or overlooking with your loved persons.
     </p>
-    <div *ngIf="personalizedInfo && personalizedInfo.length > 0" class="section owl-sec">
-      <owl-carousel-o [options]="customOptionsforPersonalizedInfo">
+
+    <div 
+      *ngIf="personalizedInfo && personalizedInfo.length > 0" 
+      class="section owl-sec"
+      role="region"
+      aria-label="Personalized models carousel"
+      aria-live="polite"
+      
+    >
+      <owl-carousel-o 
+        [options]="customOptionsforPersonalizedInfo"
+        aria-roledescription="carousel"
+      >
         <ng-container *ngFor="let personal of personalizedInfo">
           <ng-template class="slider" carouselSlide [id]="personal.id">
             <div class="item no-border gap-26">
-              <div class="">
-                <img src="{{ personal.src }}" [alt]="personal.name" class="image owl-lazy" /> 
+              <div>
+                <img 
+                  src="{{ personal.src }}" 
+                  [alt]="personal.name" 
+                  class="image owl-lazy"
+                  role="img"
+                />
               </div>
               <div class="d-flex flex-column gap-20">
-                <p class="fs-18 fw-500 mb-0 title" [title]="personal.name">{{ personal.name }}</p>
+                <p 
+                  class="fs-18 fw-500 mb-0 title" 
+                  [title]="personal.name"
+                  [attr.aria-label]="personal.name"
+                >
+                  {{ personal.name }}
+                </p>
+
                 <ng-container *ngIf="!personal.showFullContent">
                   <p class="desc fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
-                  <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(personal)">
-                    Read more <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
+                  <p 
+                    class="card-button readmore-btn fs-14 fw-500 p-0 cursor"
+                    role="button"
+                    tabindex="0"
+                    (click)="readMore(personal)"
+                    (keydown.enter)="readMore(personal)"
+                    [attr.aria-label]="'Read more about ' + personal.name"
+                  >
+                    Read more 
+                    <span class="arrow">
+                      <img src="../../assets/images/halls/arrow-color.svg" alt="Arrow icon">
+                    </span>
                   </p>
                 </ng-container>
+
                 <ng-container *ngIf="personal.showFullContent">
                   <p class="fs-14 lh-34 mb-0">{{ personal.fulldDesc }}</p>
-                  <p class="card-button readmore-btn fs-14 fw-500 p-0 cursor" (click)="readMore(personal)">
-                    Read less <span class="arrow"><img src="../../assets/images/halls/arrow-color.svg"></span>
+                  <p 
+                    class="card-button readmore-btn fs-14 fw-500 p-0 cursor"
+                    role="button"
+                    tabindex="0"
+                    (click)="readMore(personal)"
+                    (keydown.enter)="readMore(personal)"
+                    [attr.aria-label]="'Read less about ' + personal.name"
+                  >
+                    Read less 
+                    <span class="arrow">
+                      <img src="../../assets/images/halls/arrow-color.svg" alt="Arrow icon">
+                    </span>
                   </p>
                 </ng-container>
               </div>
@@ -124,29 +205,56 @@
     </div>
   </div>
 </div>
+
 <!-- personalized End -->
 <!-- Experience Section Start -->
-<div class="experience">
-  <p class="text-center fw-500 fs-33 fs-lg-40">
-    Experience the best autumn holiday at
+<div class="experience" role="region" aria-labelledby="experience-title">
+  <p id="experience-title" class="text-center fw-500 fs-33 fs-lg-40">
+    Experience the best autumn holiday at 
     <span class="experience__color">De Bonte Wever</span>
   </p>
+
   <p class="text-center m-0 pb-1 fs-12 fs-lg-15">
     A refreshing walk through the forest or a breath of fresh air on your bike
     through the beautiful nature of Drenthe.
   </p>
+
   <p class="text-center mb-0 pb-28 fs-12 fs-lg-15">
-    Discover exclusive offers at over your ideas and passion
+    Discover exclusive offers at over your ideas and passion.
   </p>
+
   <div class="experience__section row">
     @for (obj of experienceInfo; track $index) {
-    <div class="col-6 col-md-4 col-lg-2 p-0 experience__item">
-      <img class="experience__image" src="{{ obj.src }}" alt="Experience Image" />
-      <div class="experience__overlay p-10">
-        <p class="experience__text fs-20 fw-bold pt-10">Example</p>
-        <p class="fs-14">The staffs were always motivated to help us. The food was excellent, the chef ensured that our pallet needs were met.</p>
+      <div 
+        class="col-6 col-md-4 col-lg-2 p-0 experience__item"
+        role="article" 
+        [attr.aria-labelledby]="'exp-title-' + $index"
+        tabindex="0"
+      >
+        <div class="image-container">
+          <img 
+            class="experience__image" 
+            src="{{ obj.src }}" 
+            [attr.alt]="obj.altText || 'Experience Image'" 
+            role="img"
+            tabindex="0"
+            (focus)="showOverlay($index)" 
+            (blur)="hideOverlay($index)" 
+          />
+          <div class="experience__overlay p-10" [class.show]="activeIndex === $index">
+            <p 
+              id="exp-title-{{ $index }}" 
+              class="experience__text fs-20 fw-bold pt-10"
+            >
+              {{ obj.title || 'Example' }}
+            </p>
+
+            <p class="fs-14" [attr.aria-describedby]="'exp-desc-' + $index">
+              {{ obj.description || 'The staff were always motivated to help us. The food was excellent, and the chef ensured that our palate needs were met.' }}
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
     }
   </div>
 </div>
@@ -158,33 +266,44 @@
 <!-- corporate section End -->
 <!-- promotions section Start -->
 <div class="promotions">
-  <p class="fs-24 fw-500">De Bonte Wever Deals & Promotions</p>
-  <p class="fgs-14">Exclusive savings for your next stay.</p>
+  <p class="fs-24 fw-500" id="promo-title">De Bonte Wever Deals & Promotions</p>
+  <p class="fgs-14" id="promo-desc">Exclusive savings for your next stay.</p>
   <app-upcoming-events-list></app-upcoming-events-list>
 </div>
 <!-- promotions section End -->
 <!-- Member section start -->
-<div class="memberSection">
+<div class="memberSection" role="region" aria-labelledby="memberSection-title">
   <div class="row">
+    
+    <!-- Membership Text Section -->
     <div class="col-12 col-lg-6 join-text">
-      <p class="mb-0 fs-28 fw-bold">
+      <h2 id="memberSection-title" class="mb-0 fs-28 fw-bold">
         Become a <span class="memberSection__color">De Bonte Wever</span>
-      </p>
-      <p class="mb-3 fs-28 fw-bold">Member Today</p>
+      </h2>
+      <h2 class="mb-3 fs-28 fw-bold">Member Today</h2>
+      
       <p class="memberSection__desc mb-3 fs-14">
-        Not a member yet? Join now to receive member exclusive rates, earn
-        points towards free nights and many more.
+        Not a member yet? Join now to receive member-exclusive rates, earn 
+        points towards free nights, and many more.
       </p>
-      <app-button [btnClass]="'basicButton'" [btnName]="'Join for free'" (bannerActionEvent)="navigateUrl('signUp')"></app-button>
+      <app-button 
+        [btnClass]="'basicButton'" 
+        [btnName]="'Join for free'" 
+        aria-label="Join De Bonte Wever for free"
+        role="button"
+        (bannerActionEvent)="navigateUrl('signUp')">
+      </app-button>
     </div>
+
+    <!-- Membership Image Section -->
     <div class="col-12 col-lg-6 memberSection__image">
-      <img src="/assets/images/member/member.svg" alt="member" />
+      <img src="/assets/images/member/member.svg" alt="Illustration of a happy De Bonte Wever member">
     </div>
   </div>
 </div>
 <!-- Member section End -->
 <!-- moment Section Start -->
-<div class="moment position-relative">
+<div class="moment position-relative" role="region" aria-labelledby="moment-title">
   <div class="moment__content d-flex flex-column fw-bold gap-6 gap-lg-32">
     <p class="fs-22 fs-md-34 fs-lg-48 lh-40 lh-lg-38 mb-0">Step into Wonders</p>
     <p class="fs-22 fs-md-34 fs-lg-48 lh-40 lh-lg-38 mb-0">
@@ -195,7 +314,10 @@
   <div class="moment__section">
     <div class="row g-4">
       @for( obj of momentInfo; track $index){
-      <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card">
+      <div  class="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-xxl-4 moment__card" 
+      role="group" 
+      [attr.aria-labelledby]="'card-title-' + $index"
+      [attr.aria-describedby]="'card-desc-' + $index">
 
         <app-card class="moment__card__start"
           picture="{{ obj.src }}"
