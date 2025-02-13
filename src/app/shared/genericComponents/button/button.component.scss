@@ -14,7 +14,6 @@
     position: relative;
     overflow: hidden;
     font-weight: bold;
-    font-size: gutter-sp(20);
 }
 
 //hover-change
@@ -37,8 +36,8 @@
 
 //hover-change
 .bannerActionButton:hover::after {
-    width: gutter-sp(200);
-    height: gutter-sp(200);
+    width: gutter-sp(220);
+    height: gutter-sp(220);
     opacity: 1;
 }
 
@@ -51,9 +50,7 @@
 .businessBannerActionButton {
     @extend .bannerActionButton;
     padding: gutter-sp(8) gutter-sp(20);
-    font-size: gutter-sp(16);
     width: gutter-sp(150);
-    height: gutter-sp(40);
 }
 
 
@@ -67,7 +64,6 @@
     color: $secondary-color;
     background-color: transparent;
     transition: color 0.3s ease, transform 0.3s ease;
-    font-size: gutter-sp(16);
 
     &::after {
         content: "";
@@ -278,15 +274,24 @@ button {
 }
 
 span.dot {
-    height: gutter-sp(8);
-    width: gutter-sp(8);
+    height: gutter-sp(10);
+    width: gutter-sp(10);
     background-color: $livebtn-clr;
     border-radius: gutter-per(50);
     display: inline-block;
 }
 
-.btn-live::before,
-.btn-live::after {
+.btn-live::before {
+    content: "";
+    width: $value-null;
+    height: gutter-sp(1);
+    position: absolute;
+    transition: all 0.2s linear;
+    background: $livebtn-clr;
+    
+
+}
+.btn-live::after{
     content: "";
     width: $value-null;
     height: gutter-sp(1);
@@ -294,7 +299,6 @@ span.dot {
     transition: all 0.2s linear;
     background: $livebtn-clr;
 }
-
 span::before,
 span::after {
     content: "";
@@ -361,9 +365,7 @@ button:hover span::after {
     color: $white;
     border-radius: gutter-sp(30);
     border: gutter-sp(0) solid $secondary-color;
-    font-size: gutter-sp(16);
     font-weight: 500;
-    width: gutter-sp(216);
     padding: gutter-sp(8);
 
     &:hover {
@@ -378,9 +380,7 @@ button:hover span::after {
     color: $secondary-color;
     border-radius: gutter-sp(30);
     border: gutter-sp(1) solid $secondary-color;
-    font-size: gutter-sp(16);
     font-weight: 500;
-    width: gutter-sp(216);
     padding: gutter-sp(8);
 
     &:hover {

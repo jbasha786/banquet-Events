@@ -62,16 +62,17 @@
 
     .mat-calendar .mat-calendar-content .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
     .mat-calendar-body-selected {
-        background-color: $primary-color;
+        background-color: $secondary-color;
         color: $white;
+        filter: brightness(1.2);
         border: none;
         box-shadow: none;
     }
 
     .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-        background-color: $secondary-color;
-        color: $white;
-        border: none;
+        background-color: transparent;
+        color: $black;
+        border: gutter-sp(2) solid $secondary-color;
         box-shadow: none;
     }
 

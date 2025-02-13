@@ -1,6 +1,6 @@
 <div class="time-part">
     <div class="d-flex justify-content-between">
-        <p class="fs-12 fs-md-20 fw-bold pb-20 m-0">Time Part Location</p>
+        <p class="fs-12 fs-md-20 fs-xxl-24 fw-bold pb-20 m-0">Time Part Location</p>
         <p class="text-end m-0 pb-20 cursor" (click)="close()"><img src="../../../../assets/images/icons/cross.svg"
                 alt="close" width="20"></p>
     </div>
@@ -14,8 +14,8 @@
                     <div class="d-flex align-items-center drag-item" (click)="selectTimePart(item)">
                         <p class="line m-0" [ngClass]="item.isActive && item.id === selectedItemId ? '' : 'd-none'"></p>
                         <div class="ml-15">
-                            <p class="m-0 fs-12 fs-md-16 fw-medium name">{{item.timeSlot}}</p>
-                            <p class="m-0 fs-12 fs-md-14 text">{{item.location}}</p>
+                            <p class="m-0 fs-12 fs-md-16 fs-xxl-18 fw-medium name">{{item.timeSlot}}</p>
+                            <p class="m-0 fs-12 fs-md-14 fs-xxl-16 text">{{item.location}}</p>
                         </div>
                     </div>
                     <span (click)="editTimePart(item)" class="edit mt-10 mt-md-0 cursor"
@@ -28,7 +28,7 @@
     </div>
 
     <div class="d-flex flex-column flex-md-row gap-4 align-items-center justify-content-end mt-10">
-        <app-button [btnClass]="'basicButtonforSkip'" [btnName]="'SKIP'" (bannerActionEvent)="close()"></app-button>
-        <app-button [btnClass]="'basicButtonforSave'" [btnName]="'SAVE'" (bannerActionEvent)="close()"></app-button>
+        <app-button [btnClass]="'basicButtonforSkip fs-xxl-18'" [btnName]="'SKIP'" (bannerActionEvent)="close()"></app-button>
+        <app-button [btnClass]="'basicButtonforSave fs-xxl-18'" [btnName]="'SAVE'" (bannerActionEvent)="close()"></app-button>
     </div>
 </div>
