@@ -64,3 +64,8 @@
   opacity: gutter-per(75);
   color: $drop-down-icon-clr;
 }
+
+.cdk-overlay-connected-position-bounding-box .mat-datepicker-popup {
+  top: gutter-sp(105);
+  position: relative;
+}
