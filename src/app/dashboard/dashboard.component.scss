@@ -224,6 +224,15 @@
   }
 }
 
+.experience__image:focus + .experience__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.experience__overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
 //corporate-family
 .corporate-family {
   padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
@@ -579,3 +588,4 @@ css for scroll .fade {
     opacity: 1;
   }
 }
+

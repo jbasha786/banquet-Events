@@ -657,7 +657,8 @@
             "eventLink": "/home"
         },
         {
-            "eventName": "Best Deals"
+            "eventName": "Best Deals",
+            "eventLink": ""
         },
         {
             "eventName": "Social Events",
