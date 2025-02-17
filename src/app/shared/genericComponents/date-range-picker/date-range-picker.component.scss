@@ -65,7 +65,7 @@
   color: $drop-down-icon-clr;
 }
 
-.cdk-overlay-connected-position-bounding-box .mat-datepicker-popup {
+.custom-backdrop {
   top: gutter-sp(105);
-  position: relative;
+  opacity: 0;
 }
