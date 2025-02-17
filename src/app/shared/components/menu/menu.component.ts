@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { menuModel } from '../../../_models/menu.model';
 import { DefaultService } from '../../../services/default.service';
 import { MatDialog, MatDialogActions, MatDialogRef } from '@angular/material/dialog';
@@ -16,7 +16,8 @@ import { CustomMatCheckboxComponent } from '../../genericComponents/custom-mat-c
   standalone: true,
   imports: [MatCheckboxModule, MatTableModule, MatIconModule, MatDialogActions, FormsModule, ButtonComponent, CustomMatCheckboxComponent],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+  styleUrl: './menu.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent {
   saveBtn:string = "Save";

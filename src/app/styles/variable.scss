@@ -137,6 +137,7 @@ $dialogue-heading:#272727;
 $btn-yes-grdleft:#ea0cae;
 $btn-no-grdright:#c8b0aa;
 $btn-no-grdleft:#676767;
+$backdrop: #00000052;
 //planner
 
 $shape-bg: #f0f6fb;
@@ -153,6 +154,9 @@ $hallsListFont: #7a7178;
 $rolecolor: #a5a8ae;
 $active-list-bg-clr: #F5F5F5;
 $checkbox-border-color: #757575;
+$event-new-close-bg-clr:#E42E2E;
+$textearea-border-clr:#8CA5B8;
+$customerlabel-clr:#064992;
 
 
 @function gutter-sp($key) {

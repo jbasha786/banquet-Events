@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, inject, Inject, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
 import { CardComponent } from '../shared/components/card/card.component';
 import { CardSideContentComponent } from '../shared/components/card-side-content/card-side-content.component';
 import { CorporateMeetingComponent } from './corporate-meeting/corporate-meeting.component';
@@ -16,6 +16,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { UpcomingEventsListComponent } from '../shared/components/upcoming-events-list/upcoming-events-list.component';
 import { EventBookingService } from '../services/event-hall-booking/event-booking.service';
 import { ButtonComponent } from '../shared/genericComponents/button/button.component';
+import { CustomDialogService } from '../services/custom-dialog.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -34,7 +35,8 @@ import { ButtonComponent } from '../shared/genericComponents/button/button.compo
     CarouselModule,
     ButtonComponent],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  styleUrl: './dashboard.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 
 export class DashboardComponent {
@@ -47,7 +49,7 @@ export class DashboardComponent {
   personalizedInfo: any;
   promotionsInfo: any;
   shortDesc: boolean = true;
-
+  private dialogService = inject(CustomDialogService);
 
   customOptionsforPersonalizedInfo: OwlOptions = {
     loop: true,
@@ -106,15 +108,17 @@ export class DashboardComponent {
 
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
-    this.dialog.open(BookingComponent, {
+    this.dialogService.openDialog(BookingComponent, {
       width: '100vw',
       height: '100vh',
       maxWidth: '100vw',
-      panelClass: 'custom-dialog-wrapper',
+      panelClass: 'booking-dialog-wrapper',
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true,
       autoFocus: false
+    }).afterClosed().subscribe(result => {
+      console.log("Business Booking Dialog Closed", result);
     });
   }
 
@@ -149,10 +153,10 @@ export class DashboardComponent {
   getOverviewPageStatus() {
     this.eventBookingService.getOverviewPage().subscribe(data => {
       if (data) {
-       const selectedStepNumber = this.eventBookingService.getSelectedStepNumber();
-       if(selectedStepNumber !== 1){
-        this.continueBooking('300ms', '300ms');
-       }
+        const selectedStepNumber = this.eventBookingService.getSelectedStepNumber();
+        if (selectedStepNumber !== 1) {
+          this.continueBooking('300ms', '300ms');
+        }
       }
     });
   }
