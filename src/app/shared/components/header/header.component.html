@@ -3,15 +3,16 @@
   <p class="main_line h-4 m-0 d-none d-lg-block"></p>
   <div class="left header-align">
     <div class="header__logo one order-lg-0 order-2">
-      <a class="navbar-brand cursor mx-auto">
-        <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{ headerInfo?.logo }}" alt="" (click)="goToHome()" />
+     <a routerLink="/home" href="/home" class="navbar-brand cursor mx-auto" tabindex="0" aria-label="Home"  >
+        <img class="logo mb-0 w-90 w-lg-140 h-76" src="{{ headerInfo?.logo }}" 
+             alt="Company Logo" />
       </a>
     </div>
 
     <!-- Header-above-line -->
     <div class="second order-lg-2 order-2">
       <p class="navbar-toggler nav-togleuser mb-0" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        data-bs-target="#offcanvasNavbar" >
         <span class="navbar-toggler-icon"></span>
       </p>
       <!-- side-bar -->
@@ -19,7 +20,7 @@
         aria-labelledby="offcanvasNavbarLabel">
         <!-- sidebar-header -->
         <div class="offcanvas-header text-dark">
-          <p type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></p>
+          <p type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close navigation menu"></p>
         </div>
         <!-- sidebar-body -->
         <div class="offcanvas-body my-30">
@@ -27,7 +28,7 @@
             <li class="nav-item p-10 p-lg-0 fw-400 cursor" *ngFor="let item of navList; let i = index"
               (click)="goTo(item.link)">
               <div class="link-dark link-underline-opacity-0 hover-container" (mouseenter)="onMouseEnter(item)"
-                (mouseleave)="onMouseLeave()">
+                (mouseleave)="onMouseLeave()" role="button" tabindex="0" (keyup.enter)="goTo(item.link)" (keyup.space)="goTo(item.link)">
                 <img class="ps-2 pe-2 header-images" [ngStyle]="{
                   width: item ? getImageWidth(i, item) : '28px',
                     opacity: hoveredItem === item ? '1' : '0.7'
@@ -45,7 +46,7 @@
     <!-- Header-below-line -->
     <div class="third d-flex flex-lg-grow-1 order-lg-2 order-1">
       <p class="navbar-toggler nav-togleuser mb-0" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        data-bs-target="#offcanvasNavbar2">
         <span class="">
           <img class="usericon h-20" src="../../../../assets/images/logo/user.svg" alt="" />
         </span>

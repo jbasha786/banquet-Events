@@ -145,9 +145,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  goToHome() {
-    this.router.navigate(['']);
-  }
+ 
 
   goTo(link: any) {
     this.router.navigate([link]);

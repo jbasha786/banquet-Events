@@ -22,6 +22,7 @@ import * as bannerActions from "../_store/actions/banner.action";
 import * as subBannerActions from "../_store/actions/subBanner.action";
 import { bannerSelector } from '../_store/selectors/banner.selector';
 import { subBannerSelector } from '../_store/selectors/subBanner.selector';
+import { BannerModel } from '../_models/banner.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -44,7 +45,8 @@ import { subBannerSelector } from '../_store/selectors/subBanner.selector';
 })
 
 export class DashboardComponent {
-  bannerInfo: any;
+  activeIndex: number | null = null;
+  bannerInfo!: BannerModel | undefined;
   eventsInfo: any;
   arrangementsInfo: any;
   experienceInfo: any;
@@ -84,8 +86,8 @@ export class DashboardComponent {
   }
 
   public fetchBannerStoreData() {
-    this.store.select(bannerSelector).subscribe(data => {
-      this.bannerInfo = data;
+    this.store.select(bannerSelector).subscribe((data:any) => {
+      this.bannerInfo = data.banner;
     })
   }
 
@@ -123,7 +125,8 @@ export class DashboardComponent {
       }
     }
   }
-
+  
+  
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(BookingComponent, {
@@ -175,6 +178,16 @@ export class DashboardComponent {
         }
       }
     });
+  }
+
+  showOverlay(index: number) {
+    this.activeIndex = index;
+  }
+
+  hideOverlay(index: number) {
+    if (this.activeIndex === index) {
+      this.activeIndex = null;
+    }
   }
 
 }
