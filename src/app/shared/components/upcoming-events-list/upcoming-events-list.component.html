@@ -1,21 +1,21 @@
-<div class="tagList">
-  <div class="slider">
-    <div class="items">
+ <div class="tagList">
+  <div class="slider" role="region" aria-labelledby="promo-title" tabindex="0">
+    <div class="items" role="list">
       @for(image of promotionsInfo; track $index){
-      <a class="item">
-        <img src="{{ image.src }}" alt="" />
+      <a class="item" role="listitem" href="#" tabindex="0">
+        <img src="{{ image.src }}" alt="{{ image.alt || 'Promotion image' }}" />
       </a>
       }
       @for(image of promotionsInfo; track $index){
-      <a class="item">
-        <img src="{{ image.src }}" alt="" />
+      <a class="item" role="listitem" href="#" tabindex="0">
+        <img src="{{ image.src }}" alt="{{ image.alt || 'Promotion image' }}" />
       </a>
       }
       @for(image of promotionsInfo; track $index){
-      <a class="item">
-        <img src="{{ image.src }}" alt="" />
+      <a class="item" role="listitem" href="#" tabindex="0">
+        <img src="{{ image.src }}" alt="{{ image.alt || 'Promotion image' }}" />
       </a>
       }
     </div>
   </div>
-</div>
+</div> 

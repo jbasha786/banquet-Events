@@ -57,6 +57,11 @@
 .event_name:active {
   -webkit-text-fill-color: $secondary-color;
 }
+.hover-container{
+    display: flex;
+    align-items: center;
+    gap: gutter-sp(10);
+}
 .hover-container:hover .event_name,
 .hover-container:active .event_name {
   color: $secondary-color;

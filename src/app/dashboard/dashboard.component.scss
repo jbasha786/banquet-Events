@@ -224,6 +224,15 @@
   }
 }
 
+.experience__image:focus + .experience__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.experience__overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
 //corporate-family
 .corporate-family {
   padding: gutter-vw(0) gutter-vw(5) gutter-vw(5);
@@ -263,7 +272,6 @@
 
   &__desc {
     font-weight: 300;
-    line-height: gutter-sp(26);
   }
 
   &__image {

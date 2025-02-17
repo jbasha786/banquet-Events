@@ -8,7 +8,7 @@
 </div>
 
 <div class="page_content">
-  <p class="fs-26 fw-500">Wedding</p>
+  <p class="fs-26 fs-xl-30 fw-500">Wedding</p>
   <app-custom-calender></app-custom-calender>
 
   <!-- Loop through the events -->
@@ -35,8 +35,8 @@
         <div class="col-xl-8 col-xxl-7 container-text">
           <div class="d-flex flex-column gap-4">
           <div>
-            <p class="title mb-1 fs-22 fs-lg-30 fw-500">{{ event.title }}</p>
-            <p class="room-details fs-14 fw-300">
+            <p class="title mb-1 fs-22 fs-lg-30 fs-xl-34 fs-xxl-38 fw-500">{{ event.title }}</p>
+            <p class="room-details fs-14 fs-xl-16 fs-xxl-18 fw-300">
               <span
                 *ngFor="let part of getRoomDetailsParts(event); let last = last"
               >
@@ -47,13 +47,13 @@
           </div>
 
           <div>
-            <p class="about fs-16 fw-500 mb-2">About</p>
-            <p class="mb-8 lh-24 fs-14 fs-lg-13 fw-300">
+            <p class="about fs-16 fs-xl-18 fs-xxl-20 fw-500 mb-2">About</p>
+            <p class="mb-8 lh-24 lh-xl-30 fs-14 fs-lg-13 fs-xl-16 fs-xxl-18 fw-300">
               {{ event.description }}
             </p>
             <div class="list-container">
               <ul
-                class="mt-16 fs-14 fs-lg-13 fw-300 d-flex flex-lg-row flex-column gap-0 gap-lg-20"
+                class="mt-16 fs-14 fs-lg-13 fs-xl-16 fs-xxl-18 fw-300 d-flex flex-lg-row flex-column gap-0 gap-lg-20"
               >
                 <div class="left-column">
                   <li *ngFor="let amenity of event.amenities.slice(0, 4)">
@@ -70,15 +70,15 @@
           </div>
         </div>
           <div>
-            <div class="price mb-3 fs-36 lh-25">
+            <div class="price mb-3 fs-36 fs-xl-40 fs-xxl-44 lh-25 lh-xl-36">
               {{ event.price }}
-              <span class="fw-500 fs-14 text-muted">/ON WORDS</span>
+              <span class="fw-500 fs-14 fs-xl-16 fs-xxl-18 text-muted">/ON WORDS</span>
             </div>
             <!-- Buttons -->
              <div class="d-flex flex-lg-row flex-column gap-12 justify-content-center justify-content-lg-start align-items-center align-items-lg-start">
-                <app-button [btnClass]="'btn-book'" [btnName]="'Book now'"> </app-button>
-                <app-button [btnClass]="'btn-download'" [btnName]="'Download Brochure'"> </app-button>
-                <app-button [btnClass]="'btn-quote'" [btnName]="'Request a Quote'"> </app-button>
+                <app-button [btnClass]="'btn-book w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Book now'"> </app-button>
+                <app-button [btnClass]="'btn-download w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Download Brochure'"> </app-button>
+                <app-button [btnClass]="'btn-quote w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Request a Quote'"> </app-button>
              </div>
           </div>
         </div>

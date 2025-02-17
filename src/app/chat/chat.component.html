@@ -1,34 +1,39 @@
-<div (click)="OnClick()" class="chatSection">
+<div (click)="OnClick()" class="chatSection" role="button"
+tabindex="0"
+aria-label="Open chat support"
+(keydown.enter)="OnClick()">
   <img
     src="../../assets/images/chat/chat-help.svg"
-    alt="helpicon"
+    alt="Open chat help"
     class="chatIcon"
   />
 </div>
 
-<div *ngIf="isChatBotVisible" class="chat-bot w-310 w-sm-400">
-  <div
-    class="title-container d-flex justify-content-between align-items-center mb-20"
-  >
+<div *ngIf="isChatBotVisible" class="chat-bot w-310 w-sm-400"  role="dialog"
+aria-labelledby="chat-title"
+aria-describedby="chat-description"
+[attr.aria-hidden]="!isChatBotVisible">
+  <div class="title-container d-flex justify-content-between align-items-center mb-20">
     <div class="title d-flex flex-column gap-1">
-      <p class="header fs-20 lh-22 mb-0">Help</p>
-      <p class="header-call fs-14 mb-0">Call Toll Free: 0592-356 000</p>
+      <p id="chat-title" class="header fs-20 lh-22 mb-0">Help</p>
+      <p id="chat-description" class="header-call fs-14 mb-0">Call Toll Free: 0592-356 000</p>
     </div>
     <img
       src="../../assets/images/chat/close-btn.svg"
       width="15"
+      alt="Close chat"
       class="close-btn"
       (click)="onClose()"
     />
   </div>
 
-  <div class="message-area">
+  <div class="message-area" role="log" aria-live="polite">
     <div
       class="bot-message d-flex justify-content-center align-items-center gap-10"
     >
       <img
         src="../../assets/images/chat/chat-debonte.svg"
-        alt=""
+        alt="Chatbot avatar"
         class="msgicon"
       />
       <p class="bot-msg fs-14 fw-500 lh-20 mb-0">
@@ -61,13 +66,13 @@
     </div>
     <div class="btn-arrange d-flex flex-column gap-10">
         <div class="bot-message d-flex gap-10 align-items-start">
-          <img src="../../assets/images/chat/chat-debonte.svg" alt="" class="msgicon" />
+          <img src="../../assets/images/chat/chat-debonte.svg" alt="Chatbot avatar" class="msgicon" />
           <div class="message-content d-flex flex-column gap-10">
             <p class="bot-msg fs-14 fw-500 lh-20 mb-0">
               That’s cool,<br />
               Here are the Available Rooms
             </p>
-            <button class="chat__btn">Review and Proceed</button>
+            <button class="chat__btn" aria-label="Review and proceed to booking">Review and Proceed</button>
           </div>
         </div>
       </div>
@@ -76,15 +81,17 @@
   </div>
 
   <div class="text">
-    <input type="text" placeholder="Type here..." class="inputtext" (input)="changeInputStyle($event)" [ngStyle]="{
+    <input id="chat-input" type="text" placeholder="Type here..." class="inputtext" (input)="changeInputStyle($event)" [ngStyle]="{
       'background-color': inputBackgroundColor,
       'color': inputTextColor,
       'border-color': inputBorderColor
     }" />
-    <img
+   <img
       src="../../assets/images/chat/chat-send-btn.svg"
-      alt=""
-      class="sendicon"
+      alt="Send message"
+      class="sendicon send-btn"
+      aria-label="Send message"
     />
+ 
   </div>
 </div>
