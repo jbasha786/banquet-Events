@@ -1,16 +1,16 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultService } from '../services/default.service';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogueComponent } from '../shared/components/dialogue/dialogue.component';
-import { SuccessDialogueComponent } from '../shared/components/success-dialogue/success-dialogue.component';
+import { CustomDialogComponent } from '../shared/components/custom-dialog/custom-dialog.component';
 
 @Component({
   selector: 'app-booking-details',
-  standalone: true, 
-  imports: [CommonModule], 
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './booking-details.component.html',
   styleUrls: ['./booking-details.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class BookingDetailsComponent implements OnInit {
   isSmallScreen = false;
@@ -19,8 +19,8 @@ export class BookingDetailsComponent implements OnInit {
   paymentDetailsInfo: any[] = [];
   hostInfo: any[] = [];
 
- 
-  constructor(private defaultService: DefaultService, private dialog: MatDialog) {}
+
+  constructor(private defaultService: DefaultService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getInitialData();
@@ -48,21 +48,43 @@ export class BookingDetailsComponent implements OnInit {
       }
     );
   }
- cancelReservation() {
-    const screenWidth = window.innerWidth;
-    this.dialog.open(DialogueComponent, {
-      backdropClass: 'custom-dialog-backdrop', 
-      panelClass: 'custom-dialog-panel', 
+  cancelReservation() {
+    this.dialog.open(CustomDialogComponent, {
+      backdropClass: 'custom-dialog-backdrop',
+      panelClass: 'custom-dialog-panel',
       width: "550px",
       disableClose: true,
+
+      data: {
+        title: 'Are you sure ?',
+        type: 'confirm',
+        bookingName: '"Queens Lagoon Suite".',
+        showActions: true,
+        cancelText: 'No',
+        confirmText: 'Yes',
+        backdropCloseButton: false,
+        hideCloseButton: true
+      }
     });
   }
   successReservation() {
-    const screenWidth = window.innerWidth;
-    this.dialog.open(SuccessDialogueComponent, {
-      backdropClass: 'custom-dialog-success-backdrop', 
-      panelClass: 'custom-dialog-success-panel', 
+    const dialogRef = this.dialog.open(CustomDialogComponent, {
+      backdropClass: 'custom-dialog-success-backdrop',
+      panelClass: 'custom-dialog-success-panel',
       width: "550px",
+      data: {
+        type: 'success',
+        quotationId: '14324',
+        backdropCloseButton: false,
+        imageSrc: 'assets/images/halls/sent.gif',
+        imgText: "Successfully",
+        imgquote: "Quotation Sent",
+        imgId: "ID: 14324",
+        hideCloseButton: true
+      }
     });
+    setTimeout(() => {
+      dialogRef.componentInstance.data.backdropCloseButton = true;
+    }, 200);
   }
 }

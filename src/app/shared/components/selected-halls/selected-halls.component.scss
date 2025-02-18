@@ -1,8 +1,6 @@
 @import '../../../styles/variable.scss';
 
 .hallsView {
-
-
     .guest {
         font-size: gutter-sp(13);
         padding-left: gutter-sp(12);
@@ -197,4 +195,9 @@
     letter-spacing: gutter-sp(2);
     box-sizing: border-box;
     text-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(10) $black-overlay;
+}
+
+.cdk-global-overlay-wrapper {
+    position: absolute;
+    top: gutter-sp(0);
 }

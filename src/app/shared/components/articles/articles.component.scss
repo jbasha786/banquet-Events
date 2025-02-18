@@ -42,19 +42,14 @@
             font-size: gutter-sp(12);
             width: gutter-per(100);
         }
-        &__search-input::placeholder{
+
+        &__search-input::placeholder {
             color: $searchPholder;
             font-weight: 300;
         }
 
         &__search-input:focus-within {
-            border-radius: gutter-sp(4);
-            border-color: $secondary-color;
             box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
-            background-color: $gray;
-            min-height: gutter-sp(30);
-            font-size: gutter-sp(12);
-            width: gutter-per(100);
         }
 
         input:focus,
@@ -101,7 +96,7 @@
         border-bottom: gutter-sp(1) solid $white;
     }
 
-    
+
 
     .custom-search {
         border: gutter-sp(2) solid $admin-search;
@@ -109,4 +104,8 @@
         background-color: transparent;
     }
 
+}
+
+.cdk-overlay-backdrop {
+    background-color: $backdrop;
 }

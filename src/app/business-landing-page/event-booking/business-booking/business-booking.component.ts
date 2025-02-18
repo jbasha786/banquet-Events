@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AboutEventComponent } from '../about-event/about-event.component';
 import { CommonModule } from '@angular/common';
 import { AccommodationComponent } from '../accommodation/accommodation.component';
@@ -39,7 +39,7 @@ export class BusinessBookingComponent {
   backBtnText: string = 'Back';
   nextBtnText: string = 'Next';
 
-  constructor(public dialogRef: MatDialogRef<BusinessBookingComponent>,
+  constructor(
     private dialog: MatDialog,
     private router: Router,
     private eventBookingService: EventBookingService
@@ -48,7 +48,7 @@ export class BusinessBookingComponent {
     this.progressbarWidth = this.defaultProgressSize + "%";
     this.routerSubscription = this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        this.dialogRef.close();
+        this.dialog.closeAll();
       }
     });
   }
@@ -58,12 +58,10 @@ export class BusinessBookingComponent {
   }
 
   returnToHome() {
-    this.dialogRef.close();
     this.dialog.closeAll();
     this.eventBookingService.clearSelectedServices();
     this.eventBookingService.setSelectedStepNumber(1);
   }
-
   back() {
     if (this.currentStep === 1) {
       this.returnToHome();
@@ -97,7 +95,6 @@ export class BusinessBookingComponent {
     if (this.currentStep === 6) {
       this.currentStep = 1;
     }
-    this.dialogRef.close();
     this.dialog.closeAll();
     this.eventBookingService.clearSelectedServices();
     this.eventBookingService.setSelectedStepNumber(1);
@@ -110,6 +107,7 @@ export class BusinessBookingComponent {
   updateNextBtnText(currentStepNumber: number) {
     this.nextBtnText = currentStepNumber === 5 ? 'Confirm Reservation' : 'Next';
   }
+
   ngOnDestroy(): void {
     this.routerSubscription.unsubscribe();
   }

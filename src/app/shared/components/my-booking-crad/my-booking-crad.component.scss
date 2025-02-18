@@ -80,3 +80,8 @@
     }
 
 }
+
+.cdk-global-overlay-wrapper {
+    position: absolute;
+    top: gutter-sp(0);
+}
