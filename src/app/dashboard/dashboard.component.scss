@@ -591,8 +591,8 @@ css for scroll .fade {
 
 .booking-dialog-wrapper.cdk-overlay-pane.mat-mdc-dialog-panel {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  min-width: 100%;
+  width: gutter-per(100);
+  height: gutter-per(100);
+  max-width: gutter-per(100);
+  min-width: gutter-per(100);
 }
