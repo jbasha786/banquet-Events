@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output,ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { ZindexService } from '../../../services/zindex.service';
 
 @Component({
   selector: 'app-date-range-picker',
@@ -24,12 +25,30 @@ export class DateRangePickerComponent {
   @Input() matPickerClass: string = '';
   @Input() placeholderClass1: string = '';
   @Input() placeholderClass2: string = '';
-  @Output() selectedDate:EventEmitter<{ startDate: any, endDate: any }> = new EventEmitter();
+  @Output() selectedDate: EventEmitter<{ startDate: any, endDate: any }> = new EventEmitter();
+
+  constructor(private zindexService: ZindexService) { }
 
   dateRangeChange(dateRangeStart: HTMLInputElement, dateRangeEnd: HTMLInputElement) {
     this.selectedDate.emit({
       startDate: dateRangeStart.value,
       endDate: dateRangeEnd.value
     })
+  }
+
+  onDatepickerOpened() {
+    this.zindexService.setHeaderZIndex(1000);
+    const backdrop = document.querySelector('.cdk-overlay-backdrop') as HTMLElement;
+    if (backdrop) {
+      backdrop.classList.add('custom-backdrop');
+    }
+  }
+  onDatepickerClosed() {
+    this.zindexService.setHeaderZIndex(1030);
+    const backdrop = document.querySelector('.cdk-overlay-backdrop') as HTMLElement;
+    if (backdrop) {
+      backdrop.classList.remove('custom-backdrop');
+    }
+
   }
 }

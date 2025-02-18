@@ -4,7 +4,7 @@
         <div class="form-floating custom_floating">
             <input class="form-control custom_date_input" id="datepicker" placeholder="Guests" matInput
                 [matDatepicker]="matDatepickerName" (selectionchange)="dateChange($event)" [(ngModel)]="date">
-            <mat-datepicker #matDatepickerName></mat-datepicker>
+            <mat-datepicker #matDatepickerName (opened)="onDatepickerOpened()" (closed)="onDatepickerClosed()"></mat-datepicker>
             <label for="guestCount" class="customLabel guestLabel fs-xl-18">{{label}}</label>
         </div>
     </div>
