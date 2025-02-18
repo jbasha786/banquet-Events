@@ -189,7 +189,6 @@
     color: $white;
     border: gutter-sp(1) solid $cancelbtn;
     border-radius: gutter-sp(6);
-    // font-size: clamp(10px, 0.5vw, 13px);
     height: gutter-sp(30);
     padding: gutter-sp(0) gutter-sp(5);
 
@@ -205,7 +204,6 @@
     color: $white;
     border: gutter-sp(1) solid $editbtn;
     border-radius: gutter-sp(6);
-    font-size: clamp(10px, 0.5vw, 13px);
     height: gutter-sp(30);
     padding: gutter-vw(0) gutter-vw(0.5);
 
@@ -221,7 +219,6 @@
     color: $white;
     border: gutter-sp(1) solid $viewdetailbtn;
     border-radius: gutter-sp(6);
-    font-size: clamp(10px, 0.5vw, 13px);
     height: gutter-sp(30);
     padding: gutter-sp(0) gutter-sp(5);
 
@@ -537,10 +534,6 @@ button:hover span::after {
 .buttonCancel {
     color: $cancelcolor;
     border: gutter-sp(1) solid $cancelcolor;
-    // font-size: gutter-sp(19);
-    // font-size: clamp(19px, 0.5vw, 30px );
-    // height: gutter-sp(40);
-    // height: clamp(49px, 0.5vh, 50px );
     font-weight: 500;
     background: transparent;
 }

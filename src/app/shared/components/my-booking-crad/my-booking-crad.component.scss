@@ -5,6 +5,7 @@
     .card-img {
         height: gutter-per(100);
         width: gutter-per(100);
+        object-fit: cover;
     }
 
     .price {
@@ -53,8 +54,8 @@
     }
 
     .frameImg {
-        // height: clamp(16px, 1vw, 26px);
-        // width: clamp(16px, 1vw, 26px);
+        height: clamp(16px, 1vw, 26px);
+        width: clamp(16px, 1vw, 26px);
     }
 
     .rating_booking {

@@ -22,15 +22,11 @@
     background-color: $white;
     min-height: gutter-sp(30);
     width: gutter-per(100);
+    // font-size: clamp(14px, 1vw, 20px);
   }
 
   .search-input:focus-within {
-    border-radius: gutter-sp(6);
-    border-color: $secondary-color;
-    box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
-    background-color: $gray;
-    min-height: gutter-sp(30);
-    width: gutter-per(100);
+    box-shadow:  $value-null $value-null gutter-sp(5) $btn-shadow;
   }
 
   .search-input::placeholder {
@@ -49,7 +45,6 @@
   .search-icon {
     position: absolute;
     left: gutter-sp(11);
-    top: gutter-sp(9);
     background-color: inherit;
     color: $searchPholder;
   }
@@ -71,6 +66,7 @@
   }
 
   .tabTitle ::ng-deep .mdc-tab__text-label {
+    font-size: clamp(16px, 2vw, 36px);
     letter-spacing: normal;
     margin-right: gutter-vw(3);
     text-transform: none;
@@ -81,6 +77,7 @@
   }
 
   .tabTitle ::ng-deep .mdc-tab-indicator--active {
+    font-size: clamp(16px, 2vw, 36px);
     letter-spacing: normal;
     padding: gutter-sp(0);
   }
