@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, Input } from '@angular/core';
+import { Component, input, Input, ViewEncapsulation } from '@angular/core';
 import { bookingHistoryModel } from '../../_models/bookingHistoryModel';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogueComponent } from '../dialogue/dialogue.component';
 import { ButtonComponent } from '../../genericComponents/button/button.component';
+import { CustomDialogComponent } from '../custom-dialog/custom-dialog.component';
 
 @Component({
   selector: 'app-my-booking-crad',
   standalone: true,
   imports: [CommonModule, ButtonComponent],
   templateUrl: './my-booking-crad.component.html',
-  styleUrl: './my-booking-crad.component.scss'
+  styleUrl: './my-booking-crad.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class MyBookingCradComponent {
   isHovered = false;
@@ -48,11 +49,23 @@ export class MyBookingCradComponent {
   ngOnInIt() {
   }
   cancelBooking(){
-     this.dialog.open(DialogueComponent, {
-          width: "500px",
-          disableClose: true,
-          panelClass: 'custom-dialog-panel'
-        });
+      this.dialog.open(CustomDialogComponent, {
+               backdropClass: 'custom-dialog-backdrop',  
+               panelClass: 'custom-dialog-panel',        
+               width: "550px",
+               disableClose: true,
+               
+               data: {
+                 type: 'confirm',
+                 title: 'Are you sure?',
+                 bookingName: 'Queens Lagoon Suite',
+                 showActions: true,
+                 cancelText: 'No',
+                 confirmText: 'Yes',
+                 backdropCloseButton:false,
+                 hideCloseButton: true
+               }
+             });
   }
   editBooking(){
     console.log("Edit Booking clicked");

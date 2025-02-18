@@ -3,7 +3,7 @@
 .tableInvoice {
     margin-top: gutter-sp(70);
 
-    .tableCell .mat-mdc-cell{
+    .tableCell .mat-mdc-cell {
         height: gutter-sp(45);
         color: $tableCellColor;
         font-weight: 500;
@@ -30,9 +30,19 @@
             width: gutter-sp(18);
         }
     }
+
     @media (min-width: 320px) and (max-width: 768px) {
-        .tableCell .mat-mdc-cell{
-            font-size:  gutter-sp(11);
+        .tableCell .mat-mdc-cell {
+            font-size: gutter-sp(11);
         }
     }
+}
+
+.cdk-overlay-backdrop {
+    background-color: $backdrop;
+}
+
+.invoive-view {
+    transform: translate(gutter-per(0), gutter-per(-15));
+    position: relative;
 }

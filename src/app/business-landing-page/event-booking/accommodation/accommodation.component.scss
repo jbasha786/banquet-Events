@@ -24,9 +24,22 @@
         opacity: gutter-per(75);
     }
 
-    .custom_input::placeholder{
+    .custom_input::placeholder {
         opacity: gutter-per(45);
         font-size: gutter-sp(14);
         font-weight: 500;
     }
+}
+
+.timePartLocation {
+    position: absolute;
+    top: gutter-sp(10);
+
+    .mat-mdc-dialog-container .mdc-dialog__surface {
+        border-radius: gutter-sp(12);
+        scrollbar-width: none;
+    }
+}
+.cdk-overlay-backdrop {
+    background-color: $backdrop;
 }

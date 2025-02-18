@@ -1,5 +1,5 @@
 import { SelectionModel } from '@angular/cdk/collections';
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { MatDialogActions, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -9,15 +9,17 @@ import { DefaultService } from '../../../services/default.service';
 import { Router } from '@angular/router';
 import { ButtonComponent } from '../../genericComponents/button/button.component';
 import { CustomMatCheckboxComponent } from '../../genericComponents/custom-mat-checkbox/custom-mat-checkbox.component';
+import { CommonModule } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [MatIconModule, MatCheckboxModule, MatTableModule, MatDialogActions, ButtonComponent, CustomMatCheckboxComponent],
+  imports: [MatIconModule, MatCheckboxModule, MatTableModule, MatDialogActions, ButtonComponent, CustomMatCheckboxComponent, CommonModule],
   templateUrl: './articles.component.html',
-  styleUrl: './articles.component.scss'
+  styleUrl: './articles.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class ArticlesComponent {
   saveBtn: string = "Save";

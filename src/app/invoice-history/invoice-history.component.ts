@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { InvoiceHistotyViewComponent } from './invoice-histoty-view/invoice-histoty-view.component';
 import { DefaultService } from '../services/default.service';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 import { invoiceHistoryModel } from '../shared/_models/invoiceHistory.model'
+import { ZindexService } from '../services/zindex.service';
+import { CustomDialogService } from '../services/custom-dialog.service';
+import { ChooseMenuComponent } from '../shared/components/choose-menu/choose-menu.component';
 
 @Component({
   selector: 'app-invoice-history',
@@ -12,7 +15,8 @@ import { invoiceHistoryModel } from '../shared/_models/invoiceHistory.model'
   imports: [MatDialogModule, CommonModule, MatTableModule,
   ],
   templateUrl: './invoice-history.component.html',
-  styleUrl: './invoice-history.component.scss'
+  styleUrl: './invoice-history.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class InvoiceHistoryComponent {
 
@@ -21,17 +25,26 @@ export class InvoiceHistoryComponent {
   data: any[] = [];
 
   dataSource = new MatTableDataSource<any>([]);
-  constructor(public dialog: MatDialog, private defaultService: DefaultService) { }
+  constructor(public dialog: MatDialog, private defaultService: DefaultService,
+    private zIndexService: ZindexService,
+    private customDialogService: CustomDialogService) { }
 
   ngOnInit(): void {
     this.getInitialData();
   }
   overview() {
-    this.dialog.open(InvoiceHistotyViewComponent, {
+    this.zIndexService.setHeaderZIndex(1000);
+    const dialogRef = this.customDialogService.openDialog(InvoiceHistotyViewComponent, {
+      panelClass: 'invoive-view',
+      backdropClass: 'custom-backdrop',
       width: "530px",
       height: "75vh",
-      panelClass: 'invoive-view',
-    })
+      disableClose: false
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.zIndexService.setHeaderZIndex(1030);
+    });
   }
   getInitialData() {
     this.defaultService.getJSON().subscribe(result => {
