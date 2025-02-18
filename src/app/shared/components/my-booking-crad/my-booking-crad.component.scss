@@ -9,7 +9,6 @@
 
     .price {
         color: $priceColor;
-        font-size: gutter-sp(24);
     }
 
     .fontdull {
@@ -54,8 +53,8 @@
     }
 
     .frameImg {
-        height: gutter-sp(16);
-        width: gutter-sp(16);
+        // height: clamp(16px, 1vw, 26px);
+        // width: clamp(16px, 1vw, 26px);
     }
 
     .rating_booking {
@@ -72,7 +71,6 @@
 
     .address {
         color: $adresscolor;
-        font-size: gutter-sp(10);
         flex-wrap: wrap;
         white-space: normal;
         word-wrap: break-word;

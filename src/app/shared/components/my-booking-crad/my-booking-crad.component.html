@@ -16,55 +16,55 @@
         <div class="d-flex flex-column booking_details gap-2 mt-3 mt-md-0">
             <div class="d-flex justify-content-between flex-column flex-md-row">
                 <div class="d-flex align-items-center">
-                    <img [src]="frameImg" class="frameImg" alt="">
-                    <span class="ps-2 fs-18 fw-500">{{title}}</span>
+                    <img [src]="frameImg" class="frameImg h-16 h-xl-26 w-16 w-xl-26" alt="">
+                    <span class="ps-2 fs-18 fs-xl-20 fs-xxl-30 fw-500">{{title}}</span>
                 </div>
                 <!-- buttons for medium screens and above -->
                 <div class="d-none d-md-flex gap-2 flex-row flex-md-row flex-wrap mt-2 mt-lg-0">
                     <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="shareImg" alt=""></p>
                     <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="favImg" alt=""></p>
-                    <p class="border rounded bg-white mb-0 pl-3 pr-3" (mouseenter)="isHovered = true"
+                    <p class="border rounded bg-white mb-0 pl-3 pr-3 h-30" (mouseenter)="isHovered = true"
                         (mouseleave)="isHovered = false">
-                        <img [src]="isHovered ? hoverImage : viewImage" alt="" class="h-13">
+                        <img [src]="isHovered ? hoverImage : viewImage" alt="" class="h-13 h-xl-16">
                     </p>
-                    <app-button [btnClass]="'cancelBooking px-2'" [btnName]="cancelBtn"
+                    <app-button [btnClass]="'cancelBooking px-2 fs-10 fs-xl-13 fs-xxl-15'" [btnName]="cancelBtn"
                         (bannerActionEvent)="cancelBooking()"></app-button>
-                    <app-button [btnClass]="'editBooking'" [btnName]="editBtn"
+                    <app-button [btnClass]="'editBooking fs-10 fs-xl-13 fs-xxl-15'" [btnName]="editBtn"
                         (bannerActionEvent)="editBooking()"></app-button>
-                    <app-button [btnClass]="'viewDetail'" [btnName]="viewBtn"
+                    <app-button [btnClass]="'viewDetail fs-10 fs-xl-13 fs-xxl-15'" [btnName]="viewBtn"
                         (bannerActionEvent)="viewDetail()"></app-button>
                 </div>
             </div>
             <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
-                <span class="price fw-bold">{{price}}</span>
+                <span class="price fw-bold fs-24 fs-xl-26 fs-xxl-28">{{price}}</span>
                 <div class="fontdull pipe d-md-block d-none">|</div>
-                <span class="fs-11 fw-500">{{diamensions}}</span>
+                <span class="fs-11 fs-xl-13 fs-xxl-15 fw-500">{{diamensions}}</span>
                 <span class="fontdull pipe d-md-block d-none">|</span>
-                <span class="fs-11 fw-500">{{bookingID}}</span>
+                <span class="fs-11 fs-xl-13 fs-xxl-15 fw-500">{{bookingID}}</span>
                 <span class="fontdull pipe d-md-block d-none">|</span>
-                <span class="fs-11 fw-500">{{dob}}</span>
+                <span class="fs-11 fs-xl-13 fs-xxl-15 fw-500">{{dob}}</span>
             </div>
             <div class="d-flex flex-column flex-lg-row align-items-lg-center statusSection gap-3 gap-lg-5">
                 <div class="d-flex flex-column">
-                    <span class="fontdull fs-12 fw-400">{{noOfGuestsName}}</span>
-                    <span class="fs-11 fw-500">{{noOfGuestValue}}</span>
+                    <span class="fontdull fs-12 fs-xl-14 fs-xxl-16 fw-400">{{noOfGuestsName}}</span>
+                    <span class="fs-11 fs-xl-13 fs-xxl-19 fw-500">{{noOfGuestValue}}</span>
                 </div>
                 <div class="d-flex flex-column">
-                    <span class="fontdull fs-12 fw-400">{{checkInname}}</span>
-                    <span class="fs-11 fw-500">{{checkInvalue}}</span>
+                    <span class="fontdull fs-12 fs-xl-14 fs-xxl-16 fw-400">{{checkInname}}</span>
+                    <span class="fs-11 fs-xl-13 fs-xxl-19 fw-500">{{checkInvalue}}</span>
                 </div>
                 <div class="d-flex flex-column">
-                    <span class="fontdull fs-12 fw-400">{{checkOutname}}</span>
-                    <span class="fs-11 fw-500">{{checkOutvalue}}</span>
+                    <span class="fontdull fs-12 fs-xl-14 fs-xxl-16 fw-400">{{checkOutname}}</span>
+                    <span class="fs-11 fs-xl-13 fs-xxl-19 fw-500">{{checkOutvalue}}</span>
                 </div>
                 <div class="d-flex flex-column">
-                    <span class="fontdull fs-12 fw-400">{{statusName}}</span>
-                    <span class="fs-11 fw-500">{{statusvalue}}</span>
+                    <span class="fontdull fs-12 fs-xl-14 fs-xxl-16 fw-400">{{statusName}}</span>
+                    <span class="fs-11 fs-xl-13 fs-xxl-19 fw-500">{{statusvalue}}</span>
                 </div>
             </div>
             <div class="d-flex gap-1 align-items-lg-center overflow-hidden">
                 <div><img [src]="addrImg" class="addrImg" alt=""></div>
-                <div class="address fw-500">
+                <div class="address fs-10 fs-xl-12 fs-xxl-14 fw-500">
                     <p class="d-flex flex-wrap mb-0">{{address}}</p>
                 </div>
             </div>
