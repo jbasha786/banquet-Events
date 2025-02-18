@@ -1,29 +1,29 @@
 <div class="tickets ml-lg-30">
     <div class="p-20 tickets__section">
-        <p class="date fs-14 fs-xl-16 fs-xxl-18 fw-medium">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
-        <p class="title fw-bold fs-20 fs-lg-32 fs-xxl-34 m-0">WPD World Cup 2024</p>
-        <p class="desc fs-18 fs-xxl-20 fw-medium m-0 pb-10">Organized by world para darts association</p>
-        <p class="numoftickets fs-18 fs-xxl-20 mb-0 fw-medium">Tickets Available: {{numberOfTickets}}</p>
+        <p class="date fs-14 fs-xl-16 fs-xxl-24 fw-medium">Starts From November 22 – 24, 2024 at De Bonte Wever</p>
+        <p class="title fw-bold fs-20 fs-lg-32 fs-xxl-50 m-0">WPD World Cup 2024</p>
+        <p class="desc fs-18 fs-xxl-24 fw-medium m-0 pb-10">Organized by world para darts association</p>
+        <p class="numoftickets fs-18 fs-xxl-24 mb-0 fw-medium">Tickets Available: {{numberOfTickets}}</p>
         <div class="d-flex justify-content-between qty gap-20 flex-column flex-md-row flex-lg-column flex-xl-row">
             <div>
-                <p class="fs-22 fs-xxl-24 fw-bold m-0 pb-2">5 Days / 4 Nights</p>
-                <p class="fs-14 fs-xxl-16 m-0 items">4x Breakfast / 3x Lunch / 4x Dinner</p>
+                <p class="fs-22 fs-xxl-32 fw-bold m-0 pb-2">5 Days / 4 Nights</p>
+                <p class="fs-14 fs-xxl-24 m-0 items">4x Breakfast / 3x Lunch / 4x Dinner</p>
             </div>
             <div class="d-flex qtySection gap-4 align-items-center justify-content-center">
                 <mat-icon fontIcon="remove" (click)="decrement()" [ngClass]="isbtnActive ? 'active' : 'inActive' "
-                    class="cursor"></mat-icon>
-                <p class="value mb-0 fs-30 fs-xxl-34">{{itemQty}}</p>
+                    class="cursor h-xxl-80 w-xxl-80 fs-xxl-40"></mat-icon>
+                <p class="value mb-0 fs-30 fs-xxl-40">{{itemQty}}</p>
                 <mat-icon fontIcon="add" (click)="increment()" [ngClass]="!isbtnActive ? 'active' : 'inActive'"
-                    class="cursor"></mat-icon>
+                    class="cursor h-xxl-80 w-xxl-80 fs-xxl-40"></mat-icon>
             </div>
         </div>
         <div class="d-flex justify-content-between tickets__price flex-column flex-md-row flex-lg-column flex-xl-row">
             <div>
-                <p class="pTitle fs-xl-18 fs-xxl-20 m-0">Price</p>
-                <p class="color fs-30 fs-lg-34 fs-xxl-36 fw-bold">€ 399,00 p.p.</p>
+                <p class="pTitle fs-xl-18 fs-xxl-32 m-0">Price</p>
+                <p class="color fs-30 fs-lg-34 fs-xxl-50 fw-bold">€ 399,00 p.p.</p>
             </div>
             <div class="d-flex align-items-end">
-                <p class="fs-14 fs-xl-16 fs-xxl-18">Tickets Selected: {{itemQty}}</p>
+                <p class="fs-14 fs-xl-16 fs-xxl-24">Tickets Selected: {{itemQty}}</p>
             </div>
         </div>
         <app-button [btnClass]="'gradientButton fs-xxl-24'" [btnName]="'Book Ticket'"></app-button>

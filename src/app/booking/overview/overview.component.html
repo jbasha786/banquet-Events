@@ -5,10 +5,10 @@
         <div class="d-flex align-items-center gap-3">
             <span class="overview__title__back cursor" (click)="goToBack()"><mat-icon
                     fontIcon="chevron_left"></mat-icon></span>
-            <span class="fs-24 fs-xl-26 fs-xxl-28 fw-medium">{{ItemDetails?.name}}</span>
+            <span class="fs-24 fs-xl-26 fs-xxl-40 fw-medium">{{ItemDetails?.name}}</span>
         </div>
 
-        <div class="mt-10 mt-lg-15 mb-10 mb-lg-15 fs-xxl-18">
+        <div class="mt-10 mt-lg-15 mb-10 mb-lg-15 fs-xxl-24">
             <span>{{ItemDetails?.desc}} | </span>
             <span>{{ItemDetails?.diamensions}} | </span>
             <span>{{ItemDetails?.status}} </span>
@@ -37,8 +37,8 @@
     <!-- Description Section Start -->
     <div class="row overview__content w-100 gap-4 gap-sm-4 gap-lg-0 m-auto">
         <div class="col-12 col-lg-8 overview__content__descSection">
-            <p class="title fs-24 fs-xxl-26 fw-medium mb-0 pb-20">{{ItemDetails?.deposite}}</p>
-            <p class="text m-0 lh-36 pr-md-40 fs-xxl-18">{{ItemDetails?.depositeDesc}}</p>
+            <p class="title fs-24 fs-xxl-32 fw-medium mb-0 pb-20">{{ItemDetails?.deposite}}</p>
+            <p class="text m-0 lh-36 lh-xl-50 pr-md-40 fs-xxl-26">{{ItemDetails?.depositeDesc}}</p>
             <span class="overview__content__amenities"><app-amenities></app-amenities></span>
         </div>
         <div class="col-12 col-lg-4 overview__content__edit">
@@ -47,9 +47,9 @@
                     <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/profile.png"
                             alt="user"></span>
                     <div class="form-floating">
-                        <input type="email" class="form-control border-clr-none" id="guestCount" placeholder="Guests"
+                        <input type="email" class="form-control border-clr-none h-xxl-80 fs-xxl-20" id="guestCount" placeholder="Guests"
                             value="40 Adults, 12 Children">
-                        <label for="guestCount" class="fs-xxl-18">Guests</label>
+                        <label for="guestCount" class="fs-xxl-24">Guests</label>
                     </div>
                 </div>
                 <div
@@ -70,26 +70,26 @@
                         <span class="input-group-text basic-icon"><img src="../../../assets/images/icons/clock.png"
                                 alt="user"></span>
                         <div class="form-floating">
-                            <select class="form-select border-clr-none" id="duration"
+                            <select class="form-select border-clr-none h-xxl-80 fs-xxl-20" id="duration"
                                 aria-label="Default select example">
                                 <ng-container *ngFor="let item of slots">
                                     <option [value]="item.id">{{item.shift}}</option>
                                 </ng-container>
                             </select>
-                            <label for="duration" class="fs-xxl-18">Duration</label>
+                            <label for="duration" class="fs-xxl-24">Duration</label>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex gap-3 w-100 flex-column flex-md-row flex-lg-column flex-xxl-row">
-                    <div class="editArticle fs-xxl-18"><app-button [btnClass]="'sideTransitionButtonArticle'"
+                    <div class="editArticle fs-xxl-24"><app-button [btnClass]="'sideTransitionButtonArticle'"
                             [btnName]="'Add Articles'"></app-button></div>
-                    <div class="editArticle fs-xxl-18"><app-button [btnClass]="'sideTransitionButtonArticle'"
+                    <div class="editArticle fs-xxl-24"><app-button [btnClass]="'sideTransitionButtonArticle'"
                             [btnName]="'Choose Menu'"></app-button></div>
 
                 </div>
-                <div class="fs-40 fs-lg-46 fs-xxl-50 pt-20 fw-bold">€ 4200.00</div>
-                <p class="fs-12 fs-xxl-14 m-0 pb-20">Excluding taxes and fees</p>
-                <app-button [btnClass]="'gradientButtonReserve'" [btnName]="'Reserve'"></app-button>
+                <div class="fs-40 fs-lg-46 fs-xxl-70 pt-20 fw-bold">€ 4200.00</div>
+                <p class="fs-12 fs-xxl-22 m-0 pb-20">Excluding taxes and fees</p>
+                <app-button [btnClass]="'gradientButtonReserve fs-20 fs-xxl-26'" [btnName]="'Reserve'"></app-button>
             </div>
         </div>
     </div>
@@ -98,26 +98,26 @@
     <div class="rating">
         <div class="d-flex align-items-center justify-content-center">
             <img src="../../../assets/images/rating/leaf.svg" alt="left-leaf">
-            <p class="fs-50 fs-lg-70 rating-price">5.07</p>
+            <p class="fs-50 fs-lg-70 fs-xxl-90 rating-price">5.07</p>
             <img src="../../../assets/images/rating/leaf-right.svg">
         </div>
-        <p class="text-center fs-24 fs-xxl-26 rating__title fw-medium m-0 pb-20">Guest favourite</p>
-        <p class="text-center rating__desc fs-xxl-18">One of the most loved homes on rating, reviews and
+        <p class="text-center fs-24 fs-xxl-38 rating__title fw-medium m-0 pb-20">Guest favourite</p>
+        <p class="text-center rating__desc fs-xxl-24 lh-25 lh-xl-30 max-width-270 max-width-xxl-420">One of the most loved homes on rating, reviews and
             reliability</p>
         <div class="rating__sections d-flex justify-content-between d-none d-lg-flex">
             <ng-container *ngFor="let rat of ratingSection">
                 <div class="d-flex flex-column rating__sections__item gap-2">
-                    <div class="fw-medium fs-14 fs-xxl-16">{{rat.name}}</div>
+                    <div class="fw-medium fs-14 fs-xxl-24">{{rat.name}}</div>
                     <div *ngIf="rat.id === 1">
                         <div *ngFor="let value of ratingValues" class="d-flex align-items-center gap-10">
-                            <p class="m-0 fs-14 fs-xxl-16">{{ value }}</p>
+                            <p class="m-0 fs-14 fs-xxl-24">{{ value }}</p>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
                                     aria-valuemax="100" [style.width.%]="value === 5 ? 100 : 0"></div>
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="rat.id !== 1" class="fw-medium fs-14 fs-xxl-16">{{rat.rating}}</div>
+                    <div *ngIf="rat.id !== 1" class="fw-medium fs-14 fs-xxl-24">{{rat.rating}}</div>
                     <img *ngIf="rat.id !== 1" class="mat-4 icons" [src]="rat.image" [alt]="rat.name">
                 </div>
             </ng-container>
@@ -125,17 +125,17 @@
     </div>
 
     <div class="thingstoKnow">
-        <p class="fs-24 fs-xl-26 fs-xxl-28 fw-medium m-0 pb-20">Things to know</p>
+        <p class="fs-24 fs-xl-26 fs-xxl-32 fw-medium m-0 pb-20">Things to know</p>
         <app-things-to-know></app-things-to-know>
     </div>
 
     <div class="map">
-        <p class="fs-24 fs-xl-26 fs-xxl-28 fw-medium m-0 pb-20">Where you’ll be</p>
+        <p class="fs-24 fs-xl-26 fs-xxl-32 fw-medium m-0 pb-20">Where you’ll be</p>
         <app-google-map></app-google-map>
     </div>
 
     <div class="host">
-        <p class="fs-24 fs-xl-26 fs-xxl-28 fw-medium m-0 pb-20">Meet your host</p>
+        <p class="fs-24 fs-xl-26 fs-xxl-32 fw-medium m-0 pb-20">Meet your host</p>
         <app-host-details [hostInfo]="hostDetails" [isEventScreen]="false"></app-host-details>
     </div>
 </div>

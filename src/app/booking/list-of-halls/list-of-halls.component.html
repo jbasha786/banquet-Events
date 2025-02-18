@@ -9,9 +9,9 @@
                             <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img"
                                 alt="user"></span>
                         <div class="form-floating">
-                            <input type="email" class="form-control guestclock" id="guestCount" placeholder="Guests"
+                            <input type="email" class="form-control guestclock fs-xxl-20 h-xxl-80" id="guestCount" placeholder="Guests"
                                 value="40 Adults, 12 Children" readonly>
-                            <label for="guestCount" class="custom_clr guestClockLabel fs-xl-18">Guests</label>
+                            <label for="guestCount" class="custom_clr guestClockLabel fs-xl-18 fs-xxl-24">Guests</label>
                         </div>
                     </div>
                 </div>
@@ -28,12 +28,12 @@
                         <span class="input-group-text basic-icon d-block d-lg-none"><img
                                 src="../../../../assets/images/icons/clock.png" alt="user"></span>
                         <div class="form-floating custom_select">
-                            <select class="form-select guestclock" id="duration" aria-label="Default select example">
+                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" id="duration" aria-label="Default select example">
                                 <ng-container *ngFor="let item of slots">
                                     <option [value]="item.id">{{item.shift}}</option>
                                 </ng-container>
                             </select>
-                            <label for="duration" class="custom_clr guestClockLabel fs-xl-18">Duration</label>
+                            <label for="duration" class="custom_clr guestClockLabel fs-xl-18 fs-xxl-24">Duration</label>
                         </div>
                     </div>
                 </div>
