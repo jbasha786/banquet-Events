@@ -89,7 +89,7 @@ export class DashboardComponent {
 
   public fetchBannerStoreData() {
     this.store.select(bannerSelector).subscribe((data:any) => {
-      this.bannerInfo = data.banner;
+      this.bannerInfo = data;
     })
   }
 
