@@ -243,9 +243,9 @@
   padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 }
 
-//member section
+//member sections
 .join-text {
-  padding: gutter-vw(3) gutter-vw(5);
+  padding: clamp(21px, 2vw, 44px) clamp(36px, 4vw, 163px);
 }
 
 .memberSection {
@@ -276,10 +276,9 @@
     position: relative;
 
     img {
-      position: absolute;
-      bottom: $value-null;
-      width: clamp(180px, 54%, 300px); 
-      right: clamp(0px, 30%, 50px);
+      bottom: 0;
+      width: gutter-per(48);  
+      right: clamp(0%, 5vw, 30%);
 }
   }
 }
