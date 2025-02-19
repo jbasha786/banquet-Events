@@ -191,8 +191,8 @@ body {
     gap: 0px + $i;
   }
 
-  .gap-lg-#{$i} {
-    @media (min-width: 992px) {
+  .gap-md-#{$i} {
+    @media (min-width: 425px) {
       gap: #{$i}px;
     }
   }
@@ -247,6 +247,15 @@ body {
     }
   }
  
+  .max-width-#{i} {
+    max-width: 0px + $i;
+  }
+
+  .max-width-xxl-#{$i} {
+    @media (min-width: 2560px) {
+      max-width: #{$i}px !important;
+    }
+  }
 
 
 
@@ -264,6 +273,12 @@ body {
   .h-xl-#{$i} {
     @media (min-width: 1440px) {
       height: #{$i}px;
+    }
+  }
+
+  .h-xxl-#{$i} {
+    @media (min-width: 2560px) {
+      height: #{$i}px !important;
     }
   }
 

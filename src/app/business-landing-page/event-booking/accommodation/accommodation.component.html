@@ -1,18 +1,18 @@
 <div class="accommodation mb-300 mb-lg-200">
-    <p class="title fs-24 fs-lg-30 fs-xl-32 fs-xxl-34 text-center fw-medium pb-20">Accommodation Details?</p>
+    <p class="title fs-24 fs-lg-30 fs-xl-32 fs-xxl-34 fs-xxl-54 text-center fw-medium pb-20">Accommodation Details?</p>
     <div class="row w-100">
         <div class="col-10 col-lg-5 m-auto">
             <div class="mb-4">
-                <label for="guests" class="custom_label fs-xl-18 mb-1">Number of Guests</label>
-                <input type="number" id="guests" placeholder="select No.of Guests" class="form-control custom_input">
+                <label for="guests" class="custom_label fs-xl-18 fs-xxl-24 mb-1">Number of Guests</label>
+                <input type="number" id="guests" placeholder="select No.of Guests" class="form-control custom_input fs-14 fs-xxl-20 h-xxl-80">
             </div>
             <div class="custom-outlined-field">
-                <label for="guests" class="custom_label fs-xl-18 mb-1">Check-In Date</label>
+                <label for="guests" class="custom_label fs-xl-18 fs-xxl-24 mb-1">Check-In Date</label>
                 <app-date-range-picker [className]="'w-100 custom_date'" [matPickerClass]="'rangePicker'" [placeholderClass1]="'Start date'"
                 [placeholderClass2]="'End date'" (selectedDate)="selectedDateRange($event)"></app-date-range-picker>
             </div>
             <div class="mb-4">
-                <label for="duration" class="custom_label fs-xl-18 mb-1">Event Duration</label>
+                <label for="duration" class="custom_label fs-xl-18 fs-xxl-24 mb-1">Event Duration</label>
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <app-timepicker [calssName]="'custom_date time_picker'" (selectedTime)="selectedStartTime($event)"
@@ -23,7 +23,7 @@
                             [matPickerClass]="'endTimepicker'" [placeHolderText]="'End Time'"></app-timepicker>
                     </div>
                     <div class="col-12 col-md-4">
-                        <app-button [btnClass]="'buttonforTimepart fs-16 fs-xl-18'" [btnName]="'Time Part'"
+                        <app-button [btnClass]="'buttonforTimepart fs-16 fs-xl-18  fs-xxl-24'" [btnName]="'Time Part'"
                             (bannerActionEvent)="timePart()"></app-button>
                     </div>
                 </div>

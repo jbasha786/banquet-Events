@@ -1,6 +1,6 @@
 <div class="hallsView col-md-10 col-lg-10 col-xl-8 mx-md-auto mb-300  px-3 px-md-0 ">
     <div class="d-flex justify-content-center align-items-center flex-column gap-2 gap-lg-12 pb-70 pb-md-20">
-        <p class="text-center fs-30 fs-xl-32 fs-xxl-34 fw-500 text-black">Type of Halls?</p>
+        <p class="text-center fs-30 fs-xl-32 fs-xxl-54 fw-500 text-black">Type of Halls?</p>
         <div class="card hallsView__card px-2 mt-2 mb-3 col-12">
             <div class="row w-100">
                 <div class="col-12 col-md-6 col-lg-3">
@@ -9,9 +9,9 @@
                             <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img"
                                 alt="user"></span>
                         <div class="form-floating">
-                            <input type="email" class="form-control guestclock" id="guestCount" placeholder="Guests"
+                            <input type="email" class="form-control guestclock fs-xxl-20 h-xxl-80" id="guestCount" placeholder="Guests"
                                 value="40 Adults, 12 Children">
-                            <label for="guestCount" class="custom_clr guestClockLabel fs-xl-18">Guests</label>
+                            <label for="guestCount" class="custom_clr guestClockLabel fs-xl-18 fs-xxl-24">Guests</label>
                         </div>
                     </div>
                 </div>
@@ -28,12 +28,12 @@
                         <span class="input-group-text basic-icon d-block d-lg-none me-1"><img
                                 src="../../../../assets/images/icons/clock.png" alt="user"></span>
                         <div class="form-floating custom_select">
-                            <select class="form-select guestclock" id="duration" aria-label="Default select example">
+                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" id="duration" aria-label="Default select example">
                                 <ng-container *ngFor="let item of slots">
                                     <option [value]="item.id">{{item.shift}}</option>
                                 </ng-container>
                             </select>
-                            <label for="duration" class="custom_clr guestClockLabel fs-xl-18">Duration</label>
+                            <label for="duration" class="custom_clr guestClockLabel fs-xl-18 fs-xxl-24">Duration</label>
                         </div>
                     </div>
                 </div>
@@ -103,27 +103,27 @@
             </div>
         </div>
         }
-        <p *ngIf="!selectedHalls.length" class="fs-20 fs-xl-22 fs-xxl-24 text-center fw-bold">No Items Selected</p>
+        <p *ngIf="!selectedHalls.length" class="fs-20 fs-xl-22 fs-xxl-32 text-center fw-bold">No Items Selected</p>
     </div>
 
     <div class="pb-70 pb-md-20">
-        <p class="fs-16 fs-xl-18 fs-xxl-20">Add Together <span class="ml-3"><img src="../../../../assets/images/icons/info.svg" alt="info"
+        <p class="fs-16 fs-xl-18 fs-xxl-24">Add Together <span class="ml-3"><img src="../../../../assets/images/icons/info.svg" alt="info"
                     width="10"></span></p>
         <div class="row">
             <div class="col-12 col-md-3 position-relative">
                 <img src="../../../../assets/images/Business/halls_types/bowling.svg" alt="bowling" width="100%"
                     height="100%">
-                <p class="fs-20 fs-xl-26 fs-xxl-32 fw-bold position-absolute together text-center">Bowling</p>
+                <p class="fs-20 fs-xl-26 fs-xxl-42 fw-bold position-absolute together text-center">Bowling</p>
             </div>
             <div class="col-12 col-md-3 position-relative">
                 <img src="../../../../assets/images/Business/halls_types/campFire.svg" alt="campFire" width="100%"
                     height="100%">
-                <p class="fs-20 fs-xl-26 fs-xxl-32 fw-bold position-absolute together text-center">Camp Fire</p>
+                <p class="fs-20 fs-xl-26 fs-xxl-42 fw-bold position-absolute together text-center">Camp Fire</p>
             </div>
             <div class="col-12 col-md-3 position-relative">
                 <img src="../../../../assets/images/Business/halls_types/staying.svg" alt="staying" width="100%"
                     height="100%">
-                <p class="fs-20 fs-xl-26 fs-xxl-32 fw-bold position-absolute together text-center">Staying Rooms</p>
+                <p class="fs-20 fs-xl-26 fs-xxl-42 fw-bold position-absolute together text-center">Staying Rooms</p>
             </div>
         </div>
     </div>

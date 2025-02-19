@@ -49,8 +49,6 @@
 
 .businessBannerActionButton {
     @extend .bannerActionButton;
-    padding: gutter-sp(8) gutter-sp(20);
-    width: gutter-sp(150);
 }
 
 
@@ -500,8 +498,7 @@ button:hover span::after {
     background: linear-gradient(90.69deg, $rev-gradient-clr1 0.85%, $rev-gradient-clr2 100.99%);
     width: gutter-per(100);
     font-weight: bold;
-    font-size: gutter-sp(20);
-    padding: gutter-sp(5);
+    padding: gutter-sp(10) gutter-sp(24);
 
     &:hover {
         background: linear-gradient(90.69deg, $rev-gradient-clr2 0.85%, $rev-gradient-clr1 100.99%);
@@ -536,7 +533,6 @@ button:hover span::after {
     color: $cancelcolor;
     border: gutter-sp(1) solid $cancelcolor;
     font-size: gutter-sp(19);
-    height: gutter-sp(40);
     font-weight: 500;
     background: transparent;
 }
@@ -551,7 +547,6 @@ button:hover span::after {
     color: $secondary-color;
     border: gutter-sp(1) solid $secondary-color;
     font-size: gutter-sp(19);
-    height: gutter-sp(40);
     font-weight: 500;
     background: transparent;
 }
@@ -571,7 +566,6 @@ button:hover span::after {
     color: $white;
     background: $secondary-color;
     font-size: gutter-sp(19);
-    height: gutter-sp(40);
     font-weight: 500;
 }
 
