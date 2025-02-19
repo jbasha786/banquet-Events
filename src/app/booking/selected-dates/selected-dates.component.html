@@ -8,7 +8,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
                 id="availableSlots">
-                <h4 class="text-center p-2 mb-0">Available Slots</h4>
+                <span class="text-center p-2 mb-0 fs-18 fs-lg-20 fs-xxl-24 fw-500">Available Slots</span>
                 <mat-selection-list #slot [multiple]="false" class="slots_radio" (selectionChange)="slotsChange($event)">
                     @for (slot of slots; track $index) {
                     <div class="card m-10 align-items-center mx-auto slot">

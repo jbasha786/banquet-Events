@@ -8,11 +8,11 @@
         color: $tableCellColor;
         font-weight: 500;
         text-wrap: nowrap;
-        font-size: clamp(12px, 1vw, 19px );
+        font-size: clamp(gutter-sp(12), gutter-vw(1), gutter-sp(19) );
     }
 
     .invoice-table .mat-mdc-header-cell {
-        font-size: clamp(15px, 1vw, 23px );
+        font-size: clamp(gutter-sp(15), gutter-vw(1), gutter-sp(23) );
         background: $tabHeadercolor;
         color: $black;
         text-wrap: nowrap;
@@ -21,15 +21,13 @@
 
     .invoice-table {
         .eyeImg {
-            // height: gutter-sp(12);
-            // width: gutter-sp(20);
-            height: clamp(12px, 2vh, 28px);
-            width: clamp(20px, 2vw, 33px);
+            height: clamp(gutter-sp(12), gutter-vh(2), gutter-sp(28));
+            width: clamp(gutter-sp(20), gutter-vw(2), gutter-sp(33));
         }
 
         .downloadImg {
-            height: gutter-sp(18);
-            width: gutter-sp(18);
+            height: clamp(gutter-sp(18), gutter-vh(1.5), gutter-sp(23));
+            width: clamp( gutter-sp(18), gutter-vw(1.5),  gutter-sp(23));
         }
     }
 }

@@ -54,8 +54,8 @@
     }
 
     .frameImg {
-        height: clamp(16px, 1vw, 26px);
-        width: clamp(16px, 1vw, 26px);
+        height: clamp(gutter-sp(16), gutter-vw(1), gutter-sp(26));
+        width: clamp(gutter-sp(16), gutter-vw(1), gutter-sp(26));
     }
 
     .rating_booking {

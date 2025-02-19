@@ -547,8 +547,6 @@ button:hover span::after {
 .buttonBack {
     color: $secondary-color;
     border: gutter-sp(1) solid $secondary-color;
-    // font-size: gutter-sp(19);
-    // height: gutter-sp(40);
     font-weight: 500;
     background: transparent;
 }
@@ -567,8 +565,6 @@ button:hover span::after {
 .buttonNext {
     color: $white;
     background: $secondary-color;
-    // font-size: gutter-sp(19);
-    // height: gutter-sp(40);
     font-weight: 500;
 }
 

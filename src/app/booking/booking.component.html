@@ -20,13 +20,13 @@
         <div class="booking__btn wid-50  wid-lg-100 p-1 ml-0 mr-0 ml-md-60 mr-md-60 ml-lg-100 mr-lg-100  m-auto m-lg-2 mx-lg-5 px-lg-5">
             <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
                 <div class="d-flex flex-column">
-                    <app-button [btnClass]="'buttonCancel rounded-pill px-5 w-100 fs-19 fs-xl-25 fs-xxl-30 h-40 h-xl-60'" [btnName]="cancelBtnText"
+                    <app-button [btnClass]="'buttonCancel rounded-pill px-5 w-100 fs-19 fs-xl-25 fs-xxl-30 h-40 h-lg-40 h-xl-55'" [btnName]="cancelBtnText"
                         (bannerActionEvent)="returnToHome()"></app-button>
                 </div>
                 <div class="d-flex flex-column flex-md-row gap-2">
-                    <app-button [btnClass]="'buttonBack rounded-pill px-5 w-100  fs-19 fs-xl-25 fs-xxl-30 h-40 h-xl-60'" [btnName]="backBtnText"
+                    <app-button [btnClass]="'buttonBack rounded-pill px-5 w-100  fs-19 fs-xl-25 fs-xxl-30 h-40 h-lg-40 h-xl-55'" [btnName]="backBtnText"
                         (bannerActionEvent)="back()"></app-button>
-                    <app-button [btnClass]="'buttonNext border rounded-pill px-5 w-100  fs-19 fs-xl-25 fs-xxl-30 h-40 h-xl-60'" [btnName]="nextBtnText"
+                    <app-button [btnClass]="'buttonNext border rounded-pill px-5 w-100  fs-19 fs-xl-25 fs-xxl-30 h-40 h-lg-40 h-xl-55'" [btnName]="nextBtnText"
                         (bannerActionEvent)=" currentStep === 6 ? confirmBooking () : next()"></app-button>
                 </div>
             </div>
