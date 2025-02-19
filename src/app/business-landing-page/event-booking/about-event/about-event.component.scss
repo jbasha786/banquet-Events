@@ -6,12 +6,22 @@
     .custom_radio,
     .custom_radio_label {
         opacity: gutter-per(75);
+        display: flex;
+        gap: gutter-sp(10);
     }
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
-        margin: 0;
+        margin: gutter-sp(0);
+    }
+
+    .form-check {
+        padding-left: gutter-sp(0);
+    }
+
+    .form-check .form-check-input {
+        margin-left: gutter-sp(0);
     }
 
     input[type="number"] {
@@ -32,7 +42,6 @@
 
     .custom_input::placeholder {
         opacity: gutter-per(45);
-        font-size: gutter-sp(14);
         font-weight: 500;
     }
 

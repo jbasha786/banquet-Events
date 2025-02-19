@@ -1,0 +1,28 @@
+<div class="dialog-header d-flex justify-content-center fs-18 fs-md-24 fw-medium m-0 p-20">
+  <h2 class="areyoudialogue-heading">{{ data.title }}</h2>
+  <button *ngIf="!data.hideCloseButton" (click)="closeDialog(false)">X</button>
+</div>
+
+<div class="dialog-image text-center" *ngIf="data.imageSrc">
+  <img [src]="data.imageSrc" [alt]="data.imageAlt || 'Dialog Image'" class="dialog-img">
+  <div class="dialog-text mt-10 d-flex flex-column">
+    <span *ngIf="data.imgText" class="imgTextClr fw-bold fs-26 lh-40 my-2">{{ data.imgText }}</span>
+    <span *ngIf="data.imgquote">{{ data.imgquote }}</span>
+    <span *ngIf="data.imgId">{{ data.imgId }}</span>
+  </div>
+</div>
+
+<div class="dialog-content">
+  <p *ngIf="  data?.bookingName"
+    class="areyoudialogue-content text-center fs-16 lh-30 pb-20 pr-0 pr-md-50 pl-0 pl-md-50">
+    you want to cancel the booking for <span class="span_color fw-bold">{{ data.bookingName }}</span> You
+    can’t undo this action.
+  </p>
+</div>
+
+<div class="dialog-actions d-flex justify-content-center gap-20 pb-20" *ngIf="data.showActions">
+  <app-button [btnClass]="'dialogue-cancel fs-16 fw-600'" [btnName]="data.cancelText || 'Cancel'"
+    (bannerActionEvent)="closeDialog(false)"></app-button>
+  <app-button [btnClass]="'dialogue-yes fs-16 fw-600'" [btnName]="data.confirmText || 'Confirm'"
+    (bannerActionEvent)="closeDialog(true)"></app-button>
+</div>

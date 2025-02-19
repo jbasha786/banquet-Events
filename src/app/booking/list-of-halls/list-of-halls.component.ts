@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -8,7 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { CommonModule, DatePipe } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogueComponent } from '../../shared/components/dialogue/dialogue.component';
 import { Router } from '@angular/router';
 import { EventBookingService } from '../../services/event-hall-booking/event-booking.service';
 import { EventPlanService } from '../../services/event-plan/event-plan.service';
@@ -20,11 +19,13 @@ import { ChooseMenuComponent } from '../../shared/components/choose-menu/choose-
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../../shared/genericComponents/button/button.component';
 import { DatePickerComponent } from '../../shared/genericComponents/date-picker/date-picker.component';
+import { CustomDialogService } from '../../services/custom-dialog.service';
 
 @Component({
   selector: 'app-list-of-halls',
   standalone: true,
-  imports: [MatFormFieldModule,
+  imports: [
+    MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
     MatIconModule,
@@ -33,9 +34,11 @@ import { DatePickerComponent } from '../../shared/genericComponents/date-picker/
     CommonModule,
     FormsModule,
     ButtonComponent,
-    DatePickerComponent],
+    DatePickerComponent
+  ],
   templateUrl: './list-of-halls.component.html',
-  styleUrl: './list-of-halls.component.scss'
+  styleUrl: './list-of-halls.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class ListOfHallsComponent {
   buttonSelected: string = "Selected";
@@ -67,7 +70,8 @@ export class ListOfHallsComponent {
     private eventACService: EventGuestsService,
     private eventDSService: EventDateSlotsService,
     private zIndexService: ZindexService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private customDialogService: CustomDialogService
   ) {
     this.checkinDate = new Date();
     this.checkOutDate = new Date();
@@ -86,13 +90,6 @@ export class ListOfHallsComponent {
     })
   }
 
-  cancelReservation() {
-    this.dialog.open(DialogueComponent, {
-      width: "500px",
-      disableClose: true,
-      position: { top: '0', left: '0' },
-    });
-  }
   reserve(reserve: any) {
     reserve.isActive = true
     this.selectedItem = reserve.id;
@@ -126,10 +123,11 @@ export class ListOfHallsComponent {
 
   addArticles() {
     this.zIndexService.setHeaderZIndex(1000);
-    const dialogRef = this.dialog.open(ArticlesComponent, {
+    const dialogRef = this.customDialogService.openDialog(ArticlesComponent, {
       panelClass: 'fixed-dialog',
-      position: { top: '75px' },
-      autoFocus: false,
+      width: '60%',
+      height: 'auto',
+      disableClose: false
     });
 
     dialogRef.afterClosed().subscribe(() => {
@@ -138,12 +136,16 @@ export class ListOfHallsComponent {
   }
 
   chooseMenu() {
-    this.dialog.open(ChooseMenuComponent, {
-      width: '100%',
-      height: '100vh',
-      maxWidth: '100%',
+    this.zIndexService.setHeaderZIndex(1000);
+    const dialogRef = this.customDialogService.openDialog(ChooseMenuComponent, {
       panelClass: 'choosemenu-dialog',
-      position: { left: '10%' },
+      width: '100%',
+      height: '100%',
+      disableClose: false
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.zIndexService.setHeaderZIndex(1030);
     });
   }
   toggleSelection(item: any) {

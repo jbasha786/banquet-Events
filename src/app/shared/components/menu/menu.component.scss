@@ -2,12 +2,13 @@
 
 .menu_model {
     padding: gutter-sp(10);
-    
+
     .menu {
         .table {
             overflow: auto;
             padding-right: gutter-sp(10);
         }
+
         &__search {
             position: relative;
 
@@ -19,14 +20,9 @@
                 width: gutter-per(100);
                 font-size: gutter-sp(12);
             }
+
             &__search-input:focus-within {
-                border-radius: gutter-sp(3);
-                border-color: $secondary-color;
                 box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
-                background-color: $gray;
-                min-height: gutter-sp(30);
-                width: gutter-per(100);
-                font-size: gutter-sp(12);
             }
 
             &__search-input::placeholder {
@@ -35,6 +31,7 @@
                 font-weight: 300;
                 padding-left: gutter-sp(1);
             }
+
             input:focus,
             textarea:focus,
             select:focus {
@@ -49,13 +46,16 @@
             }
 
         }
-        .menuTable{
-            .quantity{
+
+        .menuTable {
+            .quantity {
+
                 &::-webkit-inner-spin-button,
                 &::-webkit-outer-spin-button {
-                  -webkit-appearance: none;
-                  margin: gutter-sp(0);
+                    -webkit-appearance: none;
+                    margin: gutter-sp(0);
                 }
+
                 border: gutter-sp(1) solid $black;
                 text-align: center;
                 border-radius: gutter-sp(4);
@@ -78,10 +78,12 @@
         .table_header .mat-mdc-header-cell {
             font-size: gutter-per(22);
         }
-        .table_header_Qty.mat-mdc-header-cell{
+
+        .table_header_Qty.mat-mdc-header-cell {
             text-align: center;
         }
-        .table_data_Qty{
+
+        .table_data_Qty {
             text-align: center;
         }
 
@@ -89,15 +91,17 @@
             border-bottom: gutter-sp(1) solid $white;
             color: $black;
         }
+
         .mdc-data-table__table {
             border-bottom: gutter-sp(1) solid $white;
         }
+
         .menuTable .mat-mdc-cell {
             text-wrap: nowrap;
             border-bottom: none;
         }
-            
-        .menuTable .mdc-data-table__header-cell{
+
+        .menuTable .mdc-data-table__header-cell {
             padding: gutter-sp(0);
         }
 
@@ -113,9 +117,11 @@
             border: none;
             padding: gutter-sp(0);
         }
-         .price{
+
+        .price {
             text-wrap: nowrap;
         }
+
         .mat-cell {
             padding: gutter-sp(2);
         }
@@ -148,4 +154,8 @@
         }
 
     }
+}
+
+.cdk-overlay-backdrop {
+    background-color: $backdrop;
 }

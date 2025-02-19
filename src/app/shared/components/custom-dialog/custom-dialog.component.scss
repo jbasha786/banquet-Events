@@ -1,0 +1,456 @@
+@import "../../../styles/variable.scss";
+
+.custom-dialog-panel,
+.custom-dialog-success-panel,
+.custom-dialog-nested {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    box-shadow: none;
+  }
+}
+
+.custom-dialog-backdrop {
+  background-color: $dialogue-backclr;
+  z-index: 2;
+}
+
+.custom-backdrop {
+  background-color: $dialogue-backclr;
+  z-index: 2;
+}
+
+.custom-dialog-nested {
+  border-radius: gutter-sp(24);
+  background: $white;
+  padding: gutter-sp(16);
+  box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $dialogue-box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-backdrop-nested {
+  background-color: $backdrop;
+}
+
+.cdk-overlay-pane.custom-dialog-panel {
+  border-radius: gutter-sp(24);
+  background: $white;
+  padding: gutter-sp(16);
+  box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $dialogue-box-shadow;
+}
+
+.cdk-overlay-pane.custom-dialog-success-panel {
+  border-radius: gutter-sp(12);
+  background: $white;
+  border: gutter-sp(1) solid $dialogue-border;
+  padding: gutter-sp(32);
+}
+
+.custom-dialog-success-backdrop {
+  background-color: $dialogue-lightclr;
+  z-index: 2;
+}
+
+.custom-dialog-success-panel {
+  border-radius: gutter-sp(12);
+  background: $white;
+  border: gutter-sp(1) solid $dialogue-border;
+  padding: gutter-sp(32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.imgTextClr {
+  color: $dialogue-success;
+}
+
+.custom-dialog-panel {
+  border-radius: gutter-sp(24);
+  background: $white;
+  padding: gutter-sp(16);
+  box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $dialogue-box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-backdrop-btn {
+  position: fixed;
+  top: gutter-sp(20);
+  right: gutter-sp(20);
+  background: $event-new-close-bg-clr;
+  border-radius: gutter-per(50);
+  width: gutter-sp(40);
+  height: gutter-sp(40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: gutter-sp(0) gutter-sp(2) gutter-sp(10) $dialogue-box-shadow;
+  z-index: 1000;
+}
+
+.close-backdrop-btn:hover {
+  background: $event-new-close-bg-clr;
+  opacity: 0.8;
+}
+
+//add new
+.dialog-content {
+  max-height: gutter-sp(650);
+}
+
+.header-align {
+  padding: gutter-sp(20) gutter-sp(20) gutter-sp(0);
+}
+
+.title {
+  color: $black;
+}
+
+.booking-header {
+  color: $cal-view-title-clr;
+}
+
+.custom_input {
+  border: gutter-sp(1) solid rgba($textearea-border-clr, 0.85);
+  box-shadow: none;
+  font-size: gutter-sp(14);
+  height: gutter-sp(50);
+  border-radius: gutter-sp(6);
+}
+
+
+.custom_input::placeholder {
+  color: $cal-view-title-clr;
+  opacity: 0.45;
+  font-size: gutter-sp(13);
+}
+
+.custom_input:focus {
+  border-color: $secondary-color;
+  box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+}
+
+.custom-table.focused,
+.custom-table-new.focused {
+  border-color: $secondary-color;
+  box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+}
+
+.custom-table.focused td,
+.custom-table-new.focused td {
+  border-color: $secondary-color;
+}
+
+.table_input:focus {
+  border-color: $secondary-color;
+  box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+}
+
+.custom-text:focus {
+  border-color: $secondary-color;
+  box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+}
+
+
+.custom-table,
+.custom-table-new {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: gutter-sp(6);
+  overflow: hidden;
+}
+
+.new-form-check {
+  margin-right: gutter-sp(30);
+}
+
+.new-form-check-input {
+  border: gutter-sp(1) solid $event-radio-border-clr;
+}
+
+.new-form-check-input:checked {
+  background-color: $secondary-color;
+  border: gutter-sp(1) solid $secondary-color;
+  box-shadow: gutter-sp(0) gutter-sp(0) gutter-sp(0) gutter-rem(0.25) rgba($secondary-color, 0.24);
+}
+
+.table.custom-table thead input {
+  border: none;
+}
+
+.table.custom-table tbody input {
+  border: none;
+}
+
+.table.custom-table-new thead input {
+  border: none;
+}
+
+.table.custom-table-new tbody input {
+  border: none;
+}
+
+.custom_input:focus {
+  outline: none;
+}
+
+.label-align {
+  margin-bottom: gutter-rem(0.3);
+  color: $customerlabel-clr;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  width: gutter-per(100);
+}
+
+.calendar-icon {
+  width: gutter-sp(16);
+  height: gutter-sp(16);
+  position: absolute;
+  top: gutter-per(50);
+  transform: translateY(gutter-per(-50));
+  pointer-events: none;
+}
+
+.date-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  padding-left: gutter-sp(30);
+  width: gutter-per(100);
+  font-size: gutter-sp(13);
+  border-radius: gutter-sp(6);
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: none;
+}
+
+.date-input::-webkit-inner-spin-button,
+.date-input::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.date-input::-moz-calendar-picker-indicator {
+  display: none;
+}
+
+.date-input:focus::before,
+.date-input[value]::before {
+  content: "";
+}
+
+.date-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.date-input::-webkit-datetime-edit-text {
+  color: $cal-view-title-clr;
+  opacity: 0.45;
+}
+
+.date-input::-webkit-datetime-edit-year-field,
+.date-input::-webkit-datetime-edit-month-field,
+.date-input::-webkit-datetime-edit-day-field {
+  color: $cal-view-title-clr;
+  opacity: 0.45;
+}
+
+.valid::-webkit-datetime-edit-text {
+  color: $btn-no-grdright;
+  opacity: 1;
+}
+
+.valid::-webkit-datetime-edit-year-field,
+.valid::-webkit-datetime-edit-month-field,
+.valid::-webkit-datetime-edit-day-field {
+  color: $black;
+  opacity: 1;
+}
+
+.checkin {
+  display: block;
+  color: $secondary-color;
+  font-weight: 500;
+}
+
+.table_input {
+  height: gutter-sp(40);
+  font-size: gutter-sp(13);
+  opacity: 1;
+  border-radius: gutter-sp(0);
+}
+
+.table_input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.table_input::placeholder {
+  color: $cal-view-title-clr;
+  opacity: 0.45;
+  font-size: gutter-sp(13);
+}
+
+.custom_input {
+  font-size: gutter-sp(13);
+}
+
+.custom-table,
+.custom-table-new {
+  width: gutter-per(100);
+  border: gutter-sp(1) solid rgba($textearea-border-clr, 0.85);
+  border-radius: gutter-sp(6);
+}
+
+.custom-table th,
+.custom-table td {
+  text-align: left;
+}
+
+.custom-table td,
+.custom-table-new td {
+  padding: gutter-sp(0);
+  border-right: gutter-sp(1) solid $textearea-border-clr;
+  border-left: none;
+  border-bottom: none;
+}
+
+.custom-table-new th {
+  border: none;
+}
+
+.custom-table th {
+  border: none;
+  padding: gutter-rem(0.5) gutter-rem(0.75);
+}
+
+.custom-table-new th {
+  padding: gutter-rem(0);
+}
+
+.custom-table td:last-child,
+.custom-table-new td:last-child {
+  border-right: none;
+}
+
+.welcome-span {
+  opacity: 0.45;
+}
+
+.textarea {
+  width: gutter-per(100);
+  height: gutter-sp(120);
+  padding: gutter-sp(10);
+  font-size: gutter-sp(12);
+  border: gutter-sp(1) solid rgba($textearea-border-clr, 0.8);
+  border-radius: gutter-sp(6);
+  resize: none;
+
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  color: $cal-view-title-clr;
+  opacity: 0.45;
+}
+
+//dialogue are you sure
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: gutter-sp(0) gutter-sp(20) gutter-sp(20);
+
+  .mat-button {
+    border: gutter-sp(1) solid $black;
+  }
+}
+
+.buttons .buttons__cancel {
+  height: gutter-sp(42);
+  font-size: gutter-sp(16);
+  background: linear-gradient(90deg,
+      $btn-no-grdleft gutter-per(0),
+      $btn-no-grdright gutter-per(100));
+  border-radius: gutter-vw(50);
+  width: gutter-sp(100);
+  color: $white;
+  border: gutter-sp(0) solid transparent;
+
+  &:hover {
+    background: linear-gradient(90deg,
+        $btn-no-grdright gutter-per(0),
+        $btn-no-grdleft gutter-per(100));
+    box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
+  }
+}
+
+.buttons .buttons__yes {
+  height: gutter-sp(42);
+  font-size: gutter-sp(16);
+  border-radius: gutter-vw(50);
+  width: gutter-sp(100);
+  background: linear-gradient(90deg,
+      $btn-yes-grdleft gutter-per(0),
+      $secondary-color gutter-per(100));
+  color: $white;
+  border: gutter-sp(0) solid transparent;
+
+  &:hover {
+    background: linear-gradient(90deg,
+        $secondary-color gutter-per(0),
+        $btn-yes-grdleft gutter-per(100));
+    box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
+  }
+}
+
+.areyoudialogue-heading {
+  color: $dialogue-heading;
+}
+
+.areyoudialogue-content {
+  color: $dialogue-heading;
+  opacity: 0.8;
+
+  .span_color {
+    color: $dialogue-contenthighlight;
+  }
+}
+
+//success
+.dialogue-heading {
+  color: $dialogue-success;
+}
+
+.dialogue-content {
+  color: $cal-view-title-clr;
+  padding-bottom: gutter-sp(4);
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//business booking
+.shape-dialog-wrapper {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    scrollbar-width: none;
+  }
+}
+

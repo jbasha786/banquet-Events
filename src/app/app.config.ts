@@ -1,4 +1,4 @@
-import { ApplicationConfig, inject } from '@angular/core';
+import { ApplicationConfig, inject, isDevMode } from '@angular/core';
 import { NavigationStart, provideRouter, Router, withRouterConfig } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -8,6 +8,9 @@ import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { errorHandlerInterceptor } from './_interceptors/error-handler.interceptor';
 import { DatePipe } from '@angular/common';
+import { provideStore } from '@ngrx/store';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { reducers } from './_store/reducers_config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,7 +19,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(withInterceptors([errorHandlerInterceptor]), withFetch()),
     provideNativeDateAdapter(),
-    DatePipe,{
+    provideStore(reducers),
+    provideStoreDevtools({ maxAge: 25, logOnly: true }),
+    DatePipe, {
       provide: 'APP_INITIALIZER',
       useFactory: () => {
         return () => {

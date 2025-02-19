@@ -17,8 +17,13 @@
     .custom_date_input {
         border: none;
         padding-left: gutter-sp(3);
+        padding: gutter-sp(2) gutter-sp(0) gutter-sp(2) gutter-sp(3);
         font-size: gutter-sp(13);
     }
+
+    .custom_date_input.form-control:not(:placeholder-shown) {
+      padding-top: gutter-rem(2.125);
+  }
 
     .custom_floating .customLabel,
     .custom_floating > label,

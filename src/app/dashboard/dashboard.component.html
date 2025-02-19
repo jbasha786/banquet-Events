@@ -21,7 +21,7 @@
     </div>
   </div>
   }
-  <div class="subbanner">
+  <div class="subbanner" *ngIf="subbannerInfo.length">
     <div class="row g-4">
       @for (obj of subbannerInfo; track $index) {
       <div class="col-12 col-lg-4">
