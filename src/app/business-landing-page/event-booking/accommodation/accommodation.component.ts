@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -11,6 +11,7 @@ import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { ButtonComponent } from '../../../shared/genericComponents/button/button.component';
 import { TimepickerComponent } from '../../../shared/genericComponents/timepicker/timepicker.component';
 import { DateRangePickerComponent } from '../../../shared/genericComponents/date-range-picker/date-range-picker.component';
+import { CustomDialogService } from '../../../services/custom-dialog.service';
 
 @Component({
   selector: 'app-accommodation',
@@ -28,28 +29,31 @@ import { DateRangePickerComponent } from '../../../shared/genericComponents/date
     DateRangePickerComponent],
   providers: [],
   templateUrl: './accommodation.component.html',
-  styleUrl: './accommodation.component.scss'
+  styleUrl: './accommodation.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class AccommodationComponent {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog,
+    private customDialogService: CustomDialogService
+  ) { }
 
   timePart() {
-    const accommodationRef = this.dialog.open(TimePartComponent, {
+    const dialogRef = this.customDialogService.openDialog(TimePartComponent, {
       width: "800px",
       disableClose: true,
       data: "",
       panelClass: "timePartLocation",
     });
 
-    accommodationRef.afterClosed().subscribe(data => {
+    dialogRef.afterClosed().subscribe(data => {
       console.log(data);
-    })
+    });
   }
 
   selectedStartTime(event: any) {
     console.log(event);
-    
+
   }
   selectedEndTime(event: any) {
     console.log(event);

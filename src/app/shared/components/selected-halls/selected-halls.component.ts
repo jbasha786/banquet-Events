@@ -1,18 +1,18 @@
 import { CommonModule, DatePipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
-import { DialogueComponent } from '../dialogue/dialogue.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { EventBookingService } from '../../../services/event-hall-booking/event-booking.service';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../../genericComponents/button/button.component';
 import { DatePickerComponent } from '../../genericComponents/date-picker/date-picker.component';
+import { CustomDialogComponent } from '../custom-dialog/custom-dialog.component';
 
 @Component({
   selector: 'app-selected-halls',
@@ -28,7 +28,8 @@ import { DatePickerComponent } from '../../genericComponents/date-picker/date-pi
     ButtonComponent,
     DatePickerComponent],
   templateUrl: './selected-halls.component.html',
-  styleUrl: './selected-halls.component.scss'
+  styleUrl: './selected-halls.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class SelectedHallsComponent {
   cancelBtn: string = "Cancel";
@@ -49,7 +50,8 @@ export class SelectedHallsComponent {
   constructor(private dialog: MatDialog,
     private router: Router,
     private eventBookingService: EventBookingService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private dialogRef: MatDialogRef<SelectedHallsComponent>
   ) {
     this.getSelectedHalls();
     this.checkinDate = new Date();
@@ -62,10 +64,21 @@ export class SelectedHallsComponent {
   }
 
   cancelReservation() {
-    this.dialog.open(DialogueComponent, {
-      width: "500px",
+    this.dialog.open(CustomDialogComponent, {
+      panelClass: 'custom-dialog-nested',  
+      backdropClass: 'custom-backdrop-nested',
+      width: "550px",
       disableClose: true,
-      panelClass: 'custom-dialog-panel'
+      data: {
+        title: 'Are you sure ?',
+        type: 'confirm',
+        bookingName: 'Queens Lagoon Suite',
+        showActions: true,
+        cancelText: 'No',
+        confirmText: 'Yes',
+        backdropCloseButton: false,
+        hideCloseButton: true
+      }
     });
   }
 
@@ -78,6 +91,4 @@ export class SelectedHallsComponent {
     this.requestSent = true;
     this.requestAccepted = false;
   }
-
-
 }

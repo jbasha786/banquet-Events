@@ -200,3 +200,18 @@
 .view:hover {
     color: $secondary-color;
 }
+
+.fixed-dialog {
+    transform: translate(gutter-per(0), gutter-per(-17));
+}
+
+.choosemenu-dialog {
+    position: absolute;
+    top: gutter-sp(117);
+}
+
+.cdk-overlay-pane.mat-mdc-dialog-panel.choosemenu-dialog {
+    max-width:gutter-per(100); 
+    height: gutter-per(100);
+    border-radius:gutter-sp(0);
+}

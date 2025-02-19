@@ -1,12 +1,15 @@
 <div class=" col events d-flex flex-column flex-lg-row align-items-center p-30 gap-40">
     @for(obj of dataContext; track $index){
     <div class="col-12 col-lg-5 events__image">
-        <img src="{{obj.src}}" alt="" class="w-100 h-100">
+        <img src="{{ obj.src }}" [attr.alt]="obj.title" class="w-100 h-100" />
     </div>
-    <div class="col-12 col-lg-6 events__content  gap-22 gap-xl-36">
-        <p class="events__content__title fw-bold  fs-34 fs-lg-52 fs-xl-64 fs-xxl-76 lh-xl-64  mb-0">{{obj.title}}</p>
+
+    <div class="col-12 col-lg-6 events__content gap-22 gap-xl-36">
+        <p class="events__content__title fw-bold fs-34 fs-lg-52 fs-xl-64 fs-xxl-76 lh-xl-64 mb-0">{{obj.title}}</p>
         <p class="events__content__desc lh-32 fs-14 fs-xl-18 fs-xxl-24 lh-xl-46 mb-0">{{obj.desc}}</p>
-        <app-button [btnClass]="'sideTransitionButton fs-16 fs-xl-20 fs-xxl-26'" [btnName]="obj.btn"  (bannerActionEvent)="booknowDarts()"></app-button>
+        <app-button [btnClass]="'sideTransitionButton fs-16 fs-xl-20 fs-xxl-26'" [btnName]="obj.btn"  (bannerActionEvent)="booknowDarts()" [attr.aria-label]="'Book Now for ' + obj.title"
+        ></app-button>
+
     </div>
     }
 </div>

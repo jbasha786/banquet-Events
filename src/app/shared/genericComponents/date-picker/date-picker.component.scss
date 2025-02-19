@@ -95,3 +95,8 @@
 .mat-datepicker-popup .mat-calendar-body-selected {
   background-color: $secondary-color;
 }
+
+.custom-backdrop {
+  top: gutter-sp(105);
+  opacity: 0;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MyBookingCradComponent } from '../shared/components/my-booking-crad/my-booking-crad.component';
 import { DefaultService } from '../services/default.service';
 import { bookingHistoryModel } from '../shared/_models/bookingHistoryModel';
@@ -12,7 +12,8 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [MatTabsModule,InvoiceHistoryComponent,BookingHistoryViewComponent,MatIconModule],
   templateUrl: './booking-history.component.html',
-  styleUrl: './booking-history.component.scss'
+  styleUrl: './booking-history.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class BookingHistoryComponent {
   

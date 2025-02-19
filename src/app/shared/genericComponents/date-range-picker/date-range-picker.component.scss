@@ -64,3 +64,8 @@
   opacity: gutter-per(75);
   color: $drop-down-icon-clr;
 }
+
+.custom-backdrop {
+  top: gutter-sp(105);
+  opacity: 0;
+}
