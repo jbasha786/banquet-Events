@@ -276,7 +276,7 @@
     position: relative;
 
     img {
-      bottom: 0;
+      bottom: gutter-sp(0);
       width: gutter-per(48);  
       right: clamp(gutter-per(0), gutter-vw(5), gutter-per(30));
 }
