@@ -33,7 +33,7 @@
 
   .search-input::placeholder {
     color: $searchPholder;
-    font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));;
+    font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));
     font-weight: 300;
     padding-left: gutter-sp(1);
   }
