@@ -243,13 +243,9 @@
   padding: gutter-vw(0) gutter-vw(5) gutter-vw(6);
 }
 
-//member section
+//member sections
 .join-text {
-  padding: gutter-vw(4) gutter-vw(8);
-
-  @media (min-width: 992px) and (max-width: 1280px) {
-    padding: gutter-vw(2) gutter-vw(4);
-  }
+  padding: clamp(gutter-sp(21), gutter-vw(2), gutter-sp(44)) clamp(gutter-sp(36), gutter-vw(4), gutter-sp(163));
 }
 
 .memberSection {
@@ -280,16 +276,10 @@
     position: relative;
 
     img {
-      position: absolute;
-      bottom: $value-null;
-      width: gutter-per(54);
-      right: gutter-per(30);
-
-      @media screen and (max-width: 991px) {
-        position: relative;
-        right: gutter-per(0);
-      }
-    }
+      bottom: gutter-sp(0);
+      width: gutter-per(48);  
+      right: clamp(gutter-per(0), gutter-vw(5), gutter-per(30));
+}
   }
 }
 

@@ -25,7 +25,7 @@
             width: gutter-per(100);
         }
         &__input::placeholder {
-            font-size: gutter-sp(14);
+            font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));
         }
 
         input:focus {

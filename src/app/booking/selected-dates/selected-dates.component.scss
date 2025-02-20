@@ -80,3 +80,16 @@
         background: $light-silver;
     }
 }
+
+.selction_dates .calenderDiv .mat-calendar .mat-calendar-header .mat-calendar-controls .mat-mdc-button {
+    font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(26));
+}
+
+.selction_dates .calenderDiv .mat-calendar .mat-calendar-table .mat-calendar-table-header th {
+    font-size: clamp(gutter-sp(12), gutter-vw(1), gutter-sp(24));
+}
+
+.selction_dates .card.selction_dates__content .mat-calendar-content .mat-calendar-body-label ,
+.mat-calendar-table .mat-calendar-body .mat-calendar-body-cell-content {
+    font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(22));
+}

@@ -188,7 +188,6 @@
     color: $white;
     border: gutter-sp(1) solid $cancelbtn;
     border-radius: gutter-sp(6);
-    font-size: gutter-sp(10);
     height: gutter-sp(30);
     padding: gutter-sp(0) gutter-sp(5);
 
@@ -204,9 +203,8 @@
     color: $white;
     border: gutter-sp(1) solid $editbtn;
     border-radius: gutter-sp(6);
-    font-size: gutter-sp(10);
     height: gutter-sp(30);
-    padding: gutter-sp(0) gutter-sp(5);
+    padding: gutter-vw(0) gutter-vw(0.5);
 
     &:hover {
         background-color: $white;
@@ -220,7 +218,6 @@
     color: $white;
     border: gutter-sp(1) solid $viewdetailbtn;
     border-radius: gutter-sp(6);
-    font-size: gutter-sp(10);
     height: gutter-sp(30);
     padding: gutter-sp(0) gutter-sp(5);
 
@@ -287,10 +284,11 @@ span.dot {
     position: absolute;
     transition: all 0.2s linear;
     background: $livebtn-clr;
-    
+
 
 }
-.btn-live::after{
+
+.btn-live::after {
     content: "";
     width: $value-null;
     height: gutter-sp(1);
@@ -298,6 +296,7 @@ span.dot {
     transition: all 0.2s linear;
     background: $livebtn-clr;
 }
+
 span::before,
 span::after {
     content: "";
@@ -533,7 +532,6 @@ button:hover span::after {
 .buttonCancel {
     color: $cancelcolor;
     border: gutter-sp(1) solid $cancelcolor;
-    font-size: gutter-sp(19);
     font-weight: 500;
     background: transparent;
 }
@@ -547,7 +545,6 @@ button:hover span::after {
 .buttonBack {
     color: $secondary-color;
     border: gutter-sp(1) solid $secondary-color;
-    font-size: gutter-sp(19);
     font-weight: 500;
     background: transparent;
 }
@@ -566,7 +563,6 @@ button:hover span::after {
 .buttonNext {
     color: $white;
     background: $secondary-color;
-    font-size: gutter-sp(19);
     font-weight: 500;
 }
 
@@ -591,6 +587,7 @@ button:hover span::after {
     width: gutter-sp(100);
     color: $white;
     border: none;
+
     &:hover {
         background: linear-gradient(90deg, $btn-no-grdright gutter-per(0), $btn-no-grdleft gutter-per(100));
         box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
@@ -605,6 +602,7 @@ button:hover span::after {
     background: linear-gradient(90deg, $btn-yes-grdleft gutter-per(0), $secondary-color gutter-per(100));
     color: $white;
     border: none;
+
     &:hover {
         background: linear-gradient(90deg, $secondary-color gutter-per(0), $btn-yes-grdleft gutter-per(100));
         box-shadow: gutter-sp(0) gutter-sp(4) gutter-sp(8) $btn-shadow;
