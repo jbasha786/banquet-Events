@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DefaultService } from '../../services/default.service';
 import { Router } from '@angular/router';
@@ -15,6 +15,7 @@ import { ButtonComponent } from '../../shared/genericComponents/button/button.co
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  @ViewChild('usernameInput') usernameInput!: ElementRef;
   username: string = "";
   password: string = "";
   isPasswordVisible = false;
@@ -58,6 +59,11 @@ export class LoginComponent {
 
   signUp() {
     this.router.navigate(['signUp']);
+  }
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.usernameInput.nativeElement.focus();
+    }, 0); 
   }
 
 }

@@ -1,62 +1,104 @@
 <div class="page_content">
-  <p class="fs-30 fw-500 pt-10">My Bookings</p>
+  <p class="fs-30 fs-xl-34 fs-xxl-38 fw-500 pt-10">My Bookings</p>
   <div class="signup mx-auto wid-lg-70">
-    <p class="text-center fs-20 fw-500 pb-20 m-0">Sign Up</p>
-    <p class="fs-16 pb-30 m-0">
+    <p class="text-center fs-20 fs-xl-24 fs-xxl-28 fw-500 pb-20 m-0">Sign Up</p>
+    <p class="fs-16 fs-xl-18 fs-xxl-20 pb-30 m-0">
       Already have an account?
-      <span class="signup__color cursor fw-500" (click)="returnToLogin()">Login</span>
+      <span class="signup__color cursor fw-500" (click)="returnToLogin()" (keydown.enter)="returnToLogin()" 
+      (keydown.space)="returnToLogin()" 
+      role="button"  
+      aria-label="Login to your account" 
+      tabindex="0">Login</span>
     </p>
     <form [formGroup]="registrationForm">
       <div class="row g-4">
         <div class="col-lg-6 col-sm-12 mb-40">
-          <label for="firstName" class="fs-14 mb-6">Full Name</label>
-          <input id="firstName" type="text" formControlName="firstName" class="form-control sign-up-form" />
+          <label for="firstName" class="fs-14 fs-xl-18 fs-xxl-20 mb-6">Full Name</label>
+          <input #fullnameInput id="firstName" type="text" formControlName="firstName" class="form-control sign-up-form fs-16 fs-xl-18 fs-xxl-20" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-40">
-          <label for="lastName" class="fs-14 mb-6">Email</label>
-          <input id="lastName" type="text" formControlName="lastName" class="form-control sign-up-form" />
+          <label for="lastName" class="fs-14 fs-xl-18 fs-xxl-20 mb-6">Email</label>
+          <input id="lastName" type="text" formControlName="lastName" class="form-control sign-up-form fs-16 fs-xl-18 fs-xxl-20" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-40">
-          <label for="fullName" class="fs-14 mb-6">Relatie</label>
-          <input id="fullName" type="text" formControlName="fullName" class="form-control sign-up-form" />
+          <label for="fullName" class="fs-14 fs-xl-18 fs-xxl-20 mb-6">Relatie</label>
+          <input id="fullName" type="text" formControlName="fullName" class="form-control sign-up-form fs-16 fs-xl-18 fs-xxl-20" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-40">
-          <label for="phone" class="fs-14 mb-6">Phone</label>
-          <input id="phone" type="text" formControlName="phone" class="form-control sign-up-form" />
+          <label for="phone" class="fs-14 fs-xl-18 fs-xxl-20 mb-6">Phone</label>
+          <input id="phone" type="text" formControlName="phone" class="form-control sign-up-form fs-16 fs-xl-18 fs-xxl-20" />
         </div>
         <div class="col-lg-6 col-sm-12 mb-20">
-          <label for="password" class="fs-14 mb-6">Password</label>
+          <label for="password" class="fs-14 fs-xl-18 fs-xxl-20 mb-6">Password</label>
           <div class="password-container position-relative">
-            <input class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
+            <input class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top fs-16 fs-xl-18 fs-xxl-20"
               (keydown.tab)="$event.stopPropagation()" [type]="isPasswordVisible ? 'text' : 'password'" id="password"
-              formControlName="password" name="password" required>
+              formControlName="password" name="password" required aria-describedby="PasswordHelp"
+              aria-label="Enter your password">
             <img class="toggle-password position-absolute"
               [src]="isPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'"
-              alt="Toggle Password Visibility" (click)="togglePasswordVisibility()" />
+              alt="Toggle Password Visibility" (click)="togglePasswordVisibility()" role="button" tabindex="0"(keydown.enter)="togglePasswordVisibility()"
+              (keydown.space)="togglePasswordVisibility()" />
           </div>
         </div>
         <div class="col-lg-6 col-sm-12 mb-20">
-          <label for="confirmPassword" class="fs-14 mb-6">Confirm Password</label>
+          <label for="confirmPassword" class="fs-14 fs-xl-18 fs-xxl-20 mb-6">Confirm Password</label>
           <div class="password-container position-relative">
-            <input class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top"
-              (keydown.tab)="$event.stopPropagation()" [type]="isconfirmPasswordVisible ? 'text' : 'password'"
-              id="confirmPassword" formControlName="confirmPassword" name="password" required>
-            <img class="toggle-password position-absolute"
+            <input 
+              class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top fs-16 fs-xl-18 fs-xxl-20"
+              (keydown.tab)="$event.stopPropagation()" 
+              [type]="isconfirmPasswordVisible ? 'text' : 'password'"
+              id="confirmPassword" 
+              formControlName="confirmPassword" 
+              name="confirmPassword" 
+              required
+              aria-describedby="confirmPasswordHelp"
+              aria-label="Enter and confirm your password"
+            >
+            <img 
+              class="toggle-password position-absolute"
               [src]="isconfirmPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'"
-              alt="Toggle Confirm Password Visibility" (click)="toggleconfirmPasswordVisibility()" />
+              alt="Toggle Confirm Password Visibility"
+              (click)="toggleconfirmPasswordVisibility()"
+              role="button"
+              tabindex="0"
+              (keydown.enter)="toggleconfirmPasswordVisibility()"
+              (keydown.space)="toggleconfirmPasswordVisibility()"
+            />
           </div>
         </div>
-        <div class="fs-14 d-flex align-items-center terms-condition pl-13 h-22 mt-2">
-          <app-custom-mat-checkbox [disableRipple]="true"></app-custom-mat-checkbox>
-          <span class="d-flex" >Terms & Conditions<span class="checkbox-imp">*</span></span>
+        <div class="fs-14 fs-xl-18 fs-xxl-20 d-flex align-items-center terms-condition pl-13 h-22 mt-2">
+          <label >
+            <app-custom-mat-checkbox 
+              [disableRipple]="true" 
+              id="termsCheckbox"
+              [checked]="isTermsChecked"
+              [ariaLabelledBy]="'termsLabel'"
+              (checkedChange)="toggleTermsCheckbox($event)">
+            </app-custom-mat-checkbox>
+            <span id="termsLabel">Terms & Conditions<span class="checkbox-imp">*</span></span>
+          </label>
         </div>
-        <div class="fs-14 d-flex align-items-center pl-13 mb-40" role="button">
-          <app-custom-mat-checkbox [disableRipple]="true"> </app-custom-mat-checkbox>
-          <span class="d-flex">Subscribe to Email Notification</span>
+        
+        <div class="fs-14 fs-xl-18 fs-xxl-20 d-flex align-items-center pl-13 mb-40 mt-xl-2">
+          <label>
+          <app-custom-mat-checkbox 
+            [disableRipple]="true" 
+            id="subscribeCheckbox"
+            [checked]="isTermssubscribed"
+            [ariaLabelledBy]="'subscribeLabel'"
+            (checkedChange)="toggleTermssubscribed($event)">
+          </app-custom-mat-checkbox>
+          <span id="subscribeLabel" >
+            Subscribe to Email Notification
+            </span>
+          </label>
         </div>
+        
+        
         <div class="signup__button">
           <app-button
-          [btnClass]="'signup-btn'"
+          [btnClass]="'signup-btn fs-16 fs-xl-20 fs-xxl-22'"
           [btnName]="'Sign Up'"
           (bannerActionEvent)="register()">
           </app-button>

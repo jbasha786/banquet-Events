@@ -2,7 +2,9 @@
   [checked]="checked"
   [indeterminate]="indeterminate"
   [disableRipple]="disableRipple"
-  [aria-label]="ariaLabel"
-  (click)="$event.stopPropagation()"
-  (change)="onCheckboxChange($event)">
+  [attr.aria-label]="ariaLabel ? ariaLabel : null"
+  [attr.aria-labelledby]="ariaLabelledBy"
+  tabindex="0"
+  (change)="onCheckboxChange($event)"
+  (keydown)="onKeydown($event)">
 </mat-checkbox>
