@@ -73,6 +73,7 @@
             border: none;
             padding: gutter-sp(0);
             padding: gutter-sp(2) gutter-sp(14);
+            text-align: center;
         }
 
         .table_header .mat-mdc-header-cell {
@@ -90,6 +91,7 @@
         .menuTable .mat-mdc-header-cell {
             border-bottom: gutter-sp(1) solid $white;
             color: $black;
+            font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));
         }
 
         .mdc-data-table__table {
@@ -99,6 +101,7 @@
         .menuTable .mat-mdc-cell {
             text-wrap: nowrap;
             border-bottom: none;
+            font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));
         }
 
         .menuTable .mdc-data-table__header-cell {
