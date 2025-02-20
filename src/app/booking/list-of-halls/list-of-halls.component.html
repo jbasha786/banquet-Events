@@ -49,21 +49,21 @@
                 <div class="col-12 col-md-12 col-lg-8 col-xl-8 imgDesc gap-lg-2">
                     <div class="d-flex flex-column gap-2 gap-xl-3">
                         <div>
-                            <span class="fs-20 fs-md-22 fs-lg-26 fs-xl-28 fs-xxl-30 fw-500 lh-1 hallName" role="button"
+                            <span class="fs-20 fs-md-22 fs-lg-26 fs-xl-28 fs-xxl-32 fw-500 lh-1 hallName" role="button"
                                 (click)="getDetails()">{{item.name}}</span>
                             <div
                                 class="d-flex flex-column align-items-start align-items-lg-center flex-md-row gap-2 gap-lg-3">
-                                <div> <span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-16 fontcolor">{{item.desc}}</span></div>
+                                <div> <span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor">{{item.desc}}</span></div>
                                 <div class="d-none d-md-flex"><span class="fontcolor">|</span></div>
-                                <div><span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-16 fontcolor">{{item.diamensions}}</span></div>
+                                <div><span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor">{{item.diamensions}}</span></div>
                                 <div class="d-none d-md-flex"><span class="fontcolor">| </span></div>
-                                <div><span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-16 fontcolor"> {{item.status}}</span></div>
+                                <div><span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor"> {{item.status}}</span></div>
                             </div>
                         </div>
                         <div class="mt-xl-2">
-                            <p class="fs-17 fs-xl-19 fw-500 mb-0 text-black">{{item.deposite}}</p>
+                            <p class="fs-17 fs-xl-19 fs-xxl-26 fw-500 mb-0 text-black">{{item.deposite}}</p>
                             <p
-                                class="hallsView__desc fontcolor mb-0 fs-12 fs-md-11 fs-lg-13 fs-xl-14 fs-xxl-16 wid-lg-80 mt-2 mt-md-2 mt-xl-1">
+                                class="hallsView__desc fontcolor mb-0 fs-12 fs-md-11 fs-lg-13 fs-xl-14 fs-xxl-20 wid-lg-80 mt-2 mt-md-2 mt-xl-1">
                                 {{item.depositeDesc}}
                             </p>
                         </div>
@@ -71,28 +71,28 @@
                     <div>
                         <div class="d-flex align-items-baseline flex-wrap">
                             <span class="fs-36 fs-xl-38 fs-xxl-40 fw-bold hallsView__priceColor my-0 lh-35 mt-3">{{item.price}}</span><span
-                                class="fontcolor fs-12 fs-xl-14 fs-xxl-16">{{item.taxText}}</span>
+                                class="fontcolor fs-12 fs-xl-14 fs-xxl-20">{{item.taxText}}</span>
                         </div>
                         <div
                             class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
                             <div class="d-flex flex-column-reverse flex-md-row align-items-center  flex-row gap-2">
-                                <app-button [btnClass]="'selected fs-xl-16'" [btnName]="buttonSelected" *ngIf="item.isActive"
+                                <app-button [btnClass]="'selected fs-xl-16 fs-xxl-22'" [btnName]="buttonSelected" *ngIf="item.isActive"
                                     (bannerActionEvent)="toggleSelection(item)"></app-button>
-                                <app-button [btnClass]="'reserve fs-xl-16'" [btnName]="buttonSelect" *ngIf="!item.isActive"
+                                <app-button [btnClass]="'reserve fs-xl-16 fs-xxl-22'" [btnName]="buttonSelect" *ngIf="!item.isActive"
                                     (bannerActionEvent)="reserve(item)"></app-button>
 
                                 <div class="d-flex gap-2 my-3 my-md-0">
-                                    <span class="ms-2 hallsView__articles fs-14 fs-xl-16 fw-500" role="button"
+                                    <span class="ms-2 hallsView__articles fs-14 fs-xl-16 fs-xxl-24 fw-500" role="button"
                                         (click)="addArticles()">Add
                                         Articles</span>
-                                    <span class="ms-2 hallsView__articles fs-14 fs-xl-16 fw-500" role="button"
+                                    <span class="ms-2 hallsView__articles fs-14 fs-xl-16 fs-xxl-24 fw-500" role="button"
                                         (click)="chooseMenu()">
                                         Choose Menu
                                     </span>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center cursor halldetails"
-                                (click)="getDetails()"><span class="fw-500 fs-14 fs-xl-16 mt-md-0 view" role="button">View
+                                (click)="getDetails()"><span class="fw-500 fs-14 fs-xl-16 fs-xxl-22 mt-md-0 view" role="button">View
                                     Details</span><span class="arrow"><img
                                         src="../../../assets/images/halls/arrow-color.svg" alt=""></span></div>
                         </div>

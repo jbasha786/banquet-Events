@@ -24,6 +24,6 @@
     }
 
     .logo {
-        height: gutter-sp(50);
+        height: clamp(gutter-sp(50), gutter-vh(6), gutter-sp(90));
     }
 }

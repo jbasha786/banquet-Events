@@ -5,11 +5,11 @@
     .card-img {
         height: gutter-per(100);
         width: gutter-per(100);
+        object-fit: cover;
     }
 
     .price {
         color: $priceColor;
-        font-size: gutter-sp(24);
     }
 
     .fontdull {
@@ -54,8 +54,8 @@
     }
 
     .frameImg {
-        height: gutter-sp(16);
-        width: gutter-sp(16);
+        height: clamp(gutter-sp(16), gutter-vw(1), gutter-sp(26));
+        width: clamp(gutter-sp(16), gutter-vw(1), gutter-sp(26));
     }
 
     .rating_booking {
@@ -72,7 +72,6 @@
 
     .address {
         color: $adresscolor;
-        font-size: gutter-sp(10);
         flex-wrap: wrap;
         white-space: normal;
         word-wrap: break-word;

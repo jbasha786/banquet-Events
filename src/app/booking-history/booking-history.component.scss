@@ -9,7 +9,7 @@
 
   .search {
     position: absolute;
-    top: gutter-sp(23);
+    top:  max(20px, calc(118px - 10vw));
     z-index: 4;
     right: gutter-sp(0);
     display: flex;
@@ -22,22 +22,16 @@
     background-color: $white;
     min-height: gutter-sp(30);
     width: gutter-per(100);
-    font-size: gutter-sp(12);
+    margin-right: gutter-sp(5);
   }
 
   .search-input:focus-within {
-    border-radius: gutter-sp(6);
-    border-color: $secondary-color;
-    box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
-    background-color: $gray;
-    min-height: gutter-sp(30);
-    width: gutter-per(100);
-    font-size: gutter-sp(12);
+    box-shadow:  $value-null $value-null gutter-sp(5) $btn-shadow;
   }
 
   .search-input::placeholder {
     color: $searchPholder;
-    font-size: gutter-sp(14);
+    font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));
     font-weight: 300;
     padding-left: gutter-sp(1);
   }
@@ -51,7 +45,6 @@
   .search-icon {
     position: absolute;
     left: gutter-sp(11);
-    top: gutter-sp(9);
     background-color: inherit;
     color: $searchPholder;
   }
@@ -73,7 +66,7 @@
   }
 
   .tabTitle ::ng-deep .mdc-tab__text-label {
-    font-size: gutter-sp(30);
+    font-size: clamp(gutter-sp(16), gutter-vw(2), gutter-sp(36));
     letter-spacing: normal;
     margin-right: gutter-vw(3);
     text-transform: none;
@@ -84,7 +77,7 @@
   }
 
   .tabTitle ::ng-deep .mdc-tab-indicator--active {
-    font-size: gutter-sp(30);
+    font-size: clamp(gutter-sp(16), gutter-vw(2), gutter-sp(36));
     letter-spacing: normal;
     padding: gutter-sp(0);
   }
@@ -99,23 +92,6 @@
     font-weight: 400;
   }
 
-  @media (min-width: 320px) and (max-width: 767px) {
-    .search {
-      top: gutter-sp(80);
-      right: gutter-sp(4);
-    }
-
-    .tabTitle ::ng-deep .mdc-tab__text-label {
-      font-size: gutter-sp(16);
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 940px) {
-    .search {
-      top: gutter-sp(80);
-      right: gutter-sp(3);
-    }
-  }
 
   ::ng-deep .mdc-tab__content:hover {
     background: $white;
