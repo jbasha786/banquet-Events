@@ -21,22 +21,27 @@
                     </div>
                     <div class="password-container position-relative">
                         <input 
-                          class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top fs-16 fs-xl-18 fs-xxl-20"
-                          (keydown.tab)="$event.stopPropagation()" 
-                          [type]="isPasswordVisible ? 'text' : 'password'" 
-                          id="password" 
-                          formControlName="password" 
-                          name="password" 
-                          required
-                          aria-label="Enter your Password"
+                            class="loginForm__form__pwddiv__pwdbox form-control input-lg rounded-top fs-16 fs-xl-18 fs-xxl-20"
+                            (keydown.tab)="$event.stopPropagation()" 
+                            [type]="isPasswordVisible ? 'text' : 'password'" 
+                            id="password" 
+                            formControlName="password" 
+                            name="password" 
+                            required
+                            aria-label="Enter your Password"
                         >
                         <img 
-                          class="toggle-password position-absolute"
-                          [src]="isPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'" 
-                          alt="Toggle Password Visibility"
-                          (click)="togglePasswordVisibility()"
+                            class="toggle-password position-absolute"
+                            [src]="isPasswordVisible ? 'assets/images/password/eye.png' : 'assets/images/password/hidden.png'"
+                            alt="Toggle Password Visibility"
+                            (click)="togglePasswordVisibility()"
+                            role="button"
+                            tabindex="0"
+                            (keydown.enter)="togglePasswordVisibility()"
+                            (keydown.space)="togglePasswordVisibility()"
                         />
-                      </div>
+                    </div>
+                    
                       
                 </div>
                 <div class="loginForm__form__signupdiv d-flex fs-12 fs-xl-16 fs-xxl-18 mb-20 gap-6">
@@ -58,7 +63,10 @@
                     [btnClass]="'loginForm__form__loginbtndiv secondarybtn p-2 rounded-2 fs-16 fs-xl-20 fs-xxl-22 fw-500'"
                     [btnName]="'Continue as Guest'"
                     (bannerActionEvent)="onSubmit()"
-                    [routerLink]="['/continueasguest']"
+                    tabindex="0"
+                    (click)="onguest()"
+                    (keydown.enter)="onguest()" 
+                    (keydown.space)="onguest()"
                     aria-label="Continue as Guest without logging in">
                     </app-button>
                    

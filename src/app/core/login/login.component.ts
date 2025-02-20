@@ -56,6 +56,9 @@ export class LoginComponent {
       this.router.navigate(['home']);
     });
   }
+onguest(){
+  this.router.navigate(['/continueasguest']);
+}
 
   signUp() {
     this.router.navigate(['signUp']);
