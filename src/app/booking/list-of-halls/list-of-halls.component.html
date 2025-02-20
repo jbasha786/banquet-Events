@@ -9,26 +9,28 @@
                             <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img"
                                 alt="user"></span>
                         <div class="form-floating">
-                            <input type="email" class="form-control guestclock fs-xxl-20 h-xxl-80" id="guestCount" placeholder="Guests"
-                                value="40 Adults, 12 Children" readonly>
+                            <input type="email" class="form-control guestclock fs-xxl-20 h-xxl-80" id="guestCount"
+                                placeholder="Guests" value="40 Adults, 12 Children" readonly>
                             <label for="guestCount" class="custom_clr guestClockLabel fs-xl-18 fs-xxl-24">Guests</label>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <app-date-picker [label]="'Check-in'" [matDatepickerName]="'matcheckinDate'"
-                        [image]="'/assets/images/halls/calender-hall.png'" [date]="checkinDate" [classNames]="'input-group custom_icon'"></app-date-picker>
+                        [image]="'/assets/images/halls/calender-hall.png'" [date]="checkinDate"
+                        [classNames]="'input-group custom_icon'"></app-date-picker>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <app-date-picker [label]="'Check-out'" [matDatepickerName]="'matcheckOutDate'"
-                        [image]="'/assets/images/halls/calender-hall.png'" [date]="checkOutDate" [classNames]="'input-group custom_icon'"></app-date-picker>
+                        [image]="'/assets/images/halls/calender-hall.png'" [date]="checkOutDate"
+                        [classNames]="'input-group custom_icon'"></app-date-picker>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="input-group border-clr d-flex align-items-center ms-1">
                         <span class="input-group-text basic-icon d-block d-lg-none"><img
                                 src="../../../../assets/images/icons/clock.png" alt="user"></span>
                         <div class="form-floating custom_select">
-                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" id="duration" aria-label="Default select example">
+                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" id="duration" name="duration">
                                 <ng-container *ngFor="let item of slots">
                                     <option [value]="item.id">{{item.shift}}</option>
                                 </ng-container>
@@ -103,6 +105,3 @@
         }
     </div>
 </div>
-
-
-test
