@@ -556,3 +556,7 @@ select.form-control:focus {
   scrollbar-color: $secondary-color $white;
   scrollbar-width: thin;
 }
+
+.page_content {
+  padding: gutter-vw(2) gutter-vw(9) gutter-vw(6) gutter-vw(10.4);
+}
