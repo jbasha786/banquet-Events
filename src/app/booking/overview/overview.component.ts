@@ -53,6 +53,8 @@ export class OverviewComponent {
   checkOutDate: Date | null;
   tomorrowDate = new Date();
   routerName: any;
+  viewAllPhotosEnabled: boolean = false;
+  guestData: string = "40 Adults, 12 Children";
   slots = [
     { id: 1, shift: "8AM - 11 PM" },
     { id: 2, shift: "12AM - 3 PM" },
@@ -87,5 +89,9 @@ export class OverviewComponent {
   goToBack() {
     this.eventBookingService.setOverviewPage(true);
     this.route.navigate([this.routerName]);
+  }
+
+  viewAllPhotos() {
+    this.viewAllPhotosEnabled = !this.viewAllPhotosEnabled;
   }
 }
