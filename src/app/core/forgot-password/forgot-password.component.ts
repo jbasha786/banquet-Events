@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DefaultService } from '../../services/default.service';
@@ -15,6 +15,7 @@ import { ButtonComponent } from '../../shared/genericComponents/button/button.co
   styleUrl: './forgot-password.component.scss'
 })
 export class ForgotPasswordComponent {
+  @ViewChild('usernameInput') usernameInput!: ElementRef;
   email: string = "";
   forgotMailForm = this.fb.group({
     email: ['', Validators.required]
@@ -41,5 +42,9 @@ export class ForgotPasswordComponent {
       this.router.navigate(['forgotpwd']);
     });
   }
-
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.usernameInput.nativeElement.focus();
+    }, 0); 
+  }
 }

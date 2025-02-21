@@ -18,7 +18,7 @@
                             <p class="m-0 fs-12 fs-md-14 fs-xxl-16 text">{{item.location}}</p>
                         </div>
                     </div>
-                    <span (click)="editTimePart(item)" class="edit mt-10 mt-md-0 cursor"
+                    <span role="button" tabindex="0" (click)="editTimePart(item)" class="edit mt-10 mt-md-0 cursor"
                         [ngClass]="item.isActive && item.id === selectedItemId ? '' : 'd-none'"><img [src]="item.src"
                             [alt]="item.location" class="icon"></span>
                 </div>

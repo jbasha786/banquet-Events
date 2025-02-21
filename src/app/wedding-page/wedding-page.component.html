@@ -2,7 +2,7 @@
   <img
     class="eventsmainImg__events_banner"
     src="../../assets/images/wedding/wedding-baner.png"
-    alt="Wedding Banner"
+    alt="Wedding celebration venue with elegant decor"
     width="100%"
   />
 </div>
@@ -21,10 +21,10 @@
             *ngIf="event.images && event.images.length > 0"
             class="carousel-align"
           >
-            <owl-carousel-o [options]="customOptions">
+            <owl-carousel-o [options]="customOptions" aria-label="Event image gallery">
               <ng-container *ngFor="let image of event.images">
                 <ng-template carouselSlide>
-                  <img class="image-section" [src]="image" alt="Event Image" />
+                  <img class="image-section" [src]="image" [alt]="'Image of ' + event.title" />
                 </ng-template>
               </ng-container>
             </owl-carousel-o>
@@ -52,20 +52,17 @@
               {{ event.description }}
             </p>
             <div class="list-container">
-              <ul
-                class="mt-16 fs-14 fs-lg-13 fs-xl-16 fs-xxl-18 fw-300 d-flex flex-lg-row flex-column gap-0 gap-lg-20"
-              >
-                <div class="left-column">
-                  <li *ngFor="let amenity of event.amenities.slice(0, 4)">
+                <ul class="amenities-list left-column mt-16 fs-14 fs-lg-13 fs-xl-16 fs-xxl-18 fw-300 " role="list">
+                  <li *ngFor="let amenity of event.amenities.slice(0, 4)" role="listitem">
                     {{ amenity }}
                   </li>
-                </div>
-                <div class="right-column">
-                  <li *ngFor="let amenity of event.amenities.slice(4)">
+                </ul>
+                <ul class="amenities-list right-column mt-16 fs-14 fs-lg-13 fs-xl-16 fs-xxl-18 fw-300  " role="list">
+                  <li *ngFor="let amenity of event.amenities.slice(4)" role="listitem">
                     {{ amenity }}
                   </li>
-                </div>
-              </ul>
+                </ul>
+              
             </div>
           </div>
         </div>
@@ -76,9 +73,9 @@
             </div>
             <!-- Buttons -->
              <div class="d-flex flex-lg-row flex-column gap-12 justify-content-center justify-content-lg-start align-items-center align-items-lg-start">
-                <app-button [btnClass]="'btn-book w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Book now'"> </app-button>
-                <app-button [btnClass]="'btn-download w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Download Brochure'"> </app-button>
-                <app-button [btnClass]="'btn-quote w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Request a Quote'"> </app-button>
+                <app-button [btnClass]="'btn-book w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Book now'" aria-label="Book now "> </app-button>
+                <app-button [btnClass]="'btn-download w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Download Brochure'" aria-label="Download Brochure"> </app-button>
+                <app-button [btnClass]="'btn-quote w-216 w-xl-290 fs-16 fs-xl-18 fs-xxl-20'" [btnName]="'Request a Quote'" aria-label="Request a Quote"> </app-button>
              </div>
           </div>
         </div>

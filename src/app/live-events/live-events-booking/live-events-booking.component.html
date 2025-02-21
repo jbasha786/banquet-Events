@@ -10,10 +10,14 @@
                 <p class="fs-14 fs-xxl-24 m-0 items">4x Breakfast / 3x Lunch / 4x Dinner</p>
             </div>
             <div class="d-flex qtySection gap-4 align-items-center justify-content-center">
-                <mat-icon fontIcon="remove" (click)="decrement()" [ngClass]="isbtnActive ? 'active' : 'inActive' "
+                <mat-icon role="button" aria-hidden="false" aria-label="decrement" tabindex="0" fontIcon="remove"
+                    (click)="decrement()" (keyup.enter)="decrement()" (keyup.space)="decrement()"
+                    [ngClass]="isbtnActive ? 'active' : 'inActive' "
                     class="cursor h-xxl-80 w-xxl-80 fs-xxl-40"></mat-icon>
                 <p class="value mb-0 fs-30 fs-xxl-40">{{itemQty}}</p>
-                <mat-icon fontIcon="add" (click)="increment()" [ngClass]="!isbtnActive ? 'active' : 'inActive'"
+                <mat-icon role="button" aria-hidden="false" aria-label="increment" tabindex="0" fontIcon="add"
+                    (click)="increment()" (keyup.enter)="increment()" (keyup.space)="increment()"
+                    [ngClass]="!isbtnActive ? 'active' : 'inActive'"
                     class="cursor h-xxl-80 w-xxl-80 fs-xxl-40"></mat-icon>
             </div>
         </div>

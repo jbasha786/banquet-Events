@@ -7,7 +7,7 @@
             <p class="lh-28 lh-xl-40 fs-lg-16 fs-14 fs-xl-18 fs-xxl-24 m-0">Get in touch with us to give your employees and channel partners </p>
             <p class="lh-28 lh-xl-40 fs-lg-16 fs-14 fs-xl-18 fs-xxl-24 m-0">a delightful experience will take care of end-to-end</p>
             <p class="lh-28 lh-xl-40 fs-lg-16 fs-14 fs-xl-18 fs-xxl-24 m-0">management of all your official events</p>
-             <app-button [btnClass]="'businessBannerActionButton fs-18 fs-xl-24'" [btnName]="'Book Now'" (bannerActionEvent)="bookEvents('300ms', '300ms')"></app-button>
+             <app-button [btnClass]="'businessBannerActionButton fs-18 fs-xl-24'" (keyup.enter)="bookEvents('300ms', '300ms')" (keyup.space)="bookEvents('300ms', '300ms')" [btnName]="'Book Now'" (bannerActionEvent)="bookEvents('300ms', '300ms')"></app-button>
         </div>
     </div>
 

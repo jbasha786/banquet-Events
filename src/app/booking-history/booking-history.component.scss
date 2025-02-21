@@ -9,7 +9,7 @@
 
   .search {
     position: absolute;
-    top:  max(20px, calc(118px - 10vw));
+    top: max(20px, calc(118px - 10vw));
     z-index: 4;
     right: gutter-sp(0);
     display: flex;
@@ -26,7 +26,9 @@
   }
 
   .search-input:focus-within {
-    box-shadow:  $value-null $value-null gutter-sp(5) $btn-shadow;
+    
+    box-shadow: $value-null $value-null gutter-sp(5) $btn-shadow;
+   
   }
 
   .search-input::placeholder {
@@ -100,7 +102,4 @@
   ::ng-deep .mat-mdc-tab .mdc-tab__text-label:hover {
     color: $secondary-color;
   }
-}
-.page_content {
-  padding: gutter-vw(2) gutter-vw(9) gutter-vw(6) gutter-vw(10.4);
 }
