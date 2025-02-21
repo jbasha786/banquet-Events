@@ -20,7 +20,8 @@ export class DatePickerComponent {
   @Input() matDatepickerName!: string;
   @Input() image!: string;
   @Input() date!: Date | null;
-  @Input() classNames!: string
+  @Input() classNames!: string;
+  @Input() guestLabelClassName!: string;
 
   constructor(private zindexService: ZindexService) { }
 

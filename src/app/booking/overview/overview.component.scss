@@ -17,7 +17,7 @@
             border: gutter-sp(1) solid $back-btn-color-overview;
         }
 
-        &__back:hover { 
+        &__back:hover {
             border-color: $secondary-color;
             background: $secondary-color;
             color: $white;
@@ -53,6 +53,44 @@
                 width: auto;
                 height: auto;
             }
+        }
+
+        .prev-next-buttons {
+            background: $white;
+            width: gutter-sp(42);
+            height: gutter-sp(155);
+            margin: auto;
+            opacity: gutter-per(70);
+        }
+
+        .custom-prev {
+            @extend .prev-next-buttons;
+            border-top-right-radius: gutter-sp(16);
+            border-bottom-right-radius: gutter-sp(16);
+
+            .mat-icon {
+                color: $black;
+                font-size: gutter-sp(30);
+                width: auto;
+            }
+        }
+
+        .custom-next {
+            @extend .prev-next-buttons;
+            border-top-left-radius: gutter-sp(16);
+            border-bottom-left-radius: gutter-sp(16);
+
+            .mat-icon {
+                color: $black;
+                font-size: gutter-sp(30);
+                width: auto;
+            }
+        }
+
+        .custom-next:focus-within,
+        .custom-prev:focus-within {
+            border: gutter-sp(1) solid $secondary-color;
+            box-shadow: 0 0 gutter-sp(5) rgba(0, 0, 0, 0.2);
         }
     }
 
@@ -99,6 +137,7 @@
                     background: $white;
                     padding: gutter-sp(0) gutter-sp(10);
                 }
+
                 .border-clr:focus-within {
                     border-color: $secondary-color;
                     box-shadow: 0 0 gutter-sp(5) rgba(0, 0, 0, 0.2);

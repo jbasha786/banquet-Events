@@ -1,97 +1,90 @@
 @import '../../../styles/variable.scss';
 
 .dateSection {
-    border-radius: gutter-rem(0.375);
+  border-radius: gutter-rem(0.375);
 
-    .custom_img {
-        background: $white;
-        border: none;
-        padding: gutter-rem(0.375) gutter-rem(0);
-
-        img {
-            width: gutter-sp(30);
-            height: gutter-sp(30);
-        }
-    }
-
-    .custom_date_input {
-        border: none;
-        padding-left: gutter-sp(3);
-        padding: gutter-sp(2) gutter-sp(0) gutter-sp(2) gutter-sp(3);
-        font-size: gutter-sp(13);
-    }
-
-    .custom_date_input.form-control:not(:placeholder-shown) {
-      padding-top: gutter-rem(2.125);
+  .custom_img {
+    background: $white;
+    border: none;
+    padding: gutter-rem(0.375) gutter-rem(0.25);
   }
 
-    .custom_floating .customLabel,
-    .custom_floating > label,
-    .custom_floating > .form-control:not(:placeholder-shown) ~ label {
-        padding-left: gutter-sp(0);
-        color: $secondary-color;
-        font-size: gutter-sp(14);
-        padding-top: gutter-sp(20);
+  .custom_img.guestClockLabel {
+    padding: gutter-rem(0.375) gutter-rem(0);
+  }
 
-    }
+  .custom_date_input {
+    border: none;
+    padding-left: gutter-sp(3);
+    padding: gutter-rem(1.2) gutter-rem(0.25) gutter-rem(0.25);
+    font-size: gutter-sp(13);
+  }
 
-    .custom_date_input:focus {
-        box-shadow: none;
-        border-color: $custom-input-border-clr;
-    }
+  .custom_date_input.guestClockLabel {
+    padding-left: gutter-sp(7);
+  }
 
-    .border-clr {
-        border: gutter-sp(1) solid $input-border;
-        border-radius: gutter-sp(5);
-        background: $white;
-        padding: gutter-sp(0) gutter-sp(10);
-    }
-    .border-clr:focus-within {
-        border-color: $secondary-color;
-        box-shadow: 0 0 gutter-sp(5) rgba(0, 0, 0, 0.2);
-    }
+  .custom_floating .customLabel,
+  .custom_floating>label,
+  .custom_floating>.form-control:not(:placeholder-shown)~label {
+    color: $secondary-color;
+    font-size: gutter-sp(14);
+    padding-top: gutter-sp(20);
+    padding: gutter-rem(1) gutter-rem(0.25);
+
+  }
+
+  .custom_floating .customLabel.guestClockLabel,
+  .custom_floating>label.guestClockLabel,
+  .custom_floating>.form-control:not(:placeholder-shown)~label.guestClockLabel {
+    font-size: gutter-sp(14);
+    padding-left: gutter-sp(5);
+    padding-top: gutter-sp(20);
+  }
+
+  .custom_date_input:focus {
+    box-shadow: none;
+    border-color: $custom-input-border-clr;
+  }
+
+  .border-clr {
+    border: gutter-sp(1) solid $input-border;
+    border-radius: gutter-sp(5);
+    background: $white;
+    padding: gutter-sp(0) gutter-sp(10);
+  }
+
+  .border-clr:focus-within {
+    border-color: $secondary-color;
+    box-shadow: 0 0 gutter-sp(5) rgba(0, 0, 0, 0.2);
+  }
 }
 
-.mat-datepicker-popup
-  .mat-calendar-body-today:not(.mat-calendar-body-selected):not(
-    .mat-calendar-body-comparison-identical
-  ) {
+.mat-datepicker-popup .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
   background-color: transparent;
   color: $black;
   border: gutter-sp(2) solid $secondary-color;
   box-shadow: none;
 }
 
-.mat-datepicker-popup
-  .mat-datepicker-content
-  .mat-calendar-table
-  .mat-calendar-body
-  .mat-calendar-body-active
-  .mat-calendar-body-selected {
+.mat-datepicker-popup .mat-datepicker-content .mat-calendar-table .mat-calendar-body .mat-calendar-body-active .mat-calendar-body-selected {
   background-color: $secondary-color;
   border: none;
   box-shadow: none;
 }
 
-.mat-datepicker-popup
-  .mat-datepicker-content
-  .mat-calendar-table
-  .mat-calendar-body
-  .mat-calendar-body-active
-  .mat-calendar-body-selected:hover {
+.mat-datepicker-popup .mat-datepicker-content .mat-calendar-table .mat-calendar-body .mat-calendar-body-active .mat-calendar-body-selected:hover {
   filter: brightness(1.2);
   border: none;
   box-shadow: none;
 }
-.mat-datepicker-popup
-  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
-  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
-    .mat-calendar-body-comparison-identical
-  ) {
+
+.mat-datepicker-popup .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
   background-color: $secondary-color;
   filter: brightness(1.2);
   color: $white;
 }
+
 .mat-datepicker-popup .mat-calendar-body-selected {
   background-color: $secondary-color;
 }
