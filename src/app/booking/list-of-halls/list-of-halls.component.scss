@@ -17,7 +17,6 @@
         font-size: gutter-sp(13);
         color: $black;
         padding-left: gutter-sp(7);
-        padding-top: gutter-rem(2.125);
     }
 
     .pleft-3 {
@@ -55,7 +54,14 @@
             width: gutter-per(100);
         }
 
-        .form-floating label.custom_clr {
+        .form-floating label.custom_clr,
+        &__label-hall {
+            color: $secondary-color;
+        }
+
+        .custom_clr,
+        .form-floating>.form-select~label,
+        .form-floating>.form-control:not(:placeholder-shown)~label {
             color: $secondary-color;
         }
 
