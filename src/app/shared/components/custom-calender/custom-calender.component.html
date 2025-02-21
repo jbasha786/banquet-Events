@@ -3,7 +3,8 @@
     <p class="btnmain mb-0 mr-6" mat-icon-button (click)="changeMonth(-1)">
       <img src="../../../../assets/images/events/backarrow.svg" alt="" class="gobackicon" width="30px" />
     </p>
-    <span class="mb-0">{{ currentMonth }} {{ currentYear }}</span>
+
+    <span class="mb-0  fs-16 fs-xl-20 fs-xxl-28">{{ currentMonth }} {{ currentYear }}</span>
     <button aria-label="Scroll right" class="btnmain mb-0 ml-6" (click)="changeMonth(1)" mat-icon-button>
       <img src="../../../../assets/images/events/rightchevron.svg" alt="Right arrow icon" width="30px" class="rightchevron">
     </button>
@@ -17,8 +18,8 @@
       <div class="calendar-day d-flex justify-content-center align-items-center" *ngFor="let day of visibleDates"
         (click)="selectDate(day.date)">
         <div class="d-flex row">
-          <div class="month">{{day.weekday }}</div>
-          <div class="day lh-lg">{{ day.date | date:'dd ' }}</div>
+          <div class="month fs-16 fs-xl-18 fs-xxl-22">{{day.weekday }}</div>
+          <div class="day fs-20 fs-xxl-26">{{ day.date | date:'dd ' }}</div>
         </div>
       </div>
     </div>

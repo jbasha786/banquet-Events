@@ -47,7 +47,12 @@
 
     .input-with-image {
         background: $footer-logo-background;
+        border: none;
+        border-radius: gutter-sp(8);
         color: $footer-email-border;
+        height: gutter-per(100);
+        border-left: gutter-sp(1) solid $footer-email-border;
+        margin: gutter-sp(2);
     }
 
     .input-img {
@@ -58,10 +63,19 @@
 
     input::placeholder {
         color: $footer-email-border;
+        font-size: clamp(gutter-sp(16), gutter-vw(1), gutter-sp(26));
     }
 
     .input-group .form-control {
-        border-right: none;
+        border: none;
+        border-radius: gutter-sp(8);
+        margin: gutter-sp(1) gutter-sp(4) gutter-sp(1) gutter-sp(18);
+        font-size: clamp(gutter-sp(16), gutter-vw(1), gutter-sp(24));
+    }
+    .input-group{
+        border: gutter-sp(1) solid $footer-email-border;
+        border-radius: gutter-sp(8);
+        align-items: center;
     }
 
     input:focus {

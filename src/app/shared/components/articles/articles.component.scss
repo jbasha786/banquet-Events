@@ -46,6 +46,7 @@
         &__search-input::placeholder {
             color: $searchPholder;
             font-weight: 300;
+            font-size: clamp(gutter-sp(12), gutter-vw(1), gutter-sp(18));
         }
 
         &__search-input:focus-within {
@@ -71,6 +72,15 @@
         height: gutter-sp(200);
         overflow: auto;
         box-shadow: none;
+    }
+
+    .tableArticle .mat-mdc-header-cell {
+        font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(22));
+    }
+
+    .tableArticle .mat-mdc-cell {
+        font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));
+
     }
 
     .tableArticle .quantity {

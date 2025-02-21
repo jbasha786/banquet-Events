@@ -54,6 +54,7 @@
             width: gutter-per(100);
         }
 
+        .form-floating label.custom_clr,
         &__label-hall {
             color: $secondary-color;
         }

@@ -64,8 +64,10 @@ export class CustomCalenderComponent {
         this.visibleRange = 8;
       } else if (screenWidth >= 992 && screenWidth < 1200) {
         this.visibleRange = 10;
-      } else {
+      } else if (screenWidth >= 1200 && screenWidth < 1816) {
         this.visibleRange = 15;
+      } else {
+        this.visibleRange = 20;
       }
       this.currentIndex = 0;
       this.cdr.markForCheck();
