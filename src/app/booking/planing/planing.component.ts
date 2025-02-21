@@ -38,5 +38,11 @@ export class PlaningComponent {
     this.selectedItemId = e.options[0].value.id;
     this.eventPlanService.addSelectedEventPlan(e.options[0].value);
   }
+  selectPlan(plan: any) {
+    this.planningData.forEach((p:any) => p.isActive = false); 
+    plan.isActive = true; 
+    this.selectedItemId = plan.id;
+    this.eventPlanService.addSelectedEventPlan(plan);
+  }
 
 }
