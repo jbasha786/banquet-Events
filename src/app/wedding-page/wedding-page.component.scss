@@ -26,15 +26,20 @@
 }
 .list-container {
   width: gutter-per(90);
+  display: flex;
+  gap: gutter-sp(20); 
 }
-
+.amenities-list {
+  display: flex;
+   flex-direction: column;
+ }
 
 .left-column {
   flex: 3;
 }
 
 .right-column {
-  flex: 2;
+  flex: 3;
 }
 .left-column li {
   margin-bottom: gutter-sp(10);

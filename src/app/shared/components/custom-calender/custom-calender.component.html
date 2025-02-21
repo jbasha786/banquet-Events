@@ -1,18 +1,19 @@
-<div class="calender text-center my-3 d-flex align-items-center flex-column">
+<div class="calender text-center my-3 d-flex align-items-center flex-column" >
   <div class="d-flex align-items-center justify-content-center py-4">
     <p class="btnmain mb-0 mr-6" mat-icon-button (click)="changeMonth(-1)">
       <img src="../../../../assets/images/events/backarrow.svg" alt="" class="gobackicon" width="30px" />
     </p>
     <span class="mb-0">{{ currentMonth }} {{ currentYear }}</span>
-    <p class="btnmain mb-0 ml-6" mat-icon-button (click)="changeMonth(1)" role="button">
-      <img src="../../../../assets/images/events/rightchevron.svg" alt="" class="rightchevron" width="30px" />
-    </p>
+    <button aria-label="Scroll right" class="btnmain mb-0 ml-6" (click)="changeMonth(1)" mat-icon-button>
+      <img src="../../../../assets/images/events/rightchevron.svg" alt="Right arrow icon" width="30px" class="rightchevron">
+    </button>
   </div>
   <div class="d-flex align-items-center justify-content-between days-grid">
     <p class="btnmain pl-0 mb-0 mr-6" mat-icon-button (click)="scrollDates(-1)">
       <img src="../../../../assets/images/events/backarrow.svg" alt="" class="gobackicon" width="30px" />
     </p>
-    <div class="calendar-grid d-flex justify-content-start align-items-center gap-18 gap-md-2 ">
+    <div class="calendar-grid d-flex justify-content-start align-items-center gap-18 gap-md-2 " tabindex="0"
+    role="region" aria-label="Calendar navigation">
       <div class="calendar-day d-flex justify-content-center align-items-center" *ngFor="let day of visibleDates"
         (click)="selectDate(day.date)">
         <div class="d-flex row">
@@ -21,8 +22,9 @@
         </div>
       </div>
     </div>
-    <p class="btnmain pr-0 mb-0 ml-6" mat-icon-button (click)="scrollDates(1)">
-      <img src="../../../../assets/images/events/rightchevron.svg" alt="" class="rightchevron" width="30px" />
-  </p>
+    <button aria-label="Scroll right" class="btnmain pr-0 mb-0 ml-6" (click)="scrollDates(1)" mat-icon-button>
+    <img src="../../../../assets/images/events/rightchevron.svg" alt="Right arrow icon" width="30px" class="rightchevron">
+  </button>
+  
   </div>
 </div>
