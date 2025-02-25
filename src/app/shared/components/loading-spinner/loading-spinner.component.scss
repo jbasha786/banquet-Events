@@ -16,7 +16,7 @@
   .spinner {
     border: gutter-sp(4) solid $white;
     border-top: gutter-sp(4) solid $family-yellow;
-    border-radius: 50%;
+    border-radius: gutter-per(50); 
     width: gutter-sp(50);
     height: gutter-sp(50);
     animation: spin 1s linear infinite;
