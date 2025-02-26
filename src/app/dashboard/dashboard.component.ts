@@ -23,12 +23,21 @@ import * as bannerActions from "../_store/actions/banner.action";
 import * as subBannerActions from "../_store/actions/subBanner.action";
 import * as personalizedActions from "../_store/actions/peronalized.action";
 import * as arrangementsActions from "../_store/actions/arrangements.action";
+import * as liveEventsAction from "../_store/actions/liveEvents.action";
+import * as experienceAction from "../_store/actions/experience.action";
+import * as momentActions from "../_store/actions/moment.action";
 import { bannerSelector } from '../_store/selectors/banner.selector';
 import { subBannerSelector } from '../_store/selectors/subBanner.selector';
 import { BannerModel } from '../_models/banner.model';
 import { personalizedSelector } from '../_store/selectors/personalized.selector';
 import { PersonalizedModel } from '../_models/personalized.model';
 import { arrangementSelector } from '../_store/selectors/arrangements.selector';
+import { liveEventsSelector } from '../_store/selectors/liveEvents.selector';
+import { liveEventsModel } from '../_models/liveEvents.model';
+import { experienceSelector } from '../_store/selectors/experience.selector';
+import { ExperienceModel } from '../_models/experience.model';
+import { momentSeletor } from '../_store/selectors/moment.selector';
+import { MomemtModel } from '../_models/moment.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -116,6 +125,24 @@ export class DashboardComponent {
     })
   }
 
+  public fetchliveEventsStoreData() {
+    this.store.select(liveEventsSelector).subscribe((data: liveEventsModel) => {
+      this.eventsInfo = data;
+    })
+  }
+
+  public fetchExperienceStoreData() {
+    this.store.select(experienceSelector).subscribe((data: ExperienceModel[]) => {
+      this.experienceInfo = data;
+    })
+  }
+
+  private fetchMomentStoreData() {
+    this.store.select(momentSeletor).subscribe((data: MomemtModel[])=> {
+      this.momentInfo = data;
+    })
+  }
+
   ngOnInit() {
     this.getInitialData();
     this.getOverviewPageStatus();
@@ -123,6 +150,9 @@ export class DashboardComponent {
     this.fetchsubBannerStoreData();
     this.fetchPersonalizedInfoStoreData();
     this.fetchArrangementStoreData();
+    this.fetchliveEventsStoreData();
+    this.fetchExperienceStoreData();
+    this.fetchMomentStoreData();
 
   }
 
@@ -130,11 +160,11 @@ export class DashboardComponent {
     this.defaultService.getJSON().subscribe((result: any) => {
       this.store.dispatch(bannerActions.setBanner({ banner: result?.bannerSection }));
       this.store.dispatch(subBannerActions.setSubBanner({ subBanner: result?.subbannerInfo }));
-      this.eventsInfo = result?.events;
-      this.experienceInfo = result?.experience;
-      this.momentInfo = result?.moment;
+      this.store.dispatch(liveEventsAction.setliveEvents({ liveEvents: result?.events }));
       this.store.dispatch(personalizedActions.setPersonalizedInfo({ personalized: result?.personalized }));
       this.store.dispatch(arrangementsActions.setArrangements({ arrangements: result?.arrangements }));
+      this.store.dispatch(experienceAction.setExperience({ experience: result?.experience }));
+      this.store.dispatch(momentActions.setMomentInfo({momentInfo: result?.moment}));
     });
   }
 

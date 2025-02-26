@@ -1,5 +1,4 @@
 import { createSelector } from "@ngrx/store";
-import { PersonalizedStateModel } from "../../_models/personalized.model";
 import { PersonalizedInterfaceModel } from "../../_types/personalized.interface";
 
 
