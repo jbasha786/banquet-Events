@@ -21,9 +21,12 @@ import { CustomDialogService } from '../services/custom-dialog.service';
 import { Store } from '@ngrx/store';
 import * as bannerActions from "../_store/actions/banner.action";
 import * as subBannerActions from "../_store/actions/subBanner.action";
+import * as personalizedActions from "../_store/actions/peronalized.action";
 import { bannerSelector } from '../_store/selectors/banner.selector';
 import { subBannerSelector } from '../_store/selectors/subBanner.selector';
 import { BannerModel } from '../_models/banner.model';
+import { personalizedSelector } from '../_store/selectors/personalized.selector';
+import { PersonalizedModel } from '../_models/personalized.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -54,7 +57,7 @@ export class DashboardComponent {
   experienceInfo: any;
   subbannerInfo: any;
   momentInfo: any;
-  personalizedInfo: any;
+  personalizedInfo!: PersonalizedModel[] | undefined;
   promotionsInfo: any;
   shortDesc: boolean = true;
   private dialogService = inject(CustomDialogService);
@@ -88,7 +91,7 @@ export class DashboardComponent {
   }
 
   public fetchBannerStoreData() {
-    this.store.select(bannerSelector).subscribe((data:any) => {
+    this.store.select(bannerSelector).subscribe((data: any) => {
       this.bannerInfo = data;
     })
   }
@@ -99,11 +102,18 @@ export class DashboardComponent {
     })
   }
 
+  public fetchPersonalizedInfoStoreData() {
+    this.store.select(personalizedSelector).subscribe((data: PersonalizedModel[]) => {
+      this.personalizedInfo = data;
+    })
+  }
+
   ngOnInit() {
     this.getInitialData();
     this.getOverviewPageStatus();
     this.fetchBannerStoreData();
     this.fetchsubBannerStoreData();
+    this.fetchPersonalizedInfoStoreData();
 
   }
 
@@ -115,7 +125,7 @@ export class DashboardComponent {
       this.arrangementsInfo = result?.arrangements;
       this.experienceInfo = result?.experience;
       this.momentInfo = result?.moment;
-      this.personalizedInfo = result?.personalized;
+      this.store.dispatch(personalizedActions.setPersonalizedInfo({ personalized: result?.personalized }));
     });
   }
 
@@ -127,8 +137,8 @@ export class DashboardComponent {
       }
     }
   }
-  
-  
+
+
 
   continueBooking(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialogService.openDialog(BookingComponent, {

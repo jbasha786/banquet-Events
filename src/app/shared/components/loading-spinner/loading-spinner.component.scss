@@ -1,0 +1,29 @@
+@import "../../../styles/variable.scss";
+
+.spinner-overlay {
+    position: fixed;
+    top: $value-null;
+    left: $value-null;
+    width: gutter-per(100);
+    height: gutter-per(100);
+    background: $dialogue-backclr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .spinner {
+    border: gutter-sp(4) solid $white;
+    border-top: gutter-sp(4) solid $family-yellow;
+    border-radius: gutter-per(50); 
+    width: gutter-sp(50);
+    height: gutter-sp(50);
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
