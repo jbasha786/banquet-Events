@@ -22,11 +22,13 @@ import { Store } from '@ngrx/store';
 import * as bannerActions from "../_store/actions/banner.action";
 import * as subBannerActions from "../_store/actions/subBanner.action";
 import * as personalizedActions from "../_store/actions/peronalized.action";
+import * as arrangementsActions from "../_store/actions/arrangements.action";
 import { bannerSelector } from '../_store/selectors/banner.selector';
 import { subBannerSelector } from '../_store/selectors/subBanner.selector';
 import { BannerModel } from '../_models/banner.model';
 import { personalizedSelector } from '../_store/selectors/personalized.selector';
 import { PersonalizedModel } from '../_models/personalized.model';
+import { arrangementSelector } from '../_store/selectors/arrangements.selector';
 
 @Component({
   selector: 'app-dashboard',
@@ -108,12 +110,19 @@ export class DashboardComponent {
     })
   }
 
+  public fetchArrangementStoreData() {
+    this.store.select(arrangementSelector).subscribe((data: PersonalizedModel[]) => {
+      this.arrangementsInfo = data;
+    })
+  }
+
   ngOnInit() {
     this.getInitialData();
     this.getOverviewPageStatus();
     this.fetchBannerStoreData();
     this.fetchsubBannerStoreData();
     this.fetchPersonalizedInfoStoreData();
+    this.fetchArrangementStoreData();
 
   }
 
@@ -122,10 +131,10 @@ export class DashboardComponent {
       this.store.dispatch(bannerActions.setBanner({ banner: result?.bannerSection }));
       this.store.dispatch(subBannerActions.setSubBanner({ subBanner: result?.subbannerInfo }));
       this.eventsInfo = result?.events;
-      this.arrangementsInfo = result?.arrangements;
       this.experienceInfo = result?.experience;
       this.momentInfo = result?.moment;
       this.store.dispatch(personalizedActions.setPersonalizedInfo({ personalized: result?.personalized }));
+      this.store.dispatch(arrangementsActions.setArrangements({ arrangements: result?.arrangements }));
     });
   }
 
