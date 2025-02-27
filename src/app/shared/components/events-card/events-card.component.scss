@@ -13,7 +13,6 @@
     
     .card-text{
         font-weight: 500;
-        font-size: gutter-sp(13);
         color: $font-dull;
     }
     .pipe{
@@ -23,7 +22,7 @@
         color: $font-lite;
     }
     .cardImg{
-        width: gutter-sp(18);
-        height: gutter-sp(18);
+        width: clamp(gutter-sp(18), gutter-vw(2), gutter-sp(24));
+        height: clamp(gutter-sp(18), gutter-vw(2), gutter-sp(24));
     }
 }

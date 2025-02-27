@@ -49,6 +49,7 @@
 
 .businessBannerActionButton {
     @extend .bannerActionButton;
+    background: $business-book-now-btn;
 }
 
 
@@ -178,7 +179,6 @@
 
     &:hover {
         color: $hoversecondary-clr;
-
     }
 }
 

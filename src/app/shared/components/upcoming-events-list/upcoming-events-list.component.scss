@@ -15,7 +15,6 @@ $animationSpeed: 40s;
         .items {
             animation: promotions $animationSpeed linear infinite;
             display: flex;
-            width: calc(250px *10);
 
             &:hover {
                 animation-play-state: paused;
@@ -39,11 +38,11 @@ $animationSpeed: 40s;
 
     @keyframes promotions {
         0% {
-            transform: rotate(0);
+            transform: translate(0, 0);
         }
 
         100% {
-            transform: translateX(calc(-250px * 5));
+            transform: translate(calc(-1 * gutter-per(50)), 0);
         }
     }
 }

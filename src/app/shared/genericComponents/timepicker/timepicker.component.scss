@@ -5,13 +5,13 @@
     width: gutter-per(100);
 }
 
-.time_picker  .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+.time_picker .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
     opacity: gutter-per(100);
     font-size: gutter-sp(14);
     font-weight: 500;
 }
 
-.time_picker  .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
+.time_picker .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
     opacity: gutter-per(45);
 }
 
@@ -25,10 +25,8 @@
 }
 
 
-.timepicker-dial .timeipicker-dial__container .timepicker-dial__time .timepicker-dial__control {
-    &:focus {
-        background-color: transparent;
-    }
+.timepicker .timepicker-dial__time .timepicker-dial__control:focus {
+    background-color: transparent;
 }
 
 .mat-toolbar.timepicker-header,
@@ -54,27 +52,24 @@
     }
 }
 
+.timepicker__body .clock-face {
+    width: clamp(gutter-sp(220), gutter-vw(58), gutter-sp(290));
+    height: clamp(gutter-sp(220), gutter-vw(58), gutter-sp(290));
+}
 
-@media screen and (max-width: 375px) {
-    .timepicker__body .clock-face {
-        width: 220px;
-        height: 220px;
-    }
+.timepicker__body .clock-face__number--outer {
+    height: clamp(gutter-sp(100), gutter-vw(26), gutter-sp(125));
+}
 
-    .timepicker__body .clock-face__number--outer {
-        height: gutter-sp(100);
-    }
+.timepicker__body .clock-face__number {
+    top: calc(gutter-per(50) - clamp(gutter-sp(100), gutter-vw(26), gutter-sp(125)));
+}
 
-    .timepicker__body .clock-face__number {
-        top: calc(gutter-per(50) - gutter-sp(100));
-    }
+.timepicker__body .clock-face__clock-hand_minute>button {
+    top: calc(-1 * (clamp(gutter-sp(15), gutter-vw(4), gutter-sp(22))));
+}
 
-    .timepicker__body .clock-face__clock-hand_minute>button {
-        top: gutter-sp(-15);
-    }
-
-    .timepicker__body .clock-face__clock-hand {
-        height: gutter-sp(85);
-        top: calc(gutter-per(50) - gutter-sp(85));
-    }
+.timepicker__body .clock-face__clock-hand {
+    height: clamp(gutter-sp(85), gutter-vw(22), gutter-sp(103));
+    top: calc(gutter-per(50) - clamp(gutter-sp(85), gutter-vw(22), gutter-sp(103)));
 }

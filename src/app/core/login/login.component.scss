@@ -45,8 +45,9 @@
       transform: translateY(gutter-per(-50));
       cursor: pointer;
       z-index: 10;
-      width: gutter-sp(20); 
-      height: gutter-sp(20);
+      padding:gutter-sp(10);
+      width: gutter-sp(40); 
+      height: gutter-sp(40);
     }
   
     input {

@@ -43,7 +43,6 @@ export class BusinessLandingPageComponent {
       height: "90vh",
       panelClass: 'business-booking'
     }).afterClosed().subscribe(result => {
-      console.log("Business Booking Dialog Closed", result);
     });
   }
 

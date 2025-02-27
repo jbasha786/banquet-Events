@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -16,10 +16,13 @@ import { CustomMatCheckboxComponent } from '../../shared/genericComponents/custo
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
+  @ViewChild('fullnameInput') fullnameInput!: ElementRef;
   isChecked = false;
   checked = false;
   isPasswordVisible = false;
   isconfirmPasswordVisible = false;
+  isTermsChecked = false;
+  isTermssubscribed = false;
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -48,5 +51,16 @@ export class SignupComponent {
       this.router.navigate(['login']);
     });
   }
-
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.fullnameInput.nativeElement.focus();
+    }, 0); 
+  }
+  toggleTermsCheckbox(isChecked: boolean) {
+    this.isTermsChecked = isChecked;
+  }
+  toggleTermssubscribed(isChecked: boolean){
+    this.isTermssubscribed = isChecked;
+}
+  
 }

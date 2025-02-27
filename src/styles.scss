@@ -51,6 +51,11 @@ body {
       margin-top: #{$i}px !important;
     }
   }
+  .mt-xl-#{$i} {
+    @media (min-width: 1920px) {
+      margin-top: #{$i}px !important;
+    }
+  }
 
 
   .mb-#{$i} {

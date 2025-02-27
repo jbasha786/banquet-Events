@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { DefaultService } from './services/default.service';
@@ -8,23 +8,30 @@ import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { supportsScrollBehavior } from '@angular/cdk/platform';
+import { LoadingService } from './services/loading.service';
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, LoadingSpinnerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  
+
 
   headerDetails: any;
 
-  constructor(private defaultService: DefaultService, private router: Router, @Inject(PLATFORM_ID) private platformId: Object, private meta: Meta, private title: Title) {
+  constructor(private defaultService: DefaultService,
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private meta: Meta,
+    private title: Title,
+    private loadingService: LoadingService) {
     this.setMetaTags();
-   }
+  }
 
-   setMetaTags() {
+  setMetaTags() {
     this.title.setTitle('Book Luxury Banquet Halls | Event Planning Made Easy');
 
     this.meta.addTags([
@@ -41,6 +48,7 @@ export class AppComponent {
   ngOnInit() {
     this.getHeaderDetails();
     this.setupScrollRestoration();
+    this.loadingSpinner();
   }
 
   getHeaderDetails() {
@@ -53,10 +61,10 @@ export class AppComponent {
       this.router.events.pipe(
         filter(event => event instanceof NavigationEnd)
       ).subscribe(() => {
-        window.scrollTo({top:0, behavior:'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
       window.onload = () => {
-        window.scrollTo({top:0, behavior:'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       };
     }
   }
@@ -78,5 +86,15 @@ export class AppComponent {
     });
     document.head.appendChild(script);
   }
-  
+
+  loadingSpinner() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.loadingService.show();
+      }
+      if (event instanceof NavigationEnd || event instanceof NavigationError) {
+        this.loadingService.hide();
+      }
+    });
+  }
 }

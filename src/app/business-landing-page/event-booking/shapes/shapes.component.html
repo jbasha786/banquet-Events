@@ -3,10 +3,13 @@
     <div class="shapes__section">
         <div class="row w-100 p-0">
             <ng-container *ngFor="let shape of shapes">
-                <div class="col-10 col-lg-3 text-center image m-auto p-15" (click)="selectShape(shape)">
-                    <div class="image__section" [ngClass]="shape.isActive && selectedShapeId === shape.id ? 'active': ''">
-                        <img [src]="shape.src" [alt]="shape.name">
-                        <p class="m-0 pt-15 pb-15 fw-medium fs-16 fs-xl-20 name">{{shape.name}}</p>
+                <div class="col-10 col-lg-3 text-center image m-auto p-15" role="list" tabindex="0"
+                    [attr.aria-label]="shape.name" (keyup.enter)="selectShape(shape)" (keyup.space)="selectShape(shape)"
+                    (click)="selectShape(shape)">
+                    <div class="image__section"
+                        [ngClass]="shape.isActive && selectedShapeId === shape.id ? 'active': ''">
+                        <img [src]="shape.src" [alt]="shape.name" aria-hidden="true">
+                        <p class="m-0 pt-15 pb-15 fw-medium fs-16 fs-xl-20 name" aria-hidden="true">{{shape.name}}</p>
                     </div>
                 </div>
             </ng-container>

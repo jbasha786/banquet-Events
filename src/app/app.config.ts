@@ -4,20 +4,21 @@ import { NavigationStart, provideRouter, Router, withRouterConfig } from '@angul
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { errorHandlerInterceptor } from './_interceptors/error-handler.interceptor';
 import { DatePipe } from '@angular/common';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { reducers } from './_store/reducers_config';
+import { loadingInterceptor } from './_interceptors/loading.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideHttpClient(withInterceptors([errorHandlerInterceptor]), withFetch()),
+    provideHttpClient(withInterceptors([errorHandlerInterceptor, loadingInterceptor]), withFetch()),
     provideNativeDateAdapter(),
     provideStore(reducers),
     provideStoreDevtools({ maxAge: 25, logOnly: true }),

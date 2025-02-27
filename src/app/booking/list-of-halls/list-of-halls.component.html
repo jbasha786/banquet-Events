@@ -1,6 +1,6 @@
 <div class="hallsView col-md-10 col-lg-10 col-xl-8 mx-md-auto mb-300 px-3 px-md-0">
     <div class="d-flex justify-content-center align-items-center flex-column gap-2 gap-lg-12 pb-70 pb-md-20">
-        <p class="text-center fs-30 fs-xl-32 fs-xxl-54 fw-500 text-black">Type of Halls?</p>
+        <p class="text-center fs-30 fs-xl-32 fs-xxl-50 fw-500 text-black">Type of Halls?</p>
         <div class="card hallsView__card px-2 mt-2 mb-3 col-12">
             <div class="row w-100">
                 <div class="col-12 col-md-6 col-lg-3" role="banner" tabindex="0">
@@ -19,20 +19,19 @@
                 <div class="col-12 col-md-6 col-lg-3" role="banner" aria-label="check-in date" tabindex="0">
                     <app-date-picker [label]="'Check-in'" [matDatepickerName]="'matcheckinDate'"
                         [image]="'/assets/images/halls/calender-hall.png'" [date]="checkinDate"
-                        [classNames]="'input-group custom_icon'"></app-date-picker>
+                        [classNames]="'input-group custom_icon'" [guestLabelClassName]="'guestClockLabel'"></app-date-picker>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3" tabindex="0">
                     <app-date-picker [label]="'Check-out'" [matDatepickerName]="'matcheckOutDate'"
                         [image]="'/assets/images/halls/calender-hall.png'" [date]="checkOutDate"
-                        [classNames]="'input-group custom_icon'" aria-label="Check-out date"></app-date-picker>
+                        [classNames]="'input-group custom_icon'"  aria-label="Check-out date" [guestLabelClassName]="'guestClockLabel'"></app-date-picker>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3" tabindex="0">
                     <div class="input-group border-clr d-flex align-items-center ms-1">
                         <span class="input-group-text basic-icon d-block d-lg-none"><img
                                 src="../../../../assets/images/icons/clock.png" alt="clock-icon"></span>
                         <div class="form-floating custom_select">
-                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" id="duration"
-                                aria-label="Select duration">
+                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" aria-label="Select duration" id="duration">
                                 <ng-container *ngFor="let item of slots">
                                     <option [value]="item.id">{{item.shift}}</option>
                                 </ng-container>
@@ -116,6 +115,3 @@
         }
     </div>
 </div>
-
-
-test

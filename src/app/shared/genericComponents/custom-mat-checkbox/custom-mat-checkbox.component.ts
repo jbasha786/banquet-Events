@@ -14,11 +14,19 @@ export class CustomMatCheckboxComponent {
   @Input() indeterminate: boolean = false;
   @Input() checked: boolean = false; 
   @Input() disableRipple: boolean = false;
+  @Input() ariaLabel: string = ''; 
+  @Input() ariaLabelledBy: string = ''; 
+
   @Output() checkedChange = new EventEmitter<boolean>(); 
-  @Input() ariaLabel: string = '';
 
   onCheckboxChange(event: MatCheckboxChange) {
     this.checkedChange.emit(event.checked);
   }
-  
+  onKeydown(event: KeyboardEvent) {
+    if (event.key === ' ' || event.key === 'Enter') {
+      event.preventDefault(); 
+      this.checked = !this.checked; 
+      this.checkedChange.emit(this.checked); 
+    }
+  }
 }

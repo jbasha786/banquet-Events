@@ -15,7 +15,6 @@
     .guestclock {
         font-size: gutter-sp(13);
         padding-left: gutter-sp(7);
-        padding-top: gutter-rem(2.125);
     }
 
     .hall-list {
@@ -68,7 +67,9 @@
             width: gutter-per(100);
         }
 
-        .custom_clr {
+        .custom_clr,
+        .form-floating>.form-select~label,
+        .form-floating>.form-control:not(:placeholder-shown)~label {
             color: $secondary-color;
         }
 
