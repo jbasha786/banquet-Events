@@ -7,10 +7,11 @@
         padding-left: gutter-sp(12);
     }
 
-    .guestClockLabel {
+    label.guestClockLabel {
         font-size: gutter-sp(14);
         padding-left: gutter-sp(5);
         padding-top: gutter-sp(20);
+        color: $secondary-color;
     }
 
     .guestclock {
@@ -54,12 +55,11 @@
             width: gutter-per(100);
         }
 
-        .form-floating label.custom_clr,
+        .form-floating label,
         &__label-hall {
             color: $secondary-color;
         }
 
-        .custom_clr,
         .form-floating>.form-select~label,
         .form-floating>.form-control:not(:placeholder-shown)~label {
             color: $secondary-color;
@@ -149,7 +149,7 @@
     }
 
     &__priceColor {
-        color: $list-of-halls-price-clr;
+        color: $primaryColor;
     }
 
     &__articles {
@@ -184,7 +184,8 @@
 }
 
 //hover-change
-.halldetails:hover .arrow {
+.halldetails:hover .arrow,
+.halldetails:focus {
     opacity: 1;
     transform: translateX(gutter-sp(8));
     color: $secondary-color ;

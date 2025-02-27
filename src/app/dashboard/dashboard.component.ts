@@ -149,7 +149,7 @@ export class DashboardComponent {
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true,
-      autoFocus: false
+      // autoFocus: false
     }).afterClosed().subscribe(result => {
       console.log("Business Booking Dialog Closed", result);
     });

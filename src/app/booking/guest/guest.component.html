@@ -1,11 +1,11 @@
 <div class="guest">
-    <p class="guest__title text-center fs-28 fs-xxl-50 fw-500 text-black">For How Many?</p>
+    <p class="guest__title text-center fs-28 fs-xxl-34 fw-500 text-black" aria-label="select the number of guests">For How Many?</p>
     <div class="guest__form row d-flex justify-content-center col-md-7 col-lg-5 mt-4">
         <ng-container *ngFor="let field of guestFields">
-            <div class="guest__card col-10 col-lg-10 mb-3 border rounded p-2 my-2">
+            <div class="guest__card col-10 col-lg-10 mb-3 border rounded p-2 my-2" tabindex="0">
                 <p class="guest__card__label mb-2 fs-14 fs-xl-16 fs-xxl-22 fw-500">{{ field.label }}</p>
                 <input class="guest__card__input p-10 border rounded fs-20 fs-xl-22 fs-xxl-30 fw-500" type="number"  min="1"
-                    [placeholder]="'Enter No of ' + field.label">
+                    [placeholder]="'Enter Number of ' + field.label">
             </div>
         </ng-container>
     </div>

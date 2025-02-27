@@ -3,39 +3,40 @@
         <p class="text-center fs-30 fs-xl-32 fs-xxl-50 fw-500 text-black">Type of Halls?</p>
         <div class="card hallsView__card px-2 mt-2 mb-3 col-12">
             <div class="row w-100">
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3" role="banner" tabindex="0">
                     <div class="input-group border-clr">
                         <span class="input-group-text userImg">
                             <img src="../../../assets/images/halls/halls_user-img.png" class="hall-img"
-                                alt="user"></span>
+                                alt="user-image"></span>
                         <div class="form-floating">
-                            <input type="email" class="form-control guestclock fs-xxl-20 h-xxl-80" id="guestCount"
-                                placeholder="Guests" value="40 Adults, 12 Children" readonly>
-                            <label for="guestCount" class="custom_clr guestClockLabel fs-xl-18 fs-xxl-24">Guests</label>
+                            <input type="email" class="form-select guestclock fs-xxl-20 h-xxl-80" id="guestCount"
+                                placeholder="Guests" value="40 Adults, 12 Children" readonly
+                                aria-label="Number of guests: 40 Adults, 12 Children">
+                            <label for="guestCount" class="guestClockLabel fs-xl-18 fs-xxl-24">Guests</label>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3" role="banner" aria-label="check-in date" tabindex="0">
                     <app-date-picker [label]="'Check-in'" [matDatepickerName]="'matcheckinDate'"
                         [image]="'/assets/images/halls/calender-hall.png'" [date]="checkinDate"
                         [classNames]="'input-group custom_icon'" [guestLabelClassName]="'guestClockLabel'"></app-date-picker>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3" tabindex="0">
                     <app-date-picker [label]="'Check-out'" [matDatepickerName]="'matcheckOutDate'"
                         [image]="'/assets/images/halls/calender-hall.png'" [date]="checkOutDate"
-                        [classNames]="'input-group custom_icon'" [guestLabelClassName]="'guestClockLabel'"></app-date-picker>
+                        [classNames]="'input-group custom_icon'"  aria-label="Check-out date" [guestLabelClassName]="'guestClockLabel'"></app-date-picker>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3" tabindex="0">
                     <div class="input-group border-clr d-flex align-items-center ms-1">
                         <span class="input-group-text basic-icon d-block d-lg-none"><img
-                                src="../../../../assets/images/icons/clock.png" alt="user"></span>
+                                src="../../../../assets/images/icons/clock.png" alt="clock-icon"></span>
                         <div class="form-floating custom_select">
-                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" id="duration" name="duration">
+                            <select class="form-select guestclock fs-xxl-20 h-xxl-80" aria-label="Select duration" id="duration">
                                 <ng-container *ngFor="let item of slots">
                                     <option [value]="item.id">{{item.shift}}</option>
                                 </ng-container>
                             </select>
-                            <label for="duration" class="custom_clr guestClockLabel fs-xl-18 fs-xxl-24">Duration</label>
+                            <label for="duration" class="guestClockLabel fs-xl-18 fs-xxl-24">Duration</label>
                         </div>
                     </div>
                 </div>
@@ -55,11 +56,16 @@
                                 (click)="getDetails()">{{item.name}}</span>
                             <div
                                 class="d-flex flex-column align-items-start align-items-lg-center flex-md-row gap-2 gap-lg-3">
-                                <div> <span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor">{{item.desc}}</span></div>
+                                <div> <span
+                                        class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor">{{item.desc}}</span>
+                                </div>
                                 <div class="d-none d-md-flex"><span class="fontcolor">|</span></div>
-                                <div><span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor">{{item.diamensions}}</span></div>
+                                <div><span
+                                        class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor">{{item.diamensions}}</span>
+                                </div>
                                 <div class="d-none d-md-flex"><span class="fontcolor">| </span></div>
-                                <div><span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor"> {{item.status}}</span></div>
+                                <div><span class="fs-12 fs-md-11 fs-lg-12 fs-xl-14 fs-xxl-20 fontcolor">
+                                        {{item.status}}</span></div>
                             </div>
                         </div>
                         <div class="mt-xl-2">
@@ -72,31 +78,35 @@
                     </div>
                     <div>
                         <div class="d-flex align-items-baseline flex-wrap">
-                            <span class="fs-36 fs-xl-38 fs-xxl-40 fw-bold hallsView__priceColor my-0 lh-35 mt-3">{{item.price}}</span><span
+                            <span
+                                class="fs-36 fs-xl-38 fs-xxl-40 fw-bold hallsView__priceColor my-0 lh-35 mt-3">{{item.price}}</span><span
                                 class="fontcolor fs-12 fs-xl-14 fs-xxl-20">{{item.taxText}}</span>
                         </div>
                         <div
                             class="d-flex justify-content-between align-items-center flex-column-reverse flex-md-row mt-3">
                             <div class="d-flex flex-column-reverse flex-md-row align-items-center  flex-row gap-2">
-                                <app-button [btnClass]="'selected fs-xl-16 fs-xxl-22'" [btnName]="buttonSelected" *ngIf="item.isActive"
-                                    (bannerActionEvent)="toggleSelection(item)"></app-button>
-                                <app-button [btnClass]="'reserve fs-xl-16 fs-xxl-22'" [btnName]="buttonSelect" *ngIf="!item.isActive"
-                                    (bannerActionEvent)="reserve(item)"></app-button>
+                                <app-button [btnClass]="'selected fs-xl-16 fs-xxl-22'" [btnName]="buttonSelected"
+                                    *ngIf="item.isActive" (bannerActionEvent)="toggleSelection(item)"></app-button>
+                                <app-button [btnClass]="'reserve fs-xl-16 fs-xxl-22'" [btnName]="buttonSelect"
+                                    *ngIf="!item.isActive" (bannerActionEvent)="reserve(item)"></app-button>
 
                                 <div class="d-flex gap-2 my-3 my-md-0">
-                                    <span class="ms-2 hallsView__articles fs-14 fs-xl-16 fs-xxl-24 fw-500" role="button"
-                                        (click)="addArticles()">Add
-                                        Articles</span>
-                                    <span class="ms-2 hallsView__articles fs-14 fs-xl-16 fs-xxl-24 fw-500" role="button"
-                                        (click)="chooseMenu()">
-                                        Choose Menu
-                                    </span>
+                                    <app-button [btnClass]="'ms-2 articles fs-14 fs-xl-16 fs-xxl-24 fw-500'"
+                                        [btnName]="'Add Articles'" (bannerActionEvent)="addArticles()"
+                                        aria-label="Add articles"></app-button>
+
+                                    <app-button [btnClass]="'ms-2 articles fs-14 fs-xl-16 fs-xxl-24 fw-500'"
+                                        [btnName]="' Choose Menu'" (bannerActionEvent)="chooseMenu()"
+                                        aria-label=" Choose Menu"></app-button>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center cursor halldetails"
-                                (click)="getDetails()"><span class="fw-500 fs-14 fs-xl-16 fs-xxl-22 mt-md-0 view" role="button">View
+                            <div tabindex="0"
+                                class="d-flex align-items-center justify-content-center cursor halldetails"
+                                (click)="getDetails()"><span class="fw-500 fs-14 fs-xl-16 fs-xxl-22 mt-md-0 view"
+                                    role="button">View
                                     Details</span><span class="arrow"><img
-                                        src="../../../assets/images/halls/arrow-color.svg" alt=""></span></div>
+                                        src="../../../assets/images/halls/arrow-color.svg" alt="arrowimage"></span>
+                            </div>
                         </div>
                     </div>
                 </div>

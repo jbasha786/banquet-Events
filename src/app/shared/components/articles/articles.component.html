@@ -4,16 +4,16 @@
             <div class="d-flex flex-column">
                 <p class="fs-25 fs-xxl-32 fw-500 my-2 ">Add Articles</p>
             </div>
-            <div (click)="close()" class="cursor" role="button">
-                <img src="../../../../assets/images/halls/close.svg" alt="" class="h-18">
+            <div (click)="close()" class="cursor" role="button" tabindex="0" aria-label="close">
+                <img src="../../../../assets/images/halls/close.svg" alt="close" class="h-18">
             </div>
         </div>
         <div class="d-flex flex-column flex-md-row mb-2 lh-xxl-2">
             <p class="fs-12 fs-xxl-20 me-0 me-md-4 mb-0 color"> Selected: 12 </p>
             <span class="fs-12 fs-xxl-20 color">Total Price: € 1400.00</span>
         </div>
-        <div class="article__search" #searchInput>
-            <input class="article__search__search-input pl-30" placeholder="search for basic..." />
+        <div class="article__search" #searchInput tabindex="0">
+            <input class="article__search__search-input pl-30" placeholder="search for basic..." aria-label="search-input-field"/>
             <mat-icon class="article__search__search-icon w-20 h-20 fs-19" role="button" (click)="doSomething()"
                 fontIcon="search"></mat-icon>
         </div>
@@ -22,14 +22,14 @@
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tableArticle">
             <!-- Checkbox Column -->
             <ng-container matColumnDef="select">
-                <th mat-header-cell *matHeaderCellDef>
-                    <app-custom-mat-checkbox [disableRipple]="true" [checked]="isAllSelected()"
+                <th mat-header-cell *matHeaderCellDef id="checkbox-header">
+                    <app-custom-mat-checkbox [disableRipple]="true" [checked]="isAllSelected()" [ariaLabel]="'click this if you need all check boxes to select'"
                         [indeterminate]="selection.hasValue() && !isAllSelected()"
                         (checkedChange)="toggleAllRows($event)">
                     </app-custom-mat-checkbox>
                 </th>
                 <td mat-cell *matCellDef="let row">
-                    <app-custom-mat-checkbox [disableRipple]="true" [checked]="selection.isSelected(row)"
+                    <app-custom-mat-checkbox [disableRipple]="true" [checked]="selection.isSelected(row)" 
                         [ariaLabel]="checkboxLabel(row)" (checkedChange)="onRowCheckboxChange($event, row)">
                     </app-custom-mat-checkbox>
                 </td>
@@ -51,7 +51,7 @@
             <ng-container matColumnDef="qty">
                 <th mat-header-cell *matHeaderCellDef class="col-6 col-md-2 w-70"> Quantity </th>
                 <td mat-cell *matCellDef="let element">
-                    <input type="number" [value]="element.qty" (input)="updateValue(element, $event, 'qty')"
+                    <input type="number" aria-label="Quantity field" [value]="element.qty" (input)="updateValue(element, $event, 'qty')"
                         class="text-center col-6 quantity">
                 </td>
             </ng-container>
@@ -59,7 +59,7 @@
             <ng-container matColumnDef="time">
                 <th mat-header-cell *matHeaderCellDef class="col-6 col-md-2 w-70 pl-22"> Time </th>
                 <td mat-cell *matCellDef="let element">
-                    <input type="time" [value]="element.time" (input)="updateValue(element, $event, 'time')"
+                    <input type="time" [value]="element.time" aria-label="time-field" (input)="updateValue(element, $event, 'time')"
                         class="text-center col-sm-10 col-lg-9 col-xl-6 time-input lh-15 quantity">
                 </td>
             </ng-container>
