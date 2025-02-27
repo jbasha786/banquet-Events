@@ -3,16 +3,18 @@
     <div class="card col-sm-8 col-md-10 col-lg-8 p-2 selction_dates__content border-0">
         <div class="row selction_dates__calender w-100 m-auto d-flex justify-content-center align-items-center flex-column flex-md-row flex-nowrap" *ngIf="specificDaysView">
             <div class="col-sm-12 col-md-6 col-lg-8 col-xxl-6 h-320 h-lg-345 calenderDiv">
-                <mat-calendar (selectedChange)="_onSelectedChange($event)" [selected]="selectedDateRange" [dateFilter]="dateFilter"  class="matCalender">
+                <mat-calendar (selectedChange)="_onSelectedChange($event)"  aria-labelledby="calendar-label" [selected]="selectedDateRange" [dateFilter]="dateFilter"  class="matCalender" tabindex="0">
                 </mat-calendar>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8 col-xl-6 col-xxl-6 selction_dates__calender__slots text-center"
                 id="availableSlots">
-                <span class="text-center p-2 mb-0 fs-18 fs-lg-20 fs-xxl-24 fw-500">Available Slots</span>
-                <mat-selection-list #slot [multiple]="false" class="slots_radio" (selectionChange)="slotsChange($event)">
+                <span id="slot-label" class="text-center p-2 mb-0 fs-18 fs-lg-20 fs-xxl-24 fw-500">Available Slots</span>
+                <mat-selection-list #slot [multiple]="false" aria-labelledby="slot-label"
+                role="listbox" class="slots_radio" (selectionChange)="slotsChange($event)">
                     @for (slot of slots; track $index) {
                     <div class="card m-10 align-items-center mx-auto slot">
-                        <mat-list-option [value]="slot"><span  class="fs-13 fs-xl-15 fs-xxl-22 fw-400 ">{{slot.shift}}</span></mat-list-option>
+                        <mat-list-option [value]="slot"  role="option" 
+                        tabindex="0"><span  class="fs-13 fs-xl-15 fs-xxl-22 fw-400 ">{{slot.shift}}</span></mat-list-option>
                     </div>
                     }
                 </mat-selection-list>

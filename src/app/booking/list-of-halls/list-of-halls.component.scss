@@ -7,10 +7,11 @@
         padding-left: gutter-sp(12);
     }
 
-    .guestClockLabel {
+    label.guestClockLabel {
         font-size: gutter-sp(14);
         padding-left: gutter-sp(5);
         padding-top: gutter-sp(20);
+        color: $secondary-color;
     }
 
     .guestclock {
@@ -53,14 +54,6 @@
     &__card {
         .mat-mdc-form-field {
             width: gutter-per(100);
-        }
-
-        &__label-hall {
-            color: $secondary-color;
-        }
-
-        .custom_clr {
-            color: $secondary-color;
         }
 
         .hall-img {
@@ -147,16 +140,7 @@
     }
 
     &__priceColor {
-        color: $primary-color;
-    }
-
-    &__articles {
-        text-wrap: nowrap;
-        color: $secondary-color;
-    }
-
-    &__articles:hover {
-        text-decoration: underline;
+        color: $primaryColor;
     }
 
     &__image_desc {
@@ -182,7 +166,8 @@
 }
 
 //hover-change
-.halldetails:hover .arrow {
+.halldetails:hover .arrow,
+.halldetails:focus {
     opacity: 1;
     transform: translateX(gutter-sp(8));
     color: $secondary-color ;
@@ -203,7 +188,7 @@
 }
 
 .cdk-overlay-pane.mat-mdc-dialog-panel.choosemenu-dialog {
-    max-width:gutter-per(100); 
+    max-width: gutter-per(100);
     height: gutter-per(100);
-    border-radius:gutter-sp(0);
+    border-radius: gutter-sp(0);
 }

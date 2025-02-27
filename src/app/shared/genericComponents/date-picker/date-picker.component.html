@@ -5,7 +5,7 @@
             <input class="form-control custom_date_input h-xxl-80 fs-xxl-20" id="datepicker" placeholder="Guests" matInput
                 [matDatepicker]="matDatepickerName" (selectionchange)="dateChange($event)" [(ngModel)]="date">
             <mat-datepicker #matDatepickerName (opened)="onDatepickerOpened()" (closed)="onDatepickerClosed()"></mat-datepicker>
-            <label for="guestCount" class="customLabel guestLabel fs-xxl-24">{{label}}</label>
+            <label for="guestCount" class="customLabel guestLabel fs-14 fs-lg-16 fs-xl-18 fs-xxl-24">{{label}}</label>
         </div>
     </div>
 </div>
