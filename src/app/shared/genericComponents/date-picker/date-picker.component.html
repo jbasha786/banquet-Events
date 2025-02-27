@@ -1,6 +1,6 @@
 <div class="dateSection" (click)="matDatepickerName.open()">
     <div [ngClass]="classNames" id="datepicker">
-        <span class="input-group-text custom_img" [ngClass]="guestLabelClassName" id="basic-addon1"><img [src]="image" alt=""></span>
+        <span class="input-group-text custom_img" [ngClass]="guestLabelClassName" id="basic-addon1"><img [src]="image" alt="image"></span>
         <div class="form-floating custom_floating">
             <input [ngClass]="guestLabelClassName" class="form-control custom_date_input h-xxl-80 fs-xxl-20" id="datepicker" placeholder="Guests"
                 matInput [matDatepicker]="matDatepickerName" (selectionchange)="dateChange($event)" [(ngModel)]="date">

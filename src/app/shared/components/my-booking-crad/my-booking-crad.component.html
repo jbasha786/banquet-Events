@@ -1,13 +1,13 @@
 <div class="card mb-20" [ngStyle]="{'border': conformationID == 2 ? '1px solid red' : '1px solid green'}">
     <div class="card-body d-flex flex-column flex-lg-row p-2">
         <div class="">
-            <img [src]="picture" class="card-img" alt="...">
+            <img [src]="picture" class="card-img" alt="image">
             <div class="rating_booking d-flex">
                 <span class="booking_status fs-10 fs-xxl-13 d-flex align-items-center"
                     [ngStyle]="{'background-color': conformationID == 2 ? 'red' : 'green'}">{{statusvalue}}</span>
 
                 <div class="d-flex rating align-items-center px-2">
-                    <img [src]="ratingPicture" class="ratingImg align-items-center" alt="">
+                    <img [src]="ratingPicture" class="ratingImg align-items-center" alt="rating image">
                     <span class="ps-1 fs-12 fs-xxl-15">{{rating}}</span>
                 </div>
             </div>
@@ -15,16 +15,16 @@
         <div class="d-flex flex-column booking_details gap-2 mt-3 mt-md-0 ps-lg-3">
             <div class="d-flex justify-content-between flex-column flex-md-row align-items-center">
                 <div class="d-flex align-items-center">
-                    <img [src]="frameImg" class="frameImg" alt="">
+                    <img [src]="frameImg" class="frameImg" alt="farme image">
                     <span class="ps-2 fs-18 fs-xl-20 fs-xxl-30 fw-500">{{title}}</span>
                 </div>
                 <!-- buttons for medium screens and above -->
                 <div class="d-none d-md-flex gap-2 flex-row flex-md-row flex-wrap mt-2 mt-lg-0 align-items-center">
-                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="shareImg" alt=""></p>
-                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="favImg" alt=""></p>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="shareImg" alt="share image"></p>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="favImg" alt="fav image"></p>
                     <p class="border rounded bg-white mb-0 pl-3 pr-3 h-30 d-flex align-items-center" (mouseenter)="isHovered = true"
                         (mouseleave)="isHovered = false">
-                        <img [src]="isHovered ? hoverImage : viewImage" alt="" class="h-13 h-xl-16 d-flex align-items-center">
+                        <img [src]="isHovered ? hoverImage : viewImage" alt="view image" class="h-13 h-xl-16 d-flex align-items-center">
                     </p>
                     <app-button [btnClass]="'cancelBooking px-2 fs-10 fs-xl-13 fs-xxl-17 d-flex align-items-center'" [btnName]="cancelBtn"
                         (bannerActionEvent)="cancelBooking()"></app-button>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="d-flex gap-1 align-items-lg-center overflow-hidden">
-                <div><img [src]="addrImg" class="addrImg" alt=""></div>
+                <div><img [src]="addrImg" class="addrImg" alt="location image"></div>
                 <div class="address fs-10 fs-xl-12 fs-xxl-14 fw-500">
                     <p class="d-flex flex-wrap mb-0">{{address}}</p>
                 </div>
@@ -70,13 +70,13 @@
             <!-- buttons for small screens -->
             <div class="d-flex gap-2 flex-column flex-md-row flex-wrap mt-2 mt-lg-0 d-md-none col-12">
                 <div>
-                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="shareImg" alt=""></p>
-                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="favImg" alt=""></p>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="shareImg" alt="share image"></p>
+                    <p class="border rounded bg-white d-none mb-0 pl-3 pr-3"><img [src]="favImg" alt="favorate image"></p>
                 </div>
                 <div class="d-flex justify-content-between gap-1 h-49">
                     <p class="border rounded bg-white mb-0 pl-3 pr-3 col-6 d-flex justify-content-center align-items-center" (mouseenter)="isHovered = true"
                         (mouseleave)="isHovered = false">
-                        <img [src]="isHovered ? hoverImage : viewImage" alt="" class="h-13">
+                        <img [src]="isHovered ? hoverImage : viewImage" alt="view image" class="h-13">
                     </p>
                     <div class="col-6 h-49">
                         <app-button [btnClass]="'cancelBooking px-3 col-12 h-100 fs-13'" [btnName]="cancelBtn"
