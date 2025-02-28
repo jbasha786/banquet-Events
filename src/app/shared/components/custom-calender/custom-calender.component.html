@@ -1,31 +1,28 @@
 <div class="calender text-center my-3 d-flex align-items-center flex-column" >
   <div class="d-flex align-items-center justify-content-center py-4">
-    <p class="btnmain mb-0 mr-6" mat-icon-button (click)="changeMonth(-1)">
-      <img src="../../../../assets/images/events/backarrow.svg" alt="" class="gobackicon" width="30px" />
+    <p class="btnmain mb-0 mr-6" mat-icon-button (click)="changeMonth(-1)" role="button" tabindex="0" aria-label="select previous month">
+      <img src="../../../../assets/images/events/backarrow.svg" alt="backarrow image" class="gobackicon" width="30px" />
     </p>
-
     <span class="mb-0  fs-16 fs-xl-20 fs-xxl-28">{{ currentMonth }} {{ currentYear }}</span>
-    <button aria-label="Scroll right" class="btnmain mb-0 ml-6" (click)="changeMonth(1)" mat-icon-button>
-      <img src="../../../../assets/images/events/rightchevron.svg" alt="Right arrow icon" width="30px" class="rightchevron">
-    </button>
+    <p class="btnmain mb-0 ml-6" mat-icon-button (click)="changeMonth(1)" tabindex="0" role="button" aria-label="select next month">
+      <img src="../../../../assets/images/events/rightchevron.svg" alt="Right arrow icon" class="rightchevron" width="30px" />
+    </p>
   </div>
   <div class="d-flex align-items-center justify-content-between days-grid">
-    <p class="btnmain pl-0 mb-0 mr-6" mat-icon-button (click)="scrollDates(-1)">
-      <img src="../../../../assets/images/events/backarrow.svg" alt="" class="gobackicon" width="30px" />
+    <p class="btnmain pl-0 mb-0 mr-6" mat-icon-button (click)="scrollDates(-1)" role="button" tabindex="0" aria-label="select previous dates">
+      <img src="../../../../assets/images/events/backarrow.svg" alt="Left arrow icon" class="gobackicon" width="30px" />
     </p>
-    <div class="calendar-grid d-flex justify-content-start align-items-center gap-18 gap-md-2 " tabindex="0"
-    role="region" aria-label="Calendar navigation">
+    <div class="calendar-grid d-flex justify-content-start align-items-center gap-18 gap-md-2 " tabindex="0" role="region" aria-label="Calendar navigation">
       <div class="calendar-day d-flex justify-content-center align-items-center" *ngFor="let day of visibleDates"
         (click)="selectDate(day.date)">
-        <div class="d-flex row">
-          <div class="month fs-16 fs-xl-18 fs-xxl-22">{{day.weekday }}</div>
+        <div class="d-flex row" tabindex="0">
+          <div class="month  fs-16 fs-xl-18 fs-xxl-22" aria-label="day.weekday">{{day.weekday }}</div>
           <div class="day fs-20 fs-xxl-26">{{ day.date | date:'dd ' }}</div>
         </div>
       </div>
     </div>
-    <button aria-label="Scroll right" class="btnmain pr-0 mb-0 ml-6" (click)="scrollDates(1)" mat-icon-button>
-    <img src="../../../../assets/images/events/rightchevron.svg" alt="Right arrow icon" width="30px" class="rightchevron">
-  </button>
-  
+    <p class="btnmain pr-0 mb-0 ml-6" mat-icon-button (click)="scrollDates(1)" role="button" tabindex="0" aria-label="select next dates">
+      <img src="../../../../assets/images/events/rightchevron.svg" alt="Right arrow icon" class="rightchevron" width="30px" />
+  </p>
   </div>
 </div>

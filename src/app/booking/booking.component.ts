@@ -32,6 +32,7 @@ import { Subscription } from 'rxjs';
 })
 export class BookingComponent {
   private routerSubscription: Subscription;
+  progressValue: number = 25; 
 
   @Input() buttonNext: string = 'Next';
   currentStep: number = 1;

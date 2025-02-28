@@ -33,7 +33,7 @@
 
   .search-input::placeholder {
     color: $searchPholder;
-    font-size: clamp(gutter-sp(14), gutter-vw(1), gutter-sp(20));
+    font-size: clamp(gutter-sp(14), gutter-vw(0.5), gutter-sp(20));
     font-weight: 300;
     padding-left: gutter-sp(1);
   }
@@ -59,47 +59,46 @@
     display: none;
   }
 
-  .tabTitle ::ng-deep .mat-mdc-tab-header-pagination-controls-enabled .mat-mdc-tab-header-pagination {
+  .tabTitle .mat-mdc-tab-header-pagination-controls-enabled .mat-mdc-tab-header-pagination {
     display: none;
   }
 
-  .tabTitle ::ng-deep .mdc-tab {
+  .tabTitle .mdc-tab {
     padding: gutter-sp(0);
   }
 
-  .tabTitle ::ng-deep .mdc-tab__text-label {
-    font-size: clamp(gutter-sp(16), gutter-vw(2), gutter-sp(36));
+  .tabTitle .mdc-tab__text-label {
+    font-size: clamp(gutter-sp(16), gutter-vw(1.8), gutter-sp(36));
     letter-spacing: normal;
     margin-right: gutter-vw(3);
     text-transform: none;
   }
 
-  .tabTitle ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
+  .tabTitle .mat-mdc-tab .mdc-tab-indicator__content--underline {
     display: none;
   }
 
-  .tabTitle ::ng-deep .mdc-tab-indicator--active {
+  .tabTitle .mdc-tab-indicator--active {
     font-size: clamp(gutter-sp(16), gutter-vw(2), gutter-sp(36));
     letter-spacing: normal;
     padding: gutter-sp(0);
   }
 
-  ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  .mat-mdc-tab.mdc-tab--active:focus .mdc-tab__text-label, .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
     color: $secondary-color;
     font-weight: 500;
   }
 
-  ::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+  .mat-mdc-tab .mdc-tab__text-label {
     color: $font-lite;
     font-weight: 400;
   }
 
-
-  ::ng-deep .mdc-tab__content:hover {
+  .mdc-tab__content:hover {
     background: $white;
   }
 
-  ::ng-deep .mat-mdc-tab .mdc-tab__text-label:hover {
+  .mat-mdc-tab .mdc-tab__text-label:hover {
     color: $secondary-color;
   }
 }
