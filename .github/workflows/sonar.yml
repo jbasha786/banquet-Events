@@ -8,7 +8,7 @@ on:
 
 jobs:
   sonarqube:
-    runs-on: windows-latest
+    runs-on: windows-latest 
     
     steps:
       # Check out the code
