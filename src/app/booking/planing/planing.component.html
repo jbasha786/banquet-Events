@@ -1,25 +1,47 @@
 <div class="planing col-md-12 col-xl-10 m-md-auto mb-290">
-    <p class="text-center fs-28 fs-lg-26 fs-xl-28 fs-xxl-32 fw-500 text-black">What type of event are you planning?</p>
-    <div class="" id="selectionList">
-        <div class="planing__type d-flex justify-content-center">
-            <mat-selection-list #plan [multiple]="false" aria-labelledby="selectionList" aria-label="group" role="listbox" title="selection" class="row col-sm-10 col-md-8 col-lg-8 planning-radio" (selectionChange)="selChange($event)">
-                @for(plan of planningData; track $index){
-                <div class="col-10 col-md-6 col-lg-4 p-1 p-xxl-2 m-auto">
-                        <mat-list-option [value]="plan" class="planing__type__section list" aria-label="plan.name" [ngClass]="plan.isActive && selectedItemId === plan.id ? 'active' : ''">
-                          <div tabindex="0">
-                            <div class="d-flex justify-content-start">
-                                <div aria-hidden="true">
-                                    <img class="h-18 align-text-top" src="{{plan.src}}" alt="{{plan.name}}">
-                                </div>
-                                <div>
-                                    <span class="ms-2 fs-15 fs-xl-18 fs-xxl-25">{{plan.name}}</span>
-                                </div>
-                               </div>
-                          </div>
-                        </mat-list-option>
-                </div>
-                }
-            </mat-selection-list>
+  <p class="text-center fs-28 fs-lg-26 fs-xl-28 fs-xxl-32 fw-500 text-black">
+    What type of event are you planning?
+  </p>
+  <div class="" id="selectionList">
+    <div class="planing__type d-flex justify-content-center">
+      <mat-selection-list
+        #plan
+        [multiple]="false"
+        aria-labelledby="selectionList"
+        aria-label="group"
+        role="listbox"
+        title="selection"
+        class="row col-sm-10 col-md-8 col-lg-8 planning-radio"
+        (selectionChange)="selChange($event)"
+      >
+        @for(plan of planningData; track $index){
+        <div class="col-10 col-md-6 col-lg-4 p-1 p-xxl-2 m-auto">
+          <mat-list-option
+            #listOption
+            [value]="plan"
+            class="planing__type__section list"
+            [attr.tabindex]="selectedItemId === plan.id ? '0' : '-1'"
+            (click)="selectPlan(plan)"
+            (keydown)="handleKeyDown($event, plan)"
+          >
+            <div class="d-flex justify-content-start">
+              <div aria-hidden="true">
+                <img
+                  class="h-18 align-text-top"
+                  src="{{ plan.src }}"
+                  alt="{{ plan.name }}"
+                />
+              </div>
+              <div>
+                <span class="ms-2 fs-15 fs-xl-18 fs-xxl-25">{{
+                  plan.name
+                }}</span>
+              </div>
+            </div>
+          </mat-list-option>
         </div>
+        }
+      </mat-selection-list>
     </div>
+  </div>
 </div>

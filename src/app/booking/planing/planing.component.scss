@@ -59,3 +59,7 @@
         display: none;
     }
 }
+
+.planing__type__section:focus {
+    outline: gutter-sp(1) solid $secondary-color;
+}
