@@ -13,7 +13,6 @@ import { Router, RouterLink } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { DefaultService } from '../../../services/default.service';
-import { headerModel } from '../../_models/headerModel';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { DialogueComponent } from '../dialogue/dialogue.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -21,6 +20,13 @@ import { LoginComponent } from '../../../core/login/login.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ZindexService } from '../../../services/zindex.service';
 import { ButtonComponent } from '../../genericComponents/button/button.component';
+import { headerFlowSelector } from '../../../_store/selectors/header.selector';
+import { headerFlowModel } from '../../_models/headerFlow.model';
+import { Store } from '@ngrx/store';
+import * as headerFlowActions from "../../../_store/actions/header.action";
+import * as headerLinkActions from "../../../_store/actions/headerLinks.actions";
+import { headerLinkSelector } from '../../../_store/selectors/headerLinks.selector';
+import { headerLinkModel } from '../../_models/headerLinks.model';
 
 @Component({
   selector: 'app-header',
@@ -41,15 +47,15 @@ export class HeaderComponent implements OnInit {
   hoverSrc: string | undefined;
   navZIndex: number = 1030;
   @Input() headerInfo: any;
-  navList: headerModel[] = [];
-  navEvent_Items: headerModel[] = [];
+  navList: headerLinkModel[] = [];
+  navEvent_Items: headerFlowModel[] = [];
   openpopup: boolean = false;
-  hoveredItem: headerModel | null = null;
+  hoveredItem: headerLinkModel | null = null;
   specialIndex = 2;
   private previousWidths = new Map<number, string>();
   constructor(
     private router: Router,
-
+    private store: Store<any>,
     private defaultService: DefaultService,
     private overlayContainer: OverlayContainer,
     private dialog: MatDialog,
@@ -57,7 +63,7 @@ export class HeaderComponent implements OnInit {
     private renderer: Renderer2,
     private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.adjustLayoutForMobile();
@@ -65,7 +71,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.adjustLayoutForMobile();
     this.getNavList();
-    this.getnavEventList();
+    this.fetchheaderFlowInfoStoreData();
+    this.fetchHeaderLinkInfoStoreData();
     this.zIndexService.headerZIndex$.subscribe((zIndex: number) => {
       this.navZIndex = zIndex;
     });
@@ -135,17 +142,21 @@ export class HeaderComponent implements OnInit {
 
   getNavList() {
     this.defaultService.getJSON().subscribe((result) => {
-      this.navList = result.navList;
+      this.store.dispatch(headerLinkActions.setHeaderLinks({ headerLink: result?.navList }))
+      this.store.dispatch(headerFlowActions.setHeaderFlow({ headerFlow: result?.navEvent_Items }));
     });
   }
-
-  getnavEventList() {
-    this.defaultService.getJSON().subscribe((result) => {
-      this.navEvent_Items = result.navEvent_Items;
-    });
+  public fetchheaderFlowInfoStoreData() {
+    this.store.select(headerFlowSelector).subscribe((data: headerFlowModel[]) => {
+      this.navEvent_Items = data;
+    })
+  }
+  public fetchHeaderLinkInfoStoreData() {
+    this.store.select(headerLinkSelector).subscribe((data: headerLinkModel[]) => {
+      this.navList = data;
+    })
   }
 
- 
 
   goTo(link: any) {
     this.router.navigate([link]);
@@ -155,7 +166,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['liveEvents']);
   }
 
-  onMouseEnter(item: headerModel): void {
+  onMouseEnter(item: headerLinkModel): void {
     this.hoveredItem = item;
   }
 

@@ -57,7 +57,7 @@
 .hover-container{
     display: flex;
     align-items: center;
-    gap: gutter-sp(10);
+    gap: gutter-sp(4);
 }
 .hover-container:hover .event_name,
 .hover-container:active .event_name {

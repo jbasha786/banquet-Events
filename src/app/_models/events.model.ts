@@ -1,5 +1,4 @@
-import { BaseModel } from "../shared/_models/headerModel";
-
+import { BaseModel } from "../shared/_models/headerFlow.model";
 export interface eventModel extends BaseModel {
     src: string;
     img_title: string;

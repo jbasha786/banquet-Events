@@ -1,4 +1,4 @@
-import { BaseModel } from "../shared/_models/headerModel"
+import { BaseModel } from "../shared/_models/headerFlow.model"
 
 export interface RegisterModel extends BaseModel {
     fullName: string
